@@ -1,5 +1,5 @@
 {
   "page": 1167,
-  "title": "1146 Appendix A Summations",
-  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Page 1167</div>\n    <h1>1146 Appendix A Summations</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"highlight-box\">\n    <h4>Page Content</h4>\n    <p>This page contains detailed technical content. Use the image view (press <kbd>V</kbd>) to see the original material with all formulas and figures.</p>\n</div>\n</div>"
+  "title": "B.2 Relations",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section B.2</div>\n    <h1>Relations</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Binary relations and their properties.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Relation R ⊆ A × A on set A</li>\n<li>Reflexive: aRa for all a</li>\n<li>Symmetric: aRb ⟹ bRa</li>\n<li>Transitive: aRb and bRc ⟹ aRc</li>\n<li>Equivalence relation: reflexive + symmetric + transitive</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>≤ on integers: reflexive (a ≤ a), transitive, but not symmetric. Equivalence: = (equality).</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Partial orders, equivalence classes used in algorithm proofs.</p>\n</div>\n</div>"
 }

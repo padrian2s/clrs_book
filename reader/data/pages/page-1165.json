@@ -1,5 +1,5 @@
 {
   "page": 1165,
-  "title": "1144 Part VIII Appendix: Mathematical Background",
-  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Page 1165</div>\n    <h1>1144 Part VIII Appendix: Mathematical Background</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"highlight-box\">\n    <h4>Page Content</h4>\n    <p>This page contains detailed technical content. Use the image view (press <kbd>V</kbd>) to see the original material with all formulas and figures.</p>\n</div>\n</div>"
+  "title": "B.1 Sets",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section B.1</div>\n    <h1>Sets</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Basic set theory notation and operations.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Set: unordered collection of distinct elements</li>\n<li>∈ (element of), ⊆ (subset), ∪ (union), ∩ (intersection)</li>\n<li>Set difference: A - B = {x : x ∈ A and x ∉ B}</li>\n<li>Power set: 2^A = all subsets of A, |2^A| = 2^|A|</li>\n<li>Cartesian product: A × B = {(a,b) : a ∈ A, b ∈ B}</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>A = {1,2,3}, B = {2,3,4}. A ∪ B = {1,2,3,4}, A ∩ B = {2,3}, A - B = {1}.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Foundation for describing algorithms and data structures.</p>\n</div>\n</div>"
 }

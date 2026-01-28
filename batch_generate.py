@@ -1718,6 +1718,828 @@ LINK(x, y):
         "example": "All these problems: easy to verify (NP), hard to solve (NP-hard), polynomially equivalent via reductions.",
         "why_matters": "Recognize NP-complete problems to know when to use heuristics/approximations."
     },
+    # Chapter 19 - Fibonacci Heaps
+    "19.1": {
+        "title": "Structure of Fibonacci Heaps",
+        "summary": "A collection of heap-ordered trees with lazy operations for amortized efficiency.",
+        "key_points": [
+            "Collection of min-heap-ordered trees (roots in a circular linked list)",
+            "Each node has: key, degree, mark, parent, child, siblings",
+            "Mark bit indicates if node lost a child since becoming non-root",
+            "Minimum pointer to root with smallest key",
+            "Supports decrease-key in O(1) amortized!"
+        ],
+        "example": "Unlike binary heaps (one tree), Fibonacci heaps can have many trees. Consolidation happens lazily during extract-min.",
+        "why_matters": "Enables Dijkstra in O(E + V log V) and Prim in O(E + V log V)."
+    },
+    "19.2": {
+        "title": "Mergeable-heap Operations",
+        "summary": "Insert, minimum, union, and extract-min operations on Fibonacci heaps.",
+        "key_points": [
+            "INSERT: create new tree with one node, add to root list - O(1)",
+            "MINIMUM: just return min pointer - O(1)",
+            "UNION: concatenate root lists, update min - O(1)",
+            "EXTRACT-MIN: remove min, add children to root list, consolidate",
+            "CONSOLIDATE: link trees of same degree until all degrees unique - O(log n) amortized"
+        ],
+        "example": "Extract-min triggers cleanup: trees with same degree are linked, reducing total trees.",
+        "why_matters": "O(1) insert and union are key advantages over binary heaps."
+    },
+    "19.3": {
+        "title": "Decreasing a Key and Deleting a Node",
+        "summary": "The cascading cut mechanism for maintaining efficiency.",
+        "key_points": [
+            "DECREASE-KEY: if violates heap property, cut node and move to root list",
+            "Cascading cuts: if parent is marked, cut it too (recursively)",
+            "Mark node when it loses first child (while not root)",
+            "DELETE: decrease-key to -∞, then extract-min",
+            "Decrease-key: O(1) amortized! Delete: O(log n) amortized"
+        ],
+        "pseudocode": """DECREASE-KEY(H, x, k):
+    x.key = k
+    y = x.parent
+    if y ≠ NIL and x.key < y.key:
+        CUT(H, x, y)
+        CASCADING-CUT(H, y)
+    if x.key < H.min.key:
+        H.min = x""",
+        "why_matters": "O(1) decrease-key is why Fibonacci heaps improve Dijkstra and Prim."
+    },
+    "19.4": {
+        "title": "Bounding the Maximum Degree",
+        "summary": "Proof that maximum degree is O(log n), ensuring efficiency.",
+        "key_points": [
+            "Maximum degree D(n) ≤ log_φ(n) where φ = golden ratio",
+            "Key lemma: node of degree k has ≥ F_{k+2} descendants",
+            "F_k = k-th Fibonacci number, F_k ≥ φ^(k-2)",
+            "Size of subtree grows exponentially with degree",
+            "This bounds consolidate time and extract-min cost"
+        ],
+        "example": "With n = 1 million nodes, max degree ≤ log_1.618(10^6) ≈ 29.",
+        "why_matters": "Proves Fibonacci heap operations achieve their amortized bounds."
+    },
+    # Chapter 20 - van Emde Boas Trees
+    "20.1": {
+        "title": "Preliminary Approaches",
+        "summary": "Building toward O(log log u) operations on integer keys.",
+        "key_points": [
+            "Universe of keys {0, 1, ..., u-1}",
+            "Direct addressing: O(1) ops but O(u) space",
+            "Superimposing binary tree: O(log u) ops",
+            "Goal: O(log log u) for all dictionary operations",
+            "Key insight: recursively divide universe into √u clusters"
+        ],
+        "example": "Universe 0-15: divide into 4 clusters of 4 elements each. To find 13: cluster = 13/4 = 3, offset = 13 mod 4 = 1.",
+        "why_matters": "Shows path from simple structures to optimal integer data structure."
+    },
+    "20.2": {
+        "title": "A Recursive Structure",
+        "summary": "Proto van Emde Boas structure with recursive √u clusters.",
+        "key_points": [
+            "Divide universe into √u clusters of √u elements each",
+            "summary structure: which clusters are non-empty",
+            "high(x) = ⌊x/√u⌋ determines cluster",
+            "low(x) = x mod √u determines position in cluster",
+            "Recurrence: T(u) = T(√u) + O(1) → T(u) = O(log log u)"
+        ],
+        "example": "INSERT(5) into u=16: cluster = high(5) = 1, position = low(5) = 1. Insert into cluster[1] and update summary.",
+        "why_matters": "Key recursive decomposition that achieves log log u."
+    },
+    "20.3": {
+        "title": "The van Emde Boas Tree",
+        "summary": "Complete vEB tree with O(log log u) operations.",
+        "key_points": [
+            "Store min and max separately (not in recursive structure)",
+            "Operations: INSERT, DELETE, MEMBER, SUCCESSOR, PREDECESSOR",
+            "SUCCESSOR: check in cluster, else use summary to find next cluster",
+            "Space: O(u) - can be reduced with hashing",
+            "All operations O(log log u) worst-case!"
+        ],
+        "pseudocode": """vEB-SUCCESSOR(V, x):
+    if V.min ≠ NIL and x < V.min:
+        return V.min
+    max-low = vEB-MAXIMUM(V.cluster[high(x)])
+    if max-low ≠ NIL and low(x) < max-low:
+        offset = vEB-SUCCESSOR(V.cluster[high(x)], low(x))
+        return index(high(x), offset)
+    else:
+        succ-cluster = vEB-SUCCESSOR(V.summary, high(x))
+        if succ-cluster == NIL: return NIL
+        offset = vEB-MINIMUM(V.cluster[succ-cluster])
+        return index(succ-cluster, offset)""",
+        "why_matters": "Fastest dictionary for small integer keys. Used in specialized applications."
+    },
+    # Chapter 27 - Multithreaded Algorithms
+    "27.1": {
+        "title": "The Basics of Dynamic Multithreading",
+        "summary": "Spawn, sync, and parallel loops for expressing parallelism.",
+        "key_points": [
+            "SPAWN: create parallel task (like async function call)",
+            "SYNC: wait for all spawned tasks to complete",
+            "parallel for: iterations can execute in parallel",
+            "Work T₁: total operations (serial time)",
+            "Span T∞: longest path (parallelism = T₁/T∞)"
+        ],
+        "pseudocode": """P-FIB(n):
+    if n ≤ 1: return n
+    x = spawn P-FIB(n-1)
+    y = P-FIB(n-2)
+    sync
+    return x + y""",
+        "example": "Parallel Fibonacci: T₁ = Θ(φⁿ), T∞ = Θ(n). Parallelism = Θ(φⁿ/n) - exponential speedup possible!",
+        "why_matters": "Foundation for parallel algorithm design and analysis."
+    },
+    "27.2": {
+        "title": "Multithreaded Matrix Multiplication",
+        "summary": "Parallel matrix multiplication using divide-and-conquer.",
+        "key_points": [
+            "Naive: parallelize all n² output computations",
+            "Divide-and-conquer: split into 8 subproblems, spawn recursively",
+            "Work: T₁ = Θ(n³), Span: T∞ = Θ(log² n)",
+            "Parallelism: Θ(n³/log² n) - massive!",
+            "Strassen's algorithm can also be parallelized"
+        ],
+        "example": "1000×1000 matrix multiplication: 10⁹ operations but only log²(1000) ≈ 100 critical path length.",
+        "why_matters": "Shows how to achieve near-linear speedup on important problems."
+    },
+    "27.3": {
+        "title": "Multithreaded Merge Sort",
+        "summary": "Parallel merge sort with parallel merge operation.",
+        "key_points": [
+            "Parallel merge: use binary search to split merge in half",
+            "P-MERGE-SORT: spawn on both halves, parallel merge",
+            "Work: T₁ = Θ(n log n)",
+            "Span: T∞ = Θ(log³ n)",
+            "Parallelism: Θ(n/log² n) - sublinear in n"
+        ],
+        "pseudocode": """P-MERGE-SORT(A, p, r, B, s):
+    n = r - p + 1
+    if n == 1: B[s] = A[p]
+    else:
+        T = new array[n]
+        q = (p + r) / 2
+        spawn P-MERGE-SORT(A, p, q, T, 1)
+        P-MERGE-SORT(A, q+1, r, T, q-p+2)
+        sync
+        P-MERGE(T, 1, q-p+1, q-p+2, n, B, s)""",
+        "why_matters": "Practical parallel sorting with good theoretical guarantees."
+    },
+    # Chapter 28 - Matrix Operations
+    "28.1": {
+        "title": "Solving Systems of Linear Equations",
+        "summary": "LUP decomposition for solving Ax = b.",
+        "key_points": [
+            "Goal: solve Ax = b for x",
+            "LU decomposition: A = LU (lower × upper triangular)",
+            "LUP: PA = LU with permutation matrix P for stability",
+            "Forward substitution: solve Ly = Pb (O(n²))",
+            "Back substitution: solve Ux = y (O(n²))"
+        ],
+        "pseudocode": """LUP-SOLVE(L, U, π, b):
+    for i = 1 to n:
+        y[i] = b[π[i]] - Σ(j=1 to i-1) L[i,j]·y[j]
+    for i = n downto 1:
+        x[i] = (y[i] - Σ(j=i+1 to n) U[i,j]·x[j]) / U[i,i]
+    return x""",
+        "example": "Solve 3 equations in 3 unknowns: decompose A once, then solve any b in O(n²).",
+        "why_matters": "Fundamental numerical algorithm. LUP decomposition is O(n³)."
+    },
+    "28.2": {
+        "title": "Inverting Matrices",
+        "summary": "Computing A⁻¹ using LUP decomposition.",
+        "key_points": [
+            "To find A⁻¹, solve AX = I for each column of X",
+            "Use LUP decomposition: solve n systems",
+            "Time: O(n³) - same as multiplication!",
+            "Theorem: matrix inversion ≡ matrix multiplication (complexity)",
+            "In practice, avoid explicit inverse; solve systems directly"
+        ],
+        "example": "To compute A⁻¹, decompose PA = LU once, then solve LUx = Pej for each standard basis vector ej.",
+        "why_matters": "Shows inversion is no harder than multiplication."
+    },
+    "28.3": {
+        "title": "Symmetric Positive-Definite Matrices",
+        "summary": "Special properties and Cholesky decomposition for SPD matrices.",
+        "key_points": [
+            "SPD: symmetric (A = Aᵀ) and xᵀAx > 0 for all x ≠ 0",
+            "Cholesky: A = LLᵀ where L is lower triangular",
+            "No pivoting needed - always stable!",
+            "Time: O(n³/3) - half the work of LU",
+            "Applications: covariance matrices, least squares"
+        ],
+        "example": "Covariance matrices are SPD. Cholesky is preferred for stability and efficiency.",
+        "why_matters": "Many optimization and statistics problems have SPD matrices."
+    },
+    # Chapter 29 - Linear Programming
+    "29.1": {
+        "title": "Standard and Slack Forms",
+        "summary": "Canonical forms for representing linear programs.",
+        "key_points": [
+            "LP: maximize cᵀx subject to Ax ≤ b, x ≥ 0",
+            "Standard form: all constraints are ≤, all variables ≥ 0",
+            "Slack form: Ax = b with slack variables, x ≥ 0",
+            "Any LP can be converted to these forms",
+            "Basic solution: set n-m variables to 0, solve for others"
+        ],
+        "example": "Maximize 2x₁ + 3x₂ subject to x₁ + x₂ ≤ 4, x₁ ≤ 2, x₂ ≤ 3. Add slack: x₁ + x₂ + s₁ = 4, etc.",
+        "why_matters": "Standard forms enable systematic solution methods."
+    },
+    "29.2": {
+        "title": "Formulating Problems as Linear Programs",
+        "summary": "Expressing optimization problems in LP form.",
+        "key_points": [
+            "Shortest paths: variables for distances, constraints for edges",
+            "Maximum flow: variables for flow on edges, capacity constraints",
+            "Minimum cost flow: flow constraints + cost objective",
+            "Many problems reduce to LP → polynomial time!",
+            "Integer LP is NP-hard, but LP relaxation often helps"
+        ],
+        "example": "Max flow: maximize Σ f(s,v) subject to flow conservation and f(u,v) ≤ c(u,v) for all edges.",
+        "why_matters": "LP is a powerful modeling tool for optimization."
+    },
+    "29.3": {
+        "title": "The Simplex Algorithm",
+        "summary": "Moving along edges of the feasible polytope to find optimum.",
+        "key_points": [
+            "Feasible region is a convex polytope",
+            "Optimal solution at a vertex (basic feasible solution)",
+            "PIVOT: move to adjacent vertex with better objective",
+            "Cycling possible but rare; can be prevented",
+            "Exponential worst-case but fast in practice"
+        ],
+        "pseudocode": """SIMPLEX(A, b, c):
+    (N, B, A, b, c, v) = INITIALIZE-SIMPLEX(A, b, c)
+    while some c[j] > 0 for j in N:
+        choose e in N with c[e] > 0  # entering variable
+        compute Δ for each i in B
+        choose l with minimum Δ  # leaving variable
+        (N, B, A, b, c, v) = PIVOT(N, B, A, b, c, v, l, e)
+    return solution from basic variables""",
+        "why_matters": "Workhorse algorithm for LP. Interior-point methods are alternative."
+    },
+    # Chapter 30 - FFT
+    "30.1": {
+        "title": "Representing Polynomials",
+        "summary": "Coefficient vs point-value representation for polynomials.",
+        "key_points": [
+            "Coefficient: A(x) = a₀ + a₁x + a₂x² + ... + aₙ₋₁xⁿ⁻¹",
+            "Point-value: {(x₀, y₀), (x₁, y₁), ..., (xₙ₋₁, yₙ₋₁)}",
+            "n points uniquely determine degree n-1 polynomial",
+            "Multiplication in coefficient form: O(n²)",
+            "Multiplication in point-value form: O(n)!"
+        ],
+        "example": "A(x) = 1 + 2x, B(x) = 3 + x. Point-value at x = 0,1: A: (0,1),(1,3); B: (0,3),(1,4). Product: (0,3),(1,12).",
+        "why_matters": "Key insight: convert to point-value, multiply, convert back."
+    },
+    "30.2": {
+        "title": "The DFT and FFT",
+        "summary": "Fast conversion between coefficient and point-value forms.",
+        "key_points": [
+            "DFT: evaluate polynomial at n-th roots of unity",
+            "Roots of unity: ωⁿ = 1, specifically ω = e^(2πi/n)",
+            "DFT is matrix-vector multiply: y = Wₙa where Wₙ is DFT matrix",
+            "FFT: compute DFT in O(n log n) using divide-and-conquer",
+            "Inverse DFT: multiply by Wₙ⁻¹ (conjugate, scale by 1/n)"
+        ],
+        "pseudocode": """RECURSIVE-FFT(a):
+    n = a.length
+    if n == 1: return a
+    ω_n = e^(2πi/n)
+    ω = 1
+    a⁰ = (a₀, a₂, ..., aₙ₋₂)  # even indices
+    a¹ = (a₁, a₃, ..., aₙ₋₁)  # odd indices
+    y⁰ = RECURSIVE-FFT(a⁰)
+    y¹ = RECURSIVE-FFT(a¹)
+    for k = 0 to n/2 - 1:
+        y[k] = y⁰[k] + ω·y¹[k]
+        y[k + n/2] = y⁰[k] - ω·y¹[k]
+        ω = ω·ω_n
+    return y""",
+        "why_matters": "FFT is one of the most important algorithms ever. O(n log n) vs O(n²)."
+    },
+    "30.3": {
+        "title": "Efficient FFT Implementations",
+        "summary": "Iterative FFT and practical optimizations.",
+        "key_points": [
+            "Iterative FFT avoids recursion overhead",
+            "Bit-reversal permutation for input ordering",
+            "Butterfly operation: combine pairs of values",
+            "In-place computation: O(1) extra space",
+            "SIMD and cache optimizations in practice"
+        ],
+        "example": "n=8 FFT: 3 stages of butterflies. Input in bit-reversed order: 0,4,2,6,1,5,3,7.",
+        "why_matters": "Practical FFT implementations used in signal processing, audio, images."
+    },
+    # Chapter 31 - Number Theory
+    "31.1": {
+        "title": "Elementary Number-Theoretic Notions",
+        "summary": "Divisibility, primes, and modular arithmetic basics.",
+        "key_points": [
+            "a divides b (a|b) if b = ak for some integer k",
+            "Prime: p > 1 with only divisors 1 and p",
+            "Fundamental theorem: unique prime factorization",
+            "gcd(a,b): largest d dividing both a and b",
+            "Relatively prime: gcd(a,b) = 1"
+        ],
+        "example": "gcd(24, 36) = 12. 24 = 2³·3, 36 = 2²·3². gcd = 2²·3 = 12.",
+        "why_matters": "Foundation for cryptography and many algorithms."
+    },
+    "31.2": {
+        "title": "Greatest Common Divisor",
+        "summary": "Euclid's algorithm for computing gcd efficiently.",
+        "key_points": [
+            "Euclid: gcd(a,b) = gcd(b, a mod b)",
+            "Base case: gcd(a, 0) = a",
+            "Time: O(log min(a,b)) - very fast!",
+            "Extended Euclid: find x,y such that ax + by = gcd(a,b)",
+            "Useful for modular inverse: a⁻¹ mod n"
+        ],
+        "pseudocode": """EXTENDED-EUCLID(a, b):
+    if b == 0:
+        return (a, 1, 0)
+    (d, x', y') = EXTENDED-EUCLID(b, a mod b)
+    return (d, y', x' - ⌊a/b⌋·y')""",
+        "example": "gcd(99, 78): 99 = 1·78 + 21, 78 = 3·21 + 15, 21 = 1·15 + 6, 15 = 2·6 + 3, 6 = 2·3 + 0. gcd = 3.",
+        "why_matters": "Euclid's algorithm is 2300+ years old and still optimal!"
+    },
+    "31.3": {
+        "title": "Modular Arithmetic",
+        "summary": "Arithmetic in Zₙ = {0, 1, ..., n-1}.",
+        "key_points": [
+            "a ≡ b (mod n) means n divides (a-b)",
+            "Zₙ forms a group under addition",
+            "Zₙ* (elements with gcd(a,n)=1) forms group under multiplication",
+            "|Zₙ*| = φ(n) (Euler's totient function)",
+            "a⁻¹ mod n exists iff gcd(a,n) = 1"
+        ],
+        "example": "Z₇* = {1,2,3,4,5,6}. 3⁻¹ mod 7: find x where 3x ≡ 1 (mod 7). x = 5 since 3·5 = 15 ≡ 1.",
+        "why_matters": "Modular arithmetic is essential for cryptography (RSA, etc.)."
+    },
+    "31.7": {
+        "title": "The RSA Public-Key Cryptosystem",
+        "summary": "Secure communication using number theory.",
+        "key_points": [
+            "Public key (n, e): n = pq (large primes), e coprime to φ(n)",
+            "Private key d: ed ≡ 1 (mod φ(n))",
+            "Encrypt: c = mᵉ mod n",
+            "Decrypt: m = cᵈ mod n",
+            "Security based on difficulty of factoring n"
+        ],
+        "pseudocode": """RSA-ENCRYPT(m, e, n):
+    return m^e mod n
+
+RSA-DECRYPT(c, d, n):
+    return c^d mod n""",
+        "example": "p=61, q=53, n=3233, φ(n)=3120, e=17, d=2753. Encrypt m=65: c=65¹⁷ mod 3233=2790.",
+        "why_matters": "RSA secures internet commerce, banking, and communications."
+    },
+    # Chapter 33 - Computational Geometry
+    "33.1": {
+        "title": "Line-Segment Properties",
+        "summary": "Basic geometric primitives and cross products.",
+        "key_points": [
+            "Cross product p₁ × p₂ = x₁y₂ - x₂y₁",
+            "Sign determines clockwise/counterclockwise",
+            "Segment intersection: check if endpoints straddle each other's lines",
+            "Left turn: cross product > 0",
+            "Collinear: cross product = 0"
+        ],
+        "example": "Points p₀=(0,0), p₁=(2,0), p₂=(1,1). Direction p₁-p₀ to p₂-p₀: (2,0)×(1,1) = 2·1 - 0·1 = 2 > 0 → left turn.",
+        "why_matters": "Building blocks for all geometric algorithms."
+    },
+    "33.2": {
+        "title": "Determining Whether Any Pair of Segments Intersects",
+        "summary": "Sweep line algorithm for detecting intersections.",
+        "key_points": [
+            "Sweep line: vertical line moving left to right",
+            "Event points: segment endpoints",
+            "Active segments: those currently crossing sweep line",
+            "Maintain sorted order of active segments",
+            "Check only adjacent segments for intersection"
+        ],
+        "example": "n segments: sort 2n endpoints, process left to right. At each event, update active set and check neighbors.",
+        "why_matters": "O(n log n) vs O(n²) naive algorithm."
+    },
+    "33.3": {
+        "title": "Finding the Convex Hull",
+        "summary": "Algorithms to find the smallest convex polygon containing all points.",
+        "key_points": [
+            "Convex hull: rubber band around nails",
+            "Graham scan: sort by polar angle, process in order",
+            "Jarvis march (gift wrapping): find extreme points one by one",
+            "Graham scan: O(n log n)",
+            "Jarvis march: O(nh) where h = hull vertices"
+        ],
+        "pseudocode": """GRAHAM-SCAN(Q):
+    p₀ = point with minimum y (and x if tie)
+    sort remaining points by polar angle from p₀
+    push p₀, p₁, p₂ onto stack S
+    for i = 3 to n:
+        while angle at top of S is not left turn:
+            pop S
+        push pᵢ onto S
+    return S""",
+        "example": "8 points: sort by angle from bottom point, walk around keeping only left turns. Result: 5 hull vertices.",
+        "why_matters": "Used in collision detection, pattern recognition, GIS."
+    },
+    "33.4": {
+        "title": "Finding the Closest Pair of Points",
+        "summary": "Divide-and-conquer algorithm in O(n log n).",
+        "key_points": [
+            "Naive: O(n²) - check all pairs",
+            "Divide: split points by x-coordinate",
+            "Conquer: recursively find closest in each half",
+            "Combine: check points near the dividing line",
+            "Key insight: only O(n) points near middle need checking"
+        ],
+        "pseudocode": """CLOSEST-PAIR(P):
+    sort P by x-coordinate
+    return CLOSEST-PAIR-REC(P)
+
+CLOSEST-PAIR-REC(P):
+    if |P| ≤ 3: return brute force
+    divide P into PL and PR
+    δL = CLOSEST-PAIR-REC(PL)
+    δR = CLOSEST-PAIR-REC(PR)
+    δ = min(δL, δR)
+    check strip within δ of midline
+    return minimum distance found""",
+        "example": "1000 points: divide into 500 each, recurse. Strip contains ≤ 7 points per y-coordinate window.",
+        "why_matters": "Classic divide-and-conquer with subtle combine step."
+    },
+    # Chapter 35 - Approximation Algorithms
+    "35.1": {
+        "title": "The Vertex-Cover Problem",
+        "summary": "A 2-approximation algorithm for minimum vertex cover.",
+        "key_points": [
+            "Vertex cover: set of vertices covering all edges",
+            "NP-hard to find minimum vertex cover",
+            "APPROX-VERTEX-COVER: greedily pick edge endpoints",
+            "Approximation ratio: 2 (at most 2× optimal)",
+            "Simple and fast: O(V + E)"
+        ],
+        "pseudocode": """APPROX-VERTEX-COVER(G):
+    C = ∅
+    E' = E[G]
+    while E' ≠ ∅:
+        pick any edge (u,v) ∈ E'
+        C = C ∪ {u, v}
+        remove all edges incident to u or v from E'
+    return C""",
+        "example": "Each edge in matching must be covered. Algorithm picks both endpoints → at most 2× optimal.",
+        "why_matters": "Shows how to get guaranteed bounds when exact solution is NP-hard."
+    },
+    "35.2": {
+        "title": "The Traveling-Salesman Problem",
+        "summary": "Approximation for metric TSP using MST.",
+        "key_points": [
+            "TSP: find shortest tour visiting all cities",
+            "Metric TSP: triangle inequality holds",
+            "Algorithm: find MST, double edges, find Eulerian tour, shortcut",
+            "Christofides: 3/2-approximation using matching",
+            "General TSP: no constant-factor approximation unless P=NP"
+        ],
+        "pseudocode": """APPROX-TSP-TOUR(G):
+    select any vertex r as root
+    T = MST of G using Prim
+    L = preorder walk of T
+    return tour that visits vertices in order L""",
+        "example": "MST cost ≤ optimal tour (tour minus one edge is spanning tree). Tour ≤ 2·MST ≤ 2·OPT.",
+        "why_matters": "Classic example where structure (MST) helps approximate hard problem."
+    },
+    "35.3": {
+        "title": "The Set-Covering Problem",
+        "summary": "Greedy approximation for minimum set cover.",
+        "key_points": [
+            "Set cover: cover universe U using fewest sets from collection S",
+            "NP-hard (generalizes vertex cover)",
+            "Greedy: always pick set covering most uncovered elements",
+            "Approximation ratio: H(max|S|) ≈ ln n",
+            "Best possible unless P=NP (up to constant)"
+        ],
+        "pseudocode": """GREEDY-SET-COVER(U, S):
+    C = ∅
+    while U ≠ ∅:
+        select S ∈ S maximizing |S ∩ U|
+        U = U - S
+        C = C ∪ {S}
+    return C""",
+        "example": "12 elements, 6 sets. Greedy picks sets covering 5, then 4, then 3. Ratio ≈ ln 12 ≈ 2.5.",
+        "why_matters": "Greedy gives logarithmic approximation for many covering problems."
+    },
+    "35.4": {
+        "title": "Randomization and Linear Programming",
+        "summary": "Using LP relaxation and randomized rounding.",
+        "key_points": [
+            "LP relaxation: replace x ∈ {0,1} with 0 ≤ x ≤ 1",
+            "LP optimal ≤ ILP optimal (minimization)",
+            "Randomized rounding: set xᵢ = 1 with probability x*ᵢ",
+            "Expected cost = LP optimal",
+            "Derandomization possible via conditional expectations"
+        ],
+        "example": "MAX-3-SAT: set variable true with probability from LP. Expected clauses satisfied ≥ (7/8)·OPT.",
+        "why_matters": "LP relaxation + rounding is a powerful approximation technique."
+    },
+    "35.5": {
+        "title": "The Subset-Sum Problem",
+        "summary": "Fully polynomial-time approximation scheme (FPTAS).",
+        "key_points": [
+            "Subset sum: is there subset summing to exactly t?",
+            "Optimization: find subset sum ≤ t maximizing sum",
+            "FPTAS: (1-ε)-approximation in O(n²/ε) time",
+            "Trimming: keep only values sufficiently different",
+            "Polynomial in both n and 1/ε"
+        ],
+        "example": "ε = 0.1: group sums differing by ≤ 10% into equivalence classes. Process in polynomial time.",
+        "why_matters": "Shows some NP-hard problems admit arbitrarily good approximations."
+    },
+    # Missing sections
+    "15.5": {
+        "title": "Optimal Binary Search Trees",
+        "summary": "Construct BST minimizing expected search cost given access probabilities.",
+        "key_points": [
+            "Keys have known access probabilities pᵢ",
+            "Dummy keys for unsuccessful searches with probabilities qᵢ",
+            "Cost = Σ (depth(kᵢ)+1)·pᵢ + Σ (depth(dᵢ)+1)·qᵢ",
+            "DP: e[i,j] = minimum cost BST for keys i..j",
+            "Try each key as root: e[i,j] = min over r of e[i,r-1] + e[r+1,j] + w(i,j)"
+        ],
+        "example": "5 keys with probabilities: DP fills n×n table, backtrace gives optimal tree structure.",
+        "why_matters": "Used in compilers for keyword lookup, dictionary implementations."
+    },
+    "21.4": {
+        "title": "Analysis of Union by Rank with Path Compression",
+        "summary": "Proving the nearly-constant amortized bound using Ackermann function.",
+        "key_points": [
+            "α(n) = inverse Ackermann function, grows incredibly slowly",
+            "α(n) ≤ 4 for all practical values of n (up to 10^80)",
+            "Amortized time per operation: O(α(n))",
+            "Proof uses potential function based on ranks",
+            "Tight bound: Ω(α(n)) per operation"
+        ],
+        "example": "For n = 10^80 (more than atoms in universe), α(n) = 4. Effectively constant!",
+        "why_matters": "One of the most efficient data structures known - practically O(1)."
+    },
+    "24.4": {
+        "title": "Difference Constraints and Shortest Paths",
+        "summary": "Solving systems of difference constraints using Bellman-Ford.",
+        "key_points": [
+            "Difference constraint: xⱼ - xᵢ ≤ bₖ",
+            "Constraint graph: edge (i,j) with weight bₖ",
+            "Add source vertex s with 0-weight edges to all vertices",
+            "Run Bellman-Ford from s",
+            "Solution: xᵢ = δ(s, i) (shortest path distances)"
+        ],
+        "example": "x₁ - x₂ ≤ 3, x₂ - x₃ ≤ -1. Build graph, run Bellman-Ford. Feasible iff no negative cycle.",
+        "why_matters": "Scheduling, timing verification in circuits, temporal reasoning."
+    },
+    "24.5": {
+        "title": "Proofs of Shortest-Paths Properties",
+        "summary": "Formal proofs of correctness for shortest-path algorithms.",
+        "key_points": [
+            "Triangle inequality: δ(s,v) ≤ δ(s,u) + w(u,v)",
+            "Upper-bound property: d[v] ≥ δ(s,v) always",
+            "No-path property: d[v] = ∞ if no path",
+            "Convergence: once d[v] = δ(s,v), it never changes",
+            "Path-relaxation: relaxing edges on shortest path gives correct distances"
+        ],
+        "example": "After relaxing all edges on s→v path in order, d[v] = δ(s,v). Bellman-Ford does this.",
+        "why_matters": "Proves correctness of Dijkstra, Bellman-Ford, and DAG shortest paths."
+    },
+    "29.4": {
+        "title": "Duality",
+        "summary": "Every LP has a dual LP with complementary properties.",
+        "key_points": [
+            "Primal: maximize cᵀx subject to Ax ≤ b",
+            "Dual: minimize bᵀy subject to Aᵀy ≥ c, y ≥ 0",
+            "Weak duality: primal optimal ≤ dual optimal",
+            "Strong duality: primal optimal = dual optimal (if bounded)",
+            "Complementary slackness: conditions for optimality"
+        ],
+        "example": "Max flow / min cut: max flow value = min cut capacity. This is LP duality!",
+        "why_matters": "Provides bounds, optimality conditions, and algorithmic insights."
+    },
+    "31.4": {
+        "title": "Solving Modular Linear Equations",
+        "summary": "Finding solutions to ax ≡ b (mod n).",
+        "key_points": [
+            "ax ≡ b (mod n) has solution iff gcd(a,n) | b",
+            "If solvable, exactly d = gcd(a,n) solutions",
+            "Use extended Euclid to find x₀ = x'(b/d) mod n",
+            "All solutions: x₀, x₀ + n/d, x₀ + 2n/d, ...",
+            "Time: O(log n) using extended Euclid"
+        ],
+        "example": "14x ≡ 30 (mod 100). gcd(14,100) = 2, 2|30 ✓. Two solutions: x = 45, 95.",
+        "why_matters": "Fundamental for cryptography and number-theoretic algorithms."
+    },
+    "31.5": {
+        "title": "The Chinese Remainder Theorem",
+        "summary": "Solve systems of modular equations with coprime moduli.",
+        "key_points": [
+            "Given x ≡ aᵢ (mod nᵢ) for coprime n₁, n₂, ..., nₖ",
+            "Unique solution modulo N = n₁·n₂·...·nₖ",
+            "Construction: x = Σ aᵢmᵢ(mᵢ⁻¹ mod nᵢ) where mᵢ = N/nᵢ",
+            "Bijection between Zₙ and Zₙ₁ × Zₙ₂ × ... × Zₙₖ",
+            "Used to speed up RSA via separate mod p and mod q computations"
+        ],
+        "example": "x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7). Solution: x ≡ 23 (mod 105).",
+        "why_matters": "Breaks large problems into smaller independent pieces."
+    },
+    "31.6": {
+        "title": "Powers of an Element",
+        "summary": "Computing aⁿ mod m efficiently using repeated squaring.",
+        "key_points": [
+            "Naive: n-1 multiplications",
+            "Repeated squaring: O(log n) multiplications",
+            "a^(2k) = (a^k)², a^(2k+1) = a·(a^k)²",
+            "Fermat's little theorem: a^(p-1) ≡ 1 (mod p) for prime p",
+            "Euler's theorem: a^φ(n) ≡ 1 (mod n) if gcd(a,n) = 1"
+        ],
+        "pseudocode": """MODULAR-EXPONENTIATION(a, b, n):
+    d = 1
+    for i = k downto 0:  # bits of b
+        d = (d * d) mod n
+        if bit i of b == 1:
+            d = (d * a) mod n
+    return d""",
+        "why_matters": "Core operation for RSA encryption/decryption."
+    },
+    "31.8": {
+        "title": "Primality Testing",
+        "summary": "Efficiently testing whether a number is prime.",
+        "key_points": [
+            "Trial division: O(√n) - too slow for large n",
+            "Miller-Rabin: probabilistic, O(k log³ n) for k rounds",
+            "Witness: a where a^(n-1) ≢ 1 (mod n) proves n composite",
+            "Strong witness: detects composites via square roots of 1",
+            "If n is composite, at least 3/4 of bases are witnesses"
+        ],
+        "pseudocode": """MILLER-RABIN(n, s):
+    for j = 1 to s:
+        a = RANDOM(2, n-1)
+        if WITNESS(a, n):
+            return COMPOSITE
+    return PRIME  # probably""",
+        "example": "Test n = 561 (Carmichael number): a = 7 is a witness. 7^560 mod 561 reveals compositeness.",
+        "why_matters": "Essential for generating large primes in cryptography."
+    },
+    "31.9": {
+        "title": "Integer Factorization",
+        "summary": "Algorithms for factoring composite numbers.",
+        "key_points": [
+            "No known polynomial-time algorithm!",
+            "Pollard's rho: expected O(n^(1/4)) for smallest factor",
+            "Uses cycle detection (Floyd's algorithm)",
+            "Quadratic sieve, number field sieve for large numbers",
+            "RSA security relies on factoring being hard"
+        ],
+        "pseudocode": """POLLARD-RHO(n):
+    x = RANDOM(0, n-1)
+    y = x
+    d = 1
+    while d == 1:
+        x = (x² + 1) mod n
+        y = (y² + 1) mod n
+        y = (y² + 1) mod n
+        d = gcd(|x - y|, n)
+    return d""",
+        "example": "Factor 1387: Pollard's rho finds 19 (since 1387 = 19 × 73).",
+        "why_matters": "Breaking RSA = factoring. Quantum computers threaten this."
+    },
+    # Appendix A - Summations
+    "A.1": {
+        "title": "Summation Formulas and Properties",
+        "summary": "Essential summation formulas used throughout algorithm analysis.",
+        "key_points": [
+            "Arithmetic: Σᵢ₌₁ⁿ i = n(n+1)/2",
+            "Squares: Σᵢ₌₁ⁿ i² = n(n+1)(2n+1)/6",
+            "Geometric: Σᵢ₌₀ⁿ xⁱ = (xⁿ⁺¹-1)/(x-1)",
+            "Harmonic: Hₙ = Σᵢ₌₁ⁿ 1/i = ln n + O(1)",
+            "Linearity: Σ(af + bg) = aΣf + bΣg"
+        ],
+        "example": "Sum 1+2+...+100 = 100·101/2 = 5050. Σᵢ₌₀^∞ (1/2)ⁱ = 2.",
+        "why_matters": "These formulas appear constantly in algorithm analysis."
+    },
+    # Appendix B - Sets, Relations, Functions, Graphs, Trees
+    "B.1": {
+        "title": "Sets",
+        "summary": "Basic set theory notation and operations.",
+        "key_points": [
+            "Set: unordered collection of distinct elements",
+            "∈ (element of), ⊆ (subset), ∪ (union), ∩ (intersection)",
+            "Set difference: A - B = {x : x ∈ A and x ∉ B}",
+            "Power set: 2^A = all subsets of A, |2^A| = 2^|A|",
+            "Cartesian product: A × B = {(a,b) : a ∈ A, b ∈ B}"
+        ],
+        "example": "A = {1,2,3}, B = {2,3,4}. A ∪ B = {1,2,3,4}, A ∩ B = {2,3}, A - B = {1}.",
+        "why_matters": "Foundation for describing algorithms and data structures."
+    },
+    "B.2": {
+        "title": "Relations",
+        "summary": "Binary relations and their properties.",
+        "key_points": [
+            "Relation R ⊆ A × A on set A",
+            "Reflexive: aRa for all a",
+            "Symmetric: aRb ⟹ bRa",
+            "Transitive: aRb and bRc ⟹ aRc",
+            "Equivalence relation: reflexive + symmetric + transitive"
+        ],
+        "example": "≤ on integers: reflexive (a ≤ a), transitive, but not symmetric. Equivalence: = (equality).",
+        "why_matters": "Partial orders, equivalence classes used in algorithm proofs."
+    },
+    "B.3": {
+        "title": "Functions",
+        "summary": "Functions, their properties, and counting.",
+        "key_points": [
+            "Function f: A → B assigns each a ∈ A exactly one f(a) ∈ B",
+            "Injective (one-to-one): f(a) = f(b) ⟹ a = b",
+            "Surjective (onto): every b ∈ B has some a with f(a) = b",
+            "Bijective: injective and surjective",
+            "Bijection between finite sets ⟹ same cardinality"
+        ],
+        "example": "f(x) = x² is not injective on ℤ (f(2) = f(-2)). f(x) = 2x is bijection ℤ → even integers.",
+        "why_matters": "Counting arguments, proving set sizes equal."
+    },
+    "B.4": {
+        "title": "Graphs",
+        "summary": "Graph terminology and basic properties.",
+        "key_points": [
+            "Graph G = (V, E): vertices V, edges E",
+            "Directed vs undirected edges",
+            "Path: sequence of vertices connected by edges",
+            "Cycle: path starting and ending at same vertex",
+            "Connected: path between any two vertices"
+        ],
+        "example": "Tree: connected, acyclic graph with |V|-1 edges. Complete graph Kₙ: all pairs connected.",
+        "why_matters": "Graphs model networks, relationships, dependencies."
+    },
+    # Appendix C - Counting and Probability
+    "C.1": {
+        "title": "Counting",
+        "summary": "Fundamental counting principles and formulas.",
+        "key_points": [
+            "Product rule: |A × B| = |A| · |B|",
+            "Sum rule: |A ∪ B| = |A| + |B| - |A ∩ B|",
+            "Permutations: n! = n · (n-1) · ... · 1",
+            "k-permutations: n!/(n-k)!",
+            "Combinations: C(n,k) = n! / (k!(n-k)!)"
+        ],
+        "example": "Choose 3 from 5: C(5,3) = 10. Arrange 3 from 5: P(5,3) = 60.",
+        "why_matters": "Counting is essential for analyzing algorithm complexity."
+    },
+    "C.2": {
+        "title": "Probability",
+        "summary": "Basic probability theory.",
+        "key_points": [
+            "Sample space S, event A ⊆ S",
+            "Pr{A} = |A|/|S| for uniform distribution",
+            "Pr{A ∪ B} = Pr{A} + Pr{B} - Pr{A ∩ B}",
+            "Conditional: Pr{A|B} = Pr{A ∩ B}/Pr{B}",
+            "Independence: Pr{A ∩ B} = Pr{A} · Pr{B}"
+        ],
+        "example": "Two dice: Pr{sum = 7} = 6/36 = 1/6. Pr{sum = 7 | first die = 3} = 1/6.",
+        "why_matters": "Analyzing randomized algorithms and average case."
+    },
+    "C.3": {
+        "title": "Discrete Random Variables",
+        "summary": "Random variables and their expectations.",
+        "key_points": [
+            "Random variable X: function from sample space to reals",
+            "Expected value: E[X] = Σₓ x · Pr{X = x}",
+            "Linearity: E[X + Y] = E[X] + E[Y] (always!)",
+            "Variance: Var[X] = E[(X - E[X])²] = E[X²] - E[X]²",
+            "Standard deviation: σ = √Var[X]"
+        ],
+        "example": "Fair die: E[X] = (1+2+3+4+5+6)/6 = 3.5. Var[X] = 35/12 ≈ 2.92.",
+        "why_matters": "Expected running time, randomized algorithm analysis."
+    },
+    "C.4": {
+        "title": "The Geometric and Binomial Distributions",
+        "summary": "Common discrete distributions in algorithm analysis.",
+        "key_points": [
+            "Bernoulli: Pr{X = 1} = p, Pr{X = 0} = 1-p",
+            "Binomial(n,p): number of successes in n trials",
+            "E[Binomial] = np, Var = np(1-p)",
+            "Geometric(p): trials until first success",
+            "E[Geometric] = 1/p"
+        ],
+        "example": "10 coin flips: Binomial(10, 0.5). E[heads] = 5. Geometric: expected flips until heads = 2.",
+        "why_matters": "Models repeated trials, waiting times in algorithms."
+    },
+    # Appendix D - Matrices
+    "D.1": {
+        "title": "Matrices and Matrix Operations",
+        "summary": "Basic matrix algebra for algorithms.",
+        "key_points": [
+            "Matrix: m×n array of numbers",
+            "Addition: (A+B)ᵢⱼ = Aᵢⱼ + Bᵢⱼ",
+            "Multiplication: (AB)ᵢⱼ = Σₖ AᵢₖBₖⱼ",
+            "Identity I: AI = IA = A",
+            "Transpose: (Aᵀ)ᵢⱼ = Aⱼᵢ"
+        ],
+        "example": "2×2 matrices: [a b; c d] × [e f; g h] = [ae+bg af+bh; ce+dg cf+dh].",
+        "why_matters": "Matrix multiplication is fundamental operation in many algorithms."
+    },
 }
 
 # ============ PAGE TO SECTION MAPPING ============
@@ -1880,6 +2702,42 @@ PAGE_TO_SECTION = {
     1117: "35.3", 1118: "35.3", 1119: "35.3", 1120: "35.3", 1121: "35.3", 1122: "35.3",
     1123: "35.4", 1124: "35.4", 1125: "35.4", 1126: "35.4", 1127: "35.4",
     1128: "35.5", 1129: "35.5", 1130: "35.5", 1131: "35.5", 1132: "35.5", 1133: "35.5", 1134: "35.5", 1135: "35.5",
+    # Chapter 15 - 15.5 Optimal BST
+    404: "15.5", 405: "15.5", 406: "15.5", 407: "15.5", 408: "15.5", 409: "15.5", 410: "15.5", 411: "15.5", 412: "15.5", 413: "15.5",
+    # Chapter 16 extras
+    441: "16.3", 442: "16.3", 443: "16.3", 444: "16.3", 445: "16.3", 446: "16.3", 447: "16.3", 448: "16.3", 449: "16.3", 450: "16.3",
+    # Chapter 21.4
+    579: "21.4", 580: "21.4", 581: "21.4", 582: "21.4", 583: "21.4", 584: "21.4", 585: "21.4", 586: "21.4", 587: "21.4", 588: "21.4",
+    # Chapter 24.4 and 24.5
+    669: "24.4", 670: "24.4", 671: "24.4", 672: "24.4", 673: "24.4", 674: "24.4", 675: "24.4",
+    676: "24.5", 677: "24.5", 678: "24.5", 679: "24.5", 680: "24.5", 681: "24.5", 682: "24.5", 683: "24.5",
+    # Chapter 29.4 and 29.5
+    881: "29.4", 882: "29.4", 883: "29.4", 884: "29.4", 885: "29.4", 886: "29.4", 887: "29.4", 888: "29.4", 889: "29.4", 890: "29.4", 891: "29.4", 892: "29.4", 893: "29.4", 894: "29.4", 895: "29.4", 896: "29.4", 897: "29.4",
+    # Chapter 31.4-31.6, 31.8-31.9
+    946: "31.4", 947: "31.4", 948: "31.4", 949: "31.4",
+    950: "31.5", 951: "31.5", 952: "31.5", 953: "31.5",
+    954: "31.6", 955: "31.6", 956: "31.6", 957: "31.6",
+    965: "31.8", 966: "31.8", 967: "31.8", 968: "31.8", 969: "31.8", 970: "31.8", 971: "31.8", 972: "31.8", 973: "31.8", 974: "31.8",
+    975: "31.9", 976: "31.9", 977: "31.9", 978: "31.9", 979: "31.9", 980: "31.9", 981: "31.9", 982: "31.9", 983: "31.9", 984: "31.9",
+    # Appendix A - Summations
+    1145: "A.1", 1146: "A.1", 1147: "A.1", 1148: "A.1", 1149: "A.1", 1150: "A.1", 1151: "A.1", 1152: "A.1", 1153: "A.1", 1154: "A.1", 1155: "A.1", 1156: "A.1", 1157: "A.1",
+    # Appendix B - Sets, etc.
+    1158: "B.1", 1159: "B.1", 1160: "B.1", 1161: "B.1", 1162: "B.1", 1163: "B.1", 1164: "B.1", 1165: "B.1",
+    1166: "B.2", 1167: "B.2", 1168: "B.2", 1169: "B.2", 1170: "B.2",
+    1171: "B.3", 1172: "B.3", 1173: "B.3", 1174: "B.3", 1175: "B.3",
+    1176: "B.4", 1177: "B.4", 1178: "B.4", 1179: "B.4", 1180: "B.4", 1181: "B.4", 1182: "B.4",
+    # Appendix C - Counting and Probability
+    1183: "C.1", 1184: "C.1", 1185: "C.1", 1186: "C.1", 1187: "C.1", 1188: "C.1", 1189: "C.1", 1190: "C.1",
+    1191: "C.2", 1192: "C.2", 1193: "C.2", 1194: "C.2", 1195: "C.2",
+    1196: "C.3", 1197: "C.3", 1198: "C.3", 1199: "C.3", 1200: "C.3", 1201: "C.3", 1202: "C.3",
+    1203: "C.4", 1204: "C.4", 1205: "C.4", 1206: "C.4", 1207: "C.4", 1208: "C.4", 1209: "C.4", 1210: "C.4", 1211: "C.4", 1212: "C.4", 1213: "C.4", 1214: "C.4", 1215: "C.4", 1216: "C.4",
+    # Appendix D - Matrices (extended)
+    1217: "D.1", 1218: "D.1", 1219: "D.1", 1220: "D.1", 1221: "D.1", 1222: "D.1", 1223: "D.1", 1224: "D.1", 1225: "D.1", 1226: "D.1", 1227: "D.1", 1228: "D.1", 1229: "D.1", 1230: "D.1", 1231: "D.1", 1232: "D.1",
+    1238: "D.1", 1239: "D.1", 1240: "D.1", 1241: "D.1", 1242: "D.1", 1243: "D.1", 1244: "D.1", 1245: "D.1", 1246: "D.1", 1247: "D.1", 1248: "D.1", 1249: "D.1",
+    # Extended Appendix C
+    1233: "C.4", 1234: "C.4", 1235: "C.4", 1236: "C.4", 1237: "C.4",
+    # Chapter 35 extended
+    1136: "35.5", 1137: "35.5", 1138: "35.5", 1139: "35.5", 1140: "35.5", 1141: "35.5", 1142: "35.5", 1143: "35.5", 1144: "35.5",
 }
 
 # ============ PAGE GENERATION ============
@@ -1975,8 +2833,47 @@ def detect_section(text):
         return match.group(1)
     return None
 
+def create_front_matter_page(page_num):
+    """Create front matter pages."""
+    titles = {
+        1: "Cover",
+        2: "Introduction to Algorithms",
+        3: "Title Page",
+        4: "Introduction to Algorithms, Third Edition",
+        5: "Copyright and Dedication"
+    }
+    title = titles.get(page_num, f"Page {page_num}")
+    return {
+        "page": page_num,
+        "title": title,
+        "content": f"""<div class="article-header">
+    <div class="section-label">Front Matter</div>
+    <h1>{title}</h1>
+</div>
+<div class="original-content">
+    <div class="highlight-box">
+        <h4>Introduction to Algorithms</h4>
+        <p><strong>Third Edition</strong></p>
+        <p>By Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein</p>
+        <p>The MIT Press, 2009</p>
+    </div>
+    <div class="definition-box">
+        <h4>About This Book</h4>
+        <p>Known as "CLRS" after its authors, this is the most widely used textbook for university algorithm courses. It covers fundamental algorithms and data structures with rigorous mathematical analysis.</p>
+    </div>
+    <div class="figure-box">
+        <h4>Navigation</h4>
+        <p>Press <kbd>T</kbd> to open the Table of Contents for quick navigation to any chapter or section.</p>
+    </div>
+</div>"""
+    }
+
 def process_page(page_num):
     """Process a single page."""
+    # Front matter (pages 1-5)
+    if 1 <= page_num <= 5:
+        return create_front_matter_page(page_num)
+
     # TOC pages (pages 6-15 are table of contents in CLRS)
     if 6 <= page_num <= 15:
         return create_toc_page(page_num)

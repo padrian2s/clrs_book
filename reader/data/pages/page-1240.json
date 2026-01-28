@@ -1,5 +1,5 @@
 {
   "page": 1240,
-  "title": "D.1 Matrices and matrix operations 1219",
-  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Page 1240</div>\n    <h1>D.1 Matrices and matrix operations 1219</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"highlight-box\">\n    <h4>Page Content</h4>\n    <p>This page contains detailed technical content. Use the image view (press <kbd>V</kbd>) to see the original material with all formulas and figures.</p>\n</div>\n</div>"
+  "title": "D.1 Matrices and Matrix Operations",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section D.1</div>\n    <h1>Matrices and Matrix Operations</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Basic matrix algebra for algorithms.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Matrix: m×n array of numbers</li>\n<li>Addition: (A+B)ᵢⱼ = Aᵢⱼ + Bᵢⱼ</li>\n<li>Multiplication: (AB)ᵢⱼ = Σₖ AᵢₖBₖⱼ</li>\n<li>Identity I: AI = IA = A</li>\n<li>Transpose: (Aᵀ)ᵢⱼ = Aⱼᵢ</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>2×2 matrices: [a b; c d] × [e f; g h] = [ae+bg af+bh; ce+dg cf+dh].</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Matrix multiplication is fundamental operation in many algorithms.</p>\n</div>\n</div>"
 }

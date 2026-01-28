@@ -1,5 +1,5 @@
 {
   "page": 1201,
-  "title": "1180 Appendix B Sets, Etc.",
-  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Page 1201</div>\n    <h1>1180 Appendix B Sets, Etc.</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"highlight-box\">\n    <h4>Page Content</h4>\n    <p>This page contains detailed technical content. Use the image view (press <kbd>V</kbd>) to see the original material with all formulas and figures.</p>\n</div>\n</div>"
+  "title": "C.3 Discrete Random Variables",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section C.3</div>\n    <h1>Discrete Random Variables</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Random variables and their expectations.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Random variable X: function from sample space to reals</li>\n<li>Expected value: E[X] = Σₓ x · Pr{X = x}</li>\n<li>Linearity: E[X + Y] = E[X] + E[Y] (always!)</li>\n<li>Variance: Var[X] = E[(X - E[X])²] = E[X²] - E[X]²</li>\n<li>Standard deviation: σ = √Var[X]</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Fair die: E[X] = (1+2+3+4+5+6)/6 = 3.5. Var[X] = 35/12 ≈ 2.92.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Expected running time, randomized algorithm analysis.</p>\n</div>\n</div>"
 }

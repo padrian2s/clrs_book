@@ -1,5 +1,5 @@
 {
   "page": 1235,
-  "title": "1214 Appendix C Counting and Probability",
-  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Page 1235</div>\n    <h1>1214 Appendix C Counting and Probability</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"highlight-box\">\n    <h4>Page Content</h4>\n    <p>This page contains detailed technical content. Use the image view (press <kbd>V</kbd>) to see the original material with all formulas and figures.</p>\n</div>\n</div>"
+  "title": "C.4 The Geometric and Binomial Distributions",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section C.4</div>\n    <h1>The Geometric and Binomial Distributions</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Common discrete distributions in algorithm analysis.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Bernoulli: Pr{X = 1} = p, Pr{X = 0} = 1-p</li>\n<li>Binomial(n,p): number of successes in n trials</li>\n<li>E[Binomial] = np, Var = np(1-p)</li>\n<li>Geometric(p): trials until first success</li>\n<li>E[Geometric] = 1/p</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>10 coin flips: Binomial(10, 0.5). E[heads] = 5. Geometric: expected flips until heads = 2.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Models repeated trials, waiting times in algorithms.</p>\n</div>\n</div>"
 }

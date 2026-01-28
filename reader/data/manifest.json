@@ -5,27 +5,27 @@
   "pages": [
     {
       "page": 1,
-      "title": "Title Page",
+      "title": "Cover",
       "hasContent": true
     },
     {
       "page": 2,
-      "title": "Half Title",
+      "title": "Introduction to Algorithms",
       "hasContent": true
     },
     {
       "page": 3,
-      "title": "Blank Page",
+      "title": "Title Page",
       "hasContent": true
     },
     {
       "page": 4,
-      "title": "Title Page (Full)",
+      "title": "Introduction to Algorithms, Third Edition",
       "hasContent": true
     },
     {
       "page": 5,
-      "title": "1.1 Algorithms",
+      "title": "Copyright and Dedication",
       "hasContent": true
     },
     {
@@ -2020,52 +2020,52 @@
     },
     {
       "page": 404,
-      "title": "15.3 Elements of Dynamic Programming",
+      "title": "15.5 Optimal Binary Search Trees",
       "hasContent": true
     },
     {
       "page": 405,
-      "title": "Dynamic Programming",
+      "title": "15.5 Optimal Binary Search Trees",
       "hasContent": true
     },
     {
       "page": 406,
-      "title": "15.3 Elements of Dynamic Programming",
+      "title": "15.5 Optimal Binary Search Trees",
       "hasContent": true
     },
     {
       "page": 407,
-      "title": "Dynamic Programming",
+      "title": "15.5 Optimal Binary Search Trees",
       "hasContent": true
     },
     {
       "page": 408,
-      "title": "15.3 Elements of Dynamic Programming",
+      "title": "15.5 Optimal Binary Search Trees",
       "hasContent": true
     },
     {
       "page": 409,
-      "title": "Dynamic Programming",
+      "title": "15.5 Optimal Binary Search Trees",
       "hasContent": true
     },
     {
       "page": 410,
-      "title": "15.3 Elements of Dynamic Programming",
+      "title": "15.5 Optimal Binary Search Trees",
       "hasContent": true
     },
     {
       "page": 411,
-      "title": "15.4 Longest Common Subsequence",
+      "title": "15.5 Optimal Binary Search Trees",
       "hasContent": true
     },
     {
       "page": 412,
-      "title": "15.4 Longest Common Subsequence",
+      "title": "15.5 Optimal Binary Search Trees",
       "hasContent": true
     },
     {
       "page": 413,
-      "title": "Dynamic Programming",
+      "title": "15.5 Optimal Binary Search Trees",
       "hasContent": true
     },
     {
@@ -2205,42 +2205,42 @@
     },
     {
       "page": 441,
-      "title": "Greedy Algorithms",
+      "title": "16.3 Huffman Codes",
       "hasContent": true
     },
     {
       "page": 442,
-      "title": "16.1 An Activity-Selection Problem",
+      "title": "16.3 Huffman Codes",
       "hasContent": true
     },
     {
       "page": 443,
-      "title": "Greedy Algorithms",
+      "title": "16.3 Huffman Codes",
       "hasContent": true
     },
     {
       "page": 444,
-      "title": "16.2 Elements of the Greedy Strategy",
+      "title": "16.3 Huffman Codes",
       "hasContent": true
     },
     {
       "page": 445,
-      "title": "Greedy Algorithms",
+      "title": "16.3 Huffman Codes",
       "hasContent": true
     },
     {
       "page": 446,
-      "title": "16.2 Elements of the Greedy Strategy",
+      "title": "16.3 Huffman Codes",
       "hasContent": true
     },
     {
       "page": 447,
-      "title": "Greedy Algorithms",
+      "title": "16.3 Huffman Codes",
       "hasContent": true
     },
     {
       "page": 448,
-      "title": "16.2 Elements of the Greedy Strategy",
+      "title": "16.3 Huffman Codes",
       "hasContent": true
     },
     {
@@ -2525,282 +2525,282 @@
     },
     {
       "page": 505,
-      "title": "18 B-Trees",
+      "title": "19.1 Structure of Fibonacci Heaps",
       "hasContent": true
     },
     {
       "page": 506,
-      "title": "B-Trees",
+      "title": "19.1 Structure of Fibonacci Heaps",
       "hasContent": true
     },
     {
       "page": 507,
-      "title": "B-Trees",
+      "title": "19.1 Structure of Fibonacci Heaps",
       "hasContent": true
     },
     {
       "page": 508,
-      "title": "B-Trees",
+      "title": "19.1 Structure of Fibonacci Heaps",
       "hasContent": true
     },
     {
       "page": 509,
-      "title": "18.1 Definition of B-trees",
+      "title": "19.2 Mergeable-heap Operations",
       "hasContent": true
     },
     {
       "page": 510,
-      "title": "18.1 Definition of B-trees",
+      "title": "19.2 Mergeable-heap Operations",
       "hasContent": true
     },
     {
       "page": 511,
-      "title": "B-Trees",
+      "title": "19.2 Mergeable-heap Operations",
       "hasContent": true
     },
     {
       "page": 512,
-      "title": "18.2 Basic Operations on B-trees",
+      "title": "19.2 Mergeable-heap Operations",
       "hasContent": true
     },
     {
       "page": 513,
-      "title": "B-Trees",
+      "title": "19.2 Mergeable-heap Operations",
       "hasContent": true
     },
     {
       "page": 514,
-      "title": "18.2 Basic Operations on B-trees",
+      "title": "19.2 Mergeable-heap Operations",
       "hasContent": true
     },
     {
       "page": 515,
-      "title": "B-Trees",
+      "title": "19.2 Mergeable-heap Operations",
       "hasContent": true
     },
     {
       "page": 516,
-      "title": "18.2 Basic Operations on B-trees",
+      "title": "19.2 Mergeable-heap Operations",
       "hasContent": true
     },
     {
       "page": 517,
-      "title": "B-Trees",
+      "title": "19.2 Mergeable-heap Operations",
       "hasContent": true
     },
     {
       "page": 518,
-      "title": "18.2 Basic Operations on B-trees",
+      "title": "19.3 Decreasing a Key and Deleting a Node",
       "hasContent": true
     },
     {
       "page": 519,
-      "title": "B-Trees",
+      "title": "19.3 Decreasing a Key and Deleting a Node",
       "hasContent": true
     },
     {
       "page": 520,
-      "title": "18.3 Deleting a Key from a B-tree",
+      "title": "19.3 Decreasing a Key and Deleting a Node",
       "hasContent": true
     },
     {
       "page": 521,
-      "title": "B-Trees",
+      "title": "19.3 Decreasing a Key and Deleting a Node",
       "hasContent": true
     },
     {
       "page": 522,
-      "title": "18.3 Deleting a Key from a B-tree",
+      "title": "19.3 Decreasing a Key and Deleting a Node",
       "hasContent": true
     },
     {
       "page": 523,
-      "title": "B-Trees",
+      "title": "19.4 Bounding the Maximum Degree",
       "hasContent": true
     },
     {
       "page": 524,
-      "title": "B-Trees",
+      "title": "19.4 Bounding the Maximum Degree",
       "hasContent": true
     },
     {
       "page": 525,
-      "title": "B-Trees",
+      "title": "19.4 Bounding the Maximum Degree",
       "hasContent": true
     },
     {
       "page": 526,
-      "title": "19 Fibonacci Heaps",
+      "title": "19.4 Bounding the Maximum Degree",
       "hasContent": true
     },
     {
       "page": 527,
-      "title": "Fibonacci Heaps",
+      "title": "19.4 Bounding the Maximum Degree",
       "hasContent": true
     },
     {
       "page": 528,
-      "title": "19.1 Structure of Fibonacci heaps",
+      "title": "19.4 Bounding the Maximum Degree",
       "hasContent": true
     },
     {
       "page": 529,
-      "title": "Fibonacci Heaps",
+      "title": "19.4 Bounding the Maximum Degree",
       "hasContent": true
     },
     {
       "page": 530,
-      "title": "19.1 Structure of Fibonacci heaps",
+      "title": "19.4 Bounding the Maximum Degree",
       "hasContent": true
     },
     {
       "page": 531,
-      "title": "19.2 Mergeable-heap operations\n\n The mergeable-heap operations on Fibonacci heaps delay work as long as possible",
+      "title": "20.1 Preliminary Approaches",
       "hasContent": true
     },
     {
       "page": 532,
-      "title": "19.2 Mergeable-heap operations",
+      "title": "20.1 Preliminary Approaches",
       "hasContent": true
     },
     {
       "page": 533,
-      "title": "Fibonacci Heaps",
+      "title": "20.1 Preliminary Approaches",
       "hasContent": true
     },
     {
       "page": 534,
-      "title": "19.2 Mergeable-heap operations",
+      "title": "20.1 Preliminary Approaches",
       "hasContent": true
     },
     {
       "page": 535,
-      "title": "Fibonacci Heaps",
+      "title": "20.1 Preliminary Approaches",
       "hasContent": true
     },
     {
       "page": 536,
-      "title": "19.2 Mergeable-heap operations",
+      "title": "20.1 Preliminary Approaches",
       "hasContent": true
     },
     {
       "page": 537,
-      "title": "Fibonacci Heaps",
+      "title": "20.2 A Recursive Structure",
       "hasContent": true
     },
     {
       "page": 538,
-      "title": "19.2 Mergeable-heap operations",
+      "title": "20.2 A Recursive Structure",
       "hasContent": true
     },
     {
       "page": 539,
-      "title": "19.3 Decreasing a key and deleting a node\n\n In this section, we show how to decrease the key of a node in a Fibonacci heap\n in O",
+      "title": "20.2 A Recursive Structure",
       "hasContent": true
     },
     {
       "page": 540,
-      "title": "19.3 Decreasing a key and deleting a node",
+      "title": "20.2 A Recursive Structure",
       "hasContent": true
     },
     {
       "page": 541,
-      "title": "Fibonacci Heaps",
+      "title": "20.2 A Recursive Structure",
       "hasContent": true
     },
     {
       "page": 542,
-      "title": "19.3 Decreasing a key and deleting a node",
+      "title": "20.2 A Recursive Structure",
       "hasContent": true
     },
     {
       "page": 543,
-      "title": "Fibonacci Heaps",
+      "title": "20.2 A Recursive Structure",
       "hasContent": true
     },
     {
       "page": 544,
-      "title": "19.4 Bounding the maximum degree",
+      "title": "20.2 A Recursive Structure",
       "hasContent": true
     },
     {
       "page": 545,
-      "title": "Fibonacci Heaps",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
       "page": 546,
-      "title": "19.4 Bounding the maximum degree",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
       "page": 547,
-      "title": "Fibonacci Heaps",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
       "page": 548,
-      "title": "Fibonacci Heaps",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
       "page": 549,
-      "title": "Fibonacci Heaps",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
       "page": 550,
-      "title": "Fibonacci Heaps",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
       "page": 551,
-      "title": "Fibonacci Heaps",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
       "page": 552,
-      "title": "Heapsort",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
       "page": 553,
-      "title": "20.1 Preliminary approaches\n\n In this section, we shall examine various approaches for storing a dynamic set",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
       "page": 554,
-      "title": "20.1 Preliminary approaches",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
       "page": 555,
-      "title": "van Emde Boas Trees",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
       "page": 556,
-      "title": "20.1 Preliminary approaches",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
       "page": 557,
-      "title": "20.2 A recursive structure\n p\n In this section, we modify the idea of superimposing a tree of degree u p on top of\n a bit vector",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
       "page": 558,
-      "title": "20.2 A recursive structure",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
       "page": 559,
-      "title": "van Emde Boas Trees",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
       "page": 560,
-      "title": "20.2 A recursive structure",
+      "title": "20.3 The van Emde Boas Tree",
       "hasContent": true
     },
     {
@@ -2895,52 +2895,52 @@
     },
     {
       "page": 579,
-      "title": "21.3 Disjoint-set Forests",
+      "title": "21.4 Analysis of Union by Rank with Path Compression",
       "hasContent": true
     },
     {
       "page": 580,
-      "title": "21.3 Disjoint-set Forests",
+      "title": "21.4 Analysis of Union by Rank with Path Compression",
       "hasContent": true
     },
     {
       "page": 581,
-      "title": "21.3 Disjoint-set Forests",
+      "title": "21.4 Analysis of Union by Rank with Path Compression",
       "hasContent": true
     },
     {
       "page": 582,
-      "title": "21.3 Disjoint-set Forests",
+      "title": "21.4 Analysis of Union by Rank with Path Compression",
       "hasContent": true
     },
     {
       "page": 583,
-      "title": "21.3 Disjoint-set Forests",
+      "title": "21.4 Analysis of Union by Rank with Path Compression",
       "hasContent": true
     },
     {
       "page": 584,
-      "title": "21.3 Disjoint-set Forests",
+      "title": "21.4 Analysis of Union by Rank with Path Compression",
       "hasContent": true
     },
     {
       "page": 585,
-      "title": "21.3 Disjoint-set Forests",
+      "title": "21.4 Analysis of Union by Rank with Path Compression",
       "hasContent": true
     },
     {
       "page": 586,
-      "title": "21.3 Disjoint-set Forests",
+      "title": "21.4 Analysis of Union by Rank with Path Compression",
       "hasContent": true
     },
     {
       "page": 587,
-      "title": "21.3 Disjoint-set Forests",
+      "title": "21.4 Analysis of Union by Rank with Path Compression",
       "hasContent": true
     },
     {
       "page": 588,
-      "title": "21.3 Disjoint-set Forests",
+      "title": "21.4 Analysis of Union by Rank with Path Compression",
       "hasContent": true
     },
     {
@@ -3345,77 +3345,77 @@
     },
     {
       "page": 669,
-      "title": "Single-Source Shortest Paths",
+      "title": "24.4 Difference Constraints and Shortest Paths",
       "hasContent": true
     },
     {
       "page": 670,
-      "title": "Single-Source Shortest Paths",
+      "title": "24.4 Difference Constraints and Shortest Paths",
       "hasContent": true
     },
     {
       "page": 671,
-      "title": "Single-Source Shortest Paths",
+      "title": "24.4 Difference Constraints and Shortest Paths",
       "hasContent": true
     },
     {
       "page": 672,
-      "title": "24.1 The Bellman-Ford Algorithm",
+      "title": "24.4 Difference Constraints and Shortest Paths",
       "hasContent": true
     },
     {
       "page": 673,
-      "title": "Single-Source Shortest Paths",
+      "title": "24.4 Difference Constraints and Shortest Paths",
       "hasContent": true
     },
     {
       "page": 674,
-      "title": "24.1 The Bellman-Ford Algorithm",
+      "title": "24.4 Difference Constraints and Shortest Paths",
       "hasContent": true
     },
     {
       "page": 675,
-      "title": "Single-Source Shortest Paths",
+      "title": "24.4 Difference Constraints and Shortest Paths",
       "hasContent": true
     },
     {
       "page": 676,
-      "title": "24.2 Single-Source Shortest Paths in DAGs",
+      "title": "24.5 Proofs of Shortest-Paths Properties",
       "hasContent": true
     },
     {
       "page": 677,
-      "title": "Single-Source Shortest Paths",
+      "title": "24.5 Proofs of Shortest-Paths Properties",
       "hasContent": true
     },
     {
       "page": 678,
-      "title": "24.2 Single-Source Shortest Paths in DAGs",
+      "title": "24.5 Proofs of Shortest-Paths Properties",
       "hasContent": true
     },
     {
       "page": 679,
-      "title": "24.3 Dijkstra's Algorithm",
+      "title": "24.5 Proofs of Shortest-Paths Properties",
       "hasContent": true
     },
     {
       "page": 680,
-      "title": "24.3 Dijkstra's Algorithm",
+      "title": "24.5 Proofs of Shortest-Paths Properties",
       "hasContent": true
     },
     {
       "page": 681,
-      "title": "Single-Source Shortest Paths",
+      "title": "24.5 Proofs of Shortest-Paths Properties",
       "hasContent": true
     },
     {
       "page": 682,
-      "title": "24.3 Dijkstra's Algorithm",
+      "title": "24.5 Proofs of Shortest-Paths Properties",
       "hasContent": true
     },
     {
       "page": 683,
-      "title": "Single-Source Shortest Paths",
+      "title": "24.5 Proofs of Shortest-Paths Properties",
       "hasContent": true
     },
     {
@@ -3860,1067 +3860,1067 @@
     },
     {
       "page": 772,
-      "title": "26.5 The relabel-to-front algorithm",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 773,
-      "title": "Maximum Flow",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 774,
-      "title": "26.5 The relabel-to-front algorithm",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 775,
-      "title": "Maximum Flow",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 776,
-      "title": "26.5 The relabel-to-front algorithm",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 777,
-      "title": "Maximum Flow",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 778,
-      "title": "26.5 The relabel-to-front algorithm",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 779,
-      "title": "Maximum Flow",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 780,
-      "title": "Exercises 26.5",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 781,
-      "title": "Maximum Flow",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 782,
-      "title": "Maximum Flow",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 783,
-      "title": "Maximum Flow",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 784,
-      "title": "Maximum Flow",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 785,
-      "title": "Maximum Flow",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 786,
-      "title": "Maximum Flow",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 787,
-      "title": "Maximum Flow",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 788,
-      "title": "Page 788",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 789,
-      "title": "VII Selected Topics",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 790,
-      "title": "Multithreaded Algorithms",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 791,
-      "title": "Modular Arithmetic",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 792,
-      "title": "Part VII Selected Topics 771",
+      "title": "27.1 The Basics of Dynamic Multithreading",
       "hasContent": true
     },
     {
       "page": 793,
-      "title": "27 Multithreaded Algorithms",
+      "title": "27.2 Multithreaded Matrix Multiplication",
       "hasContent": true
     },
     {
       "page": 794,
-      "title": "Multithreaded Algorithms",
+      "title": "27.2 Multithreaded Matrix Multiplication",
       "hasContent": true
     },
     {
       "page": 795,
-      "title": "27.1 The basics of dynamic multithreading\n\n We shall begin our exploration of dynamic multithreading using the example of\n computing Fibonacci numbers recursively",
+      "title": "27.2 Multithreaded Matrix Multiplication",
       "hasContent": true
     },
     {
       "page": 796,
-      "title": "27.1 The basics of dynamic multithreading",
+      "title": "27.2 Multithreaded Matrix Multiplication",
       "hasContent": true
     },
     {
       "page": 797,
-      "title": "Multithreaded Algorithms",
+      "title": "27.2 Multithreaded Matrix Multiplication",
       "hasContent": true
     },
     {
       "page": 798,
-      "title": "27.1 The basics of dynamic multithreading",
+      "title": "27.2 Multithreaded Matrix Multiplication",
       "hasContent": true
     },
     {
       "page": 799,
-      "title": "Multithreaded Algorithms",
+      "title": "27.2 Multithreaded Matrix Multiplication",
       "hasContent": true
     },
     {
       "page": 800,
-      "title": "27.1 The basics of dynamic multithreading",
+      "title": "27.3 Multithreaded Merge Sort",
       "hasContent": true
     },
     {
       "page": 801,
-      "title": "Multithreaded Algorithms",
+      "title": "27.3 Multithreaded Merge Sort",
       "hasContent": true
     },
     {
       "page": 802,
-      "title": "27.1 The basics of dynamic multithreading",
+      "title": "27.3 Multithreaded Merge Sort",
       "hasContent": true
     },
     {
       "page": 803,
-      "title": "Multithreaded Algorithms",
+      "title": "27.3 Multithreaded Merge Sort",
       "hasContent": true
     },
     {
       "page": 804,
-      "title": "27.1 The basics of dynamic multithreading",
+      "title": "27.3 Multithreaded Merge Sort",
       "hasContent": true
     },
     {
       "page": 805,
-      "title": "Multithreaded Algorithms",
+      "title": "27.3 Multithreaded Merge Sort",
       "hasContent": true
     },
     {
       "page": 806,
-      "title": "27.1 The basics of dynamic multithreading",
+      "title": "27.3 Multithreaded Merge Sort",
       "hasContent": true
     },
     {
       "page": 807,
-      "title": "Multithreaded Algorithms",
+      "title": "27.3 Multithreaded Merge Sort",
       "hasContent": true
     },
     {
       "page": 808,
-      "title": "27.1 The basics of dynamic multithreading",
+      "title": "27.3 Multithreaded Merge Sort",
       "hasContent": true
     },
     {
       "page": 809,
-      "title": "Multithreaded Algorithms",
+      "title": "27.3 Multithreaded Merge Sort",
       "hasContent": true
     },
     {
       "page": 810,
-      "title": "27.1 The basics of dynamic multithreading",
+      "title": "27.3 Multithreaded Merge Sort",
       "hasContent": true
     },
     {
       "page": 811,
-      "title": "Multithreaded Algorithms",
+      "title": "27.3 Multithreaded Merge Sort",
       "hasContent": true
     },
     {
       "page": 812,
-      "title": "Exercises 27.1",
+      "title": "27.3 Multithreaded Merge Sort",
       "hasContent": true
     },
     {
       "page": 813,
-      "title": "27.2 Multithreaded matrix multiplication\n\n In this section, we examine how to multithread matrix multiplication, a problem\n whose serial running time we studied in Section",
+      "title": "28.1 Solving Systems of Linear Equations",
       "hasContent": true
     },
     {
       "page": 814,
-      "title": "27.2 Multithreaded matrix multiplication",
+      "title": "28.1 Solving Systems of Linear Equations",
       "hasContent": true
     },
     {
       "page": 815,
-      "title": "Multithreaded Algorithms",
+      "title": "28.1 Solving Systems of Linear Equations",
       "hasContent": true
     },
     {
       "page": 816,
-      "title": "27.2 Multithreaded matrix multiplication",
+      "title": "28.1 Solving Systems of Linear Equations",
       "hasContent": true
     },
     {
       "page": 817,
-      "title": "Multithreaded Algorithms",
+      "title": "28.1 Solving Systems of Linear Equations",
       "hasContent": true
     },
     {
       "page": 818,
-      "title": "27.3 Multithreaded merge sort",
+      "title": "28.1 Solving Systems of Linear Equations",
       "hasContent": true
     },
     {
       "page": 819,
-      "title": "Multithreaded Algorithms",
+      "title": "28.1 Solving Systems of Linear Equations",
       "hasContent": true
     },
     {
       "page": 820,
-      "title": "27.3 Multithreaded merge sort",
+      "title": "28.1 Solving Systems of Linear Equations",
       "hasContent": true
     },
     {
       "page": 821,
-      "title": "Multithreaded Algorithms",
+      "title": "28.1 Solving Systems of Linear Equations",
       "hasContent": true
     },
     {
       "page": 822,
-      "title": "27.3 Multithreaded merge sort",
+      "title": "28.1 Solving Systems of Linear Equations",
       "hasContent": true
     },
     {
       "page": 823,
-      "title": "Multithreaded Algorithms",
+      "title": "28.1 Solving Systems of Linear Equations",
       "hasContent": true
     },
     {
       "page": 824,
-      "title": "27.3 Multithreaded merge sort",
+      "title": "28.1 Solving Systems of Linear Equations",
       "hasContent": true
     },
     {
       "page": 825,
-      "title": "Multithreaded Algorithms",
+      "title": "28.1 Solving Systems of Linear Equations",
       "hasContent": true
     },
     {
       "page": 826,
-      "title": "Multithreaded Algorithms",
+      "title": "28.1 Solving Systems of Linear Equations",
       "hasContent": true
     },
     {
       "page": 827,
-      "title": "Multithreaded Algorithms",
+      "title": "28.1 Solving Systems of Linear Equations",
       "hasContent": true
     },
     {
       "page": 828,
-      "title": "Multithreaded Algorithms",
+      "title": "28.2 Inverting Matrices",
       "hasContent": true
     },
     {
       "page": 829,
-      "title": "Multithreaded Algorithms",
+      "title": "28.2 Inverting Matrices",
       "hasContent": true
     },
     {
       "page": 830,
-      "title": "Multithreaded Algorithms",
+      "title": "28.2 Inverting Matrices",
       "hasContent": true
     },
     {
       "page": 831,
-      "title": "Multithreaded Algorithms",
+      "title": "28.2 Inverting Matrices",
       "hasContent": true
     },
     {
       "page": 832,
-      "title": "Multithreaded Algorithms",
+      "title": "28.2 Inverting Matrices",
       "hasContent": true
     },
     {
       "page": 833,
-      "title": "Multithreaded Algorithms",
+      "title": "28.3 Symmetric Positive-Definite Matrices",
       "hasContent": true
     },
     {
       "page": 834,
-      "title": "28.1 Solving systems of linear equations\n\n Numerous applications need to solve sets of simultaneous linear equations",
+      "title": "28.3 Symmetric Positive-Definite Matrices",
       "hasContent": true
     },
     {
       "page": 835,
-      "title": "Matrix Operations",
+      "title": "28.3 Symmetric Positive-Definite Matrices",
       "hasContent": true
     },
     {
       "page": 836,
-      "title": "28.1 Solving systems of linear equations",
+      "title": "28.3 Symmetric Positive-Definite Matrices",
       "hasContent": true
     },
     {
       "page": 837,
-      "title": "Matrix Operations",
+      "title": "28.3 Symmetric Positive-Definite Matrices",
       "hasContent": true
     },
     {
       "page": 838,
-      "title": "28.1 Solving systems of linear equations",
+      "title": "28.3 Symmetric Positive-Definite Matrices",
       "hasContent": true
     },
     {
       "page": 839,
-      "title": "Matrix Operations",
+      "title": "28.3 Symmetric Positive-Definite Matrices",
       "hasContent": true
     },
     {
       "page": 840,
-      "title": "28.1 Solving systems of linear equations",
+      "title": "28.3 Symmetric Positive-Definite Matrices",
       "hasContent": true
     },
     {
       "page": 841,
-      "title": "Matrix Operations",
+      "title": "28.3 Symmetric Positive-Definite Matrices",
       "hasContent": true
     },
     {
       "page": 842,
-      "title": "28.1 Solving systems of linear equations",
+      "title": "28.3 Symmetric Positive-Definite Matrices",
       "hasContent": true
     },
     {
       "page": 843,
-      "title": "Matrix Operations",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 844,
-      "title": "28.1 Solving systems of linear equations",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 845,
-      "title": "Matrix Operations",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 846,
-      "title": "Exercises 28.1",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 847,
-      "title": "Matrix Operations",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 848,
-      "title": "28.2 Inverting matrices",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 849,
-      "title": "Matrix Operations",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 850,
-      "title": "28.2 Inverting matrices",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 851,
-      "title": "Matrix Operations",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 852,
-      "title": "Exercises 28.2",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 853,
-      "title": "28.3 Symmetric positive-de",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 854,
-      "title": "28.3 Symmetric positive-de",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 855,
-      "title": "Matrix Operations",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 856,
-      "title": "28.3 Symmetric positive-de",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 857,
-      "title": "Matrix Operations",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 858,
-      "title": "28.3 Symmetric positive-de",
+      "title": "29.1 Standard and Slack Forms",
       "hasContent": true
     },
     {
       "page": 859,
-      "title": "Matrix Operations",
+      "title": "29.2 Formulating Problems as Linear Programs",
       "hasContent": true
     },
     {
       "page": 860,
-      "title": "Exercises 28.3",
+      "title": "29.2 Formulating Problems as Linear Programs",
       "hasContent": true
     },
     {
       "page": 861,
-      "title": "Matrix Operations",
+      "title": "29.2 Formulating Problems as Linear Programs",
       "hasContent": true
     },
     {
       "page": 862,
-      "title": "Matrix Operations",
+      "title": "29.2 Formulating Problems as Linear Programs",
       "hasContent": true
     },
     {
       "page": 863,
-      "title": "Matrix Operations",
+      "title": "29.2 Formulating Problems as Linear Programs",
       "hasContent": true
     },
     {
       "page": 864,
-      "title": "29 Linear Programming",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 865,
-      "title": "Linear Programming",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 866,
-      "title": "Linear Programming",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 867,
-      "title": "Linear Programming",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 868,
-      "title": "Linear Programming",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 869,
-      "title": "Linear Programming",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 870,
-      "title": "Linear Programming",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 871,
-      "title": "29.1 Standard and slack forms\n\n This section describes two formats, standard form and slack form, that are use-\n ful when we specify and work with linear programs",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 872,
-      "title": "29.1 Standard and slack forms",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 873,
-      "title": "Linear Programming",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 874,
-      "title": "29.1 Standard and slack forms",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 875,
-      "title": "Linear Programming",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 876,
-      "title": "29.1 Standard and slack forms",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 877,
-      "title": "Linear Programming",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 878,
-      "title": "Exercises 29.1",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 879,
-      "title": "Linear Programming",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 880,
-      "title": "29.2 Formulating problems as linear programs",
+      "title": "29.3 The Simplex Algorithm",
       "hasContent": true
     },
     {
       "page": 881,
-      "title": "Linear Programming",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 882,
-      "title": "29.2 Formulating problems as linear programs",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 883,
-      "title": "Linear Programming",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 884,
-      "title": "Exercises 29.2",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 885,
-      "title": "29.3 The simplex algorithm\n\n The simplex algorithm is the classical method for solving linear programs",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 886,
-      "title": "29.3 The simplex algorithm",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 887,
-      "title": "Linear Programming",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 888,
-      "title": "29.3 The simplex algorithm",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 889,
-      "title": "Linear Programming",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 890,
-      "title": "29.3 The simplex algorithm",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 891,
-      "title": "Linear Programming",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 892,
-      "title": "29.3 The simplex algorithm",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 893,
-      "title": "Linear Programming",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 894,
-      "title": "29.3 The simplex algorithm",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 895,
-      "title": "Linear Programming",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 896,
-      "title": "29.3 The simplex algorithm",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 897,
-      "title": "Linear Programming",
+      "title": "29.4 Duality",
       "hasContent": true
     },
     {
       "page": 898,
-      "title": "29.3 The simplex algorithm",
+      "title": "30.1 Representing Polynomials",
       "hasContent": true
     },
     {
       "page": 899,
-      "title": "Linear Programming",
+      "title": "30.1 Representing Polynomials",
       "hasContent": true
     },
     {
       "page": 900,
-      "title": "29.4 Duality",
+      "title": "30.1 Representing Polynomials",
       "hasContent": true
     },
     {
       "page": 901,
-      "title": "Linear Programming",
+      "title": "30.1 Representing Polynomials",
       "hasContent": true
     },
     {
       "page": 902,
-      "title": "29.4 Duality",
+      "title": "30.1 Representing Polynomials",
       "hasContent": true
     },
     {
       "page": 903,
-      "title": "Linear Programming",
+      "title": "30.1 Representing Polynomials",
       "hasContent": true
     },
     {
       "page": 904,
-      "title": "29.4 Duality",
+      "title": "30.1 Representing Polynomials",
       "hasContent": true
     },
     {
       "page": 905,
-      "title": "Linear Programming",
+      "title": "30.1 Representing Polynomials",
       "hasContent": true
     },
     {
       "page": 906,
-      "title": "Exercises 29.4",
+      "title": "30.2 The DFT and FFT",
       "hasContent": true
     },
     {
       "page": 907,
-      "title": "29.5 The initial basic feasible solution\n\n In this section, we",
+      "title": "30.2 The DFT and FFT",
       "hasContent": true
     },
     {
       "page": 908,
-      "title": "29.5 The initial basic feasible solution",
+      "title": "30.2 The DFT and FFT",
       "hasContent": true
     },
     {
       "page": 909,
-      "title": "Linear Programming",
+      "title": "30.2 The DFT and FFT",
       "hasContent": true
     },
     {
       "page": 910,
-      "title": "29.5 The initial basic feasible solution",
+      "title": "30.2 The DFT and FFT",
       "hasContent": true
     },
     {
       "page": 911,
-      "title": "Linear Programming",
+      "title": "30.2 The DFT and FFT",
       "hasContent": true
     },
     {
       "page": 912,
-      "title": "29.5 The initial basic feasible solution",
+      "title": "30.2 The DFT and FFT",
       "hasContent": true
     },
     {
       "page": 913,
-      "title": "Linear Programming",
+      "title": "30.2 The DFT and FFT",
       "hasContent": true
     },
     {
       "page": 914,
-      "title": "Exercises 29.5",
+      "title": "30.2 The DFT and FFT",
       "hasContent": true
     },
     {
       "page": 915,
-      "title": "Linear Programming",
+      "title": "30.3 Efficient FFT Implementations",
       "hasContent": true
     },
     {
       "page": 916,
-      "title": "Linear Programming",
+      "title": "30.3 Efficient FFT Implementations",
       "hasContent": true
     },
     {
       "page": 917,
-      "title": "Linear Programming",
+      "title": "30.3 Efficient FFT Implementations",
       "hasContent": true
     },
     {
       "page": 918,
-      "title": "Linear Programming",
+      "title": "30.3 Efficient FFT Implementations",
       "hasContent": true
     },
     {
       "page": 919,
-      "title": "30 Polynomials and the FFT",
+      "title": "30.3 Efficient FFT Implementations",
       "hasContent": true
     },
     {
       "page": 920,
-      "title": "Polynomials and the FFT",
+      "title": "30.3 Efficient FFT Implementations",
       "hasContent": true
     },
     {
       "page": 921,
-      "title": "30.1 Representing polynomials\n\n The coef",
+      "title": "30.3 Efficient FFT Implementations",
       "hasContent": true
     },
     {
       "page": 922,
-      "title": "30.1 Representing polynomials",
+      "title": "30.3 Efficient FFT Implementations",
       "hasContent": true
     },
     {
       "page": 923,
-      "title": "Polynomials and the FFT",
+      "title": "30.3 Efficient FFT Implementations",
       "hasContent": true
     },
     {
       "page": 924,
-      "title": "30.1 Representing polynomials",
+      "title": "30.3 Efficient FFT Implementations",
       "hasContent": true
     },
     {
       "page": 925,
-      "title": "Polynomials and the FFT",
+      "title": "30.3 Efficient FFT Implementations",
       "hasContent": true
     },
     {
       "page": 926,
-      "title": "Exercises 30.1",
+      "title": "31.1 Elementary Number-Theoretic Notions",
       "hasContent": true
     },
     {
       "page": 927,
-      "title": "30.2 The DFT and FFT\n\n In Section",
+      "title": "31.1 Elementary Number-Theoretic Notions",
       "hasContent": true
     },
     {
       "page": 928,
-      "title": "30.2 The DFT and FFT",
+      "title": "31.1 Elementary Number-Theoretic Notions",
       "hasContent": true
     },
     {
       "page": 929,
-      "title": "Polynomials and the FFT",
+      "title": "31.1 Elementary Number-Theoretic Notions",
       "hasContent": true
     },
     {
       "page": 930,
-      "title": "30.2 The DFT and FFT",
+      "title": "31.1 Elementary Number-Theoretic Notions",
       "hasContent": true
     },
     {
       "page": 931,
-      "title": "Polynomials and the FFT",
+      "title": "31.1 Elementary Number-Theoretic Notions",
       "hasContent": true
     },
     {
       "page": 932,
-      "title": "30.2 The DFT and FFT",
+      "title": "31.1 Elementary Number-Theoretic Notions",
       "hasContent": true
     },
     {
       "page": 933,
-      "title": "Polynomials and the FFT",
+      "title": "31.2 Greatest Common Divisor",
       "hasContent": true
     },
     {
       "page": 934,
-      "title": "30.2 The DFT and FFT",
+      "title": "31.2 Greatest Common Divisor",
       "hasContent": true
     },
     {
       "page": 935,
-      "title": "Polynomials and the FFT",
+      "title": "31.2 Greatest Common Divisor",
       "hasContent": true
     },
     {
       "page": 936,
-      "title": "30.3 Ef",
+      "title": "31.2 Greatest Common Divisor",
       "hasContent": true
     },
     {
       "page": 937,
-      "title": "Polynomials and the FFT",
+      "title": "31.2 Greatest Common Divisor",
       "hasContent": true
     },
     {
       "page": 938,
-      "title": "30.3 Ef",
+      "title": "31.2 Greatest Common Divisor",
       "hasContent": true
     },
     {
       "page": 939,
-      "title": "Polynomials and the FFT",
+      "title": "31.3 Modular Arithmetic",
       "hasContent": true
     },
     {
       "page": 940,
-      "title": "30.3 Ef",
+      "title": "31.3 Modular Arithmetic",
       "hasContent": true
     },
     {
       "page": 941,
-      "title": "Polynomials and the FFT",
+      "title": "31.3 Modular Arithmetic",
       "hasContent": true
     },
     {
       "page": 942,
-      "title": "Polynomials and the FFT",
+      "title": "31.3 Modular Arithmetic",
       "hasContent": true
     },
     {
       "page": 943,
-      "title": "Polynomials and the FFT",
+      "title": "31.3 Modular Arithmetic",
       "hasContent": true
     },
     {
       "page": 944,
-      "title": "Modular Arithmetic",
+      "title": "31.3 Modular Arithmetic",
       "hasContent": true
     },
     {
       "page": 945,
-      "title": "Polynomials and the FFT",
+      "title": "31.3 Modular Arithmetic",
       "hasContent": true
     },
     {
       "page": 946,
-      "title": "Polynomials and the FFT",
+      "title": "31.4 Solving Modular Linear Equations",
       "hasContent": true
     },
     {
       "page": 947,
-      "title": "Modular Arithmetic",
+      "title": "31.4 Solving Modular Linear Equations",
       "hasContent": true
     },
     {
       "page": 948,
-      "title": "31.1 Elementary number-theoretic notions",
+      "title": "31.4 Solving Modular Linear Equations",
       "hasContent": true
     },
     {
       "page": 949,
-      "title": "Modular Arithmetic",
+      "title": "31.4 Solving Modular Linear Equations",
       "hasContent": true
     },
     {
       "page": 950,
-      "title": "31.1 Elementary number-theoretic notions",
+      "title": "31.5 The Chinese Remainder Theorem",
       "hasContent": true
     },
     {
       "page": 951,
-      "title": "Number-Theoretic Algorithms",
+      "title": "31.5 The Chinese Remainder Theorem",
       "hasContent": true
     },
     {
       "page": 952,
-      "title": "31.1 Elementary number-theoretic notions",
+      "title": "31.5 The Chinese Remainder Theorem",
       "hasContent": true
     },
     {
       "page": 953,
-      "title": "Number-Theoretic Algorithms",
+      "title": "31.5 The Chinese Remainder Theorem",
       "hasContent": true
     },
     {
       "page": 954,
-      "title": "31.2 Greatest common divisor",
+      "title": "31.6 Powers of an Element",
       "hasContent": true
     },
     {
       "page": 955,
-      "title": "Number-Theoretic Algorithms",
+      "title": "31.6 Powers of an Element",
       "hasContent": true
     },
     {
       "page": 956,
-      "title": "31.2 Greatest common divisor",
+      "title": "31.6 Powers of an Element",
       "hasContent": true
     },
     {
       "page": 957,
-      "title": "Number-Theoretic Algorithms",
+      "title": "31.6 Powers of an Element",
       "hasContent": true
     },
     {
       "page": 958,
-      "title": "Modular Arithmetic",
+      "title": "31.7 The RSA Public-Key Cryptosystem",
       "hasContent": true
     },
     {
       "page": 959,
-      "title": "Number-Theoretic Algorithms",
+      "title": "31.7 The RSA Public-Key Cryptosystem",
       "hasContent": true
     },
     {
       "page": 960,
-      "title": "Modular Arithmetic",
+      "title": "31.7 The RSA Public-Key Cryptosystem",
       "hasContent": true
     },
     {
       "page": 961,
-      "title": "Modular Arithmetic",
+      "title": "31.7 The RSA Public-Key Cryptosystem",
       "hasContent": true
     },
     {
       "page": 962,
-      "title": "Modular Arithmetic",
+      "title": "31.7 The RSA Public-Key Cryptosystem",
       "hasContent": true
     },
     {
       "page": 963,
-      "title": "Number-Theoretic Algorithms",
+      "title": "31.7 The RSA Public-Key Cryptosystem",
       "hasContent": true
     },
     {
       "page": 964,
-      "title": "Modular Arithmetic",
+      "title": "31.7 The RSA Public-Key Cryptosystem",
       "hasContent": true
     },
     {
       "page": 965,
-      "title": "Number-Theoretic Algorithms",
+      "title": "31.8 Primality Testing",
       "hasContent": true
     },
     {
       "page": 966,
-      "title": "Modular Arithmetic",
+      "title": "31.8 Primality Testing",
       "hasContent": true
     },
     {
       "page": 967,
-      "title": "Modular Arithmetic",
+      "title": "31.8 Primality Testing",
       "hasContent": true
     },
     {
       "page": 968,
-      "title": "Modular Arithmetic",
+      "title": "31.8 Primality Testing",
       "hasContent": true
     },
     {
       "page": 969,
-      "title": "Number-Theoretic Algorithms",
+      "title": "31.8 Primality Testing",
       "hasContent": true
     },
     {
       "page": 970,
-      "title": "Modular Arithmetic",
+      "title": "31.8 Primality Testing",
       "hasContent": true
     },
     {
       "page": 971,
-      "title": "31.5 The Chinese remainder theorem\n\n Around A",
+      "title": "31.8 Primality Testing",
       "hasContent": true
     },
     {
       "page": 972,
-      "title": "31.5 The Chinese remainder theorem",
+      "title": "31.8 Primality Testing",
       "hasContent": true
     },
     {
       "page": 973,
-      "title": "Number-Theoretic Algorithms",
+      "title": "31.8 Primality Testing",
       "hasContent": true
     },
     {
       "page": 974,
-      "title": "Exercises 31.5",
+      "title": "31.8 Primality Testing",
       "hasContent": true
     },
     {
       "page": 975,
-      "title": "31.6 Powers of an element\n\n Just as we often consider the multiples of a given element a, modulo n, we consider\n the sequence of powers of a, modulo n, where a",
+      "title": "31.9 Integer Factorization",
       "hasContent": true
     },
     {
       "page": 976,
-      "title": "31.6 Powers of an element",
+      "title": "31.9 Integer Factorization",
       "hasContent": true
     },
     {
       "page": 977,
-      "title": "Modular Arithmetic",
+      "title": "31.9 Integer Factorization",
       "hasContent": true
     },
     {
       "page": 978,
-      "title": "31.6 Powers of an element",
+      "title": "31.9 Integer Factorization",
       "hasContent": true
     },
     {
       "page": 979,
-      "title": "Modular Arithmetic",
+      "title": "31.9 Integer Factorization",
       "hasContent": true
     },
     {
       "page": 980,
-      "title": "31.7 The RSA public-key cryptosystem",
+      "title": "31.9 Integer Factorization",
       "hasContent": true
     },
     {
       "page": 981,
-      "title": "Number-Theoretic Algorithms",
+      "title": "31.9 Integer Factorization",
       "hasContent": true
     },
     {
       "page": 982,
-      "title": "31.7 The RSA public-key cryptosystem",
+      "title": "31.9 Integer Factorization",
       "hasContent": true
     },
     {
       "page": 983,
-      "title": "Modular Arithmetic",
+      "title": "31.9 Integer Factorization",
       "hasContent": true
     },
     {
       "page": 984,
-      "title": "31.7 The RSA public-key cryptosystem",
+      "title": "31.9 Integer Factorization",
       "hasContent": true
     },
     {
@@ -5070,172 +5070,172 @@
     },
     {
       "page": 1014,
-      "title": "32.2 The Rabin-Karp Algorithm",
+      "title": "33.1 Line-Segment Properties",
       "hasContent": true
     },
     {
       "page": 1015,
-      "title": "String Matching",
+      "title": "33.1 Line-Segment Properties",
       "hasContent": true
     },
     {
       "page": 1016,
-      "title": "32.3 String Matching with Finite Automata",
+      "title": "33.1 Line-Segment Properties",
       "hasContent": true
     },
     {
       "page": 1017,
-      "title": "String Matching",
+      "title": "33.1 Line-Segment Properties",
       "hasContent": true
     },
     {
       "page": 1018,
-      "title": "32.3 String Matching with Finite Automata",
+      "title": "33.1 Line-Segment Properties",
       "hasContent": true
     },
     {
       "page": 1019,
-      "title": "String Matching",
+      "title": "33.1 Line-Segment Properties",
       "hasContent": true
     },
     {
       "page": 1020,
-      "title": "32.3 String Matching with Finite Automata",
+      "title": "33.1 Line-Segment Properties",
       "hasContent": true
     },
     {
       "page": 1021,
-      "title": "String Matching",
+      "title": "33.2 Determining Whether Any Pair of Segments Intersects",
       "hasContent": true
     },
     {
       "page": 1022,
-      "title": "32.3 String Matching with Finite Automata",
+      "title": "33.2 Determining Whether Any Pair of Segments Intersects",
       "hasContent": true
     },
     {
       "page": 1023,
-      "title": "String Matching",
+      "title": "33.2 Determining Whether Any Pair of Segments Intersects",
       "hasContent": true
     },
     {
       "page": 1024,
-      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "title": "33.2 Determining Whether Any Pair of Segments Intersects",
       "hasContent": true
     },
     {
       "page": 1025,
-      "title": "String Matching",
+      "title": "33.2 Determining Whether Any Pair of Segments Intersects",
       "hasContent": true
     },
     {
       "page": 1026,
-      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "title": "33.2 Determining Whether Any Pair of Segments Intersects",
       "hasContent": true
     },
     {
       "page": 1027,
-      "title": "String Matching",
+      "title": "33.2 Determining Whether Any Pair of Segments Intersects",
       "hasContent": true
     },
     {
       "page": 1028,
-      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "title": "33.2 Determining Whether Any Pair of Segments Intersects",
       "hasContent": true
     },
     {
       "page": 1029,
-      "title": "String Matching",
+      "title": "33.3 Finding the Convex Hull",
       "hasContent": true
     },
     {
       "page": 1030,
-      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "title": "33.3 Finding the Convex Hull",
       "hasContent": true
     },
     {
       "page": 1031,
-      "title": "String Matching",
+      "title": "33.3 Finding the Convex Hull",
       "hasContent": true
     },
     {
       "page": 1032,
-      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "title": "33.3 Finding the Convex Hull",
       "hasContent": true
     },
     {
       "page": 1033,
-      "title": "String Matching",
+      "title": "33.3 Finding the Convex Hull",
       "hasContent": true
     },
     {
       "page": 1034,
-      "title": "String Matching",
+      "title": "33.3 Finding the Convex Hull",
       "hasContent": true
     },
     {
       "page": 1035,
-      "title": "33 Computational Geometry",
+      "title": "33.3 Finding the Convex Hull",
       "hasContent": true
     },
     {
       "page": 1036,
-      "title": "33.1 Line-segment properties",
+      "title": "33.3 Finding the Convex Hull",
       "hasContent": true
     },
     {
       "page": 1037,
-      "title": "Computational Geometry",
+      "title": "33.3 Finding the Convex Hull",
       "hasContent": true
     },
     {
       "page": 1038,
-      "title": "33.1 Line-segment properties",
+      "title": "33.3 Finding the Convex Hull",
       "hasContent": true
     },
     {
       "page": 1039,
-      "title": "Computational Geometry",
+      "title": "33.4 Finding the Closest Pair of Points",
       "hasContent": true
     },
     {
       "page": 1040,
-      "title": "33.1 Line-segment properties",
+      "title": "33.4 Finding the Closest Pair of Points",
       "hasContent": true
     },
     {
       "page": 1041,
-      "title": "Computational Geometry",
+      "title": "33.4 Finding the Closest Pair of Points",
       "hasContent": true
     },
     {
       "page": 1042,
-      "title": "33.2 Determining whether any pair of segments intersects",
+      "title": "33.4 Finding the Closest Pair of Points",
       "hasContent": true
     },
     {
       "page": 1043,
-      "title": "Computational Geometry",
+      "title": "33.4 Finding the Closest Pair of Points",
       "hasContent": true
     },
     {
       "page": 1044,
-      "title": "33.2 Determining whether any pair of segments intersects",
+      "title": "33.4 Finding the Closest Pair of Points",
       "hasContent": true
     },
     {
       "page": 1045,
-      "title": "Computational Geometry",
+      "title": "33.4 Finding the Closest Pair of Points",
       "hasContent": true
     },
     {
       "page": 1046,
-      "title": "33.2 Determining whether any pair of segments intersects",
+      "title": "33.4 Finding the Closest Pair of Points",
       "hasContent": true
     },
     {
       "page": 1047,
-      "title": "Computational Geometry",
+      "title": "33.4 Finding the Closest Pair of Points",
       "hasContent": true
     },
     {
@@ -5530,722 +5530,722 @@
     },
     {
       "page": 1106,
-      "title": "34.4 NP-Completeness Proofs",
+      "title": "35.1 The Vertex-Cover Problem",
       "hasContent": true
     },
     {
       "page": 1107,
-      "title": "34.5 NP-Complete Problems",
+      "title": "35.1 The Vertex-Cover Problem",
       "hasContent": true
     },
     {
       "page": 1108,
-      "title": "34.5 NP-Complete Problems",
+      "title": "35.1 The Vertex-Cover Problem",
       "hasContent": true
     },
     {
       "page": 1109,
-      "title": "NP-Completeness",
+      "title": "35.1 The Vertex-Cover Problem",
       "hasContent": true
     },
     {
       "page": 1110,
-      "title": "34.5 NP-Complete Problems",
+      "title": "35.1 The Vertex-Cover Problem",
       "hasContent": true
     },
     {
       "page": 1111,
-      "title": "NP-Completeness",
+      "title": "35.2 The Traveling-Salesman Problem",
       "hasContent": true
     },
     {
       "page": 1112,
-      "title": "34.5 NP-Complete Problems",
+      "title": "35.2 The Traveling-Salesman Problem",
       "hasContent": true
     },
     {
       "page": 1113,
-      "title": "NP-Completeness",
+      "title": "35.2 The Traveling-Salesman Problem",
       "hasContent": true
     },
     {
       "page": 1114,
-      "title": "34.5 NP-Complete Problems",
+      "title": "35.2 The Traveling-Salesman Problem",
       "hasContent": true
     },
     {
       "page": 1115,
-      "title": "NP-Completeness",
+      "title": "35.2 The Traveling-Salesman Problem",
       "hasContent": true
     },
     {
       "page": 1116,
-      "title": "34.5 NP-Complete Problems",
+      "title": "35.2 The Traveling-Salesman Problem",
       "hasContent": true
     },
     {
       "page": 1117,
-      "title": "NP-Completeness",
+      "title": "35.3 The Set-Covering Problem",
       "hasContent": true
     },
     {
       "page": 1118,
-      "title": "34.5 NP-Complete Problems",
+      "title": "35.3 The Set-Covering Problem",
       "hasContent": true
     },
     {
       "page": 1119,
-      "title": "NP-Completeness",
+      "title": "35.3 The Set-Covering Problem",
       "hasContent": true
     },
     {
       "page": 1120,
-      "title": "34.5 NP-Complete Problems",
+      "title": "35.3 The Set-Covering Problem",
       "hasContent": true
     },
     {
       "page": 1121,
-      "title": "NP-Completeness",
+      "title": "35.3 The Set-Covering Problem",
       "hasContent": true
     },
     {
       "page": 1122,
-      "title": "NP-Completeness",
+      "title": "35.3 The Set-Covering Problem",
       "hasContent": true
     },
     {
       "page": 1123,
-      "title": "NP-Completeness",
+      "title": "35.4 Randomization and Linear Programming",
       "hasContent": true
     },
     {
       "page": 1124,
-      "title": "NP-Completeness",
+      "title": "35.4 Randomization and Linear Programming",
       "hasContent": true
     },
     {
       "page": 1125,
-      "title": "NP-Completeness",
+      "title": "35.4 Randomization and Linear Programming",
       "hasContent": true
     },
     {
       "page": 1126,
-      "title": "NP-Completeness",
+      "title": "35.4 Randomization and Linear Programming",
       "hasContent": true
     },
     {
       "page": 1127,
-      "title": "35 Approximation Algorithms",
+      "title": "35.4 Randomization and Linear Programming",
       "hasContent": true
     },
     {
       "page": 1128,
-      "title": "Approximation Algorithms",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1129,
-      "title": "35.1 The vertex-cover problem\n\n Section",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1130,
-      "title": "35.1 The vertex-cover problem",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1131,
-      "title": "Approximation Algorithms",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1132,
-      "title": "35.2 The traveling-salesman problem",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1133,
-      "title": "Approximation Algorithms",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1134,
-      "title": "35.2 The traveling-salesman problem",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1135,
-      "title": "Approximation Algorithms",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1136,
-      "title": "35.2 The traveling-salesman problem",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1137,
-      "title": "Approximation Algorithms",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1138,
-      "title": "35.3 The set-covering problem",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1139,
-      "title": "Approximation Algorithms",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1140,
-      "title": "35.3 The set-covering problem",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1141,
-      "title": "Approximation Algorithms",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1142,
-      "title": "35.3 The set-covering problem",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1143,
-      "title": "Approximation Algorithms",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1144,
-      "title": "35.4 Randomization and linear programming",
+      "title": "35.5 The Subset-Sum Problem",
       "hasContent": true
     },
     {
       "page": 1145,
-      "title": "Approximation Algorithms",
+      "title": "A.1 Summation Formulas and Properties",
       "hasContent": true
     },
     {
       "page": 1146,
-      "title": "35.4 Randomization and linear programming",
+      "title": "A.1 Summation Formulas and Properties",
       "hasContent": true
     },
     {
       "page": 1147,
-      "title": "Approximation Algorithms",
+      "title": "A.1 Summation Formulas and Properties",
       "hasContent": true
     },
     {
       "page": 1148,
-      "title": "Exercises 35.4",
+      "title": "A.1 Summation Formulas and Properties",
       "hasContent": true
     },
     {
       "page": 1149,
-      "title": "35.5 The subset-sum problem\n\n Recall from Section",
+      "title": "A.1 Summation Formulas and Properties",
       "hasContent": true
     },
     {
       "page": 1150,
-      "title": "35.5 The subset-sum problem",
+      "title": "A.1 Summation Formulas and Properties",
       "hasContent": true
     },
     {
       "page": 1151,
-      "title": "Approximation Algorithms",
+      "title": "A.1 Summation Formulas and Properties",
       "hasContent": true
     },
     {
       "page": 1152,
-      "title": "35.5 The subset-sum problem",
+      "title": "A.1 Summation Formulas and Properties",
       "hasContent": true
     },
     {
       "page": 1153,
-      "title": "Approximation Algorithms",
+      "title": "A.1 Summation Formulas and Properties",
       "hasContent": true
     },
     {
       "page": 1154,
-      "title": "Exercises 35.5",
+      "title": "A.1 Summation Formulas and Properties",
       "hasContent": true
     },
     {
       "page": 1155,
-      "title": "Approximation Algorithms",
+      "title": "A.1 Summation Formulas and Properties",
       "hasContent": true
     },
     {
       "page": 1156,
-      "title": "Approximation Algorithms",
+      "title": "A.1 Summation Formulas and Properties",
       "hasContent": true
     },
     {
       "page": 1157,
-      "title": "Approximation Algorithms",
+      "title": "A.1 Summation Formulas and Properties",
       "hasContent": true
     },
     {
       "page": 1158,
-      "title": "Approximation Algorithms",
+      "title": "B.1 Sets",
       "hasContent": true
     },
     {
       "page": 1159,
-      "title": "Approximation Algorithms",
+      "title": "B.1 Sets",
       "hasContent": true
     },
     {
       "page": 1160,
-      "title": "Approximation Algorithms",
+      "title": "B.1 Sets",
       "hasContent": true
     },
     {
       "page": 1161,
-      "title": "Approximation Algorithms",
+      "title": "B.1 Sets",
       "hasContent": true
     },
     {
       "page": 1162,
-      "title": "Page 1162",
+      "title": "B.1 Sets",
       "hasContent": true
     },
     {
       "page": 1163,
-      "title": "VIII Appendix: Mathematical Background",
+      "title": "B.1 Sets",
       "hasContent": true
     },
     {
       "page": 1164,
-      "title": "Introduction",
+      "title": "B.1 Sets",
       "hasContent": true
     },
     {
       "page": 1165,
-      "title": "1144 Part VIII Appendix: Mathematical Background",
+      "title": "B.1 Sets",
       "hasContent": true
     },
     {
       "page": 1166,
-      "title": "A Summations",
+      "title": "B.2 Relations",
       "hasContent": true
     },
     {
       "page": 1167,
-      "title": "1146 Appendix A Summations",
+      "title": "B.2 Relations",
       "hasContent": true
     },
     {
       "page": 1168,
-      "title": "A.1 Summation formulas and properties 1147",
+      "title": "B.2 Relations",
       "hasContent": true
     },
     {
       "page": 1169,
-      "title": "1148 Appendix A Summations",
+      "title": "B.2 Relations",
       "hasContent": true
     },
     {
       "page": 1170,
-      "title": "A.2 Bounding summations 1149",
+      "title": "B.2 Relations",
       "hasContent": true
     },
     {
       "page": 1171,
-      "title": "1150 Appendix A Summations",
+      "title": "B.3 Functions",
       "hasContent": true
     },
     {
       "page": 1172,
-      "title": "A.2 Bounding summations 1151",
+      "title": "B.3 Functions",
       "hasContent": true
     },
     {
       "page": 1173,
-      "title": "1152 Appendix A Summations",
+      "title": "B.3 Functions",
       "hasContent": true
     },
     {
       "page": 1174,
-      "title": "A.2 Bounding summations 1153",
+      "title": "B.3 Functions",
       "hasContent": true
     },
     {
       "page": 1175,
-      "title": "1154 Appendix A Summations",
+      "title": "B.3 Functions",
       "hasContent": true
     },
     {
       "page": 1176,
-      "title": "A.2 Bounding summations 1155",
+      "title": "B.4 Graphs",
       "hasContent": true
     },
     {
       "page": 1177,
-      "title": "1156 Appendix A Summations",
+      "title": "B.4 Graphs",
       "hasContent": true
     },
     {
       "page": 1178,
-      "title": "Notes for Appendix A 1157",
+      "title": "B.4 Graphs",
       "hasContent": true
     },
     {
       "page": 1179,
-      "title": "B Sets, Etc.",
+      "title": "B.4 Graphs",
       "hasContent": true
     },
     {
       "page": 1180,
-      "title": "B.1 Sets 1159",
+      "title": "B.4 Graphs",
       "hasContent": true
     },
     {
       "page": 1181,
-      "title": "1160 Appendix B Sets, Etc.",
+      "title": "B.4 Graphs",
       "hasContent": true
     },
     {
       "page": 1182,
-      "title": "B.1 Sets 1161",
+      "title": "B.4 Graphs",
       "hasContent": true
     },
     {
       "page": 1183,
-      "title": "1162 Appendix B Sets, Etc.",
+      "title": "C.1 Counting",
       "hasContent": true
     },
     {
       "page": 1184,
-      "title": "B.2 Relations 1163",
+      "title": "C.1 Counting",
       "hasContent": true
     },
     {
       "page": 1185,
-      "title": "1164 Appendix B Sets, Etc.",
+      "title": "C.1 Counting",
       "hasContent": true
     },
     {
       "page": 1186,
-      "title": "B.2 Relations 1165",
+      "title": "C.1 Counting",
       "hasContent": true
     },
     {
       "page": 1187,
-      "title": "1166 Appendix B Sets, Etc.",
+      "title": "C.1 Counting",
       "hasContent": true
     },
     {
       "page": 1188,
-      "title": "B.3 Functions 1167",
+      "title": "C.1 Counting",
       "hasContent": true
     },
     {
       "page": 1189,
-      "title": "1168 Appendix B Sets, Etc.",
+      "title": "C.1 Counting",
       "hasContent": true
     },
     {
       "page": 1190,
-      "title": "B.4 Graphs 1169",
+      "title": "C.1 Counting",
       "hasContent": true
     },
     {
       "page": 1191,
-      "title": "1170 Appendix B Sets, Etc.",
+      "title": "C.2 Probability",
       "hasContent": true
     },
     {
       "page": 1192,
-      "title": "B.4 Graphs 1171",
+      "title": "C.2 Probability",
       "hasContent": true
     },
     {
       "page": 1193,
-      "title": "1172 Appendix B Sets, Etc.",
+      "title": "C.2 Probability",
       "hasContent": true
     },
     {
       "page": 1194,
-      "title": "B.5 Trees 1173",
+      "title": "C.2 Probability",
       "hasContent": true
     },
     {
       "page": 1195,
-      "title": "1174 Appendix B Sets, Etc.",
+      "title": "C.2 Probability",
       "hasContent": true
     },
     {
       "page": 1196,
-      "title": "B.5 Trees 1175",
+      "title": "C.3 Discrete Random Variables",
       "hasContent": true
     },
     {
       "page": 1197,
-      "title": "1176 Appendix B Sets, Etc.",
+      "title": "C.3 Discrete Random Variables",
       "hasContent": true
     },
     {
       "page": 1198,
-      "title": "B.5 Trees 1177",
+      "title": "C.3 Discrete Random Variables",
       "hasContent": true
     },
     {
       "page": 1199,
-      "title": "1178 Appendix B Sets, Etc.",
+      "title": "C.3 Discrete Random Variables",
       "hasContent": true
     },
     {
       "page": 1200,
-      "title": "B.5 Trees 1179",
+      "title": "C.3 Discrete Random Variables",
       "hasContent": true
     },
     {
       "page": 1201,
-      "title": "1180 Appendix B Sets, Etc.",
+      "title": "C.3 Discrete Random Variables",
       "hasContent": true
     },
     {
       "page": 1202,
-      "title": "Problems for Appendix B 1181",
+      "title": "C.3 Discrete Random Variables",
       "hasContent": true
     },
     {
       "page": 1203,
-      "title": "1182 Appendix B Sets, Etc.",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1204,
-      "title": "C Counting and Probability",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1205,
-      "title": "1184 Appendix C Counting and Probability",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1206,
-      "title": "C.1 Counting 1185",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1207,
-      "title": "1186 Appendix C Counting and Probability",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1208,
-      "title": "C.1 Counting 1187",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1209,
-      "title": "1188 Appendix C Counting and Probability",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1210,
-      "title": "C.2 Probability 1189",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1211,
-      "title": "1190 Appendix C Counting and Probability",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1212,
-      "title": "C.2 Probability 1191",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1213,
-      "title": "1192 Appendix C Counting and Probability",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1214,
-      "title": "C.2 Probability 1193",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1215,
-      "title": "1194 Appendix C Counting and Probability",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1216,
-      "title": "C.2 Probability 1195",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1217,
-      "title": "1196 Appendix C Counting and Probability",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1218,
-      "title": "C.3 Discrete random variables 1197",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1219,
-      "title": "1198 Appendix C Counting and Probability",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1220,
-      "title": "C.3 Discrete random variables 1199",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1221,
-      "title": "1200 Appendix C Counting and Probability",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1222,
-      "title": "C.4 The geometric and binomial distributions 1201",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1223,
-      "title": "1202 Appendix C Counting and Probability",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1224,
-      "title": "C.4 The geometric and binomial distributions 1203",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1225,
-      "title": "1204 Appendix C Counting and Probability",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1226,
-      "title": "C.4 The geometric and binomial distributions 1205",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1227,
-      "title": "1206 Appendix C Counting and Probability",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1228,
-      "title": "C.4 The geometric and binomial distributions 1207",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1229,
-      "title": "1208 Appendix C Counting and Probability",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1230,
-      "title": "C.5 The tails of the binomial distribution 1209",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1231,
-      "title": "1210 Appendix C Counting and Probability",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1232,
-      "title": "C.5 The tails of the binomial distribution 1211",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1233,
-      "title": "1212 Appendix C Counting and Probability",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1234,
-      "title": "C.5 The tails of the binomial distribution 1213",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1235,
-      "title": "1214 Appendix C Counting and Probability",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1236,
-      "title": "Problems for Appendix C 1215",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1237,
-      "title": "1216 Appendix C Counting and Probability",
+      "title": "C.4 The Geometric and Binomial Distributions",
       "hasContent": true
     },
     {
       "page": 1238,
-      "title": "D Matrices",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1239,
-      "title": "1218 Appendix D Matrices",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1240,
-      "title": "D.1 Matrices and matrix operations 1219",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1241,
-      "title": "1220 Appendix D Matrices",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1242,
-      "title": "D.1 Matrices and matrix operations 1221",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1243,
-      "title": "1222 Appendix D Matrices",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1244,
-      "title": "D.2 Basic matrix properties 1223",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1245,
-      "title": "1224 Appendix D Matrices",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1246,
-      "title": "D.2 Basic matrix properties 1225",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1247,
-      "title": "1226 Appendix D Matrices",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1248,
-      "title": "Problems for Appendix D 1227",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {
       "page": 1249,
-      "title": "1228 Appendix D Matrices",
+      "title": "D.1 Matrices and Matrix Operations",
       "hasContent": true
     },
     {

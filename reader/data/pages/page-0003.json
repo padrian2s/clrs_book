@@ -1,5 +1,5 @@
 {
   "page": 3,
-  "title": "Blank Page",
-  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Front Matter</div>\n    <h1>Intentionally Blank</h1>\n</div>\n<div class=\"original-content\">\n    <p><em>This page is blank in the printed book. Navigate to the next page.</em></p>\n</div>"
+  "title": "Title Page",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Front Matter</div>\n    <h1>Title Page</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"highlight-box\">\n        <h4>Introduction to Algorithms</h4>\n        <p><strong>Third Edition</strong></p>\n        <p>By Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein</p>\n        <p>The MIT Press, 2009</p>\n    </div>\n    <div class=\"definition-box\">\n        <h4>About This Book</h4>\n        <p>Known as \"CLRS\" after its authors, this is the most widely used textbook for university algorithm courses. It covers fundamental algorithms and data structures with rigorous mathematical analysis.</p>\n    </div>\n    <div class=\"figure-box\">\n        <h4>Navigation</h4>\n        <p>Press <kbd>T</kbd> to open the Table of Contents for quick navigation to any chapter or section.</p>\n    </div>\n</div>"
 }
