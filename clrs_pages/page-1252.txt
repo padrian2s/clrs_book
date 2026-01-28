@@ -1,0 +1,34 @@
+Bibliography
+
+
+
+
+          [1] Milton Abramowitz and Irene A. Stegun, editors. Handbook of Mathematical Functions.
+              Dover, 1965.
+          [2] G. M. Adel’son-Vel’skiı̆ and E. M. Landis. An algorithm for the organization of information.
+              Soviet Mathematics Doklady, 3(5):1259–1263, 1962.
+          [3] Alok Aggarwal and Jeffrey Scott Vitter. The input/output complexity of sorting and related
+              problems. Communications of the ACM, 31(9):1116–1127, 1988.
+          [4] Manindra Agrawal, Neeraj Kayal, and Nitin Saxena. PRIMES is in P. Annals of Mathe-
+              matics, 160(2):781–793, 2004.
+          [5] Alfred V. Aho, John E. Hopcroft, and Jeffrey D. Ullman. The Design and Analysis of
+              Computer Algorithms. Addison-Wesley, 1974.
+          [6] Alfred V. Aho, John E. Hopcroft, and Jeffrey D. Ullman. Data Structures and Algorithms.
+              Addison-Wesley, 1983.
+          [7] Ravindra K. Ahuja, Thomas L. Magnanti, and James B. Orlin. Network Flows: Theory,
+              Algorithms, and Applications. Prentice Hall, 1993.
+          [8] Ravindra K. Ahuja, Kurt Mehlhorn, James B. Orlin, and Robert E. Tarjan. Faster algorithms
+              for the shortest path problem. Journal of the ACM, 37:213–223, 1990.
+          [9] Ravindra K. Ahuja and James B. Orlin. A fast and simple algorithm for the maximum ﬂow
+              problem. Operations Research, 37(5):748–759, 1989.
+         [10] Ravindra K. Ahuja, James B. Orlin, and Robert E. Tarjan. Improved time bounds for the
+              maximum ﬂow problem. SIAM Journal on Computing, 18(5):939–954, 1989.
+         [11] Miklós Ajtai, Nimrod Megiddo, and Orli Waarts. Improved algorithms and analysis for
+              secretary problems and generalizations. In Proceedings of the 36th Annual Symposium on
+              Foundations of Computer Science, pages 473–482, 1995.
+         [12] Selim G. Akl. The Design and Analysis of Parallel Algorithms. Prentice Hall, 1989.
+         [13] Mohamad Akra and Louay Bazzi. On the solution of linear recurrence equations. Compu-
+              tational Optimization and Applications, 10(2):195–210, 1998.
+         [14] Noga Alon. Generating pseudo-random permutations and maximum ﬂow algorithms. In-
+              formation Processing Letters, 35:201–204, 1990.
+

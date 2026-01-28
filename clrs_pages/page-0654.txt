@@ -1,0 +1,56 @@
+                       23.2 The algorithms of Kruskal and Prim                                                         633
+
+
+
+                          8               7                                               8               7
+               b                  c            d                                  b               c           d
+          4                                          9                       4                                     9
+                              2                                                               2
+(i)   a       11          i           4         14        e        (j)   a       11       i           4       14        e
+                   7          6                                                       7       6
+          8                                          10                      8                                     10
+               h                  g             f                                 h               g           f
+                          1               2                                               1               2
+
+
+                          8               7                                               8               7
+               b                  c            d                                  b               c           d
+          4                                          9                       4                                     9
+                              2                                                               2
+(k)   a       11          i           4         14        e        (l)   a       11       i           4       14        e
+                   7          6                                                       7       6
+          8                                          10                      8                                     10
+               h                  g             f                                 h               g           f
+                          1               2                                               1               2
+
+
+                          8               7                                               8               7
+               b                  c            d                                  b               c           d
+          4                                          9                       4                                     9
+                              2                                                               2
+(m)   a       11          i           4         14        e        (n)   a       11       i           4       14        e
+                   7          6                                                       7       6
+          8                                          10                      8                                     10
+               h                  g             f                                 h               g           f
+                          1               2                                               1               2
+
+
+                       Figure 23.4, continued Further steps in the execution of Kruskal’s algorithm.
+
+
+                          The running time of Kruskal’s algorithm for a graph G D .V; E/ depends
+                       on how we implement the disjoint-set data structure. We assume that we use
+                       the disjoint-set-forest implementation of Section 21.3 with the union-by-rank and
+                       path-compression heuristics, since it is the asymptotically fastest implementation
+                       known. Initializing the set A in line 1 takes O.1/ time, and the time to sort the
+                       edges in line 4 is O.E lg E/. (We will account for the cost of the jV j M AKE -S ET
+                       operations in the for loop of lines 2–3 in a moment.) The for loop of lines 5–8
+                       performs O.E/ F IND -S ET and U NION operations on the disjoint-set forest. Along
+                       with the jV j M AKE -S ET operations, these take a total of O..V C E/ ˛.V // time,
+                       where ˛ is the very slowly growing function deﬁned in Section 21.4. Because we
+                       assume that G is connected, we have jEj  jV j  1, and so the disjoint-set opera-
+                       tions take O.E ˛.V // time. Moreover, since ˛.jV j/ D O.lg V / D O.lg E/, the to-
+                       tal running time of Kruskal’s algorithm is O.E lg E/. Observing that jEj < jV j2 ,
+                       we have lg jEj D O.lg V /, and so we can restate the running time of Kruskal’s
+                       algorithm as O.E lg V /.
+

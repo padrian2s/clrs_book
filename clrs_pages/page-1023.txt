@@ -1,0 +1,45 @@
+1002       Chapter 32 String Matching
+
+
+           to m characters. Much faster procedures exist; by utilizing some cleverly com-
+           puted information about the pattern P (see Exercise 32.4-8), we can improve the
+           time required to compute ı from P to O.m j†j/. With this improved procedure for
+           computing ı, we can ﬁnd all occurrences of a length-m pattern in a length-n text
+           over an alphabet † with O.m j†j/ preprocessing time and ‚.n/ matching time.
+
+           Exercises
+
+           32.3-1
+           Construct the string-matching automaton for the pattern P D aabab and illustrate
+           its operation on the text string T D aaababaabaababaab.
+
+           32.3-2
+           Draw a state-transition diagram for a string-matching automaton for the pattern
+           ababbabbababbababbabb over the alphabet † D fa; bg.
+
+           32.3-3
+           We call a pattern P nonoverlappable if Pk = Pq implies k D 0 or k D q. De-
+           scribe the state-transition diagram of the string-matching automaton for a nonover-
+           lappable pattern.
+
+           32.3-4 ?
+           Given two patterns P and P 0 , describe how to construct a ﬁnite automaton that
+           determines all occurrences of either pattern. Try to minimize the number of states
+           in your automaton.
+
+           32.3-5
+           Given a pattern P containing gap characters (see Exercise 32.1-4), show how to
+           build a ﬁnite automaton that can ﬁnd an occurrence of P in a text T in O.n/
+           matching time, where n D jT j.
+
+
+
+? 32.4 The Knuth-Morris-Pratt algorithm
+
+           We now present a linear-time string-matching algorithm due to Knuth, Morris, and
+           Pratt. This algorithm avoids computing the transition function ı altogether, and its
+           matching time is ‚.n/ using just an auxiliary function , which we precompute
+           from the pattern in time ‚.m/ and store in an array Œ1 : : m. The array  allows
+           us to compute the transition function ı efﬁciently (in an amortized sense) “on the
+           ﬂy” as needed. Loosely speaking, for any state q D 0; 1; : : : ; m and any character
+

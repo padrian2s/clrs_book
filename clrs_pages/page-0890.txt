@@ -1,0 +1,47 @@
+29.3 The simplex algorithm                                                       869
+
+
+necessarily integral. Furthermore, the ﬁnal solution to a linear program need not
+be integral; it is purely coincidental that this example has an integral solution.
+
+Pivoting
+We now formalize the procedure for pivoting. The procedure P IVOT takes as in-
+put a slack form, given by the tuple .N; B; A; b; c; /, the index l of the leav-
+ing variable xl , and the index e of the entering variable xe . It returns the tuple
+.Ny ; B;
+      y A; y cy; y/ describing the new slack form. (Recall again that the entries of
+         y b;
+the m n matrices A and Ay are actually the negatives of the coefﬁcients that appear
+in the slack form.)
+
+P IVOT .N; B; A; b; c; ; l; e/
+ 1 // Compute the coefﬁcients of the equation for new basic variable xe .
+ 2 let Ay be a new m n matrix
+ 3 bye D bl =ale
+ 4 for each j 2 N  feg
+ 5       ayej D alj =ale
+ 6 a yel D 1=ale
+ 7 // Compute the coefﬁcients of the remaining constraints.
+ 8 for each i 2 B  flg
+ 9       byi D bi  ai e bye
+10       for each j 2 N  feg
+11             ayij D aij  ai e ayej
+12       ayi l D ai e ayel
+13 // Compute the objective function.
+14 y D  C ce bye
+15 for each j 2 N  feg
+16       cyj D cj  ce ayej
+17 cyl D ce a   yel
+18 // Compute new sets of basic and nonbasic variables.
+19 N y D N  feg [ flg
+20 By D B  flg [ feg
+21 return .N   y ; B;
+                    y A;
+                      y b;y cy; y/
+
+   P IVOT works as follows. Lines 3–6 compute the coefﬁcients in the new equation
+for xe by rewriting the equation that has xl on the left-hand side to instead have xe
+on the left-hand side. Lines 8–12 update the remaining equations by substituting
+the right-hand side of this new equation for each occurrence of xe . Lines 14–17
+do the same substitution for the objective function, and lines 19 and 20 update the
+

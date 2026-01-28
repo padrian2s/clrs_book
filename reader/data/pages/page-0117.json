@@ -1,0 +1,5 @@
+{
+  "page": 117,
+  "title": "5.1 The Hiring Problem",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 5.1</div>\n    <h1>The Hiring Problem</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>A model problem for analyzing randomized algorithms.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Interview candidates, hire if better than current best</li>\n<li>Hiring cost &gt;&gt; interview cost</li>\n<li>Worst case: candidates arrive in increasing order → hire everyone</li>\n<li>Best case: best candidate first → hire once</li>\n<li>Average case: hire O(log n) candidates (assuming random order)</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Interview 10 candidates. If they arrive randomly, expect to hire about ln(10) + 1 ≈ 3 people.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Introduces probabilistic analysis and randomized algorithms.</p>\n</div>\n</div>"
+}

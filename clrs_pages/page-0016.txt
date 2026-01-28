@@ -1,0 +1,42 @@
+Preface                                                                               xv
+
+
+    What are the prerequisites for reading this book?
+   You should have some programming experience. In particular, you should un-
+    derstand recursive procedures and simple data structures such as arrays and
+    linked lists.
+   You should have some facility with mathematical proofs, and especially proofs
+    by mathematical induction. A few portions of the book rely on some knowledge
+    of elementary calculus. Beyond that, Parts I and VIII of this book teach you all
+    the mathematical techniques you will need.
+   We have heard, loud and clear, the call to supply solutions to problems and
+exercises. Our Web site, http://mitpress.mit.edu/algorithms/, links to solutions for
+a few of the problems and exercises. Feel free to check your solutions against ours.
+We ask, however, that you do not send your solutions to us.
+
+To the professional
+The wide range of topics in this book makes it an excellent handbook on algo-
+rithms. Because each chapter is relatively self-contained, you can focus in on the
+topics that most interest you.
+   Most of the algorithms we discuss have great practical utility. We therefore
+address implementation concerns and other engineering issues. We often provide
+practical alternatives to the few algorithms that are primarily of theoretical interest.
+   If you wish to implement any of the algorithms, you should ﬁnd the transla-
+tion of our pseudocode into your favorite programming language to be a fairly
+straightforward task. We have designed the pseudocode to present each algorithm
+clearly and succinctly. Consequently, we do not address error-handling and other
+software-engineering issues that require speciﬁc assumptions about your program-
+ming environment. We attempt to present each algorithm simply and directly with-
+out allowing the idiosyncrasies of a particular programming language to obscure
+its essence.
+   We understand that if you are using this book outside of a course, then you
+might be unable to check your solutions to problems and exercises against solutions
+provided by an instructor. Our Web site, http://mitpress.mit.edu/algorithms/, links
+to solutions for some of the problems and exercises so that you can check your
+work. Please do not send your solutions to us.
+
+To our colleagues
+We have supplied an extensive bibliography and pointers to the current literature.
+Each chapter ends with a set of chapter notes that give historical details and ref-
+erences. The chapter notes do not provide a complete reference to the whole ﬁeld
+

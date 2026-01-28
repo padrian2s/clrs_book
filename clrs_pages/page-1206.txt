@@ -1,0 +1,44 @@
+C.1 Counting                                                                  1185
+
+
+ab; ac; ad; ba; bc; bd; ca; cb; cd; da; db; dc :
+The number of k-permutations of an n-set is
+                                         nŠ
+n.n  1/.n  2/    .n  k C 1/ D            ;                             (C.1)
+                                      .n  k/Š
+since we have n ways to choose the ﬁrst element, n  1 ways to choose the second
+element, and so on, until we have selected k elements, the last being a selection
+from the remaining n  k C 1 elements.
+
+Combinations
+A k-combination of an n-set S is simply a k-subset of S. For example, the 4-set
+fa; b; c; d g has six 2-combinations:
+ab; ac; ad; bc; bd; cd :
+(Here we use the shorthand of denoting the 2-subset fa; bg by ab, and so on.)
+We can construct a k-combination of an n-set by choosing k distinct (different)
+elements from the n-set. The order in which we select the elements does not matter.
+   We can express the number of k-combinations of an n-set in terms of the number
+of k-permutations of an n-set. Every k-combination has exactly kŠ permutations
+of its elements, each of which is a distinct k-permutation of the n-set. Thus, the
+number of k-combinations of an n-set is the number of k-permutations divided
+by kŠ; from equation (C.1), this quantity is
+     nŠ
+            :                                                                (C.2)
+kŠ .n  k/Š
+For k D 0, this formula tells us that the number of ways to choose 0 elements from
+an n-set is 1 (not 0), since 0Š D 1.
+
+Binomial coefﬁcients
+The notation kn (read “n choose k”) denotes the number of k-combinations of
+an n-set. From equation (C.2), we have
+    !
+  n           nŠ
+      D              :
+  k      kŠ .n  k/Š
+
+This formula is symmetric in k and n  k:
+   !            !
+ n         n
+      D           :                                                          (C.3)
+ k       nk
+

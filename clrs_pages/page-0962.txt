@@ -1,0 +1,43 @@
+31.3 Modular arithmetic                                                                    941
+
+
++6   0   1    2    3   4   5               ·15   1    2   4   7     8   11 13 14
+ 0   0   1    2    3   4   5                1    1 2 4 7 8 11 13 14
+ 1   1   2    3    4   5   0                2    2 4 8 14 1 7 11 13
+ 2   2   3    4    5   0   1                4    4 8 1 13 2 14 7 11
+ 3   3   4    5    0   1   2                7    7 14 13 4 11 2 1 8
+ 4   4   5    0    1   2   3                8    8 1 2 11 4 13 14 7
+ 5   5   0    1    2   3   4               11    11 7 14 2 13 1 8 4
+                                           13    13 11 7 1 14 8 4 2
+                                           14    14 13 11 8 7 4 2 1
+
+             (a)                                              (b)
+
+
+Figure 31.2 Two ﬁnite groups. Equivalence classes are denoted by their representative elements.
+(a) The group .Z6 ; C6 /. (b) The group .Z15 ; 15 /.
+
+
+.Œan Cn Œbn / Cn Œcn D        Œa C bn Cn Œcn
+                        D        Œ.a C b/ C cn
+                        D        Œa C .b C c/n
+                        D        Œan Cn Œb C cn
+                        D        Œan Cn .Œbn Cn Œcn / ;
+
+             Œan Cn Œbn D Œa C bn
+                          D Œb C an
+                          D Œbn Cn Œan :
+   The identity element of .Zn ; Cn / is 0 (that is, Œ0n ). The (additive) inverse of
+an element a (that is, of Œan ) is the element a (that is, Œan or Œn  an ), since
+Œan Cn Œan D Œa  an D Œ0n .
+
+   Using the deﬁnition of multiplication modulo n, we deﬁne the multiplicative
+group modulo n as .Zn ; n /. The elements of this group are the set Zn of elements
+in Zn that are relatively prime to n, so that each one has a unique inverse, modulo n:
+Zn D fŒan 2 Zn W gcd.a; n/ D 1g :
+To see that Zn is well deﬁned, note that for 0  a < n, we have a  .a C k n/
+.mod n/ for all integers k. By Exercise 31.2-3, therefore, gcd.a; n/ D 1 implies
+gcd.a C k n; n/ D 1 for all integers k. Since Œan D fa C k n W k 2 Zg, the set Zn
+is well deﬁned. An example of such a group is
+Z15 D f1; 2; 4; 7; 8; 11; 13; 14g ;
+

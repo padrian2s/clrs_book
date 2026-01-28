@@ -1,0 +1,5 @@
+{
+  "page": 468,
+  "title": "17.3 The Potential Method",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 17.3</div>\n    <h1>The Potential Method</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Define potential function, amortized cost = actual + ΔΦ.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Φ(D): potential function mapping data structure state to number</li>\n<li>Amortized cost: ĉᵢ = cᵢ + Φ(Dᵢ) - Φ(Dᵢ₋₁)</li>\n<li>Sum of amortized = sum of actual + Φ(Dₙ) - Φ(D₀)</li>\n<li>If Φ(Dₙ) ≥ Φ(D₀), amortized ≥ actual (what we want)</li>\n<li>Art: choosing the right potential function</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Stack potential = number of items. PUSH: actual 1, Φ increases by 1, amortized = 2. POP: actual 1, Φ decreases by 1, amortized = 0.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Most powerful and general amortized analysis technique.</p>\n</div>\n</div>"
+}

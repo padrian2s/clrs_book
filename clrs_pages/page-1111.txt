@@ -1,0 +1,46 @@
+1090   Chapter 34 NP-Completeness
+
+
+                 u              v                                     u              v
+
+
+
+        z                                w                   z                                w
+
+
+
+                 y              x                                     y              x
+
+                        (a)                                                  (b)
+
+
+       Figure 34.15 Reducing CLIQUE to VERTEX-COVER. (a) An undirected graph G D .V; E/ with
+       clique V 0 D fu; ; x; yg. (b) The graph G produced by the reduction algorithm that has vertex cover
+       V  V 0 D fw; ´g.
+
+
+       determine whether a graph has a vertex cover of a given size k. As a language, we
+       deﬁne
+       VERTEX-COVER D fhG; ki W graph G has a vertex cover of size kg :
+       The following theorem shows that this problem is NP-complete.
+
+       Theorem 34.12
+       The vertex-cover problem is NP-complete.
+
+       Proof We ﬁrst show that VERTEX-COVER 2 NP. Suppose we are given a graph
+       G D .V; E/ and an integer k. The certiﬁcate we choose is the vertex cover V 0  V
+       itself. The veriﬁcation algorithm afﬁrms that jV 0 j D k, and then it checks, for each
+       edge .u; / 2 E, that u 2 V 0 or  2 V 0 . We can easily verify the certiﬁcate in
+       polynomial time.
+          We prove that the vertex-cover problem is NP-hard by showing that CLIQUE P
+       VERTEX-COVER. This reduction relies on the notion of the “complement” of a
+       graph. Given an undirected graph G D .V; E/, we deﬁne the complement of G
+       as G D .V; E/, where E D f.u; / W u;  2 V; u ¤ ; and .u; / 62 Eg. In other
+       words, G is the graph containing exactly those edges that are not in G. Figure 34.15
+       shows a graph and its complement and illustrates the reduction from CLIQUE to
+       VERTEX-COVER.
+          The reduction algorithm takes as input an instance hG; ki of the clique problem.
+       It computes the complement G, which we can easily do in polynomial time. The
+       output of the reduction algorithm is the instance hG; jV j  ki of the vertex-cover
+       problem. To complete the proof, we show that this transformation is indeed a
+

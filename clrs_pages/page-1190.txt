@@ -1,0 +1,48 @@
+     B.4 Graphs                                                                                            1169
+
+
+
+
+1         2     3                      1                2      3                     1                 2      3
+
+
+
+
+4         5     6                      4                5      6                                              6
+
+    (a)                                           (b)                                            (c)
+
+
+     Figure B.2 Directed and undirected graphs. (a) A directed graph G D .V; E/, where V D
+     f1; 2; 3; 4; 5; 6g and E D f.1; 2/; .2; 2/; .2; 4/; .2; 5/; .4; 1/; .4; 5/; .5; 4/; .6; 3/g. The edge .2; 2/
+     is a self-loop. (b) An undirected graph G D .V; E/, where V D f1; 2; 3; 4; 5; 6g and E D
+     f.1; 2/; .1; 5/; .2; 5/; .3; 6/g. The vertex 4 is isolated. (c) The subgraph of the graph in part (a)
+     induced by the vertex set f1; 2; 3; 6g.
+
+
+     u;  2 V and u ¤ . By convention, we use the notation .u; / for an edge, rather
+     than the set notation fu; g, and we consider .u; / and .; u/ to be the same edge.
+     In an undirected graph, self-loops are forbidden, and so every edge consists of two
+     distinct vertices. Figure B.2(b) is a pictorial representation of an undirected graph
+     on the vertex set f1; 2; 3; 4; 5; 6g.
+         Many deﬁnitions for directed and undirected graphs are the same, although cer-
+     tain terms have slightly different meanings in the two contexts. If .u; / is an edge
+     in a directed graph G D .V; E/, we say that .u; / is incident from or leaves
+     vertex u and is incident to or enters vertex . For example, the edges leaving ver-
+     tex 2 in Figure B.2(a) are .2; 2/, .2; 4/, and .2; 5/. The edges entering vertex 2 are
+     .1; 2/ and .2; 2/. If .u; / is an edge in an undirected graph G D .V; E/, we say
+     that .u; / is incident on vertices u and . In Figure B.2(b), the edges incident on
+     vertex 2 are .1; 2/ and .2; 5/.
+         If .u; / is an edge in a graph G D .V; E/, we say that vertex  is adjacent to
+     vertex u. When the graph is undirected, the adjacency relation is symmetric. When
+     the graph is directed, the adjacency relation is not necessarily symmetric. If  is
+     adjacent to u in a directed graph, we sometimes write u ! . In parts (a) and (b)
+     of Figure B.2, vertex 2 is adjacent to vertex 1, since the edge .1; 2/ belongs to both
+     graphs. Vertex 1 is not adjacent to vertex 2 in Figure B.2(a), since the edge .2; 1/
+     does not belong to the graph.
+         The degree of a vertex in an undirected graph is the number of edges incident on
+     it. For example, vertex 2 in Figure B.2(b) has degree 2. A vertex whose degree is 0,
+     such as vertex 4 in Figure B.2(b), is isolated. In a directed graph, the out-degree
+     of a vertex is the number of edges leaving it, and the in-degree of a vertex is the
+     number of edges entering it. The degree of a vertex in a directed graph is its in-
+

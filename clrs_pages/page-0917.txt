@@ -1,0 +1,43 @@
+896        Chapter 29 Linear Programming
+
+
+           Ax  0 ;
+           c Tx > 0
+           and
+           AT y D c ;
+              y  0
+           is solvable, where x is an n-vector and y is an m-vector. Prove Farkas’s lemma.
+
+           29-5 Minimum-cost circulation
+           In this problem, we consider a variant of the minimum-cost-ﬂow problem from
+           Section 29.2 in which we are not given a demand, a source, or a sink. Instead,
+           we are given, as before, a ﬂow network and edge costs a.u; /. A ﬂow is feasible
+           if it satisﬁes the capacity constraint on every edge and ﬂow conservation at every
+           vertex. The goal is to ﬁnd, among all feasible ﬂows, the one of minimum cost. We
+           call this problem the minimum-cost-circulation problem.
+           a. Formulate the minimum-cost-circulation problem as a linear program.
+
+           b. Suppose that for all edges .u; / 2 E, we have a.u; / > 0. Characterize an
+              optimal solution to the minimum-cost-circulation problem.
+
+           c. Formulate the maximum-ﬂow problem as a minimum-cost-circulation problem
+              linear program. That is given a maximum-ﬂow problem instance G D .V; E/
+              with source s, sink t and edge capacities c, create a minimum-cost-circulation
+              problem by giving a (possibly different) network G 0 D .V 0 ; E 0 / with edge
+              capacities c 0 and edge costs a0 such that you can discern a solution to the
+              maximum-ﬂow problem from a solution to the minimum-cost-circulation prob-
+              lem.
+
+           d. Formulate the single-source shortest-path problem as a minimum-cost-circu-
+              lation problem linear program.
+
+
+Chapter notes
+
+           This chapter only begins to study the wide ﬁeld of linear programming. A num-
+           ber of books are devoted exclusively to linear programming, including those by
+           Chvátal [69], Gass [130], Karloff [197], Schrijver [303], and Vanderbei [344].
+           Many other books give a good coverage of linear programming, including those
+           by Papadimitriou and Steiglitz [271] and Ahuja, Magnanti, and Orlin [7]. The
+           coverage in this chapter draws on the approach taken by Chvátal.
+

@@ -1,0 +1,41 @@
+5.3 Randomized algorithms                                                             123
+
+
+this to be the case for any input, rather than for inputs drawn from a particular
+distribution.
+   Let us further explore the distinction between probabilistic analysis and random-
+ized algorithms. In Section 5.2, we claimed that, assuming that the candidates ar-
+rive in a random order, the expected number of times we hire a new ofﬁce assistant
+is about ln n. Note that the algorithm here is deterministic; for any particular input,
+the number of times a new ofﬁce assistant is hired is always the same. Furthermore,
+the number of times we hire a new ofﬁce assistant differs for different inputs, and it
+depends on the ranks of the various candidates. Since this number depends only on
+the ranks of the candidates, we can represent a particular input by listing, in order,
+the ranks of the candidates, i.e., hrank.1/; rank.2/; : : : ; rank.n/i. Given the rank
+list A1 D h1; 2; 3; 4; 5; 6; 7; 8; 9; 10i, a new ofﬁce assistant is always hired 10 times,
+since each successive candidate is better than the previous one, and lines 5–6 are
+executed in each iteration. Given the list of ranks A2 D h10; 9; 8; 7; 6; 5; 4; 3; 2; 1i,
+a new ofﬁce assistant is hired only once, in the ﬁrst iteration. Given a list of ranks
+A3 D h5; 2; 1; 8; 4; 7; 10; 9; 3; 6i, a new ofﬁce assistant is hired three times,
+upon interviewing the candidates with ranks 5, 8, and 10. Recalling that the cost
+of our algorithm depends on how many times we hire a new ofﬁce assistant, we
+see that there are expensive inputs such as A1 , inexpensive inputs such as A2 , and
+moderately expensive inputs such as A3 .
+   Consider, on the other hand, the randomized algorithm that ﬁrst permutes the
+candidates and then determines the best candidate. In this case, we randomize in
+the algorithm, not in the input distribution. Given a particular input, say A3 above,
+we cannot say how many times the maximum is updated, because this quantity
+differs with each run of the algorithm. The ﬁrst time we run the algorithm on A3 ,
+it may produce the permutation A1 and perform 10 updates; but the second time
+we run the algorithm, we may produce the permutation A2 and perform only one
+update. The third time we run it, we may perform some other number of updates.
+Each time we run the algorithm, the execution depends on the random choices
+made and is likely to differ from the previous execution of the algorithm. For this
+algorithm and many other randomized algorithms, no particular input elicits its
+worst-case behavior. Even your worst enemy cannot produce a bad input array,
+since the random permutation makes the input order irrelevant. The randomized
+algorithm performs badly only if the random-number generator produces an “un-
+lucky” permutation.
+   For the hiring problem, the only change needed in the code is to randomly per-
+mute the array.
+

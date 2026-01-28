@@ -1,0 +1,46 @@
+           32.3 String matching with ﬁnite automata                                            995
+
+
+           32.2-4
+           Alice has a copy of a long n-bit ﬁle A D han1 ; an2 ; : : : ; a0 i, and Bob similarly
+           has an n-bit ﬁle B D hbn1 ; bn2 ; : : : ; b0 i. Alice and Bob wish to know if their
+           ﬁles are identical. To avoid transmitting all of A or B, they use the following fast
+           probabilistic check. Together, they select a prime q > 1000n and randomly select
+           an integer x from f0; 1; : : : ; q  1g. Then, Alice evaluates
+                                !
+                      X
+                      n1
+                              i
+           A.x/ D         ai x mod q
+                      i D0
+
+           and Bob similarly evaluates B.x/. Prove that if A ¤ B, there is at most one
+           chance in 1000 that A.x/ D B.x/, whereas if the two ﬁles are the same, A.x/ is
+           necessarily the same as B.x/. (Hint: See Exercise 31.4-4.)
+
+
+
+32.3 String matching with ﬁnite automata
+
+           Many string-matching algorithms build a ﬁnite automaton—a simple machine for
+           processing information—that scans the text string T for all occurrences of the pat-
+           tern P . This section presents a method for building such an automaton. These
+           string-matching automata are very efﬁcient: they examine each text character ex-
+           actly once, taking constant time per text character. The matching time used—after
+           preprocessing the pattern to build the automaton—is therefore ‚.n/. The time to
+           build the automaton, however, can be large if † is large. Section 32.4 describes a
+           clever way around this problem.
+              We begin this section with the deﬁnition of a ﬁnite automaton. We then examine
+           a special string-matching automaton and show how to use it to ﬁnd occurrences
+           of a pattern in a text. Finally, we shall show how to construct the string-matching
+           automaton for a given input pattern.
+
+           Finite automata
+           A ﬁnite automaton M , illustrated in Figure 32.6, is a 5-tuple .Q; q0 ; A; †; ı/,
+           where
+              Q is a ﬁnite set of states,
+              q0 2 Q is the start state,
+              A  Q is a distinguished set of accepting states,
+              † is a ﬁnite input alphabet,
+              ı is a function from Q        † into Q, called the transition function of M .
+

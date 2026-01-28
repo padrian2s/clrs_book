@@ -1,0 +1,45 @@
+24.3 Dijkstra’s algorithm                                                        663
+
+
+24.3-2
+Give a simple example of a directed graph with negative-weight edges for which
+Dijkstra’s algorithm produces incorrect answers. Why doesn’t the proof of Theo-
+rem 24.6 go through when negative-weight edges are allowed?
+
+24.3-3
+Suppose we change line 4 of Dijkstra’s algorithm to the following.
+4 while jQj > 1
+This change causes the while loop to execute jV j  1 times instead of jV j times. Is
+this proposed algorithm correct?
+
+24.3-4
+Professor Gaedel has written a program that he claims implements Dijkstra’s al-
+gorithm. The program produces :d and : for each vertex  2 V . Give an
+O.V CE/-time algorithm to check the output of the professor’s program. It should
+determine whether the d and  attributes match those of some shortest-paths tree.
+You may assume that all edge weights are nonnegative.
+
+24.3-5
+Professor Newman thinks that he has worked out a simpler proof of correctness
+for Dijkstra’s algorithm. He claims that Dijkstra’s algorithm relaxes the edges of
+every shortest path in the graph in the order in which they appear on the path, and
+therefore the path-relaxation property applies to every vertex reachable from the
+source. Show that the professor is mistaken by constructing a directed graph for
+which Dijkstra’s algorithm could relax the edges of a shortest path out of order.
+
+24.3-6
+We are given a directed graph G D .V; E/ on which each edge .u; / 2 E has an
+associated value r.u; /, which is a real number in the range 0  r.u; /  1 that
+represents the reliability of a communication channel from vertex u to vertex .
+We interpret r.u; / as the probability that the channel from u to  will not fail,
+and we assume that these probabilities are independent. Give an efﬁcient algorithm
+to ﬁnd the most reliable path between two given vertices.
+
+24.3-7
+Let G D .V; E/ be a weighted, directed graph with positive weight function
+w W E ! f1; 2; : : : ; W g for some positive integer W , and assume that no two ver-
+tices have the same shortest-path weights from source vertex s. Now suppose that
+we deﬁne an unweighted, directed graph G 0 D .V [ V 0 ; E 0 / by replacing each
+edge .u; / 2 E with w.u; / unit-weight edges in series. How many vertices
+does G 0 have? Now suppose that we run a breadth-ﬁrst search on G 0 . Show that
+

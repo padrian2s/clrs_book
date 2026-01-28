@@ -1,0 +1,46 @@
+250   Chapter 10 Elementary Data Structures
+
+
+      10-2 Mergeable heaps using linked lists
+      A mergeable heap supports the following operations: M AKE -H EAP (which creates
+      an empty mergeable heap), I NSERT, M INIMUM, E XTRACT-M IN, and U NION.1
+      Show how to implement mergeable heaps using linked lists in each of the following
+      cases. Try to make each operation as efﬁcient as possible. Analyze the running
+      time of each operation in terms of the size of the dynamic set(s) being operated on.
+      a. Lists are sorted.
+
+      b. Lists are unsorted.
+
+      c. Lists are unsorted, and dynamic sets to be merged are disjoint.
+
+      10-3 Searching a sorted compact list
+      Exercise 10.3-4 asked how we might maintain an n-element list compactly in the
+      ﬁrst n positions of an array. We shall assume that all keys are distinct and that the
+      compact list is also sorted, that is, keyŒi < keyŒnextŒi for all i D 1; 2; : : : ; n such
+      that nextŒi ¤ NIL . We will also assume that we have a variable L that contains
+      the index of the ﬁrst element on the list. Under these assumptions, you will show       p
+      that we can use the following randomized algorithm to search the list in O. n/
+      expected time.
+
+      C OMPACT-L IST-S EARCH .L; n; k/
+       1 i DL
+       2 while i ¤ NIL and keyŒi < k
+       3      j D R ANDOM.1; n/
+       4      if keyŒi < keyŒj  and keyŒj   k
+       5           i Dj
+       6           if keyŒi == k
+       7                return i
+       8      i D nextŒi
+       9 if i == NIL or keyŒi > k
+      10      return NIL
+      11 else return i
+
+        If we ignore lines 3–7 of the procedure, we have an ordinary algorithm for
+      searching a sorted linked list, in which index i points to each position of the list in
+
+
+      1 Because we have deﬁned a mergeable heap to support M INIMUM and E XTRACT-M IN , we can also
+
+      refer to it as a mergeable min-heap. Alternatively, if it supported M AXIMUM and E XTRACT-M AX,
+      it would be a mergeable max-heap.
+

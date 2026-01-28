@@ -1,0 +1,46 @@
+960   Chapter 31 Number-Theoretic Algorithms
+
+
+                     Bob                                                Alice
+                                     communication channel
+                    encrypt                                            decrypt
+                                          C D PA .M /
+      M               PA                                                 SA              M
+
+                                            eavesdropper
+                                                             C
+
+
+      Figure 31.5 Encryption in a public key system. Bob encrypts the message M using Alice’s public
+      key PA and transmits the resulting ciphertext C D PA .M / over a communication channel to Al-
+      ice. An eavesdropper who captures the transmitted ciphertext gains no information about M . Alice
+      receives C and decrypts it using her secret key to obtain the original message M D SA .C /.
+
+
+      knows PA and can compute PA ./, the inverse function to SA ./, efﬁciently. In order
+      to design a workable public-key cryptosystem, we must ﬁgure out how to create
+      a system in which we can reveal a transformation PA ./ without thereby revealing
+      how to compute the corresponding inverse transformation SA ./. This task appears
+      formidable, but we shall see how to accomplish it.
+         In a public-key cryptosystem, encryption works as shown in Figure 31.5. Sup-
+      pose Bob wishes to send Alice a message M encrypted so that it will look like
+      unintelligible gibberish to an eavesdropper. The scenario for sending the message
+      goes as follows.
+         Bob obtains Alice’s public key PA (from a public directory or directly from
+          Alice).
+         Bob computes the ciphertext C D PA .M / corresponding to the message M
+          and sends C to Alice.
+         When Alice receives the ciphertext C , she applies her secret key SA to retrieve
+          the original message: SA .C / D SA .PA .M // D M .
+      Because SA ./ and PA ./ are inverse functions, Alice can compute M from C . Be-
+      cause only Alice is able to compute SA ./, Alice is the only one who can compute M
+      from C . Because Bob encrypts M using PA ./, only Alice can understand the trans-
+      mitted message.
+         We can just as easily implement digital signatures within our formulation of a
+      public-key cryptosystem. (There are other ways of approaching the problem of
+      constructing digital signatures, but we shall not go into them here.) Suppose now
+      that Alice wishes to send Bob a digitally signed response M 0 . Figure 31.6 shows
+      how the digital-signature scenario proceeds.
+         Alice computes her digital signature             for the message M 0 using her secret
+          key SA and the equation D SA .M 0 /.
+

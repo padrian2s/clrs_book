@@ -1,0 +1,52 @@
+698   Chapter 25 All-Pairs Shortest Paths
+
+
+       1              2
+
+
+
+
+       4              3
+
+
+                1 0 0 0                      1 0 0 0                     1 0 0 0
+                 0   1    1   1                 0   1   1   1                  0   1   1   1
+      T .0/ D                        T .1/ D                       T .2/ D
+                 0   1    1   0                 0   1   1   0                  0   1   1   1
+                 1   0    1   1                 1   0   1   1                  1   0   1   1
+
+                1 0 0 0                      1 0 0 0
+                 0   1    1   1                 1   1   1   1
+      T .3/ D                        T .4/ D
+                 0   1    1   1                 1   1   1   1
+                 1   1    1   1                 1   1   1   1
+
+
+      Figure 25.5    A directed graph and the matrices T .k/ computed by the transitive-closure algorithm.
+
+
+      T RANSITIVE -C LOSURE .G/
+       1 n D jG:Vj
+       2 let T .0/ D tij.0/ be a new n n matrix
+       3 for i D 1 to n
+       4      for j D 1 to n
+       5           if i == j or .i; j / 2 G:E
+       6                 tij.0/ D 1
+       7           else tij.0/ D 0
+       8 for k D 1 to n
+       9      let T .k/ D tij.k/ be a new n n matrix
+      10      for i D 1 to n
+      11           for j D 1 to n
+      12                 tij.k/ D tij.k1/ _ ti.k1/
+                                                k
+                                                        .k1/
+                                                     ^ tkj
+      13 return T .n/
+
+         Figure 25.5 shows the matrices T .k/ computed by the T RANSITIVE -C LOSURE
+      procedure on a sample graph. The T RANSITIVE -C LOSURE procedure, like the
+      Floyd-Warshall algorithm, runs in ‚.n3 / time. On some computers, though, log-
+      ical operations on single-bit values execute faster than arithmetic operations on
+      integer words of data. Moreover, because the direct transitive-closure algorithm
+      uses only boolean values rather than integer values, its space requirement is less
+

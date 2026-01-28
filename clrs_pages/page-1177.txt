@@ -1,0 +1,55 @@
+1156       Appendix A           Summations
+
+
+           which yields the bound
+           X
+           n
+             1
+                         ln n C 1 :                                                  (A.14)
+                    k
+           kD1
+
+
+
+           Exercises
+
+           A.2-1    Pn
+           Show that kD1 1=k 2 is bounded above by a constant.
+
+           A.2-2
+           Find an asymptotic upper bound on the summation
+           X˙
+           blg nc
+                            
+                        n=2k :
+           kD0
+
+
+           A.2-3
+           Show that the nth harmonic number is .lg n/ by splitting the summation.
+
+           A.2-4      Pn
+           Approximate kD1 k 3 with an integral.
+
+           A.2-5                                                          Pn
+           Why didn’t we use the integral approximation (A.12) directly on kD1 1=k to
+           obtain an upper bound on the nth harmonic number?
+
+
+
+Problems
+
+           A-1 Bounding summations
+           Give asymptotically tight bounds on the following summations. Assume that r  0
+           and s  0 are constants.
+                X
+                n
+           a.            kr .
+                kD1
+
+
+                X
+                n
+           b.            lgs k.
+                kD1
+

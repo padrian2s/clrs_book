@@ -1,0 +1,43 @@
+362   Chapter 15 Dynamic Programming
+
+
+       r1   D 1 from solution 1 D 1 (no cuts) ;
+       r2   D 5 from solution 2 D 2 (no cuts) ;
+       r3   D 8 from solution 3 D 3 (no cuts) ;
+       r4   D 10 from solution 4 D 2 C 2 ;
+       r5   D 13 from solution 5 D 2 C 3 ;
+       r6   D 17 from solution 6 D 6 (no cuts) ;
+       r7   D 18 from solution 7 D 1 C 6 or 7 D 2 C 2 C 3 ;
+       r8   D 22 from solution 8 D 2 C 6 ;
+       r9   D 25 from solution 9 D 3 C 6 ;
+      r10   D 30 from solution 10 D 10 (no cuts) :
+        More generally, we can frame the values rn for n  1 in terms of optimal rev-
+      enues from shorter rods:
+      rn D max .pn ; r1 C rn1 ; r2 C rn2 ; : : : ; rn1 C r1 / :                     (15.1)
+      The ﬁrst argument, pn , corresponds to making no cuts at all and selling the rod of
+      length n as is. The other n  1 arguments to max correspond to the maximum rev-
+      enue obtained by making an initial cut of the rod into two pieces of size i and n  i,
+      for each i D 1; 2; : : : ; n  1, and then optimally cutting up those pieces further,
+      obtaining revenues ri and rni from those two pieces. Since we don’t know ahead
+      of time which value of i optimizes revenue, we have to consider all possible values
+      for i and pick the one that maximizes revenue. We also have the option of picking
+      no i at all if we can obtain more revenue by selling the rod uncut.
+         Note that to solve the original problem of size n, we solve smaller problems of
+      the same type, but of smaller sizes. Once we make the ﬁrst cut, we may consider
+      the two pieces as independent instances of the rod-cutting problem. The overall
+      optimal solution incorporates optimal solutions to the two related subproblems,
+      maximizing revenue from each of those two pieces. We say that the rod-cutting
+      problem exhibits optimal substructure: optimal solutions to a problem incorporate
+      optimal solutions to related subproblems, which we may solve independently.
+         In a related, but slightly simpler, way to arrange a recursive structure for the rod-
+      cutting problem, we view a decomposition as consisting of a ﬁrst piece of length i
+      cut off the left-hand end, and then a right-hand remainder of length n  i. Only
+      the remainder, and not the ﬁrst piece, may be further divided. We may view every
+      decomposition of a length-n rod in this way: as a ﬁrst piece followed by some
+      decomposition of the remainder. When doing so, we can couch the solution with
+      no cuts at all as saying that the ﬁrst piece has size i D n and revenue pn and that
+      the remainder has size 0 with corresponding revenue r0 D 0. We thus obtain the
+      following simpler version of equation (15.1):
+      rn D max .pi C rni / :                                                          (15.2)
+            1i n
+

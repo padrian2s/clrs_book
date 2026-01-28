@@ -1,0 +1,47 @@
+A.2 Bounding summations                                                                                                                                     1155
+
+
+
+
+                                                                                                                                                    f (x)
+
+
+
+
+            f (m)       f (m+1)         f (m+2)                                         f (n–2)         f (n–1)         f (n)
+                                                        …                       …
+
+
+                                                                                                                                                       x
+     m –1           m             m+1             m+2             …                 …             n–2             n–1             n           n+1
+                                                                          (a)
+
+
+
+
+                                                                                                                                                    f (x)
+
+
+
+
+                        f (m)           f (m+1)         f (m+2)                                         f (n–2)         f (n–1)       f (n)
+                                                                      …                 …
+
+
+                                                                                                                                                       x
+     m –1           m             m+1             m+2             …                 …             n–2             n–1             n           n+1
+                                                                          (b)
+
+
+                                   P
+ Figure A.1 Approximation of nkDm f .k/ by integrals. The area of each rectangle is shown
+ within the rectangle, and the total rectangle area represents the value of the summation. The in-
+Rtegral
+   n
+        is represented
+                     Pnby the shaded area under the curve. By comparing areas in (a), we get
+        f .x/ dx           f .k/, and then by shifting the rectangles one unit to the right, we get
+  m1
+ Pn               R nC1kDm
+    kDm f .k/  m       f .x/ dx in (b).
+

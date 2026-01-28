@@ -1,0 +1,45 @@
+31.6 Powers of an element                                                                    957
+
+
+
+i     9    8    7      6       5    4      3     2      1     0
+bi    1    0    0      0       1    1      0     0      0     0
+c     1    2    4      8      17    35    70    140    280   560
+d     7   49   157    526    160   241    298   166     67    1
+
+
+Figure 31.4 The results of M ODULAR -E XPONENTIATION when computing ab .mod n/, where
+a D 7, b D 560 D h1000110000i, and n D 561. The values are shown after each execution of the
+for loop. The ﬁnal result is 1.
+
+
+signiﬁcant bit.) The following procedure computes ac mod n as c is increased by
+doublings and incrementations from 0 to b.
+
+M ODULAR -E XPONENTIATION .a; b; n/
+ 1 c D0
+ 2 d D1
+ 3 let hbk ; bk1 ; : : : ; b0 i be the binary representation of b
+ 4 for i D k downto 0
+ 5      c D 2c
+ 6      d D .d  d / mod n
+ 7      if bi == 1
+ 8            c D cC1
+ 9            d D .d  a/ mod n
+10 return d
+
+The essential use of squaring in line 6 of each iteration explains the name “repeated
+squaring.” As an example, for a D 7, b D 560, and n D 561, the algorithm
+computes the sequence of values modulo 561 shown in Figure 31.4; the sequence
+of exponents used appears in the row of the table labeled by c.
+   The variable c is not really needed by the algorithm but is included for the fol-
+lowing two-part loop invariant:
+     Just prior to each iteration of the for loop of lines 4–9,
+     1. The value of c is the same as the preﬁx hbk ; bk1 ; : : : ; bi C1 i of the binary
+        representation of b, and
+     2. d D ac mod n.
+
+We use this loop invariant as follows:
+Initialization: Initially, i D k, so that the preﬁx hbk ; bk1 ; : : : ; bi C1 i is empty,
+   which corresponds to c D 0. Moreover, d D 1 D a0 mod n.
+

@@ -1,0 +1,42 @@
+D.2 Basic matrix properties                                                              1223
+
+
+Matrix inverses, ranks, and determinants
+We deﬁne the inverse of an n n matrix A to be the n n matrix, denoted A1 (if
+it exists), such that AA1 D In D A1 A. For example,
+        1             
+   1 1              0   1
+               D            :
+   1 0              1 1
+Many nonzero n n matrices do not have inverses. A matrix without an inverse is
+called noninvertible, or singular. An example of a nonzero singular matrix is
+       
+  1 0
+          :
+  1 0
+If a matrix has an inverse, it is called invertible, or nonsingular. Matrix inverses,
+when they exist, are unique. (See Exercise D.2-1.) If A and B are nonsingular
+n n matrices, then
+.BA/1 D A1 B 1 :
+The inverse operation commutes with the transpose operation:
+.A1 /T D .AT /1 :
+   The vectors x1 ; x2 ; : : : ; xn are linearly dependent if there exist coefﬁcients
+c1 ; c2 ; : : : ; cn , not all of which are zero, such that c1 x1 C c2 x2 C    C cn xn D 0.
+The row vectors x1 D . 1 2 3 /, x2 D . 2 6 4 /, and x3 D . 4 11 9 / are
+linearly dependent, for example, since 2x1 C 3x2  2x3 D 0. If vectors are not
+linearly dependent, they are linearly independent. For example, the columns of an
+identity matrix are linearly independent.
+   The column rank of a nonzero m n matrix A is the size of the largest set
+of linearly independent columns of A. Similarly, the row rank of A is the size
+of the largest set of linearly independent rows of A. A fundamental property of
+any matrix A is that its row rank always equals its column rank, so that we can
+simply refer to the rank of A. The rank of an m n matrix is an integer between 0
+and min.m; n/, inclusive. (The rank of a zero matrix is 0, and the rank of an n n
+identity matrix is n.) An alternate, but equivalent and often more useful, deﬁnition
+is that the rank of a nonzero m n matrix A is the smallest number r such that
+there exist matrices B and C of respective sizes m r and r n such that
+A D BC :
+A square n n matrix has full rank if its rank is n. An m n matrix has full
+column rank if its rank is n. The following theorem gives a fundamental property
+of ranks.
+

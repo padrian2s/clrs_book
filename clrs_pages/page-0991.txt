@@ -1,0 +1,42 @@
+970   Chapter 31 Number-Theoretic Algorithms
+
+
+         At this point, we brieﬂy present an alternative description of the behavior of
+      W ITNESS as a function of the sequence X D hx0 ; x1 ; : : : ; x t i, which we shall ﬁnd
+      useful later on, when we analyze the efﬁciency of the Miller-Rabin primality test.
+      Note that if xi D 1 for some 0  i < t, W ITNESS might not compute the rest
+      of the sequence. If it were to do so, however, each value xi C1 ; xi C2 ; : : : ; x t would
+      be 1, and we consider these positions in the sequence X as being all 1s. We have
+      four cases:
+      1. X D h: : : ; d i, where d ¤ 1: the sequence X does not end in 1. Return TRUE
+         in line 8; a is a witness to the compositeness of n (by Fermat’s Theorem).
+      2. X D h1; 1; : : : ; 1i: the sequence X is all 1s. Return FALSE; a is not a witness
+         to the compositeness of n.
+      3. X D h: : : ; 1; 1; : : : ; 1i: the sequence X ends in 1, and the last non-1 is equal
+         to 1. Return FALSE; a is not a witness to the compositeness of n.
+      4. X D h: : : ; d; 1; : : : ; 1i, where d ¤ ˙1: the sequence X ends in 1, but the last
+         non-1 is not 1. Return TRUE in line 6; a is a witness to the compositeness
+         of n, since d is a nontrivial square root of 1.
+        We now examine the Miller-Rabin primality test based on the use of W ITNESS.
+      Again, we assume that n is an odd integer greater than 2.
+      M ILLER -R ABIN .n; s/
+      1 for j D 1 to s
+      2      a D R ANDOM .1; n  1/
+      3      if W ITNESS .a; n/
+      4           return COMPOSITE                       // deﬁnitely
+      5 return PRIME                                     // almost surely
+         The procedure M ILLER -R ABIN is a probabilistic search for a proof that n is
+      composite. The main loop (beginning on line 1) picks up to s random values of a
+      from ZC  n (line 2). If one of the a’s picked is a witness to the compositeness of n,
+      then M ILLER -R ABIN returns COMPOSITE on line 4. Such a result is always cor-
+      rect, by the correctness of W ITNESS. If M ILLER -R ABIN ﬁnds no witness in s
+      trials, then the procedure assumes that this is because no witnesses exist, and there-
+      fore it assumes that n is prime. We shall see that this result is likely to be correct
+      if s is large enough, but that there is still a tiny chance that the procedure may be
+      unlucky in its choice of a’s and that witnesses do exist even though none has been
+      found.
+         To illustrate the operation of M ILLER -R ABIN, let n be the Carmichael num-
+      ber 561, so that n  1 D 560 D 24  35, t D 4, and u D 35. If the pro-
+      cedure chooses a D 7 as a base, Figure 31.4 in Section 31.6 shows that W IT-
+      NESS computes x0  a 35  241 .mod 561/ and thus computes the sequence
+

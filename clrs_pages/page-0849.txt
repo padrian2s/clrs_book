@@ -1,0 +1,40 @@
+828   Chapter 28 Matrix Operations
+
+
+      Computing a matrix inverse from an LUP decomposition
+      Suppose that we have an LUP decomposition of a matrix A in the form of three
+      matrices L, U , and P such that PA D LU . Using LUP-S OLVE, we can solve
+      an equation of the form Ax D b in time ‚.n2 /. Since the LUP decomposition
+      depends on A but not b, we can run LUP-S OLVE on a second set of equations of
+      the form Ax D b 0 in additional time ‚.n2 /. In general, once we have the LUP
+      decomposition of A, we can solve, in time ‚.k n2 /, k versions of the equation
+      Ax D b that differ only in b.
+         We can think of the equation
+      AX D In ;                                                                    (28.10)
+      which deﬁnes the matrix X , the inverse of A, as a set of n distinct equations of the
+      form Ax D b. To be precise, let Xi denote the ith column of X , and recall that the
+      unit vector ei is the ith column of In . We can then solve equation (28.10) for X by
+      using the LUP decomposition for A to solve each equation
+      AXi D ei
+      separately for Xi . Once we have the LUP decomposition, we can compute each of
+      the n columns Xi in time ‚.n2 /, and so we can compute X from the LUP decom-
+      position of A in time ‚.n3 /. Since we can determine the LUP decomposition of A
+      in time ‚.n3 /, we can compute the inverse A1 of a matrix A in time ‚.n3 /.
+
+      Matrix multiplication and matrix inversion
+      We now show that the theoretical speedups obtained for matrix multiplication
+      translate to speedups for matrix inversion. In fact, we prove something stronger:
+      matrix inversion is equivalent to matrix multiplication, in the following sense.
+      If M.n/ denotes the time to multiply two n n matrices, then we can invert a
+      nonsingular n n matrix in time O.M.n//. Moreover, if I.n/ denotes the time
+      to invert a nonsingular n n matrix, then we can multiply two n n matrices in
+      time O.I.n//. We prove these results as two separate theorems.
+
+      Theorem 28.1 (Multiplication is no harder than inversion)
+      If we can invert an n n matrix in time I.n/, where I.n/ D .n2 / and I.n/
+      satisﬁes the regularity condition I.3n/ D O.I.n//, then we can multiply two n n
+      matrices in time O.I.n//.
+
+      Proof Let A and B be n n matrices whose matrix product C we wish to com-
+      pute. We deﬁne the 3n 3n matrix D by
+

@@ -1,0 +1,43 @@
+1068   Chapter 34 NP-Completeness
+
+
+        {0,1}*                       f        {0,1}*
+
+
+                                                    L2
+             L1
+
+
+
+
+       Figure 34.4 An illustration of a polynomial-time reduction from a language L1 to a language L2
+       via a reduction function f . For any input x 2 f0; 1g , the question of whether x 2 L1 has the same
+       answer as the question of whether f .x/ 2 L2 .
+
+
+       then f .x/ 2 L2 . Moreover, if x 62 L1 , then f .x/ 62 L2 . Thus, the reduction func-
+       tion maps any instance x of the decision problem represented by the language L1
+       to an instance f .x/ of the problem represented by L2 . Providing an answer to
+       whether f .x/ 2 L2 directly provides the answer to whether x 2 L1 .
+          Polynomial-time reductions give us a powerful tool for proving that various lan-
+       guages belong to P.
+
+       Lemma 34.3
+       If L1 ; L2  f0; 1g are languages such that L1 P L2 , then L2 2 P implies
+       L1 2 P.
+
+       Proof Let A2 be a polynomial-time algorithm that decides L2 , and let F be a
+       polynomial-time reduction algorithm that computes the reduction function f . We
+       shall construct a polynomial-time algorithm A1 that decides L1 .
+          Figure 34.5 illustrates how we construct A1 . For a given input x 2 f0; 1g ,
+       algorithm A1 uses F to transform x into f .x/, and then it uses A2 to test whether
+       f .x/ 2 L2 . Algorithm A1 takes the output from algorithm A2 and produces that
+       answer as its own output.
+          The correctness of A1 follows from condition (34.1). The algorithm runs in poly-
+       nomial time, since both F and A2 run in polynomial time (see Exercise 34.1-5).
+
+       NP-completeness
+       Polynomial-time reductions provide a formal means for showing that one prob-
+       lem is at least as hard as another, to within a polynomial-time factor. That is, if
+       L1 P L2 , then L1 is not more than a polynomial factor harder than L2 , which is
+

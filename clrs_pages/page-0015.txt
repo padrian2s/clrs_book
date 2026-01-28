@@ -1,0 +1,44 @@
+xiv   Preface
+
+
+         You should ﬁnd it easy to organize your course around just the chapters you
+      need. We have made chapters relatively self-contained, so that you need not worry
+      about an unexpected and unnecessary dependence of one chapter on another. Each
+      chapter presents the easier material ﬁrst and the more difﬁcult material later, with
+      section boundaries marking natural stopping points. In an undergraduate course,
+      you might use only the earlier sections from a chapter; in a graduate course, you
+      might cover the entire chapter.
+         We have included 957 exercises and 158 problems. Each section ends with exer-
+      cises, and each chapter ends with problems. The exercises are generally short ques-
+      tions that test basic mastery of the material. Some are simple self-check thought
+      exercises, whereas others are more substantial and are suitable as assigned home-
+      work. The problems are more elaborate case studies that often introduce new ma-
+      terial; they often consist of several questions that lead the student through the steps
+      required to arrive at a solution.
+         Departing from our practice in previous editions of this book, we have made
+      publicly available solutions to some, but by no means all, of the problems and ex-
+      ercises. Our Web site, http://mitpress.mit.edu/algorithms/, links to these solutions.
+      You will want to check this site to make sure that it does not contain the solution to
+      an exercise or problem that you plan to assign. We expect the set of solutions that
+      we post to grow slowly over time, so you will need to check it each time you teach
+      the course.
+         We have starred (?) the sections and exercises that are more suitable for graduate
+      students than for undergraduates. A starred section is not necessarily more difﬁ-
+      cult than an unstarred one, but it may require an understanding of more advanced
+      mathematics. Likewise, starred exercises may require an advanced background or
+      more than average creativity.
+
+      To the student
+      We hope that this textbook provides you with an enjoyable introduction to the
+      ﬁeld of algorithms. We have attempted to make every algorithm accessible and
+      interesting. To help you when you encounter unfamiliar or difﬁcult algorithms, we
+      describe each one in a step-by-step manner. We also provide careful explanations
+      of the mathematics needed to understand the analysis of the algorithms. If you
+      already have some familiarity with a topic, you will ﬁnd the chapters organized so
+      that you can skim introductory sections and proceed quickly to the more advanced
+      material.
+         This is a large book, and your class will probably cover only a portion of its
+      material. We have tried, however, to make this a book that will be useful to you
+      now as a course textbook and also later in your career as a mathematical desk
+      reference or an engineering handbook.
+

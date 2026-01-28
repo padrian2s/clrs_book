@@ -1,0 +1,51 @@
+                 19.3 Decreasing a key and deleting a node                                                                521
+
+
+                 H:min                                                                 H:min
+
+(a)                7                 18         38                  (b) 15               7                18         38
+
+            24     17    23     21        39    41                                24    17     23    21        39    41
+      26 46        30           52                                           26         30           52
+
+      35                                                                     35
+
+                        H:min                                                                H:min
+
+(c) 15       5            7                18         38            (d) 15   5    26           7                18        38
+
+                   24    17     23    21        39    41                                24     17    23   21         39   41
+
+                   26    30           52                                                       30         52
+
+           H:min
+
+(e) 15       5     26    24          7               18        38
+
+                                17        23    21        39   41
+
+                                30              52
+
+
+
+                 Figure 19.5 Two calls of F IB -H EAP -D ECREASE -K EY. (a) The initial Fibonacci heap. (b) The
+                 node with key 46 has its key decreased to 15. The node becomes a root, and its parent (with key 24),
+                 which had previously been unmarked, becomes marked. (c)–(e) The node with key 35 has its key
+                 decreased to 5. In part (c), the node, now with key 5, becomes a root. Its parent, with key 26,
+                 is marked, so a cascading cut occurs. The node with key 26 is cut from its parent and made an
+                 unmarked root in (d). Another cascading cut occurs, since the node with key 24 is marked as well.
+                 This node is cut from its parent and made an unmarked root in part (e). The cascading cuts stop
+                 at this point, since the node with key 7 is a root. (Even if this node were not a root, the cascading
+                 cuts would stop, since it is unmarked.) Part (e) shows the result of the F IB -H EAP -D ECREASE -K EY
+                 operation, with H: min pointing to the new minimum node.
+
+
+                 F IB -H EAP -D ECREASE -K EY creates a new tree rooted at node x and clears x’s
+                 mark bit (which may have already been FALSE). Each call of C ASCADING -C UT,
+                 except for the last one, cuts a marked node and clears the mark bit. Afterward, the
+                 Fibonacci heap contains t.H /Cc trees (the original t.H / trees, c1 trees produced
+                 by cascading cuts, and the tree rooted at x) and at most m.H /c C2 marked nodes
+                 (c 1 were unmarked by cascading cuts and the last call of C ASCADING -C UT may
+                 have marked a node). The change in potential is therefore at most
+                 ..t.H / C c/ C 2.m.H /  c C 2//  .t.H / C 2 m.H // D 4  c :
+

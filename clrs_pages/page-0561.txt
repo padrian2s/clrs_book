@@ -1,0 +1,44 @@
+540   Chapter 20 van Emde Boas Trees
+
+
+      calculations. The array summary contains the summary     p bits stored recursively in a
+      proto-vEB structure, and the array cluster contains u pointers.
+         Figure 20.4 shows a fully expanded proto-EB.16/ structure representing the
+      set f2; 3; 4; 5; 7; 14; 15g. If the value i is in the proto-vEB structure pointed to by
+      summary, then the ith cluster contains some value in the set being p        represented.
+      As in the
+              p    tree of  constant  height, clusterŒi  represents the values i   u through
+      .i C 1/ u  1, which form the ith cluster.
+         At the base level, the elements of the actual dynamic sets are stored in some
+      of the proto-EB.2/ structures, and the remaining proto-EB.2/ structures store
+      summary bits. Beneath each of the non-summary base structures, the ﬁgure in-
+      dicates which bits it stores. For example, the proto-EB.2/ structure labeled
+      “elements 6,7” stores bit 6 (0, since element 6 is not in the set) in its AŒ0 and
+      bit 7 (1, since element 7 is in the set) in its AŒ1.                              p
+         Like the clusters, each summary is just a dynamic      p set with universe size u ,
+      and so we represent each summary as a proto-EB. u/ structure. The four sum-
+      mary bits for the main proto-EB.16/ structure are in the leftmost proto-EB.4/
+      structure, and they ultimately appear in two proto-EB.2/ structures. For exam-
+      ple, the proto-EB.2/ structure labeled “clusters 2,3” has AŒ0 D 0, indicating that
+      cluster 2 of the proto-EB.16/ structure (containing elements 8; 9; 10; 11) is all 0,
+      and AŒ1 D 1, telling us that cluster 3 (containing elements 12; 13; 14; 15) has at
+      least one 1. Each proto-EB.4/ structure points to its own summary, which is itself
+      stored as a proto-EB.2/ structure. For example, look at the proto-EB.2/ struc-
+      ture just to the left of the one labeled “elements 0,1.” Because its AŒ0 is 0, it tells
+      us that the “elements 0,1” structure is all 0, and because its AŒ1 is 1, we know that
+      the “elements 2,3” structure contains at least one 1.
+
+      20.2.2   Operations on a proto van Emde Boas structure
+      We shall now describe how to perform operations on a proto-vEB structure.
+      We ﬁrst examine the query operations—M EMBER, M INIMUM, M AXIMUM, and
+      S UCCESSOR —which do not change the proto-vEB structure. We then discuss
+      I NSERT and D ELETE. We leave M AXIMUM and P REDECESSOR, which are sym-
+      metric to M INIMUM and S UCCESSOR, respectively, as Exercise 20.2-1.
+         Each of the M EMBER, S UCCESSOR, P REDECESSOR, I NSERT, and D ELETE op-
+      erations takes a parameter x, along with a proto-vEB structure V . Each of these
+      operations assumes that 0  x < V:u.
+
+      Determining whether a value is in the set
+      To perform M EMBER .x/, we need to ﬁnd the bit corresponding to x within the
+      appropriate proto-EB.2/ structure. We can do so in O.lg lg u/ time, bypassing
+

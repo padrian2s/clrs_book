@@ -1,0 +1,44 @@
+1008   Chapter 32 String Matching
+
+
+       its corollary to prove that C OMPUTE -P REFIX -F UNCTION computes Œq correctly
+       for q > 1.
+
+       Lemma 32.6
+       Let P be a pattern of length m, and let  be the preﬁx function for P . For q D
+       1; 2; : : : ; m, if Œq > 0, then Œq  1 2   Œq  1.
+
+       Proof Let r D Œq > 0, so that r < q and Pr = Pq ; thus, r  1 < q  1 and
+       Pr1 = Pq1 (by dropping the last character from Pr and Pq , which we can do
+       because r > 0). By Lemma 32.5, therefore, r  1 2   Œq  1. Thus, we have
+       Œq  1 D r  1 2   Œq  1.
+
+         For q D 2; 3; : : : ; m, deﬁne the subset Eq1    Œq  1 by
+       Eq1 D fk 2   Œq  1 W P Œk C 1 D P Œqg
+            D fk W k < q  1 and Pk = Pq1 and P Œk C 1 D P Œqg (by Lemma 32.5)
+            D fk W k < q  1 and PkC1 = Pq g :
+       The set Eq1 consists of the values k < q  1 for which Pk = Pq1 and for which,
+       because P Œk C 1 D P Œq, we have PkC1 = Pq . Thus, Eq1 consists of those
+       values k 2   Œq  1 such that we can extend Pk to PkC1 and get a proper sufﬁx
+       of Pq .
+
+       Corollary 32.7
+       Let P be a pattern of length m, and let  be the preﬁx function for P . For q D
+       2; 3; : : : ; m,
+                   (
+                     0                   if Eq1 D ; ;
+       Œq D
+                     1 C max fk 2 Eq1 g if Eq1 ¤ ; :
+
+       Proof If Eq1 is empty, there is no k 2   Œq  1 (including k D 0) for which
+       we can extend Pk to PkC1 and get a proper sufﬁx of Pq . Therefore Œq D 0.
+         If Eq1 is nonempty, then for each k 2 Eq1 we have k C1 < q and PkC1 = Pq .
+       Therefore, from the deﬁnition of Œq, we have
+       Œq  1 C max fk 2 Eq1 g :                                              (32.8)
+       Note that Œq > 0. Let r D Œq  1, so that r C 1 D Œq and there-
+       fore PrC1 = Pq . Since r C 1 > 0, we have P Œr C 1 D P Œq. Furthermore,
+       by Lemma 32.6, we have r 2   Œq  1. Therefore, r 2 Eq1 , and so r 
+       max fk 2 Eq1 g or, equivalently,
+       Œq  1 C max fk 2 Eq1 g :                                              (32.9)
+       Combining equations (32.8) and (32.9) completes the proof.
+

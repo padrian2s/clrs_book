@@ -1,0 +1,52 @@
+Index                                                                                        1271
+
+
+   see also stack                                    determining whether any intersect,
+light edge, 626                                         1021–1029, 1047
+linear constraint, 846                               determining whether two intersect,
+linear dependence, 1223                                 1017–1019
+linear equality, 845                             link
+linear equations                                     of binomial trees, 527 pr.
+   solving modular, 946–950                          of Fibonacci-heap roots, 513
+   solving systems of, 813–827                       of trees in a disjoint-set forest, 570–571
+   solving tridiagonal systems of, 840 pr.       L INK, 571
+linear function, 26, 845                         linked list, 236–241
+linear independence, 1223                            compact, 245 ex., 250 pr.
+linear inequality, 846                               deletion from, 238
+linear-inequality feasibility problem, 894 pr.       to implement disjoint sets, 564–568
+linearity of expectation, 1198                       insertion into, 237–238
+   and indicator random variables, 119               neighbor list, 750
+linearity of summations, 1146                        searching, 237, 268 ex.
+linear order, 1165                                   self-organizing, 476 pr.
+linear permutation, 1229 pr.                     list, see linked list
+linear probing, 272                              L IST-D ELETE, 238
+linear programming, 7, 843–897                   L IST-D ELETE0, 238
+   algorithms for, 850                           L IST-I NSERT , 238
+   applications of, 849                          L IST-I NSERT 0, 240
+   duality in, 879–886                           L IST-S EARCH, 237
+   ellipsoid algorithm for, 850, 897             L IST-S EARCH0, 239
+   ﬁnding an initial solution in, 886–891        literal, 1082
+   fundamental theorem of, 892                   little-oh notation, 50–51, 64
+   interior-point methods for, 850, 897          little-omega notation, 51
+   Karmarkar’s algorithm for, 897                Lm -distance, 1044 ex.
+   and maximum ﬂow, 860–861                      ln (natural logarithm), 56
+   and minimum-cost circulation, 896 pr.         load factor
+   and minimum-cost ﬂow, 861–862                     of a dynamic table, 463
+   and minimum-cost multicommodity ﬂow,              of a hash table, 258
+      864 ex.                                    load instruction, 23
+   and multicommodity ﬂow, 862–863               local variable, 21
+   simplex algorithm for, 864–879, 896           logarithm function (log), 56–57
+   and single-pair shortest path, 859–860            discrete, 955
+   and single-source shortest paths, 664–670,        iterated (lg ), 58–59
+      863 ex.                                    logical parallelism, 777
+   slack form for, 854–857                       logic gate, 1070
+   standard form for, 850–854                    longest common subsequence, 7, 390–397, 413
+   see also integer linear programming, 0-1      longest palindrome subsequence, 405 pr.
+      integer programming                        LONGEST-PATH, 1060 ex.
+linear-programming relaxation, 1125              LONGEST-PATH-LENGTH, 1060 ex.
+linear search, 22 ex.                            longest simple cycle, 1101 ex.
+linear speedup, 780                              longest simple path, 1048
+line segment, 1015                                   in an unweighted graph, 382
+   comparable, 1022                                  in a weighted directed acyclic graph, 404 pr.
+   determining turn of, 1017                     L OOKUP -C HAIN, 388
+

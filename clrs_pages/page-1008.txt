@@ -1,0 +1,51 @@
+Chapter 32     String Matching                                                                   987
+
+
+                x                        x                                     x
+
+
+z                                 z                                 z
+
+
+        y                                        y                             y
+
+
+
+
+                x                        x                                     x
+
+
+        y                                        y                             y
+
+             (a)                              (b)                                  (c)
+
+
+Figure 32.3 A graphical proof of Lemma 32.1. We suppose that x = ´ and y = ´. The three parts
+of the ﬁgure illustrate the three cases of the lemma. Vertical lines connect matching regions (shown
+shaded) of the strings. (a) If jxj  jyj, then x = y. (b) If jxj  jyj, then y = x. (c) If jxj D jyj,
+then x D y.
+
+
+Also note that < and = are transitive relations. The following lemma will be useful
+later.
+
+Lemma 32.1 (Overlapping-sufﬁx lemma)
+Suppose that x, y, and ´ are strings such that x = ´ and y = ´. If jxj  jyj,
+then x = y. If jxj  jyj, then y = x. If jxj D jyj, then x D y.
+
+Proof       See Figure 32.3 for a graphical proof.
+
+   For brevity of notation, we denote the k-character preﬁx P Œ1 : : k of the pattern
+P Œ1 : : m by Pk . Thus, P0 D " and Pm D P D P Œ1 : : m. Similarly, we denote
+the k-character preﬁx of the text T by Tk . Using this notation, we can state the
+string-matching problem as that of ﬁnding all shifts s in the range 0  s  n  m
+such that P = TsCm .
+   In our pseudocode, we allow two equal-length strings to be compared for equal-
+ity as a primitive operation. If the strings are compared from left to right and the
+comparison stops when a mismatch is discovered, we assume that the time taken
+by such a test is a linear function of the number of matching characters discovered.
+To be precise, the test “x == y” is assumed to take time ‚.t C 1/, where t is the
+length of the longest string ´ such that ´ < x and ´ < y. (We write ‚.t C 1/
+rather than ‚.t/ to handle the case in which t D 0; the ﬁrst characters compared
+do not match, but it takes a positive amount of time to perform this comparison.)
+

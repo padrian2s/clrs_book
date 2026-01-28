@@ -1,0 +1,52 @@
+1260   Index
+
+
+       degree-bound, 898                                    in ﬁnding articulation points, bridges, and
+       D ELETE , 230, 505                                      biconnected components, 621 pr.
+       D ELETE -L ARGER -H ALF, 463 ex.                     in ﬁnding strongly connected components,
+       deletion                                                615–621, 623
+         from binary search trees, 295–298, 299 ex.         in topological sorting, 612–615
+         from a bit vector with a superimposed binary    depth-ﬁrst tree, 603
+            tree, 534                                    deque, 236 ex.
+         from a bit vector with a superimposed tree of   D EQUEUE , 235
+            constant height, 535                         derivative of a series, 1147
+         from B-trees, 499–502                           descendant, 1176
+         from chained hash tables, 258                   destination vertex, 644
+         from direct-address tables, 254                 det, see determinant
+         from dynamic tables, 467–471                    determinacy race, 788
+         from Fibonacci heaps, 522, 526 pr.              determinant, 1224–1225
+         from heaps, 166 ex.                                and matrix multiplication, 832 ex.
+         from interval trees, 349                        deterministic algorithm, 123
+         from linked lists, 238                             multithreaded, 787
+         from open-address hash tables, 271              D ETERMINISTIC -S EARCH, 143 pr.
+         from order-statistic trees, 343–344             DFS, 604
+         from proto van Emde Boas structures, 544        DFS-V ISIT , 604
+         from queues, 234                                DFT (discrete Fourier transform), 9, 909
+         from red-black trees, 323–330                   diagonal matrix, 1218
+         from stacks, 232                                   LUP decomposition of, 827 ex.
+         from sweep-line statuses, 1024                  diameter of a tree, 602 ex.
+         from 2-3-4 heaps, 529 pr.                       dictionary, 229
+         from van Emde Boas trees, 554–556               difference constraints, 664–670
+       DeMorgan’s laws                                   difference equation, see recurrence
+         for propositional logic, 1083                   difference of sets (), 1159
+         for sets, 1160, 1162 ex.                           symmetric, 763 pr.
+       dense graph, 589                                  differentiation of a series, 1147
+         -dense, 706 pr.                                digital signature, 960
+       density                                           digraph, see directed graph
+         of prime numbers, 965–966                       D IJKSTRA, 658
+         of a rod, 370 ex.                               Dijkstra’s algorithm, 658–664, 682
+       dependence                                           for all-pairs shortest paths, 684, 704
+         and indicator random variables, 119                implemented with a Fibonacci heap, 662
+         linear, 1223                                       implemented with a min-heap, 662
+         see also independence                              with integer edge weights, 664 ex.
+       depth                                                in Johnson’s algorithm, 702
+         average, of a node in a randomly built binary      similarity to breadth-ﬁrst search, 662,
+            search tree, 304 pr.                               663 ex.
+         of a circuit, 919                                  similarity to Prim’s algorithm, 634, 662
+         of a node in a rooted tree, 1177                D IRECT-A DDRESS -D ELETE, 254
+         of quicksort recursion tree, 178 ex.            direct addressing, 254–255, 532–536
+         of a stack, 188 pr.                             D IRECT-A DDRESS -I NSERT , 254
+       depth-determination problem, 583 pr.              D IRECT-A DDRESS -S EARCH, 254
+       depth-ﬁrst forest, 603                            direct-address table, 254–255
+       depth-ﬁrst search, 603–612, 623                   directed acyclic graph (dag), 1172
+

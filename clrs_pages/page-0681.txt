@@ -1,0 +1,48 @@
+660   Chapter 24 Single-Source Shortest Paths
+
+
+
+                                              u
+                                    p2
+                 S
+           s
+            p1                y
+                     x
+
+
+
+
+      Figure 24.7 The proof of Theorem 24.6. Set S is nonempty just before vertex u is added to it. We
+                                                                    p          p
+      decompose a shortest path p from source s to vertex u into s ;1 x ! y ;2 u, where y is the ﬁrst
+      vertex on the path that is not in S and x 2 S immediately precedes y. Vertices x and y are distinct,
+      but we may have s D x or y D u. Path p2 may or may not reenter set S.
+
+
+      Proof      We use the following loop invariant:
+          At the start of each iteration of the while loop of lines 4–8, :d D ı.s; /
+          for each vertex  2 S.
+      It sufﬁces to show for each vertex u 2 V , we have u:d D ı.s; u/ at the time when u
+      is added to set S. Once we show that u:d D ı.s; u/, we rely on the upper-bound
+      property to show that the equality holds at all times thereafter.
+      Initialization: Initially, S D ;, and so the invariant is trivially true.
+      Maintenance: We wish to show that in each iteration, u:d D ı.s; u/ for the vertex
+        added to set S. For the purpose of contradiction, let u be the ﬁrst vertex for
+        which u:d ¤ ı.s; u/ when it is added to set S. We shall focus our attention
+        on the situation at the beginning of the iteration of the while loop in which u
+        is added to S and derive the contradiction that u:d D ı.s; u/ at that time by
+        examining a shortest path from s to u. We must have u ¤ s because s is the
+        ﬁrst vertex added to set S and s:d D ı.s; s/ D 0 at that time. Because u ¤ s,
+        we also have that S ¤ ; just before u is added to S. There must be some
+        path from s to u, for otherwise u:d D ı.s; u/ D 1 by the no-path property,
+        which would violate our assumption that u:d ¤ ı.s; u/. Because there is at
+        least one path, there is a shortest path p from s to u. Prior to adding u to S,
+        path p connects a vertex in S, namely s, to a vertex in V  S, namely u. Let us
+        consider the ﬁrst vertex y along p such that y 2 V  S, and let x 2 S be y’s
+        predecessor along p. Thus, as Figure 24.7 illustrates, we can decompose path p
+               p          p
+        into s ;1 x ! y ;2 u. (Either of paths p1 or p2 may have no edges.)
+          We claim that y:d D ı.s; y/ when u is added to S. To prove this claim, ob-
+          serve that x 2 S. Then, because we chose u as the ﬁrst vertex for which
+          u:d ¤ ı.s; u/ when it is added to S, we had x:d D ı.s; x/ when x was added
+

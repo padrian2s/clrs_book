@@ -1,0 +1,44 @@
+Problems for Appendix B                                                          1181
+
+
+b. Show that the following are equivalent:
+   1. G is bipartite.
+   2. G is 2-colorable.
+   3. G has no cycles of odd length.
+
+c. Let d be the maximum degree of any vertex in a graph G. Prove that we can
+   color G with d C 1 colors.
+                                                                p
+d. Show that if G has O.jV j/ edges, then we can color G with O. jV j/ colors.
+
+B-2 Friendly graphs
+Reword each of the following statements as a theorem about undirected graphs,
+and then prove it. Assume that friendship is symmetric but not reﬂexive.
+a. Any group of at least two people contains at least two people with the same
+   number of friends in the group.
+
+b. Every group of six people contains either at least three mutual friends or at least
+   three mutual strangers.
+
+c. Any group of people can be partitioned into two subgroups such that at least
+   half the friends of each person belong to the subgroup of which that person is
+   not a member.
+
+d. If everyone in a group is the friend of at least half the people in the group, then
+   the group can be seated around a table in such a way that everyone is seated
+   between two friends.
+
+B-3 Bisecting trees
+Many divide-and-conquer algorithms that operate on graphs require that the graph
+be bisected into two nearly equal-sized subgraphs, which are induced by a partition
+of the vertices. This problem investigates bisections of trees formed by removing a
+small number of edges. We require that whenever two vertices end up in the same
+subtree after removing edges, then they must be in the same partition.
+a. Show that we can partition the vertices of any n-vertex binary tree into two
+   sets A and B, such that jAj  3n=4 and jBj  3n=4, by removing a single
+   edge.
+
+b. Show that the constant 3=4 in part (a) is optimal in the worst case by giving
+   an example of a simple binary tree whose most evenly balanced partition upon
+   removal of a single edge has jAj D 3n=4.
+

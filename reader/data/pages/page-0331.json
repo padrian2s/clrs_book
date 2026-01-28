@@ -1,0 +1,5 @@
+{
+  "page": 331,
+  "title": "13.4 Deletion",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 13.4</div>\n    <h1>Deletion</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Delete as BST, then fix violations with rotations and recoloring.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Delete using BST delete (three cases)</li>\n<li>If deleted node was BLACK, black-height may be violated</li>\n<li>Move &#x27;extra black&#x27; up the tree until it can be absorbed</li>\n<li>Four cases (with symmetric mirrors) for fixing</li>\n<li>At most O(log n) time, at most 3 rotations</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Delete black node → &#x27;double black&#x27; at replacement. Rotate and recolor based on sibling&#x27;s color and its children.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Complete the red-black tree implementation for dynamic sets.</p>\n</div>\n</div>"
+}

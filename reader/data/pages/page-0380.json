@@ -1,0 +1,5 @@
+{
+  "page": 380,
+  "title": "15.2 Matrix-Chain Multiplication",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 15.2</div>\n    <h1>Matrix-Chain Multiplication</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Find the optimal way to parenthesize a chain of matrix multiplications.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Order matters! (A·B)·C vs A·(B·C) can have very different costs</li>\n<li>Goal: minimize total scalar multiplications</li>\n<li>DP: m[i,j] = min cost to multiply matrices i through j</li>\n<li>Try all split points k: m[i,j] = min(m[i,k] + m[k+1,j] + cost of final multiply)</li>\n<li>Time: O(n³), Space: O(n²)</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Matrices with dimensions 10×100, 100×5, 5×50. ((A·B)·C) costs 7500, (A·(B·C)) costs 75000!</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Shows how DP finds optimal structure among exponentially many options.</p>\n</div>\n</div>"
+}

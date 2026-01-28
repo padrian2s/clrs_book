@@ -1,0 +1,59 @@
+                                                                        
+30.2 The DFT and FFT                                                                        913
+
+
+      y0                1      1         1     1               1               a0
+      y1                1      !n        !n2   !n3           !nn1             a1
+      y2                1      !n2       !n4   !n6          !n2.n1/           a2
+                  D                                                                         :
+      y3                1      !n3       !n6   !n9          !n3.n1/           a3
+       ::               ::      ::        ::    ::      ::        ::               ::
+        :                :       :         :     :         :       :                :
+    yn1                1 !nn1 !n2.n1/ !n3.n1/    !n.n1/.n1/             an1
+
+The .k; j / entry of Vn is !nkj , for j; k D 0; 1; : : : ; n  1. The exponents of the
+entries of Vn form a multiplication table.
+  For the inverse operation, which we write as a D DFT1          n .y/, we proceed by
+                                1
+multiplying y by the matrix Vn , the inverse of Vn .
+
+Theorem 30.7
+For j; k D 0; 1; : : : ; n  1, the .j; k/ entry of Vn1 is !nkj =n.
+
+Proof We show that Vn1 Vn D In , the n              n identity matrix. Consider the .j; j 0 /
+entry of Vn1 Vn :
+                    X
+                    n1
+                                       0
+ŒVn1 Vn jj 0    D     .!nkj =n/.!nkj /
+                      kD0
+
+                      X
+                      n1
+                                  0
+                  D          !nk.j j / =n :
+                      kD0
+
+This summation equals 1 if j 0 D j , and it is 0 otherwise by the summation lemma
+(Lemma 30.6). Note that we rely on .n  1/  j 0  j  n  1, so that j 0  j is
+not divisible by n, in order for the summation lemma to apply.
+
+   Given the inverse matrix Vn1 , we have that DFT1
+                                                   n .y/ is given by
+
+
+        1X
+            n1
+aj D       yk !nkj                                                                     (30.11)
+        n
+            kD0
+
+for j D 0; 1; : : : ; n  1. By comparing equations (30.8) and (30.11), we see that
+by modifying the FFT algorithm to switch the roles of a and y, replace !n by !n1 ,
+and divide each element of the result by n, we compute the inverse DFT (see Ex-
+ercise 30.2-4). Thus, we can compute DFT1  n in ‚.n lg n/ time as well.
+   We see that, by using the FFT and the inverse FFT, we can transform a poly-
+nomial of degree-bound n back and forth between its coefﬁcient representation
+and a point-value representation in time ‚.n lg n/. In the context of polynomial
+multiplication, we have shown the following.
+

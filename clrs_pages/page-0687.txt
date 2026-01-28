@@ -1,0 +1,43 @@
+666   Chapter 24 Single-Source Shortest Paths
+
+
+      One solution to this problem is x D .5; 3; 0; 1; 4/, which you can verify di-
+      rectly by checking each inequality. In fact, this problem has more than one solution.
+      Another is x 0 D .0; 2; 5; 4; 1/. These two solutions are related: each component
+      of x 0 is 5 larger than the corresponding component of x. This fact is not mere
+      coincidence.
+
+      Lemma 24.8
+      Let x D .x1 ; x2 ; : : : ; xn / be a solution to a system Ax  b of difference con-
+      straints, and let d be any constant. Then x C d D .x1 C d; x2 C d; : : : ; xn C d /
+      is a solution to Ax  b as well.
+
+      Proof For each xi and xj , we have .xj C d /  .xi C d / D xj  xi . Thus, if x
+      satisﬁes Ax  b, so does x C d .
+
+         Systems of difference constraints occur in many different applications. For ex-
+      ample, the unknowns xi may be times at which events are to occur. Each constraint
+      states that at least a certain amount of time, or at most a certain amount of time,
+      must elapse between two events. Perhaps the events are jobs to be performed dur-
+      ing the assembly of a product. If we apply an adhesive that takes 2 hours to set at
+      time x1 and we have to wait until it sets to install a part at time x2 , then we have the
+      constraint that x2  x1 C 2 or, equivalently, that x1  x2  2. Alternatively, we
+      might require that the part be installed after the adhesive has been applied but no
+      later than the time that the adhesive has set halfway. In this case, we get the pair of
+      constraints x2  x1 and x2  x1 C 1 or, equivalently, x1  x2  0 and x2  x1  1.
+
+      Constraint graphs
+      We can interpret systems of difference constraints from a graph-theoretic point
+      of view. In a system Ax  b of difference constraints, we view the m n
+      linear-programming matrix A as the transpose of an incidence matrix (see Exer-
+      cise 22.1-7) for a graph with n vertices and m edges. Each vertex i in the graph,
+      for i D 1; 2; : : : ; n, corresponds to one of the n unknown variables xi . Each di-
+      rected edge in the graph corresponds to one of the m inequalities involving two
+      unknowns.
+         More formally, given a system Ax  b of difference constraints, the correspond-
+      ing constraint graph is a weighted, directed graph G D .V; E/, where
+      V D f0 ; 1 ; : : : ; n g
+      and
+      E D f.i ; j / W xj  xi  bk is a constraintg
+               [ f.0 ; 1 /; .0 ; 2 /; .0 ; 3 /; : : : ; .0 ; n /g :
+

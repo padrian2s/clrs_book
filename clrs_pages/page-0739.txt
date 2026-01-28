@@ -1,0 +1,50 @@
+718   Chapter 26 Maximum Flow
+
+
+         For the capacity constraint, ﬁrst observe that if .u; / 2 E, then cf .; u/ D
+      f .u; /. Therefore, we have f 0 .; u/  cf .; u/ D f .u; /, and hence
+      .f " f 0 /.u; / D f .u; / C f 0 .u; /  f 0 .; u/ (by equation (26.4))
+                        f .u; / C f 0 .u; /  f .u; / (because f 0 .; u/  f .u; /)
+                       D f 0 .u; /
+                        0:
+      In addition,
+      .f " f 0 /.u; /
+                    D     f .u; / C f 0 .u; /  f 0 .; u/          (by equation (26.4))
+                         f .u; / C f 0 .u; /                       (because ﬂows are nonnegative)
+                         f .u; / C cf .u; /                        (capacity constraint)
+                    D     f .u; / C c.u; /  f .u; /               (deﬁnition of cf )
+                    D     c.u; / :
+         For ﬂow conservation, because both f and f 0 obey ﬂow conservation, we have
+      that for all u 2 V  fs; tg,
+      X                         X
+          .f " f 0 /.u; / D       .f .u; / C f 0 .u; /  f 0 .; u//
+      2V                            2V
+                                     X                  X                      X
+                                D          f .u; / C           f 0 .u; /          f 0 .; u/
+                                     2V                2V                    2V
+                                     X                  X                      X
+                                                                  0
+                                D          f .; u/ C           f .; u/            f 0 .u; /
+                                     2V                2V                    2V
+                                     X
+                                                            0              0
+                                D          .f .; u/ C f .; u/  f .u; //
+                                     2V
+                                     X
+                                D          .f " f 0 /.; u/ ;
+                                     2V
+      where the third line follows from the second by ﬂow conservation.
+         Finally, we compute the value of f " f 0 . Recall that we disallow antiparallel
+      edges in G (but not in Gf ), and hence for each vertex  2 V , we know that there
+      can be an edge .s; / or .; s/, but never both. We deﬁne V1 D f W .s; / 2 Eg
+      to be the set of vertices with edges from s, and V2 D f W .; s/ 2 Eg to be the
+      set of vertices with edges to s. We have V1 [ V2  V and, because we disallow
+      antiparallel edges, V1 \ V2 D ;. We now compute
+                      X                       X
+      jf " f 0 j D        .f " f 0 / .s; /    .f " f 0 / .; s/
+                         2V                        2V
+                         X                           X
+                                       0
+                 D              .f " f / .s; /           .f " f 0 / .; s/ ;                    (26.5)
+                         2V1                       2V2
+

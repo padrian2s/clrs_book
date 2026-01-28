@@ -1,0 +1,46 @@
+152   Chapter 6 Heapsort
+
+
+                                  1
+                                  16
+                    2                       3
+                    14                      10
+            4                 5         6         7           1   2   3   4   5   6   7   8   9   10
+
+            8                 7         9         3          16 14 10 8       7   9   3   2   4   1
+        8       9        10
+        2       4        1
+                                  (a)                                          (b)
+
+
+      Figure 6.1 A max-heap viewed as (a) a binary tree and (b) an array. The number within the circle
+      at each node in the tree is the value stored at that node. The number above a node is the corresponding
+      index in the array. Above and below the array are lines showing parent-child relationships; parents
+      are always to the left of their children. The tree has height three; the node at index 4 (with value 8)
+      has height one.
+
+
+      PARENT .i/
+      1 return bi=2c
+
+      L EFT .i/
+      1 return 2i
+
+      R IGHT .i/
+      1 return 2i C 1
+
+      On most computers, the L EFT procedure can compute 2i in one instruction by
+      simply shifting the binary representation of i left by one bit position. Similarly, the
+      R IGHT procedure can quickly compute 2i C 1 by shifting the binary representation
+      of i left by one bit position and then adding in a 1 as the low-order bit. The
+      PARENT procedure can compute bi=2c by shifting i right one bit position. Good
+      implementations of heapsort often implement these procedures as “macros” or “in-
+      line” procedures.
+         There are two kinds of binary heaps: max-heaps and min-heaps. In both kinds,
+      the values in the nodes satisfy a heap property, the speciﬁcs of which depend on
+      the kind of heap. In a max-heap, the max-heap property is that for every node i
+      other than the root,
+      AŒPARENT.i/  AŒi ;
+      that is, the value of a node is at most the value of its parent. Thus, the largest
+      element in a max-heap is stored at the root, and the subtree rooted at a node contains
+

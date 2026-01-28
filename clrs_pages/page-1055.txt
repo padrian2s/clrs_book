@@ -1,0 +1,45 @@
+1034   Chapter 33 Computational Geometry
+
+
+       of CH.Q/ (see Exercise 33.3-1). Figure 33.7(a) shows the points of Figure 33.6
+       sequentially numbered in order of increasing polar angle relative to p0 .
+          The remainder of the procedure uses the stack S. Lines 3–6 initialize the stack
+       to contain, from bottom to top, the ﬁrst three points p0 , p1 , and p2 . Figure 33.7(a)
+       shows the initial stack S. The for loop of lines 7–10 iterates once for each point
+       in the subsequence hp3 ; p4 ; : : : ; pm i. We shall see that after processing point pi ,
+       stack S contains, from bottom to top, the vertices of CH.fp0 ; p1 ; : : : ; pi g/ in coun-
+       terclockwise order. The while loop of lines 8–9 removes points from the stack if
+       we ﬁnd them not to be vertices of the convex hull. When we traverse the convex
+       hull counterclockwise, we should make a left turn at each vertex. Thus, each time
+       the while loop ﬁnds a vertex at which we make a nonleft turn, we pop the vertex
+       from the stack. (By checking for a nonleft turn, rather than just a right turn, this
+       test precludes the possibility of a straight angle at a vertex of the resulting convex
+       hull. We want no straight angles, since no vertex of a convex polygon may be a
+       convex combination of other vertices of the polygon.) After we pop all vertices
+       that have nonleft turns when heading toward point pi , we push pi onto the stack.
+       Figures 33.7(b)–(k) show the state of the stack S after each iteration of the for
+       loop. Finally, G RAHAM -S CAN returns the stack S in line 11. Figure 33.7(l) shows
+       the corresponding convex hull.
+          The following theorem formally proves the correctness of G RAHAM -S CAN.
+
+       Theorem 33.1 (Correctness of Graham’s scan)
+       If G RAHAM -S CAN executes on a set Q of points, where jQj  3, then at termina-
+       tion, the stack S consists of, from bottom to top, exactly the vertices of CH.Q/ in
+       counterclockwise order.
+
+       Proof After line 2, we have the sequence of points hp1 ; p2 ; : : : ; pm i. Let us
+       deﬁne, for i D 2; 3; : : : ; m, the subset of points Qi D fp0 ; p1 ; : : : ; pi g. The
+       points in Q  Qm are those that were removed because they had the same polar
+       angle relative to p0 as some point in Qm ; these points are not in CH.Q/, and
+       so CH.Qm / D CH.Q/. Thus, it sufﬁces to show that when G RAHAM -S CAN
+       terminates, the stack S consists of the vertices of CH.Qm / in counterclockwise
+       order, when listed from bottom to top. Note that just as p0 , p1 , and pm are vertices
+       of CH.Q/, the points p0 , p1 , and pi are all vertices of CH.Qi /.
+          The proof uses the following loop invariant:
+          At the start of each iteration of the for loop of lines 7–10, stack S consists of,
+          from bottom to top, exactly the vertices of CH.Qi 1 / in counterclockwise
+          order.
+
+       Initialization: The invariant holds the ﬁrst time we execute line 7, since at that
+          time, stack S consists of exactly the vertices of Q2 D Qi 1 , and this set of three
+

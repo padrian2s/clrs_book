@@ -1,0 +1,46 @@
+34   Chapter 2 Getting Started
+
+
+         To see that the M ERGE procedure runs in ‚.n/ time, where n D r  p C 1,
+     observe that each of lines 1–3 and 8–11 takes constant time, the for loops of
+     lines 4–7 take ‚.n1 C n2 / D ‚.n/ time,7 and there are n iterations of the for
+     loop of lines 12–17, each of which takes constant time.
+         We can now use the M ERGE procedure as a subroutine in the merge sort al-
+     gorithm. The procedure M ERGE -S ORT .A; p; r/ sorts the elements in the subar-
+     ray AŒp : : r. If p  r, the subarray has at most one element and is therefore
+     already sorted. Otherwise, the divide step simply computes an index q that par-
+     titions AŒp : : r into two subarrays: AŒp : : q, containing dn=2e elements, and
+     AŒq C 1 : : r, containing bn=2c elements.8
+
+     M ERGE -S ORT .A; p; r/
+     1 if p < r
+     2      q D b.p C r/=2c
+     3      M ERGE -S ORT .A; p; q/
+     4      M ERGE -S ORT .A; q C 1; r/
+     5      M ERGE .A; p; q; r/
+
+     To sort the entire sequence A D hAŒ1; AŒ2; : : : ; AŒni, we make the initial call
+     M ERGE -S ORT .A; 1; A:length/, where once again A:length D n. Figure 2.4 il-
+     lustrates the operation of the procedure bottom-up when n is a power of 2. The
+     algorithm consists of merging pairs of 1-item sequences to form sorted sequences
+     of length 2, merging pairs of sequences of length 2 to form sorted sequences of
+     length 4, and so on, until two sequences of length n=2 are merged to form the ﬁnal
+     sorted sequence of length n.
+
+     2.3.2    Analyzing divide-and-conquer algorithms
+     When an algorithm contains a recursive call to itself, we can often describe its
+     running time by a recurrence equation or recurrence, which describes the overall
+     running time on a problem of size n in terms of the running time on smaller inputs.
+     We can then use mathematical tools to solve the recurrence and provide bounds on
+     the performance of the algorithm.
+
+
+     7 We shall see in Chapter 3 how to formally interpret equations containing ‚-notation.
+
+     8 The expression dxe denotes the least integer greater than or equal to x, and bxc denotes the greatest
+
+     integer less than or equal to x. These notations are deﬁned in Chapter 3. The easiest way to verify
+     that setting q to b.p C r/=2c yields subarrays AŒp : : q and AŒq C 1 : : r of sizes dn=2e and bn=2c,
+     respectively, is to examine the four cases that arise depending on whether each of p and r is odd or
+     even.
+

@@ -1,0 +1,42 @@
+13.3 Insertion                                                                    319
+
+
+      violation must be because both ´ and ´:p are red. Moreover, the tree violates
+      no other red-black properties.
+Termination: When the loop terminates, it does so because ´:p is black. (If ´ is
+   the root, then ´:p is the sentinel T:nil, which is black.) Thus, the tree does not
+   violate property 4 at loop termination. By the loop invariant, the only property
+   that might fail to hold is property 2. Line 16 restores this property, too, so that
+   when RB-I NSERT-F IXUP terminates, all the red-black properties hold.
+Maintenance: We actually need to consider six cases in the while loop, but three
+  of them are symmetric to the other three, depending on whether line 2 deter-
+  mines ´’s parent ´:p to be a left child or a right child of ´’s grandparent ´:p:p.
+  We have given the code only for the situation in which ´:p is a left child. The
+  node ´:p:p exists, since by part (b) of the loop invariant, if ´:p is the root,
+  then ´:p is black. Since we enter a loop iteration only if ´:p is red, we know
+  that ´:p cannot be the root. Hence, ´:p:p exists.
+   We distinguish case 1 from cases 2 and 3 by the color of ´’s parent’s sibling,
+   or “uncle.” Line 3 makes y point to ´’s uncle ´:p:p:right, and line 4 tests y’s
+   color. If y is red, then we execute case 1. Otherwise, control passes to cases 2
+   and 3. In all three cases, ´’s grandparent ´:p:p is black, since its parent ´:p is
+   red, and property 4 is violated only between ´ and ´:p.
+
+
+   Case 1: ´’s uncle y is red
+   Figure 13.5 shows the situation for case 1 (lines 5–8), which occurs when
+   both ´:p and y are red. Because ´:p:p is black, we can color both ´:p and y
+   black, thereby ﬁxing the problem of ´ and ´:p both being red, and we can
+   color ´:p:p red, thereby maintaining property 5. We then repeat the while loop
+   with ´:p:p as the new node ´. The pointer ´ moves up two levels in the tree.
+   Now, we show that case 1 maintains the loop invariant at the start of the next
+   iteration. We use ´ to denote node ´ in the current iteration, and ´0 D ´:p:p
+   to denote the node that will be called node ´ at the test in line 1 upon the next
+   iteration.
+   a. Because this iteration colors ´:p:p red, node ´0 is red at the start of the next
+      iteration.
+   b. The node ´0 :p is ´:p:p:p in this iteration, and the color of this node does not
+      change. If this node is the root, it was black prior to this iteration, and it
+      remains black at the start of the next iteration.
+   c. We have already argued that case 1 maintains property 5, and it does not
+      introduce a violation of properties 1 or 3.
+

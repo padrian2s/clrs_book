@@ -1,0 +1,38 @@
+222   Chapter 9 Medians and Order Statistics
+
+                (
+                    O.1/                             if n < 140 ;
+      T .n/ 
+                    T .dn=5e/ C T .7n=10 C 6/ C O.n/ if n  140 :
+
+      We show that the running time is linear by substitution. More speciﬁcally, we will
+      show that T .n/  cn for some suitably large constant c and all n > 0. We begin by
+      assuming that T .n/  cn for some suitably large constant c and all n < 140; this
+      assumption holds if c is large enough. We also pick a constant a such that the func-
+      tion described by the O.n/ term above (which describes the non-recursive compo-
+      nent of the running time of the algorithm) is bounded above by an for all n > 0.
+      Substituting this inductive hypothesis into the right-hand side of the recurrence
+      yields
+      T .n/         c dn=5e C c.7n=10 C 6/ C an
+                    cn=5 C c C 7cn=10 C 6c C an
+            D        9cn=10 C 7c C an
+            D        cn C .cn=10 C 7c C an/ ;
+      which is at most cn if
+      cn=10 C 7c C an  0 :                                                          (9.2)
+      Inequality (9.2) is equivalent to the inequality c  10a.n=.n  70// when n > 70.
+      Because we assume that n  140, we have n=.n  70/  2, and so choos-
+      ing c  20a will satisfy inequality (9.2). (Note that there is nothing special about
+      the constant 140; we could replace it by any integer strictly greater than 70 and
+      then choose c accordingly.) The worst-case running time of S ELECT is therefore
+      linear.
+         As in a comparison sort (see Section 8.1), S ELECT and R ANDOMIZED -S ELECT
+      determine information about the relative order of elements only by comparing ele-
+      ments. Recall from Chapter 8 that sorting requires .n lg n/ time in the compari-
+      son model, even on average (see Problem 8-1). The linear-time sorting algorithms
+      in Chapter 8 make assumptions about the input. In contrast, the linear-time se-
+      lection algorithms in this chapter do not require any assumptions about the input.
+      They are not subject to the .n lg n/ lower bound because they manage to solve
+      the selection problem without sorting. Thus, solving the selection problem by sort-
+      ing and indexing, as presented in the introduction to this chapter, is asymptotically
+      inefﬁcient.
+

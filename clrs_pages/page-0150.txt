@@ -1,0 +1,46 @@
+5.3 Randomized algorithms                                                      129
+
+
+P ERMUTE -W ITH -A LL .A/
+1 n D A:length
+2 for i D 1 to n
+3      swap AŒi with AŒR ANDOM.1; n/
+
+Does this code produce a uniform random permutation? Why or why not?
+
+5.3-4
+Professor Armstrong suggests the following procedure for generating a uniform
+random permutation:
+
+P ERMUTE -B Y-C YCLIC .A/
+1 n D A:length
+2 let BŒ1 : : n be a new array
+3 offset D R ANDOM .1; n/
+4 for i D 1 to n
+5      dest D i C offset
+6      if dest > n
+7            dest D dest  n
+8      BŒdest D AŒi
+9 return B
+
+Show that each element AŒi has a 1=n probability of winding up in any particular
+position in B. Then show that Professor Armstrong is mistaken by showing that
+the resulting permutation is not uniformly random.
+
+5.3-5 ?
+Prove that in the array P in procedure P ERMUTE -B Y-S ORTING, the probability
+that all elements are unique is at least 1  1=n.
+
+5.3-6
+Explain how to implement the algorithm P ERMUTE -B Y-S ORTING to handle the
+case in which two or more priorities are identical. That is, your algorithm should
+produce a uniform random permutation, even if two or more priorities are identical.
+
+5.3-7
+Suppose we want to create a random sample of the set f1; 2; 3; : : : ; ng, that is,
+an m-element subset S, where 0  m  n, such that each m-subset is equally
+likely to be created. One way would be to set AŒi D i for i D 1; 2; 3; : : : ; n,
+call R ANDOMIZE -I N -P LACE .A/, and then take just the ﬁrst m array elements.
+This method would make n calls to the R ANDOM procedure. If n is much larger
+than m, we can create a random sample with fewer calls to R ANDOM. Show that
+

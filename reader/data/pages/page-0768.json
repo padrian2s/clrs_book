@@ -1,0 +1,5 @@
+{
+  "page": 768,
+  "title": "26.3 Maximum Bipartite Matching",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 26.3</div>\n    <h1>Maximum Bipartite Matching</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Find maximum matching in bipartite graph using max flow.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Bipartite graph: vertices in two sets L and R, edges only between sets</li>\n<li>Matching: set of edges with no shared vertices</li>\n<li>Reduction to max flow: add source (edges to L) and sink (edges from R)</li>\n<li>All capacities = 1</li>\n<li>Max flow = max matching size</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Job assignment: L = workers, R = jobs, edge if worker can do job. Max matching = max workers assigned.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Job assignment, resource allocation, many applications.</p>\n</div>\n</div>"
+}

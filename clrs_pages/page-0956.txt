@@ -1,0 +1,42 @@
+31.2 Greatest common divisor                                                    935
+
+
+Euclid’s algorithm
+The Elements of Euclid (circa 300 B . C .) describes the following gcd algorithm,
+although it may be of even earlier origin. We express Euclid’s algorithm as a
+recursive program based directly on Theorem 31.9. The inputs a and b are arbitrary
+nonnegative integers.
+
+E UCLID .a; b/
+1 if b == 0
+2      return a
+3 else return E UCLID .b; a mod b/
+
+As an example of the running of E UCLID, consider the computation of gcd.30; 21/:
+E UCLID .30; 21/ D      E UCLID .21; 9/
+                 D      E UCLID .9; 3/
+                 D      E UCLID .3; 0/
+                 D      3:
+This computation calls E UCLID recursively three times.
+   The correctness of E UCLID follows from Theorem 31.9 and the property that if
+the algorithm returns a in line 2, then b D 0, so that equation (31.9) implies that
+gcd.a; b/ D gcd.a; 0/ D a. The algorithm cannot recurse indeﬁnitely, since the
+second argument strictly decreases in each recursive call and is always nonnegative.
+Therefore, E UCLID always terminates with the correct answer.
+
+The running time of Euclid’s algorithm
+We analyze the worst-case running time of E UCLID as a function of the size of
+a and b. We assume with no loss of generality that a > b  0. To justify this
+assumption, observe that if b > a  0, then E UCLID .a; b/ immediately makes the
+recursive call E UCLID .b; a/. That is, if the ﬁrst argument is less than the second
+argument, E UCLID spends one recursive call swapping its arguments and then pro-
+ceeds. Similarly, if b D a > 0, the procedure terminates after one recursive call,
+since a mod b D 0.
+   The overall running time of E UCLID is proportional to the number of recursive
+calls it makes. Our analysis makes use of the Fibonacci numbers Fk , deﬁned by
+the recurrence (3.22).
+
+Lemma 31.10
+If a > b  1 and the call E UCLID .a; b/ performs k  1 recursive calls, then
+a  FkC2 and b  FkC1 .
+

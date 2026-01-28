@@ -1,0 +1,44 @@
+1246   Bibliography
+
+
+        [283] William H. Press, Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery. Numer-
+              ical Recipes in C++: The Art of Scientiﬁc Computing. Cambridge University Press, second
+              edition, 2002.
+        [284] William H. Press, Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery. Numer-
+              ical Recipes: The Art of Scientiﬁc Computing. Cambridge University Press, third edition,
+              2007.
+        [285] R. C. Prim. Shortest connection networks and some generalizations. Bell System Technical
+              Journal, 36(6):1389–1401, 1957.
+        [286] William Pugh. Skip lists: A probabilistic alternative to balanced trees. Communications of
+              the ACM, 33(6):668–676, 1990.
+        [287] Paul W. Purdom, Jr. and Cynthia A. Brown. The Analysis of Algorithms. Holt, Rinehart,
+              and Winston, 1985.
+        [288] Michael O. Rabin. Probabilistic algorithms. In J. F. Traub, editor, Algorithms and Com-
+              plexity: New Directions and Recent Results, pages 21–39. Academic Press, 1976.
+        [289] Michael O. Rabin. Probabilistic algorithm for testing primality. Journal of Number Theory,
+              12(1):128–138, 1980.
+        [290] P. Raghavan and C. D. Thompson. Randomized rounding: A technique for provably good
+              algorithms and algorithmic proofs. Combinatorica, 7(4):365–374, 1987.
+        [291] Rajeev Raman. Recent results on the single-source shortest paths problem. SIGACT News,
+              28(2):81–87, 1997.
+        [292] James Reinders. Intel Threading Building Blocks: Outﬁtting C++ for Multi-core Processor
+              Parallelism. O’Reilly Media, Inc., 2007.
+        [293] Edward M. Reingold, Jürg Nievergelt, and Narsingh Deo. Combinatorial Algorithms: The-
+              ory and Practice. Prentice Hall, 1977.
+        [294] Edward M. Reingold, Kenneth J. Urban, and David Gries. K-M-P string matching revisited.
+              Information Processing Letters, 64(5):217–223, 1997.
+        [295] Hans Riesel. Prime Numbers and Computer Methods for Factorization, volume 126 of
+              Progress in Mathematics. Birkhäuser, second edition, 1994.
+        [296] Ronald L. Rivest, Adi Shamir, and Leonard M. Adleman. A method for obtaining digital
+              signatures and public-key cryptosystems. Communications of the ACM, 21(2):120–126,
+              1978. See also U.S. Patent 4,405,829.
+        [297] Herbert Robbins. A remark on Stirling’s formula.         American Mathematical Monthly,
+              62(1):26–29, 1955.
+        [298] D. J. Rosenkrantz, R. E. Stearns, and P. M. Lewis. An analysis of several heuristics for the
+              traveling salesman problem. SIAM Journal on Computing, 6(3):563–581, 1977.
+        [299] Salvador Roura. An improved master theorem for divide-and-conquer recurrences. In
+              Proceedings of Automata, Languages and Programming, 24th International Colloquium,
+              ICALP’97, volume 1256 of Lecture Notes in Computer Science, pages 449–459. Springer,
+              1997.
+        [300] Y. A. Rozanov. Probability Theory: A Concise Course. Dover, 1969.
+

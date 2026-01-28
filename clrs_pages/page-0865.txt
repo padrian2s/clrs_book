@@ -1,0 +1,43 @@
+844   Chapter 29 Linear Programming
+
+
+
+      policy           urban   suburban    rural
+      build roads        2           5       3
+      gun control          8          2      5
+      farm subsidies       0          0      10
+      gasoline tax        10          0      2
+
+
+      Figure 29.1 The effects of policies on voters. Each entry describes the number of thousands of
+      urban, suburban, or rural voters who could be won over by spending $1,000 on advertising support
+      of a policy on a particular issue. Negative entries denote votes that would be lost.
+
+
+      would win 20.2/C0.8/C4.0/C9.10/ D 50 thousand urban votes, 20.5/C0.2/C
+      4.0/C9.0/ D 100 thousand suburban votes, and 20.3/C0.5/C4.10/C9.2/ D
+      82 thousand rural votes. You would win the exact number of votes desired in the
+      urban and suburban areas and more than enough votes in the rural area. (In fact,
+      in the rural area, you would receive more votes than there are voters.) In order to
+      garner these votes, you would have paid for 20 C 0 C 4 C 9 D 33 thousand dollars
+      of advertising.
+         Naturally, you may wonder whether this strategy is the best possible. That is,
+      could you achieve your goals while spending less on advertising? Additional trial
+      and error might help you to answer this question, but wouldn’t you rather have a
+      systematic method for answering such questions? In order to develop one, we shall
+      formulate this question mathematically. We introduce 4 variables:
+         x1 is the number of thousands of dollars spent on advertising on building roads,
+         x2 is the number of thousands of dollars spent on advertising on gun control,
+         x3 is the number of thousands of dollars spent on advertising on farm subsidies,
+          and
+         x4 is the number of thousands of dollars spent on advertising on a gasoline tax.
+      We can write the requirement that we win at least 50,000 urban votes as
+      2x1 C 8x2 C 0x3 C 10x4  50 :                                                          (29.1)
+      Similarly, we can write the requirements that we win at least 100,000 suburban
+      votes and 25,000 rural votes as
+      5x1 C 2x2 C 0x3 C 0x4  100                                                             (29.2)
+      and
+      3x1  5x2 C 10x3  2x4  25 :                                                           (29.3)
+      Any setting of the variables x1 ; x2 ; x3 ; x4 that satisﬁes inequalities (29.1)–(29.3)
+      yields a strategy that wins a sufﬁcient number of each type of vote. In order to
+

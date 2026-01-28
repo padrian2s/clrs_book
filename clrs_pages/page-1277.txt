@@ -1,0 +1,52 @@
+1256   Index
+
+
+       B-T REE -I NSERT-N ONFULL, 496            C HAINED -H ASH -S EARCH, 258
+       B-T REE -S EARCH, 492, 499 ex.            chaining, 257–260, 283 pr.
+       B-T REE -S PLIT-C HILD, 494               chain of a convex hull, 1038
+       B UBBLESORT , 40 pr.                      changing a key, in a Fibonacci heap, 529 pr.
+       bucket, 200                               changing variables, in the substitution method,
+       bucket sort, 200–204                            86–87
+       B UCKET-S ORT , 201                       character code, 428
+       B UILD -M AX -H EAP, 157                  chess-playing program, 790–791
+       B UILD -M AX -H EAP0, 167 pr.             child
+       B UILD -M IN -H EAP, 159                     in a binary tree, 1178
+       butterﬂy operation, 915                      in a multithreaded computation, 776
+       by, in pseudocode, 21                        in a rooted tree, 1176
+                                                 child list in a Fibonacci heap, 507
+       cache, 24, 449 pr.                        Chinese remainder theorem, 950–954, 983
+       cache hit, 449 pr.                        chip multiprocessor, 772
+       cache miss, 449 pr.                       chirp transform, 914 ex.
+       cache obliviousness, 504                  choose nk , 1185
+       caching, off-line, 449 pr.                chord, 345 ex.
+       call                                      Cilk, 774, 812
+         in a multithreaded computation, 776     Cilk++, 774, 812
+         of a subroutine, 23, 25 n.              ciphertext, 960
+         by value, 21                            circuit
+       call edge, 778                               boolean combinational, 1071
+       cancellation lemma, 907                      depth of, 919
+       cancellation of ﬂow, 717                     for fast Fourier transform, 919–920
+       canonical form for task scheduling, 444   CIRCUIT-SAT, 1072
+       capacity                                  circuit satisﬁability, 1070–1077
+         of a cut, 721                           circular, doubly linked list with a sentinel, 239
+         of an edge, 709                         circular linked list, 236
+         residual, 716, 719                         see also linked list
+         of a vertex, 714 ex.                    class
+       capacity constraint, 709–710                 complexity, 1059
+       cardinality of a set (j j), 1161             equivalence, 1164
+       Carmichael number, 968, 975 ex.           classiﬁcation of edges
+       Cartesian product ( ), 1162                  in breadth-ﬁrst search, 621 pr.
+       Cartesian sum, 906 ex.                       in depth-ﬁrst search, 609–610, 611 ex.
+       cascading cut, 520                           in a multithreaded dag, 778–779
+       C ASCADING -C UT , 519                    clause, 1081–1082
+       Catalan numbers, 306 pr., 372             clean area, 208 pr.
+       ceiling function (d e), 54                clique, 1086–1089, 1105
+         in master theorem, 103–106                 approximation algorithm for, 1111 ex.,
+       ceiling instruction, 23                         1134 pr.
+       certain event, 1190                       CLIQUE, 1087
+       certiﬁcate                                closed interval, 348
+         in a cryptosystem, 964                  closed semiring, 707
+         for veriﬁcation algorithms, 1063        closest pair, ﬁnding, 1039–1044, 1047
+       C HAINED -H ASH -D ELETE, 258             closest-point heuristic, 1117 ex.
+       C HAINED -H ASH -I NSERT , 258
+

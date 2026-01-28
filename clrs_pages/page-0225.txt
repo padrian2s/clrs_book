@@ -1,0 +1,41 @@
+204   Chapter 8 Sorting in Linear Time
+
+
+         Using this expected value in equation (8.1), we conclude that the average-case
+      running time for bucket sort is ‚.n/ C n  O.2  1=n/ D ‚.n/.
+         Even if the input is not drawn from a uniform distribution, bucket sort may still
+      run in linear time. As long as the input has the property that the sum of the squares
+      of the bucket sizes is linear in the total number of elements, equation (8.1) tells us
+      that bucket sort will run in linear time.
+
+      Exercises
+
+      8.4-1
+      Using Figure 8.4 as a model, illustrate the operation of B UCKET-S ORT on the array
+      A D h:79; :13; :16; :64; :39; :20; :89; :53; :71; :42i.
+
+      8.4-2
+      Explain why the worst-case running time for bucket sort is ‚.n2 /. What simple
+      change to the algorithm preserves its linear average-case running time and makes
+      its worst-case running time O.n lg n/?
+
+      8.4-3
+      Let X be a random variable that is equal to the number of heads in two ﬂips of a
+      fair coin. What is E ŒX 2 ? What is E2 ŒX ?
+
+      8.4-4 ?
+      We are given n points in the unit circle, pi D .xi ; yi /, such that 0 < xi2 C yi2  1
+      for i D 1; 2; : : : ; n. Suppose that the points are uniformly distributed; that is, the
+      probability of ﬁnding a point in any region of the circle is proportional to the area
+      of that region. Design an algorithm withp    an average-case running time of ‚.n/ to
+      sort the n points by their distances di D xi2 C yi2 from the origin. (Hint: Design
+      the bucket sizes in B UCKET-S ORT to reﬂect the uniform distribution of the points
+      in the unit circle.)
+
+      8.4-5 ?
+      A probability distribution function P .x/ for a random variable X is deﬁned
+      by P .x/ D Pr fX  xg. Suppose that we draw a list of n random variables
+      X1 ; X2 ; : : : ; Xn from a continuous probability distribution function P that is com-
+      putable in O.1/ time. Give an algorithm that sorts these numbers in linear average-
+      case time.
+

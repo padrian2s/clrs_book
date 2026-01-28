@@ -1,0 +1,46 @@
+798   Chapter 27 Multithreaded Algorithms
+
+
+                 p1               q1                r1             p2                q2   r2
+      T    …           x          x        x             …              <x             x    …
+
+
+                                    merge                 copy          merge
+            A    …                     x                 x             x                …
+                       p3                                q3                         r3
+
+
+
+      Figure 27.6 The idea behind the multithreaded merging of two sorted subarrays T Œp1 : : r1 
+      and T Œp2 : : r2  into the subarray AŒp3 : : r3 . Letting x D T Œq1  be the median of T Œp1 : : r1  and q2
+      be the place in T Œp2 : : r2  such that x would fall between T Œq2  1 and T Œq2 , every element in
+      subarrays T Œp1 : : q1  1 and T Œp2 : : q2  1 (lightly shaded) is less than or equal to x, and every
+      element in the subarrays T Œq1 C 1 : : r1  and T Œq2 C 1 : : r2  (heavily shaded) is at least x. To merge,
+      we compute the index q3 where x belongs in AŒp3 : : r3 , copy x into AŒq3 , and then recursively
+      merge T Œp1 : : q1  1 with T Œp2 : : q2  1 into AŒp3 : : q3  1 and T Œq1 C 1 : : r1  with T Œq2 : : r2 
+      into AŒq3 C 1 : : r3 .
+
+
+      which is the same as the serial running time of merge sort. Since the two recursive
+      calls of M ERGE -S ORT 0 can run in parallel, the span MS01 is given by the recurrence
+      MS01 .n/ D MS01 .n=2/ C ‚.n/
+               D ‚.n/ :
+      Thus, the parallelism of M ERGE -S ORT 0 comes to MS01 .n/=MS01 .n/ D ‚.lg n/,
+      which is an unimpressive amount of parallelism. To sort 10 million elements, for
+      example, it might achieve linear speedup on a few processors, but it would not
+      scale up effectively to hundreds of processors.
+         You probably have already ﬁgured out where the parallelism bottleneck is in
+      this multithreaded merge sort: the serial M ERGE procedure. Although merging
+      might initially seem to be inherently serial, we can, in fact, fashion a multithreaded
+      version of it by using nested parallelism.
+         Our divide-and-conquer strategy for multithreaded merging, which is illus-
+      trated in Figure 27.6, operates on subarrays of an array T . Suppose that we
+      are merging the two sorted subarrays T Œp1 : : r1  of length n1 D r1  p1 C 1
+      and T Œp2 : : r2  of length n2 D r2  p2 C 1 into another subarray AŒp3 : : r3 , of
+      length n3 D r3  p3 C 1 D n1 C n2 . Without loss of generality, we make the sim-
+      plifying assumption that n1  n2 .
+         We ﬁrst ﬁnd the middle element x D T Œq1  of the subarray T Œp1 : : r1 ,
+      where q1 D b.p1 C r1 /=2c. Because the subarray is sorted, x is a median
+      of T Œp1 : : r1 : every element in T Œp1 : : q1  1 is no more than x, and every el-
+      ement in T Œq1 C 1 : : r1  is no less than x. We then use binary search to ﬁnd the
+

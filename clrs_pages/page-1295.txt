@@ -1,0 +1,52 @@
+1274   Index
+
+
+         ﬁnding, 214–215                              memory hierarchy, 24
+         in heaps, 163                                M ERGE , 31
+         in order-statistic trees, 347 ex.            mergeable heap, 481, 505
+         in proto van Emde Boas structures, 544 ex.     binomial heaps, 527 pr.
+         in red-black trees, 311                        linked-list implementation of, 250 pr.
+         in van Emde Boas trees, 550                    relaxed heaps, 530
+       M AXIMUM, 162–163, 230                           running times of operations on, 506 ﬁg.
+       maximum bipartite matching, 732–736,             2-3-4 heaps, 529 pr.
+            747 ex., 766                                see also Fibonacci heap
+         Hopcroft-Karp algorithm for, 763 pr.         mergeable max-heap, 250 n., 481 n., 505 n.
+       maximum degree, in a Fibonacci heap, 509,      mergeable min-heap, 250 n., 481 n., 505
+            523–526                                   M ERGE -L ISTS, 1129
+       maximum ﬂow, 708–766                           merge sort, 12, 30–37
+         Edmonds-Karp algorithm for, 727–730            compared with insertion sort, 14 ex.
+         Ford-Fulkerson method for, 714–731, 765        multithreaded algorithm for, 797–805, 812
+         as a linear program, 860–861                   use of insertion sort in, 39 pr.
+         and maximum bipartite matching, 732–736,     M ERGE -S ORT , 34
+            747 ex.                                   M ERGE -S ORT 0, 797
+         push-relabel algorithms for, 736–760, 765    merging
+         relabel-to-front algorithm for, 748–760        of k sorted lists, 166 ex.
+         scaling algorithm for, 762 pr., 765            lower bounds for, 208 pr.
+         updating, 762 pr.                              multithreaded algorithm for, 798–801
+       maximum matching, 1135 pr.                       of two sorted arrays, 30
+       maximum spanning tree, 1137 pr.                M ILLER -R ABIN, 970
+       maximum-subarray problem, 68–75, 111           Miller-Rabin primality test, 968–975, 983
+       max-priority queue, 162                        M IN -G AP, 354 ex.
+       MAX-3-CNF satisﬁability, 1123–1124, 1139       min-heap, 153
+       M AYBE -MST-A, 641 pr.                           analyzed by potential method, 462 ex.
+       M AYBE -MST-B, 641 pr.                           building, 156–159
+       M AYBE -MST-C, 641 pr.                           d -ary, 706 pr.
+       mean, see expected value                         in Dijkstra’s algorithm, 662
+       mean weight of a cycle, 680 pr.                  in Huffman’s algorithm, 433
+       median, 213–227                                  in Johnson’s algorithm, 704
+         multithreaded algorithm for, 805 ex.           mergeable, 250 n., 481 n., 505
+         of sorted lists, 223 ex.                       as a min-priority queue, 165 ex.
+         of two sorted lists, 804 ex.                   in Prim’s algorithm, 636
+         weighted, 225 pr.                            M IN -H EAPIFY, 156 ex.
+       median key, of a B-tree node, 493              M IN -H EAP -I NSERT , 165 ex.
+       median-of-3 method, 188 pr.                    min-heap ordering, 507
+       member of a set (2), 1158                      min-heap property, 153, 507
+       membership                                       maintenance of, 156 ex.
+         in proto van Emde Boas structures, 540–541     in treaps, 333 pr.
+         in Van Emde Boas trees, 550                    vs. binary-search-tree property, 289 ex.
+       memoization, 365, 387–389                      minimization linear program, 846
+       M EMOIZED -C UT-ROD, 365                         and maximization linear programs, 852
+       M EMOIZED -C UT-ROD -AUX, 366                  minimum, 213
+       M EMOIZED -M ATRIX -C HAIN, 388                  in binary search trees, 291
+       memory, 484
+

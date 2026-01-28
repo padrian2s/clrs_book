@@ -1,0 +1,5 @@
+{
+  "page": 94,
+  "title": "4.4 The Recursion-Tree Method",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 4.4</div>\n    <h1>The Recursion-Tree Method</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Visualize recurrence as a tree to sum up the total work.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Each node represents cost of a subproblem</li>\n<li>Sum costs at each level, then sum all levels</li>\n<li>Root = original problem, leaves = base cases</li>\n<li>Tree depth = number of levels of recursion</li>\n<li>Good for developing intuition and guessing for substitution</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>T(n) = 3T(n/4) + cn². Level i has 3^i nodes, each with cost c(n/4^i)². Total work converges to O(n²).</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Visual approach makes complex recurrences tractable.</p>\n</div>\n</div>"
+}

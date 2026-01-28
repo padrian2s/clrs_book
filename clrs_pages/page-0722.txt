@@ -1,0 +1,56 @@
+25.3 Johnson’s algorithm for sparse graphs                                                 701
+
+
+that allows us to use the same method. The new set of edge weights w
+                                                                   y must satisfy
+two important properties:
+1. For all pairs of vertices u;  2 V , a path p is a shortest path from u to  using
+   weight function w if and only if p is also a shortest path from u to  using
+   weight function y w.
+2. For all edges .u; /, the new weight y
+                                        w.u; / is nonnegative.
+As we shall see in a moment, we can preprocess G to determine the new weight
+function w
+         y in O.VE/ time.
+
+Preserving shortest paths by reweighting
+The following lemma shows how easily we can reweight the edges to satisfy the
+ﬁrst property above. We use ı to denote shortest-path weights derived from weight
+function w and ıy to denote shortest-path weights derived from weight function y
+                                                                               w.
+
+Lemma 25.1 (Reweighting does not change shortest paths)
+Given a weighted, directed graph G D .V; E/ with weight function w W E ! R,
+let h W V ! R be any function mapping vertices to real numbers. For each edge
+.u; / 2 E, deﬁne
+w.u; / D w.u; / C h.u/  h./ :
+y                                                                                    (25.9)
+Let p D h0 ; 1 ; : : : ; k i be any path from vertex 0 to vertex k . Then p is a
+shortest path from 0 to k with weight function w if and only if it is a shortest path
+with weight function y  w. That is, w.p/ D ı.0 ; k / if and only if y      y 0 ; k /.
+                                                                      w.p/ D ı.
+Furthermore, G has a negative-weight cycle using weight function w if and only
+if G has a negative-weight cycle using weight function y    w.
+
+Proof    We start by showing that
+w.p/ D w.p/ C h.0 /  h.k / :
+y                                                                                   (25.10)
+We have
+             X
+             k
+w.p/ D
+y                   w.i 1 ; i /
+                    y
+             i D1
+
+             X
+             k
+        D           .w.i 1 ; i / C h.i 1 /  h.i //
+             i D1
+
+             X
+             k
+        D           w.i 1 ; i / C h.0 /  h.k /        (because the sum telescopes)
+             i D1
+        D w.p/ C h.0 /  h.k / :
+

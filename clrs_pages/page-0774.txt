@@ -1,0 +1,61 @@
+26.5 The relabel-to-front algorithm                                                               753
+
+
+          6
+                s
+          5                                                  10      11
+               –26
+          4              14/                                 s       s
+                            14
+(d)       3                                                  x       x
+                                       y
+          2                                                  z       z
+                           x     5/5   11   8/8
+          1                0                      z
+          0                                       8
+
+          6
+                s
+          5                                                  12      13      14
+               –26
+          4              14/                                 s       s       s
+                            14
+(e)       3                                                  x       x       x
+                                       y
+          2                       5                          z       z       z
+                           x           6    8/8
+          1                5                      z
+          0                                       8
+                                       y
+          6              14/14         6
+                s
+          5                                                  15
+               –26
+          4                                                  s
+(f)       3
+                                 5          8/8              x
+          2                                                  z
+                           x
+          1                5                      z
+          0                                       8
+                                       y
+          6              8/14          0
+                s
+          5    –20
+          4
+(g)       3
+                                 5          8/8
+          2
+                           x
+          1                5                      z
+          0                                       8
+
+
+Figure 26.9, continued (d) In iteration 10, .y; s/ is inadmissible, but iteration 11 pushes 5 units
+of excess ﬂow from y to x. (e) Because y: current did not advance in iteration 11, iteration 12
+ﬁnds .y; x/ to be inadmissible. Iteration 13 ﬁnds .y; ´/ inadmissible, and iteration 14 relabels ver-
+tex y and resets y: current. (f) Iteration 15 pushes 6 units of excess ﬂow from y to s. (g) Vertex y
+now has no excess ﬂow, and D ISCHARGE terminates. In this example, D ISCHARGE both starts and
+ﬁnishes with the current pointer at the head of the neighbor list, but in general this need not be the
+case.
+

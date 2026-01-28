@@ -1,0 +1,43 @@
+1232   Bibliography
+
+
+         [15] Arne Andersson. Balanced search trees made simple. In Proceedings of the Third Workshop
+              on Algorithms and Data Structures, volume 709 of Lecture Notes in Computer Science,
+              pages 60–71. Springer, 1993.
+         [16] Arne Andersson. Faster deterministic sorting and searching in linear space. In Proceedings
+              of the 37th Annual Symposium on Foundations of Computer Science, pages 135–141, 1996.
+         [17] Arne Andersson, Torben Hagerup, Stefan Nilsson, and Rajeev Raman. Sorting in linear
+              time? Journal of Computer and System Sciences, 57:74–93, 1998.
+         [18] Tom M. Apostol. Calculus, volume 1. Blaisdell Publishing Company, second edition, 1967.
+         [19] Nimar S. Arora, Robert D. Blumofe, and C. Greg Plaxton. Thread scheduling for multipro-
+              grammed multiprocessors. In Proceedings of the 10th Annual ACM Symposium on Parallel
+              Algorithms and Architectures, pages 119–129, 1998.
+         [20] Sanjeev Arora. Probabilistic checking of proofs and the hardness of approximation prob-
+              lems. PhD thesis, University of California, Berkeley, 1994.
+         [21] Sanjeev Arora. The approximability of NP-hard problems. In Proceedings of the 30th
+              Annual ACM Symposium on Theory of Computing, pages 337–348, 1998.
+         [22] Sanjeev Arora. Polynomial time approximation schemes for euclidean traveling salesman
+              and other geometric problems. Journal of the ACM, 45(5):753–782, 1998.
+         [23] Sanjeev Arora and Carsten Lund. Hardness of approximations. In Dorit S. Hochbaum,
+              editor, Approximation Algorithms for NP-Hard Problems, pages 399–446. PWS Publishing
+              Company, 1997.
+         [24] Javed A. Aslam. A simple bound on the expected height of a randomly built binary search
+              tree. Technical Report TR2001-387, Dartmouth College Department of Computer Science,
+              2001.
+         [25] Mikhail J. Atallah, editor. Algorithms and Theory of Computation Handbook. CRC Press,
+              1999.
+         [26] G. Ausiello, P. Crescenzi, G. Gambosi, V. Kann, A. Marchetti-Spaccamela, and M. Protasi.
+              Complexity and Approximation: Combinatorial Optimization Problems and Their Approx-
+              imability Properties. Springer, 1999.
+         [27] Shai Avidan and Ariel Shamir. Seam carving for content-aware image resizing. ACM Trans-
+              actions on Graphics, 26(3), article 10, 2007.
+         [28] Sara Baase and Alan Van Gelder. Computer Algorithms: Introduction to Design and Anal-
+              ysis. Addison-Wesley, third edition, 2000.
+         [29] Eric Bach. Private communication, 1989.
+         [30] Eric Bach. Number-theoretic algorithms. In Annual Review of Computer Science, volume 4,
+              pages 119–172. Annual Reviews, Inc., 1990.
+         [31] Eric Bach and Jeffrey Shallit. Algorithmic Number Theory—Volume I: Efﬁcient Algorithms.
+              The MIT Press, 1996.
+         [32] David H. Bailey, King Lee, and Horst D. Simon. Using Strassen’s algorithm to accelerate
+              the solution of linear systems. The Journal of Supercomputing, 4(4):357–371, 1990.
+

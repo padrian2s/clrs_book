@@ -1,0 +1,41 @@
+598   Chapter 22 Elementary Graph Algorithms
+
+
+      Lemma 22.1
+      Let G D .V; E/ be a directed or undirected graph, and let s 2 V be an arbitrary
+      vertex. Then, for any edge .u; / 2 E,
+      ı.s; /  ı.s; u/ C 1 :
+
+
+      Proof If u is reachable from s, then so is . In this case, the shortest path from s
+      to  cannot be longer than the shortest path from s to u followed by the edge .u; /,
+      and thus the inequality holds. If u is not reachable from s, then ı.s; u/ D 1, and
+      the inequality holds.
+
+         We want to show that BFS properly computes :d D ı.s; / for each ver-
+      tex  2 V . We ﬁrst show that :d bounds ı.s; / from above.
+
+      Lemma 22.2
+      Let G D .V; E/ be a directed or undirected graph, and suppose that BFS is run
+      on G from a given source vertex s 2 V . Then upon termination, for each ver-
+      tex  2 V , the value :d computed by BFS satisﬁes :d  ı.s; /.
+
+      Proof We use induction on the number of E NQUEUE operations. Our inductive
+      hypothesis is that :d  ı.s; / for all  2 V .
+         The basis of the induction is the situation immediately after enqueuing s in line 9
+      of BFS. The inductive hypothesis holds here, because s:d D 0 D ı.s; s/ and
+      :d D 1  ı.s; / for all  2 V  fsg.
+         For the inductive step, consider a white vertex  that is discovered during the
+      search from a vertex u. The inductive hypothesis implies that u:d  ı.s; u/. From
+      the assignment performed by line 15 and from Lemma 22.1, we obtain
+      :d D u:d C 1
+           ı.s; u/ C 1
+           ı.s; / :
+      Vertex  is then enqueued, and it is never enqueued again because it is also grayed
+      and the then clause of lines 14–17 is executed only for white vertices. Thus, the
+      value of :d never changes again, and the inductive hypothesis is maintained.
+
+        To prove that :d D ı.s; /, we must ﬁrst show more precisely how the queue Q
+      operates during the course of BFS. The next lemma shows that at all times, the
+      queue holds at most two distinct d values.
+

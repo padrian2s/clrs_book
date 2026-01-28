@@ -1,0 +1,43 @@
+21.3 Disjoint-set forests                                                          571
+
+
+M AKE -S ET .x/
+1 x:p D x
+2 x:rank D 0
+
+U NION .x; y/
+1 L INK .F IND -S ET .x/; F IND -S ET .y//
+
+L INK .x; y/
+1 if x:rank > y:rank
+2       y:p D x
+3 else x:p D y
+4       if x:rank == y:rank
+5            y:rank D y:rank C 1
+
+The F IND -S ET procedure with path compression is quite simple:
+
+F IND -S ET .x/
+1 if x ¤ x:p
+2        x:p D F IND -S ET .x:p/
+3 return x:p
+
+The F IND -S ET procedure is a two-pass method: as it recurses, it makes one pass
+up the ﬁnd path to ﬁnd the root, and as the recursion unwinds, it makes a second
+pass back down the ﬁnd path to update each node to point directly to the root. Each
+call of F IND -S ET .x/ returns x:p in line 3. If x is the root, then F IND -S ET skips
+line 2 and instead returns x:p, which is x; this is the case in which the recursion
+bottoms out. Otherwise, line 2 executes, and the recursive call with parameter x:p
+returns a pointer to the root. Line 2 updates node x to point directly to the root,
+and line 3 returns this pointer.
+
+Effect of the heuristics on the running time
+Separately, either union by rank or path compression improves the running time of
+the operations on disjoint-set forests, and the improvement is even greater when
+we use the two heuristics together. Alone, union by rank yields a running time
+of O.m lg n/ (see Exercise 21.4-4), and this bound is tight (see Exercise 21.3-3).
+Although we shall not prove it here, for a sequence of n M AKE -S ET opera-
+tions (and hence at most n  1 U NION operations) and f F IND -S ET opera-
+tions, the path-compression heuristic alone gives a worst-case running time of
+‚.n C f  .1 C log2Cf =n n//.
+

@@ -1,0 +1,49 @@
+882   Chapter 29 Linear Programming
+
+
+      Then, to produce an optimal dual solution, we set
+            (
+                 0
+              cnCi  if .n C i/ 2 N ;
+      yNi D                                                                             (29.91)
+              0      otherwise :
+
+         Thus, an optimal solution to the dual linear program deﬁned in (29.86)–(29.90)
+      is yN1 D 0 (since n C 1 D 4 2 B), yN2 D c50 D 1=6, and yN3 D c60 D 2=3.
+      Evaluating the dual objective function (29.86), we obtain an objective value of
+      .30  0/ C .24  .1=6// C .36  .2=3// D 28, which conﬁrms that the objective value
+      of the primal is indeed equal to the objective value of the dual. Combining these
+      calculations with Lemma 29.8 yields a proof that the optimal objective value of the
+      primal linear program is 28. We now show that this approach applies in general:
+      we can ﬁnd an optimal solution to the dual and simultaneously prove that a solution
+      to the primal is optimal.
+
+      Theorem 29.10 (Linear-programming duality)
+      Suppose that S IMPLEX returns values xN D .xN 1 ; xN 2 ; : : : ; xN n / for the primal lin-
+      ear program .A; b; c/. Let N and B denote the nonbasic and basic variables for
+      the ﬁnal slack form, let c 0 denote the coefﬁcients in the ﬁnal slack form, and let
+      yN D .yN1 ; yN2 ; : : : ; yNm / be deﬁned by equation (29.91). Then xN is an optimal so-
+      lution to the primal linear program, yN is an optimal solution to the dual linear
+      program, and
+      X
+      n                 X
+                        m
+             cj xNj D          bi yNi :                                                 (29.92)
+      j D1              i D1
+
+
+
+      Proof By Corollary 29.9, if we can ﬁnd feasible solutions xN and yN that satisfy
+      equation (29.92), then xN and yN must be optimal primal and dual solutions. We
+      shall now show that the solutions xN and yN described in the statement of the theorem
+      satisfy equation (29.92).
+         Suppose that we run S IMPLEX on a primal linear program, as given in lines
+      (29.16)–(29.18). The algorithm proceeds through a series of slack forms until it
+      terminates with a ﬁnal slack form with objective function
+                X
+      ´ D 0 C       cj0 xj :                                                        (29.93)
+                   j 2N
+
+      Since S IMPLEX terminated with a solution, by the condition in line 3 we know that
+      cj0  0 for all j 2 N :                                                           (29.94)
+

@@ -1,0 +1,52 @@
+Index                                                                                        1279
+
+
+pattern, in string matching, 985                    star-shaped, 1038 ex.
+   nonoverlappable, 1002 ex.                     polylogarithmically bounded, 57
+pattern matching, see string matching            polynomial, 55, 898
+penalty, 444                                        addition of, 898
+perfect hashing, 277–282, 285                       asymptotic behavior of, 61 pr.
+perfect linear speedup, 780                         coefﬁcient representation of, 900
+perfect matching, 735 ex.                           derivatives of, 922 pr.
+permutation, 1167                                   evaluation of, 41 pr., 900, 905 ex., 923 pr.
+   bit-reversal, 472 pr., 918                       interpolation by, 901, 906 ex.
+   Josephus, 355 pr.                                multiplication of, 899, 903–905, 920 pr.
+   k-permutation, 126, 1184                         point-value representation of, 901
+   linear, 1229 pr.                              polynomial-growth condition, 113
+   in place, 126                                 polynomially bounded, 55
+   random, 124–128                               polynomially related, 1056
+   of a set, 1184                                polynomial-time acceptance, 1058
+   uniform random, 116, 125                      polynomial-time algorithm, 927, 1048
+permutation matrix, 1220, 1222 ex., 1226 ex.     polynomial-time approximation scheme, 1107
+   LUP decomposition of, 827 ex.                    for maximum clique, 1134 pr.
+P ERMUTE -B Y-C YCLIC, 129 ex.                   polynomial-time computability, 1056
+P ERMUTE -B Y-S ORTING, 125                      polynomial-time decision, 1059
+P ERMUTE -W ITH -A LL, 129 ex.                   polynomial-time reducibility (P ), 1067,
+P ERMUTE -W ITHOUT-I DENTITY, 128 ex.                  1077 ex.
+persistent data structure, 331 pr., 482          polynomial-time solvability, 1055
+P ERSISTENT-T REE -I NSERT , 331 pr.             polynomial-time veriﬁcation, 1061–1066
+PERT chart, 657, 657 ex.                         P OP, 233, 452
+P-F IB, 776                                      pop from a run-time stack, 188 pr.
+phase, of the relabel-to-front algorithm, 758    positional tree, 1178
+phi function (.n/), 943                         positive-deﬁnite matrix, 1225
+P ISANO -D ELETE, 526 pr.                        post-ofﬁce location problem, 225 pr.
+pivot                                            postorder tree walk, 287
+   in linear programming, 867, 869–870,          potential function, 459
+      878 ex.                                       for lower bounds, 478
+   in LU decomposition, 821                      potential method, 459–463
+   in quicksort, 171                                for binary counters, 461–462
+P IVOT , 869                                        for disjoint-set data structures, 575–581,
+platter, 485                                           582 ex.
+P-M ATRIX -M ULTIPLY-R ECURSIVE , 794               for dynamic tables, 466–471
+P-M ERGE , 800                                      for Fibonacci heaps, 509–512, 517–518,
+P-M ERGE -S ORT , 803                                  520–522
+pointer, 21                                         for the generic push-relabel algorithm, 746
+   array implementation of, 241–246                 for min-heaps, 462 ex.
+   trailing, 295                                    for restructuring red-black trees, 474 pr.
+point-value representation, 901                     for self-organizing lists with move-to-front,
+polar angle, 1020 ex.                                  476 pr.
+Pollard’s rho heuristic, 976–980, 980 ex., 984      for stack operations, 460–461
+P OLLARD -R HO, 976                              potential, of a data structure, 459
+polygon, 1020 ex.                                power
+   kernel of, 1038 ex.                              of an element, modulo n, 954–958
+

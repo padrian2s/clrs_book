@@ -1,0 +1,45 @@
+Problems for Chapter 6                                                           167
+
+
+B UILD -M AX -H EAP0 .A/
+1 A:heap-size D 1
+2 for i D 2 to A:length
+3       M AX -H EAP -I NSERT .A; AŒi/
+
+a. Do the procedures B UILD -M AX -H EAP and B UILD -M AX -H EAP 0 always create
+   the same heap when run on the same input array? Prove that they do, or provide
+   a counterexample.
+
+b. Show that in the worst case, B UILD -M AX -H EAP 0 requires ‚.n lg n/ time to
+   build an n-element heap.
+
+6-2 Analysis of d -ary heaps
+A d -ary heap is like a binary heap, but (with one possible exception) non-leaf
+nodes have d children instead of 2 children.
+
+a. How would you represent a d -ary heap in an array?
+
+b. What is the height of a d -ary heap of n elements in terms of n and d ?
+
+c. Give an efﬁcient implementation of E XTRACT-M AX in a d -ary max-heap. An-
+   alyze its running time in terms of d and n.
+
+d. Give an efﬁcient implementation of I NSERT in a d -ary max-heap. Analyze its
+   running time in terms of d and n.
+
+e. Give an efﬁcient implementation of I NCREASE -K EY .A; i; k/, which ﬂags an
+   error if k < AŒi, but otherwise sets AŒi D k and then updates the d -ary max-
+   heap structure appropriately. Analyze its running time in terms of d and n.
+
+6-3 Young tableaus
+An m n Young tableau is an m n matrix such that the entries of each row are
+in sorted order from left to right and the entries of each column are in sorted order
+from top to bottom. Some of the entries of a Young tableau may be 1, which we
+treat as nonexistent elements. Thus, a Young tableau can be used to hold r  mn
+ﬁnite numbers.
+
+a. Draw a 4 4 Young tableau containing the elements f9; 16; 3; 2; 4; 8; 5; 14; 12g.
+
+b. Argue that an m n Young tableau Y is empty if Y Œ1; 1 D 1. Argue that Y
+   is full (contains mn elements) if Y Œm; n < 1.
+

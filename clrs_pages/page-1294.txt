@@ -1,0 +1,52 @@
+Index                                                                                      1273
+
+
+  maximal, 1110, 1135 pr.                          multithreaded algorithm for, 792–797,
+  maximum, 1135 pr.                                   806 pr.
+  and maximum ﬂow, 732–736, 747 ex.                Pan’s method for, 82 ex.
+  perfect, 735 ex.                                 Strassen’s algorithm for, 79–83, 111–112
+  of strings, 985–1013                           M ATRIX -M ULTIPLY, 371
+  weighted bipartite, 530                        matrix-vector multiplication, multithreaded,
+matric matroid, 437                                   785–787, 792 ex.
+matrix, 1217–1229                                  with race, 789–790
+  addition of, 1220                              matroid, 437–443, 448 pr., 450, 642
+  adjacency, 591                                   for task scheduling, 443–446
+  conjugate transpose of, 832 ex.                M AT-V EC, 785
+  determinant of, 1224–1225                      M AT-V EC -M AIN -L OOP, 786
+  diagonal, 1218                                 M AT-V EC -W RONG, 790
+  Hermitian, 832 ex.                             MAX-CNF satisﬁability, 1127 ex.
+  identity, 1218                                 MAX-CUT problem, 1127 ex.
+  incidence, 448 pr., 593 ex.                    M AX -F LOW-B Y-S CALING, 763 pr.
+  inversion of, 806 pr., 827–831, 842            max-ﬂow min-cut theorem, 723
+  lower-triangular, 1219, 1222 ex., 1225 ex.     max-heap, 152
+  multiplication of, see matrix multiplication     building, 156–159
+  negative of, 1220                                d -ary, 167 pr.
+  permutation, 1220, 1222 ex.                      deletion from, 166 ex.
+  predecessor, 685                                 extracting the maximum key from, 163
+  product of, with a vector, 785–787, 789–790,     in heapsort, 159–162
+     792 ex.                                       increasing a key in, 163–164
+  pseudoinverse of, 837                            insertion into, 164
+  scalar multiple of, 1220                         maximum key of, 163
+  subtraction of, 1221                             as a max-priority queue, 162–166
+  symmetric, 1220                                  mergeable, 250 n., 481 n., 505 n.
+  symmetric positive-deﬁnite, 832–835, 842       M AX -H EAPIFY, 154
+  Toeplitz, 921 pr.                              M AX -H EAP -I NSERT , 164
+  transpose of, 797 ex., 1217                      building a heap with, 166 pr.
+  transpose of, multithreaded, 792 ex.           max-heap property, 152
+  tridiagonal, 1219                                maintenance of, 154–156
+  unit lower-triangular, 1219                    maximal element, of a partially ordered set,
+  unit upper-triangular, 1219                         1165
+  upper-triangular, 1219, 1225 ex.               maximal layers, 1045 pr.
+  Vandermonde, 902, 1226 pr.                     maximal matching, 1110, 1135 pr.
+matrix-chain multiplication, 370–378             maximal point, 1045 pr.
+M ATRIX -C HAIN -M ULTIPLY                       maximal subset, in a matroid, 438
+M ATRIX -C HAIN -O RDER, 375                     maximization linear program, 846
+matrix multiplication, 75–83, 1221                 and minimization linear programs, 852
+  for all-pairs shortest paths, 686–693,         maximum, 213
+     706–707                                       in binary search trees, 291
+  boolean, 832 ex.                                 of a binomial distribution, 1207 ex.
+  and computing the determinant, 832 ex.           in a bit vector with a superimposed binary
+  divide-and-conquer method for, 76–83                tree, 533
+  and LUP decomposition, 832 ex.                   in a bit vector with a superimposed tree of
+  and matrix inversion, 828–831, 842                  constant height, 535
+

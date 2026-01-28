@@ -1,0 +1,45 @@
+Problems for Chapter 23                                                           639
+
+
+then contract all chosen edges (see Section B.4). Rather than contracting these
+edges one at a time, we ﬁrst identify sets of vertices that are united into the same
+new vertex. Then we create the graph that would have resulted from contracting
+these edges one at a time, but we do so by “renaming” edges according to the sets
+into which their endpoints were placed. Several edges from the original graph may
+be renamed the same as each other. In such a case, only one edge results, and its
+weight is the minimum of the weights of the corresponding original edges.
+   Initially, we set the minimum spanning tree T being constructed to be empty,
+and for each edge .u; / 2 E, we initialize the attributes .u; /:orig D .u; /
+and .u; /:c D w.u; /. We use the orig attribute to reference the edge from the
+initial graph that is associated with an edge in the contracted graph. The c attribute
+holds the weight of an edge, and as edges are contracted, we update it according to
+the above scheme for choosing edge weights. The procedure MST-R EDUCE takes
+inputs G and T , and it returns a contracted graph G 0 with updated attributes orig0
+and c 0 . The procedure also accumulates edges of G into the minimum spanning
+tree T .
+
+MST-R EDUCE .G; T /
+ 1 for each  2 G:V
+ 2       :mark D FALSE
+ 3       M AKE -S ET ./
+ 4 for each u 2 G:V
+ 5       if u:mark == FALSE
+ 6            choose  2 G:AdjŒu such that .u; /:c is minimized
+ 7            U NION .u; /
+ 8            T D T [ f.u; /:origg
+ 9            u:mark D :mark D TRUE
+10 G 0 :V D fF IND -S ET ./ W  2 G:Vg
+11 G 0 :E D ;
+12 for each .x; y/ 2 G:E
+13       u D F IND -S ET .x/
+14        D F IND -S ET .y/
+15       if .u; / 62 G 0 :E
+16            G 0 :E D G 0 :E [ f.u; /g
+17            .u; /:orig0 D .x; y/:orig
+18            .u; /:c 0 D .x; y/:c
+19       else if .x; y/:c < .u; /:c 0
+20                  .u; /:orig0 D .x; y/:orig
+21                  .u; /:c 0 D .x; y/:c
+22 construct adjacency lists G 0 :Adj for G 0
+23 return G 0 and T
+

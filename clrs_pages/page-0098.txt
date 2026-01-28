@@ -1,0 +1,44 @@
+4.2 Strassen’s algorithm for matrix multiplication                                77
+
+
+S QUARE -M ATRIX -M ULTIPLY-R ECURSIVE .A; B/
+ 1 n D A:rows
+ 2 let C be a new n n matrix
+ 3 if n == 1
+ 4       c11 D a11  b11
+ 5 else partition A, B, and C as in equations (4.9)
+ 6       C11 D S QUARE -M ATRIX -M ULTIPLY-R ECURSIVE .A11 ; B11 /
+              C S QUARE -M ATRIX -M ULTIPLY-R ECURSIVE .A12 ; B21 /
+ 7       C12 D S QUARE -M ATRIX -M ULTIPLY-R ECURSIVE .A11 ; B12 /
+              C S QUARE -M ATRIX -M ULTIPLY-R ECURSIVE .A12 ; B22 /
+ 8       C21 D S QUARE -M ATRIX -M ULTIPLY-R ECURSIVE .A21 ; B11 /
+              C S QUARE -M ATRIX -M ULTIPLY-R ECURSIVE .A22 ; B21 /
+ 9       C22 D S QUARE -M ATRIX -M ULTIPLY-R ECURSIVE .A21 ; B12 /
+              C S QUARE -M ATRIX -M ULTIPLY-R ECURSIVE .A22 ; B22 /
+10 return C
+
+   This pseudocode glosses over one subtle but important implementation detail.
+How do we partition the matrices in line 5? If we were to create 12 new n=2 n=2
+matrices, we would spend ‚.n2 / time copying entries. In fact, we can partition
+the matrices without copying entries. The trick is to use index calculations. We
+identify a submatrix by a range of row indices and a range of column indices of
+the original matrix. We end up representing a submatrix a little differently from
+how we represent the original matrix, which is the subtlety we are glossing over.
+The advantage is that, since we can specify submatrices by index calculations,
+executing line 5 takes only ‚.1/ time (although we shall see that it makes no
+difference asymptotically to the overall running time whether we copy or partition
+in place).
+   Now, we derive a recurrence to characterize the running time of S QUARE -
+M ATRIX -M ULTIPLY-R ECURSIVE. Let T .n/ be the time to multiply two n n
+matrices using this procedure. In the base case, when n D 1, we perform just the
+one scalar multiplication in line 4, and so
+T .1/ D ‚.1/ :                                                                (4.15)
+   The recursive case occurs when n > 1. As discussed, partitioning the matrices in
+line 5 takes ‚.1/ time, using index calculations. In lines 6–9, we recursively call
+S QUARE -M ATRIX -M ULTIPLY-R ECURSIVE a total of eight times. Because each
+recursive call multiplies two n=2 n=2 matrices, thereby contributing T .n=2/ to
+the overall running time, the time taken by all eight recursive calls is 8T .n=2/. We
+also must account for the four matrix additions in lines 6–9. Each of these matrices
+contains n2 =4 entries, and so each of the four matrix additions takes ‚.n2 / time.
+Since the number of matrix additions is a constant, the total time spent adding ma-
+

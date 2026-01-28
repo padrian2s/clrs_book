@@ -1,0 +1,56 @@
+836   Chapter 28 Matrix Operations
+
+
+      principles exist for choosing n, but they are beyond the scope of this text. In any
+      case, once we choose a value of n that is less than m, we end up with an overde-
+      termined set of equations whose solution we wish to approximate. We now show
+      how to do so.
+
+           ˙ f .x / f .x / : : : f .x / 
+         Let
+                 1     1           2   1                   n   1
+                f1 .x2 /       f2 .x2 /
+                                 : : : fn .x2 /
+      AD            ::           ::::      ::
+                     :              ::      :
+               f1 .xm / f2 .xm / : : : fn .xm /
+      denote the matrix of values of the basis functions at the given points; that is,
+
+                 ˙ f .x / f .x / : : : f .x / ˙ c 
+      aij D fj .xi /. Let c D .ck / denote the desired n-vector of coefﬁcients. Then,
+
+                           1   1           2   1                   n   1          1
+                       f1 .x2 /        f2 .x2 /
+                                         : : : fn .x2 /                          c2
+      Ac D                 ::            ::::      ::                             ::
+                            :               ::      :                              :
+                 ˙ F .x / 
+                       f1 .xm / f2 .xm / : : : fn .xm /                          cn
+                               1
+                       F .x2 /
+           D              ::
+                           :
+                       F .xm /
+
+      is the m-vector of “predicted values” for y. Thus,
+       D Ac  y
+      is the m-vector of approximation errors.
+         To minimize approximation errors, we choose to minimize the norm of the error
+      vector , which gives us a least-squares solution, since
+                       !1=2
+               Xm
+      kk D        2i      :
+                i D1
+
+      Because
+                                                                        !2
+                                       X
+                                       m           X
+                                                   n
+      kk2 D kAc  yk2 D                                  aij cj  yi        ;
+                                       i D1        j D1
+
+
+      we can minimize kk by differentiating kk2 with respect to each ck and then
+      setting the result to 0:
+

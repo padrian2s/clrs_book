@@ -1,0 +1,45 @@
+1076   Chapter 34 NP-Completeness
+
+
+       paste together T .n/ copies of the circuit M . The output of the ith circuit, which
+       produces conﬁguration ci , feeds directly into the input of the .i C1/st circuit. Thus,
+       the conﬁgurations, rather than being stored in the computer’s memory, simply re-
+       side as values on the wires connecting copies of M .
+          Recall what the polynomial-time reduction algorithm F must do. Given an in-
+       put x, it must compute a circuit C D f .x/ that is satisﬁable if and only if there
+       exists a certiﬁcate y such that A.x; y/ D 1. When F obtains an input x, it ﬁrst
+       computes n D jxj and constructs a combinational circuit C 0 consisting of T .n/
+       copies of M . The input to C 0 is an initial conﬁguration corresponding to a compu-
+       tation on A.x; y/, and the output is the conﬁguration cT .n/ .
+          Algorithm F modiﬁes circuit C 0 slightly to construct the circuit C D f .x/.
+       First, it wires the inputs to C 0 corresponding to the program for A, the initial pro-
+       gram counter, the input x, and the initial state of memory directly to these known
+       values. Thus, the only remaining inputs to the circuit correspond to the certiﬁ-
+       cate y. Second, it ignores all outputs from C 0 , except for the one bit of cT .n/
+       corresponding to the output of A. This circuit C , so constructed, computes
+       C.y/ D A.x; y/ for any input y of length O.nk /. The reduction algorithm F ,
+       when provided an input string x, computes such a circuit C and outputs it.
+          We need to prove two properties. First, we must show that F correctly computes
+       a reduction function f . That is, we must show that C is satisﬁable if and only if
+       there exists a certiﬁcate y such that A.x; y/ D 1. Second, we must show that F
+       runs in polynomial time.
+          To show that F correctly computes a reduction function, let us suppose that there
+       exists a certiﬁcate y of length O.nk / such that A.x; y/ D 1. Then, if we apply the
+       bits of y to the inputs of C , the output of C is C.y/ D A.x; y/ D 1. Thus, if a
+       certiﬁcate exists, then C is satisﬁable. For the other direction, suppose that C is
+       satisﬁable. Hence, there exists an input y to C such that C.y/ D 1, from which
+       we conclude that A.x; y/ D 1. Thus, F correctly computes a reduction function.
+          To complete the proof sketch, we need only show that F runs in time polynomial
+       in n D jxj. The ﬁrst observation we make is that the number of bits required to
+       represent a conﬁguration is polynomial in n. The program for A itself has constant
+       size, independent of the length of its input x. The length of the input x is n, and
+       the length of the certiﬁcate y is O.nk /. Since the algorithm runs for at most O.nk /
+       steps, the amount of working storage required by A is polynomial in n as well.
+       (We assume that this memory is contiguous; Exercise 34.3-5 asks you to extend
+       the argument to the situation in which the locations accessed by A are scattered
+       across a much larger region of memory and the particular pattern of scattering can
+       differ for each input x.)
+          The combinational circuit M implementing the computer hardware has size
+       polynomial in the length of a conﬁguration, which is O.nk /; hence, the size of M
+       is polynomial in n. (Most of this circuitry implements the logic of the memory
+

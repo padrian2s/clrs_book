@@ -1,0 +1,54 @@
+514                   Chapter 19 Fibonacci Heaps
+
+
+
+                                    H:min                                                                                      H:min
+
+      (a)   23    7     21              3              17            24        (b)         23   7      21   18       52   38    17           24
+
+                               18      52     38       30       26        46                                39            41    30     26          46
+                               39             41                35                                                                     35
+
+                                       0 1 2 3                                                                       0 1 2 3
+                                   A                                                                             A
+                                                        w,x                                                                                       w,x
+      (c)   23    7     21    18       52    38    17              24          (d)         23   7      21   18       52   38    17           24
+
+                              39             41    30         26        46                                  39            41    30     26          46
+
+                                                              35                                                                       35
+                                       0 1 2 3                                                                       0 1 2 3
+                                   A                                                                             A
+         w,x                                                                         w,x
+      (e) 23      7     21    18       52    38    17              24          (f)         7    21     18   52       38   17           24
+
+                              39             41    30         26        46                 23          39            41   30     26         46
+
+                                                              35                                                                 35
+
+                                       0 1 2 3                                                                       0 1 2 3
+                                   A                                                                             A
+            w,x                                                                                  w,x
+      (g)         7          21    18       52    38            24             (h)                     7             21   18     52    38
+
+            17        23           39             41      26         46                         24     17   23            39           41
+
+            30                                            35                               26   46     30
+
+                                                                                           35
+
+
+
+                      Figure 19.4 The action of F IB -H EAP -E XTRACT-M IN. (a) A Fibonacci heap H . (b) The situa-
+                      tion after removing the minimum node ´ from the root list and adding its children to the root list.
+                      (c)–(e) The array A and the trees after each of the ﬁrst three iterations of the for loop of lines 4–14 of
+                      the procedure C ONSOLIDATE . The procedure processes the root list by starting at the node pointed
+                      to by H: min and following right pointers. Each part shows the values of w and x at the end of an
+                      iteration. (f)–(h) The next iteration of the for loop, with the values of w and x shown at the end of
+                      each iteration of the while loop of lines 7–13. Part (f) shows the situation after the ﬁrst time through
+                      the while loop. The node with key 23 has been linked to the node with key 7, which x now points to.
+                      In part (g), the node with key 17 has been linked to the node with key 7, which x still points to. In
+                      part (h), the node with key 24 has been linked to the node with key 7. Since no node was previously
+                      pointed to by AŒ3, at the end of the for loop iteration, AŒ3 is set to point to the root of the resulting
+                      tree.
+

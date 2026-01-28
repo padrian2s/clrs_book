@@ -1,0 +1,48 @@
+Chapter 24     Single-Source Shortest Paths                                                        649
+
+
+ u                v                    u                v
+         2                                     2
+ 5                9                    5                6
+
+             RELAX(u,v,w)                          RELAX(u,v,w)
+ u                v                    u                v
+         2                                     2
+ 5                7                    5                6
+        (a)                                    (b)
+
+
+Figure 24.3 Relaxing an edge .u; / with weight w.u; / D 2. The shortest-path estimate of each
+vertex appears within the vertex. (a) Because : d > u: d C w.u; / prior to relaxation, the value
+of : d decreases. (b) Here, : d  u: d C w.u; / before relaxing the edge, and so the relaxation step
+leaves : d unchanged.
+
+
+estimate :d and update ’s predecessor attribute :. The following code per-
+forms a relaxation step on edge .u; / in O.1/ time:
+
+R ELAX .u; ; w/
+1 if :d > u:d C w.u; /
+2       :d D u:d C w.u; /
+3       : D u
+
+Figure 24.3 shows two examples of relaxing an edge, one in which a shortest-path
+estimate decreases and one in which no estimate changes.
+   Each algorithm in this chapter calls I NITIALIZE -S INGLE -S OURCE and then re-
+peatedly relaxes edges. Moreover, relaxation is the only means by which shortest-
+path estimates and predecessors change. The algorithms in this chapter differ in
+how many times they relax each edge and the order in which they relax edges. Dijk-
+stra’s algorithm and the shortest-paths algorithm for directed acyclic graphs relax
+each edge exactly once. The Bellman-Ford algorithm relaxes each edge jV j  1
+times.
+
+Properties of shortest paths and relaxation
+To prove the algorithms in this chapter correct, we shall appeal to several prop-
+erties of shortest paths and relaxation. We state these properties here, and Sec-
+tion 24.5 proves them formally. For your reference, each property stated here in-
+cludes the appropriate lemma or corollary number from Section 24.5. The latter
+ﬁve of these properties, which refer to shortest-path estimates or the predecessor
+subgraph, implicitly assume that the graph is initialized with a call to I NITIALIZE -
+S INGLE -S OURCE.G; s/ and that the only way that shortest-path estimates and the
+predecessor subgraph change are by some sequence of relaxation steps.
+

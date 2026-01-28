@@ -1,0 +1,53 @@
+Index                                                                                 1277
+
+
+  of the independent-set problem, 1101 pr.      one-pass method, 585
+  of integer linear programming, 1101 ex.       one-to-one correspondence, 1167
+  of the longest-simple-cycle problem,          one-to-one function, 1167
+      1101 ex.                                  on-line convex-hull problem, 1039 ex.
+  proving, of a language, 1078–1079             on-line hiring problem, 139–141
+  of scheduling with proﬁts and deadlines,      O N -L INE -M AXIMUM, 140
+      1104 pr.                                  on-line multithreaded scheduler, 781
+  of the set-covering problem, 1122 ex.         O N -S EGMENT , 1018
+  of the set-partition problem, 1101 ex.        onto function, 1167
+  of the subgraph-isomorphism problem,          open-address hash table, 269–277
+      1100 ex.                                    with double hashing, 272–274, 277 ex.
+  of the subset-sum problem, 1097–1100            with linear probing, 272
+  of the 3-CNF-satisﬁability problem,             with quadratic probing, 272, 283 pr.
+      1082–1085, 1105                           open interval, 348
+  of the traveling-salesman problem,            OpenMP, 774
+      1096–1097                                 optimal binary search tree, 397–404, 413
+  of the vertex-cover problem, 1089–1091,       O PTIMAL -BST, 402
+      1105                                      optimal objective value, 851
+  of 0-1 integer programming, 1100 ex.          optimal solution, 851
+NP-hard, 1069                                   optimal subset, of a matroid, 439
+n-set, 1161                                     optimal substructure
+n-tuple, 1162                                     of activity selection, 416
+null event, 1190                                  of binary search trees, 399–400
+null tree, 1178                                   in dynamic programming, 379–384
+null vector, 1224                                 of the fractional knapsack problem, 426
+number-ﬁeld sieve, 984                            in greedy algorithms, 425
+numerical stability, 813, 815, 842                of Huffman codes, 435
+n-vector, 1218                                    of longest common subsequences, 392–393
+                                                  of matrix-chain multiplication, 373
+o-notation, 50–51, 64                             of rod-cutting, 362
+O-notation, 45 ﬁg., 47–48, 64                     of shortest paths, 644–645, 687, 693–694
+O 0 -notation, 62 pr.                             of unweighted shortest paths, 382
+e
+O -notation, 62 pr.                               of weighted matroids, 442
+object, 21                                        of the 0-1 knapsack problem, 426
+   allocation and freeing of, 243–244           optimal vertex cover, 1108
+   array implementation of, 241–246             optimization problem, 359, 1050, 1054
+   passing as parameter, 21                       approximation algorithms for, 10,
+objective function, 664, 847, 851                    1106–1140
+objective value, 847, 851                         and decision problems, 1051
+oblivious compare-exchange algorithm, 208 pr.   OR function (_), 697, 1071
+occurrence of a pattern, 985                    order
+O FF -L INE -M INIMUM, 583 pr.                    of a group, 945
+off-line problem                                  linear, 1165
+   caching, 449 pr.                               partial, 1165
+   least common ancestors, 584 pr.                total, 1165
+   minimum, 582 pr.                             ordered pair, 1161
+Omega-notation, 45 ﬁg., 48–49, 64               ordered tree, 1177
+1-approximation algorithm, 1107                 order of growth, 28
+

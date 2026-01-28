@@ -1,0 +1,47 @@
+25.2 The Floyd-Warshall algorithm                                                 695
+
+
+F LOYD -WARSHALL .W /
+1 n D W:rows
+2 D .0/ D W
+3 for k D 1 to n
+4       let D .k/ D dij.k/ be a new n n matrix
+5       for i D 1 to n
+6            for j D 1 to n
+7                 dij.k/ D min dij.k1/ ; di.k1/
+                                             k
+                                                     .k1/
+                                                  C dkj
+8 return D .n/
+
+Figure 25.4 shows the matrices D .k/ computed by the Floyd-Warshall algorithm
+for the graph in Figure 25.1.
+   The running time of the Floyd-Warshall algorithm is determined by the triply
+nested for loops of lines 3–7. Because each execution of line 7 takes O.1/ time,
+the algorithm runs in time ‚.n3 /. As in the ﬁnal algorithm in Section 25.1, the
+code is tight, with no elaborate data structures, and so the constant hidden in the
+‚-notation is small. Thus, the Floyd-Warshall algorithm is quite practical for even
+moderate-sized input graphs.
+
+Constructing a shortest path
+There are a variety of different methods for constructing shortest paths in the Floyd-
+Warshall algorithm. One way is to compute the matrix D of shortest-path weights
+and then construct the predecessor matrix … from the D matrix. Exercise 25.1-6
+asks you to implement this method so that it runs in O.n3 / time. Given the pre-
+decessor matrix …, the P RINT-A LL -PAIRS -S HORTEST-PATH procedure will print
+the vertices on a given shortest path.
+   Alternatively, we can compute the predecessor matrix … while the algorithm
+computes the matrices D .k/ . Speciﬁcally, we compute a sequence of matrices
+….0/ ; ….1/ ; : : : ; ….n/ , where … D ….n/ and we deﬁne ij.k/ as the predecessor of
+vertex j on a shortest path from vertex i with all intermediate vertices in the set
+f1; 2; : : : ; kg.
+   We can give a recursive formulation of ij.k/ . When k D 0, a shortest path from i
+to j has no intermediate vertices at all. Thus,
+          (
+  .0/         NIL if i D j or wij D 1 ;
+ij D                                                                           (25.6)
+              i       if i ¤ j and wij < 1 :
+For k  1, if we take the path i ; k ; j , where k ¤ j , then the predecessor
+of j we choose is the same as the predecessor of j we chose on a shortest path
+from k with all intermediate vertices in the set f1; 2; : : : ; k  1g. Otherwise, we
+

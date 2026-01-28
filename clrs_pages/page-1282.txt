@@ -1,0 +1,52 @@
+Index                                                                                       1261
+
+
+   and back edges, 613                              linked-list implementation of, 564–568
+   and component graphs, 617                        in off-line least common ancestors, 584 pr.
+   and hamiltonian paths, 1066 ex.                  in off-line minimum, 582 pr.
+   longest simple path in, 404 pr.                  in task scheduling, 448 pr.
+   for representing a multithreaded              disjoint-set forest, 568–572
+      computation, 777                              analysis of, 575–581, 581 ex.
+   single-source shortest-paths algorithm for,      rank properties of, 575, 581 ex.
+      655–658                                       see also disjoint-set data structure
+   topological sort of, 612–615, 623             disjoint sets, 1161
+directed graph, 1168                             disjunctive normal form, 1083
+   all-pairs shortest paths in, 684–707          disk, 1028 ex.
+   constraint graph, 666                         disk drive, 485–487
+   Euler tour of, 623 pr., 1048                     see also secondary storage
+   hamiltonian cycle of, 1049                    D ISK -R EAD, 487
+   and longest paths, 1048                       D ISK -W RITE , 487
+   path cover of, 761 pr.                        distance
+   PERT chart, 657, 657 ex.                         edit, 406 pr.
+   semiconnected, 621 ex.                           euclidean, 1039
+   shortest path in, 643                            Lm , 1044 ex.
+   single-source shortest paths in, 643–683         Manhattan, 225 pr., 1044 ex.
+   singly connected, 612 ex.                        of a shortest path, 597
+   square of, 593 ex.                            distributed memory, 772
+   transitive closure of, 697                    distribution
+   transpose of, 592 ex.                            binomial, 1203–1206
+   universal sink in, 593 ex.                       continuous uniform, 1192
+   see also directed acyclic graph, graph,          discrete, 1191
+      network                                       geometric, 1202–1203
+directed segment, 1015–1017                         of inputs, 116, 122
+directed version of an undirected graph, 1172       of prime numbers, 965
+D IRECTION, 1018                                    probability, 1190
+dirty area, 208 pr.                                 sparse-hulled, 1046 pr.
+D ISCHARGE , 751                                    uniform, 1191
+discharge of an overﬂowing vertex, 751           distributive laws for sets, 1160
+discovered vertex, 594, 603                      divergent series, 1146
+discovery time, in depth-ﬁrst search, 605        divide-and-conquer method, 30–35, 65
+discrete Fourier transform, 9, 909                  analysis of, 34–35
+discrete logarithm, 955                             for binary search, 39 ex.
+discrete logarithm theorem, 955                     for conversion of binary to decimal, 933 ex.
+discrete probability distribution, 1191             for fast Fourier transform, 909–912
+discrete random variable, 1196–1201                 for ﬁnding the closest pair of points,
+disjoint-set data structure, 561–585                   1040–1043
+   analysis of, 575–581, 581 ex.                    for ﬁnding the convex hull, 1030
+   in connected components, 562–564                 for matrix inversion, 829–831
+   in depth determination, 583 pr.                  for matrix multiplication, 76–83, 792–797
+   disjoint-set-forest implementation of,           for maximum-subarray problem, 68–75
+      568–572                                       for merge sort, 30–37, 797–805
+   in Kruskal’s algorithm, 631                      for multiplication, 920 pr.
+   linear-time special case of, 585
+

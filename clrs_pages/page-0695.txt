@@ -1,0 +1,48 @@
+674   Chapter 24 Single-Source Shortest Paths
+
+
+      Lemma 24.16
+      Let G D .V; E/ be a weighted, directed graph with weight function w W E ! R,
+      let s 2 V be a source vertex, and assume that G contains no negative-weight
+      cycles that are reachable from s. Then, after the graph is initialized by I NITIALIZE -
+      S INGLE -S OURCE.G; s/, the predecessor subgraph G forms a rooted tree with
+      root s, and any sequence of relaxation steps on edges of G maintains this property
+      as an invariant.
+
+      Proof Initially, the only vertex in G is the source vertex, and the lemma is triv-
+      ially true. Consider a predecessor subgraph G that arises after a sequence of
+      relaxation steps. We shall ﬁrst prove that G is acyclic. Suppose for the sake of
+      contradiction that some relaxation step creates a cycle in the graph G . Let the cy-
+      cle be c D h0 ; 1 ; : : : ; k i, where k D 0 . Then, i : D i 1 for i D 1; 2; : : : ; k
+      and, without loss of generality, we can assume that relaxing edge .k1 ; k / created
+      the cycle in G .
+         We claim that all vertices on cycle c are reachable from the source s. Why?
+      Each vertex on c has a non-NIL predecessor, and so each vertex on c was assigned
+      a ﬁnite shortest-path estimate when it was assigned its non-NIL  value. By the
+      upper-bound property, each vertex on cycle c has a ﬁnite shortest-path weight,
+      which implies that it is reachable from s.
+         We shall examine the shortest-path estimates on c just prior to the call
+      R ELAX .k1 ; k ; w/ and show that c is a negative-weight cycle, thereby contra-
+      dicting the assumption that G contains no negative-weight cycles that are reachable
+      from the source. Just before the call, we have i : D i 1 for i D 1; 2; : : : ; k  1.
+      Thus, for i D 1; 2; : : : ; k  1, the last update to i :d was by the assignment
+      i :d D i 1 :dCw.i 1 ; i /. If i 1 :d changed since then, it decreased. Therefore,
+      just before the call R ELAX .k1 ; k ; w/, we have
+      i :d  i 1 :d C w.i 1 ; i /            for all i D 1; 2; : : : ; k  1 :        (24.12)
+      Because k : is changed by the call, immediately beforehand we also have the
+      strict inequality
+      k :d > k1 :d C w.k1 ; k / :
+      Summing this strict inequality with the k  1 inequalities (24.12), we obtain the
+      sum of the shortest-path estimates around cycle c:
+      X
+      k                X
+                       k
+             i :d >          .i 1 :d C w.i 1 ; i //
+      i D1             i D1
+
+                       X
+                       k                   X
+                                           k
+                  D           i 1 :d C          w.i 1 ; i / :
+                       i D1                i D1
+

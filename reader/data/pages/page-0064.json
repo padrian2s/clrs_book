@@ -1,0 +1,5 @@
+{
+  "page": 64,
+  "title": "3.2 Standard Notations and Common Functions",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 3.2</div>\n    <h1>Standard Notations and Common Functions</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Mathematical building blocks: floors, ceilings, logs, factorials, and their properties.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Floor ⌊x⌋: largest integer ≤ x (round down)</li>\n<li>Ceiling ⌈x⌉: smallest integer ≥ x (round up)</li>\n<li>log₂ n: how many times divide n by 2 to get 1</li>\n<li>n! = n × (n-1) × ... × 1 (grows faster than exponential)</li>\n<li>Stirling: n! ≈ √(2πn)(n/e)ⁿ</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>⌊3.7⌋ = 3, ⌈3.2⌉ = 4, log₂(8) = 3, 5! = 120</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>These functions appear everywhere in algorithm analysis.</p>\n</div>\n</div>"
+}

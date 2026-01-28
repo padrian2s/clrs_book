@@ -1,0 +1,47 @@
+Problems for Chapter 3                                                          63
+
+
+                                                                 1
+b. Describe the potential advantages and disadvantages of using  instead of  to
+   characterize the running times of programs.
+
+Some authors also deﬁne O in a slightly different manner; let’s use O 0 for the
+alternative deﬁnition. We say that f .n/ D O 0 .g.n// if and only if jf .n/j D
+O.g.n//.
+
+c. What happens to each direction of the “if and only if” in Theorem 3.1 if we
+   substitute O 0 for O but still use ?
+
+Some authors deﬁne Oe (read “soft-oh”) to mean O with logarithmic factors ig-
+nored:
+e
+O.g.n// D ff .n/ W there exist positive constants c, k, and n0 such that
+                   0  f .n/  cg.n/ lgk .n/ for all n  n0 g :
+
+d. Deﬁne e and ‚
+                e in a similar manner. Prove the corresponding analog to Theo-
+   rem 3.1.
+
+3-6 Iterated functions
+We can apply the iteration operator  used in the lg function to any monotonically
+increasing function f .n/ over the reals. For a given constant c 2 R, we deﬁne the
+iterated function fc by
+               ˚
+fc .n/ D min i  0 W f .i / .n/  c ;
+which need not be well deﬁned in all cases. In other words, the quantity fc .n/ is
+the number of iterated applications of the function f required to reduce its argu-
+ment down to c or less.
+   For each of the following functions f .n/ and constants c, give as tight a bound
+as possible on fc .n/.
+      f .n/       c         fc .n/
+a.    n1         0
+b.     lg n       1
+c.    n=2         1
+d.    n=2         2
+      p
+e.      n         2
+      p
+f.      n         1
+g.    n1=3        2
+h.   n= lg n      2
+

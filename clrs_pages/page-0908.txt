@@ -1,0 +1,46 @@
+29.5 The initial basic feasible solution                                             887
+
+
+maximize                   x0                                                 (29.106)
+subject to
+               X
+               n
+                      aij xj  x0  bi     for i D 1; 2; : : : ; m ;           (29.107)
+               j D1
+
+                              xj    0     for j D 0; 1; : : : ; n :           (29.108)
+Then L is feasible if and only if the optimal objective value of Laux is 0.
+
+Proof Suppose that L has a feasible solution xN D .xN 1 ; xN 2 ; : : : ; xN n /. Then the
+solution xN 0 D 0 combined with xN is a feasible solution to Laux with objective
+value 0. Since x0  0 is a constraint of Laux and the objective function is to
+maximize x0 , this solution must be optimal for Laux .
+  Conversely, suppose that the optimal objective value of Laux is 0. Then xN 0 D 0,
+and the remaining solution values of xN satisfy the constraints of L.
+
+  We now describe our strategy to ﬁnd an initial basic feasible solution for a linear
+program L in standard form:
+
+I NITIALIZE -S IMPLEX .A; b; c/
+  1 let k be the index of the minimum bi
+  2 if bk  0                        // is the initial basic solution feasible?
+  3      return .f1; 2; : : : ; ng ; fn C 1; n C 2; : : : ; n C mg ; A; b; c; 0/
+  4 form Laux by adding x0 to the left-hand side of each constraint
+         and setting the objective function to x0
+  5 let .N; B; A; b; c; / be the resulting slack form for Laux
+  6 l D nCk
+  7 // Laux has n C 1 nonbasic variables and m basic variables.
+  8 .N; B; A; b; c; / D P IVOT .N; B; A; b; c; ; l; 0/
+  9 // The basic solution is now feasible for Laux .
+10 iterate the while loop of lines 3–12 of S IMPLEX until an optimal solution
+         to Laux is found
+11 if the optimal solution to Laux sets xN 0 to 0
+12       if xN 0 is basic
+13              perform one (degenerate) pivot to make it nonbasic
+14       from the ﬁnal slack form of Laux , remove x0 from the constraints and
+                restore the original objective function of L, but replace each basic
+                variable in this objective function by the right-hand side of its
+                associated constraint
+15       return the modiﬁed ﬁnal slack form
+16 else return “infeasible”
+

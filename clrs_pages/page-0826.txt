@@ -1,0 +1,44 @@
+           Problems for Chapter 27                                                     805
+
+
+           27.3-5 ?
+           Give a multithreaded version of R ANDOMIZED -S ELECT on page 216. Make your
+           implementation as parallel as possible. Analyze your algorithm. (Hint: Use the
+           partitioning algorithm from Exercise 27.3-3.)
+
+           27.3-6 ?
+           Show how to multithread S ELECT from Section 9.3. Make your implementation as
+           parallel as possible. Analyze your algorithm.
+
+
+
+Problems
+
+           27-1 Implementing parallel loops using nested parallelism
+           Consider the following multithreaded algorithm for performing pairwise addition
+           on n-element arrays AŒ1 : : n and BŒ1 : : n, storing the sums in C Œ1 : : n:
+
+           S UM -A RRAYS .A; B; C /
+           1 parallel for i D 1 to A:length
+           2       C Œi D AŒi C BŒi
+
+           a. Rewrite the parallel loop in S UM -A RRAYS using nested parallelism (spawn
+              and sync) in the manner of M AT-V EC -M AIN -L OOP . Analyze the parallelism
+              of your implementation.
+
+             Consider the following alternative implementation of the parallel loop, which
+           contains a value grain-size to be speciﬁed:
+
+           S UM -A RRAYS0 .A; B; C /
+           1 n D A:length
+           2 grain-size D ‹           // to be determined
+           3 r D dn=grain-sizee
+           4 for k D 0 to r  1
+           5       spawn A DD -S UBARRAY .A; B; C; k  grain-size C 1;
+                                          min..k C 1/  grain-size; n//
+           6 sync
+
+           A DD -S UBARRAY .A; B; C; i; j /
+           1 for k D i to j
+           2       C Œk D AŒk C BŒk
+

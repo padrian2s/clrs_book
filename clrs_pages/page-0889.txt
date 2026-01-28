@@ -1,0 +1,52 @@
+868   Chapter 29 Linear Programming
+
+
+      side. We then substitute this new equation, x3 D 3=2  3x2 =8  x5 =4 C x6 =8, into
+      equations (29.64)–(29.66) and obtain the new, but equivalent, system
+                111          x2          x5        11x6
+       ´ D             C                                                          (29.68)
+                  4          16           8         16
+                  33         x2          x5          5x6
+      x1 D                        C                                               (29.69)
+                  4          16           8          16
+                   3        3x2          x5           x6
+      x3 D                                   C                                    (29.70)
+                   2         8            4            8
+                  69        3x2         5x5           x6
+      x4 D             C           C                     :                         (29.71)
+                  4          16          8            16
+      This system has the associated basic solution .33=4; 0; 3=2; 69=4; 0; 0/, with ob-
+      jective value 111=4. Now the only way to increase the objective value is to in-
+      crease x2 . The three constraints give upper bounds of 132, 4, and 1, respectively.
+      (We get an upper bound of 1 from constraint (29.71) because, as we increase x2 ,
+      the value of the basic variable x4 increases also. This constraint, therefore, places
+      no restriction on how much we can increase x2 .) We increase x2 to 4, and it be-
+      comes nonbasic. Then we solve equation (29.70) for x2 and substitute in the other
+      equations to obtain
+                            x3           x5        2x6
+       ´ D 28                                                                    (29.72)
+                             6            6         3
+                            x3           x5          x6
+      x1 D 8 C                    C                                                (29.73)
+                             6            6          3
+                           8x3          2x5          x6
+      x2 D 4                                 C                                    (29.74)
+                            3            3           3
+                            x3           x5
+      x4 D 18                    C           :                                     (29.75)
+                             2            2
+      At this point, all coefﬁcients in the objective function are negative. As we shall see
+      later in this chapter, this situation occurs only when we have rewritten the linear
+      program so that the basic solution is an optimal solution. Thus, for this problem,
+      the solution .8; 4; 0; 18; 0; 0/, with objective value 28, is optimal. We can now
+      return to our original linear program given in (29.53)–(29.57). The only variables
+      in the original linear program are x1 , x2 , and x3 , and so our solution is x1 D 8,
+      x2 D 4, and x3 D 0, with objective value .3  8/ C .1  4/ C .2  0/ D 28. Note
+      that the values of the slack variables in the ﬁnal solution measure how much slack
+      remains in each inequality. Slack variable x4 is 18, and in inequality (29.54), the
+      left-hand side, with value 8 C 4 C 0 D 12, is 18 less than the right-hand side of 30.
+      Slack variables x5 and x6 are 0 and indeed, in inequalities (29.55) and (29.56),
+      the left-hand and right-hand sides are equal. Observe also that even though the
+      coefﬁcients in the original slack form are integral, the coefﬁcients in the other
+      linear programs are not necessarily integral, and the intermediate solutions are not
+

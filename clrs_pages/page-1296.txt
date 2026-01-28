@@ -1,0 +1,52 @@
+Index                                                                                    1275
+
+
+  in a bit vector with a superimposed binary    modular equivalence, 54, 1165 ex.
+     tree, 533                                  modular exponentiation, 956
+  in a bit vector with a superimposed tree of   M ODULAR -E XPONENTIATION, 957
+     constant height, 535                       modular linear equations, 946–950
+  in B-trees, 497 ex.                           M ODULAR -L INEAR -E QUATION -S OLVER,
+  in Fibonacci heaps, 511                            949
+  ﬁnding, 214–215                               modulo, 54, 928
+  off-line, 582 pr.                             Monge array, 110 pr.
+  in order-statistic trees, 347 ex.             monotone sequence, 168
+  in proto van Emde Boas structures, 541–542    monotonically decreasing, 53
+  in red-black trees, 311                       monotonically increasing, 53
+  in 2-3-4 heaps, 529 pr.                       Monty Hall problem, 1195 ex.
+  in van Emde Boas trees, 550                   move-to-front heuristic, 476 pr., 478
+M INIMUM, 162, 214, 230, 505                    MST-K RUSKAL , 631
+minimum-cost circulation, 896 pr.               MST-P RIM, 634
+minimum-cost ﬂow, 861–862                       MST-R EDUCE , 639 pr.
+minimum-cost multicommodity ﬂow, 864 ex.        much-greater-than ( ), 574
+minimum-cost spanning tree, see minimum         much-less-than ( ), 783
+     spanning tree                              multicommodity ﬂow, 862–863
+minimum cut, 721, 731 ex.                         minimum-cost, 864 ex.
+minimum degree, of a B-tree, 489                multicore computer, 772
+minimum mean-weight cycle, 680 pr.              multidimensional fast Fourier transform,
+minimum node, of a Fibonacci heap, 508               921 pr.
+minimum path cover, 761 pr.                     multigraph, 1172
+minimum spanning tree, 624–642                    converting to equivalent undirected graph,
+  in approximation algorithm for                     593 ex.
+     traveling-salesman problem, 1112           multiple, 927
+  Boru̇vka’s algorithm for, 641                   of an element modulo n, 946–950
+  on dynamic graphs, 637 ex.                      least common, 939 ex.
+  generic method for, 625–630                     scalar, 1220
+  Kruskal’s algorithm for, 631–633              multiple assignment, 21
+  Prim’s algorithm for, 634–636                 multiple sources and sinks, 712
+  relation to matroids, 437, 439–440            multiplication
+  second-best, 638 pr.                            of complex numbers, 83 ex.
+minimum-weight spanning tree, see minimum         divide-and-conquer method for, 920 pr.
+     spanning tree                                of matrices, see matrix multiplication
+minimum-weight vertex cover, 1124–1127,           of a matrix chain, 370–378
+     1139                                         matrix-vector, multithreaded, 785–787,
+minor of a matrix, 1224                              789–790, 792 ex.
+min-priority queue, 162                           modulo n (n ), 940
+  in constructing Huffman codes, 431              of polynomials, 899
+  in Dijkstra’s algorithm, 661                  multiplication method, 263–264
+  in Prim’s algorithm, 634, 636                 multiplicative group modulo n, 941
+miss, 449 pr.                                   multiplicative inverse, modulo n, 949
+missing child, 1178                             multiply instruction, 23
+mod, 54, 928                                    M ULTIPOP, 453
+modifying operation, 230                        multiprocessor, 772
+modular arithmetic, 54, 923 pr., 939–946        M ULTIPUSH, 456 ex.
+

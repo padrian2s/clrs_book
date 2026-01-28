@@ -1,0 +1,45 @@
+430   Chapter 16 Greedy Algorithms
+
+
+                                              100                                100
+                                    0                      1                 0               1
+                         86                                          14   a:45                   55
+                  0             1                              0                         0             1
+             58                      28                   14                        25                     30
+        0          1            0          1         0         1               0          1            0         1
+      a:45        b:13        c:12        d:16      e:9        f:5           c:12        b:13         14        d:16
+                                                                                               0           1
+                                                                                              f:5          e:9
+
+                                        (a)                                                  (b)
+
+
+      Figure 16.4 Trees corresponding to the coding schemes in Figure 16.3. Each leaf is labeled with
+      a character and its frequency of occurrence. Each internal node is labeled with the sum of the fre-
+      quencies of the leaves in its subtree. (a) The tree corresponding to the ﬁxed-length code a = 000, . . . ,
+      f = 101. (b) The tree corresponding to the optimal preﬁx code a = 0, b = 101, . . . , f = 1100.
+
+
+      acter, and repeat the decoding process on the remainder of the encoded ﬁle. In our
+      example, the string 001011101 parses uniquely as 0  0  101  1101, which decodes
+      to aabe.
+         The decoding process needs a convenient representation for the preﬁx code so
+      that we can easily pick off the initial codeword. A binary tree whose leaves are
+      the given characters provides one such representation. We interpret the binary
+      codeword for a character as the simple path from the root to that character, where 0
+      means “go to the left child” and 1 means “go to the right child.” Figure 16.4 shows
+      the trees for the two codes of our example. Note that these are not binary search
+      trees, since the leaves need not appear in sorted order and internal nodes do not
+      contain character keys.
+         An optimal code for a ﬁle is always represented by a full binary tree, in which
+      every nonleaf node has two children (see Exercise 16.3-2). The ﬁxed-length code
+      in our example is not optimal since its tree, shown in Figure 16.4(a), is not a full bi-
+      nary tree: it contains codewords beginning 10. . . , but none beginning 11. . . . Since
+      we can now restrict our attention to full binary trees, we can say that if C is the
+      alphabet from which the characters are drawn and all character frequencies are pos-
+      itive, then the tree for an optimal preﬁx code has exactly jC j leaves, one for each
+      letter of the alphabet, and exactly jC j  1 internal nodes (see Exercise B.5-3).
+         Given a tree T corresponding to a preﬁx code, we can easily compute the number
+      of bits required to encode a ﬁle. For each character c in the alphabet C , let the
+      attribute c:freq denote the frequency of c in the ﬁle and let dT .c/ denote the depth
+

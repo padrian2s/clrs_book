@@ -1,0 +1,45 @@
+106   Chapter 4 Divide-and-Conquer
+
+                                    logb a
+                       n        b
+      f .nj /     c       C
+                       bj     b1
+                                            logb a
+                       n          bj      b
+              D    c         1C       
+                       bj          n b1
+                      logb a          j            logb a
+                       n                  b       b
+              D    c              1 C        
+                         aj                n b1
+                      logb a                logb a
+                       n                  b
+                  c              1 C
+                         aj             b1
+                       logb a 
+                        n
+              D    O              ;
+                          aj
+      since c.1 C b=.b  1//logb a is a constant. Thus, we have proved case 2. The proof
+      of case 1 is almost identical. The key is to prove the bound f .nj / D O.nlogb a /,
+      which is similar to the corresponding proof of case 2, though the algebra is more
+      intricate.
+         We have now proved the upper bounds in the master theorem for all integers n.
+      The proof of the lower bounds is similar.
+
+      Exercises
+
+      4.6-1 ?
+      Give a simple and exact expression for nj in equation (4.27) for the case in which b
+      is a positive integer instead of an arbitrary real number.
+
+      4.6-2 ?
+      Show that if f .n/ D ‚.nlogb a lgk n/, where k  0, then the master recurrence has
+      solution T .n/ D ‚.nlogb a lgkC1 n/. For simplicity, conﬁne your analysis to exact
+      powers of b.
+
+      4.6-3 ?
+      Show that case 3 of the master theorem is overstated, in the sense that the regularity
+      condition af .n=b/  cf .n/ for some constant c < 1 implies that there exists a
+      constant  > 0 such that f .n/ D .nlogb aC /.
+

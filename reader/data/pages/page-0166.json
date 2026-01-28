@@ -1,0 +1,5 @@
+{
+  "page": 166,
+  "title": "6.5 Priority Queues",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 6.5</div>\n    <h1>Priority Queues</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>A data structure for maintaining a set with priority-based extraction.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Operations: INSERT, MAXIMUM, EXTRACT-MAX, INCREASE-KEY</li>\n<li>MAXIMUM: O(1) - just return root</li>\n<li>EXTRACT-MAX: O(log n) - remove root, heapify</li>\n<li>INSERT: O(log n) - add at end, bubble up</li>\n<li>INCREASE-KEY: O(log n) - update key, bubble up</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Task scheduler: tasks with priorities, always run highest priority next.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Used in Dijkstra&#x27;s algorithm, Huffman coding, event simulation.</p>\n</div>\n</div>"
+}

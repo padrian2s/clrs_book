@@ -1,0 +1,64 @@
+35.3 The set-covering problem                                                        1121
+
+
+of S, which are all initially uncovered. Let k be the least index such that uk D 0,
+so that every element in S is covered by at least one of the sets S1 ; S2 ; : : : ; Sk and
+some element in S is uncovered by S1 [ S2 [    [ Sk1 . Then, ui 1  ui , and
+ui 1  ui elements of S are covered for the ﬁrst time by Si , for i D 1; 2; : : : ; k.
+Thus,
+X              X
+               k
+                                                         1
+      cx D            .ui 1  ui /                                        :
+x2S            i D1
+                                        jSi  .S1 [ S2 [    [ Si 1 /j
+Observe that
+jSi  .S1 [ S2 [    [ Si 1 /j  jS  .S1 [ S2 [    [ Si 1 /j
+                                  D ui 1 ;
+because the greedy choice of Si guarantees that S cannot cover more new ele-
+ments than Si does (otherwise, the algorithm would have chosen S instead of Si ).
+Consequently, we obtain
+X              X
+               k
+                                         1
+      cx             .ui 1  ui /            :
+x2S            i D1
+                                        ui 1
+We now bound this quantity as follows:
+X              X
+               k
+                                          1
+      cx             .ui 1  ui / 
+x2S            i D1
+                                        ui 1
+               X
+               k X
+                 ui 1
+                                 1
+           D
+               i D1 j Dui C1
+                               ui 1
+             X k    X 1
+                    ui 1
+
+                                                   (because j  ui 1 )
+             i D1 j Du C1
+                          j
+                          i
+                                              !
+             X k  X 1 X
+                  ui 1    ui
+                               1
+           D             
+             i D1 j D1
+                        j j D1 j
+               X
+               k
+           D          .H.ui 1 /  H.ui //
+               i D1
+           D   H.u0 /  H.uk /                      (because the sum telescopes)
+           D   H.u0 /  H.0/
+           D   H.u0 /                               (because H.0/ D 0)
+           D   H.jSj/ ;
+which completes the proof of inequality (35.12).
+

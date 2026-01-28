@@ -1,0 +1,5 @@
+{
+  "page": 826,
+  "title": "Multithreaded Algorithms",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 27</div>\n    <h1>Multithreaded Algorithms</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>VII: Selected Topics</h4>\n    <h3>Chapter 27: Multithreaded Algorithms</h3>\n    <p><em>Parallel algorithms for multi-core processors</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>Spawn: create parallel task</li>\n<li>Sync: wait for spawned tasks</li>\n<li>Work: total operations (serial time)</li>\n<li>Span: critical path (parallel time)</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>Modern CPUs have many cores - parallelism is essential</p>\n</div>\n</div>"
+}

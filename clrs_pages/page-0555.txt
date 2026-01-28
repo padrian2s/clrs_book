@@ -1,0 +1,45 @@
+534   Chapter 20 van Emde Boas Trees
+
+
+         To ﬁnd the successor of x, start at the leaf indexed by x, and head up toward the
+          root until we enter a node from the left and this node has a 1 in its right child ´.
+          Then head down through node ´, always taking the leftmost node containing
+          a 1 (i.e., ﬁnd the minimum value in the subtree rooted at the right child ´).
+         To ﬁnd the predecessor of x, start at the leaf indexed by x, and head up toward
+          the root until we enter a node from the right and this node has a 1 in its left
+          child ´. Then head down through node ´, always taking the rightmost node
+          containing a 1 (i.e., ﬁnd the maximum value in the subtree rooted at the left
+          child ´).
+      Figure 20.1 shows the path taken to ﬁnd the predecessor, 7, of the value 14.
+         We also augment the I NSERT and D ELETE operations appropriately. When in-
+      serting a value, we store a 1 in each node on the simple path from the appropriate
+      leaf up to the root. When deleting a value, we go from the appropriate leaf up to
+      the root, recomputing the bit in each internal node on the path as the logical-or of
+      its two children.
+         Since the height of the tree is lg u and each of the above operations makes at
+      most one pass up the tree and at most one pass down, each operation takes O.lg u/
+      time in the worst case.
+         This approach is only marginally better than just using a red-black tree. We can
+      still perform the M EMBER operation in O.1/ time, whereas searching a red-black
+      tree takes O.lg n/ time. Then again, if the number n of elements stored is much
+      smaller than the size u of the universe, a red-black tree would be faster for all the
+      other operations.
+
+      Superimposing a tree of constant height
+      What happens if we superimpose a tree with greater degree? Let     p us assume that
+      the size of the universe is u D 22k for some integer k, so that u is an integer.
+      Instead of superimposing
+                      p          a binary tree on top of the bit vector, we superimpose a
+      tree of degree u. Figure 20.2(a) shows such a tree for the same bit vector as in
+      Figure 20.1. The height of the resulting tree is always 2.
+         As before, eachp internal node stores the logical-or of the bits within pits sub-
+      tree, so that the u internal nodes at depth 1 summarize each group of u val-
+      ues. As Figure  p 20.2(b) demonstrates, we can think of these nodes as an array
+      summaryŒ0
+              p   : :  u  1,
+                            p where summaryŒi contains a 1 if and  p only if the subar-
+      ray AŒi u : : .i C 1/ u  1 contains a 1. We call this u-bit subarray of A
+      the ith pcluster. For a given value of x, the bit AŒx appears in cluster num-
+      ber bx= uc. Now I NSERTpbecomes an O.1/-time operation: to insert x, set
+      both AŒx and summaryŒbx= uc to 1. We can use the summary array to perform
+

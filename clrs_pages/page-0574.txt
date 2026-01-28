@@ -1,0 +1,44 @@
+20.3 The van Emde Boas tree                                                      553
+
+
+the cluster does not already have another element, then the element being inserted
+becomes the only element in the cluster, and we do not need to recurse to insert an
+element into an empty vEB tree:
+
+V EB-E MPTY-T REE -I NSERT .V; x/
+1 V:min D x
+2 V:max D x
+With this procedure in hand, here is the pseudocode for V EB-T REE -I NSERT .V; x/,
+which assumes that x is not already an element in the set represented by vEB
+tree V :
+
+V EB-T REE -I NSERT .V; x/
+ 1   if V:min == NIL
+ 2        V EB-E MPTY-T REE -I NSERT .V; x/
+ 3   else if x < V:min
+ 4             exchange x with V:min
+ 5        if V:u > 2
+ 6             if V EB-T REE -M INIMUM .V:clusterŒhigh.x// == NIL
+ 7                  V EB-T REE -I NSERT .V:summary; high.x//
+ 8                  V EB-E MPTY-T REE -I NSERT .V:clusterŒhigh.x/; low.x//
+ 9             else V EB-T REE -I NSERT .V:clusterŒhigh.x/; low.x//
+10        if x > V:max
+11             V:max D x
+   This procedure works as follows. Line 1 tests whether V is an empty vEB tree
+and, if it is, then line 2 handles this easy case. Lines 3–11 assume that V is not
+empty, and therefore some element will be inserted into one of V ’s clusters. But
+that element might not necessarily be the element x passed to V EB-T REE -I NSERT.
+If x < min, as tested in line 3, then x needs to become the new min. We don’t
+want to lose the original min, however, and so we need to insert it into one of V ’s
+clusters. In this case, line 4 exchanges x with min, so that we insert the original
+min into one of V ’s clusters.
+   We execute lines 6–9 only if V is not a base-case vEB tree. Line 6 determines
+whether the cluster that x will go into is currently empty. If so, then line 7 in-
+serts x’s cluster number into the summary and line 8 handles the easy case of
+inserting x into an empty cluster. If x’s cluster is not currently empty, then line 9
+inserts x into its cluster. In this case, we do not need to update the summary,
+since x’s cluster number is already a member of the summary.
+   Finally, lines 10–11 take care of updating max if x > max. Note that if V is a
+base-case vEB tree that is not empty, then lines 3–4 and 10–11 update min and max
+properly.
+

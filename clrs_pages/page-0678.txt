@@ -1,0 +1,45 @@
+24.2 Single-source shortest paths in directed acyclic graphs                             657
+
+
+cess the vertices in topologically sorted order, we relax the edges on p in the
+order .0 ; 1 /; .1 ; 2 /; : : : ; .k1 ; k /. The path-relaxation property implies that
+i :d D ı.s; i / at termination for i D 0; 1; : : : ; k. Finally, by the predecessor-
+subgraph property, G is a shortest-paths tree.
+
+   An interesting application of this algorithm arises in determining critical paths
+in PERT chart2 analysis. Edges represent jobs to be performed, and edge weights
+represent the times required to perform particular jobs. If edge .u; / enters ver-
+tex  and edge .; x/ leaves , then job .u; / must be performed before job .; x/.
+A path through this dag represents a sequence of jobs that must be performed in a
+particular order. A critical path is a longest path through the dag, corresponding
+to the longest time to perform any sequence of jobs. Thus, the weight of a critical
+path provides a lower bound on the total time to perform all the jobs. We can ﬁnd
+a critical path by either
+   negating the edge weights and running DAG -S HORTEST-PATHS, or
+   running DAG -S HORTEST-PATHS, with the modiﬁcation that we replace “1”
+    by “1” in line 2 of I NITIALIZE -S INGLE -S OURCE and “>” by “<” in the
+    R ELAX procedure.
+
+Exercises
+
+24.2-1
+Run DAG -S HORTEST-PATHS on the directed graph of Figure 24.5, using vertex r
+as the source.
+
+24.2-2
+Suppose we change line 3 of DAG -S HORTEST-PATHS to read
+
+3 for the ﬁrst jV j  1 vertices, taken in topologically sorted order
+
+Show that the procedure would remain correct.
+
+24.2-3
+The PERT chart formulation given above is somewhat unnatural. In a more natu-
+ral structure, vertices would represent jobs and edges would represent sequencing
+constraints; that is, edge .u; / would indicate that job u must be performed before
+job . We would then assign weights to vertices, not edges. Modify the DAG -
+S HORTEST-PATHS procedure so that it ﬁnds a longest path in a directed acyclic
+graph with weighted vertices in linear time.
+
+2 “PERT” is an acronym for “program evaluation and review technique.”
+

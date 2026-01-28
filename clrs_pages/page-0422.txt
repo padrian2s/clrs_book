@@ -1,0 +1,49 @@
+15.5 Optimal binary search trees                                                      401
+
+
+             X
+             j
+                          X
+                          j
+
+w.i; j / D         pl C            ql :                                          (15.12)
+             lDi          lDi 1
+
+Thus, if kr is the root of an optimal subtree containing keys ki ; : : : ; kj , we have
+eŒi; j  D pr C .eŒi; r  1 C w.i; r  1// C .eŒr C 1; j  C w.r C 1; j // :
+Noting that
+w.i; j / D w.i; r  1/ C pr C w.r C 1; j / ;
+we rewrite eŒi; j  as
+eŒi; j  D eŒi; r  1 C eŒr C 1; j  C w.i; j / :                               (15.13)
+   The recursive equation (15.13) assumes that we know which node kr to use as
+the root. We choose the root that gives the lowest expected search cost, giving us
+our ﬁnal recursive formulation:
+           (
+             qi 1                                        if j D i  1 ;
+eŒi; j  D                                                                 (15.14)
+              min feŒi; r  1 C eŒr C 1; j  C w.i; j /g if i  j :
+              i rj
+
+   The eŒi; j  values give the expected search costs in optimal binary search trees.
+To help us keep track of the structure of optimal binary search trees, we deﬁne
+rootŒi; j , for 1  i  j  n, to be the index r for which kr is the root of an
+optimal binary search tree containing keys ki ; : : : ; kj . Although we will see how
+to compute the values of rootŒi; j , we leave the construction of an optimal binary
+search tree from these values as Exercise 15.5-1.
+
+Step 3: Computing the expected search cost of an optimal binary search tree
+At this point, you may have noticed some similarities between our characterizations
+of optimal binary search trees and matrix-chain multiplication. For both problem
+domains, our subproblems consist of contiguous index subranges. A direct, recur-
+sive implementation of equation (15.14) would be as inefﬁcient as a direct, recur-
+sive matrix-chain multiplication algorithm. Instead, we store the eŒi; j  values in a
+table eŒ1 : : n C 1; 0 : : n. The ﬁrst index needs to run to n C 1 rather than n because
+in order to have a subtree containing only the dummy key dn , we need to compute
+and store eŒn C 1; n. The second index needs to start from 0 because in order to
+have a subtree containing only the dummy key d0 , we need to compute and store
+eŒ1; 0. We use only the entries eŒi; j  for which j  i  1. We also use a table
+rootŒi; j , for recording the root of the subtree containing keys ki ; : : : ; kj . This
+table uses only the entries for which 1  i  j  n.
+   We will need one other table for efﬁciency. Rather than compute the value
+of w.i; j / from scratch every time we are computing eŒi; j —which would take
+

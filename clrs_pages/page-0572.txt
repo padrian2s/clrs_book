@@ -1,0 +1,46 @@
+20.3 The van Emde Boas tree                                                        551
+
+
+V EB-T REE -S UCCESSOR .V; x/
+ 1   if V:u == 2
+ 2        if x == 0 and V:max == 1
+ 3             return 1
+ 4        else return NIL
+ 5   elseif V:min ¤ NIL and x < V:min
+ 6        return V:min
+ 7   else max-low D V EB-T REE -M AXIMUM .V:clusterŒhigh.x//
+ 8        if max-low ¤ NIL and low.x/ < max-low
+ 9             offset D V EB-T REE -S UCCESSOR .V:clusterŒhigh.x/; low.x//
+10             return index.high.x/; offset/
+11        else succ-cluster D V EB-T REE -S UCCESSOR .V:summary; high.x//
+12             if succ-cluster == NIL
+13                  return NIL
+14             else offset D V EB-T REE -M INIMUM .V:clusterŒsucc-cluster/
+15                  return index.succ-cluster; offset/
+
+   This procedure has six return statements and several cases. We start with the
+base case in lines 2–4, which returns 1 in line 3 if we are trying to ﬁnd the successor
+of 0 and 1 is in the 2-element set; otherwise, the base case returns NIL in line 4.
+   If we are not in the base case, we next check in line 5 whether x is strictly less
+than the minimum element. If so, then we simply return the minimum element in
+line 6.
+   If we get to line 7, then we know that we are not in a base case and that x is
+greater than or equal to the minimum value in the vEB tree V . Line 7 assigns to
+max-low the maximum element in x’s cluster. If x’s cluster contains some element
+that is greater than x, then we know that x’s successor lies somewhere within x’s
+cluster. Line 8 tests for this condition. If x’s successor is within x’s cluster, then
+line 9 determines where in the cluster it is, and line 10 returns the successor in the
+same way as line 7 of P ROTO - V EB-S UCCESSOR.
+   We get to line 11 if x is greater than or equal to the greatest element in its
+cluster. In this case, lines 11–15 ﬁnd x’s successor in the same way as lines 8–12
+of P ROTO - V EB-S UCCESSOR.
+   It is easy to see how recurrence (20.4) characterizes the running time of V EB-
+T REE -S UCCESSOR. Depending on the result of the test in line 7, the procedure p
+                                              a vEB tree with universe size # u) or
+calls itself recursively in either line 9 (on p
+line 11 (on a vEB tree with universe size " u). pIn either case, the one recursive
+call is on a vEB tree with universe size at most " u. The remainder of the proce-
+dure, including the calls to V EB-T REE -M INIMUM and V EB-T REE -M AXIMUM,
+takes O.1/ time. Hence, V EB-T REE -S UCCESSOR runs in O.lg lg u/ worst-case
+time.
+

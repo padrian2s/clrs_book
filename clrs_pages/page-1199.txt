@@ -1,0 +1,50 @@
+1178           Appendix B        Sets, Etc.
+
+
+                   3                                      3                                           3
+
+
+           2                 7                    2            7                          2                       7
+
+
+       4       1         5                    4       1              5               4          1           5
+
+
+           6                                      6                                       6
+
+
+                   (a)                                (b)                                            (c)
+
+
+               Figure B.7 Binary trees. (a) A binary tree drawn in a standard way. The left child of a node is
+               drawn beneath the node and to the left. The right child is drawn beneath and to the right. (b) A binary
+               tree different from the one in (a). In (a), the left child of node 7 is 5 and the right child is absent.
+               In (b), the left child of node 7 is absent and the right child is 5. As ordered trees, these trees are
+               the same, but as binary trees, they are distinct. (c) The binary tree in (a) represented by the internal
+               nodes of a full binary tree: an ordered tree in which each internal node has degree 2. The leaves in
+               the tree are shown as squares.
+
+
+                   is composed of three disjoint sets of nodes: a root node, a binary tree called its
+                    left subtree, and a binary tree called its right subtree.
+               The binary tree that contains no nodes is called the empty tree or null tree, some-
+               times denoted NIL. If the left subtree is nonempty, its root is called the left child of
+               the root of the entire tree. Likewise, the root of a nonnull right subtree is the right
+               child of the root of the entire tree. If a subtree is the null tree NIL, we say that the
+               child is absent or missing. Figure B.7(a) shows a binary tree.
+                  A binary tree is not simply an ordered tree in which each node has degree at
+               most 2. For example, in a binary tree, if a node has just one child, the position
+               of the child—whether it is the left child or the right child—matters. In an or-
+               dered tree, there is no distinguishing a sole child as being either left or right. Fig-
+               ure B.7(b) shows a binary tree that differs from the tree in Figure B.7(a) because of
+               the position of one node. Considered as ordered trees, however, the two trees are
+               identical.
+                  We can represent the positioning information in a binary tree by the internal
+               nodes of an ordered tree, as shown in Figure B.7(c). The idea is to replace each
+               missing child in the binary tree with a node having no children. These leaf nodes
+               are drawn as squares in the ﬁgure. The tree that results is a full binary tree: each
+               node is either a leaf or has degree exactly 2. There are no degree-1 nodes. Conse-
+               quently, the order of the children of a node preserves the position information.
+                  We can extend the positioning information that distinguishes binary trees from
+               ordered trees to trees with more than 2 children per node. In a positional tree, the
+

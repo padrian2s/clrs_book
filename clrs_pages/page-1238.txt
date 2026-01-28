@@ -1,0 +1,35 @@
+D          Matrices
+
+
+
+
+           Matrices arise in numerous applications, including, but by no means limited to,
+           scientiﬁc computing. If you have seen matrices before, much of the material in this
+           appendix will be familiar to you, but some of it might be new. Section D.1 covers
+           basic matrix deﬁnitions and operations, and Section D.2 presents some basic matrix
+           properties.
+
+
+D.1 Matrices and matrix operations
+
+           In this section, we review some basic concepts of matrix theory and some funda-
+           mental properties of matrices.
+
+           Matrices and vectors
+           A matrix is a rectangular array of numbers. For example,
+                                    
+                     a11 a12 a13
+           A D
+                     a21 a22 a23
+                              
+                     1 2 3
+              D                                                                         (D.1)
+                     4 5 6
+           is a 2 3 matrix A D .aij /, where for i D 1; 2 and j D 1; 2; 3, we denote the
+           element of the matrix in row i and column j by aij . We use uppercase letters
+           to denote matrices and corresponding subscripted lowercase letters to denote their
+           elements. We denote the set of all m n matrices with real-valued entries by Rmn
+           and, in general, the set of m n matrices with entries drawn from a set S by S mn .
+              The transpose of a matrix A is the matrix AT obtained by exchanging the rows
+           and columns of A. For the matrix A of equation (D.1),
+

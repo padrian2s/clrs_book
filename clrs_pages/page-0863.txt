@@ -1,0 +1,37 @@
+842        Chapter 28 Matrix Operations
+
+
+           f. Show how to determine a natural cubic spline that interpolates a set of n C 1
+              points .xi ; yi / satisfying x0 < x1 <    < xn , even when xi is not necessarily
+              equal to i. What matrix equation must your method solve, and how quickly
+              does your algorithm run?
+
+
+Chapter notes
+
+           Many excellent texts describe numerical and scientiﬁc computation in much greater
+           detail than we have room for here. The following are especially readable: George
+           and Liu [132], Golub and Van Loan [144], Press, Teukolsky, Vetterling, and Flan-
+           nery [283, 284], and Strang [323, 324].
+              Golub and Van Loan [144] discuss numerical stability. They show why det.A/
+           is not necessarily a good indicator of the stability ofPa matrix A, proposing instead
+                                                                    n
+           to use kAk1 kA1 k1 , where kAk1 D max1i n j D1 jaij j. They also address
+           the question of how to compute this value without actually computing A1 .
+              Gaussian elimination, upon which the LU and LUP decompositions are based,
+           was the ﬁrst systematic method for solving linear systems of equations. It was also
+           one of the earliest numerical algorithms. Although it was known earlier, its dis-
+           covery is commonly attributed to C. F. Gauss (1777–1855). In his famous paper
+           [325], Strassen showed that an n n matrix can be inverted in O.nlg 7 / time. Wino-
+           grad [358] originally proved that matrix multiplication is no harder than matrix
+           inversion, and the converse is due to Aho, Hopcroft, and Ullman [5].
+              Another important matrix decomposition is the singular value decomposition,
+           or SVD. The SVD factors an m n matrix A into A D Q1 †Q2T , where † is an
+           m n matrix with nonzero values only on the diagonal, Q1 is m m with mutually
+           orthonormal columns, and Q2 is n n, also with mutually orthonormal columns.
+           Two vectors are orthonormal if their inner product is 0 and each vector has a norm
+           of 1. The books by Strang [323, 324] and Golub and Van Loan [144] contain good
+           treatments of the SVD.
+              Strang [324] has an excellent presentation of symmetric positive-deﬁnite matri-
+           ces and of linear algebra in general.
+

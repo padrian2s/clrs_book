@@ -1,0 +1,56 @@
+12.4 Randomly built binary search trees                                                     301
+
+
+for i D 1; 2; : : : ; n. Because exactly one value of Zn;i is 1 and all others are 0, we
+also have
+       X
+       n
+Yn D          Zn;i .2  max.Yi 1 ; Yni // :
+       i D1
+
+We shall show that E ŒYn  is polynomial in n, which will ultimately imply that
+E ŒXn  D O.lg n/.
+   We claim that the indicator random variable Zn;i D I fRn D ig is independent
+of the values of Yi 1 and Yni . Having chosen Rn D i, the left subtree (whose
+exponential height is Yi 1 ) is randomly built on the i  1 keys whose ranks are
+less than i. This subtree is just like any other randomly built binary search tree
+on i  1 keys. Other than the number of keys it contains, this subtree’s structure
+is not affected at all by the choice of Rn D i, and hence the random variables
+Yi 1 and Zn;i are independent. Likewise, the right subtree, whose exponential
+height is Yni , is randomly built on the n  i keys whose ranks are greater than i.
+Its structure is independent of the value of Rn , and so the random variables Yni
+and Zn;i are independent. Hence, we have
+                " n                                  #
+                  X
+E ŒYn  D E            Zn;i .2  max.Yi 1 ; Yni //
+                        i D1
+                 X
+                 n
+         D              E ŒZn;i .2  max.Yi 1 ; Yni //   (by linearity of expectation)
+                 i D1
+                 X n
+         D              E ŒZn;i  E Œ2  max.Yi 1 ; Yni / (by independence)
+                 i D1
+                 X
+                 n
+                   1
+         D                   E Œ2  max.Yi 1 ; Yni /    (by equation (12.1))
+                 i D1
+                      n
+                  2X
+                        n
+         D               E Œmax.Yi 1 ; Yni /             (by equation (C.22))
+                  n i D1
+                  2X
+                        n
+                        .E ŒYi 1  C E ŒYni /           (by Exercise C.3-4) .
+                  n i D1
+
+Since each term E ŒY0  ; E ŒY1  ; : : : ; E ŒYn1  appears twice in the last summation,
+once as E ŒYi 1  and once as E ŒYni , we have the recurrence
+
+              4X
+                n1
+E ŒYn              E ŒYi  :                                                         (12.2)
+              n i D0
+

@@ -1,0 +1,45 @@
+           16.5 A task-scheduling problem as a matroid                                             443
+
+
+           Exercises
+
+           16.4-1
+           Show that .S;  k / is a matroid, where S is any ﬁnite set and  k is the set of all
+           subsets of S of size at most k, where k  jSj.
+
+           16.4-2 ?
+           Given an m n matrix T over some ﬁeld (such as the reals), show that .S;  / is a
+           matroid, where S is the set of columns of T and A 2  if and only if the columns
+           in A are linearly independent.
+
+           16.4-3 ?
+           Show that if .S;  / is a matroid, then .S;  0 / is a matroid, where
+            0 D fA0 W S  A0 contains some maximal A 2  g :
+           That is, the maximal independent sets of .S;  0 / are just the complements of the
+           maximal independent sets of .S;  /.
+
+           16.4-4 ?
+           Let S be a ﬁnite set and let S1 ; S2 ; : : : ; Sk be a partition of S into nonempty disjoint
+           subsets. Deﬁne the structure .S;  / by the condition that  D fA W jA \ Si j  1
+           for i D 1; 2; : : : ; kg. Show that .S;  / is a matroid. That is, the set of all sets A
+           that contain at most one member of each subset in the partition determines the
+           independent sets of a matroid.
+
+           16.4-5
+           Show how to transform the weight function of a weighted matroid problem, where
+           the desired optimal solution is a minimum-weight maximal independent subset, to
+           make it a standard weighted-matroid problem. Argue carefully that your transfor-
+           mation is correct.
+
+
+
+? 16.5 A task-scheduling problem as a matroid
+
+           An interesting problem that we can solve using matroids is the problem of op-
+           timally scheduling unit-time tasks on a single processor, where each task has a
+           deadline, along with a penalty paid if the task misses its deadline. The problem
+           looks complicated, but we can solve it in a surprisingly simple manner by casting
+           it as a matroid and using a greedy algorithm.
+              A unit-time task is a job, such as a program to be run on a computer, that requires
+           exactly one unit of time to complete. Given a ﬁnite set S of unit-time tasks, a
+

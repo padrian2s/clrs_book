@@ -1,0 +1,25 @@
+           Notes for Appendix D                                                         1229
+
+
+           and
+                        
+                     0
+           cD                ;
+                     1
+           we get the following permutation A;c : A;c .0/ D 2, A;c .1/ D 1, A;c .2/ D 0,
+           A;c .3/ D 3. We call any permutation that maps x 2 Sn to Ax C c, for some n n
+           0-1 matrix A with full rank and some n-bit vector c, a linear permutation.
+
+           d. Use a counting argument to show that the number of linear permutations of Sn
+              is much less than the number of permutations of Sn .
+
+           e. Give an example of a value of n and a permutation of Sn that cannot be achieved
+              by any linear permutation. (Hint: For a given permutation, think about how
+              multiplying a matrix by a unit vector relates to the columns of the matrix.)
+
+
+Appendix notes
+
+           Linear-algebra textbooks provide plenty of background information on matrices.
+           The books by Strang [323, 324] are particularly good.
+

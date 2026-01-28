@@ -1,0 +1,61 @@
+8.4 Bucket sort                                                              203
+
+                  "                !2 #
+                    X
+                      n
+E n2i D E                    Xij
+                      j D1
+                  " n n                    #
+                   XX
+         D E                    Xij Xi k
+                     j D1 kD1
+            2 n                                            3
+             X         X                       X
+         D E4   Xij2 C                             Xij Xi k 5
+                  j D1              1j n 1kn
+                                            k¤j
+
+              X
+              n
+                       X                     X
+         D      E Xij2 C                           E ŒXij Xi k  ;          (8.3)
+              j D1                  1j n 1kn
+                                            k¤j
+
+where the last line follows by linearity of expectation. We evaluate the two sum-
+mations separately. Indicator random variable Xij is 1 with probability 1=n and 0
+otherwise, and therefore
+                                   
+   2          2 1      2        1
+E Xij D 1  C 0  1 
+                   n              n
+              1
+         D       :
+              n
+When k ¤ j , the variables Xij and Xi k are independent, and hence
+E ŒXij Xi k  D E ŒXij  E ŒXi k 
+                  1 1
+              D     
+                  n n
+                  1
+              D       :
+                  n2
+Substituting these two expected values in equation (8.3), we obtain
+      X n
+             1   X X 1
+E n2i D        C
+        j D1
+             n 1j n n2
+                                     1kn
+                                      k¤j
+               1              1
+         D n    C n.n  1/  2
+               n             n
+                 n1
+        D 1C
+                   n
+                1
+        D 2 ;
+                n
+which proves equation (8.2).
+

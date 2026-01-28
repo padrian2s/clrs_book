@@ -1,0 +1,37 @@
+Chapter 29    Linear Programming                                                         845
+
+
+keep costs as small as possible, you would like to minimize the amount spent on
+advertising. That is, you want to minimize the expression
+x1 C x2 C x3 C x4 :                                                                   (29.4)
+Although negative advertising often occurs in political campaigns, there is no such
+thing as negative-cost advertising. Consequently, we require that
+x1  0; x2  0; x3  0; and x4  0 :                                                  (29.5)
+Combining inequalities (29.1)–(29.3) and (29.5) with the objective of minimiz-
+ing (29.4), we obtain what is known as a “linear program.” We format this problem
+as
+minimize            x1 C        x2   C      x3    C       x4                          (29.6)
+subject to
+                2x1 C 8x2 C 0x3                  C 10x4              50            (29.7)
+                 5x1 C 2x2 C 0x3                  C 0x4               100           (29.8)
+                 3x1  5x2 C 10x3                  2x4               25            (29.9)
+                    x1 ; x2 ; x3 ; x4                                   0 :        (29.10)
+The solution of this linear program yields your optimal strategy.
+
+General linear programs
+In the general linear-programming problem, we wish to optimize a linear function
+subject to a set of linear inequalities. Given a set of real numbers a1 ; a2 ; : : : ; an and
+a set of variables x1 ; x2 ; : : : ; xn , we deﬁne a linear function f on those variables
+by
+                                                              X
+                                                              n
+f .x1 ; x2 ; : : : ; xn / D a1 x1 C a2 x2 C    C an xn D          aj xj :
+                                                              j D1
+
+If b is a real number and f is a linear function, then the equation
+f .x1 ; x2 ; : : : ; xn / D b
+is a linear equality and the inequalities
+f .x1 ; x2 ; : : : ; xn /  b
+and
+f .x1 ; x2 ; : : : ; xn /  b
+

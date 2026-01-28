@@ -1,0 +1,45 @@
+688   Chapter 25 All-Pairs Shortest Paths
+
+
+      Computing the shortest-path weights bottom up
+      Taking as our input the matrix W D .wij /, we now compute a series of matrices
+      L.1/ ; L.2/ ; : : : ; L.n1/ , where for m D 1; 2; : : : ; n  1, we have L.m/ D lij.m/ .
+      The ﬁnal matrix L.n1/ contains the actual shortest-path weights. Observe that
+      lij.1/ D wij for all vertices i; j 2 V , and so L.1/ D W .
+           The heart of the algorithm is the following procedure, which, given matrices
+      L.m1/ and W , returns the matrix L.m/ . That is, it extends the shortest paths com-
+      puted so far by one more edge.
+
+      E XTEND -S HORTEST-PATHS .L; W /
+      1 n D L:rows
+      2 let L0 D lij0 be a new n n matrix
+      3 for i D 1 to n
+      4      for j D 1 to n
+      5           lij0 D 1
+      6           for k D 1 to n
+      7                 lij0 D min.lij0 ; li k C wkj /
+                  0
+      8 return L
+
+      The procedure computes a matrix L0 D .lij0 /, which it returns at the end. It does so
+      by computing equation (25.2) for all i and j , using L for L.m1/ and L0 for L.m/ .
+      (It is written without the superscripts to make its input and output matrices inde-
+      pendent of m.) Its running time is ‚.n3 / due to the three nested for loops.
+         Now we can see the relation to matrix multiplication. Suppose we wish to com-
+      pute the matrix product C D A  B of two n n matrices A and B. Then, for
+      i; j D 1; 2; : : : ; n, we compute
+                 X
+                 n
+      cij D            ai k  bkj :                                                     (25.4)
+                 kD1
+
+      Observe that if we make the substitutions
+      l .m1/     !       a;
+            w     !       b;
+           .m/
+         l        !       c;
+         min      !       C;
+            C     !       
+      in equation (25.2), we obtain equation (25.4). Thus, if we make these changes to
+      E XTEND -S HORTEST-PATHS and also replace 1 (the identity for min) by 0 (the
+

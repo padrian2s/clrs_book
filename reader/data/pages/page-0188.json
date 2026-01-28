@@ -1,0 +1,5 @@
+{
+  "page": 188,
+  "title": "7.3 A Randomized Version of Quicksort",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 7.3</div>\n    <h1>A Randomized Version of Quicksort</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Randomize pivot selection to avoid worst-case on any specific input.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Pick pivot randomly instead of always using last element</li>\n<li>Expected time O(n log n) for ANY input</li>\n<li>No adversary can construct worst-case input</li>\n<li>Simple change: swap random element with A[r] before partition</li></ul>\n    </div>\n\n    <div class=\"algorithm\">\n    <h4>Pseudocode</h4>\n    <pre style=\"font-size: 0.85rem; line-height: 1.6;\">RANDOMIZED-PARTITION(A, p, r):\n    i = RANDOM(p, r)\n    swap A[i] and A[r]\n    return PARTITION(A, p, r)</pre>\n</div>\n    \n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Makes quicksort robust against adversarial inputs.</p>\n</div>\n</div>"
+}

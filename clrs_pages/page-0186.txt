@@ -1,0 +1,50 @@
+6.5 Priority queues                                                                                   165
+
+
+
+                              16                                                       16
+
+
+                 14                     10                                14                     10
+
+
+    8                     7         9        3              8                      7         9        3
+             i                                                        i
+2        4            1                                 2        15            1
+
+                              (a)                                                      (b)
+
+
+
+                              16                                                       16
+                                                                          i
+                 14                     10                                15                     10
+    i
+    15                    7         9        3              14                     7         9        3
+
+
+2        8            1                                 2        8             1
+
+                              (c)                                                      (d)
+
+
+Figure 6.5 The operation of H EAP -I NCREASE -K EY. (a) The max-heap of Figure 6.4(a) with a
+node whose index is i heavily shaded. (b) This node has its key increased to 15. (c) After one
+iteration of the while loop of lines 4–6, the node and its parent have exchanged keys, and the index i
+moves up to the parent. (d) The max-heap after one more iteration of the while loop. At this point,
+AŒPARENT.i/  AŒi. The max-heap property now holds and the procedure terminates.
+
+
+6.5-2
+Illustrate the operation of M AX -H EAP -I NSERT .A; 10/ on the heap A D h15; 13; 9;
+5; 12; 8; 7; 4; 0; 6; 2; 1i.
+
+6.5-3
+Write pseudocode for the procedures H EAP -M INIMUM, H EAP -E XTRACT-M IN,
+H EAP -D ECREASE -K EY, and M IN -H EAP -I NSERT that implement a min-priority
+queue with a min-heap.
+
+6.5-4
+Why do we bother setting the key of the inserted node to 1 in line 2 of M AX -
+H EAP -I NSERT when the next thing we do is increase its key to the desired value?
+

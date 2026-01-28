@@ -1,0 +1,58 @@
+           6.4 The heapsort algorithm                                                       159
+
+
+           blg nc l
+                                                        !
+           X           n m                X h
+                                          blg nc
+
+                             O.h/ D O n                     :
+                      2hC1                         2h
+           hD0                            hD0
+
+           We evalaute the last summation by substituting x D 1=2 in the formula (A.8),
+           yielding
+           X
+           1
+             h                  1=2
+                        D
+                 2h          .1  1=2/2
+           hD0
+                        D 2:
+           Thus, we can bound the running time of B UILD -M AX -H EAP as
+                           !                !
+                 X h
+                 blg nc
+                                     X1
+                                          h
+           O n               D O n
+                        2h               2h
+                      hD0                 hD0
+                                D O.n/ :
+           Hence, we can build a max-heap from an unordered array in linear time.
+             We can build a min-heap by the procedure B UILD -M IN -H EAP, which is the
+           same as B UILD -M AX -H EAP but with the call to M AX -H EAPIFY in line 3 replaced
+           by a call to M IN -H EAPIFY (see Exercise 6.2-2). B UILD -M IN -H EAP produces a
+           min-heap from an unordered linear array in linear time.
+
+           Exercises
+
+           6.3-1
+           Using Figure 6.3 as a model, illustrate the operation of B UILD -M AX -H EAP on the
+           array A D h5; 3; 17; 10; 84; 19; 6; 22; 9i.
+
+           6.3-2
+           Why do we want the loop index i in line 2 of B UILD -M AX -H EAP to decrease from
+           bA:length=2c to 1 rather than increase from 1 to bA:length=2c?
+
+           6.3-3                      ˙      
+           Show that there are at most n=2hC1 nodes of height h in any n-element heap.
+
+
+
+6.4 The heapsort algorithm
+
+           The heapsort algorithm starts by using B UILD -M AX -H EAP to build a max-heap
+           on the input array AŒ1 : : n, where n D A:length. Since the maximum element
+           of the array is stored at the root AŒ1, we can put it into its correct ﬁnal position
+

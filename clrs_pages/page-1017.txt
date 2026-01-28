@@ -1,0 +1,47 @@
+996   Chapter 32 String Matching
+
+
+                                              a
+              input               b
+      state   a b                     0               1
+        0     1   0                           a
+        1     0   0                           b
+
+                (a)                          (b)
+
+
+      Figure 32.6 A simple two-state ﬁnite automaton with state set Q D f0; 1g, start state q0 D 0,
+      and input alphabet † D fa; bg. (a) A tabular representation of the transition function ı. (b) An
+      equivalent state-transition diagram. State 1, shown blackend, is the only accepting state. Directed
+      edges represent transitions. For example, the edge from state 1 to state 0 labeled b indicates that
+      ı.1; b/ D 0. This automaton accepts those strings that end in an odd number of a’s. More precisely,
+      it accepts a string x if and only if x D y´, where y D " or y ends with a b, and ´ D ak , where k is
+      odd. For example, on input abaaa, including the start state, this automaton enters the sequence of
+      states h0; 1; 0; 1; 0; 1i, and so it accepts this input. For input abbaa, it enters the sequence of states
+      h0; 1; 0; 0; 1; 0i, and so it rejects this input.
+
+
+         The ﬁnite automaton begins in state q0 and reads the characters of its input string
+      one at a time. If the automaton is in state q and reads input character a, it moves
+      (“makes a transition”) from state q to state ı.q; a/. Whenever its current state q is
+      a member of A, the machine M has accepted the string read so far. An input that
+      is not accepted is rejected.
+         A ﬁnite automaton M induces a function , called the ﬁnal-state function,
+      from † to Q such that .w/ is the state M ends up in after scanning the string w.
+      Thus, M accepts a string w if and only if .w/ 2 A. We deﬁne the function 
+      recursively, using the transition function:
+        ."/ D q0 ;
+      .wa/ D ı..w/; a/ for w 2 † ; a 2 † .
+
+      String-matching automata
+      For a given pattern P , we construct a string-matching automaton in a preprocess-
+      ing step before using it to search the text string. Figure 32.7 illustrates how we
+      construct the automaton for the pattern P D ababaca. From now on, we shall
+      assume that P is a given ﬁxed pattern string; for brevity, we shall not indicate the
+      dependence upon P in our notation.
+         In order to specify the string-matching automaton corresponding to a given pat-
+      tern P Œ1 : : m, we ﬁrst deﬁne an auxiliary function , called the sufﬁx function
+      corresponding to P . The function maps † to f0; 1; : : : ; mg such that .x/ is the
+      length of the longest preﬁx of P that is also a sufﬁx of x:
+        .x/ D max fk W Pk = xg :                                                                        (32.3)
+

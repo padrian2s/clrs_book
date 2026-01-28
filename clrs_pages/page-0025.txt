@@ -1,0 +1,34 @@
+4   Part I Foundations
+
+
+       Chapter 4 delves further into the divide-and-conquer method introduced in
+    Chapter 2. It provides additional examples of divide-and-conquer algorithms, in-
+    cluding Strassen’s surprising method for multiplying two square matrices. Chap-
+    ter 4 contains methods for solving recurrences, which are useful for describing
+    the running times of recursive algorithms. One powerful technique is the “mas-
+    ter method,” which we often use to solve recurrences that arise from divide-and-
+    conquer algorithms. Although much of Chapter 4 is devoted to proving the cor-
+    rectness of the master method, you may skip this proof yet still employ the master
+    method.
+       Chapter 5 introduces probabilistic analysis and randomized algorithms. We typ-
+    ically use probabilistic analysis to determine the running time of an algorithm in
+    cases in which, due to the presence of an inherent probability distribution, the
+    running time may differ on different inputs of the same size. In some cases, we
+    assume that the inputs conform to a known probability distribution, so that we are
+    averaging the running time over all possible inputs. In other cases, the probability
+    distribution comes not from the inputs but from random choices made during the
+    course of the algorithm. An algorithm whose behavior is determined not only by its
+    input but by the values produced by a random-number generator is a randomized
+    algorithm. We can use randomized algorithms to enforce a probability distribution
+    on the inputs—thereby ensuring that no particular input always causes poor perfor-
+    mance—or even to bound the error rate of algorithms that are allowed to produce
+    incorrect results on a limited basis.
+       Appendices A–D contain other mathematical material that you will ﬁnd helpful
+    as you read this book. You are likely to have seen much of the material in the
+    appendix chapters before having read this book (although the speciﬁc deﬁnitions
+    and notational conventions we use may differ in some cases from what you have
+    seen in the past), and so you should think of the Appendices as reference material.
+    On the other hand, you probably have not already seen most of the material in
+    Part I. All the chapters in Part I and the Appendices are written with a tutorial
+    ﬂavor.
+

@@ -1,0 +1,47 @@
+1042            Chapter 33 Computational Geometry
+
+
+                         PR
+            PL
+
+
+
+                                                                                         PR
+                   2δ                                                         PL
+                         pR                                               δ                   δ
+       δ   pL                                                                                       coincident points,
+                                                                                                        one in PL,
+                                                                                                        one in PR
+                                                                δ
+                                                                                                    coincident points,
+                                                                                                        one in PL,
+                     l                                                               l                  one in PR
+                   (a)                                                             (b)
+
+
+                Figure 33.11 Key concepts in the proof that the closest-pair algorithm needs to check only 7 points
+                following each point in the array Y 0 . (a) If pL 2 PL and pR 2 PR are less than ı units apart, they
+                must reside within a ı 2ı rectangle centered at line l. (b) How 4 points that are pairwise at least ı
+                units apart can all reside within a ı ı square. On the left are 4 points in PL , and on the right are 4
+                points in PR . The ı 2ı rectangle can contain 8 points if the points shown on line l are actually
+                pairs of coincident points with one point in PL and one in PR .
+
+
+                loss of generality that pL precedes pR in array Y 0 . Then, even if pL occurs as early
+                as possible in Y 0 and pR occurs as late as possible, pR is in one of the 7 positions
+                following pL . Thus, we have shown the correctness of the closest-pair algorithm.
+
+                Implementation and running time
+                As we have noted, our goal is to have the recurrence for the running time be T .n/ D
+                2T .n=2/ C O.n/, where T .n/ is the running time for a set of n points. The main
+                difﬁculty comes from ensuring that the arrays XL , XR , YL , and YR , which are
+                passed to recursive calls, are sorted by the proper coordinate and also that the
+                array Y 0 is sorted by y-coordinate. (Note that if the array X that is received by a
+                recursive call is already sorted, then we can easily divide set P into PL and PR in
+                linear time.)
+                   The key observation is that in each call, we wish to form a sorted subset of a
+                sorted array. For example, a particular invocation receives the subset P and the
+                array Y , sorted by y-coordinate. Having partitioned P into PL and PR , it needs to
+                form the arrays YL and YR , which are sorted by y-coordinate, in linear time. We
+                can view the method as the opposite of the M ERGE procedure from merge sort in
+

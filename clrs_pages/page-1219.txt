@@ -1,0 +1,43 @@
+1198   Appendix C    Counting and Probability
+
+
+       your earnings is
+       E ŒX  D 6  Pr f2 H’sg C 1  Pr f1 H, 1 Tg  4  Pr f2 T’sg
+              D 6.1=4/ C 1.1=2/  4.1=4/
+              D 1:
+          The expectation of the sum of two random variables is the sum of their expecta-
+       tions, that is,
+       E ŒX C Y  D E ŒX  C E ŒY  ;                                                (C.21)
+       whenever E ŒX  and E ŒY  are deﬁned. We call this property linearity of expecta-
+       tion, and it holds even if X and Y are not independent. It also extends to ﬁnite and
+       absolutely convergent summations of expectations. Linearity of expectation is the
+       key property that enables us to perform probabilistic analyses by using indicator
+       random variables (see Section 5.2).
+          If X is any random variable, any function g.x/ deﬁnes a new random vari-
+       able g.X /. If the expectation of g.X / is deﬁned, then
+                     X
+       E Œg.X / D      g.x/  Pr fX D xg :
+                        x
+
+       Letting g.x/ D ax, we have for any constant a,
+       E ŒaX  D aE ŒX  :                                                           (C.22)
+       Consequently, expectations are linear: for any two random variables X and Y and
+       any constant a,
+       E ŒaX C Y  D aE ŒX  C E ŒY  :                                              (C.23)
+          When two random variables X and Y are independent and each has a deﬁned
+       expectation,
+                    XX
+       E ŒX Y  D         xy  Pr fX D x and Y D yg
+                            x       y
+                        XX
+                    D                   xy  Pr fX D xg Pr fY D yg
+                            x       y
+                                                   !                     !
+                            X                          X
+                    D               x  Pr fX D xg          y  Pr fY D yg
+                                x                       y
+
+                    D E ŒX  E ŒY  :
+       In general, when n random variables X1 ; X2 ; : : : ; Xn are mutually independent,
+       E ŒX1 X2    Xn  D E ŒX1  E ŒX2     E ŒXn  :                         (C.24)
+

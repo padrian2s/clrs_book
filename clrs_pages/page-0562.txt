@@ -1,0 +1,43 @@
+20.2 A recursive structure                                                        541
+
+
+the summary structures altogether. The following procedure takes a proto-EB
+structure V and a value x, and it returns a bit indicating whether x is in the dynamic
+set held by V .
+
+P ROTO - V EB-M EMBER .V; x/
+1 if V:u == 2
+2        return V:AŒx
+3 else return P ROTO - V EB-M EMBER .V:clusterŒhigh.x/; low.x//
+
+   The P ROTO - V EB-M EMBER procedure works as follows. Line 1 tests whether
+we are in a base case, where V is a proto-EB.2/ structure. Line 2 handles the
+base case, simply returning the appropriate bit of array A. Line 3 deals with the
+recursive case, “drilling down” into the appropriate
+                                            p           smaller proto-vEB structure.
+The value high.x/ says which proto-EB. u/ p      structure we visit, and low.x/ de-
+termines which element within that proto-EB. u/ structure we are querying.
+   Let’s see what happens when we call P ROTO - V EB-M EMBER .V; 6/ on the
+proto-EB.16/ structure in Figure 20.4. Since high.6/ D 1 when u D 16, we
+recurse into the proto-EB.4/ structure in the upper right, and we ask about ele-
+ment low.6/ D 2 of that structure. In this recursive call, u D 4, and so we recurse
+again. With u D 4, we have high.2/ D 1 and low.2/ D 0, and so we ask about
+element 0 of the proto-EB.2/ structure in the upper right. This recursive call turns
+out to be a base case, and so it returns AŒ0 D 0 back up through the chain of re-
+cursive calls. Thus, we get the result that P ROTO - V EB-M EMBER .V; 6/ returns 0,
+indicating that 6 is not in the set.
+   To determine the running time of P ROTO - V EB-M EMBER, let T .u/ denote
+its running time on a proto-EB.u/ structure. Each recursive call takes con-
+stant time, not including the time taken by the recursive calls that it makes.
+When P ROTO  p - V EB-M EMBER makes a recursive call, it makes a call on a
+proto-EB. u/ structure.
+                    p        Thus, we can characterize the running time by the recur-
+rence T .u/ D T . u/ C O.1/, which we have already seen as recurrence (20.2).
+Its solution is T .u/ D O.lg lg u/, and so we conclude that P ROTO - V EB-M EMBER
+runs in time O.lg lg u/.
+
+Finding the minimum element
+Now we examine how to perform the M INIMUM operation. The procedure
+P ROTO - V EB-M INIMUM .V / returns the minimum element in the proto-vEB struc-
+ture V , or NIL if V represents an empty set.
+

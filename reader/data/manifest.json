@@ -1,0 +1,6572 @@
+{
+  "title": "Introduction to Algorithms, Third Edition",
+  "authors": "Cormen, Leiserson, Rivest, Stein",
+  "totalPages": 1313,
+  "pages": [
+    {
+      "page": 1,
+      "title": "Title Page",
+      "hasContent": true
+    },
+    {
+      "page": 2,
+      "title": "Half Title",
+      "hasContent": true
+    },
+    {
+      "page": 3,
+      "title": "Blank Page",
+      "hasContent": true
+    },
+    {
+      "page": 4,
+      "title": "Title Page (Full)",
+      "hasContent": true
+    },
+    {
+      "page": 5,
+      "title": "1.1 Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 6,
+      "title": "Table of Contents",
+      "hasContent": true
+    },
+    {
+      "page": 7,
+      "title": "Table of Contents",
+      "hasContent": true
+    },
+    {
+      "page": 8,
+      "title": "Table of Contents",
+      "hasContent": true
+    },
+    {
+      "page": 9,
+      "title": "Table of Contents",
+      "hasContent": true
+    },
+    {
+      "page": 10,
+      "title": "Table of Contents",
+      "hasContent": true
+    },
+    {
+      "page": 11,
+      "title": "Table of Contents",
+      "hasContent": true
+    },
+    {
+      "page": 12,
+      "title": "Table of Contents",
+      "hasContent": true
+    },
+    {
+      "page": 13,
+      "title": "Table of Contents",
+      "hasContent": true
+    },
+    {
+      "page": 14,
+      "title": "Table of Contents",
+      "hasContent": true
+    },
+    {
+      "page": 15,
+      "title": "Table of Contents",
+      "hasContent": true
+    },
+    {
+      "page": 16,
+      "title": "2.1 Insertion Sort",
+      "hasContent": true
+    },
+    {
+      "page": 17,
+      "title": "2.1 Insertion Sort",
+      "hasContent": true
+    },
+    {
+      "page": 18,
+      "title": "2.1 Insertion Sort",
+      "hasContent": true
+    },
+    {
+      "page": 19,
+      "title": "2.1 Insertion Sort",
+      "hasContent": true
+    },
+    {
+      "page": 20,
+      "title": "2.1 Insertion Sort",
+      "hasContent": true
+    },
+    {
+      "page": 21,
+      "title": "2.1 Insertion Sort",
+      "hasContent": true
+    },
+    {
+      "page": 22,
+      "title": "2.1 Insertion Sort",
+      "hasContent": true
+    },
+    {
+      "page": 23,
+      "title": "2.2 Analyzing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 24,
+      "title": "2.2 Analyzing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 25,
+      "title": "2.2 Analyzing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 26,
+      "title": "2.2 Analyzing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 27,
+      "title": "2.2 Analyzing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 28,
+      "title": "2.2 Analyzing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 29,
+      "title": "2.2 Analyzing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 30,
+      "title": "2.3 Designing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 31,
+      "title": "2.3 Designing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 32,
+      "title": "2.3 Designing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 33,
+      "title": "2.3 Designing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 34,
+      "title": "2.3 Designing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 35,
+      "title": "2.3 Designing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 36,
+      "title": "2.3 Designing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 37,
+      "title": "2.3 Designing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 38,
+      "title": "2.3 Designing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 39,
+      "title": "2.3 Designing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 40,
+      "title": "2.3 Designing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 41,
+      "title": "2.3 Designing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 42,
+      "title": "2.3 Designing Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 43,
+      "title": "3.1 Asymptotic Notation",
+      "hasContent": true
+    },
+    {
+      "page": 44,
+      "title": "3.1 Asymptotic Notation",
+      "hasContent": true
+    },
+    {
+      "page": 45,
+      "title": "3.1 Asymptotic Notation",
+      "hasContent": true
+    },
+    {
+      "page": 46,
+      "title": "3.1 Asymptotic Notation",
+      "hasContent": true
+    },
+    {
+      "page": 47,
+      "title": "3.1 Asymptotic Notation",
+      "hasContent": true
+    },
+    {
+      "page": 48,
+      "title": "3.1 Asymptotic Notation",
+      "hasContent": true
+    },
+    {
+      "page": 49,
+      "title": "3.1 Asymptotic Notation",
+      "hasContent": true
+    },
+    {
+      "page": 50,
+      "title": "3.1 Asymptotic Notation",
+      "hasContent": true
+    },
+    {
+      "page": 51,
+      "title": "3.1 Asymptotic Notation",
+      "hasContent": true
+    },
+    {
+      "page": 52,
+      "title": "3.1 Asymptotic Notation",
+      "hasContent": true
+    },
+    {
+      "page": 53,
+      "title": "3.1 Asymptotic Notation",
+      "hasContent": true
+    },
+    {
+      "page": 54,
+      "title": "3.2 Standard Notations and Common Functions",
+      "hasContent": true
+    },
+    {
+      "page": 55,
+      "title": "3.2 Standard Notations and Common Functions",
+      "hasContent": true
+    },
+    {
+      "page": 56,
+      "title": "3.2 Standard Notations and Common Functions",
+      "hasContent": true
+    },
+    {
+      "page": 57,
+      "title": "3.2 Standard Notations and Common Functions",
+      "hasContent": true
+    },
+    {
+      "page": 58,
+      "title": "3.2 Standard Notations and Common Functions",
+      "hasContent": true
+    },
+    {
+      "page": 59,
+      "title": "3.2 Standard Notations and Common Functions",
+      "hasContent": true
+    },
+    {
+      "page": 60,
+      "title": "3.2 Standard Notations and Common Functions",
+      "hasContent": true
+    },
+    {
+      "page": 61,
+      "title": "3.2 Standard Notations and Common Functions",
+      "hasContent": true
+    },
+    {
+      "page": 62,
+      "title": "3.2 Standard Notations and Common Functions",
+      "hasContent": true
+    },
+    {
+      "page": 63,
+      "title": "3.2 Standard Notations and Common Functions",
+      "hasContent": true
+    },
+    {
+      "page": 64,
+      "title": "3.2 Standard Notations and Common Functions",
+      "hasContent": true
+    },
+    {
+      "page": 65,
+      "title": "4.1 The Maximum-Subarray Problem",
+      "hasContent": true
+    },
+    {
+      "page": 66,
+      "title": "4.1 The Maximum-Subarray Problem",
+      "hasContent": true
+    },
+    {
+      "page": 67,
+      "title": "4.1 The Maximum-Subarray Problem",
+      "hasContent": true
+    },
+    {
+      "page": 68,
+      "title": "4.1 The Maximum-Subarray Problem",
+      "hasContent": true
+    },
+    {
+      "page": 69,
+      "title": "4.1 The Maximum-Subarray Problem",
+      "hasContent": true
+    },
+    {
+      "page": 70,
+      "title": "4.1 The Maximum-Subarray Problem",
+      "hasContent": true
+    },
+    {
+      "page": 71,
+      "title": "4.1 The Maximum-Subarray Problem",
+      "hasContent": true
+    },
+    {
+      "page": 72,
+      "title": "4.1 The Maximum-Subarray Problem",
+      "hasContent": true
+    },
+    {
+      "page": 73,
+      "title": "4.1 The Maximum-Subarray Problem",
+      "hasContent": true
+    },
+    {
+      "page": 74,
+      "title": "4.1 The Maximum-Subarray Problem",
+      "hasContent": true
+    },
+    {
+      "page": 75,
+      "title": "4.1 The Maximum-Subarray Problem",
+      "hasContent": true
+    },
+    {
+      "page": 76,
+      "title": "4.2 Strassen's Algorithm for Matrix Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 77,
+      "title": "4.2 Strassen's Algorithm for Matrix Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 78,
+      "title": "4.2 Strassen's Algorithm for Matrix Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 79,
+      "title": "4.2 Strassen's Algorithm for Matrix Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 80,
+      "title": "4.2 Strassen's Algorithm for Matrix Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 81,
+      "title": "4.2 Strassen's Algorithm for Matrix Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 82,
+      "title": "4.2 Strassen's Algorithm for Matrix Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 83,
+      "title": "4.3 The Substitution Method for Solving Recurrences",
+      "hasContent": true
+    },
+    {
+      "page": 84,
+      "title": "4.3 The Substitution Method for Solving Recurrences",
+      "hasContent": true
+    },
+    {
+      "page": 85,
+      "title": "4.3 The Substitution Method for Solving Recurrences",
+      "hasContent": true
+    },
+    {
+      "page": 86,
+      "title": "4.3 The Substitution Method for Solving Recurrences",
+      "hasContent": true
+    },
+    {
+      "page": 87,
+      "title": "4.3 The Substitution Method for Solving Recurrences",
+      "hasContent": true
+    },
+    {
+      "page": 88,
+      "title": "4.3 The Substitution Method for Solving Recurrences",
+      "hasContent": true
+    },
+    {
+      "page": 89,
+      "title": "4.3 The Substitution Method for Solving Recurrences",
+      "hasContent": true
+    },
+    {
+      "page": 90,
+      "title": "4.3 The Substitution Method for Solving Recurrences",
+      "hasContent": true
+    },
+    {
+      "page": 91,
+      "title": "4.4 The Recursion-Tree Method",
+      "hasContent": true
+    },
+    {
+      "page": 92,
+      "title": "4.4 The Recursion-Tree Method",
+      "hasContent": true
+    },
+    {
+      "page": 93,
+      "title": "4.4 The Recursion-Tree Method",
+      "hasContent": true
+    },
+    {
+      "page": 94,
+      "title": "4.4 The Recursion-Tree Method",
+      "hasContent": true
+    },
+    {
+      "page": 95,
+      "title": "4.4 The Recursion-Tree Method",
+      "hasContent": true
+    },
+    {
+      "page": 96,
+      "title": "4.4 The Recursion-Tree Method",
+      "hasContent": true
+    },
+    {
+      "page": 97,
+      "title": "4.4 The Recursion-Tree Method",
+      "hasContent": true
+    },
+    {
+      "page": 98,
+      "title": "4.4 The Recursion-Tree Method",
+      "hasContent": true
+    },
+    {
+      "page": 99,
+      "title": "4.5 The Master Method",
+      "hasContent": true
+    },
+    {
+      "page": 100,
+      "title": "4.5 The Master Method",
+      "hasContent": true
+    },
+    {
+      "page": 101,
+      "title": "4.5 The Master Method",
+      "hasContent": true
+    },
+    {
+      "page": 102,
+      "title": "4.5 The Master Method",
+      "hasContent": true
+    },
+    {
+      "page": 103,
+      "title": "4.5 The Master Method",
+      "hasContent": true
+    },
+    {
+      "page": 104,
+      "title": "4.5 The Master Method",
+      "hasContent": true
+    },
+    {
+      "page": 105,
+      "title": "4.5 The Master Method",
+      "hasContent": true
+    },
+    {
+      "page": 106,
+      "title": "4.5 The Master Method",
+      "hasContent": true
+    },
+    {
+      "page": 107,
+      "title": "4.5 The Master Method",
+      "hasContent": true
+    },
+    {
+      "page": 108,
+      "title": "4.5 The Master Method",
+      "hasContent": true
+    },
+    {
+      "page": 109,
+      "title": "4.5 The Master Method",
+      "hasContent": true
+    },
+    {
+      "page": 110,
+      "title": "4.5 The Master Method",
+      "hasContent": true
+    },
+    {
+      "page": 111,
+      "title": "4.5 The Master Method",
+      "hasContent": true
+    },
+    {
+      "page": 112,
+      "title": "4.5 The Master Method",
+      "hasContent": true
+    },
+    {
+      "page": 113,
+      "title": "4.5 The Master Method",
+      "hasContent": true
+    },
+    {
+      "page": 114,
+      "title": "5.1 The Hiring Problem",
+      "hasContent": true
+    },
+    {
+      "page": 115,
+      "title": "5.1 The Hiring Problem",
+      "hasContent": true
+    },
+    {
+      "page": 116,
+      "title": "5.1 The Hiring Problem",
+      "hasContent": true
+    },
+    {
+      "page": 117,
+      "title": "5.1 The Hiring Problem",
+      "hasContent": true
+    },
+    {
+      "page": 118,
+      "title": "5.1 The Hiring Problem",
+      "hasContent": true
+    },
+    {
+      "page": 119,
+      "title": "5.1 The Hiring Problem",
+      "hasContent": true
+    },
+    {
+      "page": 120,
+      "title": "5.1 The Hiring Problem",
+      "hasContent": true
+    },
+    {
+      "page": 121,
+      "title": "5.2 Indicator Random Variables",
+      "hasContent": true
+    },
+    {
+      "page": 122,
+      "title": "5.2 Indicator Random Variables",
+      "hasContent": true
+    },
+    {
+      "page": 123,
+      "title": "5.2 Indicator Random Variables",
+      "hasContent": true
+    },
+    {
+      "page": 124,
+      "title": "5.2 Indicator Random Variables",
+      "hasContent": true
+    },
+    {
+      "page": 125,
+      "title": "5.2 Indicator Random Variables",
+      "hasContent": true
+    },
+    {
+      "page": 126,
+      "title": "5.2 Indicator Random Variables",
+      "hasContent": true
+    },
+    {
+      "page": 127,
+      "title": "5.2 Indicator Random Variables",
+      "hasContent": true
+    },
+    {
+      "page": 128,
+      "title": "5.2 Indicator Random Variables",
+      "hasContent": true
+    },
+    {
+      "page": 129,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 130,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 131,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 132,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 133,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 134,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 135,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 136,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 137,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 138,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 139,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 140,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 141,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 142,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 143,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 144,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 145,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 146,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 147,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 148,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 149,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 150,
+      "title": "5.3 Randomized Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 151,
+      "title": "6.1 Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 152,
+      "title": "6.1 Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 153,
+      "title": "6.1 Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 154,
+      "title": "6.1 Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 155,
+      "title": "6.1 Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 156,
+      "title": "6.2 Maintaining the Heap Property",
+      "hasContent": true
+    },
+    {
+      "page": 157,
+      "title": "6.2 Maintaining the Heap Property",
+      "hasContent": true
+    },
+    {
+      "page": 158,
+      "title": "6.2 Maintaining the Heap Property",
+      "hasContent": true
+    },
+    {
+      "page": 159,
+      "title": "6.2 Maintaining the Heap Property",
+      "hasContent": true
+    },
+    {
+      "page": 160,
+      "title": "6.3 Building a Heap",
+      "hasContent": true
+    },
+    {
+      "page": 161,
+      "title": "6.3 Building a Heap",
+      "hasContent": true
+    },
+    {
+      "page": 162,
+      "title": "6.3 Building a Heap",
+      "hasContent": true
+    },
+    {
+      "page": 163,
+      "title": "6.4 The Heapsort Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 164,
+      "title": "6.4 The Heapsort Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 165,
+      "title": "6.4 The Heapsort Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 166,
+      "title": "6.5 Priority Queues",
+      "hasContent": true
+    },
+    {
+      "page": 167,
+      "title": "6.5 Priority Queues",
+      "hasContent": true
+    },
+    {
+      "page": 168,
+      "title": "6.5 Priority Queues",
+      "hasContent": true
+    },
+    {
+      "page": 169,
+      "title": "6.5 Priority Queues",
+      "hasContent": true
+    },
+    {
+      "page": 170,
+      "title": "7.1 Description of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 171,
+      "title": "7.1 Description of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 172,
+      "title": "7.1 Description of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 173,
+      "title": "7.1 Description of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 174,
+      "title": "7.1 Description of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 175,
+      "title": "7.1 Description of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 176,
+      "title": "7.1 Description of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 177,
+      "title": "7.1 Description of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 178,
+      "title": "7.1 Description of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 179,
+      "title": "7.2 Performance of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 180,
+      "title": "7.2 Performance of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 181,
+      "title": "7.2 Performance of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 182,
+      "title": "7.2 Performance of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 183,
+      "title": "7.3 A Randomized Version of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 184,
+      "title": "7.3 A Randomized Version of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 185,
+      "title": "7.3 A Randomized Version of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 186,
+      "title": "7.3 A Randomized Version of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 187,
+      "title": "7.3 A Randomized Version of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 188,
+      "title": "7.3 A Randomized Version of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 189,
+      "title": "7.3 A Randomized Version of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 190,
+      "title": "7.3 A Randomized Version of Quicksort",
+      "hasContent": true
+    },
+    {
+      "page": 191,
+      "title": "8.1 Lower Bounds for Sorting",
+      "hasContent": true
+    },
+    {
+      "page": 192,
+      "title": "8.1 Lower Bounds for Sorting",
+      "hasContent": true
+    },
+    {
+      "page": 193,
+      "title": "8.1 Lower Bounds for Sorting",
+      "hasContent": true
+    },
+    {
+      "page": 194,
+      "title": "8.1 Lower Bounds for Sorting",
+      "hasContent": true
+    },
+    {
+      "page": 195,
+      "title": "8.1 Lower Bounds for Sorting",
+      "hasContent": true
+    },
+    {
+      "page": 196,
+      "title": "8.2 Counting Sort",
+      "hasContent": true
+    },
+    {
+      "page": 197,
+      "title": "8.2 Counting Sort",
+      "hasContent": true
+    },
+    {
+      "page": 198,
+      "title": "8.2 Counting Sort",
+      "hasContent": true
+    },
+    {
+      "page": 199,
+      "title": "8.2 Counting Sort",
+      "hasContent": true
+    },
+    {
+      "page": 200,
+      "title": "8.3 Radix Sort",
+      "hasContent": true
+    },
+    {
+      "page": 201,
+      "title": "8.3 Radix Sort",
+      "hasContent": true
+    },
+    {
+      "page": 202,
+      "title": "8.3 Radix Sort",
+      "hasContent": true
+    },
+    {
+      "page": 203,
+      "title": "8.3 Radix Sort",
+      "hasContent": true
+    },
+    {
+      "page": 204,
+      "title": "8.3 Radix Sort",
+      "hasContent": true
+    },
+    {
+      "page": 205,
+      "title": "8.4 Bucket Sort",
+      "hasContent": true
+    },
+    {
+      "page": 206,
+      "title": "8.4 Bucket Sort",
+      "hasContent": true
+    },
+    {
+      "page": 207,
+      "title": "8.4 Bucket Sort",
+      "hasContent": true
+    },
+    {
+      "page": 208,
+      "title": "8.4 Bucket Sort",
+      "hasContent": true
+    },
+    {
+      "page": 209,
+      "title": "8.4 Bucket Sort",
+      "hasContent": true
+    },
+    {
+      "page": 210,
+      "title": "8.4 Bucket Sort",
+      "hasContent": true
+    },
+    {
+      "page": 211,
+      "title": "8.4 Bucket Sort",
+      "hasContent": true
+    },
+    {
+      "page": 212,
+      "title": "8.4 Bucket Sort",
+      "hasContent": true
+    },
+    {
+      "page": 213,
+      "title": "9.1 Minimum and Maximum",
+      "hasContent": true
+    },
+    {
+      "page": 214,
+      "title": "9.1 Minimum and Maximum",
+      "hasContent": true
+    },
+    {
+      "page": 215,
+      "title": "9.1 Minimum and Maximum",
+      "hasContent": true
+    },
+    {
+      "page": 216,
+      "title": "9.2 Selection in Expected Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 217,
+      "title": "9.2 Selection in Expected Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 218,
+      "title": "9.2 Selection in Expected Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 219,
+      "title": "9.2 Selection in Expected Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 220,
+      "title": "9.2 Selection in Expected Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 221,
+      "title": "9.2 Selection in Expected Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 222,
+      "title": "9.2 Selection in Expected Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 223,
+      "title": "9.3 Selection in Worst-Case Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 224,
+      "title": "9.3 Selection in Worst-Case Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 225,
+      "title": "9.3 Selection in Worst-Case Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 226,
+      "title": "9.3 Selection in Worst-Case Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 227,
+      "title": "9.3 Selection in Worst-Case Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 228,
+      "title": "9.3 Selection in Worst-Case Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 229,
+      "title": "9.3 Selection in Worst-Case Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 230,
+      "title": "9.3 Selection in Worst-Case Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 231,
+      "title": "9.3 Selection in Worst-Case Linear Time",
+      "hasContent": true
+    },
+    {
+      "page": 232,
+      "title": "10.1 Stacks and Queues",
+      "hasContent": true
+    },
+    {
+      "page": 233,
+      "title": "10.1 Stacks and Queues",
+      "hasContent": true
+    },
+    {
+      "page": 234,
+      "title": "10.1 Stacks and Queues",
+      "hasContent": true
+    },
+    {
+      "page": 235,
+      "title": "10.1 Stacks and Queues",
+      "hasContent": true
+    },
+    {
+      "page": 236,
+      "title": "10.1 Stacks and Queues",
+      "hasContent": true
+    },
+    {
+      "page": 237,
+      "title": "10.2 Linked Lists",
+      "hasContent": true
+    },
+    {
+      "page": 238,
+      "title": "10.2 Linked Lists",
+      "hasContent": true
+    },
+    {
+      "page": 239,
+      "title": "10.2 Linked Lists",
+      "hasContent": true
+    },
+    {
+      "page": 240,
+      "title": "10.2 Linked Lists",
+      "hasContent": true
+    },
+    {
+      "page": 241,
+      "title": "10.2 Linked Lists",
+      "hasContent": true
+    },
+    {
+      "page": 242,
+      "title": "10.3 Implementing Pointers and Objects",
+      "hasContent": true
+    },
+    {
+      "page": 243,
+      "title": "10.3 Implementing Pointers and Objects",
+      "hasContent": true
+    },
+    {
+      "page": 244,
+      "title": "10.3 Implementing Pointers and Objects",
+      "hasContent": true
+    },
+    {
+      "page": 245,
+      "title": "10.3 Implementing Pointers and Objects",
+      "hasContent": true
+    },
+    {
+      "page": 246,
+      "title": "10.3 Implementing Pointers and Objects",
+      "hasContent": true
+    },
+    {
+      "page": 247,
+      "title": "10.4 Representing Rooted Trees",
+      "hasContent": true
+    },
+    {
+      "page": 248,
+      "title": "10.4 Representing Rooted Trees",
+      "hasContent": true
+    },
+    {
+      "page": 249,
+      "title": "10.4 Representing Rooted Trees",
+      "hasContent": true
+    },
+    {
+      "page": 250,
+      "title": "10.4 Representing Rooted Trees",
+      "hasContent": true
+    },
+    {
+      "page": 251,
+      "title": "10.4 Representing Rooted Trees",
+      "hasContent": true
+    },
+    {
+      "page": 252,
+      "title": "10.4 Representing Rooted Trees",
+      "hasContent": true
+    },
+    {
+      "page": 253,
+      "title": "11.1 Direct-Address Tables",
+      "hasContent": true
+    },
+    {
+      "page": 254,
+      "title": "11.1 Direct-Address Tables",
+      "hasContent": true
+    },
+    {
+      "page": 255,
+      "title": "11.1 Direct-Address Tables",
+      "hasContent": true
+    },
+    {
+      "page": 256,
+      "title": "11.1 Direct-Address Tables",
+      "hasContent": true
+    },
+    {
+      "page": 257,
+      "title": "11.2 Hash Tables",
+      "hasContent": true
+    },
+    {
+      "page": 258,
+      "title": "11.2 Hash Tables",
+      "hasContent": true
+    },
+    {
+      "page": 259,
+      "title": "11.2 Hash Tables",
+      "hasContent": true
+    },
+    {
+      "page": 260,
+      "title": "11.2 Hash Tables",
+      "hasContent": true
+    },
+    {
+      "page": 261,
+      "title": "11.2 Hash Tables",
+      "hasContent": true
+    },
+    {
+      "page": 262,
+      "title": "11.2 Hash Tables",
+      "hasContent": true
+    },
+    {
+      "page": 263,
+      "title": "11.2 Hash Tables",
+      "hasContent": true
+    },
+    {
+      "page": 264,
+      "title": "11.2 Hash Tables",
+      "hasContent": true
+    },
+    {
+      "page": 265,
+      "title": "11.2 Hash Tables",
+      "hasContent": true
+    },
+    {
+      "page": 266,
+      "title": "11.3 Hash Functions",
+      "hasContent": true
+    },
+    {
+      "page": 267,
+      "title": "11.3 Hash Functions",
+      "hasContent": true
+    },
+    {
+      "page": 268,
+      "title": "11.3 Hash Functions",
+      "hasContent": true
+    },
+    {
+      "page": 269,
+      "title": "11.3 Hash Functions",
+      "hasContent": true
+    },
+    {
+      "page": 270,
+      "title": "11.3 Hash Functions",
+      "hasContent": true
+    },
+    {
+      "page": 271,
+      "title": "11.3 Hash Functions",
+      "hasContent": true
+    },
+    {
+      "page": 272,
+      "title": "11.3 Hash Functions",
+      "hasContent": true
+    },
+    {
+      "page": 273,
+      "title": "11.3 Hash Functions",
+      "hasContent": true
+    },
+    {
+      "page": 274,
+      "title": "11.3 Hash Functions",
+      "hasContent": true
+    },
+    {
+      "page": 275,
+      "title": "11.3 Hash Functions",
+      "hasContent": true
+    },
+    {
+      "page": 276,
+      "title": "11.3 Hash Functions",
+      "hasContent": true
+    },
+    {
+      "page": 277,
+      "title": "11.3 Hash Functions",
+      "hasContent": true
+    },
+    {
+      "page": 278,
+      "title": "11.4 Open Addressing",
+      "hasContent": true
+    },
+    {
+      "page": 279,
+      "title": "11.4 Open Addressing",
+      "hasContent": true
+    },
+    {
+      "page": 280,
+      "title": "11.4 Open Addressing",
+      "hasContent": true
+    },
+    {
+      "page": 281,
+      "title": "11.4 Open Addressing",
+      "hasContent": true
+    },
+    {
+      "page": 282,
+      "title": "11.4 Open Addressing",
+      "hasContent": true
+    },
+    {
+      "page": 283,
+      "title": "11.4 Open Addressing",
+      "hasContent": true
+    },
+    {
+      "page": 284,
+      "title": "11.4 Open Addressing",
+      "hasContent": true
+    },
+    {
+      "page": 285,
+      "title": "11.4 Open Addressing",
+      "hasContent": true
+    },
+    {
+      "page": 286,
+      "title": "12.1 What is a Binary Search Tree?",
+      "hasContent": true
+    },
+    {
+      "page": 287,
+      "title": "12.1 What is a Binary Search Tree?",
+      "hasContent": true
+    },
+    {
+      "page": 288,
+      "title": "12.1 What is a Binary Search Tree?",
+      "hasContent": true
+    },
+    {
+      "page": 289,
+      "title": "12.1 What is a Binary Search Tree?",
+      "hasContent": true
+    },
+    {
+      "page": 290,
+      "title": "12.1 What is a Binary Search Tree?",
+      "hasContent": true
+    },
+    {
+      "page": 291,
+      "title": "12.2 Querying a Binary Search Tree",
+      "hasContent": true
+    },
+    {
+      "page": 292,
+      "title": "12.2 Querying a Binary Search Tree",
+      "hasContent": true
+    },
+    {
+      "page": 293,
+      "title": "12.2 Querying a Binary Search Tree",
+      "hasContent": true
+    },
+    {
+      "page": 294,
+      "title": "12.2 Querying a Binary Search Tree",
+      "hasContent": true
+    },
+    {
+      "page": 295,
+      "title": "12.2 Querying a Binary Search Tree",
+      "hasContent": true
+    },
+    {
+      "page": 296,
+      "title": "12.2 Querying a Binary Search Tree",
+      "hasContent": true
+    },
+    {
+      "page": 297,
+      "title": "12.3 Insertion and Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 298,
+      "title": "12.3 Insertion and Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 299,
+      "title": "12.3 Insertion and Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 300,
+      "title": "12.3 Insertion and Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 301,
+      "title": "12.3 Insertion and Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 302,
+      "title": "12.3 Insertion and Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 303,
+      "title": "12.3 Insertion and Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 304,
+      "title": "12.3 Insertion and Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 305,
+      "title": "12.3 Insertion and Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 306,
+      "title": "12.3 Insertion and Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 307,
+      "title": "12.3 Insertion and Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 308,
+      "title": "13.1 Properties of Red-Black Trees",
+      "hasContent": true
+    },
+    {
+      "page": 309,
+      "title": "13.1 Properties of Red-Black Trees",
+      "hasContent": true
+    },
+    {
+      "page": 310,
+      "title": "13.1 Properties of Red-Black Trees",
+      "hasContent": true
+    },
+    {
+      "page": 311,
+      "title": "13.1 Properties of Red-Black Trees",
+      "hasContent": true
+    },
+    {
+      "page": 312,
+      "title": "13.1 Properties of Red-Black Trees",
+      "hasContent": true
+    },
+    {
+      "page": 313,
+      "title": "13.2 Rotations",
+      "hasContent": true
+    },
+    {
+      "page": 314,
+      "title": "13.2 Rotations",
+      "hasContent": true
+    },
+    {
+      "page": 315,
+      "title": "13.2 Rotations",
+      "hasContent": true
+    },
+    {
+      "page": 316,
+      "title": "13.2 Rotations",
+      "hasContent": true
+    },
+    {
+      "page": 317,
+      "title": "13.3 Insertion",
+      "hasContent": true
+    },
+    {
+      "page": 318,
+      "title": "13.3 Insertion",
+      "hasContent": true
+    },
+    {
+      "page": 319,
+      "title": "13.3 Insertion",
+      "hasContent": true
+    },
+    {
+      "page": 320,
+      "title": "13.3 Insertion",
+      "hasContent": true
+    },
+    {
+      "page": 321,
+      "title": "13.3 Insertion",
+      "hasContent": true
+    },
+    {
+      "page": 322,
+      "title": "13.3 Insertion",
+      "hasContent": true
+    },
+    {
+      "page": 323,
+      "title": "13.3 Insertion",
+      "hasContent": true
+    },
+    {
+      "page": 324,
+      "title": "13.3 Insertion",
+      "hasContent": true
+    },
+    {
+      "page": 325,
+      "title": "13.3 Insertion",
+      "hasContent": true
+    },
+    {
+      "page": 326,
+      "title": "13.3 Insertion",
+      "hasContent": true
+    },
+    {
+      "page": 327,
+      "title": "13.3 Insertion",
+      "hasContent": true
+    },
+    {
+      "page": 328,
+      "title": "13.3 Insertion",
+      "hasContent": true
+    },
+    {
+      "page": 329,
+      "title": "13.4 Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 330,
+      "title": "13.4 Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 331,
+      "title": "13.4 Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 332,
+      "title": "13.4 Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 333,
+      "title": "13.4 Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 334,
+      "title": "13.4 Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 335,
+      "title": "13.4 Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 336,
+      "title": "13.4 Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 337,
+      "title": "13.4 Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 338,
+      "title": "13.4 Deletion",
+      "hasContent": true
+    },
+    {
+      "page": 339,
+      "title": "14.1 Dynamic Order Statistics",
+      "hasContent": true
+    },
+    {
+      "page": 340,
+      "title": "14.1 Dynamic Order Statistics",
+      "hasContent": true
+    },
+    {
+      "page": 341,
+      "title": "14.1 Dynamic Order Statistics",
+      "hasContent": true
+    },
+    {
+      "page": 342,
+      "title": "14.1 Dynamic Order Statistics",
+      "hasContent": true
+    },
+    {
+      "page": 343,
+      "title": "14.1 Dynamic Order Statistics",
+      "hasContent": true
+    },
+    {
+      "page": 344,
+      "title": "14.1 Dynamic Order Statistics",
+      "hasContent": true
+    },
+    {
+      "page": 345,
+      "title": "14.1 Dynamic Order Statistics",
+      "hasContent": true
+    },
+    {
+      "page": 346,
+      "title": "14.2 How to Augment a Data Structure",
+      "hasContent": true
+    },
+    {
+      "page": 347,
+      "title": "14.2 How to Augment a Data Structure",
+      "hasContent": true
+    },
+    {
+      "page": 348,
+      "title": "14.2 How to Augment a Data Structure",
+      "hasContent": true
+    },
+    {
+      "page": 349,
+      "title": "14.2 How to Augment a Data Structure",
+      "hasContent": true
+    },
+    {
+      "page": 350,
+      "title": "14.2 How to Augment a Data Structure",
+      "hasContent": true
+    },
+    {
+      "page": 351,
+      "title": "14.3 Interval Trees",
+      "hasContent": true
+    },
+    {
+      "page": 352,
+      "title": "14.3 Interval Trees",
+      "hasContent": true
+    },
+    {
+      "page": 353,
+      "title": "14.3 Interval Trees",
+      "hasContent": true
+    },
+    {
+      "page": 354,
+      "title": "14.3 Interval Trees",
+      "hasContent": true
+    },
+    {
+      "page": 355,
+      "title": "14.3 Interval Trees",
+      "hasContent": true
+    },
+    {
+      "page": 356,
+      "title": "14.3 Interval Trees",
+      "hasContent": true
+    },
+    {
+      "page": 357,
+      "title": "14.3 Interval Trees",
+      "hasContent": true
+    },
+    {
+      "page": 358,
+      "title": "14.3 Interval Trees",
+      "hasContent": true
+    },
+    {
+      "page": 359,
+      "title": "15.1 Rod Cutting",
+      "hasContent": true
+    },
+    {
+      "page": 360,
+      "title": "15.1 Rod Cutting",
+      "hasContent": true
+    },
+    {
+      "page": 361,
+      "title": "15.1 Rod Cutting",
+      "hasContent": true
+    },
+    {
+      "page": 362,
+      "title": "15.1 Rod Cutting",
+      "hasContent": true
+    },
+    {
+      "page": 363,
+      "title": "15.1 Rod Cutting",
+      "hasContent": true
+    },
+    {
+      "page": 364,
+      "title": "15.1 Rod Cutting",
+      "hasContent": true
+    },
+    {
+      "page": 365,
+      "title": "15.1 Rod Cutting",
+      "hasContent": true
+    },
+    {
+      "page": 366,
+      "title": "15.1 Rod Cutting",
+      "hasContent": true
+    },
+    {
+      "page": 367,
+      "title": "15.1 Rod Cutting",
+      "hasContent": true
+    },
+    {
+      "page": 368,
+      "title": "15.1 Rod Cutting",
+      "hasContent": true
+    },
+    {
+      "page": 369,
+      "title": "15.1 Rod Cutting",
+      "hasContent": true
+    },
+    {
+      "page": 370,
+      "title": "15.1 Rod Cutting",
+      "hasContent": true
+    },
+    {
+      "page": 371,
+      "title": "15.2 Matrix-Chain Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 372,
+      "title": "15.2 Matrix-Chain Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 373,
+      "title": "15.2 Matrix-Chain Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 374,
+      "title": "15.2 Matrix-Chain Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 375,
+      "title": "15.2 Matrix-Chain Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 376,
+      "title": "15.2 Matrix-Chain Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 377,
+      "title": "15.2 Matrix-Chain Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 378,
+      "title": "15.2 Matrix-Chain Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 379,
+      "title": "15.2 Matrix-Chain Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 380,
+      "title": "15.2 Matrix-Chain Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 381,
+      "title": "15.2 Matrix-Chain Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 382,
+      "title": "15.2 Matrix-Chain Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 383,
+      "title": "15.2 Matrix-Chain Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 384,
+      "title": "15.3 Elements of Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 385,
+      "title": "15.3 Elements of Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 386,
+      "title": "15.3 Elements of Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 387,
+      "title": "15.3 Elements of Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 388,
+      "title": "15.3 Elements of Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 389,
+      "title": "15.3 Elements of Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 390,
+      "title": "15.3 Elements of Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 391,
+      "title": "15.3 Elements of Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 392,
+      "title": "15.3 Elements of Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 393,
+      "title": "15.3 Elements of Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 394,
+      "title": "15.4 Longest Common Subsequence",
+      "hasContent": true
+    },
+    {
+      "page": 395,
+      "title": "15.4 Longest Common Subsequence",
+      "hasContent": true
+    },
+    {
+      "page": 396,
+      "title": "15.4 Longest Common Subsequence",
+      "hasContent": true
+    },
+    {
+      "page": 397,
+      "title": "15.4 Longest Common Subsequence",
+      "hasContent": true
+    },
+    {
+      "page": 398,
+      "title": "15.4 Longest Common Subsequence",
+      "hasContent": true
+    },
+    {
+      "page": 399,
+      "title": "15.4 Longest Common Subsequence",
+      "hasContent": true
+    },
+    {
+      "page": 400,
+      "title": "15.4 Longest Common Subsequence",
+      "hasContent": true
+    },
+    {
+      "page": 401,
+      "title": "15.4 Longest Common Subsequence",
+      "hasContent": true
+    },
+    {
+      "page": 402,
+      "title": "15.4 Longest Common Subsequence",
+      "hasContent": true
+    },
+    {
+      "page": 403,
+      "title": "15.4 Longest Common Subsequence",
+      "hasContent": true
+    },
+    {
+      "page": 404,
+      "title": "15.3 Elements of Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 405,
+      "title": "Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 406,
+      "title": "15.3 Elements of Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 407,
+      "title": "Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 408,
+      "title": "15.3 Elements of Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 409,
+      "title": "Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 410,
+      "title": "15.3 Elements of Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 411,
+      "title": "15.4 Longest Common Subsequence",
+      "hasContent": true
+    },
+    {
+      "page": 412,
+      "title": "15.4 Longest Common Subsequence",
+      "hasContent": true
+    },
+    {
+      "page": 413,
+      "title": "Dynamic Programming",
+      "hasContent": true
+    },
+    {
+      "page": 414,
+      "title": "16.1 An Activity-Selection Problem",
+      "hasContent": true
+    },
+    {
+      "page": 415,
+      "title": "16.1 An Activity-Selection Problem",
+      "hasContent": true
+    },
+    {
+      "page": 416,
+      "title": "16.1 An Activity-Selection Problem",
+      "hasContent": true
+    },
+    {
+      "page": 417,
+      "title": "16.1 An Activity-Selection Problem",
+      "hasContent": true
+    },
+    {
+      "page": 418,
+      "title": "16.1 An Activity-Selection Problem",
+      "hasContent": true
+    },
+    {
+      "page": 419,
+      "title": "16.1 An Activity-Selection Problem",
+      "hasContent": true
+    },
+    {
+      "page": 420,
+      "title": "16.1 An Activity-Selection Problem",
+      "hasContent": true
+    },
+    {
+      "page": 421,
+      "title": "16.1 An Activity-Selection Problem",
+      "hasContent": true
+    },
+    {
+      "page": 422,
+      "title": "16.2 Elements of the Greedy Strategy",
+      "hasContent": true
+    },
+    {
+      "page": 423,
+      "title": "16.2 Elements of the Greedy Strategy",
+      "hasContent": true
+    },
+    {
+      "page": 424,
+      "title": "16.2 Elements of the Greedy Strategy",
+      "hasContent": true
+    },
+    {
+      "page": 425,
+      "title": "16.2 Elements of the Greedy Strategy",
+      "hasContent": true
+    },
+    {
+      "page": 426,
+      "title": "16.2 Elements of the Greedy Strategy",
+      "hasContent": true
+    },
+    {
+      "page": 427,
+      "title": "16.2 Elements of the Greedy Strategy",
+      "hasContent": true
+    },
+    {
+      "page": 428,
+      "title": "16.2 Elements of the Greedy Strategy",
+      "hasContent": true
+    },
+    {
+      "page": 429,
+      "title": "16.3 Huffman Codes",
+      "hasContent": true
+    },
+    {
+      "page": 430,
+      "title": "16.3 Huffman Codes",
+      "hasContent": true
+    },
+    {
+      "page": 431,
+      "title": "16.3 Huffman Codes",
+      "hasContent": true
+    },
+    {
+      "page": 432,
+      "title": "16.3 Huffman Codes",
+      "hasContent": true
+    },
+    {
+      "page": 433,
+      "title": "16.3 Huffman Codes",
+      "hasContent": true
+    },
+    {
+      "page": 434,
+      "title": "16.3 Huffman Codes",
+      "hasContent": true
+    },
+    {
+      "page": 435,
+      "title": "16.3 Huffman Codes",
+      "hasContent": true
+    },
+    {
+      "page": 436,
+      "title": "16.3 Huffman Codes",
+      "hasContent": true
+    },
+    {
+      "page": 437,
+      "title": "16.3 Huffman Codes",
+      "hasContent": true
+    },
+    {
+      "page": 438,
+      "title": "16.3 Huffman Codes",
+      "hasContent": true
+    },
+    {
+      "page": 439,
+      "title": "16.3 Huffman Codes",
+      "hasContent": true
+    },
+    {
+      "page": 440,
+      "title": "16.3 Huffman Codes",
+      "hasContent": true
+    },
+    {
+      "page": 441,
+      "title": "Greedy Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 442,
+      "title": "16.1 An Activity-Selection Problem",
+      "hasContent": true
+    },
+    {
+      "page": 443,
+      "title": "Greedy Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 444,
+      "title": "16.2 Elements of the Greedy Strategy",
+      "hasContent": true
+    },
+    {
+      "page": 445,
+      "title": "Greedy Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 446,
+      "title": "16.2 Elements of the Greedy Strategy",
+      "hasContent": true
+    },
+    {
+      "page": 447,
+      "title": "Greedy Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 448,
+      "title": "16.2 Elements of the Greedy Strategy",
+      "hasContent": true
+    },
+    {
+      "page": 449,
+      "title": "16.3 Huffman Codes",
+      "hasContent": true
+    },
+    {
+      "page": 450,
+      "title": "16.3 Huffman Codes",
+      "hasContent": true
+    },
+    {
+      "page": 451,
+      "title": "17.1 Aggregate Analysis",
+      "hasContent": true
+    },
+    {
+      "page": 452,
+      "title": "17.1 Aggregate Analysis",
+      "hasContent": true
+    },
+    {
+      "page": 453,
+      "title": "17.1 Aggregate Analysis",
+      "hasContent": true
+    },
+    {
+      "page": 454,
+      "title": "17.1 Aggregate Analysis",
+      "hasContent": true
+    },
+    {
+      "page": 455,
+      "title": "17.1 Aggregate Analysis",
+      "hasContent": true
+    },
+    {
+      "page": 456,
+      "title": "17.1 Aggregate Analysis",
+      "hasContent": true
+    },
+    {
+      "page": 457,
+      "title": "17.2 The Accounting Method",
+      "hasContent": true
+    },
+    {
+      "page": 458,
+      "title": "17.2 The Accounting Method",
+      "hasContent": true
+    },
+    {
+      "page": 459,
+      "title": "17.2 The Accounting Method",
+      "hasContent": true
+    },
+    {
+      "page": 460,
+      "title": "17.2 The Accounting Method",
+      "hasContent": true
+    },
+    {
+      "page": 461,
+      "title": "17.2 The Accounting Method",
+      "hasContent": true
+    },
+    {
+      "page": 462,
+      "title": "17.3 The Potential Method",
+      "hasContent": true
+    },
+    {
+      "page": 463,
+      "title": "17.3 The Potential Method",
+      "hasContent": true
+    },
+    {
+      "page": 464,
+      "title": "17.3 The Potential Method",
+      "hasContent": true
+    },
+    {
+      "page": 465,
+      "title": "17.3 The Potential Method",
+      "hasContent": true
+    },
+    {
+      "page": 466,
+      "title": "17.3 The Potential Method",
+      "hasContent": true
+    },
+    {
+      "page": 467,
+      "title": "17.3 The Potential Method",
+      "hasContent": true
+    },
+    {
+      "page": 468,
+      "title": "17.3 The Potential Method",
+      "hasContent": true
+    },
+    {
+      "page": 469,
+      "title": "17.4 Dynamic Tables",
+      "hasContent": true
+    },
+    {
+      "page": 470,
+      "title": "17.4 Dynamic Tables",
+      "hasContent": true
+    },
+    {
+      "page": 471,
+      "title": "17.4 Dynamic Tables",
+      "hasContent": true
+    },
+    {
+      "page": 472,
+      "title": "17.4 Dynamic Tables",
+      "hasContent": true
+    },
+    {
+      "page": 473,
+      "title": "17.4 Dynamic Tables",
+      "hasContent": true
+    },
+    {
+      "page": 474,
+      "title": "17.4 Dynamic Tables",
+      "hasContent": true
+    },
+    {
+      "page": 475,
+      "title": "17.4 Dynamic Tables",
+      "hasContent": true
+    },
+    {
+      "page": 476,
+      "title": "17.4 Dynamic Tables",
+      "hasContent": true
+    },
+    {
+      "page": 477,
+      "title": "17.4 Dynamic Tables",
+      "hasContent": true
+    },
+    {
+      "page": 478,
+      "title": "17.4 Dynamic Tables",
+      "hasContent": true
+    },
+    {
+      "page": 479,
+      "title": "17.4 Dynamic Tables",
+      "hasContent": true
+    },
+    {
+      "page": 480,
+      "title": "17.4 Dynamic Tables",
+      "hasContent": true
+    },
+    {
+      "page": 481,
+      "title": "17.4 Dynamic Tables",
+      "hasContent": true
+    },
+    {
+      "page": 482,
+      "title": "17.4 Dynamic Tables",
+      "hasContent": true
+    },
+    {
+      "page": 483,
+      "title": "17.4 Dynamic Tables",
+      "hasContent": true
+    },
+    {
+      "page": 484,
+      "title": "18.1 Definition of B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 485,
+      "title": "18.1 Definition of B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 486,
+      "title": "18.1 Definition of B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 487,
+      "title": "18.1 Definition of B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 488,
+      "title": "18.1 Definition of B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 489,
+      "title": "18.1 Definition of B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 490,
+      "title": "18.1 Definition of B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 491,
+      "title": "18.2 Basic Operations on B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 492,
+      "title": "18.2 Basic Operations on B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 493,
+      "title": "18.2 Basic Operations on B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 494,
+      "title": "18.2 Basic Operations on B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 495,
+      "title": "18.2 Basic Operations on B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 496,
+      "title": "18.2 Basic Operations on B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 497,
+      "title": "18.2 Basic Operations on B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 498,
+      "title": "18.2 Basic Operations on B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 499,
+      "title": "18.2 Basic Operations on B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 500,
+      "title": "18.2 Basic Operations on B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 501,
+      "title": "18.3 Deleting a Key from a B-tree",
+      "hasContent": true
+    },
+    {
+      "page": 502,
+      "title": "18.3 Deleting a Key from a B-tree",
+      "hasContent": true
+    },
+    {
+      "page": 503,
+      "title": "18.3 Deleting a Key from a B-tree",
+      "hasContent": true
+    },
+    {
+      "page": 504,
+      "title": "18.3 Deleting a Key from a B-tree",
+      "hasContent": true
+    },
+    {
+      "page": 505,
+      "title": "18 B-Trees",
+      "hasContent": true
+    },
+    {
+      "page": 506,
+      "title": "B-Trees",
+      "hasContent": true
+    },
+    {
+      "page": 507,
+      "title": "B-Trees",
+      "hasContent": true
+    },
+    {
+      "page": 508,
+      "title": "B-Trees",
+      "hasContent": true
+    },
+    {
+      "page": 509,
+      "title": "18.1 Definition of B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 510,
+      "title": "18.1 Definition of B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 511,
+      "title": "B-Trees",
+      "hasContent": true
+    },
+    {
+      "page": 512,
+      "title": "18.2 Basic Operations on B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 513,
+      "title": "B-Trees",
+      "hasContent": true
+    },
+    {
+      "page": 514,
+      "title": "18.2 Basic Operations on B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 515,
+      "title": "B-Trees",
+      "hasContent": true
+    },
+    {
+      "page": 516,
+      "title": "18.2 Basic Operations on B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 517,
+      "title": "B-Trees",
+      "hasContent": true
+    },
+    {
+      "page": 518,
+      "title": "18.2 Basic Operations on B-trees",
+      "hasContent": true
+    },
+    {
+      "page": 519,
+      "title": "B-Trees",
+      "hasContent": true
+    },
+    {
+      "page": 520,
+      "title": "18.3 Deleting a Key from a B-tree",
+      "hasContent": true
+    },
+    {
+      "page": 521,
+      "title": "B-Trees",
+      "hasContent": true
+    },
+    {
+      "page": 522,
+      "title": "18.3 Deleting a Key from a B-tree",
+      "hasContent": true
+    },
+    {
+      "page": 523,
+      "title": "B-Trees",
+      "hasContent": true
+    },
+    {
+      "page": 524,
+      "title": "B-Trees",
+      "hasContent": true
+    },
+    {
+      "page": 525,
+      "title": "B-Trees",
+      "hasContent": true
+    },
+    {
+      "page": 526,
+      "title": "19 Fibonacci Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 527,
+      "title": "Fibonacci Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 528,
+      "title": "19.1 Structure of Fibonacci heaps",
+      "hasContent": true
+    },
+    {
+      "page": 529,
+      "title": "Fibonacci Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 530,
+      "title": "19.1 Structure of Fibonacci heaps",
+      "hasContent": true
+    },
+    {
+      "page": 531,
+      "title": "19.2 Mergeable-heap operations\n\n The mergeable-heap operations on Fibonacci heaps delay work as long as possible",
+      "hasContent": true
+    },
+    {
+      "page": 532,
+      "title": "19.2 Mergeable-heap operations",
+      "hasContent": true
+    },
+    {
+      "page": 533,
+      "title": "Fibonacci Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 534,
+      "title": "19.2 Mergeable-heap operations",
+      "hasContent": true
+    },
+    {
+      "page": 535,
+      "title": "Fibonacci Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 536,
+      "title": "19.2 Mergeable-heap operations",
+      "hasContent": true
+    },
+    {
+      "page": 537,
+      "title": "Fibonacci Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 538,
+      "title": "19.2 Mergeable-heap operations",
+      "hasContent": true
+    },
+    {
+      "page": 539,
+      "title": "19.3 Decreasing a key and deleting a node\n\n In this section, we show how to decrease the key of a node in a Fibonacci heap\n in O",
+      "hasContent": true
+    },
+    {
+      "page": 540,
+      "title": "19.3 Decreasing a key and deleting a node",
+      "hasContent": true
+    },
+    {
+      "page": 541,
+      "title": "Fibonacci Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 542,
+      "title": "19.3 Decreasing a key and deleting a node",
+      "hasContent": true
+    },
+    {
+      "page": 543,
+      "title": "Fibonacci Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 544,
+      "title": "19.4 Bounding the maximum degree",
+      "hasContent": true
+    },
+    {
+      "page": 545,
+      "title": "Fibonacci Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 546,
+      "title": "19.4 Bounding the maximum degree",
+      "hasContent": true
+    },
+    {
+      "page": 547,
+      "title": "Fibonacci Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 548,
+      "title": "Fibonacci Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 549,
+      "title": "Fibonacci Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 550,
+      "title": "Fibonacci Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 551,
+      "title": "Fibonacci Heaps",
+      "hasContent": true
+    },
+    {
+      "page": 552,
+      "title": "Heapsort",
+      "hasContent": true
+    },
+    {
+      "page": 553,
+      "title": "20.1 Preliminary approaches\n\n In this section, we shall examine various approaches for storing a dynamic set",
+      "hasContent": true
+    },
+    {
+      "page": 554,
+      "title": "20.1 Preliminary approaches",
+      "hasContent": true
+    },
+    {
+      "page": 555,
+      "title": "van Emde Boas Trees",
+      "hasContent": true
+    },
+    {
+      "page": 556,
+      "title": "20.1 Preliminary approaches",
+      "hasContent": true
+    },
+    {
+      "page": 557,
+      "title": "20.2 A recursive structure\n p\n In this section, we modify the idea of superimposing a tree of degree u p on top of\n a bit vector",
+      "hasContent": true
+    },
+    {
+      "page": 558,
+      "title": "20.2 A recursive structure",
+      "hasContent": true
+    },
+    {
+      "page": 559,
+      "title": "van Emde Boas Trees",
+      "hasContent": true
+    },
+    {
+      "page": 560,
+      "title": "20.2 A recursive structure",
+      "hasContent": true
+    },
+    {
+      "page": 561,
+      "title": "21.1 Disjoint-set Operations",
+      "hasContent": true
+    },
+    {
+      "page": 562,
+      "title": "21.1 Disjoint-set Operations",
+      "hasContent": true
+    },
+    {
+      "page": 563,
+      "title": "21.1 Disjoint-set Operations",
+      "hasContent": true
+    },
+    {
+      "page": 564,
+      "title": "21.1 Disjoint-set Operations",
+      "hasContent": true
+    },
+    {
+      "page": 565,
+      "title": "21.1 Disjoint-set Operations",
+      "hasContent": true
+    },
+    {
+      "page": 566,
+      "title": "21.2 Linked-list Representation",
+      "hasContent": true
+    },
+    {
+      "page": 567,
+      "title": "21.2 Linked-list Representation",
+      "hasContent": true
+    },
+    {
+      "page": 568,
+      "title": "21.2 Linked-list Representation",
+      "hasContent": true
+    },
+    {
+      "page": 569,
+      "title": "21.2 Linked-list Representation",
+      "hasContent": true
+    },
+    {
+      "page": 570,
+      "title": "21.2 Linked-list Representation",
+      "hasContent": true
+    },
+    {
+      "page": 571,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 572,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 573,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 574,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 575,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 576,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 577,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 578,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 579,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 580,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 581,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 582,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 583,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 584,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 585,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 586,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 587,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 588,
+      "title": "21.3 Disjoint-set Forests",
+      "hasContent": true
+    },
+    {
+      "page": 589,
+      "title": "22.1 Representations of Graphs",
+      "hasContent": true
+    },
+    {
+      "page": 590,
+      "title": "22.1 Representations of Graphs",
+      "hasContent": true
+    },
+    {
+      "page": 591,
+      "title": "22.1 Representations of Graphs",
+      "hasContent": true
+    },
+    {
+      "page": 592,
+      "title": "22.1 Representations of Graphs",
+      "hasContent": true
+    },
+    {
+      "page": 593,
+      "title": "22.1 Representations of Graphs",
+      "hasContent": true
+    },
+    {
+      "page": 594,
+      "title": "22.1 Representations of Graphs",
+      "hasContent": true
+    },
+    {
+      "page": 595,
+      "title": "22.2 Breadth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 596,
+      "title": "22.2 Breadth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 597,
+      "title": "22.2 Breadth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 598,
+      "title": "22.2 Breadth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 599,
+      "title": "22.2 Breadth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 600,
+      "title": "22.2 Breadth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 601,
+      "title": "22.2 Breadth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 602,
+      "title": "22.2 Breadth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 603,
+      "title": "22.2 Breadth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 604,
+      "title": "22.3 Depth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 605,
+      "title": "22.3 Depth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 606,
+      "title": "22.3 Depth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 607,
+      "title": "22.3 Depth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 608,
+      "title": "22.3 Depth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 609,
+      "title": "22.3 Depth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 610,
+      "title": "22.3 Depth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 611,
+      "title": "22.3 Depth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 612,
+      "title": "22.3 Depth-First Search",
+      "hasContent": true
+    },
+    {
+      "page": 613,
+      "title": "22.4 Topological Sort",
+      "hasContent": true
+    },
+    {
+      "page": 614,
+      "title": "22.4 Topological Sort",
+      "hasContent": true
+    },
+    {
+      "page": 615,
+      "title": "22.4 Topological Sort",
+      "hasContent": true
+    },
+    {
+      "page": 616,
+      "title": "22.4 Topological Sort",
+      "hasContent": true
+    },
+    {
+      "page": 617,
+      "title": "22.5 Strongly Connected Components",
+      "hasContent": true
+    },
+    {
+      "page": 618,
+      "title": "22.5 Strongly Connected Components",
+      "hasContent": true
+    },
+    {
+      "page": 619,
+      "title": "22.5 Strongly Connected Components",
+      "hasContent": true
+    },
+    {
+      "page": 620,
+      "title": "22.5 Strongly Connected Components",
+      "hasContent": true
+    },
+    {
+      "page": 621,
+      "title": "22.5 Strongly Connected Components",
+      "hasContent": true
+    },
+    {
+      "page": 622,
+      "title": "22.5 Strongly Connected Components",
+      "hasContent": true
+    },
+    {
+      "page": 623,
+      "title": "22.5 Strongly Connected Components",
+      "hasContent": true
+    },
+    {
+      "page": 624,
+      "title": "23.1 Growing a Minimum Spanning Tree",
+      "hasContent": true
+    },
+    {
+      "page": 625,
+      "title": "23.1 Growing a Minimum Spanning Tree",
+      "hasContent": true
+    },
+    {
+      "page": 626,
+      "title": "23.1 Growing a Minimum Spanning Tree",
+      "hasContent": true
+    },
+    {
+      "page": 627,
+      "title": "23.1 Growing a Minimum Spanning Tree",
+      "hasContent": true
+    },
+    {
+      "page": 628,
+      "title": "23.1 Growing a Minimum Spanning Tree",
+      "hasContent": true
+    },
+    {
+      "page": 629,
+      "title": "23.1 Growing a Minimum Spanning Tree",
+      "hasContent": true
+    },
+    {
+      "page": 630,
+      "title": "23.1 Growing a Minimum Spanning Tree",
+      "hasContent": true
+    },
+    {
+      "page": 631,
+      "title": "23.2 The Algorithms of Kruskal and Prim",
+      "hasContent": true
+    },
+    {
+      "page": 632,
+      "title": "23.2 The Algorithms of Kruskal and Prim",
+      "hasContent": true
+    },
+    {
+      "page": 633,
+      "title": "23.2 The Algorithms of Kruskal and Prim",
+      "hasContent": true
+    },
+    {
+      "page": 634,
+      "title": "23.2 The Algorithms of Kruskal and Prim",
+      "hasContent": true
+    },
+    {
+      "page": 635,
+      "title": "23.2 The Algorithms of Kruskal and Prim",
+      "hasContent": true
+    },
+    {
+      "page": 636,
+      "title": "23.2 The Algorithms of Kruskal and Prim",
+      "hasContent": true
+    },
+    {
+      "page": 637,
+      "title": "23.2 The Algorithms of Kruskal and Prim",
+      "hasContent": true
+    },
+    {
+      "page": 638,
+      "title": "23.2 The Algorithms of Kruskal and Prim",
+      "hasContent": true
+    },
+    {
+      "page": 639,
+      "title": "23.2 The Algorithms of Kruskal and Prim",
+      "hasContent": true
+    },
+    {
+      "page": 640,
+      "title": "23.2 The Algorithms of Kruskal and Prim",
+      "hasContent": true
+    },
+    {
+      "page": 641,
+      "title": "23.2 The Algorithms of Kruskal and Prim",
+      "hasContent": true
+    },
+    {
+      "page": 642,
+      "title": "23.2 The Algorithms of Kruskal and Prim",
+      "hasContent": true
+    },
+    {
+      "page": 643,
+      "title": "24.1 The Bellman-Ford Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 644,
+      "title": "24.1 The Bellman-Ford Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 645,
+      "title": "24.1 The Bellman-Ford Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 646,
+      "title": "24.1 The Bellman-Ford Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 647,
+      "title": "24.1 The Bellman-Ford Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 648,
+      "title": "24.1 The Bellman-Ford Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 649,
+      "title": "24.1 The Bellman-Ford Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 650,
+      "title": "24.1 The Bellman-Ford Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 651,
+      "title": "24.1 The Bellman-Ford Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 652,
+      "title": "24.2 Single-Source Shortest Paths in DAGs",
+      "hasContent": true
+    },
+    {
+      "page": 653,
+      "title": "24.2 Single-Source Shortest Paths in DAGs",
+      "hasContent": true
+    },
+    {
+      "page": 654,
+      "title": "24.2 Single-Source Shortest Paths in DAGs",
+      "hasContent": true
+    },
+    {
+      "page": 655,
+      "title": "24.2 Single-Source Shortest Paths in DAGs",
+      "hasContent": true
+    },
+    {
+      "page": 656,
+      "title": "24.2 Single-Source Shortest Paths in DAGs",
+      "hasContent": true
+    },
+    {
+      "page": 657,
+      "title": "24.3 Dijkstra's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 658,
+      "title": "24.3 Dijkstra's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 659,
+      "title": "24.3 Dijkstra's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 660,
+      "title": "24.3 Dijkstra's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 661,
+      "title": "24.3 Dijkstra's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 662,
+      "title": "24.3 Dijkstra's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 663,
+      "title": "24.3 Dijkstra's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 664,
+      "title": "24.3 Dijkstra's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 665,
+      "title": "24.3 Dijkstra's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 666,
+      "title": "24.3 Dijkstra's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 667,
+      "title": "24.3 Dijkstra's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 668,
+      "title": "24.3 Dijkstra's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 669,
+      "title": "Single-Source Shortest Paths",
+      "hasContent": true
+    },
+    {
+      "page": 670,
+      "title": "Single-Source Shortest Paths",
+      "hasContent": true
+    },
+    {
+      "page": 671,
+      "title": "Single-Source Shortest Paths",
+      "hasContent": true
+    },
+    {
+      "page": 672,
+      "title": "24.1 The Bellman-Ford Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 673,
+      "title": "Single-Source Shortest Paths",
+      "hasContent": true
+    },
+    {
+      "page": 674,
+      "title": "24.1 The Bellman-Ford Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 675,
+      "title": "Single-Source Shortest Paths",
+      "hasContent": true
+    },
+    {
+      "page": 676,
+      "title": "24.2 Single-Source Shortest Paths in DAGs",
+      "hasContent": true
+    },
+    {
+      "page": 677,
+      "title": "Single-Source Shortest Paths",
+      "hasContent": true
+    },
+    {
+      "page": 678,
+      "title": "24.2 Single-Source Shortest Paths in DAGs",
+      "hasContent": true
+    },
+    {
+      "page": 679,
+      "title": "24.3 Dijkstra's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 680,
+      "title": "24.3 Dijkstra's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 681,
+      "title": "Single-Source Shortest Paths",
+      "hasContent": true
+    },
+    {
+      "page": 682,
+      "title": "24.3 Dijkstra's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 683,
+      "title": "Single-Source Shortest Paths",
+      "hasContent": true
+    },
+    {
+      "page": 684,
+      "title": "25.1 Shortest Paths and Matrix Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 685,
+      "title": "25.1 Shortest Paths and Matrix Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 686,
+      "title": "25.1 Shortest Paths and Matrix Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 687,
+      "title": "25.1 Shortest Paths and Matrix Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 688,
+      "title": "25.1 Shortest Paths and Matrix Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 689,
+      "title": "25.1 Shortest Paths and Matrix Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 690,
+      "title": "25.1 Shortest Paths and Matrix Multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 691,
+      "title": "25.2 The Floyd-Warshall Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 692,
+      "title": "25.2 The Floyd-Warshall Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 693,
+      "title": "25.2 The Floyd-Warshall Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 694,
+      "title": "25.2 The Floyd-Warshall Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 695,
+      "title": "25.2 The Floyd-Warshall Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 696,
+      "title": "25.2 The Floyd-Warshall Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 697,
+      "title": "25.2 The Floyd-Warshall Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 698,
+      "title": "25.2 The Floyd-Warshall Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 699,
+      "title": "25.3 Johnson's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 700,
+      "title": "25.3 Johnson's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 701,
+      "title": "25.3 Johnson's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 702,
+      "title": "25.3 Johnson's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 703,
+      "title": "25.3 Johnson's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 704,
+      "title": "25.3 Johnson's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 705,
+      "title": "25.3 Johnson's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 706,
+      "title": "25.3 Johnson's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 707,
+      "title": "25.3 Johnson's Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 708,
+      "title": "26.1 Flow Networks",
+      "hasContent": true
+    },
+    {
+      "page": 709,
+      "title": "26.1 Flow Networks",
+      "hasContent": true
+    },
+    {
+      "page": 710,
+      "title": "26.1 Flow Networks",
+      "hasContent": true
+    },
+    {
+      "page": 711,
+      "title": "26.1 Flow Networks",
+      "hasContent": true
+    },
+    {
+      "page": 712,
+      "title": "26.1 Flow Networks",
+      "hasContent": true
+    },
+    {
+      "page": 713,
+      "title": "26.1 Flow Networks",
+      "hasContent": true
+    },
+    {
+      "page": 714,
+      "title": "26.1 Flow Networks",
+      "hasContent": true
+    },
+    {
+      "page": 715,
+      "title": "26.1 Flow Networks",
+      "hasContent": true
+    },
+    {
+      "page": 716,
+      "title": "26.1 Flow Networks",
+      "hasContent": true
+    },
+    {
+      "page": 717,
+      "title": "26.1 Flow Networks",
+      "hasContent": true
+    },
+    {
+      "page": 718,
+      "title": "26.1 Flow Networks",
+      "hasContent": true
+    },
+    {
+      "page": 719,
+      "title": "26.1 Flow Networks",
+      "hasContent": true
+    },
+    {
+      "page": 720,
+      "title": "26.1 Flow Networks",
+      "hasContent": true
+    },
+    {
+      "page": 721,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 722,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 723,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 724,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 725,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 726,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 727,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 728,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 729,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 730,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 731,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 732,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 733,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 734,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 735,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 736,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 737,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 738,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 739,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 740,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 741,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 742,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 743,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 744,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 745,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 746,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 747,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 748,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 749,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 750,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 751,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 752,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 753,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 754,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 755,
+      "title": "26.2 The Ford-Fulkerson Method",
+      "hasContent": true
+    },
+    {
+      "page": 756,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 757,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 758,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 759,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 760,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 761,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 762,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 763,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 764,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 765,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 766,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 767,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 768,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 769,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 770,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 771,
+      "title": "26.3 Maximum Bipartite Matching",
+      "hasContent": true
+    },
+    {
+      "page": 772,
+      "title": "26.5 The relabel-to-front algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 773,
+      "title": "Maximum Flow",
+      "hasContent": true
+    },
+    {
+      "page": 774,
+      "title": "26.5 The relabel-to-front algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 775,
+      "title": "Maximum Flow",
+      "hasContent": true
+    },
+    {
+      "page": 776,
+      "title": "26.5 The relabel-to-front algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 777,
+      "title": "Maximum Flow",
+      "hasContent": true
+    },
+    {
+      "page": 778,
+      "title": "26.5 The relabel-to-front algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 779,
+      "title": "Maximum Flow",
+      "hasContent": true
+    },
+    {
+      "page": 780,
+      "title": "Exercises 26.5",
+      "hasContent": true
+    },
+    {
+      "page": 781,
+      "title": "Maximum Flow",
+      "hasContent": true
+    },
+    {
+      "page": 782,
+      "title": "Maximum Flow",
+      "hasContent": true
+    },
+    {
+      "page": 783,
+      "title": "Maximum Flow",
+      "hasContent": true
+    },
+    {
+      "page": 784,
+      "title": "Maximum Flow",
+      "hasContent": true
+    },
+    {
+      "page": 785,
+      "title": "Maximum Flow",
+      "hasContent": true
+    },
+    {
+      "page": 786,
+      "title": "Maximum Flow",
+      "hasContent": true
+    },
+    {
+      "page": 787,
+      "title": "Maximum Flow",
+      "hasContent": true
+    },
+    {
+      "page": 788,
+      "title": "Page 788",
+      "hasContent": true
+    },
+    {
+      "page": 789,
+      "title": "VII Selected Topics",
+      "hasContent": true
+    },
+    {
+      "page": 790,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 791,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 792,
+      "title": "Part VII Selected Topics 771",
+      "hasContent": true
+    },
+    {
+      "page": 793,
+      "title": "27 Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 794,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 795,
+      "title": "27.1 The basics of dynamic multithreading\n\n We shall begin our exploration of dynamic multithreading using the example of\n computing Fibonacci numbers recursively",
+      "hasContent": true
+    },
+    {
+      "page": 796,
+      "title": "27.1 The basics of dynamic multithreading",
+      "hasContent": true
+    },
+    {
+      "page": 797,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 798,
+      "title": "27.1 The basics of dynamic multithreading",
+      "hasContent": true
+    },
+    {
+      "page": 799,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 800,
+      "title": "27.1 The basics of dynamic multithreading",
+      "hasContent": true
+    },
+    {
+      "page": 801,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 802,
+      "title": "27.1 The basics of dynamic multithreading",
+      "hasContent": true
+    },
+    {
+      "page": 803,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 804,
+      "title": "27.1 The basics of dynamic multithreading",
+      "hasContent": true
+    },
+    {
+      "page": 805,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 806,
+      "title": "27.1 The basics of dynamic multithreading",
+      "hasContent": true
+    },
+    {
+      "page": 807,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 808,
+      "title": "27.1 The basics of dynamic multithreading",
+      "hasContent": true
+    },
+    {
+      "page": 809,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 810,
+      "title": "27.1 The basics of dynamic multithreading",
+      "hasContent": true
+    },
+    {
+      "page": 811,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 812,
+      "title": "Exercises 27.1",
+      "hasContent": true
+    },
+    {
+      "page": 813,
+      "title": "27.2 Multithreaded matrix multiplication\n\n In this section, we examine how to multithread matrix multiplication, a problem\n whose serial running time we studied in Section",
+      "hasContent": true
+    },
+    {
+      "page": 814,
+      "title": "27.2 Multithreaded matrix multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 815,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 816,
+      "title": "27.2 Multithreaded matrix multiplication",
+      "hasContent": true
+    },
+    {
+      "page": 817,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 818,
+      "title": "27.3 Multithreaded merge sort",
+      "hasContent": true
+    },
+    {
+      "page": 819,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 820,
+      "title": "27.3 Multithreaded merge sort",
+      "hasContent": true
+    },
+    {
+      "page": 821,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 822,
+      "title": "27.3 Multithreaded merge sort",
+      "hasContent": true
+    },
+    {
+      "page": 823,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 824,
+      "title": "27.3 Multithreaded merge sort",
+      "hasContent": true
+    },
+    {
+      "page": 825,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 826,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 827,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 828,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 829,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 830,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 831,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 832,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 833,
+      "title": "Multithreaded Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 834,
+      "title": "28.1 Solving systems of linear equations\n\n Numerous applications need to solve sets of simultaneous linear equations",
+      "hasContent": true
+    },
+    {
+      "page": 835,
+      "title": "Matrix Operations",
+      "hasContent": true
+    },
+    {
+      "page": 836,
+      "title": "28.1 Solving systems of linear equations",
+      "hasContent": true
+    },
+    {
+      "page": 837,
+      "title": "Matrix Operations",
+      "hasContent": true
+    },
+    {
+      "page": 838,
+      "title": "28.1 Solving systems of linear equations",
+      "hasContent": true
+    },
+    {
+      "page": 839,
+      "title": "Matrix Operations",
+      "hasContent": true
+    },
+    {
+      "page": 840,
+      "title": "28.1 Solving systems of linear equations",
+      "hasContent": true
+    },
+    {
+      "page": 841,
+      "title": "Matrix Operations",
+      "hasContent": true
+    },
+    {
+      "page": 842,
+      "title": "28.1 Solving systems of linear equations",
+      "hasContent": true
+    },
+    {
+      "page": 843,
+      "title": "Matrix Operations",
+      "hasContent": true
+    },
+    {
+      "page": 844,
+      "title": "28.1 Solving systems of linear equations",
+      "hasContent": true
+    },
+    {
+      "page": 845,
+      "title": "Matrix Operations",
+      "hasContent": true
+    },
+    {
+      "page": 846,
+      "title": "Exercises 28.1",
+      "hasContent": true
+    },
+    {
+      "page": 847,
+      "title": "Matrix Operations",
+      "hasContent": true
+    },
+    {
+      "page": 848,
+      "title": "28.2 Inverting matrices",
+      "hasContent": true
+    },
+    {
+      "page": 849,
+      "title": "Matrix Operations",
+      "hasContent": true
+    },
+    {
+      "page": 850,
+      "title": "28.2 Inverting matrices",
+      "hasContent": true
+    },
+    {
+      "page": 851,
+      "title": "Matrix Operations",
+      "hasContent": true
+    },
+    {
+      "page": 852,
+      "title": "Exercises 28.2",
+      "hasContent": true
+    },
+    {
+      "page": 853,
+      "title": "28.3 Symmetric positive-de",
+      "hasContent": true
+    },
+    {
+      "page": 854,
+      "title": "28.3 Symmetric positive-de",
+      "hasContent": true
+    },
+    {
+      "page": 855,
+      "title": "Matrix Operations",
+      "hasContent": true
+    },
+    {
+      "page": 856,
+      "title": "28.3 Symmetric positive-de",
+      "hasContent": true
+    },
+    {
+      "page": 857,
+      "title": "Matrix Operations",
+      "hasContent": true
+    },
+    {
+      "page": 858,
+      "title": "28.3 Symmetric positive-de",
+      "hasContent": true
+    },
+    {
+      "page": 859,
+      "title": "Matrix Operations",
+      "hasContent": true
+    },
+    {
+      "page": 860,
+      "title": "Exercises 28.3",
+      "hasContent": true
+    },
+    {
+      "page": 861,
+      "title": "Matrix Operations",
+      "hasContent": true
+    },
+    {
+      "page": 862,
+      "title": "Matrix Operations",
+      "hasContent": true
+    },
+    {
+      "page": 863,
+      "title": "Matrix Operations",
+      "hasContent": true
+    },
+    {
+      "page": 864,
+      "title": "29 Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 865,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 866,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 867,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 868,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 869,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 870,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 871,
+      "title": "29.1 Standard and slack forms\n\n This section describes two formats, standard form and slack form, that are use-\n ful when we specify and work with linear programs",
+      "hasContent": true
+    },
+    {
+      "page": 872,
+      "title": "29.1 Standard and slack forms",
+      "hasContent": true
+    },
+    {
+      "page": 873,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 874,
+      "title": "29.1 Standard and slack forms",
+      "hasContent": true
+    },
+    {
+      "page": 875,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 876,
+      "title": "29.1 Standard and slack forms",
+      "hasContent": true
+    },
+    {
+      "page": 877,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 878,
+      "title": "Exercises 29.1",
+      "hasContent": true
+    },
+    {
+      "page": 879,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 880,
+      "title": "29.2 Formulating problems as linear programs",
+      "hasContent": true
+    },
+    {
+      "page": 881,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 882,
+      "title": "29.2 Formulating problems as linear programs",
+      "hasContent": true
+    },
+    {
+      "page": 883,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 884,
+      "title": "Exercises 29.2",
+      "hasContent": true
+    },
+    {
+      "page": 885,
+      "title": "29.3 The simplex algorithm\n\n The simplex algorithm is the classical method for solving linear programs",
+      "hasContent": true
+    },
+    {
+      "page": 886,
+      "title": "29.3 The simplex algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 887,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 888,
+      "title": "29.3 The simplex algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 889,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 890,
+      "title": "29.3 The simplex algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 891,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 892,
+      "title": "29.3 The simplex algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 893,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 894,
+      "title": "29.3 The simplex algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 895,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 896,
+      "title": "29.3 The simplex algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 897,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 898,
+      "title": "29.3 The simplex algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 899,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 900,
+      "title": "29.4 Duality",
+      "hasContent": true
+    },
+    {
+      "page": 901,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 902,
+      "title": "29.4 Duality",
+      "hasContent": true
+    },
+    {
+      "page": 903,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 904,
+      "title": "29.4 Duality",
+      "hasContent": true
+    },
+    {
+      "page": 905,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 906,
+      "title": "Exercises 29.4",
+      "hasContent": true
+    },
+    {
+      "page": 907,
+      "title": "29.5 The initial basic feasible solution\n\n In this section, we",
+      "hasContent": true
+    },
+    {
+      "page": 908,
+      "title": "29.5 The initial basic feasible solution",
+      "hasContent": true
+    },
+    {
+      "page": 909,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 910,
+      "title": "29.5 The initial basic feasible solution",
+      "hasContent": true
+    },
+    {
+      "page": 911,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 912,
+      "title": "29.5 The initial basic feasible solution",
+      "hasContent": true
+    },
+    {
+      "page": 913,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 914,
+      "title": "Exercises 29.5",
+      "hasContent": true
+    },
+    {
+      "page": 915,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 916,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 917,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 918,
+      "title": "Linear Programming",
+      "hasContent": true
+    },
+    {
+      "page": 919,
+      "title": "30 Polynomials and the FFT",
+      "hasContent": true
+    },
+    {
+      "page": 920,
+      "title": "Polynomials and the FFT",
+      "hasContent": true
+    },
+    {
+      "page": 921,
+      "title": "30.1 Representing polynomials\n\n The coef",
+      "hasContent": true
+    },
+    {
+      "page": 922,
+      "title": "30.1 Representing polynomials",
+      "hasContent": true
+    },
+    {
+      "page": 923,
+      "title": "Polynomials and the FFT",
+      "hasContent": true
+    },
+    {
+      "page": 924,
+      "title": "30.1 Representing polynomials",
+      "hasContent": true
+    },
+    {
+      "page": 925,
+      "title": "Polynomials and the FFT",
+      "hasContent": true
+    },
+    {
+      "page": 926,
+      "title": "Exercises 30.1",
+      "hasContent": true
+    },
+    {
+      "page": 927,
+      "title": "30.2 The DFT and FFT\n\n In Section",
+      "hasContent": true
+    },
+    {
+      "page": 928,
+      "title": "30.2 The DFT and FFT",
+      "hasContent": true
+    },
+    {
+      "page": 929,
+      "title": "Polynomials and the FFT",
+      "hasContent": true
+    },
+    {
+      "page": 930,
+      "title": "30.2 The DFT and FFT",
+      "hasContent": true
+    },
+    {
+      "page": 931,
+      "title": "Polynomials and the FFT",
+      "hasContent": true
+    },
+    {
+      "page": 932,
+      "title": "30.2 The DFT and FFT",
+      "hasContent": true
+    },
+    {
+      "page": 933,
+      "title": "Polynomials and the FFT",
+      "hasContent": true
+    },
+    {
+      "page": 934,
+      "title": "30.2 The DFT and FFT",
+      "hasContent": true
+    },
+    {
+      "page": 935,
+      "title": "Polynomials and the FFT",
+      "hasContent": true
+    },
+    {
+      "page": 936,
+      "title": "30.3 Ef",
+      "hasContent": true
+    },
+    {
+      "page": 937,
+      "title": "Polynomials and the FFT",
+      "hasContent": true
+    },
+    {
+      "page": 938,
+      "title": "30.3 Ef",
+      "hasContent": true
+    },
+    {
+      "page": 939,
+      "title": "Polynomials and the FFT",
+      "hasContent": true
+    },
+    {
+      "page": 940,
+      "title": "30.3 Ef",
+      "hasContent": true
+    },
+    {
+      "page": 941,
+      "title": "Polynomials and the FFT",
+      "hasContent": true
+    },
+    {
+      "page": 942,
+      "title": "Polynomials and the FFT",
+      "hasContent": true
+    },
+    {
+      "page": 943,
+      "title": "Polynomials and the FFT",
+      "hasContent": true
+    },
+    {
+      "page": 944,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 945,
+      "title": "Polynomials and the FFT",
+      "hasContent": true
+    },
+    {
+      "page": 946,
+      "title": "Polynomials and the FFT",
+      "hasContent": true
+    },
+    {
+      "page": 947,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 948,
+      "title": "31.1 Elementary number-theoretic notions",
+      "hasContent": true
+    },
+    {
+      "page": 949,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 950,
+      "title": "31.1 Elementary number-theoretic notions",
+      "hasContent": true
+    },
+    {
+      "page": 951,
+      "title": "Number-Theoretic Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 952,
+      "title": "31.1 Elementary number-theoretic notions",
+      "hasContent": true
+    },
+    {
+      "page": 953,
+      "title": "Number-Theoretic Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 954,
+      "title": "31.2 Greatest common divisor",
+      "hasContent": true
+    },
+    {
+      "page": 955,
+      "title": "Number-Theoretic Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 956,
+      "title": "31.2 Greatest common divisor",
+      "hasContent": true
+    },
+    {
+      "page": 957,
+      "title": "Number-Theoretic Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 958,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 959,
+      "title": "Number-Theoretic Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 960,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 961,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 962,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 963,
+      "title": "Number-Theoretic Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 964,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 965,
+      "title": "Number-Theoretic Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 966,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 967,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 968,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 969,
+      "title": "Number-Theoretic Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 970,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 971,
+      "title": "31.5 The Chinese remainder theorem\n\n Around A",
+      "hasContent": true
+    },
+    {
+      "page": 972,
+      "title": "31.5 The Chinese remainder theorem",
+      "hasContent": true
+    },
+    {
+      "page": 973,
+      "title": "Number-Theoretic Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 974,
+      "title": "Exercises 31.5",
+      "hasContent": true
+    },
+    {
+      "page": 975,
+      "title": "31.6 Powers of an element\n\n Just as we often consider the multiples of a given element a, modulo n, we consider\n the sequence of powers of a, modulo n, where a",
+      "hasContent": true
+    },
+    {
+      "page": 976,
+      "title": "31.6 Powers of an element",
+      "hasContent": true
+    },
+    {
+      "page": 977,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 978,
+      "title": "31.6 Powers of an element",
+      "hasContent": true
+    },
+    {
+      "page": 979,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 980,
+      "title": "31.7 The RSA public-key cryptosystem",
+      "hasContent": true
+    },
+    {
+      "page": 981,
+      "title": "Number-Theoretic Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 982,
+      "title": "31.7 The RSA public-key cryptosystem",
+      "hasContent": true
+    },
+    {
+      "page": 983,
+      "title": "Modular Arithmetic",
+      "hasContent": true
+    },
+    {
+      "page": 984,
+      "title": "31.7 The RSA public-key cryptosystem",
+      "hasContent": true
+    },
+    {
+      "page": 985,
+      "title": "32.1 The Naive String-Matching Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 986,
+      "title": "32.1 The Naive String-Matching Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 987,
+      "title": "32.1 The Naive String-Matching Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 988,
+      "title": "32.1 The Naive String-Matching Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 989,
+      "title": "32.2 The Rabin-Karp Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 990,
+      "title": "32.2 The Rabin-Karp Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 991,
+      "title": "32.2 The Rabin-Karp Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 992,
+      "title": "32.2 The Rabin-Karp Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 993,
+      "title": "32.2 The Rabin-Karp Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 994,
+      "title": "32.2 The Rabin-Karp Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 995,
+      "title": "32.3 String Matching with Finite Automata",
+      "hasContent": true
+    },
+    {
+      "page": 996,
+      "title": "32.3 String Matching with Finite Automata",
+      "hasContent": true
+    },
+    {
+      "page": 997,
+      "title": "32.3 String Matching with Finite Automata",
+      "hasContent": true
+    },
+    {
+      "page": 998,
+      "title": "32.3 String Matching with Finite Automata",
+      "hasContent": true
+    },
+    {
+      "page": 999,
+      "title": "32.3 String Matching with Finite Automata",
+      "hasContent": true
+    },
+    {
+      "page": 1000,
+      "title": "32.3 String Matching with Finite Automata",
+      "hasContent": true
+    },
+    {
+      "page": 1001,
+      "title": "32.3 String Matching with Finite Automata",
+      "hasContent": true
+    },
+    {
+      "page": 1002,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1003,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1004,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1005,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1006,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1007,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1008,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1009,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1010,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1011,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1012,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1013,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1014,
+      "title": "32.2 The Rabin-Karp Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1015,
+      "title": "String Matching",
+      "hasContent": true
+    },
+    {
+      "page": 1016,
+      "title": "32.3 String Matching with Finite Automata",
+      "hasContent": true
+    },
+    {
+      "page": 1017,
+      "title": "String Matching",
+      "hasContent": true
+    },
+    {
+      "page": 1018,
+      "title": "32.3 String Matching with Finite Automata",
+      "hasContent": true
+    },
+    {
+      "page": 1019,
+      "title": "String Matching",
+      "hasContent": true
+    },
+    {
+      "page": 1020,
+      "title": "32.3 String Matching with Finite Automata",
+      "hasContent": true
+    },
+    {
+      "page": 1021,
+      "title": "String Matching",
+      "hasContent": true
+    },
+    {
+      "page": 1022,
+      "title": "32.3 String Matching with Finite Automata",
+      "hasContent": true
+    },
+    {
+      "page": 1023,
+      "title": "String Matching",
+      "hasContent": true
+    },
+    {
+      "page": 1024,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1025,
+      "title": "String Matching",
+      "hasContent": true
+    },
+    {
+      "page": 1026,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1027,
+      "title": "String Matching",
+      "hasContent": true
+    },
+    {
+      "page": 1028,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1029,
+      "title": "String Matching",
+      "hasContent": true
+    },
+    {
+      "page": 1030,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1031,
+      "title": "String Matching",
+      "hasContent": true
+    },
+    {
+      "page": 1032,
+      "title": "32.4 The Knuth-Morris-Pratt Algorithm",
+      "hasContent": true
+    },
+    {
+      "page": 1033,
+      "title": "String Matching",
+      "hasContent": true
+    },
+    {
+      "page": 1034,
+      "title": "String Matching",
+      "hasContent": true
+    },
+    {
+      "page": 1035,
+      "title": "33 Computational Geometry",
+      "hasContent": true
+    },
+    {
+      "page": 1036,
+      "title": "33.1 Line-segment properties",
+      "hasContent": true
+    },
+    {
+      "page": 1037,
+      "title": "Computational Geometry",
+      "hasContent": true
+    },
+    {
+      "page": 1038,
+      "title": "33.1 Line-segment properties",
+      "hasContent": true
+    },
+    {
+      "page": 1039,
+      "title": "Computational Geometry",
+      "hasContent": true
+    },
+    {
+      "page": 1040,
+      "title": "33.1 Line-segment properties",
+      "hasContent": true
+    },
+    {
+      "page": 1041,
+      "title": "Computational Geometry",
+      "hasContent": true
+    },
+    {
+      "page": 1042,
+      "title": "33.2 Determining whether any pair of segments intersects",
+      "hasContent": true
+    },
+    {
+      "page": 1043,
+      "title": "Computational Geometry",
+      "hasContent": true
+    },
+    {
+      "page": 1044,
+      "title": "33.2 Determining whether any pair of segments intersects",
+      "hasContent": true
+    },
+    {
+      "page": 1045,
+      "title": "Computational Geometry",
+      "hasContent": true
+    },
+    {
+      "page": 1046,
+      "title": "33.2 Determining whether any pair of segments intersects",
+      "hasContent": true
+    },
+    {
+      "page": 1047,
+      "title": "Computational Geometry",
+      "hasContent": true
+    },
+    {
+      "page": 1048,
+      "title": "34.1 Polynomial Time",
+      "hasContent": true
+    },
+    {
+      "page": 1049,
+      "title": "34.1 Polynomial Time",
+      "hasContent": true
+    },
+    {
+      "page": 1050,
+      "title": "34.1 Polynomial Time",
+      "hasContent": true
+    },
+    {
+      "page": 1051,
+      "title": "34.1 Polynomial Time",
+      "hasContent": true
+    },
+    {
+      "page": 1052,
+      "title": "34.1 Polynomial Time",
+      "hasContent": true
+    },
+    {
+      "page": 1053,
+      "title": "34.1 Polynomial Time",
+      "hasContent": true
+    },
+    {
+      "page": 1054,
+      "title": "34.1 Polynomial Time",
+      "hasContent": true
+    },
+    {
+      "page": 1055,
+      "title": "34.1 Polynomial Time",
+      "hasContent": true
+    },
+    {
+      "page": 1056,
+      "title": "34.1 Polynomial Time",
+      "hasContent": true
+    },
+    {
+      "page": 1057,
+      "title": "34.1 Polynomial Time",
+      "hasContent": true
+    },
+    {
+      "page": 1058,
+      "title": "34.2 Polynomial-Time Verification",
+      "hasContent": true
+    },
+    {
+      "page": 1059,
+      "title": "34.2 Polynomial-Time Verification",
+      "hasContent": true
+    },
+    {
+      "page": 1060,
+      "title": "34.2 Polynomial-Time Verification",
+      "hasContent": true
+    },
+    {
+      "page": 1061,
+      "title": "34.2 Polynomial-Time Verification",
+      "hasContent": true
+    },
+    {
+      "page": 1062,
+      "title": "34.2 Polynomial-Time Verification",
+      "hasContent": true
+    },
+    {
+      "page": 1063,
+      "title": "34.2 Polynomial-Time Verification",
+      "hasContent": true
+    },
+    {
+      "page": 1064,
+      "title": "34.2 Polynomial-Time Verification",
+      "hasContent": true
+    },
+    {
+      "page": 1065,
+      "title": "34.2 Polynomial-Time Verification",
+      "hasContent": true
+    },
+    {
+      "page": 1066,
+      "title": "34.3 NP-Completeness and Reducibility",
+      "hasContent": true
+    },
+    {
+      "page": 1067,
+      "title": "34.3 NP-Completeness and Reducibility",
+      "hasContent": true
+    },
+    {
+      "page": 1068,
+      "title": "34.3 NP-Completeness and Reducibility",
+      "hasContent": true
+    },
+    {
+      "page": 1069,
+      "title": "34.3 NP-Completeness and Reducibility",
+      "hasContent": true
+    },
+    {
+      "page": 1070,
+      "title": "34.3 NP-Completeness and Reducibility",
+      "hasContent": true
+    },
+    {
+      "page": 1071,
+      "title": "34.3 NP-Completeness and Reducibility",
+      "hasContent": true
+    },
+    {
+      "page": 1072,
+      "title": "34.3 NP-Completeness and Reducibility",
+      "hasContent": true
+    },
+    {
+      "page": 1073,
+      "title": "34.3 NP-Completeness and Reducibility",
+      "hasContent": true
+    },
+    {
+      "page": 1074,
+      "title": "34.3 NP-Completeness and Reducibility",
+      "hasContent": true
+    },
+    {
+      "page": 1075,
+      "title": "34.3 NP-Completeness and Reducibility",
+      "hasContent": true
+    },
+    {
+      "page": 1076,
+      "title": "34.4 NP-Completeness Proofs",
+      "hasContent": true
+    },
+    {
+      "page": 1077,
+      "title": "34.4 NP-Completeness Proofs",
+      "hasContent": true
+    },
+    {
+      "page": 1078,
+      "title": "34.4 NP-Completeness Proofs",
+      "hasContent": true
+    },
+    {
+      "page": 1079,
+      "title": "34.4 NP-Completeness Proofs",
+      "hasContent": true
+    },
+    {
+      "page": 1080,
+      "title": "34.4 NP-Completeness Proofs",
+      "hasContent": true
+    },
+    {
+      "page": 1081,
+      "title": "34.4 NP-Completeness Proofs",
+      "hasContent": true
+    },
+    {
+      "page": 1082,
+      "title": "34.4 NP-Completeness Proofs",
+      "hasContent": true
+    },
+    {
+      "page": 1083,
+      "title": "34.4 NP-Completeness Proofs",
+      "hasContent": true
+    },
+    {
+      "page": 1084,
+      "title": "34.4 NP-Completeness Proofs",
+      "hasContent": true
+    },
+    {
+      "page": 1085,
+      "title": "34.4 NP-Completeness Proofs",
+      "hasContent": true
+    },
+    {
+      "page": 1086,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1087,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1088,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1089,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1090,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1091,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1092,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1093,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1094,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1095,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1096,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1097,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1098,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1099,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1100,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1101,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1102,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1103,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1104,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1105,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1106,
+      "title": "34.4 NP-Completeness Proofs",
+      "hasContent": true
+    },
+    {
+      "page": 1107,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1108,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1109,
+      "title": "NP-Completeness",
+      "hasContent": true
+    },
+    {
+      "page": 1110,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1111,
+      "title": "NP-Completeness",
+      "hasContent": true
+    },
+    {
+      "page": 1112,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1113,
+      "title": "NP-Completeness",
+      "hasContent": true
+    },
+    {
+      "page": 1114,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1115,
+      "title": "NP-Completeness",
+      "hasContent": true
+    },
+    {
+      "page": 1116,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1117,
+      "title": "NP-Completeness",
+      "hasContent": true
+    },
+    {
+      "page": 1118,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1119,
+      "title": "NP-Completeness",
+      "hasContent": true
+    },
+    {
+      "page": 1120,
+      "title": "34.5 NP-Complete Problems",
+      "hasContent": true
+    },
+    {
+      "page": 1121,
+      "title": "NP-Completeness",
+      "hasContent": true
+    },
+    {
+      "page": 1122,
+      "title": "NP-Completeness",
+      "hasContent": true
+    },
+    {
+      "page": 1123,
+      "title": "NP-Completeness",
+      "hasContent": true
+    },
+    {
+      "page": 1124,
+      "title": "NP-Completeness",
+      "hasContent": true
+    },
+    {
+      "page": 1125,
+      "title": "NP-Completeness",
+      "hasContent": true
+    },
+    {
+      "page": 1126,
+      "title": "NP-Completeness",
+      "hasContent": true
+    },
+    {
+      "page": 1127,
+      "title": "35 Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1128,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1129,
+      "title": "35.1 The vertex-cover problem\n\n Section",
+      "hasContent": true
+    },
+    {
+      "page": 1130,
+      "title": "35.1 The vertex-cover problem",
+      "hasContent": true
+    },
+    {
+      "page": 1131,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1132,
+      "title": "35.2 The traveling-salesman problem",
+      "hasContent": true
+    },
+    {
+      "page": 1133,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1134,
+      "title": "35.2 The traveling-salesman problem",
+      "hasContent": true
+    },
+    {
+      "page": 1135,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1136,
+      "title": "35.2 The traveling-salesman problem",
+      "hasContent": true
+    },
+    {
+      "page": 1137,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1138,
+      "title": "35.3 The set-covering problem",
+      "hasContent": true
+    },
+    {
+      "page": 1139,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1140,
+      "title": "35.3 The set-covering problem",
+      "hasContent": true
+    },
+    {
+      "page": 1141,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1142,
+      "title": "35.3 The set-covering problem",
+      "hasContent": true
+    },
+    {
+      "page": 1143,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1144,
+      "title": "35.4 Randomization and linear programming",
+      "hasContent": true
+    },
+    {
+      "page": 1145,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1146,
+      "title": "35.4 Randomization and linear programming",
+      "hasContent": true
+    },
+    {
+      "page": 1147,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1148,
+      "title": "Exercises 35.4",
+      "hasContent": true
+    },
+    {
+      "page": 1149,
+      "title": "35.5 The subset-sum problem\n\n Recall from Section",
+      "hasContent": true
+    },
+    {
+      "page": 1150,
+      "title": "35.5 The subset-sum problem",
+      "hasContent": true
+    },
+    {
+      "page": 1151,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1152,
+      "title": "35.5 The subset-sum problem",
+      "hasContent": true
+    },
+    {
+      "page": 1153,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1154,
+      "title": "Exercises 35.5",
+      "hasContent": true
+    },
+    {
+      "page": 1155,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1156,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1157,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1158,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1159,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1160,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1161,
+      "title": "Approximation Algorithms",
+      "hasContent": true
+    },
+    {
+      "page": 1162,
+      "title": "Page 1162",
+      "hasContent": true
+    },
+    {
+      "page": 1163,
+      "title": "VIII Appendix: Mathematical Background",
+      "hasContent": true
+    },
+    {
+      "page": 1164,
+      "title": "Introduction",
+      "hasContent": true
+    },
+    {
+      "page": 1165,
+      "title": "1144 Part VIII Appendix: Mathematical Background",
+      "hasContent": true
+    },
+    {
+      "page": 1166,
+      "title": "A Summations",
+      "hasContent": true
+    },
+    {
+      "page": 1167,
+      "title": "1146 Appendix A Summations",
+      "hasContent": true
+    },
+    {
+      "page": 1168,
+      "title": "A.1 Summation formulas and properties 1147",
+      "hasContent": true
+    },
+    {
+      "page": 1169,
+      "title": "1148 Appendix A Summations",
+      "hasContent": true
+    },
+    {
+      "page": 1170,
+      "title": "A.2 Bounding summations 1149",
+      "hasContent": true
+    },
+    {
+      "page": 1171,
+      "title": "1150 Appendix A Summations",
+      "hasContent": true
+    },
+    {
+      "page": 1172,
+      "title": "A.2 Bounding summations 1151",
+      "hasContent": true
+    },
+    {
+      "page": 1173,
+      "title": "1152 Appendix A Summations",
+      "hasContent": true
+    },
+    {
+      "page": 1174,
+      "title": "A.2 Bounding summations 1153",
+      "hasContent": true
+    },
+    {
+      "page": 1175,
+      "title": "1154 Appendix A Summations",
+      "hasContent": true
+    },
+    {
+      "page": 1176,
+      "title": "A.2 Bounding summations 1155",
+      "hasContent": true
+    },
+    {
+      "page": 1177,
+      "title": "1156 Appendix A Summations",
+      "hasContent": true
+    },
+    {
+      "page": 1178,
+      "title": "Notes for Appendix A 1157",
+      "hasContent": true
+    },
+    {
+      "page": 1179,
+      "title": "B Sets, Etc.",
+      "hasContent": true
+    },
+    {
+      "page": 1180,
+      "title": "B.1 Sets 1159",
+      "hasContent": true
+    },
+    {
+      "page": 1181,
+      "title": "1160 Appendix B Sets, Etc.",
+      "hasContent": true
+    },
+    {
+      "page": 1182,
+      "title": "B.1 Sets 1161",
+      "hasContent": true
+    },
+    {
+      "page": 1183,
+      "title": "1162 Appendix B Sets, Etc.",
+      "hasContent": true
+    },
+    {
+      "page": 1184,
+      "title": "B.2 Relations 1163",
+      "hasContent": true
+    },
+    {
+      "page": 1185,
+      "title": "1164 Appendix B Sets, Etc.",
+      "hasContent": true
+    },
+    {
+      "page": 1186,
+      "title": "B.2 Relations 1165",
+      "hasContent": true
+    },
+    {
+      "page": 1187,
+      "title": "1166 Appendix B Sets, Etc.",
+      "hasContent": true
+    },
+    {
+      "page": 1188,
+      "title": "B.3 Functions 1167",
+      "hasContent": true
+    },
+    {
+      "page": 1189,
+      "title": "1168 Appendix B Sets, Etc.",
+      "hasContent": true
+    },
+    {
+      "page": 1190,
+      "title": "B.4 Graphs 1169",
+      "hasContent": true
+    },
+    {
+      "page": 1191,
+      "title": "1170 Appendix B Sets, Etc.",
+      "hasContent": true
+    },
+    {
+      "page": 1192,
+      "title": "B.4 Graphs 1171",
+      "hasContent": true
+    },
+    {
+      "page": 1193,
+      "title": "1172 Appendix B Sets, Etc.",
+      "hasContent": true
+    },
+    {
+      "page": 1194,
+      "title": "B.5 Trees 1173",
+      "hasContent": true
+    },
+    {
+      "page": 1195,
+      "title": "1174 Appendix B Sets, Etc.",
+      "hasContent": true
+    },
+    {
+      "page": 1196,
+      "title": "B.5 Trees 1175",
+      "hasContent": true
+    },
+    {
+      "page": 1197,
+      "title": "1176 Appendix B Sets, Etc.",
+      "hasContent": true
+    },
+    {
+      "page": 1198,
+      "title": "B.5 Trees 1177",
+      "hasContent": true
+    },
+    {
+      "page": 1199,
+      "title": "1178 Appendix B Sets, Etc.",
+      "hasContent": true
+    },
+    {
+      "page": 1200,
+      "title": "B.5 Trees 1179",
+      "hasContent": true
+    },
+    {
+      "page": 1201,
+      "title": "1180 Appendix B Sets, Etc.",
+      "hasContent": true
+    },
+    {
+      "page": 1202,
+      "title": "Problems for Appendix B 1181",
+      "hasContent": true
+    },
+    {
+      "page": 1203,
+      "title": "1182 Appendix B Sets, Etc.",
+      "hasContent": true
+    },
+    {
+      "page": 1204,
+      "title": "C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1205,
+      "title": "1184 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1206,
+      "title": "C.1 Counting 1185",
+      "hasContent": true
+    },
+    {
+      "page": 1207,
+      "title": "1186 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1208,
+      "title": "C.1 Counting 1187",
+      "hasContent": true
+    },
+    {
+      "page": 1209,
+      "title": "1188 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1210,
+      "title": "C.2 Probability 1189",
+      "hasContent": true
+    },
+    {
+      "page": 1211,
+      "title": "1190 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1212,
+      "title": "C.2 Probability 1191",
+      "hasContent": true
+    },
+    {
+      "page": 1213,
+      "title": "1192 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1214,
+      "title": "C.2 Probability 1193",
+      "hasContent": true
+    },
+    {
+      "page": 1215,
+      "title": "1194 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1216,
+      "title": "C.2 Probability 1195",
+      "hasContent": true
+    },
+    {
+      "page": 1217,
+      "title": "1196 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1218,
+      "title": "C.3 Discrete random variables 1197",
+      "hasContent": true
+    },
+    {
+      "page": 1219,
+      "title": "1198 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1220,
+      "title": "C.3 Discrete random variables 1199",
+      "hasContent": true
+    },
+    {
+      "page": 1221,
+      "title": "1200 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1222,
+      "title": "C.4 The geometric and binomial distributions 1201",
+      "hasContent": true
+    },
+    {
+      "page": 1223,
+      "title": "1202 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1224,
+      "title": "C.4 The geometric and binomial distributions 1203",
+      "hasContent": true
+    },
+    {
+      "page": 1225,
+      "title": "1204 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1226,
+      "title": "C.4 The geometric and binomial distributions 1205",
+      "hasContent": true
+    },
+    {
+      "page": 1227,
+      "title": "1206 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1228,
+      "title": "C.4 The geometric and binomial distributions 1207",
+      "hasContent": true
+    },
+    {
+      "page": 1229,
+      "title": "1208 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1230,
+      "title": "C.5 The tails of the binomial distribution 1209",
+      "hasContent": true
+    },
+    {
+      "page": 1231,
+      "title": "1210 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1232,
+      "title": "C.5 The tails of the binomial distribution 1211",
+      "hasContent": true
+    },
+    {
+      "page": 1233,
+      "title": "1212 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1234,
+      "title": "C.5 The tails of the binomial distribution 1213",
+      "hasContent": true
+    },
+    {
+      "page": 1235,
+      "title": "1214 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1236,
+      "title": "Problems for Appendix C 1215",
+      "hasContent": true
+    },
+    {
+      "page": 1237,
+      "title": "1216 Appendix C Counting and Probability",
+      "hasContent": true
+    },
+    {
+      "page": 1238,
+      "title": "D Matrices",
+      "hasContent": true
+    },
+    {
+      "page": 1239,
+      "title": "1218 Appendix D Matrices",
+      "hasContent": true
+    },
+    {
+      "page": 1240,
+      "title": "D.1 Matrices and matrix operations 1219",
+      "hasContent": true
+    },
+    {
+      "page": 1241,
+      "title": "1220 Appendix D Matrices",
+      "hasContent": true
+    },
+    {
+      "page": 1242,
+      "title": "D.1 Matrices and matrix operations 1221",
+      "hasContent": true
+    },
+    {
+      "page": 1243,
+      "title": "1222 Appendix D Matrices",
+      "hasContent": true
+    },
+    {
+      "page": 1244,
+      "title": "D.2 Basic matrix properties 1223",
+      "hasContent": true
+    },
+    {
+      "page": 1245,
+      "title": "1224 Appendix D Matrices",
+      "hasContent": true
+    },
+    {
+      "page": 1246,
+      "title": "D.2 Basic matrix properties 1225",
+      "hasContent": true
+    },
+    {
+      "page": 1247,
+      "title": "1226 Appendix D Matrices",
+      "hasContent": true
+    },
+    {
+      "page": 1248,
+      "title": "Problems for Appendix D 1227",
+      "hasContent": true
+    },
+    {
+      "page": 1249,
+      "title": "1228 Appendix D Matrices",
+      "hasContent": true
+    },
+    {
+      "page": 1250,
+      "title": "Notes for Appendix D 1229",
+      "hasContent": true
+    },
+    {
+      "page": 1251,
+      "title": "Page 1251",
+      "hasContent": true
+    },
+    {
+      "page": 1252,
+      "title": "Bibliography",
+      "hasContent": true
+    },
+    {
+      "page": 1253,
+      "title": "1232 Bibliography",
+      "hasContent": true
+    },
+    {
+      "page": 1254,
+      "title": "Bibliography 1233",
+      "hasContent": true
+    },
+    {
+      "page": 1255,
+      "title": "1234 Bibliography",
+      "hasContent": true
+    },
+    {
+      "page": 1256,
+      "title": "Bibliography 1235",
+      "hasContent": true
+    },
+    {
+      "page": 1257,
+      "title": "1236 Bibliography",
+      "hasContent": true
+    },
+    {
+      "page": 1258,
+      "title": "Bibliography 1237",
+      "hasContent": true
+    },
+    {
+      "page": 1259,
+      "title": "1238 Bibliography",
+      "hasContent": true
+    },
+    {
+      "page": 1260,
+      "title": "Bibliography 1239",
+      "hasContent": true
+    },
+    {
+      "page": 1261,
+      "title": "1240 Bibliography",
+      "hasContent": true
+    },
+    {
+      "page": 1262,
+      "title": "Bibliography 1241",
+      "hasContent": true
+    },
+    {
+      "page": 1263,
+      "title": "1242 Bibliography",
+      "hasContent": true
+    },
+    {
+      "page": 1264,
+      "title": "Bibliography 1243",
+      "hasContent": true
+    },
+    {
+      "page": 1265,
+      "title": "1244 Bibliography",
+      "hasContent": true
+    },
+    {
+      "page": 1266,
+      "title": "Bibliography 1245",
+      "hasContent": true
+    },
+    {
+      "page": 1267,
+      "title": "1246 Bibliography",
+      "hasContent": true
+    },
+    {
+      "page": 1268,
+      "title": "Bibliography 1247",
+      "hasContent": true
+    },
+    {
+      "page": 1269,
+      "title": "1248 Bibliography",
+      "hasContent": true
+    },
+    {
+      "page": 1270,
+      "title": "Bibliography 1249",
+      "hasContent": true
+    },
+    {
+      "page": 1271,
+      "title": "1250 Bibliography",
+      "hasContent": true
+    },
+    {
+      "page": 1272,
+      "title": "This index uses the following conventions. Numbers are alpha",
+      "hasContent": true
+    },
+    {
+      "page": 1273,
+      "title": "1252 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1274,
+      "title": "Index 1253",
+      "hasContent": true
+    },
+    {
+      "page": 1275,
+      "title": "1254 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1276,
+      "title": "Index 1255",
+      "hasContent": true
+    },
+    {
+      "page": 1277,
+      "title": "1256 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1278,
+      "title": "Index 1257",
+      "hasContent": true
+    },
+    {
+      "page": 1279,
+      "title": "1258 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1280,
+      "title": "Index 1259",
+      "hasContent": true
+    },
+    {
+      "page": 1281,
+      "title": "1260 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1282,
+      "title": "Index 1261",
+      "hasContent": true
+    },
+    {
+      "page": 1283,
+      "title": "1262 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1284,
+      "title": "Index 1263",
+      "hasContent": true
+    },
+    {
+      "page": 1285,
+      "title": "1264 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1286,
+      "title": "Index 1265",
+      "hasContent": true
+    },
+    {
+      "page": 1287,
+      "title": "1266 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1288,
+      "title": "Index 1267",
+      "hasContent": true
+    },
+    {
+      "page": 1289,
+      "title": "1268 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1290,
+      "title": "Index 1269",
+      "hasContent": true
+    },
+    {
+      "page": 1291,
+      "title": "1270 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1292,
+      "title": "Index 1271",
+      "hasContent": true
+    },
+    {
+      "page": 1293,
+      "title": "1272 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1294,
+      "title": "Index 1273",
+      "hasContent": true
+    },
+    {
+      "page": 1295,
+      "title": "1274 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1296,
+      "title": "Index 1275",
+      "hasContent": true
+    },
+    {
+      "page": 1297,
+      "title": "1276 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1298,
+      "title": "Index 1277",
+      "hasContent": true
+    },
+    {
+      "page": 1299,
+      "title": "1278 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1300,
+      "title": "Index 1279",
+      "hasContent": true
+    },
+    {
+      "page": 1301,
+      "title": "1280 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1302,
+      "title": "Index 1281",
+      "hasContent": true
+    },
+    {
+      "page": 1303,
+      "title": "1282 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1304,
+      "title": "Index 1283",
+      "hasContent": true
+    },
+    {
+      "page": 1305,
+      "title": "1284 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1306,
+      "title": "Index 1285",
+      "hasContent": true
+    },
+    {
+      "page": 1307,
+      "title": "1286 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1308,
+      "title": "Index 1287",
+      "hasContent": true
+    },
+    {
+      "page": 1309,
+      "title": "1288 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1310,
+      "title": "Index 1289",
+      "hasContent": true
+    },
+    {
+      "page": 1311,
+      "title": "1290 Index",
+      "hasContent": true
+    },
+    {
+      "page": 1312,
+      "title": "Index 1291",
+      "hasContent": true
+    },
+    {
+      "page": 1313,
+      "title": "1292 Index",
+      "hasContent": true
+    }
+  ]
+}

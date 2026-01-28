@@ -1,0 +1,52 @@
+Index                                                                                1267
+
+
+harmonic number, 1147, 1153–1154              max-heap, 152
+harmonic series, 1147, 1153–1154              maximum key of, 163
+H ASH -D ELETE , 277 ex.                      mergeable, see mergeable heap
+hash function, 256, 262–269                   min-heap, 153
+  auxiliary, 272                              in Prim’s algorithm, 636
+  collision-resistant, 964                    as a priority queue, 162–166
+  division method for, 263, 268–269 ex.       relaxed, 530
+  -universal, 269 ex.                        running times of operations on, 506 ﬁg.
+  multiplication method for, 263–264          and treaps, 333 pr.
+  universal, 265–268                          2-3-4, 529 pr.
+hashing, 253–285                           H EAP -D ECREASE -K EY, 165 ex.
+  with chaining, 257–260, 283 pr.          H EAP -D ELETE , 166 ex.
+  double, 272–274, 277 ex.                 H EAP -E XTRACT-M AX, 163
+  k-universal, 284 pr.                     H EAP -E XTRACT-M IN, 165 ex.
+  in memoization, 365, 387                 H EAP -I NCREASE -K EY, 164
+  with open addressing, 269–277            H EAP -M AXIMUM, 163
+  perfect, 277–282, 285                    H EAP -M INIMUM, 165 ex.
+  to replace adjacency lists, 593 ex.      heap property, 152
+  universal, 265–268                          maintenance of, 154–156
+H ASH -I NSERT , 270, 277 ex.                 vs. binary-search-tree property, 289 ex.
+H ASH -S EARCH, 271, 277 ex.               heapsort, 151–169
+hash table, 256–261                        H EAPSORT , 160
+  dynamic, 471 ex.                         heel, 602 ex.
+  secondary, 278                           height
+  see also hashing                            of a binomial tree, 527 pr.
+hash value, 256                               black-, 309
+hat-check problem, 122 ex.                    of a B-tree, 489–490
+head                                          of a d -ary heap, 167 pr.
+  in a disk drive, 485                        of a decision tree, 193
+  of a linked list, 236                       exponential, 300
+  of a queue, 234                             of a heap, 153
+heap, 151–169                                 of a node in a heap, 153, 159 ex.
+  analyzed by potential method, 462 ex.       of a node in a tree, 1177
+  binomial, 527 pr.                           of a red-black tree, 309
+  building, 156–159, 166 pr.                  of a tree, 1177
+  compared with Fibonacci heaps, 506–507   height-balanced tree, 333 pr.
+  d -ary, 167 pr., 706 pr.                 height function, in push-relabel algorithms, 738
+  deletion from, 166 ex.                   hereditary family of subsets, 437
+  in Dijkstra’s algorithm, 662             Hermitian matrix, 832 ex.
+  extracting the maximum key from, 163     high endpoint of an interval, 348
+  Fibonacci, see Fibonacci heap            high function, 537, 546
+  as garbage-collected storage, 151        H IRE -A SSISTANT , 115
+  height of, 153                           hiring problem, 114–115, 123–124, 145
+  in Huffman’s algorithm, 433                 on-line, 139–141
+  to implement a mergeable heap, 506          probabilistic analysis of, 120–121
+  increasing a key in, 163–164             hit
+  insertion into, 164                         cache, 449 pr.
+  in Johnson’s algorithm, 704                 spurious, 991
+

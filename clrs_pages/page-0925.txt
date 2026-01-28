@@ -1,0 +1,51 @@
+904           Chapter 30 Polynomials and the FFT
+
+
+        a0 ; a1 ; : : : ; an1       Ordinary multiplication                                       Coefﬁcient
+                                                                     c0 ; c1 ; : : : ; c2n2
+        b0 ; b1 ; : : : ; bn1            Time ‚.n2 /                                              representations
+
+                    Evaluation                                                    Interpolation
+                    Time ‚.n lg n/                                                Time ‚.n lg n/
+
+           0        0                                                           0
+        A.!2n /; B.!2n /                                                   C.!2n  /
+           1        1                                                           1
+        A.!2n /; B.!2n /             Pointwise multiplication              C.!2n /                 Point-value
+                ::                                                           ::                    representations
+                 :                         Time ‚.n/                          :
+         2n1       2n1                                                     2n1
+      A.!2n   /; B.!2n   /                                                C.!2n   /
+
+
+
+
+              Figure 30.1 A graphical outline of an efﬁcient polynomial-multiplication process. Representations
+              on the top are in coefﬁcient form, while those on the bottom are in point-value form. The arrows
+              from left to right correspond to the multiplication operation. The !2n terms are complex .2n/th roots
+              of unity.
+
+
+              on whether we can convert a polynomial quickly from coefﬁcient form to point-
+              value form (evaluate) and vice versa (interpolate).
+                 We can use any points we want as evaluation points, but by choosing the eval-
+              uation points carefully, we can convert between representations in only ‚.n lg n/
+              time. As we shall see in Section 30.2, if we choose “complex roots of unity” as
+              the evaluation points, we can produce a point-value representation by taking the
+              discrete Fourier transform (or DFT) of a coefﬁcient vector. We can perform the
+              inverse operation, interpolation, by taking the “inverse DFT” of point-value pairs,
+              yielding a coefﬁcient vector. Section 30.2 will show how the FFT accomplishes
+              the DFT and inverse DFT operations in ‚.n lg n/ time.
+                 Figure 30.1 shows this strategy graphically. One minor detail concerns degree-
+              bounds. The product of two polynomials of degree-bound n is a polynomial of
+              degree-bound 2n. Before evaluating the input polynomials A and B, therefore,
+              we ﬁrst double their degree-bounds to 2n by adding n high-order coefﬁcients of 0.
+              Because the vectors have 2n elements, we use “complex .2n/th roots of unity,”
+              which are denoted by the !2n terms in Figure 30.1.
+                 Given the FFT, we have the following ‚.n lg n/-time procedure for multiplying
+              two polynomials A.x/ and B.x/ of degree-bound n, where the input and output
+              representations are in coefﬁcient form. We assume that n is a power of 2; we can
+              always meet this requirement by adding high-order zero coefﬁcients.
+              1. Double degree-bound: Create coefﬁcient representations of A.x/ and B.x/ as
+                 degree-bound 2n polynomials by adding n high-order zero coefﬁcients to each.
+

@@ -1,0 +1,44 @@
+1242   Bibliography
+
+
+        [203] Valerie King. A simpler minimum spanning tree veriﬁcation algorithm. Algorithmica,
+              18(2):263–270, 1997.
+        [204] Valerie King, Satish Rao, and Robert E. Tarjan. A faster deterministic maximum ﬂow algo-
+              rithm. Journal of Algorithms, 17(3):447–474, 1994.
+        [205] Jeffrey H. Kingston. Algorithms and Data Structures: Design, Correctness, Analysis.
+              Addison-Wesley, second edition, 1997.
+        [206] D. G. Kirkpatrick and R. Seidel. The ultimate planar convex hull algorithm? SIAM Journal
+              on Computing, 15(2):287–299, 1986.
+        [207] Philip N. Klein and Neal E. Young. Approximation algorithms for NP-hard optimization
+              problems. In CRC Handbook on Algorithms, pages 34-1–34-19. CRC Press, 1999.
+        [208] Jon Kleinberg and Éva Tardos. Algorithm Design. Addison-Wesley, 2006.
+        [209] Donald E. Knuth. Fundamental Algorithms, volume 1 of The Art of Computer Program-
+              ming. Addison-Wesley, 1968. Third edition, 1997.
+        [210] Donald E. Knuth. Seminumerical Algorithms, volume 2 of The Art of Computer Program-
+              ming. Addison-Wesley, 1969. Third edition, 1997.
+        [211] Donald E. Knuth. Sorting and Searching, volume 3 of The Art of Computer Programming.
+              Addison-Wesley, 1973. Second edition, 1998.
+        [212] Donald E. Knuth. Optimum binary search trees. Acta Informatica, 1(1):14–25, 1971.
+        [213] Donald E. Knuth. Big omicron and big omega and big theta. SIGACT News, 8(2):18–23,
+              1976.
+        [214] Donald E. Knuth, James H. Morris, Jr., and Vaughan R. Pratt. Fast pattern matching in
+              strings. SIAM Journal on Computing, 6(2):323–350, 1977.
+        [215] J. Komlós. Linear veriﬁcation for spanning trees. Combinatorica, 5(1):57–65, 1985.
+        [216] Bernhard Korte and László Lovász. Mathematical structures underlying greedy algorithms.
+              In F. Gecseg, editor, Fundamentals of Computation Theory, volume 117 of Lecture Notes in
+              Computer Science, pages 205–209. Springer, 1981.
+        [217] Bernhard Korte and László Lovász. Structural properties of greedoids. Combinatorica,
+              3(3–4):359–374, 1983.
+        [218] Bernhard Korte and László Lovász. Greedoids—A structural framework for the greedy
+              algorithm. In W. Pulleybank, editor, Progress in Combinatorial Optimization, pages 221–
+              243. Academic Press, 1984.
+        [219] Bernhard Korte and László Lovász. Greedoids and linear objective functions. SIAM Journal
+              on Algebraic and Discrete Methods, 5(2):229–238, 1984.
+        [220] Dexter C. Kozen. The Design and Analysis of Algorithms. Springer, 1992.
+        [221] David W. Krumme, George Cybenko, and K. N. Venkataraman. Gossiping in minimal time.
+              SIAM Journal on Computing, 21(1):111–139, 1992.
+        [222] Joseph B. Kruskal, Jr. On the shortest spanning subtree of a graph and the traveling salesman
+              problem. Proceedings of the American Mathematical Society, 7(1):48–50, 1956.
+        [223] Leslie Lamport. How to make a multiprocessor computer that correctly executes multipro-
+              cess programs. IEEE Transactions on Computers, C-28(9):690–691, 1979.
+

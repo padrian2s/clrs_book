@@ -1,0 +1,43 @@
+C.1 Counting                                                                    1187
+
+   !
+ n         nn
+      k           ;                                                           (C.6)
+ k    k .n  k/nk
+
+where for convenience we assume that 00 D 1. For k D n, where 0    1, we
+can rewrite this bound as
+     !
+  n                      nn
+        
+  n          .n/ n ..1  /n/.1 /n
+                           1 !n
+                  1        1
+        D
+                        1
+        D 2n H. / ;
+where
+H./ D  lg   .1  / lg.1  /                                             (C.7)
+is the (binary) entropy function and where, for convenience, we assume that
+0 lg 0 D 0, so that H.0/ D H.1/ D 0.
+
+Exercises
+
+C.1-1
+How many k-substrings does an n-string have? (Consider identical k-substrings at
+different positions to be different.) How many substrings does an n-string have in
+total?
+
+C.1-2
+An n-input, m-output boolean function is a function from fTRUE ; FALSE gn to
+fTRUE ; FALSE gm . How many n-input, 1-output boolean functions are there? How
+many n-input, m-output boolean functions are there?
+
+C.1-3
+In how many ways can n professors sit around a circular conference table? Con-
+sider two seatings to be the same if one can be rotated to form the other.
+
+C.1-4
+In how many ways can we choose three distinct numbers from the set f1; 2; : : : ; 99g
+so that their sum is even?
+

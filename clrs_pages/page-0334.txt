@@ -1,0 +1,48 @@
+13.2 Rotations                                                                                     313
+
+
+
+                     LEFT-ROTATE(T, x)
+         y                                         x
+
+    x         γ                               α         y
+                    RIGHT-ROTATE(T, y)
+α       β                                          β        γ
+
+
+Figure 13.2 The rotation operations on a binary search tree. The operation L EFT-ROTATE.T; x/
+transforms the conﬁguration of the two nodes on the right into the conﬁguration on the left by chang-
+ing a constant number of pointers. The inverse operation R IGHT-ROTATE.T; y/ transforms the con-
+ﬁguration on the left into the conﬁguration on the right. The letters ˛, ˇ, and represent arbitrary
+subtrees. A rotation operation preserves the binary-search-tree property: the keys in ˛ precede x: key,
+which precedes the keys in ˇ, which precede y: key, which precedes the keys in .
+
+
+L EFT-ROTATE .T; x/
+ 1 y D x:right                          // set y
+ 2 x:right D y:left                     // turn y’s left subtree into x’s right subtree
+ 3 if y:left ¤ T:nil
+ 4      y:left:p D x
+ 5 y:p D x:p                            // link x’s parent to y
+ 6 if x:p == T:nil
+ 7      T:root D y
+ 8 elseif x == x:p:left
+ 9      x:p:left D y
+10 else x:p:right D y
+11 y:left D x                           // put x on y’s left
+12 x:p D y
+
+Figure 13.3 shows an example of how L EFT-ROTATE modiﬁes a binary search
+tree. The code for R IGHT-ROTATE is symmetric. Both L EFT-ROTATE and R IGHT-
+ROTATE run in O.1/ time. Only pointers are changed by a rotation; all other
+attributes in a node remain the same.
+
+Exercises
+
+13.2-1
+Write pseudocode for R IGHT-ROTATE.
+
+13.2-2
+Argue that in every n-node binary search tree, there are exactly n  1 possible
+rotations.
+

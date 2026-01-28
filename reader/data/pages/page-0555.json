@@ -1,0 +1,5 @@
+{
+  "page": 555,
+  "title": "van Emde Boas Trees",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 20</div>\n    <h1>van Emde Boas Trees</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>V: Advanced Data Structures</h4>\n    <h3>Chapter 20: van Emde Boas Trees</h3>\n    <p><em>O(log log U) operations for integers in [0, U)</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>Exploits fixed universe size U</li>\n<li>Recursive structure with √U clusters</li>\n<li>Much faster than BST for bounded integers</li>\n<li>Space: O(U)</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>Very fast priority queues for integer keys</p>\n</div>\n</div>"
+}

@@ -1,0 +1,45 @@
+606   Chapter 22 Elementary Graph Algorithms
+
+
+      to cause problems in practice, as we can usually use any depth-ﬁrst search result
+      effectively, with essentially equivalent results.
+         What is the running time of DFS? The loops on lines 1–3 and lines 5–7 of DFS
+      take time ‚.V /, exclusive of the time to execute the calls to DFS-V ISIT. As we did
+      for breadth-ﬁrst search, we use aggregate analysis. The procedure DFS-V ISIT is
+      called exactly once for each vertex  2 V , since the vertex u on which DFS-V ISIT
+      is invoked must be white and the ﬁrst thing DFS-V ISIT does is paint vertex u gray.
+      During an execution of DFS-V ISIT .G; /, the loop on lines 4–7 executes jAdjŒj
+      times. Since
+      X
+           jAdjŒj D ‚.E/ ;
+      2V
+
+      the total cost of executing lines 4–7 of DFS-V ISIT is ‚.E/. The running time of
+      DFS is therefore ‚.V C E/.
+
+      Properties of depth-ﬁrst search
+      Depth-ﬁrst search yields valuable information about the structure of a graph. Per-
+      haps the most basic property of depth-ﬁrst search is that the predecessor sub-
+      graph G does indeed form a forest of trees, since the structure of the depth-
+      ﬁrst trees exactly mirrors the structure of recursive calls of DFS-V ISIT. That is,
+      u D : if and only if DFS-V ISIT .G; / was called during a search of u’s ad-
+      jacency list. Additionally, vertex  is a descendant of vertex u in the depth-ﬁrst
+      forest if and only if  is discovered during the time in which u is gray.
+         Another important property of depth-ﬁrst search is that discovery and ﬁnishing
+      times have parenthesis structure. If we represent the discovery of vertex u with
+      a left parenthesis “.u” and represent its ﬁnishing by a right parenthesis “u/”, then
+      the history of discoveries and ﬁnishings makes a well-formed expression in the
+      sense that the parentheses are properly nested. For example, the depth-ﬁrst search
+      of Figure 22.5(a) corresponds to the parenthesization shown in Figure 22.5(b). The
+      following theorem provides another way to characterize the parenthesis structure.
+
+      Theorem 22.7 (Parenthesis theorem)
+      In any depth-ﬁrst search of a (directed or undirected) graph G D .V; E/, for any
+      two vertices u and , exactly one of the following three conditions holds:
+           the intervals Œu:d; u:f  and Œ:d; :f  are entirely disjoint, and neither u nor 
+            is a descendant of the other in the depth-ﬁrst forest,
+           the interval Œu:d; u:f  is contained entirely within the interval Œ:d; :f , and u
+            is a descendant of  in a depth-ﬁrst tree, or
+           the interval Œ:d; :f  is contained entirely within the interval Œu:d; u:f , and 
+            is a descendant of u in a depth-ﬁrst tree.
+

@@ -1,0 +1,44 @@
+980   Chapter 31 Number-Theoretic Algorithms
+
+
+      time, the trivial factor pq D n is revealed, which is useless. Again, this problem
+      seems to be insigniﬁcant in practice. If necessary, we can restart the heuristic with
+      a different recurrence of the form xi C1 D .xi2  c/ mod n. (We should avoid the
+      values c D 0 and c D 2 for reasons we will not go into here, but other values are
+      ﬁne.)
+         Of course, this analysis is heuristic and not rigorous, since the recurrence is
+      not really “random.” Nonetheless, the procedure performs well in practice, and
+      it seems to be as efﬁcient as this heuristic analysis indicates. It is the method of
+      choice for ﬁnding small prime factors of a large number. To factor a ˇ-bit compos-
+      ite number n completely, we only need to ﬁnd all prime factors less than bn1=2 c,
+      and so we expect P OLLARD -R HO to require at most n1=4 D 2ˇ=4 arithmetic opera-
+      tions and at most n1=4 ˇ 2 D 2ˇ=4 ˇ 2 bit operations. P OLLARD -R HO’s ability to ﬁnd
+                                                            p
+      a small factor p of n with an expected number ‚. p/ of arithmetic operations is
+      often its most appealing feature.
+
+      Exercises
+
+      31.9-1
+      Referring to the execution history shown in Figure 31.7(a), when does P OLLARD -
+      R HO print the factor 73 of 1387?
+
+      31.9-2
+      Suppose that we are given a function f W Zn ! Zn and an initial value x0 2 Zn .
+      Deﬁne xi D f .xi 1 / for i D 1; 2; : : :. Let t and u > 0 be the smallest values such
+      that x t Ci D x t CuCi for i D 0; 1; : : :. In the terminology of Pollard’s rho algorithm,
+      t is the length of the tail and u is the length of the cycle of the rho. Give an efﬁcient
+      algorithm to determine t and u exactly, and analyze its running time.
+
+      31.9-3
+      How many steps would you expect P OLLARD -R HO to require to discover a factor
+      of the form p e , where p is prime and e > 1?
+
+      31.9-4 ?
+      One disadvantage of P OLLARD -R HO as written is that it requires one gcd compu-
+      tation for each step of the recurrence. Instead, we could batch the gcd computa-
+      tions by accumulating the product of several xi values in a row and then using this
+      product instead of xi in the gcd computation. Describe carefully how you would
+      implement this idea, why it works, and what batch size you would pick as the most
+      effective when working on a ˇ-bit number n.
+

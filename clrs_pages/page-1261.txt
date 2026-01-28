@@ -1,0 +1,44 @@
+1240   Bibliography
+
+
+        [163] Michael T. Heideman, Don H. Johnson, and C. Sidney Burrus. Gauss and the history of the
+              Fast Fourier Transform. IEEE ASSP Magazine, 1(4):14–21, 1984.
+        [164] Monika R. Henzinger and Valerie King. Fully dynamic biconnectivity and transitive clo-
+              sure. In Proceedings of the 36th Annual Symposium on Foundations of Computer Science,
+              pages 664–672, 1995.
+        [165] Monika R. Henzinger and Valerie King. Randomized fully dynamic graph algorithms with
+              polylogarithmic time per operation. Journal of the ACM, 46(4):502–516, 1999.
+        [166] Monika R. Henzinger, Satish Rao, and Harold N. Gabow. Computing vertex connectivity:
+              New bounds from old techniques. Journal of Algorithms, 34(2):222–250, 2000.
+        [167] Nicholas J. Higham. Exploiting fast matrix multiplication within the level 3 BLAS. ACM
+              Transactions on Mathematical Software, 16(4):352–368, 1990.
+        [168] W. Daniel Hillis and Jr. Guy L. Steele. Data parallel algorithms. Communications of the
+              ACM, 29(12):1170–1183, 1986.
+        [169] C. A. R. Hoare. Algorithm 63 (PARTITION) and algorithm 65 (FIND). Communications
+              of the ACM, 4(7):321–322, 1961.
+        [170] C. A. R. Hoare. Quicksort. Computer Journal, 5(1):10–15, 1962.
+        [171] Dorit S. Hochbaum. Efﬁcient bounds for the stable set, vertex cover and set packing prob-
+              lems. Discrete Applied Mathematics, 6(3):243–254, 1983.
+        [172] Dorit S. Hochbaum, editor. Approximation Algorithms for NP-Hard Problems. PWS Pub-
+              lishing Company, 1997.
+        [173] W. Hoeffding. On the distribution of the number of successes in independent trials. Annals
+              of Mathematical Statistics, 27(3):713–721, 1956.
+        [174] Micha Hofri. Probabilistic Analysis of Algorithms. Springer, 1987.
+        [175] Micha Hofri. Analysis of Algorithms. Oxford University Press, 1995.
+        [176] John E. Hopcroft and Richard M. Karp. An n5=2 algorithm for maximum matchings in
+              bipartite graphs. SIAM Journal on Computing, 2(4):225–231, 1973.
+        [177] John E. Hopcroft, Rajeev Motwani, and Jeffrey D. Ullman. Introduction to Automata The-
+              ory, Languages, and Computation. Addison Wesley, third edition, 2006.
+        [178] John E. Hopcroft and Robert E. Tarjan. Efﬁcient algorithms for graph manipulation. Com-
+              munications of the ACM, 16(6):372–378, 1973.
+        [179] John E. Hopcroft and Jeffrey D. Ullman. Set merging algorithms. SIAM Journal on Com-
+              puting, 2(4):294–303, 1973.
+        [180] John E. Hopcroft and Jeffrey D. Ullman. Introduction to Automata Theory, Languages, and
+              Computation. Addison-Wesley, 1979.
+        [181] Ellis Horowitz, Sartaj Sahni, and Sanguthevar Rajasekaran. Computer Algorithms. Com-
+              puter Science Press, 1998.
+        [182] T. C. Hu and M. T. Shing. Computation of matrix chain products. Part I. SIAM Journal on
+              Computing, 11(2):362–373, 1982.
+        [183] T. C. Hu and M. T. Shing. Computation of matrix chain products. Part II. SIAM Journal on
+              Computing, 13(2):228–251, 1984.
+

@@ -1,0 +1,50 @@
+494   Chapter 18 B-Trees
+
+
+
+                        1                                                  1             1
+                     y i y i                                            y i y i y iC
+                   ke ke                                               ke ke ke
+           x     x: x:                                         x     x: x: x:
+               … N W …                                          … N S W …
+
+
+         y D x:ci                                   y D x:ci                                 ´ D x:ci C1
+        P Q R S T U V                                     P Q R                  T U V
+
+
+      T1 T2 T3 T4 T5 T6 T7 T8                          T1 T2 T3 T4             T5 T6 T7 T8
+
+
+
+      Figure 18.5 Splitting a node with t D 4. Node y D x: ci splits into two nodes, y and ´, and the
+      median key S of y moves up into y’s parent.
+
+
+      B-T REE -S PLIT-C HILD .x; i/
+       1 ´ D A LLOCATE -N ODE ./
+       2 y D x:ci
+       3 ´:leaf D y:leaf
+       4 ´:n D t  1
+       5 for j D 1 to t  1
+       6       ´:keyj D y:keyj Ct
+       7 if not y:leaf
+       8       for j D 1 to t
+       9            ´:cj D y:cj Ct
+      10 y:n D t  1
+      11 for j D x:n C 1 downto i C 1
+      12       x:cj C1 D x:cj
+      13 x:ci C1 D ´
+      14 for j D x:n downto i
+      15       x:keyj C1 D x:keyj
+      16 x:keyi D y:key t
+      17 x:n D x:n C 1
+      18 D ISK -W RITE .y/
+      19 D ISK -W RITE .´/
+      20 D ISK -W RITE .x/
+
+          B-T REE -S PLIT-C HILD works by straightforward “cutting and pasting.” Here, x
+      is the node being split, and y is x’s ith child (set in line 2). Node y originally has 2t
+      children (2t  1 keys) but is reduced to t children (t  1 keys) by this operation.
+      Node ´ takes the t largest children (t  1 keys) from y, and ´ becomes a new child
+

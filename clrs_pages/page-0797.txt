@@ -1,0 +1,44 @@
+776   Chapter 27 Multithreaded Algorithms
+
+
+      T .n/      .aFn1  b/ C .aFn2  b/ C ‚.1/
+            D     a.Fn1 C Fn2 /  2b C ‚.1/
+            D     aFn  b  .b  ‚.1//
+                 aFn  b
+      if we choose b large enough to dominate the constant in the ‚.1/. We can then
+      choose a large enough to satisfy the initial condition. The analytical bound
+      T .n/ D ‚. n / ;                                                               (27.1)
+                           p
+      where  D .1 C 5/=2 is the golden ratio, now follows from equation (3.25).
+      Since Fn grows exponentially in n, this procedure is a particularly slow way to
+      compute Fibonacci numbers. (See Problem 31-3 for much faster ways.)
+         Although the F IB procedure is a poor way to compute Fibonacci numbers, it
+      makes a good example for illustrating key concepts in the analysis of multithreaded
+      algorithms. Observe that within F IB .n/, the two recursive calls in lines 3 and 4 to
+      F IB .n  1/ and F IB .n  2/, respectively, are independent of each other: they could
+      be called in either order, and the computation performed by one in no way affects
+      the other. Therefore, the two recursive calls can run in parallel.
+         We augment our pseudocode to indicate parallelism by adding the concurrency
+      keywords spawn and sync. Here is how we can rewrite the F IB procedure to use
+      dynamic multithreading:
+
+      P-F IB .n/
+      1 if n  1
+      2        return n
+      3 else x D spawn P-F IB .n  1/
+      4        y D P-F IB .n  2/
+      5        sync
+      6        return x C y
+
+      Notice that if we delete the concurrency keywords spawn and sync from P-F IB ,
+      the resulting pseudocode text is identical to F IB (other than renaming the procedure
+      in the header and in the two recursive calls). We deﬁne the serialization of a mul-
+      tithreaded algorithm to be the serial algorithm that results from deleting the multi-
+      threaded keywords: spawn, sync, and when we examine parallel loops, parallel.
+      Indeed, our multithreaded pseudocode has the nice property that a serialization is
+      always ordinary serial pseudocode to solve the same problem.
+         Nested parallelism occurs when the keyword spawn precedes a procedure call,
+      as in line 3. The semantics of a spawn differs from an ordinary procedure call in
+      that the procedure instance that executes the spawn—the parent—may continue
+      to execute in parallel with the spawned subroutine—its child—instead of waiting
+

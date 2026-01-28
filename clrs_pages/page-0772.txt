@@ -1,0 +1,42 @@
+26.5 The relabel-to-front algorithm                                             751
+
+
+Discharging an overﬂowing vertex
+An overﬂowing vertex u is discharged by pushing all of its excess ﬂow through
+admissible edges to neighboring vertices, relabeling u as necessary to cause edges
+leaving u to become admissible. The pseudocode goes as follows.
+
+D ISCHARGE .u/
+1 while u:e > 0
+2       D u:current
+3      if  == NIL
+4           R ELABEL .u/
+5           u:current D u:N:head
+6      elseif cf .u; / > 0 and u:h == :h C 1
+7           P USH .u; /
+8      else u:current D :next-neighbor
+
+  Figure 26.9 steps through several iterations of the while loop of lines 1–8, which
+executes as long as vertex u has positive excess. Each iteration performs exactly
+one of three actions, depending on the current vertex  in the neighbor list u:N.
+1. If  is NIL, then we have run off the end of u:N. Line 4 relabels vertex u,
+   and then line 5 resets the current neighbor of u to be the ﬁrst one in u:N.
+   (Lemma 26.29 below states that the relabel operation applies in this situation.)
+2. If  is non-NIL and .u; / is an admissible edge (determined by the test in
+   line 6), then line 7 pushes some (or possibly all) of u’s excess to vertex .
+3. If  is non-NIL but .u; / is inadmissible, then line 8 advances u:current one
+   position further in the neighbor list u:N.
+   Observe that if D ISCHARGE is called on an overﬂowing vertex u, then the last
+action performed by D ISCHARGE must be a push from u. Why? The procedure
+terminates only when u:e becomes zero, and neither the relabel operation nor ad-
+vancing the pointer u:current affects the value of u:e.
+   We must be sure that when P USH or R ELABEL is called by D ISCHARGE, the
+operation applies. The next lemma proves this fact.
+
+Lemma 26.29
+If D ISCHARGE calls P USH .u; / in line 7, then a push operation applies to .u; /.
+If D ISCHARGE calls R ELABEL .u/ in line 4, then a relabel operation applies to u.
+
+Proof The tests in lines 1 and 6 ensure that a push operation occurs only if the
+operation applies, which proves the ﬁrst statement in the lemma.
+

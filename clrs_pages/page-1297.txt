@@ -1,0 +1,52 @@
+1276   Index
+
+
+       multiset, 1158 n.                               net ﬂow across a cut, 720
+       multithreaded algorithm, 10, 772–812            network
+        for computing Fibonacci numbers, 774–780         admissible, 749–750
+        for fast Fourier transform, 804 ex.              ﬂow, see ﬂow network
+        Floyd-Warshall algorithm, 797 ex.                residual, 715–719
+        for LU decomposition, 806 pr.                    for sorting, 811
+        for LUP decomposition, 806 pr.                 N EXT-T O -T OP, 1031
+        for matrix inversion, 806 pr.                  NIL, 21
+        for matrix multiplication, 792–797, 806 pr.    node, 1176
+        for matrix transpose, 792 ex., 797 ex.           see also vertex
+        for matrix-vector product, 785–787,            nonbasic variable, 855
+            789–790, 792 ex.                           nondeterministic multithreaded algorithm, 787
+        for median, 805 ex.                            nondeterministic polynomial time, 1064 n.
+        for merge sorting, 797–805, 812                  see also NP
+        for merging, 798–801                           nonhamiltonian graph, 1061
+        for order statistics, 805 ex.                  noninstance, 1056 n.
+        for partitioning, 804 ex.                      noninvertible matrix, 1223
+        for preﬁx computation, 807 pr.                 nonnegativity constraint, 851, 853
+        for quicksort, 811 pr.                         nonoverlappable string pattern, 1002 ex.
+        for reduction, 807 pr.                         nonsaturating push, 739, 745
+        for a simple stencil calculation, 809 pr.      nonsingular matrix, 1223
+        for solving systems of linear equations,       nontrivial power, 933 ex.
+            806 pr.                                    nontrivial square root of 1, modulo n, 956
+        Strassen’s algorithm, 795–796                  no-path property, 650, 672
+       multithreaded composition, 784 ﬁg.              normal equation, 837
+       multithreaded computation, 777                  norm of a vector, 1222
+       multithreaded scheduling, 781–783               NOT function (:), 1071
+       mutually exclusive events, 1190                 not a set member (62), 1158
+       mutually independent events, 1193               not equivalent (6), 54
+                                                       NOT gate, 1070
+       N (set of natural numbers), 1158                NP (complexity class), 1049, 1064, 1066 ex.,
+       naive algorithm, for string matching, 988–990        1105
+       NAIVE -S TRING -M ATCHER, 988                   NPC (complexity class), 1050, 1069
+       natural cubic spline, 840 pr.                   NP-complete, 1050, 1069
+       natural numbers (N), 1158                       NP-completeness, 9–10, 1048–1105
+         keys interpreted as, 263                        of the circuit-satisﬁability problem,
+       negative of a matrix, 1220                           1070–1077
+       negative-weight cycle                             of the clique problem, 1086–1089, 1105
+         and difference constraints, 667                 of determining whether a boolean formula is
+         and relaxation, 677 ex.                            a tautology, 1086 ex.
+         and shortest paths, 645, 653–654, 692 ex.,      of the formula-satisﬁability problem,
+            700 ex.                                         1079–1081, 1105
+       negative-weight edges, 645–646                    of the graph-coloring problem, 1103 pr.
+       neighbor, 1172                                    of the half 3-CNF satisﬁability problem,
+       neighborhood, 735 ex.                                1101 ex.
+       neighbor list, 750                                of the hamiltonian-cycle problem,
+       nested parallelism, 776, 805 pr.                     1091–1096, 1105
+       nesting boxes, 678 pr.                            of the hamiltonian-path problem, 1101 ex.
+

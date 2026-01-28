@@ -1,0 +1,46 @@
+46   Chapter 3 Growth of Functions
+
+
+        In Chapter 2, we introduced an informal notion of ‚-notation that amounted
+     to throwing away lower-order terms and ignoring the leading coefﬁcient of the
+     highest-order term. Let us brieﬂy justify this intuition by using the formal deﬁ-
+     nition to show that 12 n2  3n D ‚.n2 /. To do so, we must determine positive
+     constants c1 , c2 , and n0 such that
+            1
+     c1 n2  n2  3n  c2 n2
+            2
+     for all n  n0 . Dividing by n2 yields
+            1 3
+     c1        c2 :
+            2 n
+     We can make the right-hand inequality hold for any value of n  1 by choosing any
+     constant c2  1=2. Likewise, we can make the left-hand inequality hold for any
+     value of n  7 by choosing any constant c1  1=14. Thus, by choosing c1 D 1=14,
+     c2 D 1=2, and n0 D 7, we can verify that 12 n2  3n D ‚.n2 /. Certainly, other
+     choices for the constants exist, but the important thing is that some choice exists.
+     Note that these constants depend on the function 21 n2  3n; a different function
+     belonging to ‚.n2 / would usually require different constants.
+        We can also use the formal deﬁnition to verify that 6n3 ¤ ‚.n2 /. Suppose
+     for the purpose of contradiction that c2 and n0 exist such that 6n3  c2 n2 for
+     all n  n0 . But then dividing by n2 yields n  c2 =6, which cannot possibly hold
+     for arbitrarily large n, since c2 is constant.
+        Intuitively, the lower-order terms of an asymptotically positive function can be
+     ignored in determining asymptotically tight bounds because they are insigniﬁcant
+     for large n. When n is large, even a tiny fraction of the highest-order term suf-
+     ﬁces to dominate the lower-order terms. Thus, setting c1 to a value that is slightly
+     smaller than the coefﬁcient of the highest-order term and setting c2 to a value that
+     is slightly larger permits the inequalities in the deﬁnition of ‚-notation to be sat-
+     isﬁed. The coefﬁcient of the highest-order term can likewise be ignored, since it
+     only changes c1 and c2 by a constant factor equal to the coefﬁcient.
+        As an example, consider any quadratic function f .n/ D an2 C bn C c, where
+     a, b, and c are constants and a > 0. Throwing away the lower-order terms and
+     ignoring the constant yields f .n/ D ‚.n2 /. Formally, to show the same
+                                                                           p thing, we
+     take the constants c1 D a=4, c2 D 7a=4, and n0 D 2  max.jbj =a; jcj =a/. You
+     may verify that 0  c1 n2  an2 C bn C c  c2 n2 for all n  n0 . In general,
+                                    Pd
+     for any polynomial p.n/ D i D0 ai ni , where the ai are constants and ad > 0, we
+     have p.n/ D ‚.nd / (see Problem 3-1).
+        Since any constant is a degree-0 polynomial, we can express any constant func-
+     tion as ‚.n0 /, or ‚.1/. This latter notation is a minor abuse, however, because the
+

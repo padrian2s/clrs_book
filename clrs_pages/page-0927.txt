@@ -1,0 +1,45 @@
+906       Chapter 30 Polynomials and the FFT
+
+
+          30.1-5
+                                                                      2
+                                                             Q ‚.n /. (Hint: First compute
+          Show how to use equation (30.5) to interpolate in time
+          the coefﬁcient representation of the polynomial j .x  xj / and then divide by
+          .x  xk / as necessary for the numerator of each term; see Exercise 30.1-2. You can
+          compute each of the n denominators in time O.n/.)
+
+          30.1-6
+          Explain what is wrong with the “obvious” approach to polynomial division using
+          a point-value representation, i.e., dividing the corresponding y values. Discuss
+          separately the case in which the division comes out exactly and the case in which
+          it doesn’t.
+
+          30.1-7
+          Consider two sets A and B, each having n integers in the range from 0 to 10n. We
+          wish to compute the Cartesian sum of A and B, deﬁned by
+          C D fx C y W x 2 A and y 2 Bg :
+          Note that the integers in C are in the range from 0 to 20n. We want to ﬁnd the
+          elements of C and the number of times each element of C is realized as a sum of
+          elements in A and B. Show how to solve the problem in O.n lg n/ time. (Hint:
+          Represent A and B as polynomials of degree at most 10n.)
+
+
+
+30.2 The DFT and FFT
+
+          In Section 30.1, we claimed that if we use complex roots of unity, we can evaluate
+          and interpolate polynomials in ‚.n lg n/ time. In this section, we deﬁne complex
+          roots of unity and study their properties, deﬁne the DFT, and then show how the
+          FFT computes the DFT and its inverse in ‚.n lg n/ time.
+
+          Complex roots of unity
+          A complex nth root of unity is a complex number ! such that
+          !n D 1 :
+          There are exactly n complex nth roots of unity: e 2 i k=n for k D 0; 1; : : : ; n  1.
+          To interpret this formula, we use the deﬁnition of the exponential of a complex
+          number:
+          e i u D cos.u/ C i sin.u/ :
+          Figure 30.2 shows that the n complex roots of unity are equally spaced around the
+          circle of unit radius centered at the origin of the complex plane. The value
+

@@ -1,0 +1,44 @@
+           Notes for Chapter 12                                                             307
+
+                                                                             p
+                (the nth Catalan number) by using the Taylor expansion of 1  4x around
+                x D 0. (If you wish, instead of using the Taylor expansion, you may use
+                the generalization of the binomial expansion (C.4) to nonintegral exponents n,
+                where for any real number n and for any integer k, we interpret kn to be
+                n.n  1/    .n  k C 1/=kŠ if k  0, and 0 otherwise.)
+
+           d. Show that
+                         4n
+                bn D p         .1 C O.1=n// :
+                         n3=2
+
+
+Chapter notes
+
+           Knuth [211] contains a good discussion of simple binary search trees as well as
+           many variations. Binary search trees seem to have been independently discovered
+           by a number of people in the late 1950s. Radix trees are often called “tries,” which
+           comes from the middle letters in the word retrieval. Knuth [211] also discusses
+           them.
+              Many texts, including the ﬁrst two editions of this book, have a somewhat sim-
+           pler method of deleting a node from a binary search tree when both of its children
+           are present. Instead of replacing node ´ by its successor y, we delete node y but
+           copy its key and satellite data into node ´. The downside of this approach is that
+           the node actually deleted might not be the node passed to the delete procedure. If
+           other components of a program maintain pointers to nodes in the tree, they could
+           mistakenly end up with “stale” pointers to nodes that have been deleted. Although
+           the deletion method presented in this edition of this book is a bit more complicated,
+           it guarantees that a call to delete node ´ deletes node ´ and only node ´.
+              Section 15.5 will show how to construct an optimal binary search tree when
+           we know the search frequencies before constructing the tree. That is, given the
+           frequencies of searching for each key and the frequencies of searching for values
+           that fall between keys in the tree, we construct a binary search tree for which a
+           set of searches that follows these frequencies examines the minimum number of
+           nodes.
+              The proof in Section 12.4 that bounds the expected height of a randomly built
+           binary search tree is due to Aslam [24]. Martı́nez and Roura [243] give randomized
+           algorithms for insertion into and deletion from binary search trees in which the
+           result of either operation is a random binary search tree. Their deﬁnition of a
+           random binary search tree differs—only slightly—from that of a randomly built
+           binary search tree in this chapter, however.
+

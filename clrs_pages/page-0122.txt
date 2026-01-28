@@ -1,0 +1,52 @@
+4.6 Proof of the master theorem                                                   101
+
+                                                        
+                                                   n 1
+                               D nlogb a                  :
+                                                   b  1
+Since b and  are constants, we can rewrite the last expression as nlogb a O.n / D
+O.nlogb a /. Substituting this expression for the summation in equation (4.23) yields
+g.n/ D O.nlogb a / ;
+thereby proving case 1.
+   Because case 2 assumes that f .n/ D ‚.nlogb a /, we have that f .n=b j / D
+‚..n=b j /logb a /. Substituting into equation (4.22) yields
+                                      !
+                X
+             logb n1      n logb a
+                        j
+g.n/ D ‚              a                 :                              (4.24)
+                j D0
+                           bj
+
+We bound the summation within the ‚-notation as in case 1, but this time we do not
+obtain a geometric series. Instead, we discover that every term of the summation
+is the same:
+ X
+logb n1         n logb a                  logb n1 
+                                              X                a       j
+           aj                 D nlogb a
+ j D0
+                 bj                           j D0
+                                                            b logb a
+                                              X
+                                             logb n1
+
+                              D nlogb a                 1
+                                              j D0
+                                    logb a
+                              D n            logb n :
+Substituting this expression for the summation in equation (4.24) yields
+g.n/ D ‚.nlogb a logb n/
+     D ‚.nlogb a lg n/ ;
+proving case 2.
+   We prove case 3 similarly. Since f .n/ appears in the deﬁnition (4.22) of g.n/
+and all terms of g.n/ are nonnegative, we can conclude that g.n/ D .f .n// for
+exact powers of b. We assume in the statement of the lemma that af .n=b/  cf .n/
+for some constant c < 1 and all sufﬁciently large n. We rewrite this assumption
+as f .n=b/  .c=a/f .n/ and iterate j times, yielding f .n=b j /  .c=a/j f .n/ or,
+equivalently, aj f .n=b j /  c j f .n/, where we assume that the values we iterate
+on are sufﬁciently large. Since the last, and smallest, such value is n=b j 1 , it is
+enough to assume that n=b j 1 is sufﬁciently large.
+   Substituting into equation (4.22) and simplifying yields a geometric series, but
+unlike the series in case 1, this one has decreasing terms. We use an O.1/ term to
+

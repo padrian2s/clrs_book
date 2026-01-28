@@ -1,0 +1,5 @@
+{
+  "page": 546,
+  "title": "19.4 Bounding the maximum degree",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 19.4</div>\n    <h1>19.4 Bounding the maximum degree</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"highlight-box\">\n    <h4>Page Content</h4>\n    <p>This page contains detailed technical content. Use the image view (press <kbd>V</kbd>) to see the original material with all formulas and figures.</p>\n</div><div class=\"definition-box\">\n    <h4>Context: Chapter 19</h4>\n    <p><strong>Fibonacci Heaps</strong></p>\n    <p>Heap with O(1) amortized insert and decrease-key</p>\n</div>\n</div>"
+}

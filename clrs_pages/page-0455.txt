@@ -1,0 +1,46 @@
+434   Chapter 16 Greedy Algorithms
+
+
+                  T                                     T′                                    T′′
+
+                             x                                   a                                      a
+       y                                     y                                    b
+              a        b                            x        b                            x         y
+
+
+
+      Figure 16.6 An illustration of the key step in the proof of Lemma 16.2. In the optimal tree T ,
+      leaves a and b are two siblings of maximum depth. Leaves x and y are the two characters with the
+      lowest frequencies; they appear in arbitrary positions in T . Assuming that x ¤ b, swapping leaves a
+      and x produces tree T 0 , and then swapping leaves b and y produces tree T 00 . Since each swap does
+      not increase the cost, the resulting tree T 00 is also an optimal tree.
+
+
+      in which x and y are sibling leaves of maximum depth. (Note that if x D b but
+      y ¤ a, then tree T 00 does not have x and y as sibling leaves of maximum depth.
+      Because we assume that x ¤ b, this situation cannot occur.) By equation (16.4),
+      the difference in cost between T and T 0 is
+      B.T /  B.T 0 /
+                X                       X
+             D        c:freq  dT .c/    c:freq  dT 0 .c/
+                      c2C                    c2C
+              D       x:freq  dT .x/ C a:freq  dT .a/  x:freq  dT 0 .x/  a:freq  dT 0 .a/
+              D       x:freq  dT .x/ C a:freq  dT .a/  x:freq  dT .a/  a:freq  dT .x/
+              D       .a:freq  x:freq/.dT .a/  dT .x//
+                     0;
+      because both a:freq  x:freq and dT .a/  dT .x/ are nonnegative. More speciﬁ-
+      cally, a:freq  x:freq is nonnegative because x is a minimum-frequency leaf, and
+      dT .a/dT .x/ is nonnegative because a is a leaf of maximum depth in T . Similarly,
+      exchanging y and b does not increase the cost, and so B.T 0 /  B.T 00 / is nonnega-
+      tive. Therefore, B.T 00 /  B.T /, and since T is optimal, we have B.T /  B.T 00 /,
+      which implies B.T 00 / D B.T /. Thus, T 00 is an optimal tree in which x and y
+      appear as sibling leaves of maximum depth, from which the lemma follows.
+
+         Lemma 16.2 implies that the process of building up an optimal tree by mergers
+      can, without loss of generality, begin with the greedy choice of merging together
+      those two characters of lowest frequency. Why is this a greedy choice? We can
+      view the cost of a single merger as being the sum of the frequencies of the two items
+      being merged. Exercise 16.3-4 shows that the total cost of the tree constructed
+      equals the sum of the costs of its mergers. Of all possible mergers at each step,
+      H UFFMAN chooses the one that incurs the least cost.
+

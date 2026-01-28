@@ -1,0 +1,53 @@
+1252   Index
+
+
+        (closure operator), 1058                      A DD -S UBARRAY, 805 pr.
+        j (divides relation), 927                      adjacency-list representation, 590
+        − (does-not-divide relation), 927                 replaced by a hash table, 593 ex.
+         (equivalent modulo n), 54, 1165 ex.          adjacency-matrix representation, 591
+       6 (not equivalent modulo n), 54                adjacency relation (!), 1169
+       Œan (equivalence class modulo n), 928          adjacent vertices, 1169
+       Cn (addition modulo n), 940                     admissible edge, 749
+        n (multiplication modulo n), 940              admissible network, 749–750
+          a
+       .p   / (Legendre symbol), 982 pr.               adversary, 190
+        " (empty string), 986, 1058                    aggregate analysis, 452–456
+        < (preﬁx relation), 986                           for binary counters, 454–455
+        = (sufﬁx relation), 986                           for breadth-ﬁrst search, 597
+        <x (above relation), 1022                         for depth-ﬁrst search, 606
+        // (comment symbol), 21                           for Dijkstra’s algorithm, 661
+            (much-greater-than relation), 574             for disjoint-set data structures, 566–567,
+            (much-less-than relation), 783                   568 ex.
+       P (polynomial-time reducibility relation),        for dynamic tables, 465
+              1067, 1077 ex.                              for Fibonacci heaps, 518, 522 ex.
+                                                          for Graham’s scan, 1036
+       AA-tree, 338                                       for the Knuth-Morris-Pratt algorithm, 1006
+       abelian group, 940                                 for Prim’s algorithm, 636
+       A BOVE , 1024                                      for rod-cutting, 367
+       above relation (<x ), 1022                         for shortest paths in a dag, 655
+       absent child, 1178                                 for stack operations, 452–454
+       absolutely convergent series, 1146              aggregate ﬂow, 863
+       absorption laws for sets, 1160                  Akra-Bazzi method for solving a recurrence,
+       abstract problem, 1054                                112–113
+       acceptable pair of integers, 972                algorithm, 5
+       acceptance                                         correctness of, 6
+         by an algorithm, 1058                            origin of word, 42
+         by a ﬁnite automaton, 996                        running time of, 25
+       accepting state, 995                               as a technology, 13
+       accounting method, 456–459                      Alice, 959
+         for binary counters, 458                      A LLOCATE -N ODE , 492
+         for dynamic tables, 465–466                   A LLOCATE -O BJECT, 244
+         for stack operations, 457–458, 458 ex.        allocation of objects, 243–244
+       Ackermann’s function, 585                       all-pairs shortest paths, 644, 684–707
+       activity-selection problem, 415–422, 450           in dynamic graphs, 707
+       acyclic graph, 1170                                in -dense graphs, 706 pr.
+         relation to matroids, 448 pr.                    Floyd-Warshall algorithm for, 693–697, 706
+       add instruction, 23                                Johnson’s algorithm for, 700–706
+       addition                                           by matrix multiplication, 686–693, 706–707
+         of binary integers, 22 ex.                       by repeated squaring, 689–691
+         of matrices, 1220                             alphabet, 995, 1057
+         modulo n (Cn ), 940                           ˛.n/, 574
+         of polynomials, 898                           amortized analysis, 451–478
+       additive group modulo n, 940                       accounting method of, 456–459
+       addressing, open, see open-address hash table      aggregate analysis, 367, 452–456
+

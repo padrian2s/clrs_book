@@ -1,0 +1,47 @@
+  10.1 Stacks and queues                                                                                 233
+
+
+  1   2   3   4     5   6   7           1   2   3   4     5   6   7            1   2   3   4     5   6    7
+S 15 6    2   9                     S 15 6      2   9 17 3                 S 15 6      2   9 17 3
+
+
+          S:top D 4                                       S:top D 6                        S:top D 5
+
+              (a)                                   (b)                                    (c)
+
+
+
+  Figure 10.1 An array implementation of a stack S. Stack elements appear only in the lightly shaded
+  positions. (a) Stack S has 4 elements. The top element is 9. (b) Stack S after the calls P USH.S; 17/
+  and P USH.S; 3/. (c) Stack S after the call P OP.S/ has returned the element 3, which is the one most
+  recently pushed. Although element 3 still appears in the array, it is no longer in the stack; the top is
+  element 17.
+
+
+  inserted element. The stack consists of elements SŒ1 : : S:top, where SŒ1 is the
+  element at the bottom of the stack and SŒS:top is the element at the top.
+     When S:top D 0, the stack contains no elements and is empty. We can test to
+  see whether the stack is empty by query operation S TACK -E MPTY. If we attempt
+  to pop an empty stack, we say the stack underﬂows, which is normally an error.
+  If S:top exceeds n, the stack overﬂows. (In our pseudocode implementation, we
+  don’t worry about stack overﬂow.)
+     We can implement each of the stack operations with just a few lines of code:
+
+  S TACK -E MPTY .S/
+  1 if S:top == 0
+  2       return TRUE
+  3 else return FALSE
+
+  P USH .S; x/
+  1 S:top D S:top C 1
+  2 SŒS:top D x
+
+  P OP.S/
+  1 if S TACK -E MPTY .S/
+  2       error “underﬂow”
+  3 else S:top D S:top  1
+  4       return SŒS:top C 1
+
+  Figure 10.1 shows the effects of the modifying operations P USH and P OP. Each of
+  the three stack operations takes O.1/ time.
+

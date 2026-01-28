@@ -1,0 +1,34 @@
+C         Counting and Probability
+
+
+
+
+          This appendix reviews elementary combinatorics and probability theory. If you
+          have a good background in these areas, you may want to skim the beginning of this
+          appendix lightly and concentrate on the later sections. Most of this book’s chapters
+          do not require probability, but for some chapters it is essential.
+             Section C.1 reviews elementary results in counting theory, including standard
+          formulas for counting permutations and combinations. The axioms of probability
+          and basic facts concerning probability distributions form Section C.2. Random
+          variables are introduced in Section C.3, along with the properties of expectation
+          and variance. Section C.4 investigates the geometric and binomial distributions
+          that arise from studying Bernoulli trials. The study of the binomial distribution
+          continues in Section C.5, an advanced discussion of the “tails” of the distribution.
+
+
+C.1 Counting
+
+          Counting theory tries to answer the question “How many?” without actually enu-
+          merating all the choices. For example, we might ask, “How many different n-bit
+          numbers are there?” or “How many orderings of n distinct elements are there?” In
+          this section, we review the elements of counting theory. Since some of the material
+          assumes a basic understanding of sets, you might wish to start by reviewing the
+          material in Section B.1.
+
+          Rules of sum and product
+          We can sometimes express a set of items that we wish to count as a union of disjoint
+          sets or as a Cartesian product of sets.
+             The rule of sum says that the number of ways to choose one element from one
+          of two disjoint sets is the sum of the cardinalities of the sets. That is, if A and B
+          are two ﬁnite sets with no members in common, then jA [ Bj D jAj C jBj, which
+

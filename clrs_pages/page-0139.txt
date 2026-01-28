@@ -1,0 +1,46 @@
+118          Chapter 5 Probabilistic Analysis and Randomized Algorithms
+
+
+             and 1 with probability 1=2. What is the expected running time of your algorithm
+             as a function of p?
+
+
+
+5.2   Indicator random variables
+
+             In order to analyze many algorithms, including the hiring problem, we use indicator
+             random variables. Indicator random variables provide a convenient method for
+             converting between probabilities and expectations. Suppose we are given a sample
+             space S and an event A. Then the indicator random variable I fAg associated with
+             event A is deﬁned as
+                      (
+                         1 if A occurs ;
+             I fAg D                                                                       (5.1)
+                         0 if A does not occur :
+
+                As a simple example, let us determine the expected number of heads that we
+             obtain when ﬂipping a fair coin. Our sample space is S D fH; T g, with Pr fH g D
+             Pr fT g D 1=2. We can then deﬁne an indicator random variable XH , associated
+             with the coin coming up heads, which is the event H . This variable counts the
+             number of heads obtained in this ﬂip, and it is 1 if the coin comes up heads and 0
+             otherwise. We write
+             XH    D I fH g
+                     (
+                        1 if H occurs ;
+                   D
+                        0 if T occurs :
+
+             The expected number of heads obtained in one ﬂip of the coin is simply the ex-
+             pected value of our indicator variable XH :
+             E ŒXH  D      E ŒI fH g
+                     D      1  Pr fH g C 0  Pr fT g
+                     D      1  .1=2/ C 0  .1=2/
+                     D      1=2 :
+             Thus the expected number of heads obtained by one ﬂip of a fair coin is 1=2. As
+             the following lemma shows, the expected value of an indicator random variable
+             associated with an event A is equal to the probability that A occurs.
+
+             Lemma 5.1
+             Given a sample space S and an event A in the sample space S, let XA D I fAg.
+             Then E ŒXA  D Pr fAg.
+

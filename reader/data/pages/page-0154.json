@@ -1,0 +1,5 @@
+{
+  "page": 154,
+  "title": "6.1 Heaps",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 6.1</div>\n    <h1>Heaps</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>A heap is a nearly complete binary tree stored in an array with the heap property.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Max-heap: every parent ≥ its children</li>\n<li>Min-heap: every parent ≤ its children</li>\n<li>Height = ⌊log n⌋</li>\n<li>Array representation: parent(i) = ⌊i/2⌋, left(i) = 2i, right(i) = 2i+1</li>\n<li>Root (maximum) is always at index 1</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Array [16,14,10,8,7,9,3,2,4,1] represents a max-heap tree with 16 at root.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Heaps enable O(log n) priority queue operations and O(n log n) sorting.</p>\n</div>\n</div>"
+}

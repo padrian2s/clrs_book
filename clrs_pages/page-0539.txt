@@ -1,0 +1,43 @@
+518         Chapter 19 Fibonacci Heaps
+
+
+            most D.n/ children of the minimum node and from the work in lines 2–3 and
+            16–23 of C ONSOLIDATE. It remains to analyze the contribution from the for loop
+            of lines 4–14 in C ONSOLIDATE, for which we use an aggregate analysis. The size
+            of the root list upon calling C ONSOLIDATE is at most D.n/ C t.H /  1, since it
+            consists of the original t.H / root-list nodes, minus the extracted root node, plus
+            the children of the extracted node, which number at most D.n/. Within a given
+            iteration of the for loop of lines 4–14, the number of iterations of the while loop of
+            lines 7–13 depends on the root list. But we know that every time through the while
+            loop, one of the roots is linked to another, and thus the total number of iterations
+            of the while loop over all iterations of the for loop is at most the number of roots
+            in the root list. Hence, the total amount of work performed in the for loop is at
+            most proportional to D.n/ C t.H /. Thus, the total actual work in extracting the
+            minimum node is O.D.n/ C t.H //.
+               The potential before extracting the minimum node is t.H / C 2 m.H /, and the
+            potential afterward is at most .D.n/ C 1/ C 2 m.H /, since at most D.n/ C 1 roots
+            remain and no nodes become marked during the operation. The amortized cost is
+            thus at most
+            O.D.n/ C t.H // C ..D.n/ C 1/ C 2 m.H //  .t.H / C 2 m.H //
+                 D O.D.n// C O.t.H //  t.H /
+                 D O.D.n// ;
+            since we can scale up the units of potential to dominate the constant hidden
+            in O.t.H //. Intuitively, the cost of performing each link is paid for by the re-
+            duction in potential due to the link’s reducing the number of roots by one. We shall
+            see in Section 19.4 that D.n/ D O.lg n/, so that the amortized cost of extracting
+            the minimum node is O.lg n/.
+
+            Exercises
+
+            19.2-1
+            Show the Fibonacci heap that results from calling F IB -H EAP -E XTRACT-M IN on
+            the Fibonacci heap shown in Figure 19.4(m).
+
+
+
+19.3 Decreasing a key and deleting a node
+
+            In this section, we show how to decrease the key of a node in a Fibonacci heap
+            in O.1/ amortized time and how to delete any node from an n-node Fibonacci
+            heap in O.D.n// amortized time. In Section 19.4, we will show that the maxi-
+

@@ -1,0 +1,45 @@
+28.1 Solving systems of linear equations                                             823
+
+
+nonsingular—because numerical instabilities can result. We therefore try to pivot
+on a large value.
+   The mathematics behind LUP decomposition is similar to that of LU decom-
+position. Recall that we are given an n n nonsingular matrix A, and we wish
+to ﬁnd a permutation matrix P , a unit lower-triangular matrix L, and an upper-
+triangular matrix U such that PA D LU . Before we partition the matrix A, as we
+did for LU decomposition, we move a nonzero element, say ak1 , from somewhere
+in the ﬁrst column to the .1; 1/ position of the matrix. For numerical stability, we
+choose ak1 as the element in the ﬁrst column with the greatest absolute value. (The
+ﬁrst column cannot contain only 0s, for then A would be singular, because its de-
+terminant would be 0, by Theorems D.4 and D.5.) In order to preserve the set of
+equations, we exchange row 1 with row k, which is equivalent to multiplying A by
+a permutation matrix Q on the left (Exercise D.1-4). Thus, we can write QA as
+                  
+          ak1 w T
+QA D                 ;
+             A0
+where  D .a21 ; a31 ; : : : ; an1 /T , except that a11 replaces ak1 ; w T D .ak2 ; ak3 ;
+: : : ; akn /; and A0 is an .n1/ .n1/ matrix. Since ak1 ¤ 0, we can now perform
+much the same linear algebra as for LU decomposition, but now guaranteeing that
+we do not divide by 0:
+                           
+                 ak1 w T
+QA D
+                   A0
+                                                     
+                   1        0     ak1          wT
+         D                                                 :
+                 =ak1 In1         0 A0  w T =ak1
+  As we saw for LU decomposition, if A is nonsingular, then the Schur comple-
+ment A0  w T =ak1 is nonsingular, too. Therefore, we can recursively ﬁnd an
+LUP decomposition for it, with unit lower-triangular matrix L0 , upper-triangular
+matrix U 0 , and permutation matrix P 0 , such that
+P 0 .A0  w T =ak1 / D L0 U 0 :
+Deﬁne
+          
+      1 0
+P D         Q;
+      0 P0
+which is a permutation matrix, since it is the product of two permutation matrices
+(Exercise D.1-4). We now have
+

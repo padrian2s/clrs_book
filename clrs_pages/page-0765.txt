@@ -1,0 +1,52 @@
+744   Chapter 26 Maximum Flow
+
+
+      Proof For an overﬂowing vertex x, let U D f W there exists a simple path from x
+      to  in Gf g, and suppose for the sake of contradiction that s 62 U . Let U D V  U .
+         We take the deﬁnition of excess from equation (26.14), sum over all vertices
+      in U , and note that V D U [ U , to obtain
+      X
+          e.u/
+      u2U                                          !
+                 X X                  X
+             D             f .; u/      f .u; /
+                u2U   2V               2V
+                                                           !                                          !!
+                X         X                  X                    X                  X
+            D                   f .; u/ C         f .; u/            f .u; / C         f .u; /
+                u2U       2U                2U                  2U                2U
+                XX                     XX                       XX                     XX
+            D             f .; u/ C               f .; u/              f .u; /              f .u; /
+                u2U 2U                u2U 2U                  u2U 2U                u2U 2U
+                XX                     XX
+            D             f .; u/                f .u; / :
+                u2U 2U                u2U 2U
+                                    P
+      We know that the quantity u2U e.u/ must be positive because e.x/ > 0, x 2 U ,
+      all vertices other than s have nonnegative excess, and, by assumption, s 62 U . Thus,
+      we have
+      XX                   XX
+               f .; u/           f .u; / > 0 :                                  (26.17)
+      u2U 2U             u2U 2U
+
+      All
+      P edge Pﬂows are nonnegative, and so for equation (26.17) to hold, we must have
+         u2U    2U f .; u/ > 0. Hence, there must exist at least one pair of vertices
+      u0 2 U and  0 2 U with f . 0 ; u0 / > 0. But, if f . 0 ; u0 / > 0, there must be a
+      residual edge .u0 ;  0 /, which means that there is a simple path from x to  0 (the
+      path x ; u0 !  0 ), thus contradicting the deﬁnition of U .
+
+        The next lemma bounds the heights of vertices, and its corollary bounds the
+      number of relabel operations that are performed in total.
+
+      Lemma 26.20
+      Let G D .V; E/ be a ﬂow network with source s and sink t. At any time during
+      the execution of G ENERIC -P USH -R ELABEL on G, we have u:h  2 jV j  1 for all
+      vertices u 2 V .
+
+      Proof The heights of the source s and the sink t never change because these
+      vertices are by deﬁnition not overﬂowing. Thus, we always have s:h D jV j and
+      t:h D 0, both of which are no greater than 2 jV j  1.
+         Now consider any vertex u 2 V  fs; tg. Initially, u:h D 0  2 jV j  1. We shall
+      show that after each relabeling operation, we still have u:h  2 jV j  1. When u is
+

@@ -1,0 +1,44 @@
+6.3 Building a heap                                                                 157
+
+
+a 1-element heap to begin with. The procedure B UILD -M AX -H EAP goes through
+the remaining nodes of the tree and runs M AX -H EAPIFY on each one.
+
+B UILD -M AX -H EAP .A/
+1 A:heap-size D A:length
+2 for i D bA:length=2c downto 1
+3       M AX -H EAPIFY .A; i/
+
+Figure 6.3 shows an example of the action of B UILD -M AX -H EAP.
+   To show why B UILD -M AX -H EAP works correctly, we use the following loop
+invariant:
+   At the start of each iteration of the for loop of lines 2–3, each node i C 1;
+   i C 2; : : : ; n is the root of a max-heap.
+We need to show that this invariant is true prior to the ﬁrst loop iteration, that each
+iteration of the loop maintains the invariant, and that the invariant provides a useful
+property to show correctness when the loop terminates.
+Initialization: Prior to the ﬁrst iteration of the loop, i D bn=2c. Each node
+   bn=2c C 1; bn=2c C 2; : : : ; n is a leaf and is thus the root of a trivial max-heap.
+Maintenance: To see that each iteration maintains the loop invariant, observe that
+  the children of node i are numbered higher than i. By the loop invariant, there-
+  fore, they are both roots of max-heaps. This is precisely the condition required
+  for the call M AX -H EAPIFY .A; i/ to make node i a max-heap root. Moreover,
+  the M AX -H EAPIFY call preserves the property that nodes i C 1; i C 2; : : : ; n
+  are all roots of max-heaps. Decrementing i in the for loop update reestablishes
+  the loop invariant for the next iteration.
+Termination: At termination, i D 0. By the loop invariant, each node 1; 2; : : : ; n
+   is the root of a max-heap. In particular, node 1 is.
+   We can compute a simple upper bound on the running time of B UILD -M AX -
+H EAP as follows. Each call to M AX -H EAPIFY costs O.lg n/ time, and B UILD -
+M AX -H EAP makes O.n/ such calls. Thus, the running time is O.n lg n/. This
+upper bound, though correct, is not asymptotically tight.
+   We can derive a tighter bound by observing that the time for M AX -H EAPIFY to
+run at a node varies with the height of the node in the tree, and the heights of most
+nodes are small. Our tighter analysis relies on the properties
+                                                     ˙        that an n-element heap
+has height blg nc (see Exercise 6.1-2) and at most n=2hC1 nodes of any height h
+(see Exercise 6.3-3).
+   The time required by M AX -H EAPIFY when called on a node of height h is O.h/,
+and so we can express the total cost of B UILD -M AX -H EAP as being bounded from
+above by
+

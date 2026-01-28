@@ -1,0 +1,44 @@
+26.2 The Ford-Fulkerson method                                                 731
+
+
+these additional constraints into the problem of ﬁnding a maximum ﬂow in a single-
+source, single-sink ﬂow network.
+
+26.2-7
+Prove Lemma 26.2.
+
+26.2-8
+Suppose that we redeﬁne the residual network to disallow edges into s. Argue that
+the procedure F ORD -F ULKERSON still correctly computes a maximum ﬂow.
+
+26.2-9
+Suppose that both f and f 0 are ﬂows in a network G and we compute ﬂow f " f 0 .
+Does the augmented ﬂow satisfy the ﬂow conservation property? Does it satisfy
+the capacity constraint?
+
+26.2-10
+Show how to ﬁnd a maximum ﬂow in a network G D .V; E/ by a sequence of at
+most jEj augmenting paths. (Hint: Determine the paths after ﬁnding the maximum
+ﬂow.)
+
+26.2-11
+The edge connectivity of an undirected graph is the minimum number k of edges
+that must be removed to disconnect the graph. For example, the edge connectivity
+of a tree is 1, and the edge connectivity of a cyclic chain of vertices is 2. Show
+how to determine the edge connectivity of an undirected graph G D .V; E/ by
+running a maximum-ﬂow algorithm on at most jV j ﬂow networks, each having
+O.V / vertices and O.E/ edges.
+
+26.2-12
+Suppose that you are given a ﬂow network G, and G has edges entering the
+source s. Let f be a ﬂow in G in which one of the edges .; s/ entering the source
+has f .; s/ D 1. Prove that there must exist another ﬂow f 0 with f 0 .; s/ D 0
+such that jf j D jf 0 j. Give an O.E/-time algorithm to compute f 0 , given f , and
+assuming that all edge capacities are integers.
+
+26.2-13
+Suppose that you wish to ﬁnd, among all minimum cuts in a ﬂow network G with
+integral capacities, one that contains the smallest number of edges. Show how to
+modify the capacities of G to create a new ﬂow network G 0 in which any minimum
+cut in G 0 is a minimum cut with the smallest number of edges in G.
+

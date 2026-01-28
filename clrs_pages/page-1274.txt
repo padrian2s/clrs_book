@@ -1,0 +1,52 @@
+Index                                                                                     1253
+
+
+  for bit-reversal permutation, 472 pr.              for set cover, 1117–1122, 1139
+  for breadth-ﬁrst search, 597                       for subset sum, 1128–1134, 1139
+  for depth-ﬁrst search, 606                         for traveling-salesman problem, 1111–1117,
+  for Dijkstra’s algorithm, 661                         1139
+  for disjoint-set data structures, 566–567,         for vertex cover, 1108–1111, 1139
+     568 ex., 572 ex., 575–581, 581–582 ex.          for weighted set cover, 1135 pr.
+  for dynamic tables, 463–471                        for 0-1 knapsack problem, 1137 pr., 1139
+  for Fibonacci heaps, 509–512, 517–518,          approximation error, 836
+     520–522, 522 ex.                             approximation ratio, 1106, 1123
+  for the generic push-relabel algorithm, 746     approximation scheme, 1107
+  for Graham’s scan, 1036                         A PPROX -M IN -W EIGHT-VC, 1126
+  for the Knuth-Morris-Pratt algorithm, 1006      A PPROX -S UBSET-S UM, 1131
+  for making binary search dynamic, 473 pr.       A PPROX -TSP-T OUR, 1112
+  potential method of, 459–463                    A PPROX -V ERTEX -C OVER, 1109
+  for restructuring red-black trees, 474 pr.      arbitrage, 679 pr.
+  for self-organizing lists with move-to-front,   arc, see edge
+     476 pr.                                      argument of a function, 1166–1167
+  for shortest paths in a dag, 655                arithmetic instructions, 23
+  for stacks on secondary storage, 502 pr.        arithmetic, modular, 54, 939–946
+  for weight-balanced trees, 473 pr.              arithmetic series, 1146
+amortized cost                                    arithmetic with inﬁnities, 650
+  in the accounting method, 456                   arm, 485
+  in aggregate analysis, 452                      array, 21
+  in the potential method, 459                       Monge, 110 pr.
+ancestor, 1176                                       passing as a parameter, 21
+  least common, 584 pr.                           articulation point, 621 pr.
+AND function (^), 697, 1071                       assignment
+AND gate, 1070                                       multiple, 21
+and, in pseudocode, 22                               satisfying, 1072, 1079
+antiparallel edges, 711–712                          truth, 1072, 1079
+antisymmetric relation, 1164                      associative laws for sets, 1160
+A NY-S EGMENTS -I NTERSECT , 1025                 associative operation, 939
+approximation                                     asymptotically larger, 52
+  by least squares, 835–839                       asymptotically nonnegative, 45
+  of summation by integrals, 1154–1156            asymptotically positive, 45
+approximation algorithm, 10, 1105–1140            asymptotically smaller, 52
+  for bin packing, 1134 pr.                       asymptotically tight bound, 45
+  for MAX-CNF satisﬁability, 1127 ex.             asymptotic efﬁciency, 43
+  for maximum clique, 1111 ex., 1134 pr.          asymptotic lower bound, 48
+  for maximum matching, 1135 pr.                  asymptotic notation, 43–53, 62 pr.
+  for maximum spanning tree, 1137 pr.                and graph algorithms, 588
+  for maximum-weight cut, 1127 ex.                   and linearity of summations, 1146
+  for MAX-3-CNF satisﬁability, 1123–1124,         asymptotic upper bound, 47
+     1139                                         attribute of an object, 21
+  for minimum-weight vertex cover,                augmentation of a ﬂow, 716
+     1124–1127, 1139                              augmenting data structures, 339–355
+  for parallel machine scheduling, 1136 pr.       augmenting path, 719–720, 763 pr.
+  randomized, 1123                                authentication, 284 pr., 960–961, 964
+

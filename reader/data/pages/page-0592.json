@@ -1,0 +1,5 @@
+{
+  "page": 592,
+  "title": "22.1 Representations of Graphs",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 22.1</div>\n    <h1>Representations of Graphs</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Two ways to represent graphs: adjacency lists and adjacency matrices.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Adjacency list: array of linked lists, one per vertex</li>\n<li>Adjacency matrix: n×n matrix, M[i,j] = 1 if edge (i,j) exists</li>\n<li>List space: O(V + E), good for sparse graphs</li>\n<li>Matrix space: O(V²), good for dense graphs</li>\n<li>List: O(degree) to check edge. Matrix: O(1) to check edge</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Graph with 4 vertices, 5 edges. List uses ~9 entries. Matrix uses 16 entries.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Choosing the right representation affects algorithm performance.</p>\n</div>\n</div>"
+}

@@ -1,0 +1,44 @@
+714        Chapter 26 Maximum Flow
+
+
+           26.1-4
+           Let f be a ﬂow in a network, and let ˛ be a real number. The scalar ﬂow product,
+           denoted ˛f , is a function from V V to R deﬁned by
+           .˛f /.u; / D ˛  f .u; / :
+           Prove that the ﬂows in a network form a convex set. That is, show that if f1 and f2
+           are ﬂows, then so is ˛f1 C .1  ˛/f2 for all ˛ in the range 0  ˛  1.
+
+           26.1-5
+           State the maximum-ﬂow problem as a linear-programming problem.
+
+           26.1-6
+           Professor Adam has two children who, unfortunately, dislike each other. The prob-
+           lem is so severe that not only do they refuse to walk to school together, but in fact
+           each one refuses to walk on any block that the other child has stepped on that day.
+           The children have no problem with their paths crossing at a corner. Fortunately
+           both the professor’s house and the school are on corners, but beyond that he is not
+           sure if it is going to be possible to send both of his children to the same school.
+           The professor has a map of his town. Show how to formulate the problem of de-
+           termining whether both his children can go to the same school as a maximum-ﬂow
+           problem.
+
+           26.1-7
+           Suppose that, in addition to edge capacities, a ﬂow network has vertex capacities.
+           That is each vertex  has a limit l./ on how much ﬂow can pass though . Show
+           how to transform a ﬂow network G D .V; E/ with vertex capacities into an equiv-
+           alent ﬂow network G 0 D .V 0 ; E 0 / without vertex capacities, such that a maximum
+           ﬂow in G 0 has the same value as a maximum ﬂow in G. How many vertices and
+           edges does G 0 have?
+
+
+
+26.2 The Ford-Fulkerson method
+
+           This section presents the Ford-Fulkerson method for solving the maximum-ﬂow
+           problem. We call it a “method” rather than an “algorithm” because it encompasses
+           several implementations with differing running times. The Ford-Fulkerson method
+           depends on three important ideas that transcend the method and are relevant to
+           many ﬂow algorithms and problems: residual networks, augmenting paths, and
+           cuts. These ideas are essential to the important max-ﬂow min-cut theorem (The-
+           orem 26.6), which characterizes the value of a maximum ﬂow in terms of cuts of
+

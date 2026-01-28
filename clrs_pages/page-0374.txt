@@ -1,0 +1,42 @@
+14.3 Interval trees                                                               353
+
+
+   If, on the other hand, line 4 is executed, then we will show that the contrapos-
+   itive of the loop invariant holds. That is, if the subtree rooted at x:left con-
+   tains no interval overlapping i, then no interval anywhere in the tree overlaps i.
+   Since line 4 is executed, then because of the branch condition in line 3, we
+   have x:left:max  i:low. Moreover, by deﬁnition of the max attribute, x’s left
+   subtree must contain some interval i 0 such that
+   i 0 :high D x:left:max
+              i:low :
+   (Figure 14.5(b) illustrates the situation.) Since i and i 0 do not overlap, and
+   since it is not true that i 0 :high < i:low, it follows by the interval trichotomy
+   that i:high < i 0 :low. Interval trees are keyed on the low endpoints of intervals,
+   and thus the search-tree property implies that for any interval i 00 in x’s right
+   subtree,
+   i:high < i 0 :low
+           i 00 :low :
+   By the interval trichotomy, i and i 00 do not overlap. We conclude that whether
+   or not any interval in x’s left subtree overlaps i, setting x to x:left maintains
+   the invariant.
+Termination: If the loop terminates when x D T:nil, then the subtree rooted at x
+   contains no interval overlapping i. The contrapositive of the loop invariant
+   implies that T contains no interval that overlaps i. Hence it is correct to return
+   x D T:nil.
+
+  Thus, the I NTERVAL -S EARCH procedure works correctly.
+
+Exercises
+
+14.3-1
+Write pseudocode for L EFT-ROTATE that operates on nodes in an interval tree and
+updates the max attributes in O.1/ time.
+
+14.3-2
+Rewrite the code for I NTERVAL -S EARCH so that it works properly when all inter-
+vals are open.
+
+14.3-3
+Describe an efﬁcient algorithm that, given an interval i, returns an interval over-
+lapping i that has the minimum low endpoint, or T:nil if no such interval exists.
+

@@ -1,0 +1,45 @@
+1222         Appendix D     Matrices
+
+
+                We deﬁne matrix-vector products or vector-vector products as if the vector were
+             the equivalent n 1 matrix (or a 1 n matrix, in the case of a row vector). Thus,
+             if A is an m n matrix and x is an n-vector, then Ax is an m-vector. If x and y
+             are n-vectors, then
+                    X
+                    n
+               T
+             x yD           xi y i
+                     i D1
+
+             is a number (actually a 1 1 matrix) called the inner product of x and y. The ma-
+             trix xy T is an n n matrix Z called the outer product of x and y, with ´ij D xi yj .
+             The (euclidean) norm kxk of an n-vector x is deﬁned by
+             kxk D .x12 C x22 C    C xn2 /1=2
+                 D .x T x/1=2 :
+             Thus, the norm of x is its length in n-dimensional euclidean space.
+
+             Exercises
+
+             D.1-1
+             Show that if A and B are symmetric n     n matrices, then so are A C B and A  B.
+
+             D.1-2
+             Prove that .AB/T D B T AT and that AT A is always a symmetric matrix.
+
+             D.1-3
+             Prove that the product of two lower-triangular matrices is lower-triangular.
+
+             D.1-4
+             Prove that if P is an n n permutation matrix and A is an n n matrix, then the
+             matrix product PA is A with its rows permuted, and the matrix product AP is A
+             with its columns permuted. Prove that the product of two permutation matrices is
+             a permutation matrix.
+
+
+
+D.2    Basic matrix properties
+
+             In this section, we deﬁne some basic properties pertaining to matrices: inverses,
+             linear dependence and independence, rank, and determinants. We also deﬁne the
+             class of positive-deﬁnite matrices.
+

@@ -1,0 +1,45 @@
+472        Chapter 17 Amortized Analysis
+
+
+
+
+Problems
+
+           17-1 Bit-reversed binary counter
+           Chapter 30 examines an important algorithm called the fast Fourier transform,
+           or FFT. The ﬁrst step of the FFT algorithm performs a bit-reversal permutation on
+           an input array AŒ0 : : n  1 whose length is n D 2k for some nonnegative integer k.
+           This permutation swaps elements whose indices have binary representations that
+           are the reverse of each other.
+              We can express each index a as a k-bit sequence hak1 ; ak2 ; : : : ; a0 i, where
+                Pk1
+           a D i D0 ai 2i . We deﬁne
+           revk .hak1 ; ak2 ; : : : ; a0 i/ D ha0 ; a1 ; : : : ; ak1 i I
+           thus,
+                         X
+                         k1
+           revk .a/ D           aki 1 2i :
+                         i D0
+
+           For example, if n D 16 (or, equivalently, k D 4), then revk .3/ D 12, since
+           the 4-bit representation of 3 is 0011, which when reversed gives 1100, the 4-bit
+           representation of 12.
+           a. Given a function revk that runs in ‚.k/ time, write an algorithm to perform the
+              bit-reversal permutation on an array of length n D 2k in O.nk/ time.
+           We can use an algorithm based on an amortized analysis to improve the running
+           time of the bit-reversal permutation. We maintain a “bit-reversed counter” and a
+           procedure B IT-R EVERSED -I NCREMENT that, when given a bit-reversed-counter
+           value a, produces revk .revk .a/ C 1/. If k D 4, for example, and the bit-reversed
+           counter starts at 0, then successive calls to B IT-R EVERSED -I NCREMENT produce
+           the sequence
+           0000; 1000; 0100; 1100; 0010; 1010; : : : D 0; 8; 4; 12; 2; 10; : : : :
+           b. Assume that the words in your computer store k-bit values and that in unit time,
+              your computer can manipulate the binary values with operations such as shifting
+              left or right by arbitrary amounts, bitwise-AND, bitwise-OR, etc. Describe
+              an implementation of the B IT-R EVERSED -I NCREMENT procedure that allows
+              the bit-reversal permutation on an n-element array to be performed in a total
+              of O.n/ time.
+
+           c. Suppose that you can shift a word left or right by only one bit in unit time. Is it
+              still possible to implement an O.n/-time bit-reversal permutation?
+

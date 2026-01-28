@@ -1,0 +1,58 @@
+29.4 Duality                                                                            881
+
+
+Proof           We have
+                                                !
+X
+n                        X
+                         n X
+                           m
+       cj xNj                            aij yNi xNj   (by inequalities (29.84))
+j D1                     j D1      i D1
+                                                !
+                         X
+                         m X
+                           n
+                  D                       aij xNj yNi
+                          i D1     j D1
+
+                         X
+                         m
+                                bi yNi                 (by inequalities (29.17)) .
+                          i D1
+
+
+
+Corollary 29.9
+Let xN be a feasible solution to a primal linear program .A; b; c/, and let yN be a
+feasible solution to the corresponding dual linear program. If
+Xn           Xm
+    cj xNj D     bi yNi ;
+j D1               i D1
+
+then xN and yN are optimal solutions to the primal and dual linear programs, respec-
+tively.
+
+Proof By Lemma 29.8, the objective value of a feasible solution to the primal
+cannot exceed that of a feasible solution to the dual. The primal linear program is
+a maximization problem and the dual is a minimization problem. Thus, if feasible
+solutions xN and yN have the same objective value, neither can be improved.
+
+    Before proving that there always is a dual solution whose value is equal to that
+of an optimal primal solution, we describe how to ﬁnd such a solution. When
+we ran the simplex algorithm on the linear program in (29.53)–(29.57), the ﬁnal
+iteration yielded the slack form (29.72)–(29.75) with objective ´ D 28  x3 =6 
+x5 =6 2x6 =3, B D f1; 2; 4g, and N D f3; 5; 6g. As we shall show below, the basic
+solution associated with the ﬁnal slack form is indeed an optimal solution to the
+linear program; an optimal solution to linear program (29.53)–(29.57) is therefore
+.xN 1 ; xN 2 ; xN 3 / D .8; 4; 0/, with objective value .3  8/ C .1  4/ C .2  0/ D 28. As
+we also show below, we can read off an optimal dual solution: the negatives of the
+coefﬁcients of the primal objective function are the values of the dual variables.
+More precisely, suppose that the last slack form of the primal is
+                       X
+ ´ D 0 C                  cj0 xj
+                        j 2N
+                        X
+xi     D        bi0           aij0 xj for i 2 B :
+                        j 2N
+

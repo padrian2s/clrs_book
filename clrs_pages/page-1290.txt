@@ -1,0 +1,52 @@
+Index                                                                                        1269
+
+
+   into a bit vector with a superimposed binary    interior-point method, 850, 897
+      tree, 534                                    intermediate vertex, 693
+   into a bit vector with a superimposed tree of   internal node, 1176
+      constant height, 534                         internal path length, 1180 ex.
+   into B-trees, 493–497                           interpolation by a cubic spline, 840 pr.
+   into chained hash tables, 258                   interpolation by a polynomial, 901, 906 ex.
+   into d -ary heaps, 167 pr.                         at complex roots of unity, 912–913
+   into direct-address tables, 254                 intersection
+   into dynamic tables, 464–467                       of chords, 345 ex.
+   elementary, 465                                    determining, for a set of line segments,
+   into Fibonacci heaps, 510–511                         1021–1029, 1047
+   into heaps, 164                                    determining, for two line segments,
+   into interval trees, 349                              1017–1019
+   into linked lists, 237–238                         of languages, 1058
+   into open-address hash tables, 270                 of sets (\), 1159
+   into order-statistic trees, 343                 interval, 348
+   into proto van Emde Boas structures, 544           fuzzy sorting of, 189 pr.
+   into queues, 234                                I NTERVAL -D ELETE , 349
+   into red-black trees, 315–323                   interval graph, 422 ex.
+   into stacks, 232                                I NTERVAL -I NSERT , 349
+   into sweep-line statuses, 1024                  I NTERVAL -S EARCH, 349, 351
+   into treaps, 333 pr.                            I NTERVAL -S EARCH -E XACTLY, 354 ex.
+   into 2-3-4 heaps, 529 pr.                       interval tree, 348–354
+   into van Emde Boas trees, 552–554               interval trichotomy, 348
+   into Young tableaus, 167 pr.                    intractability, 1048
+insertion sort, 12, 16–20, 25–27                   invalid shift, 985
+   in bucket sort, 201–204                         inventory planning, 411 pr.
+   compared with merge sort, 14 ex.                inverse
+   compared with quicksort, 178 ex.                   of a bijective function, 1167
+   decision tree for, 192 ﬁg.                         in a group, 940
+   in merge sort, 39 pr.                              of a matrix, 827–831, 842, 1223, 1225 ex.
+   in quicksort, 185 ex.                              multiplicative, modulo n, 949
+   using binary search, 39 ex.                     inversion
+I NSERTION -S ORT , 18, 26, 208 pr.                   in a self-organizing list, 476 pr.
+instance                                              in a sequence, 41 pr., 122 ex., 345 ex.
+   of an abstract problem, 1051, 1054              inverter, 1070
+   of a problem, 5                                 invertible matrix, 1223
+instructions of the RAM model, 23                  isolated vertex, 1169
+integer data type, 23                              isomorphic graphs, 1171
+integer linear programming, 850, 895 pr.,          iterated function, 63 pr.
+      1101 ex.                                     iterated logarithm function, 58–59
+integers (Z), 1158                                 I TERATIVE -FFT, 917
+integer-valued ﬂow, 733                            I TERATIVE -T REE -S EARCH, 291
+integrality theorem, 734                           iter function, 577
+integral, to approximate summations,
+      1154–1156                                    Jarvis’s march, 1037–1038, 1047
+integration of a series, 1147                      Jensen’s inequality, 1199
+interior of a polygon, 1020 ex.                    J OHNSON, 704
+

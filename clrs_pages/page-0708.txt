@@ -1,0 +1,46 @@
+25.1 Shortest paths and matrix multiplication                                     687
+
+
+The structure of a shortest path
+We start by characterizing the structure of an optimal solution. For the all-pairs
+shortest-paths problem on a graph G D .V; E/, we have proven (Lemma 24.1)
+that all subpaths of a shortest path are shortest paths. Suppose that we represent
+the graph by an adjacency matrix W D .wij /. Consider a shortest path p from
+vertex i to vertex j , and suppose that p contains at most m edges. Assuming that
+there are no negative-weight cycles, m is ﬁnite. If i D j , then p has weight 0
+and no edges. If vertices i and j are distinct, then we decompose path p into
+  p0
+i ; k ! j , where path p 0 now contains at most m  1 edges. By Lemma 24.1,
+p 0 is a shortest path from i to k, and so ı.i; j / D ı.i; k/ C wkj .
+
+A recursive solution to the all-pairs shortest-paths problem
+Now, let lij.m/ be the minimum weight of any path from vertex i to vertex j that
+contains at most m edges. When m D 0, there is a shortest path from i to j with
+no edges if and only if i D j . Thus,
+       (
+  .0/    0 if i D j ;
+lij D
+         1 if i ¤ j :
+
+For m  1, we compute lij.m/ as the minimum of lij.m1/ (the weight of a shortest
+path from i to j consisting of at most m  1 edges) and the minimum weight of any
+path from i to j consisting of at most m edges, obtained by looking at all possible
+predecessors k of j . Thus, we recursively deﬁne
+                             ˚               
+lij.m/ D min lij.m1/ ; min li.m1/
+                                  k    C wkj
+                        1kn
+                 ˚ .m1/
+       D min li k        C wkj :                                             (25.2)
+            1kn
+
+The latter equality follows since wjj D 0 for all j .
+  What are the actual shortest-path weights ı.i; j /? If the graph contains
+no negative-weight cycles, then for every pair of vertices i and j for which
+ı.i; j / < 1, there is a shortest path from i to j that is simple and thus contains at
+most n  1 edges. A path from vertex i to vertex j with more than n  1 edges
+cannot have lower weight than a shortest path from i to j . The actual shortest-path
+weights are therefore given by
+
+ı.i; j / D lij.n1/ D lij.n/ D lij.nC1/ D    :                              (25.3)
+

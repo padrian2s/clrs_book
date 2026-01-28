@@ -1,0 +1,44 @@
+32.2 The Rabin-Karp algorithm                                                         993
+
+
+P Œ1 : : m D T Œs C 1 : : s C m. If q is large enough, then we hope that spurious
+hits occur infrequently enough that the cost of the extra checking is low.
+   The following procedure makes these ideas precise. The inputs to the procedure
+are the text T , the pattern P , the radix d to use (which is typically taken to be j†j),
+and the prime q to use.
+
+R ABIN -K ARP -M ATCHER .T; P; d; q/
+ 1 n D T:length
+ 2 m D P:length
+ 3 h D d m1 mod q
+ 4 p D0
+ 5 t0 D 0
+ 6 for i D 1 to m                      // preprocessing
+ 7       p D .dp C P Œi/ mod q
+ 8       t0 D .dt0 C T Œi/ mod q
+ 9 for s D 0 to n  m                  // matching
+10       if p == ts
+11            if P Œ1 : : m == T Œs C 1 : : s C m
+12                 print “Pattern occurs with shift” s
+13       if s < n  m
+14            tsC1 D .d.ts  T Œs C 1h/ C T Œs C m C 1/ mod q
+
+   The procedure R ABIN -K ARP -M ATCHER works as follows. All characters are
+interpreted as radix-d digits. The subscripts on t are provided only for clarity; the
+program works correctly if all the subscripts are dropped. Line 3 initializes h to the
+value of the high-order digit position of an m-digit window. Lines 4–8 compute p
+as the value of P Œ1 : : m mod q and t0 as the value of T Œ1 : : m mod q. The for
+loop of lines 9–14 iterates through all possible shifts s, maintaining the following
+invariant:
+   Whenever line 10 is executed, ts D T Œs C 1 : : s C m mod q.
+   If p D ts in line 10 (a “hit”), then line 11 checks to see whether P Œ1 : : m D
+T Œs C 1 : : s C m in order to rule out the possibility of a spurious hit. Line 12 prints
+out any valid shifts that are found. If s < n  m (checked in line 13), then the for
+loop will execute at least one more time, and so line 14 ﬁrst executes to ensure that
+the loop invariant holds when we get back to line 10. Line 14 computes the value
+of tsC1 mod q from the value of ts mod q in constant time using equation (32.2)
+directly.
+   R ABIN -K ARP -M ATCHER takes ‚.m/ preprocessing time, and its matching time
+is ‚..n  m C 1/m/ in the worst case, since (like the naive string-matching algo-
+rithm) the Rabin-Karp algorithm explicitly veriﬁes every valid shift. If P D am
+

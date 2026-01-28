@@ -1,0 +1,42 @@
+1040   Chapter 33 Computational Geometry
+
+
+       this problem, whose running time is described by the familiar recurrence T .n/ D
+       2T .n=2/ C O.n/. Thus, this algorithm uses only O.n lg n/ time.
+
+       The divide-and-conquer algorithm
+       Each recursive invocation of the algorithm takes as input a subset P  Q and
+       arrays X and Y , each of which contains all the points of the input subset P .
+       The points in array X are sorted so that their x-coordinates are monotonically
+       increasing. Similarly, array Y is sorted by monotonically increasing y-coordinate.
+       Note that in order to attain the O.n lg n/ time bound, we cannot afford to sort
+       in each recursive call; if we did, the recurrence for the running time would be
+       T .n/ D 2T .n=2/ C O.n lg n/, whose solution is T .n/ D O.n lg2 n/. (Use the
+       version of the master method given in Exercise 4.6-2.) We shall see a little later
+       how to use “presorting” to maintain this sorted property without actually sorting in
+       each recursive call.
+          A given recursive invocation with inputs P , X , and Y ﬁrst checks whether
+       jP j  3. If so, the invocation simply performs the brute-force method described
+       above: try all jP2 j pairs of points and return the closest pair. If jP j > 3, the
+       recursive invocation carries out the divide-and-conquer paradigm as follows.
+       Divide: Find a vertical line l that bisects the point set P into two sets PL and PR
+          such that jPL j D djP j =2e, jPR j D bjP j =2c, all points in PL are on or to the
+          left of line l, and all points in PR are on or to the right of l. Divide the array X
+          into arrays XL and XR , which contain the points of PL and PR respectively,
+          sorted by monotonically increasing x-coordinate. Similarly, divide the array Y
+          into arrays YL and YR , which contain the points of PL and PR respectively,
+          sorted by monotonically increasing y-coordinate.
+       Conquer: Having divided P into PL and PR , make two recursive calls, one to ﬁnd
+         the closest pair of points in PL and the other to ﬁnd the closest pair of points
+         in PR . The inputs to the ﬁrst call are the subset PL and arrays XL and YL ; the
+         second call receives the inputs PR , XR , and YR . Let the closest-pair distances
+         returned for PL and PR be ıL and ıR , respectively, and let ı D min.ıL ; ıR /.
+       Combine: The closest pair is either the pair with distance ı found by one of the
+         recursive calls, or it is a pair of points with one point in PL and the other in PR .
+         The algorithm determines whether there is a pair with one point in PL and the
+         other point in PR and whose distance is less than ı. Observe that if a pair of
+         points has distance less than ı, both points of the pair must be within ı units
+         of line l. Thus, as Figure 33.11(a) shows, they both must reside in the 2ı-wide
+         vertical strip centered at line l. To ﬁnd such a pair, if one exists, we do the
+         following:
+

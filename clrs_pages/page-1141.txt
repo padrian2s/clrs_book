@@ -1,0 +1,48 @@
+1120   Chapter 35 Approximation Algorithms
+
+
+          To show that G REEDY-S ET-C OVER is a .n/-approximation algorithm, we as-
+       sign a cost of 1 to each set selected by the algorithm, distribute this cost over
+       the elements covered for the ﬁrst time, and then use these costs to derive the de-
+       sired relationship between the size of an optimal set cover C  and the size of the
+       set cover C returned by the algorithm. Let Si denote the ith subset selected by
+       G REEDY-S ET-C OVER; the algorithm incurs a cost of 1 when it adds Si to C . We
+       spread this cost of selecting Si evenly among the elements covered for the ﬁrst time
+       by Si . Let cx denote the cost allocated to element x, for each x 2 X . Each element
+       is assigned a cost only once, when it is covered for the ﬁrst time. If x is covered
+       for the ﬁrst time by Si , then
+                             1
+       cx D                                     :
+              jSi  .S1 [ S2 [    [ Si 1 /j
+       Each step of the algorithm assigns 1 unit of cost, and so
+               X
+       jC j D      cx :                                                               (35.9)
+              x2X
+       Each element x 2 X is in at least one set in the optimal cover C  , and so we have
+       X X          X
+               cx      cx :                                                        (35.10)
+       S2C  x2S           x2X
+       Combining equation (35.9) and inequality (35.10), we have that
+              X X
+       jC j        cx :                                                            (35.11)
+              S2C  x2S
+         The remainder of the proof rests on the following key inequality, which we shall
+       prove shortly. For any set S belonging to the family F ,
+       X
+           cx  H.jSj/ :                                                          (35.12)
+       x2S
+       From inequalities (35.11) and (35.12), it follows that
+                X
+       jC j         H.jSj/
+                   S2C 
+              jC j  H.max fjSj W S 2 F g/ ;
+                     
+
+
+       thus proving the theorem.
+         All that remains is to prove inequality (35.12). Consider any set S 2 F and any
+       i D 1; 2; : : : ; jC j, and let
+       ui D jS  .S1 [ S2 [    [ Si /j
+       be the number of elements in S that remain uncovered after the algorithm has
+       selected sets S1 ; S2 ; : : : ; Si . We deﬁne u0 D jSj to be the number of elements
+

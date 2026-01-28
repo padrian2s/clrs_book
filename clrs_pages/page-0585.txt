@@ -1,0 +1,45 @@
+564          Chapter 21 Data Structures for Disjoint Sets
+
+
+             nected component. Figure 21.1(b) illustrates how C ONNECTED -C OMPONENTS
+             computes the disjoint sets.
+                In an actual implementation of this connected-components algorithm, the repre-
+             sentations of the graph and the disjoint-set data structure would need to reference
+             each other. That is, an object representing a vertex would contain a pointer to
+             the corresponding disjoint-set object, and vice versa. These programming details
+             depend on the implementation language, and we do not address them further here.
+
+             Exercises
+
+             21.1-1
+             Suppose that C ONNECTED -C OMPONENTS is run on the undirected graph G D
+             .V; E/, where V D fa; b; c; d; e; f; g; h; i; j; kg and the edges of E are pro-
+             cessed in the order .d; i/; .f; k/; .g; i/; .b; g/; .a; h/; .i; j /; .d; k/; .b; j /; .d; f /;
+             .g; j /; .a; e/. List the vertices in each connected component after each iteration of
+             lines 3–5.
+
+             21.1-2
+             Show that after all edges are processed by C ONNECTED -C OMPONENTS, two ver-
+             tices are in the same connected component if and only if they are in the same set.
+
+             21.1-3
+             During the execution of C ONNECTED -C OMPONENTS on an undirected graph G D
+             .V; E/ with k connected components, how many times is F IND -S ET called? How
+             many times is U NION called? Express your answers in terms of jV j, jEj, and k.
+
+
+
+21.2 Linked-list representation of disjoint sets
+
+             Figure 21.2(a) shows a simple way to implement a disjoint-set data structure: each
+             set is represented by its own linked list. The object for each set has attributes head,
+             pointing to the ﬁrst object in the list, and tail, pointing to the last object. Each
+             object in the list contains a set member, a pointer to the next object in the list, and
+             a pointer back to the set object. Within each linked list, the objects may appear in
+             any order. The representative is the set member in the ﬁrst object in the list.
+                With this linked-list representation, both M AKE -S ET and F IND -S ET are easy,
+             requiring O.1/ time. To carry out M AKE -S ET .x/, we create a new linked list
+             whose only object is x. For F IND -S ET .x/, we just follow the pointer from x back
+             to its set object and then return the member in the object that head points to. For
+             example, in Figure 21.2(a), the call F IND -S ET .g/ would return f .
+

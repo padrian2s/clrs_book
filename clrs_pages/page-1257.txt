@@ -1,0 +1,43 @@
+1236   Bibliography
+
+
+         [89] E. A. Dinic. Algorithm for solution of a problem of maximum ﬂow in a network with power
+              estimation. Soviet Mathematics Doklady, 11(5):1277–1280, 1970.
+         [90] Brandon Dixon, Monika Rauch, and Robert E. Tarjan. Veriﬁcation and sensitivity analysis
+              of minimum spanning trees in linear time. SIAM Journal on Computing, 21(6):1184–1192,
+              1992.
+         [91] John D. Dixon. Factorization and primality tests. The American Mathematical Monthly,
+              91(6):333–352, 1984.
+         [92] Dorit Dor, Johan Håstad, Staffan Ulfberg, and Uri Zwick. On lower bounds for selecting
+              the median. SIAM Journal on Discrete Mathematics, 14(3):299–311, 2001.
+         [93] Dorit Dor and Uri Zwick. Selecting the median. SIAM Journal on Computing, 28(5):1722–
+              1758, 1999.
+         [94] Dorit Dor and Uri Zwick. Median selection requires .2 C /n comparisons. SIAM Journal
+              on Discrete Mathematics, 14(3):312–325, 2001.
+         [95] Alvin W. Drake. Fundamentals of Applied Probability Theory. McGraw-Hill, 1967.
+         [96] James R. Driscoll, Harold N. Gabow, Ruth Shrairman, and Robert E. Tarjan. Relaxed heaps:
+              An alternative to Fibonacci heaps with applications to parallel computation. Communica-
+              tions of the ACM, 31(11):1343–1354, 1988.
+         [97] James R. Driscoll, Neil Sarnak, Daniel D. Sleator, and Robert E. Tarjan. Making data
+              structures persistent. Journal of Computer and System Sciences, 38(1):86–124, 1989.
+         [98] Derek L. Eager, John Zahorjan, and Edward D. Lazowska. Speedup versus efﬁciency in
+              parallel systems. IEEE Transactions on Computers, 38(3):408–423, 1989.
+         [99] Herbert Edelsbrunner. Algorithms in Combinatorial Geometry, volume 10 of EATCS Mono-
+              graphs on Theoretical Computer Science. Springer, 1987.
+        [100] Jack Edmonds. Paths, trees, and ﬂowers. Canadian Journal of Mathematics, 17:449–467,
+              1965.
+        [101] Jack Edmonds. Matroids and the greedy algorithm. Mathematical Programming, 1(1):127–
+              136, 1971.
+        [102] Jack Edmonds and Richard M. Karp. Theoretical improvements in the algorithmic efﬁ-
+              ciency for network ﬂow problems. Journal of the ACM, 19(2):248–264, 1972.
+        [103] Shimon Even. Graph Algorithms. Computer Science Press, 1979.
+        [104] William Feller. An Introduction to Probability Theory and Its Applications. John Wiley &
+              Sons, third edition, 1968.
+        [105] Robert W. Floyd. Algorithm 97 (SHORTEST PATH). Communications of the ACM,
+              5(6):345, 1962.
+        [106] Robert W. Floyd. Algorithm 245 (TREESORT). Communications of the ACM, 7(12):701,
+              1964.
+        [107] Robert W. Floyd. Permuting information in idealized two-level storage. In Raymond E.
+              Miller and James W. Thatcher, editors, Complexity of Computer Computations, pages 105–
+              109. Plenum Press, 1972.
+

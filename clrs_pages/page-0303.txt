@@ -1,0 +1,51 @@
+282        Chapter 11 Hash Tables
+
+
+
+                                                 Pm1 (C.30), Pr fX  tg  E ŒX  =t, this
+           Proof Again we apply Markov’s inequality
+           time to inequality (11.7), with X D j D0 mj and t D 4n:
+              (m1           )          Pm1 
+               X                      E    j D0 mj
+           Pr       mj  4n      
+               j D0
+                                           4n
+                                   2n
+                                 <
+                                   4n
+                                 D 1=2 :
+
+              From Corollary 11.12, we see that if we test a few randomly chosen hash func-
+           tions from the universal family, we will quickly ﬁnd one that uses a reasonable
+           amount of storage.
+
+           Exercises
+
+           11.5-1 ?
+           Suppose that we insert n keys into a hash table of size m using open addressing
+           and uniform hashing. Let p.n; m/ be the probability that no collisions occur. Show
+                            n.n1/=2m
+           that p.n;
+                 p m/  e              . (Hint: See equation (3.12).) Argue that when n ex-
+           ceeds m, the probability of avoiding collisions goes rapidly to zero.
+
+
+
+Problems
+
+           11-1 Longest-probe bound for hashing
+           Suppose that we use an open-addressed hash table of size m to store n  m=2
+           items.
+           a. Assuming uniform hashing, show that for i D 1; 2; : : : ; n, the probability is at
+              most 2k that the ith insertion requires strictly more than k probes.
+
+           b. Show that for i D 1; 2; : : : ; n, the probability is O.1=n2 / that the ith insertion
+              requires more than 2 lg n probes.
+           Let the random variable Xi denote the number of probes required by the ith inser-
+           tion. You have shown in part (b) that Pr fXi > 2 lg ng D O.1=n2 /. Let the random
+           variable X D max1i n Xi denote the maximum number of probes required by
+           any of the n insertions.
+           c. Show that Pr fX > 2 lg ng D O.1=n/.
+
+           d. Show that the expected length E ŒX  of the longest probe sequence is O.lg n/.
+

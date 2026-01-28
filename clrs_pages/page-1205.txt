@@ -1,0 +1,41 @@
+1184   Appendix C   Counting and Probability
+
+
+       follows from equation (B.3). For example, each position on a car’s license plate
+       is a letter or a digit. The number of possibilities for each position is therefore
+       26 C 10 D 36, since there are 26 choices if it is a letter and 10 choices if it is a
+       digit.
+          The rule of product says that the number of ways to choose an ordered pair is the
+       number of ways to choose the ﬁrst element times the number of ways to choose the
+       second element. That is, if A and B are two ﬁnite sets, then jA Bj D jAj  jBj,
+       which is simply equation (B.4). For example, if an ice-cream parlor offers 28
+       ﬂavors of ice cream and 4 toppings, the number of possible sundaes with one scoop
+       of ice cream and one topping is 28  4 D 112.
+
+       Strings
+       A string over a ﬁnite set S is a sequence of elements of S. For example, there are 8
+       binary strings of length 3:
+       000; 001; 010; 011; 100; 101; 110; 111 :
+       We sometimes call a string of length k a k-string. A substring s 0 of a string s
+       is an ordered sequence of consecutive elements of s. A k-substring of a string
+       is a substring of length k. For example, 010 is a 3-substring of 01101001 (the
+       3-substring that begins in position 4), but 111 is not a substring of 01101001.
+          We can view a k-string over a set S as an element of the Cartesian product S k
+       of k-tuples; thus, there are jSjk strings of length k. For example, the number of
+       binary k-strings is 2k . Intuitively, to construct a k-string over an n-set, we have n
+       ways to pick the ﬁrst element; for each of these choices, we have n ways to pick the
+       second element; and so forth k times. This construction leads to the k-fold product
+       n  n    n D nk as the number of k-strings.
+
+       Permutations
+       A permutation of a ﬁnite set S is an ordered sequence of all the elements of S,
+       with each element appearing exactly once. For example, if S D fa; b; cg, then S
+       has 6 permutations:
+       abc; acb; bac; bca; cab; cba :
+       There are nŠ permutations of a set of n elements, since we can choose the ﬁrst
+       element of the sequence in n ways, the second in n  1 ways, the third in n  2
+       ways, and so on.
+          A k-permutation of S is an ordered sequence of k elements of S, with no ele-
+       ment appearing more than once in the sequence. (Thus, an ordinary permutation is
+       an n-permutation of an n-set.) The twelve 2-permutations of the set fa; b; c; d g are
+

@@ -1,0 +1,42 @@
+712   Chapter 26 Maximum Flow
+
+
+      antiparallel edges. Figure 26.2(b) displays this equivalent network. We choose
+      one of the two antiparallel edges, in this case .1 ; 2 /, and split it by adding a new
+      vertex  0 and replacing edge .1 ; 2 / with the pair of edges .1 ;  0 / and . 0 ; 2 /.
+      We also set the capacity of both new edges to the capacity of the original edge.
+      The resulting network satisﬁes the property that if an edge is in the network, the
+      reverse edge is not. Exercise 26.1-1 asks you to prove that the resulting network is
+      equivalent to the original one.
+         Thus, we see that a real-world ﬂow problem might be most naturally modeled
+      by a network with antiparallel edges. It will be convenient to disallow antipar-
+      allel edges, however, and so we have a straightforward way to convert a network
+      containing antiparallel edges into an equivalent one with no antiparallel edges.
+
+      Networks with multiple sources and sinks
+      A maximum-ﬂow problem may have several sources and sinks, rather than just
+      one of each. The Lucky Puck Company, for example, might actually have a set
+      of m factories fs1 ; s2 ; : : : ; sm g and a set of n warehouses ft1 ; t2 ; : : : ; tn g, as shown
+      in Figure 26.3(a). Fortunately, this problem is no harder than ordinary maximum
+      ﬂow.
+         We can reduce the problem of determining a maximum ﬂow in a network with
+      multiple sources and multiple sinks to an ordinary maximum-ﬂow problem. Fig-
+      ure 26.3(b) shows how to convert the network from (a) to an ordinary ﬂow network
+      with only a single source and a single sink. We add a supersource s and add a
+      directed edge .s; si / with capacity c.s; si / D 1 for each i D 1; 2; : : : ; m. We also
+      create a new supersink t and add a directed edge .ti ; t/ with capacity c.ti ; t/ D 1
+      for each i D 1; 2; : : : ; n. Intuitively, any ﬂow in the network in (a) corresponds to
+      a ﬂow in the network in (b), and vice versa. The single source s simply provides
+      as much ﬂow as desired for the multiple sources si , and the single sink t likewise
+      consumes as much ﬂow as desired for the multiple sinks ti . Exercise 26.1-2 asks
+      you to prove formally that the two problems are equivalent.
+
+      Exercises
+
+      26.1-1
+      Show that splitting an edge in a ﬂow network yields an equivalent network. More
+      formally, suppose that ﬂow network G contains edge .u; /, and we create a new
+      ﬂow network G 0 by creating a new vertex x and replacing .u; / by new edges
+      .u; x/ and .x; / with c.u; x/ D c.x; / D c.u; /. Show that a maximum ﬂow
+      in G 0 has the same value as a maximum ﬂow in G.
+

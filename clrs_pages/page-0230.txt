@@ -1,0 +1,43 @@
+Problems for Chapter 8                                                            209
+
+
+   The 0-1 sorting lemma provides a powerful way to prove that an oblivious
+compare-exchange algorithm produces a sorted result. It states that if an oblivi-
+ous compare-exchange algorithm correctly sorts all input sequences consisting of
+only 0s and 1s, then it correctly sorts all inputs containing arbitrary values.
+   You will prove the 0-1 sorting lemma by proving its contrapositive: if an oblivi-
+ous compare-exchange algorithm fails to sort an input containing arbitrary values,
+then it fails to sort some 0-1 input. Assume that an oblivious compare-exchange al-
+gorithm X fails to correctly sort the array AŒ1 : : n. Let AŒp be the smallest value
+in A that algorithm X puts into the wrong location, and let AŒq be the value that
+algorithm X moves to the location into which AŒp should have gone. Deﬁne an
+array BŒ1 : : n of 0s and 1s as follows:
+         (
+            0 if AŒi  AŒp ;
+BŒi D
+            1 if AŒi > AŒp :
+
+a. Argue that AŒq > AŒp, so that BŒp D 0 and BŒq D 1.
+
+b. To complete the proof of the 0-1 sorting lemma, prove that algorithm X fails to
+   sort array B correctly.
+
+   Now you will use the 0-1 sorting lemma to prove that a particular sorting algo-
+rithm works correctly. The algorithm, columnsort, works on a rectangular array
+of n elements. The array has r rows and s columns (so that n D rs), subject to
+three restrictions:
+   r must be even,
+   s must be a divisor of r, and
+   r  2s 2 .
+When columnsort completes, the array is sorted in column-major order: reading
+down the columns, from left to right, the elements monotonically increase.
+   Columnsort operates in eight steps, regardless of the value of n. The odd steps
+are all the same: sort each column individually. Each even step is a ﬁxed permuta-
+tion. Here are the steps:
+1. Sort each column.
+2. Transpose the array, but reshape it back to r rows and s columns. In other
+   words, turn the leftmost column into the top r=s rows, in order; turn the next
+   column into the next r=s rows, in order; and so on.
+3. Sort each column.
+4. Perform the inverse of the permutation performed in step 2.
+

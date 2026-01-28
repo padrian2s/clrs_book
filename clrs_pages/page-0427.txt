@@ -1,0 +1,42 @@
+406   Chapter 15 Dynamic Programming
+
+
+      words of lengths l1 ; l2 ; : : : ; ln , measured in characters. We want to print this para-
+      graph neatly on a number of lines that hold a maximum of M characters each. Our
+      criterion of “neatness” is as follows. If a given line contains words i through j ,
+      where i  j , and we leave exactly one space between words,      Pj the number of extra
+      space characters at the end of the line is M  j C i  kDi lk , which must be
+      nonnegative so that the words ﬁt on the line. We wish to minimize the sum, over
+      all lines except the last, of the cubes of the numbers of extra space characters at the
+      ends of lines. Give a dynamic-programming algorithm to print a paragraph of n
+      words neatly on a printer. Analyze the running time and space requirements of
+      your algorithm.
+
+      15-5 Edit distance
+      In order to transform one source string of text xŒ1 : : m to a target string yŒ1 : : n,
+      we can perform various transformation operations. Our goal is, given x and y,
+      to produce a series of transformations that change x to y. We use an ar-
+      ray ´—assumed to be large enough to hold all the characters it will need—to hold
+      the intermediate results. Initially, ´ is empty, and at termination, we should have
+      ´Œj  D yŒj  for j D 1; 2; : : : ; n. We maintain current indices i into x and j into ´,
+      and the operations are allowed to alter ´ and these indices. Initially, i D j D 1.
+      We are required to examine every character in x during the transformation, which
+      means that at the end of the sequence of transformation operations, we must have
+      i D m C 1.
+         We may choose from among six transformation operations:
+      Copy a character from x to ´ by setting ´Œj  D xŒi and then incrementing both i
+        and j . This operation examines xŒi.
+      Replace a character from x by another character c, by setting ´Œj  D c, and then
+        incrementing both i and j . This operation examines xŒi.
+      Delete a character from x by incrementing i but leaving j alone. This operation
+         examines xŒi.
+      Insert the character c into ´ by setting ´Œj  D c and then incrementing j , but
+         leaving i alone. This operation examines no characters of x.
+      Twiddle (i.e., exchange) the next two characters by copying them from x to ´ but
+        in the opposite order; we do so by setting ´Œj  D xŒi C 1 and ´Œj C 1 D xŒi
+        and then setting i D i C 2 and j D j C 2. This operation examines xŒi
+        and xŒi C 1.
+      Kill the remainder of x by setting i D m C 1. This operation examines all char-
+         acters in x that have not yet been examined. This operation, if performed, must
+         be the ﬁnal operation.
+

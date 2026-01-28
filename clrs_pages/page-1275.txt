@@ -1,0 +1,52 @@
+1254   Index
+
+
+       automaton                                       best-case running time, 29 ex., 49
+         ﬁnite, 995                                    BFS, 595
+         string-matching, 996–1002                     B IASED -R ANDOM, 117 ex.
+       auxiliary hash function, 272                    biconnected component, 621 pr.
+       auxiliary linear program, 886                   big-oh notation, 45 ﬁg., 47–48, 64
+       average-case running time, 28, 116              big-omega notation, 45 ﬁg., 48–49, 64
+       AVL-I NSERT , 333 pr.                           bijective function, 1167
+       AVL tree, 333 pr., 337                          binary character code, 428
+       axioms, for probability, 1190                   binary counter
+                                                          analyzed by accounting method, 458
+       babyface, 602 ex.                                  analyzed by aggregate analysis, 454–455
+       back edge, 609, 613                                analyzed by potential method, 461–462
+       back substitution, 817                             bit-reversed, 472 pr.
+       BAD -S ET-C OVER -I NSTANCE, 1122 ex.           binary entropy function, 1187
+       BALANCE , 333 pr.                               binary gcd algorithm, 981 pr.
+       balanced search tree                            binary heap, see heap
+         AA-trees, 338                                 binary relation, 1163
+         AVL trees, 333 pr., 337                       binary search, 39 ex.
+         B-trees, 484–504                                 with fast insertion, 473 pr.
+         k-neighbor trees, 338                            in insertion sort, 39 ex.
+         red-black trees, 308–338                         in multithreaded merging, 799–800
+         scapegoat trees, 338                             in searching B-trees, 499 ex.
+         splay trees, 338, 482                         B INARY-S EARCH, 799
+         treaps, 333 pr., 338                          binary search tree, 286–307
+         2-3-4 trees, 489, 503 pr.                        AA-trees, 338
+         2-3 trees, 337, 504                              AVL trees, 333 pr., 337
+         weight-balanced trees, 338, 473 pr.              deletion from, 295–298, 299 ex.
+       balls and bins, 133–134, 1215 pr.                  with equal keys, 303 pr.
+       base-a pseudoprime, 967                            insertion into, 294–295
+       base case, 65, 84                                  k-neighbor trees, 338
+       base, in DNA, 391                                  maximum key of, 291
+       basic feasible solution, 866                       minimum key of, 291
+       basic solution, 866                                optimal, 397–404, 413
+       basic variable, 855                                predecessor in, 291–292
+       basis function, 835                                querying, 289–294
+       Bayes’s theorem, 1194                              randomly built, 299–303, 304 pr.
+       B ELLMAN -F ORD, 651                               right-converting of, 314 ex.
+       Bellman-Ford algorithm, 651–655, 682               scapegoat trees, 338
+         for all-pairs shortest paths, 684                searching, 289–291
+         in Johnson’s algorithm, 702–704                  for sorting, 299 ex.
+         and objective functions, 670 ex.                 splay trees, 338
+         to solve systems of difference constraints,      successor in, 291–292
+            668                                           and treaps, 333 pr.
+         Yen’s improvement to, 678 pr.                    weight-balanced trees, 338
+       B ELOW, 1024                                       see also red-black tree
+       Bernoulli trial, 1201                           binary-search-tree property, 287
+         and balls and bins, 133–134                      in treaps, 333 pr.
+         and streaks, 135–139                             vs. min-heap property, 289 ex.
+

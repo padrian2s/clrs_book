@@ -1,0 +1,42 @@
+24.1 The Bellman-Ford algorithm                                                    653
+
+
+Corollary 24.3
+Let G D .V; E/ be a weighted, directed graph with source vertex s and weight
+function w W E ! R, and assume that G contains no negative-weight cycles that
+are reachable from s. Then, for each vertex  2 V , there is a path from s to  if
+and only if B ELLMAN -F ORD terminates with :d < 1 when it is run on G.
+
+Proof       The proof is left as Exercise 24.1-2.
+
+Theorem 24.4 (Correctness of the Bellman-Ford algorithm)
+Let B ELLMAN -F ORD be run on a weighted, directed graph G D .V; E/ with
+source s and weight function w W E ! R. If G contains no negative-weight cycles
+that are reachable from s, then the algorithm returns TRUE, we have :d D ı.s; /
+for all vertices  2 V , and the predecessor subgraph G is a shortest-paths tree
+rooted at s. If G does contain a negative-weight cycle reachable from s, then the
+algorithm returns FALSE.
+
+Proof Suppose that graph G contains no negative-weight cycles that are reach-
+able from the source s. We ﬁrst prove the claim that at termination, :d D ı.s; /
+for all vertices  2 V . If vertex  is reachable from s, then Lemma 24.2 proves this
+claim. If  is not reachable from s, then the claim follows from the no-path prop-
+erty. Thus, the claim is proven. The predecessor-subgraph property, along with the
+claim, implies that G is a shortest-paths tree. Now we use the claim to show that
+B ELLMAN -F ORD returns TRUE. At termination, we have for all edges .u; / 2 E,
+:d D ı.s; /
+     ı.s; u/ C w.u; / (by the triangle inequality)
+    D u:d C w.u; / ;
+and so none of the tests in line 6 causes B ELLMAN -F ORD to return FALSE. There-
+fore, it returns TRUE.
+   Now, suppose that graph G contains a negative-weight cycle that is reachable
+from the source s; let this cycle be c D h0 ; 1 ; : : : ; k i, where 0 D k . Then,
+X
+k
+       w.i 1 ; i / < 0 :                                                     (24.1)
+i D1
+
+Assume for the purpose of contradiction that the Bellman-Ford algorithm returns
+TRUE. Thus, i :d  i 1 :d C w.i 1 ; i / for i D 1; 2; : : : ; k. Summing the
+inequalities around cycle c gives us
+

@@ -1,0 +1,42 @@
+            4.3 The substitution method for solving recurrences                                83
+
+
+            4.2-6
+            How quickly can you multiply a k n n matrix by an n k n matrix, using Strassen’s
+            algorithm as a subroutine? Answer the same question with the order of the input
+            matrices reversed.
+
+            4.2-7
+            Show how to multiply the complex numbers a C bi and c C d i using only three
+            multiplications of real numbers. The algorithm should take a, b, c, and d as input
+            and produce the real component ac  bd and the imaginary component ad C bc
+            separately.
+
+
+
+4.3 The substitution method for solving recurrences
+
+            Now that we have seen how recurrences characterize the running times of divide-
+            and-conquer algorithms, we will learn how to solve recurrences. We start in this
+            section with the “substitution” method.
+              The substitution method for solving recurrences comprises two steps:
+            1. Guess the form of the solution.
+            2. Use mathematical induction to ﬁnd the constants and show that the solution
+               works.
+            We substitute the guessed solution for the function when applying the inductive
+            hypothesis to smaller values; hence the name “substitution method.” This method
+            is powerful, but we must be able to guess the form of the answer in order to apply it.
+               We can use the substitution method to establish either upper or lower bounds on
+            a recurrence. As an example, let us determine an upper bound on the recurrence
+            T .n/ D 2T .bn=2c/ C n ;                                                       (4.19)
+            which is similar to recurrences (4.3) and (4.4). We guess that the solution is
+            T .n/ D O.n lg n/. The substitution method requires us to prove that T .n/ 
+            cn lg n for an appropriate choice of the constant c > 0. We start by assuming
+            that this bound holds for all positive m < n, in particular for m D bn=2c, yielding
+            T .bn=2c/  c bn=2c lg.bn=2c/. Substituting into the recurrence yields
+            T .n/       2.c bn=2c lg.bn=2c// C n
+                        cn lg.n=2/ C n
+                  D      cn lg n  cn lg 2 C n
+                  D      cn lg n  cn C n
+                        cn lg n ;
+

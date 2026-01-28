@@ -1,0 +1,52 @@
+1282   Index
+
+
+       P-T RANSPOSE , 792 ex.                            Q UICKSORT , 171
+       public key, 959, 962                              Q UICKSORT 0 , 186 pr.
+       public-key cryptosystem, 958–965, 983             quotient, 928
+       P USH
+          push-relabel operation, 739                    R (set of real numbers), 1158
+          stack operation, 233, 452                      Rabin-Karp algorithm, 990–995, 1013
+       push onto a run-time stack, 188 pr.               R ABIN -K ARP -M ATCHER, 993
+       push operation (in push-relabel algorithms),      race, 787–790
+             738–739                                     R ACE -E XAMPLE , 788
+          nonsaturating, 739, 745                        radix sort, 197–200
+          saturating, 739, 745                              compared with quicksort, 199
+       push-relabel algorithm, 736–760, 765              R ADIX -S ORT , 198
+          basic operations in, 738–740                   radix tree, 304 pr.
+          by discharging an overﬂowing vertex of         RAM, 23–24
+             maximum height, 760 ex.                     R ANDOM, 117
+          to ﬁnd a maximum bipartite matching,           random-access machine, 23–24
+             747 ex.                                        parallel, 811
+          gap heuristic for, 760 ex., 766                randomized algorithm, 116–117, 122–130
+          generic algorithm, 740–748                        and average inputs, 28
+          with a queue of overﬂowing vertices, 759 ex.      comparison sort, 205 pr.
+          relabel-to-front algorithm, 748–760               for fuzzy sorting of intervals, 189 pr.
+                                                            for hiring problem, 123–124
+       quadratic function, 27                               for insertion into a binary search tree with
+       quadratic probing, 272, 283 pr.                         equal keys, 303 pr.
+       quadratic residue, 982 pr.                           for MAX-3-CNF satisﬁability, 1123–1124,
+       quantile, 223 ex.                                       1139
+       query, 230                                           Miller-Rabin primality test, 968–975, 983
+       queue, 232, 234–235                                  multithreaded, 811 pr.
+         in breadth-ﬁrst search, 595                        for partitioning, 179, 185 ex., 187–188 pr.
+         implemented by stacks, 236 ex.                     for permuting an array, 124–128
+         linked-list implementation of, 240 ex.             Pollard’s rho heuristic, 976–980, 980 ex.,
+         priority, see priority queue                          984
+         in push-relabel algorithms, 759 ex.                and probabilistic analysis, 123–124
+       quicksort, 170–190                                   quicksort, 179–180, 185 ex., 187–188 pr.
+         analysis of, 174–185                               randomized rounding, 1139
+         average-case analysis of, 181–184                  for searching a compact list, 250 pr.
+         compared with insertion sort, 178 ex.              for selection, 215–220
+         compared with radix sort, 199                      universal hashing, 265–268
+         with equal element values, 186 pr.                 worst-case performance of, 180 ex.
+         good worst-case implementation of, 223 ex.      R ANDOMIZED -H IRE -A SSISTANT, 124
+         “killer adversary” for, 190                     R ANDOMIZED -PARTITION, 179
+         with median-of-3 method, 188 pr.                R ANDOMIZED -Q UICKSORT , 179, 303 ex.
+         multithreaded algorithm for, 811 pr.               relation to randomly built binary search
+         randomized version of, 179–180, 187 pr.               trees, 304 pr.
+         stack depth of, 188 pr.                         randomized rounding, 1139
+         tail-recursive version of, 188 pr.              R ANDOMIZED -S ELECT, 216
+         use of insertion sort in, 185 ex.               R ANDOMIZE -I N -P LACE , 126
+         worst-case analysis of, 180–181
+

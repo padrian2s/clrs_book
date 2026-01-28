@@ -1,0 +1,43 @@
+294         Chapter 12 Binary Search Trees
+
+
+            12.2-8
+            Prove that no matter what node we start at in a height-h binary search tree, k
+            successive calls to T REE -S UCCESSOR take O.k C h/ time.
+
+            12.2-9
+            Let T be a binary search tree whose keys are distinct, let x be a leaf node, and let y
+            be its parent. Show that y:key is either the smallest key in T larger than x:key or
+            the largest key in T smaller than x:key.
+
+
+
+12.3 Insertion and deletion
+
+            The operations of insertion and deletion cause the dynamic set represented by a
+            binary search tree to change. The data structure must be modiﬁed to reﬂect this
+            change, but in such a way that the binary-search-tree property continues to hold.
+            As we shall see, modifying the tree to insert a new element is relatively straight-
+            forward, but handling deletion is somewhat more intricate.
+
+            Insertion
+            To insert a new value  into a binary search tree T , we use the procedure T REE -
+            I NSERT. The procedure takes a node ´ for which ´:key D , ´:left D NIL,
+            and ´:right D NIL . It modiﬁes T and some of the attributes of ´ in such a way that
+            it inserts ´ into an appropriate position in the tree.
+
+            T REE -I NSERT .T; ´/
+             1 y D NIL
+             2 x D T:root
+             3 while x ¤ NIL
+             4        y Dx
+             5        if ´:key < x:key
+             6             x D x:left
+             7        else x D x:right
+             8 ´:p D y
+             9 if y == NIL
+            10        T:root D ´       // tree T was empty
+            11 elseif ´:key < y:key
+            12        y:left D ´
+            13 else y:right D ´
+

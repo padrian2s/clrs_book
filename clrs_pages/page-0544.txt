@@ -1,0 +1,45 @@
+          19.4 Bounding the maximum degree                                                      523
+
+
+
+
+19.4 Bounding the maximum degree
+
+          To prove that the amortized time of F IB -H EAP -E XTRACT-M IN and F IB -H EAP -
+          D ELETE is O.lg n/, we must show that the upper bound D.n/ on the degree of
+          any node of an n-node
+                          ˘     Fibonacci heap is O.lg n/. In particular, we shall show that
+          D.n/  log n , where  is the golden ratio, deﬁned in equation (3.24) as
+                    p
+           D .1 C 5/=2 D 1:61803 : : : :
+             The key to the analysis is as follows. For each node x within a Fibonacci heap,
+          deﬁne size.x/ to be the number of nodes, including x itself, in the subtree rooted
+          at x. (Note that x need not be in the root list—it can be any node at all.) We shall
+          show that size.x/ is exponential in x:degree. Bear in mind that x:degree is always
+          maintained as an accurate count of the degree of x.
+
+          Lemma 19.1
+          Let x be any node in a Fibonacci heap, and suppose that x:degree D k. Let
+          y1 ; y2 ; : : : ; yk denote the children of x in the order in which they were linked to x,
+          from the earliest to the latest. Then, y1 :degree  0 and yi :degree  i  2 for
+          i D 2; 3; : : : ; k.
+
+          Proof Obviously, y1 :degree  0.
+             For i  2, we note that when yi was linked to x, all of y1 ; y2 ; : : : ; yi 1 were
+          children of x, and so we must have had x:degree  i  1. Because node yi is
+          linked to x (by C ONSOLIDATE) only if x:degree D yi :degree, we must have also
+          had yi :degree  i  1 at that time. Since then, node yi has lost at most one
+          child, since it would have been cut from x (by C ASCADING -C UT) if it had lost
+          two children. We conclude that yi :degree  i  2.
+
+             We ﬁnally come to the part of the analysis that explains the name “Fibonacci
+          heaps.” Recall from Section 3.2 that for k D 0; 1; 2; : : :, the kth Fibonacci number
+
+                 0
+          is deﬁned by the recurrence
+
+                                    if k D 0 ;
+          Fk D     1                if k D 1 ;
+                   Fk1 C Fk2      if k  2 :
+          The following lemma gives another way to express Fk .
+

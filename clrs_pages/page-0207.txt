@@ -1,0 +1,46 @@
+186   Chapter 7 Quicksort
+
+
+      The next three questions ask you to give a careful argument that the procedure
+      H OARE -PARTITION is correct. Assuming that the subarray AŒp : : r contains at
+      least two elements, prove the following:
+
+      b. The indices i and j are such that we never access an element of A outside the
+         subarray AŒp : : r.
+
+      c. When H OARE -PARTITION terminates, it returns a value j such that p  j < r.
+
+      d. Every element of AŒp : : j  is less than or equal to every element of AŒj C1 : : r
+         when H OARE -PARTITION terminates.
+
+      The PARTITION procedure in Section 7.1 separates the pivot value (originally
+      in AŒr) from the two partitions it forms. The H OARE -PARTITION procedure, on
+      the other hand, always places the pivot value (originally in AŒp) into one of the
+      two partitions AŒp : : j  and AŒj C 1 : : r. Since p  j < r, this split is always
+      nontrivial.
+
+      e. Rewrite the Q UICKSORT procedure to use H OARE -PARTITION.
+
+      7-2 Quicksort with equal element values
+      The analysis of the expected running time of randomized quicksort in Section 7.4.2
+      assumes that all element values are distinct. In this problem, we examine what
+      happens when they are not.
+
+      a. Suppose that all element values are equal. What would be randomized quick-
+         sort’s running time in this case?
+
+      b. The PARTITION procedure returns an index q such that each element of
+         AŒp : : q  1 is less than or equal to AŒq and each element of AŒq C 1 : : r
+         is greater than AŒq. Modify the PARTITION procedure to produce a procedure
+         PARTITION 0 .A; p; r/, which permutes the elements of AŒp : : r and returns two
+         indices q and t, where p  q  t  r, such that
+            all elements of AŒq : : t are equal,
+            each element of AŒp : : q  1 is less than AŒq, and
+            each element of AŒt C 1 : : r is greater than AŒq.
+
+         Like PARTITION, your PARTITION 0 procedure should take ‚.r  p/ time.
+
+      c. Modify the R ANDOMIZED -Q UICKSORT procedure to call PARTITION 0 , and
+         name the new procedure R ANDOMIZED -Q UICKSORT 0 . Then modify the
+         Q UICKSORT procedure to produce a procedure Q UICKSORT 0 .p; r/ that calls
+

@@ -1,0 +1,43 @@
+32.4 The Knuth-Morris-Pratt algorithm                                                 1011
+
+
+   If .Ti / D 0, then P0 D " is the only preﬁx of P that is a sufﬁx of Ti . The while
+    loop of lines 6–7 iterates through the values in   Œq 0 , but although Pq = Ti for
+    every q 2   Œq 0 , the loop never ﬁnds a q such that P Œq C 1 D T Œi. The loop
+    terminates when q reaches 0, and of course line 9 does not execute. Therefore,
+    q D 0 at line 10, so that q D .Ti /.
+   If .Ti / D q 0 C 1, then P Œq 0 C 1 D T Œi, and the while loop test in line 6
+    fails the ﬁrst time through. Line 9 executes, incrementing q so that afterward
+    we have q D q 0 C 1 D .Ti /.
+   If 0 < .Ti /  q 0 , then the while loop of lines 6–7 iterates at least once,
+    checking in decreasing order each value q 2   Œq 0  until it stops at some q < q 0 .
+    Thus, Pq is the longest preﬁx of Pq0 for which P ŒqC1 D T Œi, so that when the
+    while loop terminates, q C 1 D .Pq0 T Œi/. Since q 0 D .Ti 1 /, Lemma 32.3
+    implies that .Ti 1 T Œi/ D .Pq0 T Œi/. Thus, we have
+    qC1 D          .Pq0 T Œi/
+        D          .Ti 1 T Œi/
+        D          .Ti /
+    when the while loop terminates. After line 9 increments q, we have q D .Ti /.
+   Line 12 is necessary in KMP-M ATCHER, because otherwise, we might refer-
+ence P Œm C 1 on line 6 after ﬁnding an occurrence of P . (The argument that
+q D .Ti 1 / upon the next execution of line 6 remains valid by the hint given in
+Exercise 32.4-8: ı.m; a/ D ı.Œm; a/ or, equivalently, .P a/ D .PŒm a/ for
+any a 2 †.) The remaining argument for the correctness of the Knuth-Morris-
+Pratt algorithm follows from the correctness of F INITE -AUTOMATON -M ATCHER,
+since we have shown that KMP-M ATCHER simulates the behavior of F INITE -
+AUTOMATON -M ATCHER.
+
+Exercises
+
+32.4-1
+Compute the preﬁx function  for the pattern ababbabbabbababbabb.
+
+32.4-2
+Give an upper bound on the size of   Œq as a function of q. Give an example to
+show that your bound is tight.
+
+32.4-3
+Explain how to determine the occurrences of pattern P in the text T by examining
+the  function for the string P T (the string of length mCn that is the concatenation
+of P and T ).
+

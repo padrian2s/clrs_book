@@ -1,0 +1,52 @@
+                          20.1 Preliminary approaches                                                                                      535
+
+
+                                                                                                            0   1   2   3
+                                              1                                                                             p
+                                                                                                summary 1 1 0 1              u bits
+
+          1                       1                       0              1                                                              p
+                                                                                                                                         u bits
+A 0 0 1 1 1 1 0 1 0 0 0 0 0 0 1 1                                                 A 0 0 1 1 1 1 0 1 0 0 0 0 0 0 1 1
+  0   1       2   3   4       5       6   7       8   9       10 11 12 13 14 15     0   1   2   3   4   5   6   7   8   9   10 11 12 13 14 15
+
+                                          (a)                                                                   (b)
+
+
+                                                              p
+                          Figure 20.2 (a) A tree of degree u superimposed on top of the same bit vector as in Figure 20.1.
+                          Each internal node stores the logical-or of the bits in its subtree. (b) pA view of the same structure,
+                          but with the internal nodes at depth
+                                                            p  1 treated aspan array summaryŒ0  : :  u  1, where summaryŒi is
+                          the logical-or of the subarray AŒi u : : .i C 1/ u  1.
+
+
+                          each of the operations
+                                         p       M INIMUM, M AXIMUM, S UCCESSOR, P REDECESSOR, and
+                          D ELETE in O. u/ time:
+                                 To ﬁnd the minimum (maximum) value, ﬁnd the leftmost (rightmost) entry in
+                                  summary that contains a 1, say summaryŒi, and then do a linear search within
+                                  the ith cluster for the leftmost (rightmost) 1.
+                             To ﬁnd the successor (predecessor) of x, ﬁrst search to the right (left) within
+                                                                                                            p its
+                              cluster. If we ﬁnd a 1, that position gives the result. Otherwise, let i D bx= uc
+                              and search to the right (left) within the summary array from index i. The ﬁrst
+                              position that holds a 1 gives the index of a cluster. Search within that cluster
+                              for the leftmost (rightmost) 1. That position holds the successor (predecessor).
+                                                                   p
+                             To delete the value x, let i D bx= uc. Set AŒx to 0 and then set summaryŒi
+                              to the logical-or of the bits in the ith cluster.
+                                                                                                          p
+                          In each of the above operations, we search through at most   p two clusters of u bits
+                          plus the summary array, and so each operation takes O. u/ time.
+                             At ﬁrst glance, it seems as though we have made negative progress. Superimpos-
+                                   p tree gave us O.lg u/-time operations,
+                          ing a binary                                   p       which are asymptotically faster
+                          than O. u/ time. Using a tree of degree u will turn out to be a key idea of van
+                          Emde Boas trees, however. We continue down this path in the next section.
+
+                          Exercises
+
+                          20.1-1
+                          Modify the data structures in this section to support duplicate keys.
+

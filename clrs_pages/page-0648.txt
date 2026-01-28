@@ -1,0 +1,53 @@
+  23.1 Growing a minimum spanning tree                                                                      627
+
+
+                                                                                                        h
+                                                                                            8
+                                                                                     a              7
+
+                                                                                 4          11          i    1
+
+                                                                                     b              6
+
+                                                                                                2       g
+
+                         8                 7                                         d      8
+                 b               c             d
+            4                                        9                                      7
+                                                                                 9                      c    2
+  S                          2                                S
+        a       11       i             4        14        e                                         4
+                                                                                     e      14
+V–S                  7       6                                V–S
+            8                                        10
+                 h               g              f                                           10          f
+                         1                 2
+                                                                                         S V–S
+                                 (a)                                                        (b)
+
+
+  Figure 23.2 Two ways of viewing a cut .S; V  S/ of the graph from Figure 23.1. (a) Black
+  vertices are in the set S, and white vertices are in V  S. The edges crossing the cut are those
+  connecting white vertices with black vertices. The edge .d; c/ is the unique light edge crossing the
+  cut. A subset A of the edges is shaded; note that the cut .S; V  S/ respects A, since no edge of A
+  crosses the cut. (b) The same graph with the vertices in the set S on the left and the vertices in the
+  set V  S on the right. An edge crosses the cut if it connects a vertex on the left with a vertex on the
+  right.
+
+
+  Proof Let T be a minimum spanning tree that includes A, and assume that T
+  does not contain the light edge .u; /, since if it does, we are done. We shall
+  construct another minimum spanning tree T 0 that includes A [ f.u; /g by using a
+  cut-and-paste technique, thereby showing that .u; / is a safe edge for A.
+     The edge .u; / forms a cycle with the edges on the simple path p from u
+  to  in T , as Figure 23.3 illustrates. Since u and  are on opposite sides of the
+  cut .S; V  S/, at least one edge in T lies on the simple path p and also crosses
+  the cut. Let .x; y/ be any such edge. The edge .x; y/ is not in A, because the cut
+  respects A. Since .x; y/ is on the unique simple path from u to  in T , remov-
+  ing .x; y/ breaks T into two components. Adding .u; / reconnects them to form
+  a new spanning tree T 0 D T  f.x; y/g [ f.u; /g.
+     We next show that T 0 is a minimum spanning tree. Since .u; / is a light edge
+  crossing .S; V S/ and .x; y/ also crosses this cut, w.u; /  w.x; y/. Therefore,
+  w.T 0 / D w.T /  w.x; y/ C w.u; /
+           w.T / :
+

@@ -1,0 +1,46 @@
+168        Chapter 6 Heapsort
+
+
+           c. Give an algorithm to implement E XTRACT-M IN on a nonempty m n Young
+              tableau that runs in O.m C n/ time. Your algorithm should use a recur-
+              sive subroutine that solves an m n problem by recursively solving either
+              an .m  1/ n or an m .n  1/ subproblem. (Hint: Think about M AX -
+              H EAPIFY.) Deﬁne T .p/, where p D m C n, to be the maximum running time
+              of E XTRACT-M IN on any m n Young tableau. Give and solve a recurrence
+              for T .p/ that yields the O.m C n/ time bound.
+
+           d. Show how to insert a new element into a nonfull m            n Young tableau in
+              O.m C n/ time.
+
+           e. Using no other sorting method as a subroutine, show how to use an n n Young
+              tableau to sort n2 numbers in O.n3 / time.
+
+           f. Give an O.m C n/-time algorithm to determine whether a given number is
+              stored in a given m n Young tableau.
+
+
+Chapter notes
+
+           The heapsort algorithm was invented by Williams [357], who also described how
+           to implement a priority queue with a heap. The B UILD -M AX -H EAP procedure
+           was suggested by Floyd [106].
+              We use min-heaps to implement min-priority queues in Chapters 16, 23, and 24.
+           We also give an implementation with improved time bounds for certain operations
+           in Chapter 19 and, assuming that the keys are drawn from a bounded set of non-
+           negative integers, Chapter 20.
+              If the data are b-bit integers, and the computer memory consists of addressable
+           b-bit words, Fredman and Willard [115] showed how     p to implement M INIMUM in
+           O.1/ time and I NSERT     and    E XTRACT-M IN in O. lg n/ time. Thorup [337] has
+                              p
+           improved the O. lg n/ bound to O.lg lg n/ time. This bound uses an amount of
+           space unbounded in n, but it can be implemented in linear space by using random-
+           ized hashing.
+              An important special case of priority queues occurs when the sequence of
+           E XTRACT-M IN operations is monotone, that is, the values returned by succes-
+           sive E XTRACT-M IN operations are monotonically increasing over time. This case
+           arises in several important applications, such as Dijkstra’s single-source shortest-
+           paths algorithm, which we discuss in Chapter 24, and in discrete-event simula-
+           tion. For Dijkstra’s algorithm it is particularly important that the D ECREASE -K EY
+           operation be implemented efﬁciently. For the monotone case, if the data are in-
+           tegers in the range 1; 2; : : : ; C , Ahuja, Mehlhorn, Orlin, and Tarjan [8] describe
+

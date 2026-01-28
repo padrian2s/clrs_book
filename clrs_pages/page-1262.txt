@@ -1,0 +1,43 @@
+Bibliography                                                                                  1241
+
+
+ [184] T. C. Hu and A. C. Tucker. Optimal computer search trees and variable-length alphabetic
+       codes. SIAM Journal on Applied Mathematics, 21(4):514–532, 1971.
+ [185] David A. Huffman. A method for the construction of minimum-redundancy codes. Pro-
+       ceedings of the IRE, 40(9):1098–1101, 1952.
+ [186] Steven Huss-Lederman, Elaine M. Jacobson, Jeremy R. Johnson, Anna Tsao, and Thomas
+       Turnbull. Implementation of Strassen’s algorithm for matrix multiplication. In Proceedings
+       of the 1996 ACM/IEEE Conference on Supercomputing, article 32, 1996.
+ [187] Oscar H. Ibarra and Chul E. Kim. Fast approximation algorithms for the knapsack and sum
+       of subset problems. Journal of the ACM, 22(4):463–468, 1975.
+ [188] E. J. Isaac and R. C. Singleton. Sorting by address calculation. Journal of the ACM,
+       3(3):169–174, 1956.
+ [189] R. A. Jarvis. On the identiﬁcation of the convex hull of a ﬁnite set of points in the plane.
+       Information Processing Letters, 2(1):18–21, 1973.
+ [190] David S. Johnson. Approximation algorithms for combinatorial problems. Journal of Com-
+       puter and System Sciences, 9(3):256–278, 1974.
+ [191] David S. Johnson. The NP-completeness column: An ongoing guide—The tale of the sec-
+       ond prover. Journal of Algorithms, 13(3):502–524, 1992.
+ [192] Donald B. Johnson. Efﬁcient algorithms for shortest paths in sparse networks. Journal of
+       the ACM, 24(1):1–13, 1977.
+ [193] Richard Johnsonbaugh and Marcus Schaefer. Algorithms. Pearson Prentice Hall, 2004.
+ [194] A. Karatsuba and Yu. Ofman. Multiplication of multidigit numbers on automata. Soviet
+       Physics—Doklady, 7(7):595–596, 1963. Translation of an article in Doklady Akademii Nauk
+       SSSR, 145(2), 1962.
+ [195] David R. Karger, Philip N. Klein, and Robert E. Tarjan. A randomized linear-time algorithm
+       to ﬁnd minimum spanning trees. Journal of the ACM, 42(2):321–328, 1995.
+ [196] David R. Karger, Daphne Koller, and Steven J. Phillips. Finding the hidden path: Time
+       bounds for all-pairs shortest paths. SIAM Journal on Computing, 22(6):1199–1217, 1993.
+ [197] Howard Karloff. Linear Programming. Birkhäuser, 1991.
+ [198] N. Karmarkar. A new polynomial-time algorithm for linear programming. Combinatorica,
+       4(4):373–395, 1984.
+ [199] Richard M. Karp. Reducibility among combinatorial problems. In Raymond E. Miller and
+       James W. Thatcher, editors, Complexity of Computer Computations, pages 85–103. Plenum
+       Press, 1972.
+ [200] Richard M. Karp. An introduction to randomized algorithms. Discrete Applied Mathemat-
+       ics, 34(1–3):165–201, 1991.
+ [201] Richard M. Karp and Michael O. Rabin. Efﬁcient randomized pattern-matching algorithms.
+       IBM Journal of Research and Development, 31(2):249–260, 1987.
+ [202] A. V. Karzanov. Determining the maximal ﬂow in a network by the method of preﬂows.
+       Soviet Mathematics Doklady, 15(2):434–437, 1974.
+

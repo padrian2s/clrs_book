@@ -1,0 +1,47 @@
+           29.4 Duality                                                                  879
+
+
+           29.3-6
+           Solve the following linear program using S IMPLEX:
+           maximize       5x1    3x2
+           subject to
+                           x1  x2              1
+                          2x1 C x2              2
+                             x1 ; x2            0 :
+
+           29.3-7
+           Solve the following linear program using S IMPLEX:
+           minimize         x1 C         x2     C      x3
+           subject to
+                           2x1 C 7:5x2          C 3x3        10000
+                          20x1 C         5x2    C 10x3       30000
+                              x1 ; x2 ; x3                       0 :
+
+           29.3-8
+           In the proof of Lemma 29.5, we argued that there are at most mCn
+                                                                          n
+                                                                              ways to choose
+           a set B of basic variables. Give an example of a linear program in which there are
+           strictly fewer than mCn
+                                 n
+                                     ways to choose the set B.
+
+
+
+29.4 Duality
+
+           We have proven that, under certain assumptions, S IMPLEX terminates. We have not
+           yet shown that it actually ﬁnds an optimal solution to a linear program, however.
+           In order to do so, we introduce a powerful concept called linear-programming
+           duality.
+              Duality enables us to prove that a solution is indeed optimal. We saw an exam-
+           ple of duality in Chapter 26 with Theorem 26.6, the max-ﬂow min-cut theorem.
+           Suppose that, given an instance of a maximum-ﬂow problem, we ﬁnd a ﬂow f
+           with value jf j. How do we know whether f is a maximum ﬂow? By the max-ﬂow
+           min-cut theorem, if we can ﬁnd a cut whose value is also jf j, then we have ver-
+           iﬁed that f is indeed a maximum ﬂow. This relationship provides an example of
+           duality: given a maximization problem, we deﬁne a related minimization problem
+           such that the two problems have the same optimal objective values.
+              Given a linear program in which the objective is to maximize, we shall describe
+           how to formulate a dual linear program in which the objective is to minimize and
+

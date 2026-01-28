@@ -1,0 +1,52 @@
+1292   Index
+
+
+       vector, 1218, 1222–1224                        in a weighted matroid, 439
+          convolution of, 901                       while, in pseudocode, 20
+          cross product of, 1016                    white-path theorem, 608
+          orthonormal, 842                          white vertex, 594, 603
+          in the plane, 1015                        widget, 1092
+       Venn diagram, 1160                           wire, 1071
+       veriﬁcation, 1061–1066                       W ITNESS, 969
+          of spanning trees, 642                    witness, to the compositeness of a number, 968
+       veriﬁcation algorithm, 1063                  work law, 780
+       vertex                                       work, of a multithreaded computation, 779
+          articulation point, 621 pr.               work-stealing scheduling algorithm, 812
+          attributes of, 592                        worst-case running time, 27, 49
+          capacity of, 714 ex.
+          in a graph, 1168                          Yen’s improvement to the Bellman-Ford
+          intermediate, 693                              algorithm, 678 pr.
+          isolated, 1169                            y-fast trie, 558 pr.
+          overﬂowing, 736                           Young tableau, 167 pr.
+          of a polygon, 1020 ex.
+          relabeled, 740                            Z (set of integers), 1158
+          selector, 1093                            Zn (equivalence classes modulo n), 928
+       vertex cover, 1089, 1108, 1124–1127, 1139    Zn (elements of multiplicative group
+       VERTEX-COVER, 1090                                modulo n), 941
+       vertex-cover problem                         ZCn (nonzero elements of Zn ), 967
+          approximation algorithm for, 1108–1111,   zero matrix, 1218
+             1139                                   zero of a polynomial modulo a prime, 950 ex.
+          NP-completeness of, 1089–1091, 1105       0-1 integer programming, 1100 ex., 1125
+       vertex set, 1168                             0-1 knapsack problem, 425, 427 ex., 1137 pr.,
+       violation, of an equality constraint, 865         1139
+       virtual memory, 24                           0-1 sorting lemma, 208 pr.
+       Viterbi algorithm, 408 pr.                   zonk, 1195 ex.
+       VORP, 411 pr.
+
+       walk of a tree, 287, 293 ex., 342, 1114
+       weak duality, 880–881, 886 ex., 895 pr.
+       weight
+         of a cut, 1127 ex.
+         of an edge, 591
+         mean, 680 pr.
+         of a path, 643
+       weight-balanced tree, 338, 473 pr.
+       weighted bipartite matching, 530
+       weighted matroid, 439–442
+       weighted median, 225 pr.
+       weighted set-covering problem, 1135 pr.
+       weighted-union heuristic, 566
+       weighted vertex cover, 1124–1127, 1139
+       weight function
+         for a graph, 591
+

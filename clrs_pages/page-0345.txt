@@ -1,0 +1,44 @@
+324   Chapter 13 Red-Black Trees
+
+
+      RB-D ELETE .T; ´/
+       1 y D´
+       2 y-original-color D y:color
+       3 if ´:left == T:nil
+       4      x D ´:right
+       5      RB-T RANSPLANT .T; ´; ´:right/
+       6 elseif ´:right == T:nil
+       7      x D ´:left
+       8      RB-T RANSPLANT .T; ´; ´:left/
+       9 else y D T REE -M INIMUM .´:right/
+      10      y-original-color D y:color
+      11      x D y:right
+      12      if y:p == ´
+      13           x:p D y
+      14      else RB-T RANSPLANT .T; y; y:right/
+      15           y:right D ´:right
+      16           y:right:p D y
+      17      RB-T RANSPLANT .T; ´; y/
+      18      y:left D ´:left
+      19      y:left:p D y
+      20      y:color D ´:color
+      21 if y-original-color == BLACK
+      22      RB-D ELETE -F IXUP .T; x/
+
+         Although RB-D ELETE contains almost twice as many lines of pseudocode as
+      T REE -D ELETE, the two procedures have the same basic structure. You can ﬁnd
+      each line of T REE -D ELETE within RB-D ELETE (with the changes of replacing
+      NIL by T:nil and replacing calls to T RANSPLANT by calls to RB-T RANSPLANT),
+      executed under the same conditions.
+         Here are the other differences between the two procedures:
+         We maintain node y as the node either removed from the tree or moved within
+          the tree. Line 1 sets y to point to node ´ when ´ has fewer than two children
+          and is therefore removed. When ´ has two children, line 9 sets y to point to ´’s
+          successor, just as in T REE -D ELETE, and y will move into ´’s position in the
+          tree.
+         Because node y’s color might change, the variable y-original-color stores y’s
+          color before any changes occur. Lines 2 and 10 set this variable immediately
+          after assignments to y. When ´ has two children, then y ¤ ´ and node y
+          moves into node ´’s original position in the red-black tree; line 20 gives y the
+          same color as ´. We need to save y’s original color in order to test it at the
+

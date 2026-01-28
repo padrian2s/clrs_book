@@ -1,0 +1,47 @@
+          10.2 Linked lists                                                                                        237
+
+
+                                        prev    key     next
+
+(a)   L:head                  9                  16                   4                   1
+
+
+(b)   L:head                 25                   9                  16                   4                    1
+
+
+(c)   L:head                 25                   9                  16                   1
+
+
+
+          Figure 10.3 (a) A doubly linked list L representing the dynamic set f1; 4; 9; 16g. Each element in
+          the list is an object with attributes for the key and pointers (shown by arrows) to the next and previous
+          objects. The next attribute of the tail and the pre attribute of the head are NIL , indicated by a diagonal
+          slash. The attribute L: head points to the head. (b) Following the execution of L IST-I NSERT.L; x/,
+          where x: key D 25, the linked list has a new object with key 25 as the new head. This new object
+          points to the old head with key 9. (c) The result of the subsequent call L IST-D ELETE.L; x/, where x
+          points to the object with key 4.
+
+
+          elements. In the remainder of this section, we assume that the lists with which we
+          are working are unsorted and doubly linked.
+
+          Searching a linked list
+          The procedure L IST-S EARCH .L; k/ ﬁnds the ﬁrst element with key k in list L
+          by a simple linear search, returning a pointer to this element. If no object with
+          key k appears in the list, then the procedure returns NIL. For the linked list in
+          Figure 10.3(a), the call L IST-S EARCH .L; 4/ returns a pointer to the third element,
+          and the call L IST-S EARCH .L; 7/ returns NIL.
+
+          L IST-S EARCH .L; k/
+          1 x D L:head
+          2 while x ¤ NIL and x:key ¤ k
+          3        x D x:next
+          4 return x
+
+          To search a list of n objects, the L IST-S EARCH procedure takes ‚.n/ time in the
+          worst case, since it may have to search the entire list.
+
+          Inserting into a linked list
+          Given an element x whose key attribute has already been set, the L IST-I NSERT
+          procedure “splices” x onto the front of the linked list, as shown in Figure 10.3(b).
+

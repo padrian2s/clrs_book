@@ -1,0 +1,39 @@
+17.3 The potential method                                                        461
+
+
+Suppose that the ith operation on the stack is M ULTIPOP .S; k/, which causes
+k 0 D min.k; s/ objects to be popped off the stack. The actual cost of the opera-
+tion is k 0 , and the potential difference is
+ˆ.Di /  ˆ.Di 1 / D k 0 :
+Thus, the amortized cost of the M ULTIPOP operation is
+cyi   D ci C ˆ.Di /  ˆ.Di 1 /
+      D k0  k0
+      D 0:
+Similarly, the amortized cost of an ordinary P OP operation is 0.
+   The amortized cost of each of the three operations is O.1/, and thus the total
+amortized cost of a sequence of n operations is O.n/. Since we have already argued
+that ˆ.Di /  ˆ.D0 /, the total amortized cost of n operations is an upper bound
+on the total actual cost. The worst-case cost of n operations is therefore O.n/.
+
+Incrementing a binary counter
+As another example of the potential method, we again look at incrementing a binary
+counter. This time, we deﬁne the potential of the counter after the ith I NCREMENT
+operation to be bi , the number of 1s in the counter after the ith operation.
+   Let us compute the amortized cost of an I NCREMENT operation. Suppose that
+the ith I NCREMENT operation resets ti bits. The actual cost of the operation is
+therefore at most ti C 1, since in addition to resetting ti bits, it sets at most one
+bit to 1. If bi D 0, then the ith operation resets all k bits, and so bi 1 D ti D k.
+If bi > 0, then bi D bi 1  ti C 1. In either case, bi  bi 1  ti C 1, and the
+potential difference is
+ˆ.Di /  ˆ.Di 1 /  .bi 1  ti C 1/  bi 1
+                   D 1  ti :
+The amortized cost is therefore
+cyi   D ci C ˆ.Di /  ˆ.Di 1 /
+       .ti C 1/ C .1  ti /
+      D 2:
+If the counter starts at zero, then ˆ.D0 / D 0. Since ˆ.Di /  0 for all i, the total
+amortized cost of a sequence of n I NCREMENT operations is an upper bound on the
+total actual cost, and so the worst-case cost of n I NCREMENT operations is O.n/.
+   The potential method gives us an easy way to analyze the counter even when
+it does not start at zero. The counter starts with b0 1s, and after n I NCREMENT
+

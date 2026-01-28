@@ -1,0 +1,44 @@
+16.1 An activity-selection problem                                                   419
+
+
+the size n of the original problem. It returns a maximum-size set of mutually com-
+patible activities in Sk . We assume that the n input activities are already ordered
+by monotonically increasing ﬁnish time, according to equation (16.1). If not, we
+can sort them into this order in O.n lg n/ time, breaking ties arbitrarily. In order
+to start, we add the ﬁctitious activity a0 with f0 D 0, so that subproblem S0 is
+the entire set of activities S. The initial call, which solves the entire problem, is
+R ECURSIVE -ACTIVITY-S ELECTOR .s; f; 0; n/.
+
+R ECURSIVE -ACTIVITY-S ELECTOR .s; f; k; n/
+1 m D kC1
+2 while m  n and sŒm < f Œk      // ﬁnd the ﬁrst activity in Sk to ﬁnish
+3      m D mC1
+4 if m  n
+5      return fam g [ R ECURSIVE -ACTIVITY-S ELECTOR .s; f; m; n/
+6 else return ;
+
+   Figure 16.1 shows the operation of the algorithm. In a given recursive call
+R ECURSIVE -ACTIVITY-S ELECTOR .s; f; k; n/, the while loop of lines 2–3 looks
+for the ﬁrst activity in Sk to ﬁnish. The loop examines akC1 ; akC2 ; : : : ; an , un-
+til it ﬁnds the ﬁrst activity am that is compatible with ak ; such an activity has
+sm  fk . If the loop terminates because it ﬁnds such an activity, line 5 returns
+the union of fam g and the maximum-size subset of Sm returned by the recursive
+call R ECURSIVE -ACTIVITY-S ELECTOR .s; f; m; n/. Alternatively, the loop may
+terminate because m > n, in which case we have examined all activities in Sk
+without ﬁnding one that is compatible with ak . In this case, Sk D ;, and so the
+procedure returns ; in line 6.
+   Assuming that the activities have already been sorted by ﬁnish times, the running
+time of the call R ECURSIVE -ACTIVITY-S ELECTOR .s; f; 0; n/ is ‚.n/, which we
+can see as follows. Over all recursive calls, each activity is examined exactly once
+in the while loop test of line 2. In particular, activity ai is examined in the last call
+made in which k < i.
+
+An iterative greedy algorithm
+We easily can convert our recursive procedure to an iterative one. The procedure
+R ECURSIVE -ACTIVITY-S ELECTOR is almost “tail recursive” (see Problem 7-4):
+it ends with a recursive call to itself followed by a union operation. It is usually a
+straightforward task to transform a tail-recursive procedure to an iterative form; in
+fact, some compilers for certain programming languages perform this task automat-
+ically. As written, R ECURSIVE -ACTIVITY-S ELECTOR works for subproblems Sk ,
+i.e., subproblems that consist of the last activities to ﬁnish.
+

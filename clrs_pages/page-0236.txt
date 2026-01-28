@@ -1,0 +1,44 @@
+            9.2 Selection in expected linear time                                          215
+
+
+            we process elements in pairs. We compare pairs of elements from the input ﬁrst
+            with each other, and then we compare the smaller with the current minimum and
+            the larger to the current maximum, at a cost of 3 comparisons for every 2 elements.
+               How we set up initial values for the current minimum and maximum depends
+            on whether n is odd or even. If n is odd, we set both the minimum and maximum
+            to the value of the ﬁrst element, and then we process the rest of the elements in
+            pairs. If n is even, we perform 1 comparison on the ﬁrst 2 elements to determine
+            the initial values of the minimum and maximum, and then process the rest of the
+            elements in pairs as in the case for odd n.
+               Let us analyze the total number of comparisons. If n is odd, then we perform
+            3 bn=2c comparisons. If n is even, we perform 1 initial comparison followed by
+            3.n  2/=2 comparisons, for a total of 3n=2  2. Thus, in either case, the total
+            number of comparisons is at most 3 bn=2c.
+
+            Exercises
+
+            9.1-1
+            Show that the second smallest of n elements can be found with n C dlg ne  2
+            comparisons in the worst case. (Hint: Also ﬁnd the smallest element.)
+
+            9.1-2 ?
+            Prove the lower bound of d3n=2e  2 comparisons in the worst case to ﬁnd both
+            the maximum and minimum of n numbers. (Hint: Consider how many numbers
+            are potentially either the maximum or minimum, and investigate how a comparison
+            affects these counts.)
+
+
+
+9.2 Selection in expected linear time
+
+            The general selection problem appears more difﬁcult than the simple problem of
+            ﬁnding a minimum. Yet, surprisingly, the asymptotic running time for both prob-
+            lems is the same: ‚.n/. In this section, we present a divide-and-conquer algorithm
+            for the selection problem. The algorithm R ANDOMIZED -S ELECT is modeled after
+            the quicksort algorithm of Chapter 7. As in quicksort, we partition the input array
+            recursively. But unlike quicksort, which recursively processes both sides of the
+            partition, R ANDOMIZED -S ELECT works on only one side of the partition. This
+            difference shows up in the analysis: whereas quicksort has an expected running
+            time of ‚.n lg n/, the expected running time of R ANDOMIZED -S ELECT is ‚.n/,
+            assuming that the elements are distinct.
+

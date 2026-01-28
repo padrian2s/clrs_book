@@ -1,0 +1,43 @@
+732        Chapter 26 Maximum Flow
+
+
+
+
+26.3 Maximum bipartite matching
+
+           Some combinatorial problems can easily be cast as maximum-ﬂow problems. The
+           multiple-source, multiple-sink maximum-ﬂow problem from Section 26.1 gave us
+           one example. Some other combinatorial problems seem on the surface to have little
+           to do with ﬂow networks, but can in fact be reduced to maximum-ﬂow problems.
+           This section presents one such problem: ﬁnding a maximum matching in a bipartite
+           graph. In order to solve this problem, we shall take advantage of an integrality
+           property provided by the Ford-Fulkerson method. We shall also see how to use
+           the Ford-Fulkerson method to solve the maximum-bipartite-matching problem on
+           a graph G D .V; E/ in O.VE/ time.
+
+           The maximum-bipartite-matching problem
+           Given an undirected graph G D .V; E/, a matching is a subset of edges M  E
+           such that for all vertices  2 V , at most one edge of M is incident on . We
+           say that a vertex  2 V is matched by the matching M if some edge in M is
+           incident on ; otherwise,  is unmatched. A maximum matching is a matching
+           of maximum cardinality, that is, a matching M such that for any matching M 0 ,
+           we have jM j  jM 0 j. In this section, we shall restrict our attention to ﬁnding
+           maximum matchings in bipartite graphs: graphs in which the vertex set can be
+           partitioned into V D L [ R, where L and R are disjoint and all edges in E
+           go between L and R. We further assume that every vertex in V has at least one
+           incident edge. Figure 26.8 illustrates the notion of a matching in a bipartite graph.
+              The problem of ﬁnding a maximum matching in a bipartite graph has many
+           practical applications. As an example, we might consider matching a set L of ma-
+           chines with a set R of tasks to be performed simultaneously. We take the presence
+           of edge .u; / in E to mean that a particular machine u 2 L is capable of per-
+           forming a particular task  2 R. A maximum matching provides work for as many
+           machines as possible.
+
+           Finding a maximum bipartite matching
+           We can use the Ford-Fulkerson method to ﬁnd a maximum matching in an undi-
+           rected bipartite graph G D .V; E/ in time polynomial in jV j and jEj. The trick is
+           to construct a ﬂow network in which ﬂows correspond to matchings, as shown in
+           Figure 26.8(c). We deﬁne the corresponding ﬂow network G 0 D .V 0 ; E 0 / for the
+           bipartite graph G as follows. We let the source s and sink t be new vertices not
+           in V , and we let V 0 D V [ fs; tg. If the vertex partition of G is V D L [ R, the
+

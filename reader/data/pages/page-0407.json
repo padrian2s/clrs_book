@@ -1,0 +1,5 @@
+{
+  "page": 407,
+  "title": "Dynamic Programming",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 15</div>\n    <h1>Dynamic Programming</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>IV: Advanced Techniques</h4>\n    <h3>Chapter 15: Dynamic Programming</h3>\n    <p><em>Solving problems with overlapping subproblems</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>Optimal substructure: optimal solution contains optimal subsolutions</li>\n<li>Overlapping subproblems: same subproblems solved repeatedly</li>\n<li>Memoization (top-down) or tabulation (bottom-up)</li>\n<li>Think: What&#x27;s the last decision? What subproblems remain?</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>Shortest paths, sequence alignment, resource allocation</p>\n</div>\n</div>"
+}

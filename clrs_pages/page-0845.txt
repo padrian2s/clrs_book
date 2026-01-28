@@ -1,0 +1,54 @@
+824   Chapter 28 Matrix Operations
+
+                        
+                  1 0
+      PA D                 QA
+                  0 P0
+                                                           
+                  1 0          1     0      ak1        wT
+            D
+                  0 P0      =ak1 In1       0 A0  w T =ak1
+                                                   
+                       1     0     ak1       wT
+            D
+                  P 0 =ak1 P 0     0 A0  w T =ak1
+                                                           
+                       1      0      ak1         wT
+            D
+                  P 0 =ak1 In1      0 P 0 .A0  w T =ak1 /
+                                            
+                       1      0      ak1 w T
+            D
+                  P 0 =ak1 In1      0 L0 U 0
+                                        
+                       1    0      ak1 w T
+            D
+                  P 0 =ak1 L0      0 U0
+            D   LU ;
+      yielding the LUP decomposition. Because L0 is unit lower-triangular, so is L, and
+      because U 0 is upper-triangular, so is U .
+         Notice that in this derivation, unlike the one for LU decomposition, we must
+      multiply both the column vector =ak1 and the Schur complement A0  w T =ak1
+      by the permutation matrix P 0 . Here is the pseudocode for LUP decomposition:
+
+      LUP-D ECOMPOSITION .A/
+       1 n D A:rows
+       2 let Œ1 : : n be a new array
+       3 for i D 1 to n
+       4      Œi D i
+       5 for k D 1 to n
+       6      p D0
+       7      for i D k to n
+       8            if jai k j > p
+       9                  p D jai k j
+      10                  k0 D i
+      11      if p == 0
+      12            error “singular matrix”
+      13      exchange Œk with Œk 0 
+      14      for i D 1 to n
+      15            exchange aki with ak0 i
+      16      for i D k C 1 to n
+      17            ai k D ai k =akk
+      18            for j D k C 1 to n
+      19                  aij D aij  ai k akj
+

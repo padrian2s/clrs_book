@@ -1,0 +1,43 @@
+30.3 Efﬁcient FFT implementations                                                 917
+
+
+in the leaves of the tree of Figure 30.4. (We shall show later how to determine this
+order, which is known as a bit-reversal permutation.) Because we have to combine
+DFTs on each level of the tree, we introduce a variable s to count the levels, ranging
+from 1 (at the bottom, when we are combining pairs to form 2-element DFTs)
+to lg n (at the top, when we are combining two .n=2/-element DFTs to produce the
+ﬁnal result). The algorithm therefore has the following structure:
+1 for s D 1 to lg n
+2      for k D 0 to n  1 by 2s
+3           combine the two 2s1 -element DFTs in
+               AŒk : : k C 2s1  1 and AŒk C 2s1 : : k C 2s  1
+               into one 2s -element DFT in AŒk : : k C 2s  1
+We can express the body of the loop (line 3) as more precise pseudocode. We
+copy the for loop from the R ECURSIVE -FFT procedure, identifying y Œ0 with
+AŒk : : k C 2s1  1 and y Œ1 with AŒk C 2s1 : : k C 2s  1. The twiddle fac-
+tor used in each butterﬂy operation depends on the value of s; it is a power of !m ,
+where m D 2s . (We introduce the variable m solely for the sake of readability.)
+We introduce another temporary variable u that allows us to perform the butterﬂy
+operation in place. When we replace line 3 of the overall structure by the loop
+body, we get the following pseudocode, which forms the basis of the parallel im-
+plementation we shall present later. The code ﬁrst calls the auxiliary procedure
+B IT-R EVERSE -C OPY .a; A/ to copy vector a into array A in the initial order in
+which we need the values.
+I TERATIVE -FFT.a/
+  1 B IT-R EVERSE -C OPY .a; A/
+  2 n D a:length               // n is a power of 2
+  3 for s D 1 to lg n
+  4      m D 2s
+  5      !m D e 2 i=m
+  6      for k D 0 to n  1 by m
+  7           ! D1
+  8           for j D 0 to m=2  1
+  9                t D ! AŒk C j C m=2
+10                 u D AŒk C j 
+11                 AŒk C j  D u C t
+12                 AŒk C j C m=2 D u  t
+13                 ! D ! !m
+14 return A
+  How does B IT-R EVERSE -C OPY get the elements of the input vector a into the
+desired order in the array A? The order in which the leaves appear in Figure 30.4
+

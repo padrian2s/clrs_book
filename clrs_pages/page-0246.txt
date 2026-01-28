@@ -1,0 +1,51 @@
+Problems for Chapter 9                                                                  225
+
+
+9-2 Weighted median
+For nPdistinct elements x1 ; x2 ; : : : ; xn with positive weights w1 ; w2 ; : : : ; wn such
+       n
+that i D1 wi D 1, the weighted (lower) median is the element xk satisfying
+ X          1
+      wi <
+x <x
+            2
+ i   k
+
+and
+ X              1
+         wi      :
+xi >xk
+                2
+For example, if the elements are 0:1; 0:35; 0:05; 0:1; 0:15; 0:05; 0:2 and each ele-
+ment equals its weight (that is, wi D xi for i D 1; 2; : : : ; 7), then the median is 0:1,
+but the weighted median is 0:2.
+a. Argue that the median of x1 ; x2 ; : : : ; xn is the weighted median of the xi with
+   weights wi D 1=n for i D 1; 2; : : : ; n.
+
+b. Show how to compute the weighted median of n elements in O.n lg n/ worst-
+   case time using sorting.
+
+c. Show how to compute the weighted median in ‚.n/ worst-case time using a
+   linear-time median algorithm such as S ELECT from Section 9.3.
+The post-ofﬁce location problem is deﬁned as follows. We are given n points
+p1 ; p2 ; : : : ; pn with associated weights w1 ; w2 ; : : : ; wn . We wish
+                                                                          Pto ﬁnd a point p
+                                                                            n
+(not necessarily one of the input points) that minimizes the sum i D1 wi d.p; pi /,
+where d.a; b/ is the distance between points a and b.
+d. Argue that the weighted median is a best solution for the 1-dimensional post-
+   ofﬁce location problem, in which points are simply real numbers and the dis-
+   tance between points a and b is d.a; b/ D ja  bj.
+
+e. Find the best solution for the 2-dimensional post-ofﬁce location problem, in
+   which the points are .x; y/ coordinate pairs and the distance between points
+   a D .x1 ; y1 / and b D .x2 ; y2 / is the Manhattan distance given by d.a; b/ D
+   jx1  x2 j C jy1  y2 j.
+
+9-3 Small order statistics
+We showed that the worst-case number T .n/ of comparisons used by S ELECT
+to select the ith order statistic from n numbers satisﬁes T .n/ D ‚.n/, but the
+constant hidden by the ‚-notation is rather large. When i is small relative to n, we
+can implement a different procedure that uses S ELECT as a subroutine but makes
+fewer comparisons in the worst case.
+

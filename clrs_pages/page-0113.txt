@@ -1,0 +1,43 @@
+92   Chapter 4 Divide-and-Conquer
+
+
+     The longest simple path from the root to a leaf is n ! .2=3/n ! .2=3/2 n !
+        ! 1. Since .2=3/k n D 1 when k D log3=2 n, the height of the tree is log3=2 n.
+          Intuitively, we expect the solution to the recurrence to be at most the number
+     of levels times the cost of each level, or O.cn log3=2 n/ D O.n lg n/. Figure 4.6
+     shows only the top levels of the recursion tree, however, and not every level in the
+     tree contributes a cost of cn. Consider the cost of the leaves. If this recursion tree
+     were a complete binary tree of height log3=2 n, there would be 2log3=2 n D nlog3=2 2
+     leaves. Since the cost of each leaf is a constant, the total cost of all leaves would
+     then be ‚.nlog3=2 2 / which, since log3=2 2 is a constant strictly greater than 1,
+     is !.n lg n/. This recursion tree is not a complete binary tree, however, and so
+     it has fewer than nlog3=2 2 leaves. Moreover, as we go down from the root, more
+     and more internal nodes are absent. Consequently, levels toward the bottom of the
+     recursion tree contribute less than cn to the total cost. We could work out an accu-
+     rate accounting of all costs, but remember that we are just trying to come up with a
+     guess to use in the substitution method. Let us tolerate the sloppiness and attempt
+     to show that a guess of O.n lg n/ for the upper bound is correct.
+          Indeed, we can use the substitution method to verify that O.n lg n/ is an upper
+     bound for the solution to the recurrence. We show that T .n/  d n lg n, where d is
+     a suitable positive constant. We have
+     T .n/  T .n=3/ C T .2n=3/ C cn
+            d.n=3/ lg.n=3/ C d.2n=3/ lg.2n=3/ C cn
+           D .d.n=3/ lg n  d.n=3/ lg 3/
+                   C .d.2n=3/ lg n  d.2n=3/ lg.3=2// C cn
+           D d n lg n  d..n=3/ lg 3 C .2n=3/ lg.3=2// C cn
+           D d n lg n  d..n=3/ lg 3 C .2n=3/ lg 3  .2n=3/ lg 2/ C cn
+           D d n lg n  d n.lg 3  2=3/ C cn
+            d n lg n ;
+     as long as d  c=.lg 3  .2=3//. Thus, we did not need to perform a more accurate
+     accounting of costs in the recursion tree.
+
+     Exercises
+
+     4.4-1
+     Use a recursion tree to determine a good asymptotic upper bound on the recurrence
+     T .n/ D 3T .bn=2c/ C n. Use the substitution method to verify your answer.
+
+     4.4-2
+     Use a recursion tree to determine a good asymptotic upper bound on the recurrence
+     T .n/ D T .n=2/ C n2 . Use the substitution method to verify your answer.
+

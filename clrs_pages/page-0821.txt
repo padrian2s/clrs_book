@@ -1,0 +1,45 @@
+800   Chapter 27 Multithreaded Algorithms
+
+
+      The call B INARY-S EARCH .x; T; p; r/ takes ‚.lg n/ serial time in the worst case,
+      where n D r  p C 1 is the size of the subarray on which it runs. (See Exer-
+      cise 2.3-5.) Since B INARY-S EARCH is a serial procedure, its worst-case work and
+      span are both ‚.lg n/.
+         We are now prepared to write pseudocode for the multithreaded merging pro-
+      cedure itself. Like the M ERGE procedure on page 31, the P-M ERGE procedure
+      assumes that the two subarrays to be merged lie within the same array. Un-
+      like M ERGE, however, P-M ERGE does not assume that the two subarrays to
+      be merged are adjacent within the array. (That is, P-M ERGE does not require
+      that p2 D r1 C 1.) Another difference between M ERGE and P-M ERGE is that
+      P-M ERGE takes as an argument an output subarray A into which the merged val-
+      ues should be stored. The call P-M ERGE .T; p1 ; r1 ; p2 ; r2 ; A; p3 / merges the sorted
+      subarrays T Œp1 : : r1  and T Œp2 : : r2  into the subarray AŒp3 : : r3 , where r3 D
+      p3 C .r1  p1 C 1/ C .r2  p2 C 1/  1 D p3 C .r1  p1 / C .r2  p2 / C 1 and
+      is not provided as an input.
+
+      P-M ERGE .T; p1 ; r1 ; p2 ; r2 ; A; p3 /
+       1 n1 D r 1  p 1 C 1
+       2 n2 D r 2  p 2 C 1
+       3 if n1 < n2                        // ensure that n1  n2
+       4      exchange p1 with p2
+       5      exchange r1 with r2
+       6      exchange n1 with n2
+       7 if n1 == 0                        // both empty?
+       8      return
+       9 else q1 D b.p1 C r1 /=2c
+      10      q2 D B INARY-S EARCH .T Œq1 ; T; p2 ; r2 /
+      11      q3 D p3 C .q1  p1 / C .q2  p2 /
+      12      AŒq3  D T Œq1 
+      13      spawn P-M ERGE .T; p1 ; q1  1; p2 ; q2  1; A; p3 /
+      14      P-M ERGE .T; q1 C 1; r1 ; q2 ; r2 ; A; q3 C 1/
+      15      sync
+
+         The P-M ERGE procedure works as follows. Lines 1–2 compute the lengths n1
+      and n2 of the subarrays T Œp1 : : r1  and T Œp2 : : r2 , respectively. Lines 3–6 en-
+      force the assumption that n1  n2 . Line 7 tests for the base case, where the
+      subarray T Œp1 : : r1  is empty (and hence so is T Œp2 : : r2 ), in which case we sim-
+      ply return. Lines 9–15 implement the divide-and-conquer strategy. Line 9 com-
+      putes the midpoint of T Œp1 : : r1 , and line 10 ﬁnds the point q2 in T Œp2 : : r2  such
+      that all elements in T Œp2 : : q2  1 are less than T Œq1  (which corresponds to x)
+      and all the elements in T Œq2 : : p2  are at least as large as T Œq1 . Line 11 com-
+

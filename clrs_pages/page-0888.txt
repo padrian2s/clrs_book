@@ -1,0 +1,50 @@
+29.3 The simplex algorithm                                                          867
+
+
+To rewrite the other equations with x6 on the right-hand side, we substitute for x1
+using equation (29.62). Doing so for equation (29.59), we obtain
+x4 D 30  x1  x2  3x3
+                    x2 x3 x6 
+    D 30  9                        x2  3x3
+                      4    2      4
+               3x2 5x3        x6
+    D 21                 C      :                                      (29.63)
+                 4      2     4
+Similarly, we combine equation (29.62) with constraint (29.60) and with objective
+function (29.58) to rewrite our linear program in the following form:
+                       x2         x3         3x6
+ ´ D 27        C            C                                                   (29.64)
+                        4          2          4
+                       x2         x3          x6
+x1 D 9                                                                        (29.65)
+                        4          2           4
+                      3x2        5x3          x6
+x4 D 21                               C                                        (29.66)
+                       4          2            4
+                      3x2                     x6
+x5 D 6                       4x3 C              :                              (29.67)
+                       2                       2
+We call this operation a pivot. As demonstrated above, a pivot chooses a nonbasic
+variable xe , called the entering variable, and a basic variable xl , called the leaving
+variable, and exchanges their roles.
+   The linear program described in equations (29.64)–(29.67) is equivalent to the
+linear program described in equations (29.58)–(29.61). We perform two operations
+in the simplex algorithm: rewrite equations so that variables move between the left-
+hand side and the right-hand side, and substitute one equation into another. The ﬁrst
+operation trivially creates an equivalent problem, and the second, by elementary
+linear algebra, also creates an equivalent problem. (See Exercise 29.3-3.)
+   To demonstrate this equivalence, observe that our original basic solution .0; 0;
+0; 30; 24; 36/ satisﬁes the new equations (29.65)–(29.67) and has objective value
+27 C .1=4/  0 C .1=2/  0  .3=4/  36 D 0. The basic solution associated with the
+new linear program sets the nonbasic values to 0 and is .9; 0; 0; 21; 6; 0/, with ob-
+jective value ´ D 27. Simple arithmetic veriﬁes that this solution also satisﬁes
+equations (29.59)–(29.61) and, when plugged into objective function (29.58), has
+objective value .3  9/ C .1  0/ C .2  0/ D 27.
+   Continuing the example, we wish to ﬁnd a new variable whose value we wish to
+increase. We do not want to increase x6 , since as its value increases, the objective
+value decreases. We can attempt to increase either x2 or x3 ; let us choose x3 . How
+far can we increase x3 without violating any of the constraints? Constraint (29.65)
+limits it to 18, constraint (29.66) limits it to 42=5, and constraint (29.67) limits
+it to 3=2. The third constraint is again the tightest one, and therefore we rewrite
+the third constraint so that x3 is on the left-hand side and x5 is on the right-hand
+

@@ -1,0 +1,56 @@
+498   Chapter 18 B-Trees
+
+
+
+
+      (a) initial tree                 G M P X
+
+
+        A C D E              J K         N O         R S T U V                Y Z
+
+
+
+      (b) B inserted                     G M P X
+
+
+        A B C D E                J K         N O          R S T U V               Y Z
+
+
+
+      (c) Q inserted                       G M P T X
+
+
+        A B C D E                J K         N O         Q R S            U V          Y Z
+
+
+
+      (d) L inserted                                      P
+
+
+                            G M                                                 T X
+
+
+        A B C D E                J K L           N O              Q R S           U V          Y Z
+
+
+
+      (e) F inserted                                      P
+
+
+                            C G M                                                   T X
+
+
+        A B         D E F            J K L           N O              Q R S           U V          Y Z
+
+
+
+      Figure 18.7 Inserting keys into a B-tree. The minimum degree t for this B-tree is 3, so a node can
+      hold at most 5 keys. Nodes that are modiﬁed by the insertion process are lightly shaded. (a) The
+      initial tree for this example. (b) The result of inserting B into the initial tree; this is a simple insertion
+      into a leaf node. (c) The result of inserting Q into the previous tree. The node RST U V splits into
+      two nodes containing RS and U V , the key T moves up to the root, and Q is inserted in the leftmost
+      of the two halves (the RS node). (d) The result of inserting L into the previous tree. The root
+      splits right away, since it is full, and the B-tree grows in height by one. Then L is inserted into the
+      leaf containing JK. (e) The result of inserting F into the previous tree. The node ABCDE splits
+      before F is inserted into the rightmost of the two halves (the DE node).
+

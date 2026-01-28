@@ -1,0 +1,42 @@
+932   Chapter 31 Number-Theoretic Algorithms
+
+
+      Theorem 31.8 (Unique factorization)
+      There is exactly one way to write any composite integer a as a product of the form
+      a D p1e1 p2e2    prer ;
+      where the pi are prime, p1 < p2 <    < pr , and the ei are positive integers.
+
+      Proof     We leave the proof as Exercise 31.1-11.
+
+         As an example, the number 6000 is uniquely factored into primes as 24  3  53 .
+
+      Exercises
+
+      31.1-1
+      Prove that if a > b > 0 and c D a C b, then c mod a D b.
+
+      31.1-2
+      Prove that there are inﬁnitely many primes. (Hint: Show that none of the primes
+      p1 ; p2 ; : : : ; pk divide .p1 p2    pk / C 1.)
+
+      31.1-3
+      Prove that if a j b and b j c, then a j c.
+
+      31.1-4
+      Prove that if p is prime and 0 < k < p, then gcd.k; p/ D 1.
+
+      31.1-5
+      Prove Corollary 31.5.
+
+      31.1-6
+      Prove that if p is prime and 0 < k < p, then p j pk . Conclude that for all integers
+      a and b and all primes p,
+      .a C b/p  ap C b p .mod p/ :
+
+      31.1-7
+      Prove that if a and b are any positive integers such that a j b, then
+      .x mod b/ mod a D x mod a
+      for any x. Prove, under the same assumptions, that
+      x  y .mod b/ implies x  y .mod a/
+      for any integers x and y.
+

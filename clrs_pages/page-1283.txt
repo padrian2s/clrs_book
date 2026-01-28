@@ -1,0 +1,52 @@
+1262   Index
+
+
+          for multithreaded matrix multiplication,         compared with greedy algorithms, 381,
+             792–797                                          390 ex., 418, 423–427
+          for multithreaded merge sort, 797–805            for edit distance, 406 pr.
+          for quicksort, 170–190                           elements of, 378–390
+          relation to dynamic programming, 359             for Floyd-Warshall algorithm, 693–697
+          for selection, 215–224                           for inventory planning, 411 pr.
+          solving recurrences for, 83–106, 112–113         for longest common subsequence, 390–397
+          for Strassen’s algorithm, 79–83                  for longest palindrome subsequence, 405 pr.
+       divide instruction, 23                              for longest simple path in a weighted
+       divides relation (j), 927                              directed acyclic graph, 404 pr.
+       divide step, in divide-and-conquer, 30, 65          for matrix-chain multiplication, 370–378
+       division method, 263, 268–269 ex.                   and memoization, 387–389
+       division theorem, 928                               for optimal binary search trees, 397–404
+       divisor, 927–928                                    optimal substructure in, 379–384
+          common, 929                                      overlapping subproblems in, 384–386
+          see also greatest common divisor                 for printing neatly, 405 pr.
+       DNA, 6–7, 390–391, 406 pr.                          reconstructing an optimal solution in, 387
+       DNF (disjunctive normal form), 1083                 relation to divide-and-conquer, 359
+       does-not-divide relation (−), 927                   for rod-cutting, 360–370
+       domain, 1166                                        for seam carving, 409 pr.
+       dominates relation, 1045 pr.                        for signing free agents, 411 pr.
+       double hashing, 272–274, 277 ex.                    top-down with memoization, 365
+       doubly linked list, 236                             for transitive closure, 697–699
+          see also linked list                             for Viterbi algorithm, 408 pr.
+       downto, in pseudocode, 21                           for 0-1 knapsack problem, 427 ex.
+       d -regular graph, 736 ex.                         dynamic set, 229–231
+       duality, 879–886, 895 pr.                           see also data structure
+          weak, 880–881, 886 ex.                         dynamic table, 463–471
+       dual linear program, 879                            analyzed by accounting method, 465–466
+       dummy key, 397                                      analyzed by aggregate analysis, 465
+       dynamic graph, 562 n.                               analyzed by potential method, 466–471
+          all-pairs shortest paths algorithms for, 707     load factor of, 463
+          data structures for, 483                       dynamic tree, 482
+          minimum-spanning-tree algorithm for,
+             637 ex.                                     e, 55
+          transitive closure of, 705 pr., 707            E Œ  (expected value), 1197
+       dynamic multithreaded algorithm, see              early-ﬁrst form, 444
+             multithreaded algorithm                     early task, 444
+       dynamic multithreading, 773                       edge, 1168
+       dynamic order statistics, 339–345                    admissible, 749
+       dynamic-programming method, 359–413                  antiparallel, 711–712
+          for activity selection, 421 ex.                   attributes of, 592
+          for all-pairs shortest paths, 686–697             back, 609
+          for bitonic euclidean traveling-salesman          bridge, 621 pr.
+             problem, 405 pr.                               call, 778
+          bottom-up, 365                                    capacity of, 709
+          for breaking a string, 410 pr.                    classiﬁcation in breadth-ﬁrst search, 621 pr.
+                                                            classiﬁcation in depth-ﬁrst search, 609–610
+

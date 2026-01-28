@@ -1,0 +1,41 @@
+           Notes for Chapter 22                                                             623
+
+
+           22-3 Euler tour
+           An Euler tour of a strongly connected, directed graph G D .V; E/ is a cycle that
+           traverses each edge of G exactly once, although it may visit a vertex more than
+           once.
+
+           a. Show that G has an Euler tour if and only if in-degree./ D out-degree./ for
+              each vertex  2 V .
+
+           b. Describe an O.E/-time algorithm to ﬁnd an Euler tour of G if one exists. (Hint:
+              Merge edge-disjoint cycles.)
+
+           22-4 Reachability
+           Let G D .V; E/ be a directed graph in which each vertex u 2 V is labeled with
+           a unique integer L.u/ from the set f1; 2; : : : ; jV jg. For each vertex u 2 V , let
+           R.u/ D f 2 V W u ; g be the set of vertices that are reachable from u. Deﬁne
+           min.u/ to be the vertex in R.u/ whose label is minimum, i.e., min.u/ is the vertex 
+           such that L./ D min fL.w/ W w 2 R.u/g. Give an O.V C E/-time algorithm that
+           computes min.u/ for all vertices u 2 V .
+
+
+Chapter notes
+
+           Even [103] and Tarjan [330] are excellent references for graph algorithms.
+              Breadth-ﬁrst search was discovered by Moore [260] in the context of ﬁnding
+           paths through mazes. Lee [226] independently discovered the same algorithm in
+           the context of routing wires on circuit boards.
+              Hopcroft and Tarjan [178] advocated the use of the adjacency-list representation
+           over the adjacency-matrix representation for sparse graphs and were the ﬁrst to
+           recognize the algorithmic importance of depth-ﬁrst search. Depth-ﬁrst search has
+           been widely used since the late 1950s, especially in artiﬁcial intelligence programs.
+              Tarjan [327] gave a linear-time algorithm for ﬁnding strongly connected compo-
+           nents. The algorithm for strongly connected components in Section 22.5 is adapted
+           from Aho, Hopcroft, and Ullman [6], who credit it to S. R. Kosaraju (unpublished)
+           and M. Sharir [314]. Gabow [119] also developed an algorithm for strongly con-
+           nected components that is based on contracting cycles and uses two stacks to make
+           it run in linear time. Knuth [209] was the ﬁrst to give a linear-time algorithm for
+           topological sorting.
+

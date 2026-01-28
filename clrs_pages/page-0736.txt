@@ -1,0 +1,44 @@
+26.2 The Ford-Fulkerson method                                                 715
+
+
+the ﬂow network. We end this section by presenting one speciﬁc implementation
+of the Ford-Fulkerson method and analyzing its running time.
+   The Ford-Fulkerson method iteratively increases the value of the ﬂow. We start
+with f .u; / D 0 for all u;  2 V , giving an initial ﬂow of value 0. At each
+iteration, we increase the ﬂow value in G by ﬁnding an “augmenting path” in an
+associated “residual network” Gf . Once we know the edges of an augmenting
+path in Gf , we can easily identify speciﬁc edges in G for which we can change
+the ﬂow so that we increase the value of the ﬂow. Although each iteration of the
+Ford-Fulkerson method increases the value of the ﬂow, we shall see that the ﬂow
+on any particular edge of G may increase or decrease; decreasing the ﬂow on some
+edges may be necessary in order to enable an algorithm to send more ﬂow from the
+source to the sink. We repeatedly augment the ﬂow until the residual network has
+no more augmenting paths. The max-ﬂow min-cut theorem will show that upon
+termination, this process yields a maximum ﬂow.
+
+F ORD -F ULKERSON -M ETHOD .G; s; t/
+1 initialize ﬂow f to 0
+2 while there exists an augmenting path p in the residual network Gf
+3       augment ﬂow f along p
+4 return f
+
+In order to implement and analyze the Ford-Fulkerson method, we need to intro-
+duce several additional concepts.
+
+Residual networks
+Intuitively, given a ﬂow network G and a ﬂow f , the residual network Gf consists
+of edges with capacities that represent how we can change the ﬂow on edges of G.
+An edge of the ﬂow network can admit an amount of additional ﬂow equal to the
+edge’s capacity minus the ﬂow on that edge. If that value is positive, we place
+that edge into Gf with a “residual capacity” of cf .u; / D c.u; /  f .u; /.
+The only edges of G that are in Gf are those that can admit more ﬂow; those
+edges .u; / whose ﬂow equals their capacity have cf .u; / D 0, and they are not
+in Gf .
+   The residual network Gf may also contain edges that are not in G, however.
+As an algorithm manipulates the ﬂow, with the goal of increasing the total ﬂow, it
+might need to decrease the ﬂow on a particular edge. In order to represent a pos-
+sible decrease of a positive ﬂow f .u; / on an edge in G, we place an edge .; u/
+into Gf with residual capacity cf .; u/ D f .u; /—that is, an edge that can admit
+ﬂow in the opposite direction to .u; /, at most canceling out the ﬂow on .u; /.
+These reverse edges in the residual network allow an algorithm to send back ﬂow
+

@@ -1,0 +1,51 @@
+Chapter 30     Polynomials and the FFT                                       899
+
+
+mial C.x/, also of degree-bound n, such that C.x/ D A.x/ C B.x/ for all x in the
+underlying ﬁeld. That is, if
+         X
+         n1
+A.x/ D          aj x j
+         j D0
+
+and
+         X
+         n1
+B.x/ D          bj x j ;
+         j D0
+
+then
+         X
+         n1
+C.x/ D          cj x j ;
+         j D0
+
+where cj D aj C bj for j D 0; 1; : : : ; n  1. For example, if we have the
+polynomials A.x/ D 6x 3 C 7x 2  10x C 9 and B.x/ D 2x 3 C 4x  5, then
+C.x/ D 4x 3 C 7x 2  6x C 4.
+   For polynomial multiplication, if A.x/ and B.x/ are polynomials of degree-
+bound n, their product C.x/ is a polynomial of degree-bound 2n  1 such that
+C.x/ D A.x/B.x/ for all x in the underlying ﬁeld. You probably have multi-
+plied polynomials before, by multiplying each term in A.x/ by each term in B.x/
+and then combining terms with equal powers. For example, we can multiply
+A.x/ D 6x 3 C 7x 2  10x C 9 and B.x/ D 2x 3 C 4x  5 as follows:
+                           6x 3 C 7x 2  10x C 9
+                         2x 3          C 4x  5
+                              3       2
+                         30x  35x C 50x  45
+                  24x 4 C 28x 3  40x 2 C 36x
+ 12x 6  14x 5 C 20x 4  18x 3
+ 12x 6  14x 5 C 44x 4  20x 3  75x 2 C 86x  45
+Another way to express the product C.x/ is
+         X
+         2n2
+C.x/ D           cj x j ;                                                 (30.1)
+         j D0
+
+where
+       X
+       j
+
+cj D         ak bj k :                                                   (30.2)
+       kD0
+

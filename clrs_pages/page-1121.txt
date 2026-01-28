@@ -1,0 +1,45 @@
+1100   Chapter 34 NP-Completeness
+
+
+       respond to literals with the value 1 in the satisfying assignment. Having included
+       either i or i0 , but not both, for all i, and having put 0 in the digits labeled by
+       variables in all sj and sj0 , we see that for each variable-labeled digit, the sum of the
+       values of S 0 must be 1, which matches those digits of the target t. Because each
+       clause is satisﬁed, the clause contains some literal with the value 1. Therefore,
+       each digit labeled by a clause has at least one 1 contributed to its sum by a i or i0
+       value in S 0 . In fact, 1, 2, or 3 literals may be 1 in each clause, and so each clause-
+       labeled digit has a sum of 1, 2, or 3 from the i and i0 values in S 0 . In Figure 34.19
+       for example, literals :x1 , :x2 , and x3 have the value 1 in a satisfying assignment.
+       Each of clauses C1 and C4 contains exactly one of these literals, and so together 10 ,
+       20 , and 3 contribute 1 to the sum in the digits for C1 and C4 . Clause C2 contains
+       two of these literals, and 10 , 20 , and 3 contribute 2 to the sum in the digit for C2 .
+       Clause C3 contains all three of these literals, and 10 , 20 , and 3 contribute 3 to the
+       sum in the digit for C3 . We achieve the target of 4 in each digit labeled by clause Cj
+       by including in S 0 the appropriate nonempty subset of slack variables fsj ; sj0 g. In
+       Figure 34.19, S 0 includes s1 , s10 , s20 , s3 , s4 , and s40 . Since we have matched the target
+       in all digits of the sum, and no carries can occur, the values of S 0 sum to t.
+           Now, suppose that there is a subset S 0  S that sums to t. The subset S 0 must
+       include exactly one of i and i0 for each i D 1; 2; : : : ; n, for otherwise the digits
+       labeled by variables would not sum to 1. If i 2 S 0 , we set xi D 1. Otherwise,
+       i0 2 S 0 , and we set xi D 0. We claim that every clause Cj , for j D 1; 2; : : : ; k, is
+       satisﬁed by this assignment. To prove this claim, note that to achieve a sum of 4 in
+       the digit labeled by Cj , the subset S 0 must include at least one i or i0 value that
+       has a 1 in the digit labeled by Cj , since the contributions of the slack variables sj
+       and sj0 together sum to at most 3. If S 0 includes a i that has a 1 in Cj ’s position,
+       then the literal xi appears in clause Cj . Since we have set xi D 1 when i 2 S 0 ,
+       clause Cj is satisﬁed. If S 0 includes a i0 that has a 1 in that position, then the
+       literal :xi appears in Cj . Since we have set xi D 0 when i0 2 S 0 , clause Cj is
+       again satisﬁed. Thus, all clauses of  are satisﬁed, which completes the proof.
+
+
+       Exercises
+
+       34.5-1
+       The subgraph-isomorphism problem takes two undirected graphs G1 and G2 , and
+       it asks whether G1 is isomorphic to a subgraph of G2 . Show that the subgraph-
+       isomorphism problem is NP-complete.
+
+       34.5-2
+       Given an integer m n matrix A and an integer m-vector b, the 0-1 integer-
+       programming problem asks whether there exists an integer n-vector x with ele-
+

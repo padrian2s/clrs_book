@@ -1,0 +1,44 @@
+31.6 Powers of an element                                                              955
+
+
+Theorem 31.31 (Fermat’s theorem)
+If p is prime, then
+ap1  1 .mod p/ for all a 2 Zp :
+
+Proof    By equation (31.21), .p/ D p  1 if p is prime.
+
+  Fermat’s theorem applies to every element in Zp except 0, since 0 62 Zp . For all
+a 2 Zp , however, we have ap  a .mod p/ if p is prime.
+  If ordn .g/ D jZn j, then every element in Zn is a power of g, modulo n, and
+g is a primitive root or a generator of Zn . For example, 3 is a primitive root,
+modulo 7, but 2 is not a primitive root, modulo 7. If Zn possesses a primitive
+root, the group Zn is cyclic. We omit the proof of the following theorem, which is
+proven by Niven and Zuckerman [265].
+
+Theorem 31.32
+The values of n > 1 for which Zn is cyclic are 2, 4, p e , and 2p e , for all primes
+p > 2 and all positive integers e.
+
+   If g is a primitive root of Zn and a is any element of Zn , then there exists a ´ such
+that g ´  a .mod n/. This ´ is a discrete logarithm or an index of a, modulo n,
+to the base g; we denote this value as indn;g .a/.
+
+Theorem 31.33 (Discrete logarithm theorem)
+If g is a primitive root of Zn , then the equation g x  g y .mod n/ holds if and
+only if the equation x  y .mod .n// holds.
+
+Proof Suppose ﬁrst that x  y .mod .n//. Then, x D y C k.n/ for some
+integer k. Therefore,
+gx       g yCk.n/          .mod n/
+         g y  .g .n/ /k   .mod n/
+         g y  1k           .mod n/     (by Euler’s theorem)
+         gy                 .mod n/ :
+Conversely, suppose that g x  g y .mod n/. Because the sequence of powers of g
+generates every element of hgi and jhgij D .n/, Corollary 31.18 implies that
+the sequence of powers of g is periodic with period .n/. Therefore, if g x  g y
+.mod n/, then we must have x  y .mod .n//.
+
+   We now turn our attention to the square roots of 1, modulo a prime power. The
+following theorem will be useful in our development of a primality-testing algo-
+rithm in Section 31.8.
+

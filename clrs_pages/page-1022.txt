@@ -1,0 +1,43 @@
+32.3 String matching with ﬁnite automata                                        1001
+
+
+  Now, we assume that .Ti / D .Ti / and prove that .Ti C1 / D .Ti C1 /. Let q
+denote .Ti /, and let a denote T Œi C 1. Then,
+.Ti C1 / D .Ti a/            (by the deﬁnitions of Ti C1 and a)
+          D ı..Ti /; a/       (by the deﬁnition of )
+          D ı.q; a/            (by the deﬁnition of q)
+          D  .Pq a/            (by the deﬁnition (32.4) of ı)
+          D  .Ti a/            (by Lemma 32.3 and induction)
+          D  .Ti C1 /          (by the deﬁnition of Ti C1 ) .
+
+
+  By Theorem 32.4, if the machine enters state q on line 4, then q is the largest
+value such that Pq = Ti . Thus, we have q D m on line 5 if and only if the ma-
+chine has just scanned an occurrence of the pattern P . We conclude that F INITE -
+AUTOMATON -M ATCHER operates correctly.
+
+Computing the transition function
+The following procedure computes the transition function ı from a given pattern
+P Œ1 : : m.
+
+C OMPUTE -T RANSITION -F UNCTION .P; †/
+1 m D P:length
+2 for q D 0 to m
+3      for each character a 2 †
+4           k D min.m C 1; q C 2/
+5           repeat
+6                k D k1
+7           until Pk = Pq a
+8           ı.q; a/ D k
+9 return ı
+
+This procedure computes ı.q; a/ in a straightforward manner according to its def-
+inition in equation (32.4). The nested loops beginning on lines 2 and 3 consider
+all states q and all characters a, and lines 4–8 set ı.q; a/ to be the largest k such
+that Pk = Pq a. The code starts with the largest conceivable value of k, which is
+min.m; q C 1/. It then decreases k until Pk = Pq a, which must eventually occur,
+since P0 D " is a sufﬁx of every string.
+   The running time of C OMPUTE -T RANSITION -F UNCTION is O.m3 j†j/, be-
+cause the outer loops contribute a factor of m j†j, the inner repeat loop can run
+at most m C 1 times, and the test Pk = Pq a on line 7 can require comparing up
+

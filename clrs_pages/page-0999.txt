@@ -1,0 +1,52 @@
+978                     Chapter 31 Number-Theoretic Algorithms
+
+
+                                 996         310
+
+                        814                         396
+
+                                                                                                                                    x700
+              x7 177                                      84
+                                                                                                                                    31
+
+
+              x6 1186                                     120                                                         x600    18            11
+
+
+          x5 1194       339                         529                                                           x500       26      47
+
+                                 595         1053
+      x4       63                                                                             x40             x400       63
+                                                                                          6
+                                                                                      x70
+     x3       8                                                 x30       8   x60                          x300       8
+
+                                                                                          16
+ x2       3                                                 x20       3                     x50        x200       3
+
+
+x1    2                                                   x10     2                                 x100      2
+                                   mod 1387                                   mod 19                                               mod 73
+                                       (a)                                          (b)                                             (c)
+
+
+                        Figure 31.7 Pollard’s rho heuristic. (a) The values produced by the recurrence xi C1 D
+                        .xi2  1/ mod 1387, starting with x1 D 2. The prime factorization of 1387 is 19  73. The heavy
+                        arrows indicate the iteration steps that are executed before the factor 19 is discovered. The light
+                        arrows point to unreached values in the iteration, to illustrate the “rho” shape. The shaded values are
+                        the y values stored by P OLLARD -R HO. The factor 19 is discovered upon reaching x7 D 177, when
+                        gcd.63  177; 1387/ D 19 is computed. The ﬁrst x value that would be repeated is 1186, but the
+                        factor 19 is discovered before this value is repeated. (b) The values produced by the same recurrence,
+                        modulo 19. Every value xi given in part (a) is equivalent, modulo 19, to the value xi0 shown here.
+                        For example, both x4 D 63 and x7 D 177 are equivalent to 6, modulo 19. (c) The values produced
+                        by the same recurrence, modulo 73. Every value xi given in part (a) is equivalent, modulo 73, to the
+                        value xi00 shown here. By the Chinese remainder theorem, each node in part (a) corresponds to a pair
+                        of nodes, one from part (b) and one from part (c).
+
+
+                           The sequence hxi i induces a corresponding sequence hxi0 i modulo p, where
+                        xi0 D xi mod p
+                        for all i.
+                           Furthermore, because fn is deﬁned using only arithmetic operations (squaring
+                        and subtraction) modulo n, we can compute xi0 C1 from xi0 ; the “modulo p” view of
+

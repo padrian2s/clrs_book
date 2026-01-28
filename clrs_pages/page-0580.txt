@@ -1,0 +1,43 @@
+           Notes for Chapter 20                                                                  559
+
+
+               We cluster the n elements into n= lg u groups of size lg u. (Assume for now
+                that lg u divides n.) The ﬁrst group consists of the lg u smallest elements in the
+                set, the second group consists of the next lg u smallest elements, and so on.
+               We designate a “representative” value for each group. The representative of
+                the ith group is at least as large as the largest element in the ith group, and it is
+                smaller than every element of the .i C1/st group. (The representative of the last
+                group can be the maximum possible element u  1.) Note that a representative
+                might be a value not currently in the set.
+               We store the lg u elements of each group in a balanced binary search tree, such
+                as a red-black tree. Each representative points to the balanced binary search
+                tree for its group, and each balanced binary search tree points to its group’s
+                representative.
+               The perfect hash table stores only the representatives, which are also stored in
+                a doubly linked list in increasing order.
+           We call this structure a y-fast trie.
+
+           c. Show that a y-fast trie requires only O.n/ space to store n elements.
+
+           d. Show how to perform the M INIMUM and M AXIMUM operations in O.lg lg u/
+              time with a y-fast trie.
+
+           e. Show how to perform the M EMBER operation in O.lg lg u/ time.
+
+           f. Show how to perform the P REDECESSOR and S UCCESSOR operations in
+              O.lg lg u/ time.
+
+           g. Explain why the I NSERT and D ELETE operations take .lg lg u/ time.
+
+           h. Show how to relax the requirement that each group in a y-fast trie has exactly
+              lg u elements to allow I NSERT and D ELETE to run in O.lg lg u/ amortized time
+              without affecting the asymptotic running times of the other operations.
+
+
+Chapter notes
+
+           The data structure in this chapter is named after P. van Emde Boas, who described
+           an early form of the idea in 1975 [339]. Later papers by van Emde Boas [340]
+           and van Emde Boas, Kaas, and Zijlstra [341] reﬁned the idea and the exposition.
+           Mehlhorn and Näher [252] subsequently extended the ideas to apply to universe
+

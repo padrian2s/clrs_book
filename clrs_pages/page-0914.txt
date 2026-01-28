@@ -1,0 +1,41 @@
+29.5 The initial basic feasible solution                                 893
+
+
+29.5-5
+Solve the following linear program using S IMPLEX:
+maximize         x1 C 3x2
+subject to
+                x1  x2               8
+               x1  x2              3
+               x1 C 4x2              2
+                  x1 ; x2             0 :
+
+29.5-6
+Solve the following linear program using S IMPLEX:
+maximize            x1    2x2
+subject to
+                 x1 C 2x2                4
+               2x1  6x2              12
+                           x2            1
+                   x1 ; x2               0 :
+
+29.5-7
+Solve the following linear program using S IMPLEX:
+maximize         x1 C 3x2
+subject to
+               x1 C x2              1
+               x1  x2              3
+               x1 C 4x2              2
+                  x1 ; x2             0 :
+
+29.5-8
+Solve the linear program given in (29.6)–(29.10).
+
+29.5-9
+Consider the following 1-variable linear program, which we call P :
+maximize       tx
+subject to
+               rx  s
+                x  0 ;
+where r, s, and t are arbitrary real numbers. Let D be the dual of P .
+

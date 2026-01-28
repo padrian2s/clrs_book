@@ -1,0 +1,41 @@
+936   Chapter 31 Number-Theoretic Algorithms
+
+
+      Proof The proof proceeds by induction on k. For the basis of the induction, let
+      k D 1. Then, b  1 D F2 , and since a > b, we must have a  2 D F3 . Since
+      b > .a mod b/, in each recursive call the ﬁrst argument is strictly larger than the
+      second; the assumption that a > b therefore holds for each recursive call.
+         Assume inductively that the lemma holds if k  1 recursive calls are made; we
+      shall then prove that the lemma holds for k recursive calls. Since k > 0, we have
+      b > 0, and E UCLID .a; b/ calls E UCLID .b; a mod b/ recursively, which in turn
+      makes k  1 recursive calls. The inductive hypothesis then implies that b  FkC1
+      (thus proving part of the lemma), and a mod b  Fk . We have
+      b C .a mod b/ D b C .a  b ba=bc/
+                     a;
+      since a > b > 0 implies ba=bc  1. Thus,
+      a  b C .a mod b/
+         FkC1 C Fk
+        D FkC2 :
+
+        The following theorem is an immediate corollary of this lemma.
+
+      Theorem 31.11 (Lamé’s theorem)
+      For any integer k  1, if a > b  1 and b < FkC1 , then the call E UCLID .a; b/
+      makes fewer than k recursive calls.
+
+         We can show that the upper bound of Theorem 31.11 is the best possible by
+      showing that the call E UCLID .FkC1 ; Fk / makes exactly k  1 recursive calls
+      when k  2. We use induction on k. For the base case, k D 2, and the call
+      E UCLID .F3 ; F2 / makes exactly one recursive call, to E UCLID .1; 0/. (We have to
+      start at k D 2, because when k D 1 we do not have F2 > F1 .) For the induc-
+      tive step, assume that E UCLID .Fk ; Fk1 / makes exactly k  2 recursive calls. For
+      k > 2, we have Fk > Fk1 > 0 and FkC1 D Fk CFk1 , and so by Exercise 31.1-1,
+      we have FkC1 mod Fk D Fk1 . Thus, we have
+      gcd.FkC1 ; Fk / D gcd.Fk ; FkC1 mod Fk /
+                      D gcd.Fk ; Fk1 / :
+      Therefore, the call E UCLID .FkC1 ; Fk / recurses one time more than the call
+      E UCLID .Fk ; Fk1 /, or exactly k  1 times, meeting the upper bound of Theo-
+      rem 31.11.                        p                                    p
+         Since Fk is approximately  k = 5, where  is the golden ratio .1 C 5/=2 de-
+      ﬁned by equation (3.24), the number of recursive calls in E UCLID is O.lg b/. (See
+

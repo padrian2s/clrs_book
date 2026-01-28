@@ -1,0 +1,65 @@
+1204   Appendix C       Counting and Probability
+
+
+       b (k; 15, 1/3)
+
+       0.25
+
+
+       0.20
+
+       0.15
+
+
+       0.10
+
+
+       0.05
+
+
+                                                                               k
+                0   1    2    3    4   5   6   7   8   9 10 11 12 13 14 15
+
+
+       Figure C.2 The binomial distribution b.kI 15; 1=3/ resulting from n D 15 Bernoulli trials, each
+       with probability p D 1=3 of success. The expectation of the distribution is np D 5.
+
+
+       X
+       n
+              b.kI n; p/ D 1 ;                                                                (C.36)
+       kD0
+
+       as axiom 2 of the probability axioms requires.
+          We can compute the expectation of a random variable having a binomial distri-
+       bution from equations (C.8) and (C.36). Let X be a random variable that follows
+       the binomial distribution b.kI n; p/, and let q D 1  p. By the deﬁnition of expec-
+       tation, we have
+                        X
+                        n
+       E ŒX  D               k  Pr fX D kg
+                        kD0
+                        Xn
+                 D            k  b.kI n; p/
+                        kD0
+                            !
+                        X
+                        n
+                          n k nk
+                 D     k      p q
+                          k
+                   kD1
+                                  !
+                      Xn
+                            n  1 k1 nk
+                 D np               p q     (by equation (C.8))
+                            k1
+                      kD1
+                                  !
+                      X
+                      n1
+                            n  1 k .n1/k
+                 D np               p q
+                              k
+                             kD0
+

@@ -1,0 +1,45 @@
+1122   Chapter 35 Approximation Algorithms
+
+
+       Corollary 35.5
+       G REEDY-S ET-C OVER is a polynomial-time .ln jX j C 1/-approximation algorithm.
+
+       Proof   Use inequality (A.14) and Theorem 35.4.
+
+          In some applications, max fjSj W S 2 F g is a small constant, and so the solution
+       returned by G REEDY-S ET-C OVER is at most a small constant times larger than
+       optimal. One such application occurs when this heuristic ﬁnds an approximate
+       vertex cover for a graph whose vertices have degree at most 3. In this case, the
+       solution found by G REEDY-S ET-C OVER is not more than H.3/ D 11=6 times as
+       large as an optimal solution, a performance guarantee that is slightly better than
+       that of A PPROX -V ERTEX -C OVER.
+
+       Exercises
+
+       35.3-1
+       Consider each of the following words as a set of letters: farid; dash; drain;
+       heard; lost; nose; shun; slate; snare; threadg. Show which set cover
+       G REEDY-S ET-C OVER produces when we break ties in favor of the word that ap-
+       pears ﬁrst in the dictionary.
+
+       35.3-2
+       Show that the decision version of the set-covering problem is NP-complete by
+       reducing it from the vertex-cover problem.
+
+       35.3-3
+         P how to implement G REEDY-S ET-C OVER in such a way that it runs in time
+       Show
+       O     S2F jSj .
+
+
+       35.3-4
+       Show that the following weaker form of Theorem 35.4 is trivially true:
+       jC j  jC  j max fjSj W S 2 F g :
+
+       35.3-5
+       G REEDY-S ET-C OVER can return a number of different solutions, depending on
+       how we break ties in line 4. Give a procedure BAD -S ET-C OVER -I NSTANCE .n/
+       that returns an n-element instance of the set-covering problem for which, depend-
+       ing on how we break ties in line 4, G REEDY-S ET-C OVER can return a number of
+       different solutions that is exponential in n.
+

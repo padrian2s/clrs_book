@@ -1,0 +1,52 @@
+916   Chapter 30 Polynomials and the FFT
+
+
+      ykŒ0                                 +            ykŒ0 C !nk ykŒ1              ykŒ0                               ykŒ0 C !nk ykŒ1
+
+          !nk                                                                                 !nk
+
+      ykŒ1             •                   –            ykŒ0  !nk ykŒ1              ykŒ1                               ykŒ0  !nk ykŒ1
+                                 (a)                                                                       (b)
+
+
+      Figure 30.3 A butterﬂy operation. (a) The two input values enter from the left, the twiddle fac-
+                                Œ1
+      tor !nk is multiplied by yk , and the sum and difference are output on the right. (b) A simpliﬁed
+      drawing of a butterﬂy operation. We will use this representation in a parallel FFT circuit.
+
+
+
+                                                (a0,a1,a2,a3,a4,a5,a6,a7)
+
+
+                            (a0,a2,a4,a6)                                               (a1,a3,a5,a7)
+
+
+              (a0,a4)                         (a2,a6)                        (a1,a5)                       (a3,a7)
+
+
+       (a0)             (a4)           (a2)             (a6)         (a1)              (a5)         (a3)             (a7)
+
+
+
+      Figure 30.4 The tree of input vectors to the recursive calls of the R ECURSIVE -FFT procedure. The
+      initial invocation is for n D 8.
+
+
+      by the corresponding input vector. Each R ECURSIVE -FFT invocation makes two
+      recursive calls, unless it has received a 1-element vector. The ﬁrst call appears in
+      the left child, and the second call appears in the right child.
+         Looking at the tree, we observe that if we could arrange the elements of the
+      initial vector a into the order in which they appear in the leaves, we could trace
+      the execution of the R ECURSIVE -FFT procedure, but bottom up instead of top
+      down. First, we take the elements in pairs, compute the DFT of each pair using
+      one butterﬂy operation, and replace the pair with its DFT. The vector then holds
+      n=2 2-element DFTs. Next, we take these n=2 DFTs in pairs and compute the
+      DFT of the four vector elements they come from by executing two butterﬂy oper-
+      ations, replacing two 2-element DFTs with one 4-element DFT. The vector then
+      holds n=4 4-element DFTs. We continue in this manner until the vector holds two
+      .n=2/-element DFTs, which we combine using n=2 butterﬂy operations into the
+      ﬁnal n-element DFT.
+         To turn this bottom-up approach into code, we use an array AŒ0 : : n  1 that
+      initially holds the elements of the input vector a in the order in which they appear
+

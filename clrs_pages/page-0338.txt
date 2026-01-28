@@ -1,0 +1,57 @@
+13.3 Insertion                                                                                       317
+
+
+
+
+                                                           11
+
+                                       2                                     14
+(a)                1                           7                                    15
+
+                                           5           8 y
+
+                           z       4                            Case 1
+
+
+
+                                                           11
+
+                                       2                                     14 y
+
+(b)                1                           7   z                                15
+
+                                           5           8
+
+                                   4                            Case 2
+
+
+
+                                                           11
+
+                                       7                                     14 y
+
+(c)            z   2                           8                                    15
+
+           1                       5
+                                                                Case 3
+                       4
+
+
+                                                           7
+
+                               z       2                                     11
+
+(d)                1                           5                         8          14
+
+                                           4                                             15
+
+
+
+Figure 13.4 The operation of RB-I NSERT-F IXUP. (a) A node ´ after insertion. Because both ´
+and its parent ´: p are red, a violation of property 4 occurs. Since ´’s uncle y is red, case 1 in the
+code applies. We recolor nodes and move the pointer ´ up the tree, resulting in the tree shown in (b).
+Once again, ´ and its parent are both red, but ´’s uncle y is black. Since ´ is the right child of ´: p,
+case 2 applies. We perform a left rotation, and the tree that results is shown in (c). Now, ´ is the left
+child of its parent, and case 3 applies. Recoloring and right rotation yield the tree in (d), which is a
+legal red-black tree.
+

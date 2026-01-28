@@ -1,0 +1,43 @@
+15.1 Rod cutting                                                                363
+
+
+In this formulation, an optimal solution embodies the solution to only one related
+subproblem—the remainder—rather than two.
+
+Recursive top-down implementation
+The following procedure implements the computation implicit in equation (15.2)
+in a straightforward, top-down, recursive manner.
+
+C UT-ROD .p; n/
+1 if n == 0
+2      return 0
+3 q D 1
+4 for i D 1 to n
+5      q D max.q; pŒi C C UT-ROD .p; n  i//
+6 return q
+
+   Procedure C UT-ROD takes as input an array pŒ1 : : n of prices and an integer n,
+and it returns the maximum revenue possible for a rod of length n. If n D 0, no
+revenue is possible, and so C UT-ROD returns 0 in line 2. Line 3 initializes the
+maximum revenue q to 1, so that the for loop in lines 4–5 correctly computes
+q D max1i n .pi C C UT-ROD .p; n  i//; line 6 then returns this value. A simple
+induction on n proves that this answer is equal to the desired answer rn , using
+equation (15.2).
+   If you were to code up C UT-ROD in your favorite programming language and run
+it on your computer, you would ﬁnd that once the input size becomes moderately
+large, your program would take a long time to run. For n D 40, you would ﬁnd that
+your program takes at least several minutes, and most likely more than an hour. In
+fact, you would ﬁnd that each time you increase n by 1, your program’s running
+time would approximately double.
+   Why is C UT-ROD so inefﬁcient? The problem is that C UT-ROD calls itself
+recursively over and over again with the same parameter values; it solves the
+same subproblems repeatedly. Figure 15.3 illustrates what happens for n D 4:
+C UT-ROD .p; n/ calls C UT-ROD .p; n  i/ for i D 1; 2; : : : ; n. Equivalently,
+C UT-ROD .p; n/ calls C UT-ROD .p; j / for each j D 0; 1; : : : ; n  1. When this
+process unfolds recursively, the amount of work done, as a function of n, grows
+explosively.
+   To analyze the running time of C UT-ROD, let T .n/ denote the total number of
+calls made to C UT-ROD when called with its second parameter equal to n. This
+expression equals the number of nodes in a subtree whose root is labeled n in the
+recursion tree. The count includes the initial call at its root. Thus, T .0/ D 1 and
+

@@ -1,0 +1,44 @@
+58   Chapter 3 Growth of Functions
+
+
+     where e is the base of the natural logarithm, gives us a tighter upper bound, and a
+     lower bound as well. As Exercise 3.2-3 asks you to prove,
+         nŠ D o.nn / ;
+         nŠ D !.2n / ;
+     lg.nŠ/ D ‚.n lg n/ ;                                                            (3.19)
+     where Stirling’s approximation is helpful in proving equation (3.19). The following
+     equation also holds for all n  1:
+          p        n n
+     nŠ D 2 n           e ˛n                                                      (3.20)
+                    e
+     where
+        1                 1
+              < ˛n <          :                                                    (3.21)
+     12n C 1            12n
+
+     Functional iteration
+     We use the notation f .i / .n/ to denote the function f .n/ iteratively applied i times
+     to an initial value of n. Formally, let f .n/ be a function over the reals. For non-
+     negative integers i, we recursively deﬁne
+                  (
+                    n                if i D 0 ;
+     f .i / .n/ D        .i 1/
+                    f .f        .n// if i > 0 :
+     For example, if f .n/ D 2n, then f .i / .n/ D 2i n.
+
+     The iterated logarithm function
+     We use the notation lg n (read “log star of n”) to denote the iterated logarithm, de-
+     ﬁned as follows. Let lg.i / n be as deﬁned above, with f .n/ D lg n. Because the log-
+     arithm of a nonpositive number is undeﬁned, lg.i / n is deﬁned only if lg.i 1/ n > 0.
+     Be sure to distinguish lg.i / n (the logarithm function applied i times in succession,
+     starting with argument n) from lgi n (the logarithm of n raised to the ith power).
+     Then we deﬁne the iterated logarithm function as
+                  ˚
+     lg n D min i  0 W lg.i / n  1 :
+     The iterated logarithm is a very slowly growing function:
+            lg 2    D   1;
+            lg 4    D   2;
+           lg 16    D   3;
+      lg 65536      D   4;
+     lg .265536 /   D   5:
+

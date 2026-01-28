@@ -1,0 +1,47 @@
+1092                   Chapter 34 NP-Completeness
+
+
+
+       [u,v,1]             [v,u,1]      [u,v,1]          [v,u,1]       [u,v,1]          [v,u,1]      [u,v,1]          [v,u,1]
+       [u,v,2]             [v,u,2]
+       [u,v,3]             [v,u,3]
+                 Wuv                              Wuv                            Wuv                           Wuv
+       [u,v,4]             [v,u,4]
+       [u,v,5]             [v,u,5]
+       [u,v,6]             [v,u,6]      [u,v,6]          [v,u,6]       [u,v,6]          [v,u,6]      [u,v,6]          [v,u,6]
+
+                 (a)                              (b)                            (c)                           (d)
+
+
+                       Figure 34.16 The widget used in reducing the vertex-cover problem to the hamiltonian-cycle prob-
+                       lem. An edge .u; / of graph G corresponds to widget Wu in the graph G 0 created in the reduction.
+                       (a) The widget, with individual vertices labeled. (b)–(d) The shaded paths are the only possible ones
+                       through the widget that include all vertices, assuming that the only connections from the widget to
+                       the remainder of G 0 are through vertices Œu; ; 1, Œu; ; 6, Œ; u; 1, and Œ; u; 6.
+
+
+                       integer k, we construct an undirected graph G 0 D .V 0 ; E 0 / that has a hamiltonian
+                       cycle if and only if G has a vertex cover of size k.
+                          Our construction uses a widget, which is a piece of a graph that enforces certain
+                       properties. Figure 34.16(a) shows the widget we use. For each edge .u; / 2 E, the
+                       graph G 0 that we construct will contain one copy of this widget, which we denote
+                       by Wu . We denote each vertex in Wu by Œu; ; i or Œ; u; i, where 1  i  6, so
+                       that each widget Wu contains 12 vertices. Widget Wu also contains the 14 edges
+                       shown in Figure 34.16(a).
+                          Along with the internal structure of the widget, we enforce the properties we
+                       want by limiting the connections between the widget and the remainder of the
+                       graph G 0 that we construct. In particular, only vertices Œu; ; 1, Œu; ; 6, Œ; u; 1,
+                       and Œ; u; 6 will have edges incident from outside Wu . Any hamiltonian cycle
+                       of G 0 must traverse the edges of Wu in one of the three ways shown in Fig-
+                       ures 34.16(b)–(d). If the cycle enters through vertex Œu; ; 1, it must exit through
+                       vertex Œu; ; 6, and it either visits all 12 of the widget’s vertices (Figure 34.16(b))
+                       or the six vertices Œu; ; 1 through Œu; ; 6 (Figure 34.16(c)). In the latter case,
+                       the cycle will have to reenter the widget to visit vertices Œ; u; 1 through Œ; u; 6.
+                       Similarly, if the cycle enters through vertex Œ; u; 1, it must exit through ver-
+                       tex Œ; u; 6, and it either visits all 12 of the widget’s vertices (Figure 34.16(d)) or
+                       the six vertices Œ; u; 1 through Œ; u; 6 (Figure 34.16(c)). No other paths through
+                       the widget that visit all 12 vertices are possible. In particular, it is impossible to
+                       construct two vertex-disjoint paths, one of which connects Œu; ; 1 to Œ; u; 6 and
+                       the other of which connects Œ; u; 1 to Œu; ; 6, such that the union of the two paths
+                       contains all of the widget’s vertices.
+

@@ -1,0 +1,45 @@
+26.5 The relabel-to-front algorithm                                                   755
+
+
+R ELABEL -T O -F RONT .G; s; t/
+ 1 I NITIALIZE -P REFLOW .G; s/
+ 2 L D G:V  fs; tg, in any order
+ 3 for each vertex u 2 G:V  fs; tg
+ 4      u:current D u:N:head
+ 5 u D L:head
+ 6 while u ¤ NIL
+ 7      old-height D u:h
+ 8      D ISCHARGE .u/
+ 9      if u:h > old-height
+10           move u to the front of list L
+11      u D u:next
+
+   The relabel-to-front algorithm works as follows. Line 1 initializes the preﬂow
+and heights to the same values as in the generic push-relabel algorithm. Line 2
+initializes the list L to contain all potentially overﬂowing vertices, in any order.
+Lines 3–4 initialize the current pointer of each vertex u to the ﬁrst vertex in u’s
+neighbor list.
+   As Figure 26.10 illustrates, the while loop of lines 6–11 runs through the list L,
+discharging vertices. Line 5 makes it start with the ﬁrst vertex in the list. Each
+time through the loop, line 8 discharges a vertex u. If u was relabeled by the
+D ISCHARGE procedure, line 10 moves it to the front of list L. We can determine
+whether u was relabeled by comparing its height before the discharge operation,
+saved into the variable old-height in line 7, with its height afterward, in line 9.
+Line 11 makes the next iteration of the while loop use the vertex following u in
+list L. If line 10 moved u to the front of the list, the vertex used in the next iteration
+is the one following u in its new position in the list.
+   To show that R ELABEL -T O -F RONT computes a maximum ﬂow, we shall show
+that it is an implementation of the generic push-relabel algorithm. First, ob-
+serve that it performs push and relabel operations only when they apply, since
+Lemma 26.29 guarantees that D ISCHARGE performs them only when they apply.
+It remains to show that when R ELABEL -T O -F RONT terminates, no basic opera-
+tions apply. The remainder of the correctness argument relies on the following
+loop invariant:
+
+   At each test in line 6 of R ELABEL -T O -F RONT, list L is a topological sort
+   of the vertices in the admissible network Gf;h D .V; Ef;h /, and no vertex
+   before u in the list has excess ﬂow.
+
+Initialization: Immediately after I NITIALIZE -P REFLOW has been run, s:h D jV j
+   and :h D 0 for all  2 V  fsg. Since jV j  2 (because V contains at
+

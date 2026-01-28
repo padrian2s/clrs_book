@@ -1,0 +1,43 @@
+1078       Chapter 34 NP-Completeness
+
+
+           34.3-7
+           Show that, with respect to polynomial-time reductions (see Exercise 34.3-6), L is
+           complete for NP if and only if L is complete for co-NP.
+
+           34.3-8
+           The reduction algorithm F in the proof of Lemma 34.6 constructs the circuit
+           C D f .x/ based on knowledge of x, A, and k. Professor Sartre observes that
+           the string x is input to F , but only the existence of A, k, and the constant factor
+           implicit in the O.nk / running time is known to F (since the language L belongs
+           to NP), not their actual values. Thus, the professor concludes that F can’t possi-
+           bly construct the circuit C and that the language CIRCUIT-SAT is not necessarily
+           NP-hard. Explain the ﬂaw in the professor’s reasoning.
+
+
+
+34.4 NP-completeness proofs
+
+           We proved that the circuit-satisﬁability problem is NP-complete by a direct proof
+           that L P CIRCUIT-SAT for every language L 2 NP. In this section, we shall
+           show how to prove that languages are NP-complete without directly reducing every
+           language in NP to the given language. We shall illustrate this methodology by
+           proving that various formula-satisﬁability problems are NP-complete. Section 34.5
+           provides many more examples of the methodology.
+              The following lemma is the basis of our method for showing that a language is
+           NP-complete.
+
+           Lemma 34.8
+           If L is a language such that L0 P L for some L0 2 NPC, then L is NP-hard. If, in
+           addition, L 2 NP, then L 2 NPC.
+
+           Proof Since L0 is NP-complete, for all L00 2 NP, we have L00 P L0 . By sup-
+           position, L0 P L, and thus by transitivity (Exercise 34.3-2), we have L00 P L,
+           which shows that L is NP-hard. If L 2 NP, we also have L 2 NPC.
+
+              In other words, by reducing a known NP-complete language L0 to L, we implic-
+           itly reduce every language in NP to L. Thus, Lemma 34.8 gives us a method for
+           proving that a language L is NP-complete:
+           1. Prove L 2 NP.
+           2. Select a known NP-complete language L0 .
+

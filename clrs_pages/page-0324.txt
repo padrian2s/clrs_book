@@ -1,0 +1,47 @@
+           Problems for Chapter 12                                                         303
+
+
+                       1 .n C 3/.n C 2/.n C 1/
+                    D     
+                       4              6
+                       n3 C 6n2 C 11n C 6
+                   D                          :
+                                24
+           Taking logarithms of both sides gives E ŒXn  D O.lg n/.
+
+           Exercises
+
+           12.4-1
+           Prove equation (12.3).
+
+           12.4-2
+           Describe a binary search tree on n nodes such that the average depth of a node in
+           the tree is ‚.lg n/ but the height of the tree is !.lg n/. Give an asymptotic upper
+           bound on the height of an n-node binary search tree in which the average depth of
+           a node is ‚.lg n/.
+
+           12.4-3
+           Show that the notion of a randomly chosen binary search tree on n keys, where
+           each binary search tree of n keys is equally likely to be chosen, is different from
+           the notion of a randomly built binary search tree given in this section. (Hint: List
+           the possibilities when n D 3.)
+
+           12.4-4
+           Show that the function f .x/ D 2x is convex.
+
+           12.4-5 ?
+           Consider R ANDOMIZED -Q UICKSORT operating on a sequence of n distinct input
+           numbers. Prove that for any constant k > 0, all but O.1=nk / of the nŠ input
+           permutations yield an O.n lg n/ running time.
+
+
+
+Problems
+
+           12-1 Binary search trees with equal keys
+           Equal keys pose a problem for the implementation of binary search trees.
+           a. What is the asymptotic performance of T REE -I NSERT when used to insert n
+              items with identical keys into an initially empty binary search tree?
+           We propose to improve T REE -I NSERT by testing before line 5 to determine whether
+           ´:key D x:key and by testing before line 11 to determine whether ´:key D y:key.
+

@@ -1,0 +1,45 @@
+1244   Bibliography
+
+
+        [245] H. A. Maurer, Th. Ottmann, and H.-W. Six. Implementing dictionaries using binary trees of
+              very small height. Information Processing Letters, 5(1):11–14, 1976.
+        [246] Ernst W. Mayr, Hans Jürgen Prömel, and Angelika Steger, editors. Lectures on Proof Veriﬁ-
+              cation and Approximation Algorithms, volume 1367 of Lecture Notes in Computer Science.
+              Springer, 1998.
+        [247] C. C. McGeoch. All pairs shortest paths and the essential subgraph.          Algorithmica,
+              13(5):426–441, 1995.
+        [248] M. D. McIlroy. A killer adversary for quicksort. Software—Practice and Experience,
+              29(4):341–344, 1999.
+        [249] Kurt Mehlhorn. Sorting and Searching, volume 1 of Data Structures and Algorithms.
+              Springer, 1984.
+        [250] Kurt Mehlhorn. Graph Algorithms and NP-Completeness, volume 2 of Data Structures and
+              Algorithms. Springer, 1984.
+        [251] Kurt Mehlhorn. Multidimensional Searching and Computational Geometry, volume 3 of
+              Data Structures and Algorithms. Springer, 1984.
+        [252] Kurt Mehlhorn and Stefan Näher. Bounded ordered dictionaries in O.log log N / time and
+              O.n/ space. Information Processing Letters, 35(4):183–189, 1990.
+        [253] Kurt Mehlhorn and Stefan Näher. LEDA: A Platform for Combinatorial and Geometric
+              Computing. Cambridge University Press, 1999.
+        [254] Alfred J. Menezes, Paul C. van Oorschot, and Scott A. Vanstone. Handbook of Applied
+              Cryptography. CRC Press, 1997.
+        [255] Gary L. Miller. Riemann’s hypothesis and tests for primality. Journal of Computer and
+              System Sciences, 13(3):300–317, 1976.
+        [256] John C. Mitchell. Foundations for Programming Languages. The MIT Press, 1996.
+        [257] Joseph S. B. Mitchell. Guillotine subdivisions approximate polygonal subdivisions: A sim-
+              ple polynomial-time approximation scheme for geometric TSP, k-MST, and related prob-
+              lems. SIAM Journal on Computing, 28(4):1298–1309, 1999.
+        [258] Louis Monier. Algorithmes de Factorisation D’Entiers. PhD thesis, L’Université Paris-Sud,
+              1980.
+        [259] Louis Monier. Evaluation and comparison of two efﬁcient probabilistic primality testing
+              algorithms. Theoretical Computer Science, 12(1):97–108, 1980.
+        [260] Edward F. Moore. The shortest path through a maze. In Proceedings of the International
+              Symposium on the Theory of Switching, pages 285–292. Harvard University Press, 1959.
+        [261] Rajeev Motwani, Joseph (Sefﬁ) Naor, and Prabakhar Raghavan. Randomized approxima-
+              tion algorithms in combinatorial optimization. In Dorit Hochbaum, editor, Approximation
+              Algorithms for NP-Hard Problems, chapter 11, pages 447–481. PWS Publishing Company,
+              1997.
+        [262] Rajeev Motwani and Prabhakar Raghavan. Randomized Algorithms. Cambridge University
+              Press, 1995.
+        [263] J. I. Munro and V. Raman. Fast stable in-place sorting with O.n/ data moves. Algorithmica,
+              16(2):151–160, 1996.
+

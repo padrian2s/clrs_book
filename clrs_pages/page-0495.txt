@@ -1,0 +1,46 @@
+474   Chapter 17 Amortized Analysis
+
+
+         We shall analyze this rebuilding scheme using the potential method. For a node x
+      in a binary search tree T , we deﬁne
+        .x/ D jx:left:size  x:right:sizej ;
+      and we deﬁne the potential of T as
+                X
+      ˆ.T / D c        .x/ ;
+              x2T W.x/2
+
+      where c is a sufﬁciently large constant that depends on ˛.
+
+      c. Argue that any binary search tree has nonnegative potential and that a 1=2-
+         balanced tree has potential 0.
+
+      d. Suppose that m units of potential can pay for rebuilding an m-node subtree.
+         How large must c be in terms of ˛ in order for it to take O.1/ amortized time
+         to rebuild a subtree that is not ˛-balanced?
+
+      e. Show that inserting a node into or deleting a node from an n-node ˛-balanced
+         tree costs O.lg n/ amortized time.
+
+      17-4 The cost of restructuring red-black trees
+      There are four basic operations on red-black trees that perform structural modi-
+      ﬁcations: node insertions, node deletions, rotations, and color changes. We have
+      seen that RB-I NSERT and RB-D ELETE use only O.1/ rotations, node insertions,
+      and node deletions to maintain the red-black properties, but they may make many
+      more color changes.
+
+      a. Describe a legal red-black tree with n nodes such that calling RB-I NSERT to
+         add the .n C 1/st node causes .lg n/ color changes. Then describe a legal
+         red-black tree with n nodes for which calling RB-D ELETE on a particular node
+         causes .lg n/ color changes.
+
+      Although the worst-case number of color changes per operation can be logarithmic,
+      we shall prove that any sequence of m RB-I NSERT and RB-D ELETE operations on
+      an initially empty red-black tree causes O.m/ structural modiﬁcations in the worst
+      case. Note that we count each color change as a structural modiﬁcation.
+
+      b. Some of the cases handled by the main loop of the code of both RB-I NSERT-
+         F IXUP and RB-D ELETE -F IXUP are terminating: once encountered, they cause
+         the loop to terminate after a constant number of additional operations. For each
+         of the cases of RB-I NSERT-F IXUP and RB-D ELETE -F IXUP, specify which are
+         terminating and which are not. (Hint: Look at Figures 13.5, 13.6, and 13.7.)
+

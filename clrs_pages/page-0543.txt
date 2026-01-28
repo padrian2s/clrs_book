@@ -1,0 +1,40 @@
+522   Chapter 19 Fibonacci Heaps
+
+
+      Thus, the amortized cost of F IB -H EAP -D ECREASE -K EY is at most
+      O.c/ C 4  c D O.1/ ;
+      since we can scale up the units of potential to dominate the constant hidden in O.c/.
+         You can now see why we deﬁned the potential function to include a term that is
+      twice the number of marked nodes. When a marked node y is cut by a cascading
+      cut, its mark bit is cleared, which reduces the potential by 2. One unit of potential
+      pays for the cut and the clearing of the mark bit, and the other unit compensates
+      for the unit increase in potential due to node y becoming a root.
+
+      Deleting a node
+      The following pseudocode deletes a node from an n-node Fibonacci heap in
+      O.D.n// amortized time. We assume that there is no key value of 1 currently
+      in the Fibonacci heap.
+
+      F IB -H EAP -D ELETE .H; x/
+      1 F IB -H EAP -D ECREASE -K EY .H; x; 1/
+      2 F IB -H EAP -E XTRACT-M IN .H /
+
+      F IB -H EAP -D ELETE makes x become the minimum node in the Fibonacci heap by
+      giving it a uniquely small key of 1. The F IB -H EAP -E XTRACT-M IN procedure
+      then removes node x from the Fibonacci heap. The amortized time of F IB -H EAP -
+      D ELETE is the sum of the O.1/ amortized time of F IB -H EAP -D ECREASE -K EY
+      and the O.D.n// amortized time of F IB -H EAP -E XTRACT-M IN. Since we shall see
+      in Section 19.4 that D.n/ D O.lg n/, the amortized time of F IB -H EAP -D ELETE
+      is O.lg n/.
+
+      Exercises
+
+      19.3-1
+      Suppose that a root x in a Fibonacci heap is marked. Explain how x came to be
+      a marked root. Argue that it doesn’t matter to the analysis that x is marked, even
+      though it is not a root that was ﬁrst linked to another node and then lost one child.
+
+      19.3-2
+      Justify the O.1/ amortized time of F IB -H EAP -D ECREASE -K EY as an average cost
+      per operation by using aggregate analysis.
+

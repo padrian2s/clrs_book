@@ -1,0 +1,52 @@
+Index                                                                                     1289
+
+
+sweep line, 1022                                tight constraint, 865
+sweep-line status, 1023–1024                    time, see running time
+symbol table, 253, 262, 265                     time domain, 898
+symmetric difference, 763 pr.                   time-memory trade-off, 365
+symmetric matrix, 1220, 1222 ex., 1226 ex.      timestamp, 603, 611 ex.
+symmetric positive-deﬁnite matrix, 832–835,     Toeplitz matrix, 921 pr.
+     842                                        to, in pseudocode, 20
+symmetric relation, 1163                        T OP, 1031
+symmetry of ‚-notation, 52                      top-down method, for dynamic programming,
+sync, in pseudocode, 776–777                          365
+system of difference constraints, 664–670       top of a stack, 232
+system of linear equations, 806 pr., 813–827,   topological sort, 8, 612–615, 623
+     840 pr.                                       in computing single-source shortest paths in
+                                                      a dag, 655
+TABLE -D ELETE, 468                             T OPOLOGICAL -S ORT , 613
+TABLE -I NSERT , 464                            total order, 1165
+tail                                            total path length, 304 pr.
+   of a binomial distribution, 1208–1215        total preorder, 1165
+   of a linked list, 236                        total relation, 1165
+   of a queue, 234                              tour
+tail recursion, 188 pr., 419                       bitonic, 405 pr.
+TAIL -R ECURSIVE -Q UICKSORT , 188 pr.             Euler, 623 pr., 1048
+target, 1097                                       of a graph, 1096
+Tarjan’s off-line least-common-ancestors        track, 486
+      algorithm, 584 pr.                        tractability, 1048
+task, 443                                       trailing pointer, 295
+Task Parallel Library, 774                      transition function, 995, 1001–1002, 1012 ex.
+task scheduling, 443–446, 448 pr., 450          transitive closure, 697–699
+tautology, 1066 ex., 1086 ex.                      and boolean matrix multiplication, 832 ex.
+Taylor series, 306 pr.                             of dynamic graphs, 705 pr., 707
+telescoping series, 1148                        T RANSITIVE -C LOSURE , 698
+telescoping sum, 1148                           transitive relation, 1163
+testing                                         transitivity of asymptotic notation, 51
+   of primality, 965–975, 983                   T RANSPLANT , 296, 323
+   of pseudoprimality, 966–968                  transpose
+text, in string matching, 985                      conjugate, 832 ex.
+then clause, 20 n.                                 of a directed graph, 592 ex.
+Theta-notation, 44–47, 64                          of a matrix, 1217
+thread, 773                                        of a matrix, multithreaded, 792 ex.
+Threading Building Blocks, 774                  transpose symmetry of asymptotic notation, 52
+3-CNF, 1082                                     traveling-salesman problem
+3-CNF-SAT, 1082                                    approximation algorithm for, 1111–1117,
+3-CNF satisﬁability, 1082–1085, 1105                  1139
+   approximation algorithm for, 1123–1124,         bitonic euclidean, 405 pr.
+      1139                                         bottleneck, 1117 ex.
+   and 2-CNF satisﬁability, 1049                   NP-completeness of, 1096–1097
+3-COLOR, 1103 pr.                                  with the triangle inequality, 1112–1115
+3-conjunctive normal form, 1082                    without the triangle inequality, 1115–1116
+

@@ -1,0 +1,51 @@
+1018   Chapter 33 Computational Geometry
+
+
+          The following procedures implement this idea. S EGMENTS -I NTERSECT returns
+       TRUE if segments p1 p2 and p3 p4 intersect and FALSE if they do not. It calls
+       the subroutines D IRECTION, which computes relative orientations using the cross-
+       product method above, and O N -S EGMENT, which determines whether a point
+       known to be colinear with a segment lies on that segment.
+
+       S EGMENTS -I NTERSECT .p1 ; p2 ; p3 ; p4 /
+        1 d1 D D IRECTION .p3 ; p4 ; p1 /
+        2 d2 D D IRECTION .p3 ; p4 ; p2 /
+        3 d3 D D IRECTION .p1 ; p2 ; p3 /
+        4 d4 D D IRECTION .p1 ; p2 ; p4 /
+        5 if ..d1 > 0 and d2 < 0/ or .d1 < 0 and d2 > 0// and
+               ..d3 > 0 and d4 < 0/ or .d3 < 0 and d4 > 0//
+        6      return TRUE
+        7 elseif d1 == 0 and O N -S EGMENT .p3 ; p4 ; p1 /
+        8      return TRUE
+        9 elseif d2 == 0 and O N -S EGMENT .p3 ; p4 ; p2 /
+       10      return TRUE
+       11 elseif d3 == 0 and O N -S EGMENT .p1 ; p2 ; p3 /
+       12      return TRUE
+       13 elseif d4 == 0 and O N -S EGMENT .p1 ; p2 ; p4 /
+       14      return TRUE
+       15 else return FALSE
+
+       D IRECTION .pi ; pj ; pk /
+       1 return .pk  pi / .pj  pi /
+
+       O N -S EGMENT .pi ; pj ; pk /
+       1 if min.xi ; xj /  xk  max.xi ; xj / and min.yi ; yj /  yk  max.yi ; yj /
+       2        return TRUE
+       3 else return FALSE
+
+          S EGMENTS -I NTERSECT works as follows. Lines 1–4 compute the relative ori-
+       entation di of each endpoint pi with respect to the other segment. If all the relative
+       orientations are nonzero, then we can easily determine whether segments p1 p2
+       and p3 p4 intersect, as follows. Segment p1 p2 straddles the line containing seg-
+       ment p3 p4 if directed segments p3p
+                                            ! and 
+                                              1   p3p
+                                                      ! have opposite orientations relative
+                                                        2
+           
+             !
+       to p3 p4 . In this case, the signs of d1 and d2 differ. Similarly, p3 p4 straddles
+       the line containing p1 p2 if the signs of d3 and d4 differ. If the test of line 5 is
+       true, then the segments straddle each other, and S EGMENTS -I NTERSECT returns
+       TRUE. Figure 33.3(a) shows this case. Otherwise, the segments do not straddle
+

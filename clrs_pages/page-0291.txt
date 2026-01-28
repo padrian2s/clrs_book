@@ -1,0 +1,43 @@
+270   Chapter 11 Hash Tables
+
+
+      no elements are stored outside the table, unlike in chaining. Thus, in open ad-
+      dressing, the hash table can “ﬁll up” so that no further insertions can be made; one
+      consequence is that the load factor ˛ can never exceed 1.
+         Of course, we could store the linked lists for chaining inside the hash table, in
+      the otherwise unused hash-table slots (see Exercise 11.2-4), but the advantage of
+      open addressing is that it avoids pointers altogether. Instead of following pointers,
+      we compute the sequence of slots to be examined. The extra memory freed by not
+      storing pointers provides the hash table with a larger number of slots for the same
+      amount of memory, potentially yielding fewer collisions and faster retrieval.
+         To perform insertion using open addressing, we successively examine, or probe,
+      the hash table until we ﬁnd an empty slot in which to put the key. Instead of being
+      ﬁxed in the order 0; 1; : : : ; m  1 (which requires ‚.n/ search time), the sequence
+      of positions probed depends upon the key being inserted. To determine which slots
+      to probe, we extend the hash function to include the probe number (starting from 0)
+      as a second input. Thus, the hash function becomes
+      hWU      f0; 1; : : : ; m  1g ! f0; 1; : : : ; m  1g :
+      With open addressing, we require that for every key k, the probe sequence
+      hh.k; 0/; h.k; 1/; : : : ; h.k; m  1/i
+      be a permutation of h0; 1; : : : ; m1i, so that every hash-table position is eventually
+      considered as a slot for a new key as the table ﬁlls up. In the following pseudocode,
+      we assume that the elements in the hash table T are keys with no satellite infor-
+      mation; the key k is identical to the element containing key k. Each slot contains
+      either a key or NIL (if the slot is empty). The H ASH -I NSERT procedure takes as
+      input a hash table T and a key k. It either returns the slot number where it stores
+      key k or ﬂags an error because the hash table is already full.
+
+      H ASH -I NSERT .T; k/
+      1 i D0
+      2 repeat
+      3        j D h.k; i/
+      4        if T Œj  == NIL
+      5              T Œj  D k
+      6              return j
+      7        else i D i C 1
+      8 until i == m
+      9 error “hash table overﬂow”
+
+         The algorithm for searching for key k probes the same sequence of slots that the
+      insertion algorithm examined when key k was inserted. Therefore, the search can
+

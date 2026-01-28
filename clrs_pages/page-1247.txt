@@ -1,0 +1,47 @@
+1226       Appendix D     Matrices
+
+
+           D.2-3
+           Prove that if P is a permutation matrix, then P is invertible, its inverse is P T ,
+           and P T is a permutation matrix.
+
+           D.2-4
+           Let A and B be n n matrices such that AB D I . Prove that if A0 is obtained
+           from A by adding row j into row i, then subtracting column i from column j of B
+           yields the inverse B 0 of A0 .
+
+           D.2-5
+           Let A be a nonsingular n n matrix with complex entries. Show that every entry
+           of A1 is real if and only if every entry of A is real.
+
+           D.2-6
+           Show that if A is a nonsingular, symmetric, n n matrix, then A1 is symmetric.
+           Show that if B is an arbitrary m n matrix, then the m m matrix given by the
+           product BAB T is symmetric.
+
+           D.2-7
+           Prove Theorem D.2. That is, show that a matrix A has full column rank if and only
+           if Ax D 0 implies x D 0. (Hint: Express the linear dependence of one column on
+           the others as a matrix-vector equation.)
+
+           D.2-8
+           Prove that for any two compatible matrices A and B,
+           rank.AB/  min.rank.A/; rank.B// ;
+           where equality holds if either A or B is a nonsingular square matrix. (Hint: Use
+           the alternate deﬁnition of the rank of a matrix.)
+
+
+
+Problems
+
+           D-1 Vandermonde matrix
+           Given numbers x0 ; x1 ; : : : ; xn1 , prove that the determinant of the Vandermonde
+           matrix
+                                           ˙1 x   0    x02      x0n1
+                                                                           
+                                            1    x1    x12      x1n1
+           V .x0 ; x1 ; : : : ; xn1 / D    ::    ::    ::   ::       ::
+                                             :     :     :       :     :
+                                                    2                n1
+                                            1 xn1 xn1         xn1
+

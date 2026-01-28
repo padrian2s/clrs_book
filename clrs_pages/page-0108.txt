@@ -1,0 +1,43 @@
+4.3 The substitution method for solving recurrences                               87
+
+
+which is very much like recurrence (4.19). Indeed, this new recurrence has the
+same solution: S.m/ D O.m lg m/. Changing back from S.m/ to T .n/, we obtain
+T .n/ D T .2m / D S.m/ D O.m lg m/ D O.lg n lg lg n/ :
+
+
+Exercises
+
+4.3-1
+Show that the solution of T .n/ D T .n  1/ C n is O.n2 /.
+
+4.3-2
+Show that the solution of T .n/ D T .dn=2e/ C 1 is O.lg n/.
+
+4.3-3
+We saw that the solution of T .n/ D 2T .bn=2c/ C n is O.n lg n/. Show that the so-
+lution of this recurrence is also .n lg n/. Conclude that the solution is ‚.n lg n/.
+
+4.3-4
+Show that by making a different inductive hypothesis, we can overcome the difﬁ-
+culty with the boundary condition T .1/ D 1 for recurrence (4.19) without adjusting
+the boundary conditions for the inductive proof.
+
+4.3-5
+Show that ‚.n lg n/ is the solution to the “exact” recurrence (4.3) for merge sort.
+
+4.3-6
+Show that the solution to T .n/ D 2T .bn=2c C 17/ C n is O.n lg n/.
+
+4.3-7
+Using the master method in Section 4.5, you can show that the solution to the
+recurrence T .n/ D 4T .n=3/ C n is T .n/ D ‚.nlog3 4 /. Show that a substitution
+proof with the assumption T .n/  cnlog3 4 fails. Then show how to subtract off a
+lower-order term to make a substitution proof work.
+
+4.3-8
+Using the master method in Section 4.5, you can show that the solution to the
+recurrence T .n/ D 4T .n=2/ C n2 is T .n/ D ‚.n2 /. Show that a substitution
+proof with the assumption T .n/  cn2 fails. Then show how to subtract off a
+lower-order term to make a substitution proof work.
+

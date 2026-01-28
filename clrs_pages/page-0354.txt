@@ -1,0 +1,45 @@
+Problems for Chapter 13                                                          333
+
+
+e. Argue that no generality is lost by making the assumption in part (b). Describe
+   the symmetric situation that arises when T1 :bh  T2 :bh.
+
+f. Argue that the running time of RB-J OIN is O.lg n/.
+
+13-3 AVL trees
+An AVL tree is a binary search tree that is height balanced: for each node x, the
+heights of the left and right subtrees of x differ by at most 1. To implement an AVL
+tree, we maintain an extra attribute in each node: x:h is the height of node x. As
+for any other binary search tree T , we assume that T:root points to the root node.
+a. Prove that an AVL tree with n nodes has height O.lg n/. (Hint: Prove that
+   an AVL tree of height h has at least Fh nodes, where Fh is the hth Fibonacci
+   number.)
+
+b. To insert into an AVL tree, we ﬁrst place a node into the appropriate place in bi-
+   nary search tree order. Afterward, the tree might no longer be height balanced.
+   Speciﬁcally, the heights of the left and right children of some node might differ
+   by 2. Describe a procedure BALANCE .x/, which takes a subtree rooted at x
+   whose left and right children are height balanced and have heights that differ
+   by at most 2, i.e., jx:right:h  x:left:hj  2, and alters the subtree rooted at x
+   to be height balanced. (Hint: Use rotations.)
+
+c. Using part (b), describe a recursive procedure AVL-I NSERT .x; ´/ that takes
+   a node x within an AVL tree and a newly created node ´ (whose key has al-
+   ready been ﬁlled in), and adds ´ to the subtree rooted at x, maintaining the
+   property that x is the root of an AVL tree. As in T REE -I NSERT from Sec-
+   tion 12.3, assume that ´:key has already been ﬁlled in and that ´:left D NIL
+   and ´:right D NIL; also assume that ´:h D 0. Thus, to insert the node ´ into
+   the AVL tree T , we call AVL-I NSERT .T:root; ´/.
+
+d. Show that AVL-I NSERT, run on an n-node AVL tree, takes O.lg n/ time and
+   performs O.1/ rotations.
+
+13-4 Treaps
+If we insert a set of n items into a binary search tree, the resulting tree may be
+horribly unbalanced, leading to long search times. As we saw in Section 12.4,
+however, randomly built binary search trees tend to be balanced. Therefore, one
+strategy that, on average, builds a balanced tree for a ﬁxed set of items would be to
+randomly permute the items and then insert them in that order into the tree.
+   What if we do not have all the items at once? If we receive the items one at a
+time, can we still randomly build a binary search tree out of them?
+

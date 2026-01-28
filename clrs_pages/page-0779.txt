@@ -1,0 +1,43 @@
+758   Chapter 26 Maximum Flow
+
+
+         To see that no vertex preceding u in L has excess ﬂow, we denote the vertex
+         that will be u in the next iteration by u0 . The vertices that will precede u0 in the
+         next iteration include the current u (due to line 11) and either no other vertices
+         (if u is relabeled) or the same vertices as before (if u is not relabeled). When u
+         is discharged, it has no excess ﬂow afterward. Thus, if u is relabeled during
+         the discharge, no vertices preceding u0 have excess ﬂow. If u is not relabeled
+         during the discharge, no vertices before it on the list acquired excess ﬂow during
+         this discharge, because L remained topologically sorted at all times during the
+         discharge (as just pointed out, admissible edges are created only by relabeling,
+         not pushing), and so each push operation causes excess ﬂow to move only to
+         vertices further down the list (or to s or t). Again, no vertices preceding u0 have
+         excess ﬂow.
+      Termination: When the loop terminates, u is just past the end of L, and so the
+         loop invariant ensures that the excess of every vertex is 0. Thus, no basic oper-
+         ations apply.
+
+      Analysis
+      We shall now show that R ELABEL -T O -F RONT runs in O.V 3 / time on any ﬂow
+      network G D .V; E/. Since the algorithm is an implementation of the generic
+      push-relabel algorithm, we shall take advantage of Corollary 26.21, which pro-
+      vides an O.V / bound on the number of relabel operations executed per vertex and
+      an O.V 2 / bound on the total number of relabel operations overall. In addition, Ex-
+      ercise 26.4-3 provides an O.VE/ bound on the total time spent performing relabel
+      operations, and Lemma 26.22 provides an O.VE/ bound on the total number of
+      saturating push operations.
+
+      Theorem 26.30
+      The running time of R ELABEL -T O -F RONT on any ﬂow network G D .V; E/
+      is O.V 3 /.
+
+      Proof Let us consider a “phase” of the relabel-to-front algorithm to be the time
+      between two consecutive relabel operations. There are O.V 2 / phases, since there
+      are O.V 2 / relabel operations. Each phase consists of at most jV j calls to D IS -
+      CHARGE, which we can see as follows. If D ISCHARGE does not perform a re-
+      label operation, then the next call to D ISCHARGE is further down the list L, and
+      the length of L is less than jV j. If D ISCHARGE does perform a relabel, the next
+      call to D ISCHARGE belongs to a different phase. Since each phase contains at
+      most jV j calls to D ISCHARGE and there are O.V 2 / phases, the number of times
+      D ISCHARGE is called in line 8 of R ELABEL -T O -F RONT is O.V 3 /. Thus, the total
+

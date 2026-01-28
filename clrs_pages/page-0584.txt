@@ -1,0 +1,48 @@
+21.1 Disjoint-set operations                                                                   563
+
+
+ a              b       e             f          h        j
+
+
+
+ c              d       g                        i
+
+                                (a)
+
+
+Edge processed                         Collection of disjoint sets
+     initial sets   {a}          {b}   {c} {d} {e}          {f} {g}   {h}     {i}   {j}
+        (b,d)       {a}          {b,d} {c}        {e}       {f} {g}   {h}     {i}   {j}
+        (e,g)       {a}          {b,d} {c}        {e,g}     {f}       {h}     {i}   {j}
+        (a,c)       {a,c}        {b,d}            {e,g}     {f}       {h}     {i}   {j}
+         (h,i)      {a,c}        {b,d}            {e,g}     {f}       {h,i}         {j}
+        (a,b)       {a,b,c,d}                     {e,g}     {f}       {h,i}         {j}
+        (e, f )     {a,b,c,d}                     {e, f,g}            {h,i}         {j}
+        (b,c)       {a,b,c,d}                     {e, f,g}            {h,i}         {j}
+
+                                           (b)
+
+
+Figure 21.1 (a) A graph with four connected components: fa; b; c; d g, fe; f; gg, fh; ig, and fj g.
+(b) The collection of disjoint sets after processing each edge.
+
+
+C ONNECTED -C OMPONENTS .G/
+1 for each vertex  2 G:V
+2      M AKE -S ET ./
+3 for each edge .u; / 2 G:E
+4      if F IND -S ET .u/ ¤ F IND -S ET ./
+5            U NION .u; /
+
+S AME -C OMPONENT .u; /
+1 if F IND -S ET .u/ == F IND -S ET ./
+2       return TRUE
+3 else return FALSE
+
+The procedure C ONNECTED -C OMPONENTS initially places each vertex  in its
+own set. Then, for each edge .u; /, it unites the sets containing u and . By
+Exercise 21.1-2, after processing all the edges, two vertices are in the same con-
+nected component if and only if the corresponding objects are in the same set.
+Thus, C ONNECTED -C OMPONENTS computes sets in such a way that the proce-
+dure S AME -C OMPONENT can determine whether two vertices are in the same con-
+

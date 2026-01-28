@@ -1,0 +1,51 @@
+622   Chapter 22 Elementary Graph Algorithms
+
+
+
+
+                                 2
+               1                                                                 6
+                                                     4
+                                 3
+
+                                                                     5
+
+
+
+
+      Figure 22.10 The articulation points, bridges, and biconnected components of a connected, undi-
+      rected graph for use in Problem 22-2. The articulation points are the heavily shaded vertices, the
+      bridges are the heavily shaded edges, and the biconnected components are the edges in the shaded
+      regions, with a bcc numbering shown.
+
+
+      these deﬁnitions. We can determine articulation points, bridges, and biconnected
+      components using depth-ﬁrst search. Let G D .V; E / be a depth-ﬁrst tree of G.
+      a. Prove that the root of G is an articulation point of G if and only if it has at
+         least two children in G .
+
+      b. Let  be a nonroot vertex of G . Prove that  is an articulation point of G if and
+         only if  has a child s such that there is no back edge from s or any descendant
+         of s to a proper ancestor of .
+
+      c. Let
+                          (
+                              :d ;
+          :low D min
+                              w:d W .u; w/ is a back edge for some descendant u of  :
+
+          Show how to compute :low for all vertices  2 V in O.E/ time.
+
+      d. Show how to compute all articulation points in O.E/ time.
+
+      e. Prove that an edge of G is a bridge if and only if it does not lie on any simple
+         cycle of G.
+
+      f. Show how to compute all the bridges of G in O.E/ time.
+
+      g. Prove that the biconnected components of G partition the nonbridge edges of G.
+
+      h. Give an O.E/-time algorithm to label each edge e of G with a positive in-
+         teger e:bcc such that e:bcc D e 0 :bcc if and only if e and e 0 are in the same
+         biconnected component.
+

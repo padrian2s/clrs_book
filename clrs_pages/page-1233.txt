@@ -1,0 +1,59 @@
+1212   Appendix C      Counting and Probability
+
+
+       theorem to provide a bound on the right tail of the binomial distribution by setting
+       pi D p for each trial.
+
+       Theorem C.8
+       Consider a sequence of n Bernoulli trials, where in the ith trial, for i D 1; 2; : : : ; n,
+       success occurs with probability pi and failure occurs with probability qi D 1  pi .
+       Let X be the random variable describing the total number of successes, and let
+         D E ŒX . Then for r > ,
+                           e r
+       Pr fX   rg              :
+                            r
+
+       Proof  Since for any ˛ > 0, the function e ˛x is strictly increasing in x,
+                            ˚
+       Pr fX   rg D Pr e ˛.X /  e ˛r ;                                                  (C.43)
+       where we will determine ˛ later. Using Markov’s inequality (C.30), we obtain
+          ˚                                
+       Pr e ˛.X /  e ˛r  E e ˛.X / e ˛r :                                               (C.44)
+                                                              ˛.X / 
+          The bulk of the proof consists of bounding E e                 and  substituting
+                                                                            ˛.X           a suit-
+                                                                                    /
+       able value for ˛ in inequality (C.44). First, we evaluate E e                    . Using the
+       technique of indicator random variables (see Section 5.2), let Xi D I fthe ith
+       Bernoulli trial is a successg for i D 1; 2; : : : ; n; that is, Xi is the random vari-
+       able that is 1 if the ith Bernoulli trial is a success and 0 if it is a failure. Thus,
+             Xn
+       XD         Xi ;
+               i D1
+
+       and by linearity of expectation,
+                        " n     #
+                         X           Xn           X
+                                                  n
+         D E ŒX  D E        Xi D       E ŒXi  D   pi ;
+                                i D1          i D1     i D1
+
+       which implies
+                Xn
+       X D         .Xi  pi / :
+                      i D1
+                            
+       To evaluate E e ˛.X / , we substitute for X  , obtaining
+                          Pn              
+       E e ˛.X / D E e ˛ i D1 .Xi pi /
+                           " n               #
+                            Y
+                                  ˛.Xi pi /
+                    D E         e
+                                       i D1
+                               Y
+                               n
+                                              
+                             D   E e ˛.Xi pi / ;
+                                i D1
+

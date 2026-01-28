@@ -1,0 +1,40 @@
+452        Chapter 17 Amortized Analysis
+
+
+              While reading this chapter, bear in mind that the charges assigned during an
+           amortized analysis are for analysis purposes only. They need not—and should
+           not—appear in the code. If, for example, we assign a credit to an object x when
+           using the accounting method, we have no need to assign an appropriate amount to
+           some attribute, such as x:credit, in the code.
+              When we perform an amortized analysis, we often gain insight into a particular
+           data structure, and this insight can help us optimize the design. In Section 17.4,
+           for example, we shall use the potential method to analyze a dynamically expanding
+           and contracting table.
+
+
+17.1 Aggregate analysis
+
+           In aggregate analysis, we show that for all n, a sequence of n operations takes
+           worst-case time T .n/ in total. In the worst case, the average cost, or amortized
+           cost, per operation is therefore T .n/=n. Note that this amortized cost applies to
+           each operation, even when there are several types of operations in the sequence.
+           The other two methods we shall study in this chapter, the accounting method and
+           the potential method, may assign different amortized costs to different types of
+           operations.
+
+           Stack operations
+           In our ﬁrst example of aggregate analysis, we analyze stacks that have been aug-
+           mented with a new operation. Section 10.1 presented the two fundamental stack
+           operations, each of which takes O.1/ time:
+           P USH .S; x/ pushes object x onto stack S.
+           P OP.S/ pops the top of stack S and returns the popped object. Calling P OP on an
+              empty stack generates an error.
+           Since each of these operations runs in O.1/ time, let us consider the cost of each
+           to be 1. The total cost of a sequence of n P USH and P OP operations is therefore n,
+           and the actual running time for n operations is therefore ‚.n/.
+              Now we add the stack operation M ULTIPOP .S; k/, which removes the k top ob-
+           jects of stack S, popping the entire stack if the stack contains fewer than k objects.
+           Of course, we assume that k is positive; otherwise the M ULTIPOP operation leaves
+           the stack unchanged. In the following pseudocode, the operation S TACK -E MPTY
+           returns TRUE if there are no objects currently on the stack, and FALSE otherwise.
+

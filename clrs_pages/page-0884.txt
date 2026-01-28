@@ -1,0 +1,47 @@
+29.2 Formulating problems as linear programs                                                   863
+
+
+allel edges. In addition, we are given k different commodities, K1 ; K2 ; : : : ; Kk ,
+where we specify commodity i by the triple Ki D .si ; ti ; di /. Here, vertex si is
+the source of commodity i, vertex ti is the sink of commodity i, and di is the de-
+mand for commodity i, which is the desired ﬂow value for the commodity from si
+to ti . We deﬁne a ﬂow for commodity i, denoted by fi , (so that fi u is the ﬂow of
+commodity i from vertex u to vertex ) to be a real-valued function that satisﬁes
+the ﬂow-conservation and capacity constraints. We now deﬁne fu , the aggregate
+                                                                    Pk
+ﬂow, to be the sum of the various commodity ﬂows, so that fu D i D1 fi u . The
+aggregate ﬂow on edge .u; / must be no more than the capacity of edge .u; /.
+We are not trying to minimize any objective function in this problem; we need
+only determine whether such a ﬂow exists. Thus, we write a linear program with a
+“null” objective function:
+minimize                                   0
+subject to
+                                 X
+                                 k
+                                        fi u    c.u; / for each u;  2 V ;
+                                 i D1
+                X                X
+                      fi u            fi u D 0           for each i D 1; 2; : : : ; k and
+                2V              2V                        for each u 2 V  fsi ; ti g ;
+             X                  X
+                   fi;si ;          fi;;si   D di        for each i D 1; 2; : : : ; k ;
+             2V                2V
+                                        fi u    0         for each u;  2 V and
+                                                            for each i D 1; 2; : : : ; k :
+The only known polynomial-time algorithm for this problem expresses it as a linear
+program and then solves it with a polynomial-time linear-programming algorithm.
+
+Exercises
+
+29.2-1
+Put the single-pair shortest-path linear program from (29.44)–(29.46) into standard
+form.
+
+29.2-2
+Write out explicitly the linear program corresponding to ﬁnding the shortest path
+from node s to node y in Figure 24.2(a).
+
+29.2-3
+In the single-source shortest-paths problem, we want to ﬁnd the shortest-path
+weights from a source vertex s to all vertices  2 V . Given a graph G, write a
+

@@ -1,0 +1,56 @@
+922   Chapter 30 Polynomials and the FFT
+
+
+      c. Show that if we compute each 1-dimensional DFT by computing the fast Four-
+         ier transform, the total time to compute a d -dimensional DFT is O.n lg n/,
+         independent of d .
+
+      30-4 Evaluating all derivatives of a polynomial at a point
+
+                    „ A.x/
+      Given a polynomial A.x/ of degree-bound n, we deﬁne its tth derivative by
+
+                                         if t D 0 ;
+
+      A.t / .x/ D
+                        d
+                        dx
+                           A.t 1/ .x/   if 1  t  n  1 ;
+
+                        0                if t  n :
+      From the coefﬁcient representation .a0 ; a1 ; : : : ; an1 / of A.x/ and a given point x0 ,
+      we wish to determine A.t / .x0 / for t D 0; 1; : : : ; n  1.
+
+      a. Given coefﬁcients b0 ; b1 ; : : : ; bn1 such that
+
+                    X
+                    n1
+         A.x/ D             bj .x  x0 /j ;
+                    j D0
+
+
+         show how to compute A.t / .x0 /, for t D 0; 1; : : : ; n  1, in O.n/ time.
+
+      b. Explain how to ﬁnd b0 ; b1 ; : : : ; bn1 in O.n lg n/ time, given A.x0 C !nk / for
+         k D 0; 1; : : : ; n  1.
+
+      c. Prove that
+                                                              !
+                               X
+                               n1
+                                   !nkr X
+                                        n1
+         A.x0 C !nk / D                     f .j /g.r  j /       ;
+                               rD0
+                                    rŠ j D0
+
+         where f .j / D aj  j Š and
+                    (
+                        x0l =.l/Š if .n  1/  l  0 ;
+         g.l/ D
+                        0           if 1  l  n  1 :
+
+      d. Explain how to evaluate A.x0 C !nk / for k D 0; 1; : : : ; n  1 in O.n lg n/
+         time. Conclude that we can evaluate all nontrivial derivatives of A.x/ at x0 in
+         O.n lg n/ time.
+

@@ -1,0 +1,55 @@
+22.3 Depth-ﬁrst search                                                                             607
+
+
+
+
+            y                    z                    s                t
+           3/6                  2/9                 1/10             11/16
+
+                    B                       F
+(a)                                                      C               B
+
+
+           4/5                  7/8                 12/13            14/15
+            x       C            w          C         v      C         u
+
+
+
+
+                                s                                    t
+
+                                z                                v       u
+
+(b)                     y               w
+
+                        x
+
+         1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+        (s (z (y (x x) y) (w w) z) s) (t (v v) (u u) t)
+
+
+
+
+                            s                                    t
+                                        C                                B
+
+                                    F                            C
+                            z                        v                       u
+            B                                   C
+(c)
+                y                       w
+                            C
+
+                x
+
+
+
+Figure 22.5 Properties of depth-ﬁrst search. (a) The result of a depth-ﬁrst search of a directed
+graph. Vertices are timestamped and edge types are indicated as in Figure 22.4. (b) Intervals for
+the discovery time and ﬁnishing time of each vertex correspond to the parenthesization shown. Each
+rectangle spans the interval given by the discovery and ﬁnishing times of the corresponding vertex.
+Only tree edges are shown. If two intervals overlap, then one is nested within the other, and the
+vertex corresponding to the smaller interval is a descendant of the vertex corresponding to the larger.
+(c) The graph of part (a) redrawn with all tree and forward edges going down within a depth-ﬁrst tree
+and all back edges going up from a descendant to an ancestor.
+

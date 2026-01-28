@@ -1,0 +1,42 @@
+416   Chapter 16 Greedy Algorithms
+
+
+      The optimal substructure of the activity-selection problem
+      We can easily verify that the activity-selection problem exhibits optimal substruc-
+      ture. Let us denote by Sij the set of activities that start after activity ai ﬁnishes and
+      that ﬁnish before activity aj starts. Suppose that we wish to ﬁnd a maximum set of
+      mutually compatible activities in Sij , and suppose further that such a maximum set
+      is Aij , which includes some activity ak . By including ak in an optimal solution, we
+      are left with two subproblems: ﬁnding mutually compatible activities in the set Si k
+      (activities that start after activity ai ﬁnishes and that ﬁnish before activity ak starts)
+      and ﬁnding mutually compatible activities in the set Skj (activities that start after
+      activity ak ﬁnishes and that ﬁnish before activity aj starts). Let Ai k D Aij \ Si k
+      and Akj D Aij \ Skj , so that Ai k contains the activities in Aij that ﬁnish before ak
+      starts and Akj contains the activities in Aij that start after ak ﬁnishes. Thus, we
+      have Aij D Ai k [ fak g [ Akj , and so the maximum-size set Aij of mutually com-
+      patible activities in Sij consists of jAij j D jAi k j C jAkj j C 1 activities.
+         The usual cut-and-paste argument shows that the optimal solution Aij must also
+      include optimal solutions to the two subproblems for Si k and Skj . If we could
+      ﬁnd a set A0kj of mutually compatible activities in Skj where jA0kj j > jAkj j, then
+      we could use A0kj , rather than Akj , in a solution to the subproblem for Sij . We
+      would have constructed a set of jAi k j C jA0kj j C 1 > jAi k j C jAkj j C 1 D jAij j
+      mutually compatible activities, which contradicts the assumption that Aij is an
+      optimal solution. A symmetric argument applies to the activities in Si k .
+         This way of characterizing optimal substructure suggests that we might solve
+      the activity-selection problem by dynamic programming. If we denote the size of
+      an optimal solution for the set Sij by cŒi; j , then we would have the recurrence
+      cŒi; j  D cŒi; k C cŒk; j  C 1 :
+      Of course, if we did not know that an optimal solution for the set Sij includes
+      activity ak , we would have to examine all activities in Sij to ﬁnd which one to
+      choose, so that
+                (
+                   0                           if Sij D ; ;
+      cŒi; j  D max fcŒi; k C cŒk; j  C 1g if S ¤ ; :                        (16.2)
+                                                   ij
+                   ak 2Sij
+
+      We could then develop a recursive algorithm and memoize it, or we could work
+      bottom-up and ﬁll in table entries as we go along. But we would be overlooking
+      another important characteristic of the activity-selection problem that we can use
+      to great advantage.
+

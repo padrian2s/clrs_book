@@ -1,0 +1,43 @@
+1080   Chapter 34 NP-Completeness
+
+
+        D ..x1 ! x2 / _ :..:x1 $ x3 / _ x4 // ^ :x2
+       has the satisfying assignment hx1 D 0; x2 D 0; x3 D 1; x4 D 1i, since
+        D     ..0 ! 0/ _ :..:0 $ 1/ _ 1// ^ :0                                     (34.2)
+         D     .1 _ :.1 _ 1// ^ 1
+         D     .1 _ 0/ ^ 1
+         D     1;
+       and thus this formula  belongs to SAT.
+          The naive algorithm to determine whether an arbitrary boolean formula is satis-
+       ﬁable does not run in polynomial time. A formula with n variables has 2n possible
+       assignments. If the length of hi is polynomial in n, then checking every assign-
+       ment requires .2n / time, which is superpolynomial in the length of hi. As the
+       following theorem shows, a polynomial-time algorithm is unlikely to exist.
+
+       Theorem 34.9
+       Satisﬁability of boolean formulas is NP-complete.
+
+       Proof We start by arguing that SAT 2 NP. Then we prove that SAT is NP-hard by
+       showing that CIRCUIT-SAT P SAT; by Lemma 34.8, this will prove the theorem.
+          To show that SAT belongs to NP, we show that a certiﬁcate consisting of a
+       satisfying assignment for an input formula  can be veriﬁed in polynomial time.
+       The verifying algorithm simply replaces each variable in the formula with its cor-
+       responding value and then evaluates the expression, much as we did in equa-
+       tion (34.2) above. This task is easy to do in polynomial time. If the expression
+       evaluates to 1, then the algorithm has veriﬁed that the formula is satisﬁable. Thus,
+       the ﬁrst condition of Lemma 34.8 for NP-completeness holds.
+          To prove that SAT is NP-hard, we show that CIRCUIT-SAT P SAT. In other
+       words, we need to show how to reduce any instance of circuit satisﬁability to an
+       instance of formula satisﬁability in polynomial time. We can use induction to
+       express any boolean combinational circuit as a boolean formula. We simply look
+       at the gate that produces the circuit output and inductively express each of the
+       gate’s inputs as formulas. We then obtain the formula for the circuit by writing an
+       expression that applies the gate’s function to its inputs’ formulas.
+          Unfortunately, this straightforward method does not amount to a polynomial-
+       time reduction. As Exercise 34.4-1 asks you to show, shared subformulas—which
+       arise from gates whose output wires have fan-out of 2 or more—can cause the
+       size of the generated formula to grow exponentially. Thus, the reduction algorithm
+       must be somewhat more clever.
+          Figure 34.10 illustrates how we overcome this problem, using as an example
+       the circuit from Figure 34.8(a). For each wire xi in the circuit C , the formula 
+

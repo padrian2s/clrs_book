@@ -1,0 +1,45 @@
+418   Chapter 16 Greedy Algorithms
+
+
+      Theorem 16.1
+      Consider any nonempty subproblem Sk , and let am be an activity in Sk with the
+      earliest ﬁnish time. Then am is included in some maximum-size subset of mutually
+      compatible activities of Sk .
+
+      Proof Let Ak be a maximum-size subset of mutually compatible activities in Sk ,
+      and let aj be the activity in Ak with the earliest ﬁnish time. If aj D am , we are
+      done, since we have shown that am is in some maximum-size subset of mutually
+      compatible activities of Sk . If aj ¤ am , let the set A0k D Ak  faj g [ fam g be Ak
+      but substituting am for aj . The activities in A0k are disjoint, which follows because
+      the activities in Ak are disjoint, aj is the ﬁrst activity in Ak to ﬁnish, and fm  fj .
+      Since jA0k j D jAk j, we conclude that A0k is a maximum-size subset of mutually
+      compatible activities of Sk , and it includes am .
+
+         Thus, we see that although we might be able to solve the activity-selection prob-
+      lem with dynamic programming, we don’t need to. (Besides, we have not yet
+      examined whether the activity-selection problem even has overlapping subprob-
+      lems.) Instead, we can repeatedly choose the activity that ﬁnishes ﬁrst, keep only
+      the activities compatible with this activity, and repeat until no activities remain.
+      Moreover, because we always choose the activity with the earliest ﬁnish time, the
+      ﬁnish times of the activities we choose must strictly increase. We can consider
+      each activity just once overall, in monotonically increasing order of ﬁnish times.
+         An algorithm to solve the activity-selection problem does not need to work
+      bottom-up, like a table-based dynamic-programming algorithm. Instead, it can
+      work top-down, choosing an activity to put into the optimal solution and then solv-
+      ing the subproblem of choosing activities from those that are compatible with those
+      already chosen. Greedy algorithms typically have this top-down design: make a
+      choice and then solve a subproblem, rather than the bottom-up technique of solving
+      subproblems before making a choice.
+
+      A recursive greedy algorithm
+      Now that we have seen how to bypass the dynamic-programming approach and in-
+      stead use a top-down, greedy algorithm, we can write a straightforward, recursive
+      procedure to solve the activity-selection problem. The procedure R ECURSIVE -
+      ACTIVITY-S ELECTOR takes the start and ﬁnish times of the activities, represented
+      as arrays s and f ,2 the index k that deﬁnes the subproblem Sk it is to solve, and
+
+
+      2 Because the pseudocode takes s and f as arrays, it indexes into them with square brackets rather
+
+      than subscripts.
+

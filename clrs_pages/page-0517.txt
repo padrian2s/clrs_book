@@ -1,0 +1,47 @@
+496   Chapter 18 B-Trees
+
+
+                                                                 T:root
+                                                                           s
+                                                                          H
+           T:root
+                    r                                       r
+       A D F H L N P                                     A D F                  L N P
+
+
+      T1 T2 T3 T4 T5 T6 T7 T8                          T1 T2 T3 T4             T5 T6 T7 T8
+
+
+
+      Figure 18.6 Splitting the root with t D 4. Root node r splits in two, and a new root node s is
+      created. The new root contains the median key of r and has the two halves of r as children. The
+      B-tree grows in height by one when the root is split.
+
+
+      B-T REE -I NSERT-N ONFULL .x; k/
+       1 i D x:n
+       2 if x:leaf
+       3       while i  1 and k < x:keyi
+       4            x:keyi C1 D x:keyi
+       5            i D i 1
+       6       x:keyi C1 D k
+       7       x:n D x:n C 1
+       8       D ISK -W RITE .x/
+       9 else while i  1 and k < x:keyi
+      10            i D i 1
+      11       i D i C1
+      12       D ISK -R EAD .x:ci /
+      13       if x:ci :n == 2t  1
+      14            B-T REE -S PLIT-C HILD .x; i/
+      15            if k > x:keyi
+      16                  i D i C1
+      17       B-T REE -I NSERT-N ONFULL .x:ci ; k/
+
+         The B-T REE -I NSERT-N ONFULL procedure works as follows. Lines 3–8 handle
+      the case in which x is a leaf node by inserting key k into x. If x is not a leaf
+      node, then we must insert k into the appropriate leaf node in the subtree rooted
+      at internal node x. In this case, lines 9–11 determine the child of x to which the
+      recursion descends. Line 13 detects whether the recursion would descend to a full
+      child, in which case line 14 uses B-T REE -S PLIT-C HILD to split that child into two
+      nonfull children, and lines 15–16 determine which of the two children is now the
+

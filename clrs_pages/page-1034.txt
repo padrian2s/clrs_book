@@ -1,0 +1,41 @@
+           Notes for Chapter 32                                                               1013
+
+
+           b. For any pattern P Œ1 : : m, let  .P / be deﬁned as max1i m .Pi /. Prove that if
+              the pattern P is chosen randomly from the set of all binary strings of length m,
+              then the expected value of  .P / is O.1/.
+
+           c. Argue that the following string-matching algorithm correctly ﬁnds all occur-
+              rences of pattern P in a text T Œ1 : : n in time O. .P /n C m/:
+
+                R EPETITION -M ATCHER .P; T /
+                 1 m D P:length
+                 2 n D T:length
+                 3 k D 1 C  .P /
+                 4 q D0
+                 5 s D0
+                 6 while s  n  m
+                 7       if T Œs C q C 1 == P Œq C 1
+                 8             q D qC1
+                 9             if q == m
+                10                  print “Pattern occurs with shift” s
+                11       if q == m or T Œs C q C 1 ¤ P Œq C 1
+                12             s D s C max.1; dq=ke/
+                13             q D0
+
+                This algorithm is due to Galil and Seiferas. By extending these ideas greatly,
+                they obtained a linear-time string-matching algorithm that uses only O.1/ stor-
+                age beyond what is required for P and T .
+
+
+Chapter notes
+
+           The relation of string matching to the theory of ﬁnite automata is discussed by
+           Aho, Hopcroft, and Ullman [5]. The Knuth-Morris-Pratt algorithm [214] was
+           invented independently by Knuth and Pratt and by Morris; they published their
+           work jointly. Reingold, Urban, and Gries [294] give an alternative treatment of the
+           Knuth-Morris-Pratt algorithm. The Rabin-Karp algorithm was proposed by Karp
+           and Rabin [201]. Galil and Seiferas [126] give an interesting deterministic linear-
+           time string-matching algorithm that uses only O.1/ space beyond that required to
+           store the pattern and text.
+

@@ -1,0 +1,44 @@
+16.1 An activity-selection problem                                                     421
+
+
+   The procedure G REEDY-ACTIVITY-S ELECTOR is an iterative version of the pro-
+cedure R ECURSIVE -ACTIVITY-S ELECTOR. It also assumes that the input activi-
+ties are ordered by monotonically increasing ﬁnish time. It collects selected activ-
+ities into a set A and returns this set when it is done.
+
+G REEDY-ACTIVITY-S ELECTOR .s; f /
+1 n D s:length
+2 A D fa1 g
+3 k D1
+4 for m D 2 to n
+5      if sŒm  f Œk
+6           A D A [ fam g
+7           k Dm
+8 return A
+
+   The procedure works as follows. The variable k indexes the most recent addition
+to A, corresponding to the activity ak in the recursive version. Since we consider
+the activities in order of monotonically increasing ﬁnish time, fk is always the
+maximum ﬁnish time of any activity in A. That is,
+fk D max ffi W ai 2 Ag :                                                            (16.3)
+Lines 2–3 select activity a1 , initialize A to contain just this activity, and initialize k
+to index this activity. The for loop of lines 4–7 ﬁnds the earliest activity in Sk to
+ﬁnish. The loop considers each activity am in turn and adds am to A if it is compat-
+ible with all previously selected activities; such an activity is the earliest in Sk to
+ﬁnish. To see whether activity am is compatible with every activity currently in A,
+it sufﬁces by equation (16.3) to check (in line 5) that its start time sm is not earlier
+than the ﬁnish time fk of the activity most recently added to A. If activity am is
+compatible, then lines 6–7 add activity am to A and set k to m. The set A returned
+by the call G REEDY-ACTIVITY-S ELECTOR .s; f / is precisely the set returned by
+the call R ECURSIVE -ACTIVITY-S ELECTOR .s; f; 0; n/.
+   Like the recursive version, G REEDY-ACTIVITY-S ELECTOR schedules a set of n
+activities in ‚.n/ time, assuming that the activities were already sorted initially by
+their ﬁnish times.
+
+Exercises
+
+16.1-1
+Give a dynamic-programming algorithm for the activity-selection problem, based
+on recurrence (16.2). Have your algorithm compute the sizes cŒi; j  as deﬁned
+above and also produce the maximum-size subset of mutually compatible activities.
+

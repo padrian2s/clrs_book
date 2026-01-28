@@ -1,0 +1,47 @@
+D.1 Matrices and matrix operations                                             1219
+
+
+   When I appears without a subscript, we derive its size from the context. The ith
+   column of an identity matrix is the unit vector ei .
+3. A tridiagonal matrix T is one for which tij D 0 if ji  j j > 1. Nonzero entries
+   appear only on the main diagonal, immediately above the main diagonal (ti;i C1
+
+
+                                                                     ˘
+   for i D 1; 2; : : : ; n  1), or immediately below the main diagonal (ti C1;i for
+   i D 1; 2; : : : ; n  1):
+
+              t11 t12 0   0          :::        0      0       0
+              t21 t22 t23 0          :::        0      0       0
+               0 t32 t33 t34         :::        0      0       0
+   T D         ::  ::  :: ::         ::         ::     ::      ::         :
+                :   :   :  :            :        :      :       :
+               0   0 0    0          : : : tn2;n2 tn2;n1    0
+               0   0 0    0          : : : tn1;n2 tn1;n1 tn1;n
+               0   0 0    0          :::      0      tn;n1    tnn
+
+4. An upper-triangular matrix U is one for which uij D 0 if i > j . All entries
+   below the diagonal are zero:
+         ˙u         u12 : : : u1n
+                                     
+              11
+              0     u22 : : : u2n
+   U D        ::     :: ::     ::           :
+               :      :     :   :
+              0      0 : : : unn
+
+   An upper-triangular matrix is unit upper-triangular if it has all 1s along the
+   diagonal.
+5. A lower-triangular matrix L is one for which lij D 0 if i < j . All entries
+   above the diagonal are zero:
+         ˙l         0 ::: 0
+                                   
+             11
+            l21    l22 : : : 0
+   LD        ::     :: : :    :        :
+              :      :     : ::
+            ln1    ln2 : : : lnn
+
+   A lower-triangular matrix is unit lower-triangular if it has all 1s along the
+   diagonal.
+

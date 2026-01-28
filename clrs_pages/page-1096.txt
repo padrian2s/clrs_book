@@ -1,0 +1,47 @@
+34.3 NP-completeness and reducibility                                                           1075
+
+
+
+
+ c0         A          PC      aux machine state         x        y     working storage
+
+
+
+                                               M
+
+
+
+ c1         A          PC      aux machine state         x        y     working storage
+
+
+
+                                               M
+
+
+
+ c2         A          PC      aux machine state         x        y     working storage
+
+
+
+                                               M
+
+
+
+                                              …
+                                               M
+
+
+
+cT(n)       A          PC      aux machine state         x        y     working storage
+
+
+                                                                        0/1 output
+
+
+Figure 34.9 The sequence of conﬁgurations produced by an algorithm A running on an input x and
+certiﬁcate y. Each conﬁguration represents the state of the computer for one step of the computation
+and, besides A, x, and y, includes the program counter (PC), auxiliary machine state, and working
+storage. Except for the certiﬁcate y, the initial conﬁguration c0 is constant. A boolean combinational
+circuit M maps each conﬁguration to the next conﬁguration. The output is a distinguished bit in the
+working storage.
+

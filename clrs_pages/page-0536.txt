@@ -1,0 +1,46 @@
+           19.2 Mergeable-heap operations                                                                          515
+
+
+                                    0 1 2 3                                                   0 1 2 3
+                               A                                                          A
+
+                              w,x                                                                      w,x
+(i)                7                21     18       52     38   (j)             7             21     18 52         38
+
+            24    17     23                39              41              24   17   23              39            41
+      26    46    30                                                  26   46   30
+
+      35                                                              35
+                                    0 1 2 3                                                   0 1 2 3
+                               A                                                          A
+                                               x                                                                w,x
+(k)                7                      18          38        (l)             7                   18        38
+
+            24    17     23          21        39     41                   24   17   23        21        39   41
+
+      26    46    30                 52 w                             26   46   30             52
+
+      35                                                              35
+                 H:min
+
+(m)                7                      18          38
+
+            24    17     23          21        39     41
+
+      26    46    30                 52
+
+      35
+
+
+
+           Figure 19.4, continued (i)–(l) The situation after each of the next four iterations of the for loop.
+           (m) Fibonacci heap H after reconstructing the root list from the array A and determining the new
+           H: min pointer.
+
+
+              The procedure C ONSOLIDATE uses an auxiliary array AŒ0 : : D.H:n/ to keep
+           track of roots according to their degrees. If AŒi D y, then y is currently a root
+           with y:degree D i. Of course, in order to allocate the array we have to know how
+           to calculate the upper bound D.H:n/ on the maximum degree, but we will see how
+           to do so in Section 19.4.
+

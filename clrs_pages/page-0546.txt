@@ -1,0 +1,51 @@
+19.4 Bounding the maximum degree                                                    525
+
+
+Lemma 19.4
+Let x be any node in a Fibonacci
+                           p heap, and let k D x:degree. Then size.x/ 
+FkC2   k , where  D .1 C 5/=2.
+
+Proof Let sk denote the minimum possible size of any node of degree k in any
+Fibonacci heap. Trivially, s0 D 1 and s1 D 2. The number sk is at most size.x/
+and, because adding children to a node cannot decrease the node’s size, the value
+of sk increases monotonically with k. Consider some node ´, in any Fibonacci
+heap, such that ´:degree D k and size.´/ D sk . Because sk  size.x/, we
+compute a lower bound on size.x/ by computing a lower bound on sk . As in
+Lemma 19.1, let y1 ; y2 ; : : : ; yk denote the children of ´ in the order in which they
+were linked to ´. To bound sk , we count one for ´ itself and one for the ﬁrst child y1
+(for which size.y1 /  1), giving
+size.x/  sk
+                      X
+                      k
+           2C               syi : degree
+                      i D2
+
+                      X
+                      k
+           2C               si 2 ;
+                      i D2
+
+where the last line follows from Lemma 19.1 (so that yi :degree  i  2) and the
+monotonicity of sk (so that syi : degree  si 2 ).
+  We now show by induction on k that sk  FkC2 for all nonnegative integers k.
+The bases, for k D 0 and k D 1, are trivial. For the inductive step, we assume that
+k  2 and that si  Fi C2 for i D 0; 1; : : : ; k  1. We have
+              X
+              k
+sk    2C            si 2
+              i D2
+
+              X
+              k
+      2C            Fi
+              i D2
+
+              X
+              k
+     D 1C            Fi
+              i D0
+     D FkC2                    (by Lemma 19.2)
+      k                      (by Lemma 19.3) .
+Thus, we have shown that size.x/  sk  FkC2   k .
+

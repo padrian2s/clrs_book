@@ -1,0 +1,46 @@
+34.3 NP-completeness and reducibility                                                       1069
+
+
+                                        yes, f .x/ 2 L2   yes, x 2 L1
+  x                   f .x/
+               F                   A2
+                                        no, f .x/ 62 L2   no, x 62 L1
+                              A1
+
+
+
+Figure 34.5 The proof of Lemma 34.3. The algorithm F is a reduction algorithm that computes the
+reduction function f from L1 to L2 in polynomial time, and A2 is a polynomial-time algorithm that
+decides L2 . Algorithm A1 decides whether x 2 L1 by using F to transform any input x into f .x/
+and then using A2 to decide whether f .x/ 2 L2 .
+
+
+why the “less than or equal to” notation for reduction is mnemonic. We can now
+deﬁne the set of NP-complete languages, which are the hardest problems in NP.
+  A language L  f0; 1g is NP-complete if
+1. L 2 NP, and
+2. L0 P L for every L0 2 NP.
+If a language L satisﬁes property 2, but not necessarily property 1, we say that L
+is NP-hard. We also deﬁne NPC to be the class of NP-complete languages.
+   As the following theorem shows, NP-completeness is at the crux of deciding
+whether P is in fact equal to NP.
+
+Theorem 34.4
+If any NP-complete problem is polynomial-time solvable, then P D NP. Equiva-
+lently, if any problem in NP is not polynomial-time solvable, then no NP-complete
+problem is polynomial-time solvable.
+
+Proof Suppose that L 2 P and also that L 2 NPC. For any L0 2 NP, we
+have L0 P L by property 2 of the deﬁnition of NP-completeness. Thus, by
+Lemma 34.3, we also have that L0 2 P, which proves the ﬁrst statement of the
+theorem.
+   To prove the second statement, note that it is the contrapositive of the ﬁrst state-
+ment.
+
+   It is for this reason that research into the P ¤ NP question centers around the
+NP-complete problems. Most theoretical computer scientists believe that P ¤ NP,
+which leads to the relationships among P, NP, and NPC shown in Figure 34.6.
+But, for all we know, someone may yet come up with a polynomial-time algo-
+rithm for an NP-complete problem, thus proving that P D NP. Nevertheless, since
+no polynomial-time algorithm for any NP-complete problem has yet been discov-
+

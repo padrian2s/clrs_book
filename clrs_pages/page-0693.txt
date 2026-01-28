@@ -1,0 +1,44 @@
+672   Chapter 24 Single-Source Shortest Paths
+
+
+      Proof We prove the invariant :d  ı.s; / for all vertices  2 V by induction
+      over the number of relaxation steps.
+         For the basis, :d  ı.s; / is certainly true after initialization, since :d D 1
+      implies :d  ı.s; / for all  2 V  fsg, and since s:d D 0  ı.s; s/ (note that
+      ı.s; s/ D 1 if s is on a negative-weight cycle and 0 otherwise).
+         For the inductive step, consider the relaxation of an edge .u; /. By the inductive
+      hypothesis, x:d  ı.s; x/ for all x 2 V prior to the relaxation. The only d value
+      that may change is :d. If it changes, we have
+      :d D u:d C w.u; /
+           ı.s; u/ C w.u; / (by the inductive hypothesis)
+           ı.s; /           (by the triangle inequality) ,
+      and so the invariant is maintained.
+        To see that the value of :d never changes once :d D ı.s; /, note that having
+      achieved its lower bound, :d cannot decrease because we have just shown that
+      :d  ı.s; /, and it cannot increase because relaxation steps do not increase d
+      values.
+
+      Corollary 24.12 (No-path property)
+      Suppose that in a weighted, directed graph G D .V; E/ with weight function
+      w W E ! R, no path connects a source vertex s 2 V to a given vertex  2 V .
+      Then, after the graph is initialized by I NITIALIZE -S INGLE -S OURCE .G; s/, we
+      have :d D ı.s; / D 1, and this equality is maintained as an invariant over
+      any sequence of relaxation steps on the edges of G.
+
+      Proof By the upper-bound property, we always have 1 D ı.s; /  :d, and
+      thus :d D 1 D ı.s; /.
+
+      Lemma 24.13
+      Let G D .V; E/ be a weighted, directed graph with weight function w W E ! R,
+      and let .u; / 2 E. Then, immediately after relaxing edge .u; / by executing
+      R ELAX .u; ; w/, we have :d  u:d C w.u; /.
+
+      Proof If, just prior to relaxing edge .u; /, we have :d > u:d C w.u; /, then
+      :d D u:d C w.u; / afterward. If, instead, :d  u:d C w.u; / just before
+      the relaxation, then neither u:d nor :d changes, and so :d  u:d C w.u; /
+      afterward.
+
+      Lemma 24.14 (Convergence property)
+      Let G D .V; E/ be a weighted, directed graph with weight function w W E ! R,
+      let s 2 V be a source vertex, and let s ; u !  be a shortest path in G for
+

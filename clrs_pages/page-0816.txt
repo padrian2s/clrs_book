@@ -1,0 +1,40 @@
+27.2 Multithreaded matrix multiplication                                         795
+
+
+after which we add the products from T into C in using the doubly nested parallel
+for loops in lines 15–17.
+   We ﬁrst analyze the work M1 .n/ of the P-M ATRIX -M ULTIPLY-R ECURSIVE
+procedure, echoing the serial running-time analysis of its progenitor S QUARE -
+M ATRIX -M ULTIPLY-R ECURSIVE. In the recursive case, we partition in ‚.1/ time,
+perform eight recursive multiplications of n=2 n=2 matrices, and ﬁnish up with
+the ‚.n2 / work from adding two n n matrices. Thus, the recurrence for the
+work M1 .n/ is
+M1 .n/ D 8M1 .n=2/ C ‚.n2 /
+       D ‚.n3 /
+by case 1 of the master theorem. In other words, the work of our multithreaded al-
+gorithm is asymptotically the same as the running time of the procedure S QUARE -
+M ATRIX -M ULTIPLY in Section 4.2, with its triply nested loops.
+   To determine the span M1 .n/ of P-M ATRIX -M ULTIPLY-R ECURSIVE, we ﬁrst
+observe that the span for partitioning is ‚.1/, which is dominated by the ‚.lg n/
+span of the doubly nested parallel for loops in lines 15–17. Because the eight
+parallel recursive calls all execute on matrices of the same size, the maximum span
+for any recursive call is just the span of any one. Hence, the recurrence for the
+span M1 .n/ of P-M ATRIX -M ULTIPLY-R ECURSIVE is
+M1 .n/ D M1 .n=2/ C ‚.lg n/ :                                                 (27.7)
+This recurrence does not fall under any of the cases of the master theorem, but
+it does meet the condition of Exercise 4.6-2. By Exercise 4.6-2, therefore, the
+solution to recurrence (27.7) is M1 .n/ D ‚.lg2 n/.
+   Now that we know the work and span of P-M ATRIX -M ULTIPLY-R ECURSIVE,
+we can compute its parallelism as M1 .n/=M1 .n/ D ‚.n3 = lg2 n/, which is very
+high.
+
+Multithreading Strassen’s method
+To multithread Strassen’s algorithm, we follow the same general outline as on
+page 79, only using nested parallelism:
+1. Divide the input matrices A and B and output matrix C into n=2 n=2 sub-
+   matrices, as in equation (27.6). This step takes ‚.1/ work and span by index
+   calculation.
+2. Create 10 matrices S1 ; S2 ; : : : ; S10 , each of which is n=2 n=2 and is the sum
+   or difference of two matrices created in step 1. We can create all 10 matrices
+   with ‚.n2 / work and ‚.lg n/ span by using doubly nested parallel for loops.
+

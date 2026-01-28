@@ -1,0 +1,47 @@
+244          Chapter 10 Elementary Data Structures
+
+
+                           1   2   3   4   5   6   7   8                             1   2   3   4   5   6   7   8
+      free     4                                                  free   8
+        L      7    next       3       8   2 1     5   6            L    4    next       3     7 2 1         5   6
+                     key       4   1       16      9                           key       4   1 25 16         9
+                    prev       5   2       7                                  prev       5   2    7          4
+
+                                        (a)                                                      (b)
+
+                           1   2   3   4   5   6   7   8
+      free     5
+        L      4    next       3     7 8       1   2   6
+                     key       4   1 25            9
+                    prev       7   2               4
+
+                                        (c)
+
+
+             Figure 10.7 The effect of the A LLOCATE -O BJECT and F REE -O BJECT procedures. (a) The list
+             of Figure 10.5 (lightly shaded) and a free list (heavily shaded). Arrows show the free-list structure.
+             (b) The result of calling A LLOCATE -O BJECT./ (which returns index 4), setting keyŒ4 to 25, and
+             calling L IST-I NSERT.L; 4/. The new free-list head is object 8, which had been nextŒ4 on the free
+             list. (c) After executing L IST-D ELETE.L; 5/, we call F REE -O BJECT.5/. Object 5 becomes the new
+             free-list head, with object 8 following it on the free list.
+
+
+             A LLOCATE -O BJECT ./
+             1 if free == NIL
+             2       error “out of space”
+             3 else x D free
+             4       free D x:next
+             5       return x
+
+             F REE -O BJECT .x/
+             1 x:next D free
+             2 free D x
+
+             The free list initially contains all n unallocated objects. Once the free list has been
+             exhausted, running the A LLOCATE -O BJECT procedure signals an error. We can
+             even service several linked lists with just a single free list. Figure 10.8 shows two
+             linked lists and a free list intertwined through key, next, and pre arrays.
+                The two procedures run in O.1/ time, which makes them quite practical. We
+             can modify them to work for any homogeneous collection of objects by letting any
+             one of the attributes in the object act like a next attribute in the free list.
+

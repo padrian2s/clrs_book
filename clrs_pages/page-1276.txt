@@ -1,0 +1,52 @@
+Index                                                                                   1255
+
+
+binary tree, 1177                                bottleneck spanning tree, 640 pr.
+   full, 1178                                    bottleneck traveling-salesman problem,
+   number of different ones, 306 pr.                   1117 ex.
+   representation of, 246                        bottom of a stack, 233
+   superimposed upon a bit vector, 533–534       B OTTOM -U P -C UT-ROD, 366
+   see also binary search tree                   bottom-up method, for dynamic programming,
+binomial coefﬁcient, 1186–1187                         365
+binomial distribution, 1203–1206                 bound
+   and balls and bins, 133                          asymptotically tight, 45
+   maximum value of, 1207 ex.                       asymptotic lower, 48
+   tails of, 1208–1215                              asymptotic upper, 47
+binomial expansion, 1186                            on binomial coefﬁcients, 1186–1187
+binomial heap, 527 pr.                              on binomial distributions, 1206
+binomial tree, 527 pr.                              polylogarithmic, 57
+bin packing, 1134 pr.                               on the tails of a binomial distribution,
+bipartite graph, 1172                                  1208–1215
+   corresponding ﬂow network of, 732                see also lower bounds
+   d -regular, 736 ex.                           boundary condition, in a recurrence, 67, 84
+   and hypergraphs, 1173 ex.                     boundary of a polygon, 1020 ex.
+bipartite matching, 530, 732–736, 747 ex., 766   bounding a summation, 1149–1156
+   Hopcroft-Karp algorithm for, 763 pr.          box, nesting, 678 pr.
+birthday paradox, 130–133, 142 ex.               BC -tree, 488
+bisection of a tree, 1181 pr.                    branching factor, in B-trees, 487
+bitonic euclidean traveling-salesman problem,    branch instructions, 23
+      405 pr.                                    breadth-ﬁrst search, 594–602, 623
+bitonic sequence, 682 pr.                           in maximum ﬂow, 727–730, 766
+bitonic tour, 405 pr.                               and shortest paths, 597–600, 644
+bit operation, 927                                  similarity to Dijkstra’s algorithm, 662,
+   in Euclid’s algorithm, 981 pr.                      663 ex.
+bit-reversal permutation, 472 pr., 918           breadth-ﬁrst tree, 594, 600
+B IT-R EVERSE -C OPY, 918                        bridge, 621 pr.
+bit-reversed binary counter, 472 pr.             B -tree, 489 n.
+B IT-R EVERSED -I NCREMENT, 472 pr.              B-tree, 484–504
+bit vector, 255 ex., 532–536                        compared with red-black trees, 484, 490
+black-height, 309                                   creating, 492
+black vertex, 594, 603                              deletion from, 499–502
+blocking ﬂow, 765                                   full node in, 489
+block structure in pseudocode, 20                   height of, 489–490
+Bob, 959                                            insertion into, 493–497
+Boole’s inequality, 1195 ex.                        minimum degree of, 489
+boolean combinational circuit, 1071                 minimum key of, 497 ex.
+boolean combinational element, 1070                 properties of, 488–491
+boolean connective, 1079                            searching, 491–492
+boolean formula, 1049, 1066 ex., 1079,              splitting a node in, 493–495
+      1086 ex.                                      2-3-4 trees, 489
+boolean function, 1187 ex.                       B-T REE -C REATE, 492
+boolean matrix multiplication, 832 ex.           B-T REE -D ELETE , 499
+Boru̇vka’s algorithm, 641                        B-T REE -I NSERT , 495
+

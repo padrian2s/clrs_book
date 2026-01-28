@@ -1,0 +1,5 @@
+{
+  "page": 1052,
+  "title": "34.1 Polynomial Time",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 34.1</div>\n    <h1>Polynomial Time</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Problems solvable efficiently - the class P.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Polynomial time = O(n^k) for some constant k</li>\n<li>Class P: decision problems solvable in polynomial time</li>\n<li>Polynomial-time reductions: problem A ≤_P B</li>\n<li>If A ≤_P B and B ∈ P, then A ∈ P</li>\n<li>Efficiency: polynomial is &#x27;tractable&#x27;, exponential is &#x27;intractable&#x27;</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Sorting: O(n log n) ⊂ O(n²) = polynomial. Brute-force satisfiability: O(2^n) = exponential.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Defines what &#x27;efficiently solvable&#x27; means in complexity theory.</p>\n</div>\n</div>"
+}

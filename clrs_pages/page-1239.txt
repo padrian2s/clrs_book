@@ -1,0 +1,48 @@
+1218   Appendix D   Matrices
+
+              1 4
+       AT D        2 5    :
+                   3 6
+
+            2
+         A vector is a one-dimensional array of numbers. For example,
+
+       xD      3
+               5
+       is a vector of size 3. We sometimes call a vector of length n an n-vector. We
+       use lowercase letters to denote vectors, and we denote the ith element of a size-n
+       vector x by xi , for i D 1; 2; : : : ; n. We take the standard form of a vector to be
+       as a column vector equivalent to an n 1 matrix; the corresponding row vector is
+       obtained by taking the transpose:
+       xT D . 2 3 5 / :
+       The unit vector ei is the vector whose ith element is 1 and all of whose other
+       elements are 0. Usually, the size of a unit vector is clear from the context.
+          A zero matrix is a matrix all of whose entries are 0. Such a matrix is often
+       denoted 0, since the ambiguity between the number 0 and a matrix of 0s is usually
+       easily resolved from context. If a matrix of 0s is intended, then the size of the
+       matrix also needs to be derived from the context.
+
+       Square matrices
+       Square n n matrices arise frequently. Several special cases of square matrices
+       are of particular interest:
+       1. A diagonal matrix has aij D 0 whenever i ¤ j . Because all of the off-diagonal
+          elements are zero, we can specify the matrix by listing the elements along the
+          diagonal:
+                                             ˙a            0 ::: 0
+                                                                         
+                                                     11
+                                                     0    a22 : : : 0
+          diag.a11 ; a22 ; : : : ; ann / D           ::    :: ::    ::       :
+                                                      :     :     :  :
+                                                     0     0 : : : ann
+       2. The n     n identity matrix In is a diagonal matrix with 1s along the diagonal:
+
+                     ˙
+          In D diag.1; 1; : : : ; 1/
+                  1 0 ::: 0
+                                             
+                  0 1 ::: 0
+             D    :: :: : : ::                   :
+                   : :        : :
+                         0 0 ::: 1
+

@@ -1,0 +1,50 @@
+462   Chapter 17 Amortized Analysis
+
+
+      operations it has bn 1s, where 0  b0 ; bn  k. (Recall that k is the number of bits
+      in the counter.) We can rewrite equation (17.3) as
+      X
+      n             X
+                    n
+             ci D          cyi  ˆ.Dn / C ˆ.D0 / :                                 (17.4)
+      i D1          i D1
+
+      We have cyi  2 for all 1  i  n. Since ˆ.D0 / D b0 and ˆ.Dn / D bn , the total
+      actual cost of n I NCREMENT operations is
+      X
+      n                X
+                       n
+             ci                  2  bn C b0
+      i D1                 i D1
+                  D 2n  bn C b0 :
+      Note in particular that since b0  k, as long as k D O.n/, the total actual cost
+      is O.n/. In other words, if we execute at least n D .k/ I NCREMENT operations,
+      the total actual cost is O.n/, no matter what initial value the counter contains.
+
+      Exercises
+
+      17.3-1
+      Suppose we have a potential function ˆ such that ˆ.Di /  ˆ.D0 / for all i, but
+      ˆ.D0 / ¤ 0. Show that there exists a potential function ˆ0 such that ˆ0 .D0 / D 0,
+      ˆ0 .Di /  0 for all i  1, and the amortized costs using ˆ0 are the same as the
+      amortized costs using ˆ.
+
+      17.3-2
+      Redo Exercise 17.1-3 using a potential method of analysis.
+
+      17.3-3
+      Consider an ordinary binary min-heap data structure with n elements supporting
+      the instructions I NSERT and E XTRACT-M IN in O.lg n/ worst-case time. Give a
+      potential function ˆ such that the amortized cost of I NSERT is O.lg n/ and the
+      amortized cost of E XTRACT-M IN is O.1/, and show that it works.
+
+      17.3-4
+      What is the total cost of executing n of the stack operations P USH, P OP, and
+      M ULTIPOP , assuming that the stack begins with s0 objects and ﬁnishes with sn
+      objects?
+
+      17.3-5
+      Suppose that a counter begins at a number with b 1s in its binary representa-
+      tion, rather than at 0. Show that the cost of performing n I NCREMENT operations
+      is O.n/ if n D .b/. (Do not assume that b is constant.)
+

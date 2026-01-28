@@ -1,0 +1,45 @@
+1132   Chapter 35 Approximation Algorithms
+
+
+       The algorithm returns ´ D 302 as its answer, which is well within  D 40% of
+       the optimal answer 307 D 104 C 102 C 101; in fact, it is within 2%.
+
+       Theorem 35.8
+       A PPROX -S UBSET-S UM is a fully polynomial-time approximation scheme for the
+       subset-sum problem.
+
+       Proof The operations of trimming Li in line 5 and removing from Li every ele-
+       ment that is greater than t maintain the property that every element of Li is also a
+       member of Pi . Therefore, the value ´ returned in line 8 is indeed the sum of some
+       subset of S. Let y  2 Pn denote an optimal solution to the subset-sum problem.
+       Then, from line 6, we know that ´  y  . By inequality (35.1), we need to show
+       that y  =´  1 C . We must also show that the running time of this algorithm is
+       polynomial in both 1= and the size of the input.
+          As Exercise 35.5-2 asks you to show, for every element y in Pi that is at most t,
+       there exists an element ´ 2 Li such that
+             y
+                     ´y:                                                          (35.26)
+       .1 C =2n/i
+       Inequality (35.26) must hold for y  2 Pn , and therefore there exists an element
+       ´ 2 Ln such that
+           y
+                    ´  y ;
+       .1 C =2n/n
+       and thus
+       y        n
+            1C       :                                                            (35.27)
+        ´       2n
+       Since there exists an element ´ 2 Ln fulﬁlling inequality (35.27), the inequality
+       must hold for ´ , which is the largest value in Ln ; that is,
+       y           n
+              1 C         :                                                     (35.28)
+       ´          2n
+         Now, we show that y  =´  1 C . We do so by showing that .1 C =2n/n 
+       1 C . By equation (3.14), we have limn!1 .1 C =2n/n D e =2 . Exercise 35.5-3
+       asks you to show that
+        d         n
+            1C         >0:                                                     (35.29)
+       dn        2n
+       Therefore, the function .1 C =2n/n increases with n as it approaches its limit
+       of e =2 , and we have
+

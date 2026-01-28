@@ -1,0 +1,48 @@
+           Problems for Appendix C                                                               1215
+
+
+           C.5-6 ?
+           Consider a sequence of n Bernoulli trials, where in the ith trial, for i D 1; 2; : : : ; n,
+           success occurs with probability pi and failure occurs with probability qi D 1  pi .
+           Let X be the random variable describing the total number of successes, and let
+             D E ŒX . Show that for r  0,
+                                     2
+           Pr fX       rg  e r =2n :
+                                                        2
+           (Hint: Prove that pi e ˛qi C qi e ˛pi  e ˛ =2 . Then follow the outline of the proof
+           of Theorem C.8, using this inequality in place of inequality (C.45).)
+
+           C.5-7 ?
+           Show that choosing ˛ D ln.r= / minimizes the right-hand side of inequal-
+           ity (C.47).
+
+
+
+Problems
+
+           C-1 Balls and bins
+           In this problem, we investigate the effect of various assumptions on the number of
+           ways of placing n balls into b distinct bins.
+
+           a. Suppose that the n balls are distinct and that their order within a bin does not
+              matter. Argue that the number of ways of placing the balls in the bins is b n .
+
+           b. Suppose that the balls are distinct and that the balls in each bin are ordered.
+              Prove that there are exactly .b C n  1/Š=.b  1/Š ways to place the balls in the
+              bins. (Hint: Consider the number of ways of arranging n distinct balls and b  1
+              indistinguishable sticks in a row.)
+
+           c. Suppose that the balls are identical, and hence their order within a bin does not
+              matter. Show that the number of ways of placing the balls in the bins is bCn1
+                                                                                          n
+                                                                                              .
+              (Hint: Of the arrangements in part (b), how many are repeated if the balls are
+              made identical?)
+
+           d. Suppose that the balls are identical and that no bin may contain more than one
+              ball, so that n  b. Show that the number of ways of placing the balls is nb .
+
+           e. Suppose that the balls are identical and that no bin may be left empty. Assuming
+              that n  b, show that the number of ways of placing the balls is n1b1
+                                                                                      .
+

@@ -1,0 +1,54 @@
+280   Chapter 11 Hash Tables
+
+
+         We now turn to the issue of ensuring that the overall memory used is O.n/.
+      Since the size mj of the j th secondary hash table grows quadratically with the
+      number nj of keys stored, we run the risk that the overall amount of storage could
+      be excessive.
+         If the ﬁrst-level table size is m D n, then the amount of memory used is O.n/
+      for the primary hash table, for the storage of the sizes mj of the secondary hash
+      tables, and for the storage of the parameters aj and bj deﬁning the secondary hash
+      functions hj drawn from the class Hp;mj of Section 11.3.3 (except when nj D 1
+      and we use a D b D 0). The following theorem and a corollary provide a bound on
+      the expected combined sizes of all the secondary hash tables. A second corollary
+      bounds the probability that the combined size of all the secondary hash tables is
+      superlinear (actually, that it equals or exceeds 4n).
+
+      Theorem 11.10
+      Suppose that we store n keys in a hash table of size m D n using a hash function h
+      randomly chosen from a universal class of hash functions. Then, we have
+        "m1 #
+         X
+      E     nj2 < 2n ;
+         j D0
+
+      where nj is the number of keys hashing to slot j .
+
+      Proof We start with the following identity, which holds for any nonnegative inte-
+      ger a:
+                   !
+                 a
+      a2 D a C 2     :                                                          (11.6)
+                 2
+
+      We have
+        "m1 #
+         X
+      E     nj2
+         j D0
+                     "m1               !!#
+                      X              nj
+                D E          nj C 2              (by equation (11.6))
+                      j D0
+                                     2
+                    "m1 #           "m1     !#
+                      X                 X nj
+                D E        nj C 2 E              (by linearity of expectation)
+                      j D0             j D0
+                                            2
+                               "m1      !#
+                                X nj
+                D E Œn C 2 E                    (by equation (11.1))
+                                j D0
+                                       2
+

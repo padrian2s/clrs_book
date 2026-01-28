@@ -1,0 +1,43 @@
+26.5 The relabel-to-front algorithm                                             759
+
+
+work performed by the while loop in R ELABEL -T O -F RONT, excluding the work
+performed within D ISCHARGE, is at most O.V 3 /.
+   We must now bound the work performed within D ISCHARGE during the ex-
+ecution of the algorithm. Each iteration of the while loop within D ISCHARGE
+performs one of three actions. We shall analyze the total amount of work involved
+in performing each of these actions.
+   We start with relabel operations (lines 4–5). Exercise 26.4-3 provides an O.VE/
+time bound on all the O.V 2 / relabels that are performed.
+   Now, suppose that the action updates the u:current pointer in line 8. This action
+occurs O.degree.u// times each time a vertex u is relabeled, and O.V  degree.u//
+times overall for the vertex. For all vertices, therefore, the total amount of work
+done in advancing pointers in neighbor lists is O.VE/ by the handshaking lemma
+(Exercise B.4-1).
+   The third type of action performed by D ISCHARGE is a push operation (line 7).
+We already know that the total number of saturating push operations is O.VE/.
+Observe that if a nonsaturating push is executed, D ISCHARGE immediately returns,
+since the push reduces the excess to 0. Thus, there can be at most one nonsaturating
+push per call to D ISCHARGE. As we have observed, D ISCHARGE is called O.V 3 /
+times, and thus the total time spent performing nonsaturating pushes is O.V 3 /.
+   The running time of R ELABEL -T O -F RONT is therefore O.V 3 C VE/, which
+is O.V 3 /.
+
+Exercises
+
+26.5-1
+Illustrate the execution of R ELABEL -T O -F RONT in the manner of Figure 26.10 for
+the ﬂow network in Figure 26.1(a). Assume that the initial ordering of vertices in L
+is h1 ; 2 ; 3 ; 4 i and that the neighbor lists are
+1 :N   D    hs; 2 ; 3 i ;
+2 :N   D    hs; 1 ; 3 ; 4 i ;
+3 :N   D    h1 ; 2 ; 4 ; ti ;
+4 :N   D    h2 ; 3 ; ti :
+
+26.5-2 ?
+We would like to implement a push-relabel algorithm in which we maintain a ﬁrst-
+in, ﬁrst-out queue of overﬂowing vertices. The algorithm repeatedly discharges the
+vertex at the head of the queue, and any vertices that were not overﬂowing before
+the discharge but are overﬂowing afterward are placed at the end of the queue.
+After the vertex at the head of the queue is discharged, it is removed. When the
+

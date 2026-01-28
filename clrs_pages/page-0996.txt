@@ -1,0 +1,43 @@
+           31.9 Integer factorization                                                        975
+
+
+           we won’t prove it here. The reason is that for a randomly chosen odd composite
+           integer n, the expected number of nonwitnesses to the compositeness of n is likely
+           to be very much smaller than .n  1/=2.
+              If the integer n is not chosen randomly, however, the best that can be proven is
+           that the number of nonwitnesses is at most .n  1/=4, using an improved version
+           of Theorem 31.38. Furthermore, there do exist integers n for which the number of
+           nonwitnesses is .n  1/=4.
+
+           Exercises
+
+           31.8-1
+           Prove that if an odd integer n > 1 is not a prime or a prime power, then there exists
+           a nontrivial square root of 1 modulo n.
+
+           31.8-2 ?
+           It is possible to strengthen Euler’s theorem slightly to the form
+           a .n/  1 .mod n/ for all a 2 Zn ;
+           where n D p1e1    prer and .n/ is deﬁned by
+           .n/ D lcm..p1e1 /; : : : ; .prer // :                                      (31.42)
+           Prove that .n/ j .n/. A composite number n is a Carmichael number if
+           .n/ j n  1. The smallest Carmichael number is 561 D 3  11  17; here,
+           .n/ D lcm.2; 10; 16/ D 80, which divides 560. Prove that Carmichael num-
+           bers must be both “square-free” (not divisible by the square of any prime) and the
+           product of at least three primes. (For this reason, they are not very common.)
+
+           31.8-3
+           Prove that if x is a nontrivial square root of 1, modulo n, then gcd.x  1; n/ and
+           gcd.x C 1; n/ are both nontrivial divisors of n.
+
+
+
+? 31.9 Integer factorization
+
+           Suppose we have an integer n that we wish to factor, that is, to decompose into a
+           product of primes. The primality test of the preceding section may tell us that n is
+           composite, but it does not tell us the prime factors of n. Factoring a large integer n
+           seems to be much more difﬁcult than simply determining whether n is prime or
+           composite. Even with today’s supercomputers and the best algorithms to date, we
+           cannot feasibly factor an arbitrary 1024-bit number.
+

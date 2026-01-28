@@ -1,0 +1,42 @@
+1110   Chapter 35 Approximation Algorithms
+
+
+       endpoints u and  to C , and deletes all edges in E 0 that are covered by either u
+       or . Finally, line 7 returns the vertex cover C . The running time of this algorithm
+       is O.V C E/, using adjacency lists to represent E 0 .
+
+       Theorem 35.1
+       A PPROX -V ERTEX -C OVER is a polynomial-time 2-approximation algorithm.
+
+       Proof We have already shown that A PPROX -V ERTEX -C OVER runs in polyno-
+       mial time.
+          The set C of vertices that is returned by A PPROX -V ERTEX -C OVER is a vertex
+       cover, since the algorithm loops until every edge in G:E has been covered by some
+       vertex in C .
+          To see that A PPROX -V ERTEX -C OVER returns a vertex cover that is at most twice
+       the size of an optimal cover, let A denote the set of edges that line 4 of A PPROX -
+       V ERTEX -C OVER picked. In order to cover the edges in A, any vertex cover—in
+       particular, an optimal cover C  —must include at least one endpoint of each edge
+       in A. No two edges in A share an endpoint, since once an edge is picked in line 4,
+       all other edges that are incident on its endpoints are deleted from E 0 in line 6. Thus,
+       no two edges in A are covered by the same vertex from C  , and we have the lower
+       bound
+       jC  j  jAj                                                                     (35.2)
+       on the size of an optimal vertex cover. Each execution of line 4 picks an edge for
+       which neither of its endpoints is already in C , yielding an upper bound (an exact
+       upper bound, in fact) on the size of the vertex cover returned:
+       jC j D 2 jAj :                                                                   (35.3)
+       Combining equations (35.2) and (35.3), we obtain
+       jC j D 2 jAj
+             2 jC  j ;
+       thereby proving the theorem.
+
+          Let us reﬂect on this proof. At ﬁrst, you might wonder how we can possibly
+       prove that the size of the vertex cover returned by A PPROX -V ERTEX -C OVER is at
+       most twice the size of an optimal vertex cover, when we do not even know the size
+       of an optimal vertex cover. Instead of requiring that we know the exact size of an
+       optimal vertex cover, we rely on a lower bound on the size. As Exercise 35.1-2 asks
+       you to show, the set A of edges that line 4 of A PPROX -V ERTEX -C OVER selects is
+       actually a maximal matching in the graph G. (A maximal matching is a matching
+       that is not a proper subset of any other matching.) The size of a maximal matching
+

@@ -1,0 +1,5 @@
+{
+  "page": 785,
+  "title": "Maximum Flow",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 26</div>\n    <h1>Maximum Flow</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>VI: Graph Algorithms</h4>\n    <h3>Chapter 26: Maximum Flow</h3>\n    <p><em>How much can flow through a network?</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>Flow network: source, sink, capacities</li>\n<li>Ford-Fulkerson: find augmenting paths</li>\n<li>Max-flow = min-cut theorem</li>\n<li>Bipartite matching is a special case</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>Transportation, bipartite matching, image segmentation</p>\n</div>\n</div>"
+}

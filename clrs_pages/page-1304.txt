@@ -1,0 +1,52 @@
+Index                                                                                           1283
+
+
+randomly built binary search tree, 299–303,         R ECURSIVE -FFT, 911
+      304 pr.                                       R ECURSIVE -M ATRIX -C HAIN, 385
+random-number generator, 117                        red-black tree, 308–338
+random permutation, 124–128                            augmentation of, 346–347
+   uniform, 116, 125                                   compared with B-trees, 484, 490
+R ANDOM -S AMPLE , 130 ex.                             deletion from, 323–330
+random sampling, 129 ex., 179                          in determining whether any line segments
+R ANDOM -S EARCH, 143 pr.                                 intersect, 1024
+random variable, 1196–1201                             for enumerating keys in a range, 348 ex.
+   indicator, see indicator random variable            height of, 309
+range, 1167                                            insertion into, 315–323
+   of a matrix, 1228 pr.                               joining of, 332 pr.
+rank                                                   maximum key of, 311
+   column, 1223                                        minimum key of, 311
+   full, 1223                                          predecessor in, 311
+   of a matrix, 1223, 1226 ex.                         properties of, 308–312
+   of a node in a disjoint-set forest, 569, 575,       relaxed, 311 ex.
+      581 ex.                                          restructuring, 474 pr.
+   of a number in an ordered set, 300, 339             rotation in, 312–314
+   in order-statistic trees, 341–343, 344–345 ex.      searching in, 311
+   row, 1223                                           successor in, 311
+rate of growth, 28                                     see also interval tree, order-statistic tree
+ray, 1021 ex.                                       R EDUCE , 807 pr.
+RB-D ELETE , 324                                    reduced-space van Emde Boas tree, 557 pr.
+RB-D ELETE -F IXUP, 326                             reducibility, 1067–1068
+RB-E NUMERATE , 348 ex.                             reduction algorithm, 1052, 1067
+RB-I NSERT , 315                                    reduction function, 1067
+RB-I NSERT-F IXUP, 316                              reduction, of an array, 807 pr.
+RB-J OIN, 332 pr.                                   reﬂexive relation, 1163
+RB-T RANSPLANT , 323                                reﬂexivity of asymptotic notation, 51
+reachability in a graph (;), 1170                   region, feasible, 847
+real numbers (R), 1158                              regularity condition, 95
+reconstructing an optimal solution, in dynamic      rejection
+      programming, 387                                 by an algorithm, 1058
+record, 147                                            by a ﬁnite automaton, 996
+rectangle, 354 ex.                                  R ELABEL , 740
+recurrence, 34, 65–67, 83–113                       relabeled vertex, 740
+   solution by Akra-Bazzi method, 112–113           relabel operation, in push-relabel algorithms,
+   solution by master method, 93–97                       740, 745
+   solution by recursion-tree method, 88–93         R ELABEL -T O -F RONT, 755
+   solution by substitution method, 83–88           relabel-to-front algorithm, 748–760
+recurrence equation, see recurrence                    phase of, 758
+recursion, 30                                       relation, 1163–1166
+recursion tree, 37, 88–93                           relatively prime, 931
+   in proof of master theorem, 98–100               R ELAX, 649
+   and the substitution method, 91–92               relaxation
+R ECURSIVE -ACTIVITY-S ELECTOR, 419                    of an edge, 648–650
+recursive case, 65                                     linear programming, 1125
+

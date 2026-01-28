@@ -1,0 +1,42 @@
+5.3 Randomized algorithms                                                               125
+
+
+P ERMUTE -B Y-S ORTING .A/
+1 n D A:length
+2 let P Œ1 : : n be a new array
+3 for i D 1 to n
+4      P Œi D R ANDOM.1; n3 /
+5 sort A, using P as sort keys
+
+Line 4 chooses a random number between 1 and n3 . We use a range of 1 to n3
+to make it likely that all the priorities in P are unique. (Exercise 5.3-5 asks you
+to prove that the probability that all entries are unique is at least 1  1=n, and
+Exercise 5.3-6 asks how to implement the algorithm even if two or more priorities
+are identical.) Let us assume that all the priorities are unique.
+   The time-consuming step in this procedure is the sorting in line 5. As we shall
+see in Chapter 8, if we use a comparison sort, sorting takes .n lg n/ time. We
+can achieve this lower bound, since we have seen that merge sort takes ‚.n lg n/
+time. (We shall see other comparison sorts that take ‚.n lg n/ time in Part II.
+Exercise 8.3-4 asks you to solve the very similar problem of sorting numbers in the
+range 0 to n3  1 in O.n/ time.) After sorting, if P Œi is the j th smallest priority,
+then AŒi lies in position j of the output. In this manner we obtain a permutation. It
+remains to prove that the procedure produces a uniform random permutation, that
+is, that the procedure is equally likely to produce every permutation of the numbers
+1 through n.
+
+Lemma 5.4
+Procedure P ERMUTE - BY-S ORTING produces a uniform random permutation of the
+input, assuming that all priorities are distinct.
+
+Proof We start by considering the particular permutation in which each ele-
+ment AŒi receives the ith smallest priority. We shall show that this permutation
+occurs with probability exactly 1=nŠ. For i D 1; 2; : : : ; n, let Ei be the event
+that element AŒi receives the ith smallest priority. Then we wish to compute the
+probability that for all i, event Ei occurs, which is
+Pr fE1 \ E2 \ E3 \    \ En1 \ En g :
+Using Exercise C.2-5, this probability is equal to
+Pr fE1 g  Pr fE2 j E1 g  Pr fE3 j E2 \ E1 g  Pr fE4 j E3 \ E2 \ E1 g
+        Pr fEi j Ei 1 \ Ei 2 \    \ E1 g    Pr fEn j En1 \    \ E1 g :
+We have that Pr fE1 g D 1=n because it is the probability that one priority
+chosen randomly out of a set of n is the smallest priority. Next, we observe
+

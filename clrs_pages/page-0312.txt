@@ -1,0 +1,43 @@
+12.2 Querying a binary search tree                                                   291
+
+
+I TERATIVE -T REE -S EARCH .x; k/
+1 while x ¤ NIL and k ¤ x:key
+2       if k < x:key
+3            x D x:left
+4       else x D x:right
+5 return x
+
+
+Minimum and maximum
+We can always ﬁnd an element in a binary search tree whose key is a minimum by
+following left child pointers from the root until we encounter a NIL, as shown in
+Figure 12.2. The following procedure returns a pointer to the minimum element in
+the subtree rooted at a given node x, which we assume to be non-NIL:
+
+T REE -M INIMUM .x/
+1 while x:left ¤ NIL
+2       x D x:left
+3 return x
+
+The binary-search-tree property guarantees that T REE -M INIMUM is correct. If a
+node x has no left subtree, then since every key in the right subtree of x is at least as
+large as x:key, the minimum key in the subtree rooted at x is x:key. If node x has
+a left subtree, then since no key in the right subtree is smaller than x:key and every
+key in the left subtree is not larger than x:key, the minimum key in the subtree
+rooted at x resides in the subtree rooted at x:left.
+   The pseudocode for T REE -M AXIMUM is symmetric:
+
+T REE -M AXIMUM .x/
+1 while x:right ¤ NIL
+2       x D x:right
+3 return x
+
+Both of these procedures run in O.h/ time on a tree of height h since, as in T REE -
+S EARCH, the sequence of nodes encountered forms a simple path downward from
+the root.
+
+Successor and predecessor
+Given a node in a binary search tree, sometimes we need to ﬁnd its successor in
+the sorted order determined by an inorder tree walk. If all keys are distinct, the
+

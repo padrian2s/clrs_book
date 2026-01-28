@@ -1,0 +1,52 @@
+C.5 The tails of the binomial distribution                                    1211
+
+
+              .np=2/q
+            D
+                np=2
+             1;                                                            (C.42)
+since q  1. Letting X be the random variable denoting the number of successes,
+Theorem C.4 and inequality (C.42) imply that the probability of fewer than k suc-
+cesses is
+                 X
+                 k1
+Pr fX < kg D             b.iI n; p/ < b.kI n; p/ :
+                  i D0
+
+Thus we have
+                             Pk1
+  Pr fX < kg                    i D0 b.iI n; p/
+                         D    Pk
+Pr fX < k C 1g                i D0 b.iI n; p/
+                                   Pk1
+                                      i D0 b.iI n; p/
+                         D   Pk1
+                              i D0 b.iI n; p/ C b.kI n; p/
+                         < 1=2 ;
+        Pk1
+since    i D0 b.iI n; p/ < b.kI n; p/.
+
+  Bounds on the right tail follow similarly. Exercise C.5-2 asks you to prove them.
+
+Corollary C.6
+Consider a sequence of n Bernoulli trials, where success occurs with probability p.
+Let X be the random variable denoting the total number of successes. Then for
+np < k < n, the probability of more than k successes is
+                         X
+                         n
+Pr fX > kg D                  b.iI n; p/
+                     i DkC1
+                         .n  k/p
+                <                 b.kI n; p/ :
+                          k  np
+
+Corollary C.7
+Consider a sequence of n Bernoulli trials, where success occurs with probability p
+and failure with probability q D 1  p. Then for .np C n/=2 < k < n, the
+probability of more than k successes is less than one half of the probability of
+more than k  1 successes.
+
+
+  The next theorem considers n Bernoulli trials, each with a probability pi of
+success, for i D 1; 2; : : : ; n. As the subsequent corollary shows, we can use the
+

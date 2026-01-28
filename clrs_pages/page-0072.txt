@@ -1,0 +1,41 @@
+3.1 Asymptotic notation                                                         51
+
+
+     f .n/
+lim        D0:                                                                (3.1)
+n!1 g.n/
+
+Some authors use this limit as a deﬁnition of the o-notation; the deﬁnition in this
+book also restricts the anonymous functions to be asymptotically nonnegative.
+
+!-notation
+By analogy, !-notation is to -notation as o-notation is to O-notation. We use
+!-notation to denote a lower bound that is not asymptotically tight. One way to
+deﬁne it is by
+f .n/ 2 !.g.n// if and only if g.n/ 2 o.f .n// :
+Formally, however, we deﬁne !.g.n// (“little-omega of g of n”) as the set
+!.g.n// D ff .n/ W for any positive constant c > 0, there exists a constant
+                   n0 > 0 such that 0  cg.n/ < f .n/ for all n  n0 g :
+For example, n2 =2 D !.n/, but n2 =2 ¤ !.n2 /. The relation f .n/ D !.g.n//
+implies that
+      f .n/
+lim         D1;
+n!1 g.n/
+
+if the limit exists. That is, f .n/ becomes arbitrarily large relative to g.n/ as n
+approaches inﬁnity.
+
+Comparing functions
+Many of the relational properties of real numbers apply to asymptotic comparisons
+as well. For the following, assume that f .n/ and g.n/ are asymptotically positive.
+Transitivity:
+   f .n/ D ‚.g.n// and g.n/ D ‚.h.n//              imply   f .n/ D ‚.h.n// ;
+   f .n/ D O.g.n// and g.n/ D O.h.n//              imply   f .n/ D O.h.n// ;
+   f .n/ D .g.n// and g.n/ D .h.n//              imply   f .n/ D .h.n// ;
+   f .n/ D o.g.n// and g.n/ D o.h.n//              imply   f .n/ D o.h.n// ;
+   f .n/ D !.g.n// and g.n/ D !.h.n//              imply   f .n/ D !.h.n// :
+Reﬂexivity:
+   f .n/ D ‚.f .n// ;
+   f .n/ D O.f .n// ;
+   f .n/ D .f .n// :
+

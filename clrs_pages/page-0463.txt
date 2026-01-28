@@ -1,0 +1,40 @@
+442   Chapter 16 Greedy Algorithms
+
+
+         Corollary 16.9 says that any element that cannot be used immediately can never
+      be used. Therefore, G REEDY cannot make an error by passing over any initial
+      elements in S that are not an extension of ;, since they can never be used.
+
+      Lemma 16.10 (Matroids exhibit the optimal-substructure property)
+      Let x be the ﬁrst element of S chosen by G REEDY for the weighted matroid
+      M D .S;  /. The remaining problem of ﬁnding a maximum-weight indepen-
+      dent subset containing x reduces to ﬁnding a maximum-weight independent subset
+      of the weighted matroid M 0 D .S 0 ;  0 /, where
+      S 0 D fy 2 S W fx; yg 2  g ;
+       0 D fB  S  fxg W B [ fxg 2  g ;
+      and the weight function for M 0 is the weight function for M , restricted to S 0 . (We
+      call M 0 the contraction of M by the element x.)
+
+      Proof If A is any maximum-weight independent subset of M containing x, then
+      A0 D A  fxg is an independent subset of M 0 . Conversely, any independent sub-
+      set A0 of M 0 yields an independent subset A D A0 [ fxg of M . Since we have in
+      both cases that w.A/ D w.A0 / C w.x/, a maximum-weight solution in M contain-
+      ing x yields a maximum-weight solution in M 0 , and vice versa.
+
+      Theorem 16.11 (Correctness of the greedy algorithm on matroids)
+      If M D .S;  / is a weighted matroid with weight function w, then G REEDY .M; w/
+      returns an optimal subset.
+
+      Proof By Corollary 16.9, any elements that G REEDY passes over initially be-
+      cause they are not extensions of ; can be forgotten about, since they can never
+      be useful. Once G REEDY selects the ﬁrst element x, Lemma 16.7 implies that
+      the algorithm does not err by adding x to A, since there exists an optimal subset
+      containing x. Finally, Lemma 16.10 implies that the remaining problem is one of
+      ﬁnding an optimal subset in the matroid M 0 that is the contraction of M by x.
+      After the procedure G REEDY sets A to fxg, we can interpret all of its remaining
+      steps as acting in the matroid M 0 D .S 0 ;  0 /, because B is independent in M 0 if
+      and only if B [ fxg is independent in M , for all sets B 2  0 . Thus, the subsequent
+      operation of G REEDY will ﬁnd a maximum-weight independent subset for M 0 , and
+      the overall operation of G REEDY will ﬁnd a maximum-weight independent subset
+      for M .
+

@@ -1,0 +1,54 @@
+1206   Appendix C   Counting and Probability
+
+
+                                    n
+         b.kI n; p/                 k
+                                      p k q nk
+                          D      n
+       b.k  1I n; p/           k1
+                                     p k1 q nkC1
+                            nŠ.k  1/Š.n  k C 1/Šp
+                          D
+                                 kŠ.n  k/ŠnŠq
+                            .n  k C 1/p
+                          D                                                        (C.41)
+                                 kq
+                                .n C 1/p  k
+                          D 1C                :
+                                     kq
+       This ratio is greater than 1 precisely when .n C 1/p  k is positive. Conse-
+       quently, b.kI n; p/ > b.k  1I n; p/ for k < .n C 1/p (the distribution increases),
+       and b.kI n; p/ < b.k  1I n; p/ for k > .n C 1/p (the distribution decreases).
+       If k D .n C 1/p is an integer, then b.kI n; p/ D b.k  1I n; p/, and so the distri-
+       bution then has two maxima: at k D .nC1/p and at k1 D .nC1/p1 D np  q.
+       Otherwise, it attains a maximum at the unique integer k that lies in the range
+       np  q < k < .n C 1/p.
+          The following lemma provides an upper bound on the binomial distribution.
+
+       Lemma C.1
+       Let n  0, let 0 < p < 1, let q D 1  p, and let 0  k  n. Then
+                      np k  nq nk
+       b.kI n; p/                       :
+                        k     nk
+
+       Proof    Using equation (C.6), we have
+                            !
+                          n k nk
+       b.kI n; p/ D           p q
+                          k
+                         n k  n nk
+                                         p k q nk
+                          k     nk
+                         np k  nq nk
+                   D                        :
+                           k      nk
+
+       Exercises
+
+       C.4-1
+       Verify axiom 2 of the probability axioms for the geometric distribution.
+
+       C.4-2
+       How many times on average must we ﬂip 6 fair coins before we obtain 3 heads
+       and 3 tails?
+

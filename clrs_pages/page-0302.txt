@@ -1,0 +1,50 @@
+11.5 Perfect hashing                                                                281
+
+                   "m1    !#
+                    X nj
+          D n C 2E                              (since n is not a random variable) .
+                    j D0
+                         2
+                                Pm1
+   To evaluate the summation j D0 n2j , we observe that it is just the total number
+of pairs of keys in the hash table that collide. By the properties of universal hashing,
+the expected value of this summation is at most
+   !
+  n 1           n.n  1/
+           D
+  2 m              2m
+                n1
+            D       ;
+                 2
+since m D n. Thus,
+  "m1 #
+    X              n1
+E        nj2  nC2
+    j D0
+                    2
+                D 2n  1
+                < 2n :
+
+Corollary 11.11
+Suppose that we store n keys in a hash table of size m D n using a hash func-
+tion h randomly chosen from a universal class of hash functions, and we set the
+size of each secondary hash table to mj D nj2 for j D 0; 1; : : : ; m  1. Then,
+the expected amount of storage required for all secondary hash tables in a perfect
+hashing scheme is less than 2n.
+
+Proof Since mj D nj2 for j D 0; 1; : : : ; m  1, Theorem 11.10 gives
+  "m1 #         "m1 #
+   X               X
+E     mj    D E        nj2
+   j D0                 j D0
+
+                < 2n ;                                                           (11.7)
+which completes the proof.
+
+Corollary 11.12
+Suppose that we store n keys in a hash table of size m D n using a hash function h
+randomly chosen from a universal class of hash functions, and we set the size
+of each secondary hash table to mj D nj2 for j D 0; 1; : : : ; m  1. Then, the
+probability is less than 1=2 that the total storage used for secondary hash tables
+equals or exceeds 4n.
+

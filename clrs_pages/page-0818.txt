@@ -1,0 +1,42 @@
+           27.3 Multithreaded merge sort                                                    797
+
+
+           27.2-5
+           Give pseudocode for an efﬁcient multithreaded algorithm that transposes an n n
+           matrix in place by using divide-and-conquer to divide the matrix recursively into
+           four n=2 n=2 submatrices. Analyze your algorithm.
+
+           27.2-6
+           Give pseudocode for an efﬁcient multithreaded implementation of the Floyd-
+           Warshall algorithm (see Section 25.2), which computes shortest paths between all
+           pairs of vertices in an edge-weighted graph. Analyze your algorithm.
+
+
+
+27.3 Multithreaded merge sort
+
+           We ﬁrst saw serial merge sort in Section 2.3.1, and in Section 2.3.2 we analyzed its
+           running time and showed it to be ‚.n lg n/. Because merge sort already uses the
+           divide-and-conquer paradigm, it seems like a terriﬁc candidate for multithreading
+           using nested parallelism. We can easily modify the pseudocode so that the ﬁrst
+           recursive call is spawned:
+
+           M ERGE -S ORT0 .A; p; r/
+           1 if p < r
+           2      q D b.p C r/=2c
+           3      spawn M ERGE -S ORT 0 .A; p; q/
+           4      M ERGE -S ORT 0 .A; q C 1; r/
+           5      sync
+           6      M ERGE .A; p; q; r/
+
+           Like its serial counterpart, M ERGE -S ORT 0 sorts the subarray AŒp : : r. After the
+           two recursive subroutines in lines 3 and 4 have completed, which is ensured by the
+           sync statement in line 5, M ERGE -S ORT 0 calls the same M ERGE procedure as on
+           page 31.
+              Let us analyze M ERGE -S ORT 0 . To do so, we ﬁrst need to analyze M ERGE. Re-
+           call that its serial running time to merge n elements is ‚.n/. Because M ERGE is
+           serial, both its work and its span are ‚.n/. Thus, the following recurrence charac-
+           terizes the work MS01 .n/ of M ERGE -S ORT 0 on n elements:
+           MS01 .n/ D 2 MS01 .n=2/ C ‚.n/
+                    D ‚.n lg n/ ;
+

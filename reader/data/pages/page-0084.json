@@ -1,0 +1,5 @@
+{
+  "page": 84,
+  "title": "4.3 The Substitution Method for Solving Recurrences",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 4.3</div>\n    <h1>The Substitution Method for Solving Recurrences</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Guess the solution, then prove it correct by induction.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Step 1: Guess the form of the solution</li>\n<li>Step 2: Use induction to prove the guess is correct</li>\n<li>Step 3: Solve for constants</li>\n<li>Common technique: guess based on recursion tree</li>\n<li>Subtlety: sometimes need to subtract lower-order terms</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>T(n) = 2T(n/2) + n. Guess: T(n) = O(n log n). Prove: T(n) ≤ cn log n for some c.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Powerful technique when you have intuition about the answer.</p>\n</div>\n</div>"
+}

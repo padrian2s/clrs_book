@@ -1,0 +1,46 @@
+154          Chapter 6 Heapsort
+
+
+             6.1-4
+             Where in a max-heap might the smallest element reside, assuming that all elements
+             are distinct?
+
+             6.1-5
+             Is an array that is in sorted order a min-heap?
+
+             6.1-6
+             Is the array with values h23; 17; 14; 6; 13; 10; 1; 5; 7; 12i a max-heap?
+
+             6.1-7
+             Show that, with the array representation for storing an n-element heap, the leaves
+             are the nodes indexed by bn=2c C 1; bn=2c C 2; : : : ; n.
+
+
+
+6.2   Maintaining the heap property
+
+             In order to maintain the max-heap property, we call the procedure M AX -H EAPIFY.
+             Its inputs are an array A and an index i into the array. When it is called, M AX -
+             H EAPIFY assumes that the binary trees rooted at L EFT .i/ and R IGHT .i/ are max-
+             heaps, but that AŒi might be smaller than its children, thus violating the max-heap
+             property. M AX -H EAPIFY lets the value at AŒi “ﬂoat down” in the max-heap so
+             that the subtree rooted at index i obeys the max-heap property.
+
+             M AX -H EAPIFY .A; i/
+              1 l D L EFT .i/
+              2 r D R IGHT .i/
+              3 if l  A:heap-size and AŒl > AŒi
+              4       largest D l
+              5 else largest D i
+              6 if r  A:heap-size and AŒr > AŒlargest
+              7       largest D r
+              8 if largest ¤ i
+              9       exchange AŒi with AŒlargest
+             10       M AX -H EAPIFY .A; largest/
+
+                Figure 6.2 illustrates the action of M AX -H EAPIFY. At each step, the largest of
+             the elements AŒi, AŒL EFT .i/, and AŒR IGHT .i/ is determined, and its index is
+             stored in largest. If AŒi is largest, then the subtree rooted at node i is already a
+             max-heap and the procedure terminates. Otherwise, one of the two children has the
+             largest element, and AŒi is swapped with AŒlargest, which causes node i and its
+

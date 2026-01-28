@@ -1,0 +1,44 @@
+394   Chapter 15 Dynamic Programming
+
+
+      has only ‚.mn/ distinct subproblems, however, we can use dynamic programming
+      to compute the solutions bottom up.
+         Procedure LCS-L ENGTH takes two sequences X D hx1 ; x2 ; : : : ; xm i and
+      Y D hy1 ; y2 ; : : : ; yn i as inputs. It stores the cŒi; j  values in a table cŒ0 : : m; 0 : : n,
+      and it computes the entries in row-major order. (That is, the procedure ﬁlls in the
+      ﬁrst row of c from left to right, then the second row, and so on.) The procedure also
+      maintains the table bŒ1 : : m; 1 : : n to help us construct an optimal solution. Intu-
+      itively, bŒi; j  points to the table entry corresponding to the optimal subproblem
+      solution chosen when computing cŒi; j . The procedure returns the b and c tables;
+      cŒm; n contains the length of an LCS of X and Y .
+
+      LCS-L ENGTH .X; Y /
+       1 m D X:length
+       2 n D Y:length
+       3 let bŒ1 : : m; 1 : : n and cŒ0 : : m; 0 : : n be new tables
+       4 for i D 1 to m
+       5      cŒi; 0 D 0
+       6 for j D 0 to n
+       7      cŒ0; j  D 0
+       8 for i D 1 to m
+       9      for j D 1 to n
+      10             if xi == yj
+      11                  cŒi; j  D cŒi  1; j  1 C 1
+      12                  bŒi; j  D “-”
+      13             elseif cŒi  1; j   cŒi; j  1
+      14                  cŒi; j  D cŒi  1; j 
+      15                  bŒi; j  D “"”
+      16             else cŒi; j  D cŒi; j  1
+      17                  bŒi; j  D “ ”
+      18 return c and b
+
+      Figure 15.8 shows the tables produced by LCS-L ENGTH on the sequences X D
+      hA; B; C; B; D; A; Bi and Y D hB; D; C; A; B; Ai. The running time of the
+      procedure is ‚.mn/, since each table entry takes ‚.1/ time to compute.
+
+      Step 4: Constructing an LCS
+      The b table returned by LCS-L ENGTH enables us to quickly construct an LCS of
+      X D hx1 ; x2 ; : : : ; xm i and Y D hy1 ; y2 ; : : : ; yn i. We simply begin at bŒm; n and
+      trace through the table by following the arrows. Whenever we encounter a “-” in
+      entry bŒi; j , it implies that xi D yj is an element of the LCS that LCS-L ENGTH
+

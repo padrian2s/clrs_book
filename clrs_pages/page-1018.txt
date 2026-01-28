@@ -1,0 +1,50 @@
+32.3 String matching with ﬁnite automata                                                            997
+
+
+
+                                                                              a
+             a                                        a
+                                a
+        a           b           a          b          a           c           a
+  0           1             2        3          4           5           6           7
+                                                      b
+                                                                              b
+
+                                    (a)
+
+            input
+state   a     b c       P
+  0     1     0 0       a
+  1     1     2 0       b
+  2     3     0 0       a
+  3     1     4 0       b
+  4     5     0 0       a
+  5     1     4 6       c                  i    — 1 2 3 4 5 6 7 8 9 10 11
+  6     7     0 0       a              T Œi    — a b a b a b a c a b a
+  7     1     2 0               state .Ti /    0 1 2 3 4 5 4 5 6 7 2 3
+
+            (b)                                                 (c)
+
+
+Figure 32.7 (a) A state-transition diagram for the string-matching automaton that accepts all
+strings ending in the string ababaca. State 0 is the start state, and state 7 (shown blackened) is
+the only accepting state. A directed edge from state i to state j labeled a represents ı.i; a/ D j . The
+right-going edges forming the “spine” of the automaton, shown heavy in the ﬁgure, correspond to
+successful matches between pattern and input characters. The left-going edges correspond to failing
+matches. Some edges corresponding to failing matches are omitted; by convention, if a state i has
+no outgoing edge labeled a for some a 2 †, then ı.i; a/ D 0. (b) The corresponding transition
+function ı, and the pattern string P D ababaca. The entries corresponding to successful matches
+between pattern and input characters are shown shaded. (c) The operation of the automaton on the
+text T D abababacaba. Under each text character T Œi appears the state .Ti / that the automa-
+ton is in after processing the preﬁx Ti . The automaton ﬁnds one occurrence of the pattern, ending in
+position 9.
+
+
+The sufﬁx function is well deﬁned since the empty string P0 D " is a suf-
+ﬁx of every string. As examples, for the pattern P D ab, we have ."/ D 0,
+ .ccaca/ D 1, and .ccab/ D 2. For a pattern P of length m, we have
+ .x/ D m if and only if P = x. From the deﬁnition of the sufﬁx function,
+x = y implies .x/  .y/.
+   We deﬁne the string-matching automaton that corresponds to a given pattern
+P Œ1 : : m as follows:
+

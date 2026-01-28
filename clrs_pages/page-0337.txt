@@ -1,0 +1,44 @@
+316   Chapter 13 Red-Black Trees
+
+
+      RB-I NSERT-F IXUP .T; ´/
+       1 while ´:p:color == RED
+       2      if ´:p == ´:p:p:left
+       3           y D ´:p:p:right
+       4           if y:color == RED
+       5                ´:p:color D BLACK                                                      // case 1
+       6                y:color D BLACK                                                        // case 1
+       7                ´:p:p:color D RED                                                      // case 1
+       8                ´ D ´:p:p                                                              // case 1
+       9           else if ´ == ´:p:right
+      10                     ´ D ´:p                                                           // case 2
+      11                     L EFT-ROTATE .T; ´/                                               // case 2
+      12                ´:p:color D BLACK                                                      // case 3
+      13                ´:p:p:color D RED                                                      // case 3
+      14                R IGHT-ROTATE .T; ´:p:p/                                               // case 3
+      15      else (same as then clause
+                        with “right” and “left” exchanged)
+      16 T:root:color D BLACK
+
+         To understand how RB-I NSERT-F IXUP works, we shall break our examination
+      of the code into three major steps. First, we shall determine what violations of
+      the red-black properties are introduced in RB-I NSERT when node ´ is inserted
+      and colored red. Second, we shall examine the overall goal of the while loop in
+      lines 1–15. Finally, we shall explore each of the three cases1 within the while
+      loop’s body and see how they accomplish the goal. Figure 13.4 shows how RB-
+      I NSERT-F IXUP operates on a sample red-black tree.
+         Which of the red-black properties might be violated upon the call to RB-
+      I NSERT-F IXUP? Property 1 certainly continues to hold, as does property 3, since
+      both children of the newly inserted red node are the sentinel T:nil. Property 5,
+      which says that the number of black nodes is the same on every simple path from
+      a given node, is satisﬁed as well, because node ´ replaces the (black) sentinel, and
+      node ´ is red with sentinel children. Thus, the only properties that might be vi-
+      olated are property 2, which requires the root to be black, and property 4, which
+      says that a red node cannot have a red child. Both possible violations are due to ´
+      being colored red. Property 2 is violated if ´ is the root, and property 4 is violated
+      if ´’s parent is red. Figure 13.4(a) shows a violation of property 4 after the node ´
+      has been inserted.
+
+
+      1 Case 2 falls through into case 3, and so these two cases are not mutually exclusive.
+

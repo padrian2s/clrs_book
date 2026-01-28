@@ -1,0 +1,48 @@
+120   Chapter 5 Probabilistic Analysis and Randomized Algorithms
+
+                        " n           #
+                         X
+      E ŒX  D E                 Xi
+                          i D1
+                   X
+                   n
+              D           E ŒXi 
+                   i D1
+                   X
+                   n
+              D           1=2
+                   i D1
+              D n=2 :
+      Thus, compared to the method used in equation (C.37), indicator random variables
+      greatly simplify the calculation. We shall use indicator random variables through-
+      out this book.
+
+      Analysis of the hiring problem using indicator random variables
+      Returning to the hiring problem, we now wish to compute the expected number of
+      times that we hire a new ofﬁce assistant. In order to use a probabilistic analysis, we
+      assume that the candidates arrive in a random order, as discussed in the previous
+      section. (We shall see in Section 5.3 how to remove this assumption.) Let X be the
+      random variable whose value equals the number of times we hire a new ofﬁce as-
+      sistant. We could then apply the deﬁnition of expected value from equation (C.20)
+      to obtain
+                 X
+                 n
+      E ŒX  D         x Pr fX D xg ;
+                 xD1
+
+      but this calculation would be cumbersome. We shall instead use indicator random
+      variables to greatly simplify the calculation.
+        To use indicator random variables, instead of computing E ŒX  by deﬁning one
+      variable associated with the number of times we hire a new ofﬁce assistant, we
+      deﬁne n variables related to whether or not each particular candidate is hired. In
+      particular, we let Xi be the indicator random variable associated with the event in
+      which the ith candidate is hired. Thus,
+      Xi    D I fcandidate i is hiredg
+              (
+                 1 if candidate i is hired ;
+            D
+                 0 if candidate i is not hired ;
+
+      and
+      X D X1 C X2 C    C Xn :                                                      (5.2)
+

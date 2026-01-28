@@ -1,0 +1,46 @@
+584   Chapter 21 Data Structures for Disjoint Sets
+
+
+      root of its set Si equals the depth of  in Ti . That is, if the simple path from  to its
+      root in Si is 0 ; 1 ; : : : ; k , where 0 D  and k is Si ’s root, then the depth of 
+               Pk
+      in Ti is j D0 j :d.
+      b. Give an implementation of M AKE -T REE.
+
+      c. Show how to modify F IND -S ET to implement F IND -D EPTH. Your implemen-
+         tation should perform path compression, and its running time should be linear
+         in the length of the ﬁnd path. Make sure that your implementation updates
+         pseudodistances correctly.
+
+      d. Show how to implement G RAFT .r; /, which combines the sets containing r
+         and , by modifying the U NION and L INK procedures. Make sure that your
+         implementation updates pseudodistances correctly. Note that the root of a set Si
+         is not necessarily the root of the corresponding tree Ti .
+
+      e. Give a tight bound on the worst-case running time of a sequence of m M AKE -
+         T REE, F IND -D EPTH, and G RAFT operations, n of which are M AKE -T REE op-
+         erations.
+
+      21-3 Tarjan’s off-line least-common-ancestors algorithm
+      The least common ancestor of two nodes u and  in a rooted tree T is the node w
+      that is an ancestor of both u and  and that has the greatest depth in T . In the
+      off-line least-common-ancestors problem, we are given a rooted tree T and an
+      arbitrary set P D ffu; gg of unordered pairs of nodes in T , and we wish to deter-
+      mine the least common ancestor of each pair in P .
+         To solve the off-line least-common-ancestors problem, the following procedure
+      performs a tree walk of T with the initial call LCA.T:root/. We assume that each
+      node is colored WHITE prior to the walk.
+
+      LCA.u/
+       1 M AKE -S ET .u/
+       2 F IND -S ET .u/:ancestor D u
+       3 for each child  of u in T
+       4      LCA./
+       5      U NION .u; /
+       6      F IND -S ET .u/:ancestor D u
+       7 u:color D BLACK
+       8 for each node  such that fu; g 2 P
+       9      if :color == BLACK
+      10           print “The least common ancestor of”
+                        u “and”  “is” F IND -S ET ./:ancestor
+

@@ -1,0 +1,5 @@
+{
+  "page": 917,
+  "title": "Linear Programming",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 29</div>\n    <h1>Linear Programming</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>VII: Selected Topics</h4>\n    <h3>Chapter 29: Linear Programming</h3>\n    <p><em>Optimize linear function subject to linear constraints</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>Standard form: maximize cᵀx subject to Ax ≤ b, x ≥ 0</li>\n<li>Simplex algorithm: walk along edges of polytope</li>\n<li>Duality: every LP has a dual LP</li>\n<li>Polynomial-time algorithms exist (not simplex)</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>Resource allocation, scheduling, logistics</p>\n</div>\n</div>"
+}

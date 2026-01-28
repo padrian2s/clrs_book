@@ -1,0 +1,43 @@
+           13.3 Insertion                                                                     315
+
+
+
+
+13.3 Insertion
+
+           We can insert a node into an n-node red-black tree in O.lg n/ time. To do so, we
+           use a slightly modiﬁed version of the T REE -I NSERT procedure (Section 12.3) to
+           insert node ´ into the tree T as if it were an ordinary binary search tree, and then we
+           color ´ red. (Exercise 13.3-1 asks you to explain why we choose to make node ´
+           red rather than black.) To guarantee that the red-black properties are preserved, we
+           then call an auxiliary procedure RB-I NSERT-F IXUP to recolor nodes and perform
+           rotations. The call RB-I NSERT .T; ´/ inserts node ´, whose key is assumed to have
+           already been ﬁlled in, into the red-black tree T .
+
+           RB-I NSERT .T; ´/
+            1 y D T:nil
+            2 x D T:root
+            3 while x ¤ T:nil
+            4      y Dx
+            5      if ´:key < x:key
+            6           x D x:left
+            7      else x D x:right
+            8 ´:p D y
+            9 if y == T:nil
+           10      T:root D ´
+           11 elseif ´:key < y:key
+           12      y:left D ´
+           13 else y:right D ´
+           14 ´:left D T:nil
+           15 ´:right D T:nil
+           16 ´:color D RED
+           17 RB-I NSERT-F IXUP .T; ´/
+
+              The procedures T REE -I NSERT and RB-I NSERT differ in four ways. First, all
+           instances of NIL in T REE -I NSERT are replaced by T:nil. Second, we set ´:left
+           and ´:right to T:nil in lines 14–15 of RB-I NSERT, in order to maintain the
+           proper tree structure. Third, we color ´ red in line 16. Fourth, because col-
+           oring ´ red may cause a violation of one of the red-black properties, we call
+           RB-I NSERT-F IXUP .T; ´/ in line 17 of RB-I NSERT to restore the red-black prop-
+           erties.
+

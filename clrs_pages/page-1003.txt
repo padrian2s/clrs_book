@@ -1,0 +1,46 @@
+982        Chapter 31 Number-Theoretic Algorithms
+
+
+           c. Show how to compute Fn in O.lg n/ time using only integer addition and mul-
+              tiplication. (Hint: Consider the matrix
+                      
+                 0 1
+                 1 1
+
+                and its powers.)
+
+           d. Assume now that adding two ˇ-bit numbers takes ‚.ˇ/ time and that multi-
+              plying two ˇ-bit numbers takes ‚.ˇ 2 / time. What is the running time of these
+              three methods under this more reasonable cost measure for the elementary arith-
+              metic operations?
+
+           31-4 Quadratic residues
+           Let p be an odd prime. A number a 2 Zp is a quadratic residue if the equation
+           x 2 D a .mod p/ has a solution for the unknown x.
+
+           a. Show that there are exactly .p  1/=2 quadratic residues, modulo p.
+
+           b. If p is prime, we deﬁne the Legendre symbol . pa /, for a 2 Zp , to be 1 if a is a
+              quadratic residue modulo p and 1 otherwise. Prove that if a 2 Zp , then
+                a
+                       a.p1/=2 .mod p/ :
+                 p
+
+                Give an efﬁcient algorithm that determines whether a given number a is a qua-
+                dratic residue modulo p. Analyze the efﬁciency of your algorithm.
+
+           c. Prove that if p is a prime of the form 4k C 3 and a is a quadratic residue in Zp ,
+              then akC1 mod p is a square root of a, modulo p. How much time is required
+              to ﬁnd the square root of a quadratic residue a modulo p?
+
+           d. Describe an efﬁcient randomized algorithm for ﬁnding a nonquadratic residue,
+              modulo an arbitrary prime p, that is, a member of Zp that is not a quadratic
+              residue. How many arithmetic operations does your algorithm require on aver-
+              age?
+
+
+Chapter notes
+
+           Niven and Zuckerman [265] provide an excellent introduction to elementary num-
+           ber theory. Knuth [210] contains a good discussion of algorithms for ﬁnding the
+

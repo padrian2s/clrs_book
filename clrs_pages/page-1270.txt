@@ -1,0 +1,44 @@
+Bibliography                                                                               1249
+
+
+ [340] P. van Emde Boas. Preserving order in a forest in less than logarithmic time and linear
+       space. Information Processing Letters, 6(3):80–82, 1977.
+ [341] P. van Emde Boas, R. Kaas, and E. Zijlstra. Design and implementation of an efﬁcient
+       priority queue. Mathematical Systems Theory, 10(1):99–127, 1976.
+ [342] Jan van Leeuwen, editor. Handbook of Theoretical Computer Science, Volume A: Algo-
+       rithms and Complexity. Elsevier Science Publishers and the MIT Press, 1990.
+ [343] Charles Van Loan. Computational Frameworks for the Fast Fourier Transform. Society for
+       Industrial and Applied Mathematics, 1992.
+ [344] Robert J. Vanderbei. Linear Programming: Foundations and Extensions. Kluwer Academic
+       Publishers, 1996.
+ [345] Vijay V. Vazirani. Approximation Algorithms. Springer, 2001.
+ [346] Rakesh M. Verma. General techniques for analyzing recursive algorithms with applications.
+       SIAM Journal on Computing, 26(2):568–581, 1997.
+ [347] Hao Wang and Bill Lin. Pipelined van Emde Boas tree: Algorithms, analysis, and ap-
+       plications. In 26th IEEE International Conference on Computer Communications, pages
+       2471–2475, 2007.
+ [348] Antony F. Ware. Fast approximate Fourier transforms for irregularly spaced data. SIAM
+       Review, 40(4):838–856, 1998.
+ [349] Stephen Warshall. A theorem on boolean matrices. Journal of the ACM, 9(1):11–12, 1962.
+ [350] Michael S. Waterman. Introduction to Computational Biology, Maps, Sequences and
+       Genomes. Chapman & Hall, 1995.
+ [351] Mark Allen Weiss. Data Structures and Problem Solving Using C++. Addison-Wesley,
+       second edition, 2000.
+ [352] Mark Allen Weiss. Data Structures and Problem Solving Using Java. Addison-Wesley,
+       third edition, 2006.
+ [353] Mark Allen Weiss. Data Structures and Algorithm Analysis in C++. Addison-Wesley, third
+       edition, 2007.
+ [354] Mark Allen Weiss. Data Structures and Algorithm Analysis in Java. Addison-Wesley,
+       second edition, 2007.
+ [355] Hassler Whitney. On the abstract properties of linear dependence. American Journal of
+       Mathematics, 57(3):509–533, 1935.
+ [356] Herbert S. Wilf. Algorithms and Complexity. A K Peters, second edition, 2002.
+ [357] J. W. J. Williams. Algorithm 232 (HEAPSORT). Communications of the ACM, 7(6):347–
+       348, 1964.
+ [358] Shmuel Winograd. On the algebraic complexity of functions. In Actes du Congrès Interna-
+       tional des Mathématiciens, volume 3, pages 283–288, 1970.
+ [359] Andrew C.-C. Yao. A lower bound to ﬁnding convex hulls. Journal of the ACM, 28(4):780–
+       787, 1981.
+ [360] Chee Yap. A real elementary approach to the master recurrence and generalizations. Un-
+       published manuscript. Available at http://cs.nyu.edu/yap/papers/, July 2008.
+

@@ -1,0 +1,52 @@
+Index                                                                                      1281
+
+
+  of convex hull over a sparse-hulled              procedure,Q6, 16–17
+     distribution, 1046 pr.                        product . /, 1148
+  of ﬁle comparison, 995 ex.                          Cartesian, 1162
+  of fuzzy sorting of intervals, 189 pr.              cross, 1016
+  of hashing with chaining, 258–260                   inner, 1222
+  of height of a randomly built binary search         of matrices, 1221, 1226 ex.
+     tree, 299–303                                    outer, 1222
+  of hiring problem, 120–121, 139–141                 of polynomials, 899
+  of insertion into a binary search tree with         rule of, 1184
+     equal keys, 303 pr.                              scalar ﬂow, 714 ex.
+  of longest-probe bound for hashing, 282 pr.      professional wrestler, 602 ex.
+  of lower bound for sorting, 205 pr.              program counter, 1073
+  of Miller-Rabin primality test, 971–975          programming, see dynamic programming,
+  and multithreaded algorithms, 811 pr.                  linear programming
+  of on-line hiring problem, 139–141               proper ancestor, 1176
+  of open-address hashing, 274–276, 277 ex.        proper descendant, 1176
+  of partitioning, 179 ex., 185 ex., 187–188 pr.   proper subgroup, 944
+  of perfect hashing, 279–282                      proper subset ( ), 1159
+  of Pollard’s rho heuristic, 977–980              proto van Emde Boas structure, 538–545
+  of probabilistic counting, 143 pr.                  cluster in, 538
+  of quicksort, 181–184, 187–188 pr., 303 ex.         compared with van Emde Boas trees, 547
+  of Rabin-Karp algorithm, 994                        deletion from, 544
+  and randomized algorithms, 123–124                  insertion into, 544
+  of randomized selection, 217–219, 226 pr.           maximum in, 544 ex.
+  of searching a compact list, 250 pr.                membership in, 540–541
+  of slot-size bound for chaining, 283 pr.            minimum in, 541–542
+  of sorting points by distance from origin,          predecessor in, 544 ex.
+     204 ex.                                          successor in, 543–544
+  of streaks, 135–139                                 summary in, 540
+  of universal hashing, 265–268                    P ROTO - V EB-I NSERT , 544
+probabilistic counting, 143 pr.                    P ROTO - V EB-M EMBER, 541
+probability, 1189–1196                             P ROTO - V EB-M INIMUM, 542
+probability density function, 1196                 proto-vEB structure, see proto van Emde Boas
+probability distribution, 1190                           structure
+probability distribution function, 204 ex.         P ROTO - V EB-S UCCESSOR, 543
+probe sequence, 270                                prune-and-search method, 1030
+probing, 270, 282 pr.                              pruning a Fibonacci heap, 529 pr.
+  see also linear probing, quadratic probing,      P-S CAN -1, 808 pr.
+     double hashing                                P-S CAN -2, 808 pr.
+problem                                            P-S CAN -3, 809 pr.
+  abstract, 1054                                   P-S CAN -D OWN, 809 pr.
+  computational, 5–6                               P-S CAN -U P, 809 pr.
+  concrete, 1055                                   pseudocode, 16, 20–22
+  decision, 1051, 1054                             pseudoinverse, 837
+  intractable, 1048                                pseudoprime, 966–968
+  optimization, 359, 1050, 1054                    P SEUDOPRIME , 967
+  solution to, 6, 1054–1055                        pseudorandom-number generator, 117
+  tractable, 1048                                  P-S QUARE -M ATRIX -M ULTIPLY, 793
+

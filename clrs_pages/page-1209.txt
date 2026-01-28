@@ -1,0 +1,55 @@
+1188   Appendix C   Counting and Probability
+
+
+       C.1-5
+       Prove the identity
+          !               !
+        n      n n1
+            D                                                                          (C.8)
+        k      k k1
+       for 0 < k  n.
+
+       C.1-6
+       Prove the identity
+          !                 !
+        n         n     n1
+            D
+        k      nk        k
+       for 0  k < n.
+
+       C.1-7
+       To choose k objects from n, you can make one of the objects distinguished and
+       consider whether the distinguished object is chosen. Use this approach to prove
+       that
+           !         !            !
+         n      n1         n1
+             D          C           :
+         k        k         k1
+
+       C.1-8
+       Using the result of Exercise C.1-7, make a table for n D 0; 1; : : : ; 6 and 0  k  n
+       of the binomial coefﬁcients kn with 00 at the top, 10 and 11 on the next line, and
+       so forth. Such a table of binomial coefﬁcients is called Pascal’s triangle.
+
+       C.1-9
+       Prove that
+                     !
+       X n
+                  nC1
+            iD         :
+       i D1
+                   2
+
+       C.1-10
+                                                                             n
+       Show that for any integers n  0 and 0  k  n, the expression        k
+                                                                                 achieves its
+       maximum value when k D bn=2c or k D dn=2e.
+
+       C.1-11 ?
+       Argue that for any integers n  0, j  0, k  0, and j C k  n,
+              !         !        !
+           n          n nj
+                                  :                                                   (C.9)
+        j Ck          j      k
+

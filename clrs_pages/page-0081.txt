@@ -1,0 +1,44 @@
+60   Chapter 3 Growth of Functions
+
+            
+                i  1
+     Fi D       p C       ;                                                      (3.25)
+                 5  2
+                                                                       p
+     which is to say that the ith Fibonacci number Fi is equal to  i = 5 rounded to the
+     nearest integer. Thus, Fibonacci numbers grow exponentially.
+
+     Exercises
+
+     3.2-1
+     Show that if f .n/ and g.n/ are monotonically increasing functions, then so are
+     the functions f .n/ C g.n/ and f .g.n//, and if f .n/ and g.n/ are in addition
+     nonnegative, then f .n/  g.n/ is monotonically increasing.
+
+     3.2-2
+     Prove equation (3.16).
+
+     3.2-3
+     Prove equation (3.19). Also prove that nŠ D !.2n / and nŠ D o.nn /.
+
+     3.2-4 ?
+     Is the function dlg neŠ polynomially bounded? Is the function dlg lg neŠ polynomi-
+     ally bounded?
+
+     3.2-5 ?
+     Which is asymptotically larger: lg.lg n/ or lg .lg n/?
+
+     3.2-6
+     Show that the golden ratio  and its conjugate y both satisfy the equation
+     x 2 D x C 1.
+
+     3.2-7
+     Prove by induction that the ith Fibonacci number satisﬁes the equality
+             i  yi
+     Fi D      p      ;
+                 5
+     where  is the golden ratio and y is its conjugate.
+
+     3.2-8
+     Show that k ln k D ‚.n/ implies k D ‚.n= ln n/.
+

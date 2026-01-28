@@ -1,0 +1,48 @@
+                       27.1 The basics of dynamic multithreading                                                                          775
+
+
+                                                                                    F IB .6/
+
+
+                                                  F IB .5/                                                         F IB .4/
+
+
+                           F IB .4/                                      F IB .3/                      F IB .3/                F IB .2/
+
+
+            F IB .3/                   F IB .2/                    F IB .2/    F IB .1/          F IB .2/    F IB .1/    F IB .1/    F IB .0/
+
+
+      F IB .2/    F IB .1/       F IB .1/    F IB .0/        F IB .1/    F IB .0/          F IB .1/    F IB .0/
+
+
+F IB .1/    F IB .0/
+
+
+
+                       Figure 27.1 The tree of recursive procedure instances when computing F IB.6/. Each instance of
+                       F IB with the same argument does the same work to produce the same result, providing an inefﬁcient
+                       but interesting way to compute Fibonacci numbers.
+
+
+                       F IB .n/
+                       1 if n  1
+                       2        return n
+                       3 else x D F IB.n  1/
+                       4        y D F IB .n  2/
+                       5        return x C y
+
+                          You would not really want to compute large Fibonacci numbers this way, be-
+                       cause this computation does much repeated work. Figure 27.1 shows the tree of
+                       recursive procedure instances that are created when computing F6 . For example,
+                       a call to F IB.6/ recursively calls F IB .5/ and then F IB.4/. But, the call to F IB .5/
+                       also results in a call to F IB .4/. Both instances of F IB .4/ return the same result
+                       (F4 D 3). Since the F IB procedure does not memoize, the second call to F IB .4/
+                       replicates the work that the ﬁrst call performs.
+                          Let T .n/ denote the running time of F IB .n/. Since F IB .n/ contains two recur-
+                       sive calls plus a constant amount of extra work, we obtain the recurrence
+                       T .n/ D T .n  1/ C T .n  2/ C ‚.1/ :
+                       This recurrence has solution T .n/ D ‚.Fn /, which we can show using the substi-
+                       tution method. For an inductive hypothesis, assume that T .n/  aFn  b, where
+                       a > 1 and b > 0 are constants. Substituting, we obtain
+

@@ -1,0 +1,48 @@
+31.9 Integer factorization                                                              979
+
+
+the sequence is a smaller version of what is happening modulo n:
+xi0 C1 D    xi C1 mod p
+       D    fn .xi / mod p
+       D    ..xi2  1/ mod n/ mod p
+       D    .xi2  1/ mod p         (by Exercise 31.1-7)
+                          2
+       D    ..xi mod p/  1/ mod p
+       D    ..xi0 /2  1/ mod p
+       D    fp .xi0 / :
+Thus, although we are not explicitly computing the sequence hxi0 i, this sequence is
+well deﬁned and obeys the same recurrence as the sequence hxi i.
+     Reasoning as before, we ﬁnd that the expected number of steps before the se-
+                               p
+quence hxi0 i repeats is ‚. p/. If p is small compared to n, the sequence hxi0 i might
+repeat much more quickly than the sequence hxi i. Indeed, as parts (b) and (c) of
+Figure 31.7 show, the hxi0 i sequence repeats as soon as two elements of the se-
+quence hxi i are merely equivalent modulo p, rather than equivalent modulo n.
+     Let t denote the index of the ﬁrst repeated value in the hxi0 i sequence, and let
+u > 0 denote the length of the cycle that has been thereby produced. That is, t
+and u > 0 are the smallest values such that x t0 Ci D x t0 CuCi for all i  0. By the
+                                                                          p
+above arguments, the expected values of t and u are both ‚. p/. Note that if
+x t0 Ci D x t0 CuCi , then p j .x t CuCi  x t Ci /. Thus, gcd.x t CuCi  x t Ci ; n/ > 1.
+     Therefore, once P OLLARD -R HO has saved as y any value xk such that k  t,
+then y mod p is always on the cycle modulo p. (If a new value is saved as y,
+that value is also on the cycle modulo p.) Eventually, k is set to a value that
+is greater than u, and the procedure then makes an entire loop around the cycle
+modulo p without changing the value of y. The procedure then discovers a factor
+of n when xi “runs into” the previously stored value of y, modulo p, that is, when
+xi  y .mod p/.
+     Presumably, the factor found is the factor p, although it may occasionally hap-
+pen that a multiple of p is discovered. Since the expected values of both t and u are
+      p                                                                                    p
+‚. p/, the expected number of steps required to produce the factor p is ‚. p/.
+     This algorithm might not perform quite as expected, for two reasons. First, the
+heuristic analysis of the running time is not rigorous, and it is possible that the cycle
+                                                            p
+of values, modulo p, could be much larger than p. In this case, the algorithm
+performs correctly but much more slowly than desired. In practice, this issue seems
+to be moot. Second, the divisors of n produced by this algorithm might always be
+one of the trivial factors 1 or n. For example, suppose that n D pq, where p
+and q are prime. It can happen that the values of t and u for p are identical with
+the values of t and u for q, and thus the factor p is always revealed in the same
+gcd operation that reveals the factor q. Since both factors are revealed at the same
+

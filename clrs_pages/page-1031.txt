@@ -1,0 +1,43 @@
+1010   Chapter 32 String Matching
+
+
+       then line 9 sets the new state to q 0 C1, which should equal ı.q; a/ for the simulation
+       to work correctly. In other words, the new state ı.q; a/ should be either state 0 or
+       one greater than some state in   Œq.
+          Let’s look at the example in Figures 32.7 and 32.11, which are for the pattern
+       P D ababaca. Suppose that the automaton is in state q D 5; the states in
+         Œ5 are, in descending order, 3, 1, and 0. If the next character scanned is c, then
+       we can easily see that the automaton moves to state ı.5; c/ D 6 in both F INITE -
+       AUTOMATON -M ATCHER and KMP-M ATCHER. Now suppose that the next char-
+       acter scanned is instead b, so that the automaton should move to state ı.5; b/ D 4.
+       The while loop in KMP-M ATCHER exits having executed line 7 once, and it ar-
+       rives in state q 0 D Œ5 D 3. Since P Œq 0 C 1 D P Œ4 D b, the test in line 8
+       comes up true, and KMP-M ATCHER moves to the new state q 0 C 1 D 4 D ı.5; b/.
+       Finally, suppose that the next character scanned is instead a, so that the automa-
+       ton should move to state ı.5; a/ D 1. The ﬁrst three times that the test in line 6
+       executes, the test comes up true. The ﬁrst time, we ﬁnd that P Œ6 D c ¤ a, and
+       KMP-M ATCHER moves to state Œ5 D 3 (the ﬁrst state in   Œ5). The second
+       time, we ﬁnd that P Œ4 D b ¤ a and move to state Œ3 D 1 (the second state
+       in   Œ5). The third time, we ﬁnd that P Œ2 D b ¤ a and move to state Œ1 D 0
+       (the last state in   Œ5). The while loop exits once it arrives in state q 0 D 0. Now,
+       line 8 ﬁnds that P Œq 0 C 1 D P Œ1 D a, and line 9 moves the automaton to the new
+       state q 0 C 1 D 1 D ı.5; a/.
+          Thus, our intuition is that KMP-M ATCHER iterates through the states in   Œq in
+       decreasing order, stopping at some state q 0 and then possibly moving to state q 0 C1.
+       Although that might seem like a lot of work just to simulate computing ı.q; a/,
+       bear in mind that asymptotically, KMP-M ATCHER is no slower than F INITE -
+       AUTOMATON -M ATCHER.
+          We are now ready to formally prove the correctness of the Knuth-Morris-Pratt
+       algorithm. By Theorem 32.4, we have that q D .Ti / after each time we execute
+       line 4 of F INITE -AUTOMATON -M ATCHER. Therefore, it sufﬁces to show that the
+       same property holds with regard to the for loop in KMP-M ATCHER. The proof
+       proceeds by induction on the number of loop iterations. Initially, both procedures
+       set q to 0 as they enter their respective for loops for the ﬁrst time. Consider itera-
+       tion i of the for loop in KMP-M ATCHER, and let q 0 be state at the start of this loop
+       iteration. By the inductive hypothesis, we have q 0 D .Ti 1 /. We need to show
+       that q D .Ti / at line 10. (Again, we shall handle line 12 separately.)
+          When we consider the character T Œi, the longest preﬁx of P that is a sufﬁx of Ti
+       is either Pq0 C1 (if P Œq 0 C 1 D T Œi) or some preﬁx (not necessarily proper, and
+       possibly empty) of Pq0 . We consider separately the three cases in which .Ti / D 0,
+         .Ti / D q 0 C 1, and 0 < .Ti /  q 0 .
+

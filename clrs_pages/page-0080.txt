@@ -1,0 +1,45 @@
+3.2 Standard notations and common functions                                      59
+
+
+Since the number of atoms in the observable universe is estimated to be about 1080 ,
+which is much less than 265536 , we rarely encounter an input size n such that
+lg n > 5.
+
+Fibonacci numbers
+We deﬁne the Fibonacci numbers by the following recurrence:
+F0 D 0 ;
+F1 D 1 ;                                                                     (3.22)
+Fi D Fi 1 C Fi 2           for i  2 :
+Thus, each Fibonacci number is the sum of the two previous ones, yielding the
+sequence
+0; 1; 1; 2; 3; 5; 8; 13; 21; 34; 55; : : : :
+                                                                         y which
+Fibonacci numbers are related to the golden ratio  and to its conjugate ,
+are the two roots of the equation
+x2 D x C 1                                                                   (3.23)
+and are given by the following formulas (see Exercise 3.2-6):
+             p
+         1C 5
+ D                                                                          (3.24)
+            2
+   D 1:61803 : : : ;
+             p
+         1    5
+y D
+            2
+   D :61803 : : : :
+Speciﬁcally, we have
+        i  yi
+Fi D      p      ;
+            5
+                                                        ˇ ˇ
+which we can prove by induction (Exercise 3.2-7). Since ˇyˇ < 1, we have
+ˇ iˇ
+ˇy ˇ      1
+p     < p
+   5        5
+          1
+      <     ;
+          2
+which implies that
+

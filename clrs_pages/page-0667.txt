@@ -1,0 +1,52 @@
+646   Chapter 24 Single-Source Shortest Paths
+
+
+                      a              b
+                             –4
+                      3              –1
+                                                                   h                i
+               3                             4                             2
+                                                                   ∞                ∞
+       s              c       6      d               g
+               5                             8
+       0              5              11             –∞              –8          3
+                             –3
+                                                                           ∞
+               2      e       3      f       7
+                                                                           j
+                     –∞             –∞
+                             –6
+
+
+      Figure 24.1 Negative edge weights in a directed graph. The shortest-path weight from source s
+      appears within each vertex. Because vertices e and f form a negative-weight cycle reachable from s,
+      they have shortest-path weights of 1. Because vertex g is reachable from a vertex whose shortest-
+      path weight is 1, it, too, has a shortest-path weight of 1. Vertices such as h, i, and j are not
+      reachable from s, and so their shortest-path weights are 1, even though they lie on a negative-weight
+      cycle.
+
+
+         Some shortest-paths algorithms, such as Dijkstra’s algorithm, assume that all
+      edge weights in the input graph are nonnegative, as in the road-map example. Oth-
+      ers, such as the Bellman-Ford algorithm, allow negative-weight edges in the in-
+      put graph and produce a correct answer as long as no negative-weight cycles are
+      reachable from the source. Typically, if there is such a negative-weight cycle, the
+      algorithm can detect and report its existence.
+
+      Cycles
+      Can a shortest path contain a cycle? As we have just seen, it cannot contain a
+      negative-weight cycle. Nor can it contain a positive-weight cycle, since remov-
+      ing the cycle from the path produces a path with the same source and destination
+      vertices and a lower path weight. That is, if p D h0 ; 1 ; : : : ; k i is a path and
+      c D hi ; i C1 ; : : : ; j i is a positive-weight cycle on this path (so that i D j and
+      w.c/ > 0), then the path p 0 D h0 ; 1 ; : : : ; i ; j C1 ; j C2 ; : : : ; k i has weight
+      w.p 0 / D w.p/  w.c/ < w.p/, and so p cannot be a shortest path from 0 to k .
+         That leaves only 0-weight cycles. We can remove a 0-weight cycle from any
+      path to produce another path whose weight is the same. Thus, if there is a shortest
+      path from a source vertex s to a destination vertex  that contains a 0-weight cycle,
+      then there is another shortest path from s to  without this cycle. As long as a
+      shortest path has 0-weight cycles, we can repeatedly remove these cycles from the
+      path until we have a shortest path that is cycle-free. Therefore, without loss of
+      generality we can assume that when we are ﬁnding shortest paths, they have no
+      cycles, i.e., they are simple paths. Since any acyclic path in a graph G D .V; E/
+

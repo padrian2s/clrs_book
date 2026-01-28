@@ -1,0 +1,43 @@
+35.5 The subset-sum problem                                                     1133
+
+     n
+ 1C        e =2
+    2n
+           1 C =2 C .=2/2 (by inequality (3.13))
+           1C              (by inequality (35.25)) .                       (35.30)
+Combining inequalities (35.28) and (35.30) completes the analysis of the approxi-
+mation ratio.
+   To show that A PPROX -S UBSET-S UM is a fully polynomial-time approximation
+scheme, we derive a bound on the length of Li . After trimming, successive ele-
+ments ´ and ´0 of Li must have the relationship ´0 =´ > 1C=2n. That is, they must
+differ by a factor of at least 1 C =2n. Each˘list, therefore, contains the value 0,
+possibly the value 1, and up to log1C=2n t additional values. The number of
+elements in each list Li is at most
+                            ln t
+log1C=2n t C 2 D                   C2
+                       ln.1 C =2n/
+                       2n.1 C =2n/ ln t
+                                        C 2 (by inequality (3.17))
+                                 
+                       3n ln t
+                  <            C2            (by inequality (35.25)) .
+                          
+This bound is polynomial in the size of the input—which is the number of bits lg t
+needed to represent t plus the number of bits needed to represent the set S, which is
+in turn polynomial in n—and in 1=. Since the running time of A PPROX -S UBSET-
+S UM is polynomial in the lengths of the Li , we conclude that A PPROX -S UBSET-
+S UM is a fully polynomial-time approximation scheme.
+
+Exercises
+
+35.5-1
+Prove equation (35.23). Then show that after executing line 5 of E XACT-S UBSET-
+S UM, Li is a sorted list containing every element of Pi whose value is not more
+than t.
+
+35.5-2
+Using induction on i, prove inequality (35.26).
+
+35.5-3
+Prove inequality (35.29).
+

@@ -1,0 +1,41 @@
+          16.4 Matroids and greedy methods                                                  437
+
+
+          16.3-9
+          Show that no compression scheme can expect to compress a ﬁle of randomly cho-
+          sen 8-bit characters by even a single bit. (Hint: Compare the number of possible
+          ﬁles with the number of possible encoded ﬁles.)
+
+
+
+? 16.4 Matroids and greedy methods
+
+          In this section, we sketch a beautiful theory about greedy algorithms. This theory
+          describes many situations in which the greedy method yields optimal solutions. It
+          involves combinatorial structures known as “matroids.” Although this theory does
+          not cover all cases for which a greedy method applies (for example, it does not
+          cover the activity-selection problem of Section 16.1 or the Huffman-coding prob-
+          lem of Section 16.3), it does cover many cases of practical interest. Furthermore,
+          this theory has been extended to cover many applications; see the notes at the end
+          of this chapter for references.
+
+          Matroids
+          A matroid is an ordered pair M D .S;  / satisfying the following conditions.
+          1. S is a ﬁnite set.
+          2.  is a nonempty family of subsets of S, called the independent subsets of S,
+             such that if B 2  and A  B, then A 2  . We say that  is hereditary if it
+             satisﬁes this property. Note that the empty set ; is necessarily a member of  .
+          3. If A 2  , B 2  , and jAj < jBj, then there exists some element x 2 B  A
+             such that A [ fxg 2  . We say that M satisﬁes the exchange property.
+             The word “matroid” is due to Hassler Whitney. He was studying matric ma-
+          troids, in which the elements of S are the rows of a given matrix and a set of rows is
+          independent if they are linearly independent in the usual sense. As Exercise 16.4-2
+          asks you to show, this structure deﬁnes a matroid.
+             As another example of matroids, consider the graphic matroid MG D .SG ;  G /
+          deﬁned in terms of a given undirected graph G D .V; E/ as follows:
+             The set SG is deﬁned to be E, the set of edges of G.
+             If A is a subset of E, then A 2  G if and only if A is acyclic. That is, a set of
+              edges A is independent if and only if the subgraph GA D .V; A/ forms a forest.
+          The graphic matroid MG is closely related to the minimum-spanning-tree problem,
+          which Chapter 23 covers in detail.
+

@@ -1,0 +1,50 @@
+7.4 Analysis of quicksort                                                          183
+
+
+             X
+             n1 X
+                 n
+        D                    E ŒXij 
+              i D1 j Di C1
+
+             X
+             n1    X
+                    n
+        D                    Pr f´i is compared to ´j g :                        (7.2)
+              i D1 j Di C1
+
+It remains to compute Pr f´i is compared to ´j g. Our analysis assumes that the
+R ANDOMIZED -PARTITION procedure chooses each pivot randomly and indepen-
+dently.
+   Let us think about when two items are not compared. Consider an input to
+quicksort of the numbers 1 through 10 (in any order), and suppose that the ﬁrst
+pivot element is 7. Then the ﬁrst call to PARTITION separates the numbers into two
+sets: f1; 2; 3; 4; 5; 6g and f8; 9; 10g. In doing so, the pivot element 7 is compared
+to all other elements, but no number from the ﬁrst set (e.g., 2) is or ever will be
+compared to any number from the second set (e.g., 9).
+   In general, because we assume that element values are distinct, once a pivot x
+is chosen with ´i < x < ´j , we know that ´i and ´j cannot be compared at any
+subsequent time. If, on the other hand, ´i is chosen as a pivot before any other item
+in Zij , then ´i will be compared to each item in Zij , except for itself. Similarly,
+if ´j is chosen as a pivot before any other item in Zij , then ´j will be compared to
+each item in Zij , except for itself. In our example, the values 7 and 9 are compared
+because 7 is the ﬁrst item from Z7;9 to be chosen as a pivot. In contrast, 2 and 9 will
+never be compared because the ﬁrst pivot element chosen from Z2;9 is 7. Thus, ´i
+and ´j are compared if and only if the ﬁrst element to be chosen as a pivot from Zij
+is either ´i or ´j .
+   We now compute the probability that this event occurs. Prior to the point at
+which an element from Zij has been chosen as a pivot, the whole set Zij is together
+in the same partition. Therefore, any element of Zij is equally likely to be the ﬁrst
+one chosen as a pivot. Because the set Zij has j i C1 elements, and because pivots
+are chosen randomly and independently, the probability that any given element is
+the ﬁrst one chosen as a pivot is 1=.j  i C 1/. Thus, we have
+Pr f´i is compared to ´j g D Pr f´i or ´j is ﬁrst pivot chosen from Zij g
+                           D Pr f´i is ﬁrst pivot chosen from Zij g
+                                C Pr f´j is ﬁrst pivot chosen from Zij g
+                                  1              1
+                           D             C
+                             j i C1         j i C1
+                                  2
+                           D             :                                       (7.3)
+                             j i C1
+

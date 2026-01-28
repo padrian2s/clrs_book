@@ -1,0 +1,45 @@
+1190   Appendix C    Counting and Probability
+
+
+          An event is a subset1 of the sample space S. For example, in the experiment of
+       ﬂipping two coins, the event of obtaining one head and one tail is fHT; TH g. The
+       event S is called the certain event, and the event ; is called the null event. We say
+       that two events A and B are mutually exclusive if A \ B D ;. We sometimes treat
+       an elementary event s 2 S as the event fsg. By deﬁnition, all elementary events
+       are mutually exclusive.
+
+       Axioms of probability
+       A probability distribution Pr fg on a sample space S is a mapping from events of S
+       to real numbers satisfying the following probability axioms:
+       1. Pr fAg  0 for any event A.
+       2. Pr fSg D 1.
+       3. Pr fA [ Bg D Pr fAg C Pr fBg for any two mutually exclusive events A
+          and B. More generally, for any (ﬁnite or countably inﬁnite) sequence of events
+          A1 ; A2 ; : : : that are pairwise mutually exclusive,
+             (          )
+               [              X
+          Pr       Ai D           Pr fAi g :
+                 i             i
+
+
+       We call Pr fAg the probability of the event A. We note here that axiom 2 is a
+       normalization requirement: there is really nothing fundamental about choosing 1
+       as the probability of the certain event, except that it is natural and convenient.
+          Several results follow immediately from these axioms and basic set theory (see
+       Section B.1). The null event ; has probability Pr f;g D 0. If A  B, then
+       Pr fAg  Pr ˚ fBg. Using A to denote the event S  A (the complement of A),
+       we have Pr A D 1  Pr fAg. For any two events A and B,
+       Pr fA [ Bg D Pr fAg C Pr fBg  Pr fA \ Bg                                                    (C.12)
+                   Pr fAg C Pr fBg :                                                               (C.13)
+
+
+       1 For a general probability distribution, there may be some subsets of the sample space S that are not
+
+       considered to be events. This situation usually arises when the sample space is uncountably inﬁnite.
+       The main requirement for what subsets are events is that the set of events of a sample space be closed
+       under the operations of taking the complement of an event, forming the union of a ﬁnite or countable
+       number of events, and taking the intersection of a ﬁnite or countable number of events. Most of
+       the probability distributions we shall see are over ﬁnite or countable sample spaces, and we shall
+       generally consider all subsets of a sample space to be events. A notable exception is the continuous
+       uniform probability distribution, which we shall see shortly.
+

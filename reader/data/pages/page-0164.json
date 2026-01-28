@@ -1,0 +1,5 @@
+{
+  "page": 164,
+  "title": "6.4 The Heapsort Algorithm",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 6.4</div>\n    <h1>The Heapsort Algorithm</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Sort by building a heap, then repeatedly extracting the maximum.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Build max-heap from input array</li>\n<li>Swap root (max) with last element</li>\n<li>Reduce heap size, heapify the root</li>\n<li>Repeat until sorted</li>\n<li>Time: O(n log n), Space: O(1)</li></ul>\n    </div>\n\n    <div class=\"algorithm\">\n    <h4>Pseudocode</h4>\n    <pre style=\"font-size: 0.85rem; line-height: 1.6;\">HEAPSORT(A):\n    BUILD-MAX-HEAP(A)\n    for i = n downto 2:\n        swap A[1] and A[i]\n        heap-size = heap-size - 1\n        MAX-HEAPIFY(A, 1)</pre>\n</div>\n    \n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>In-place O(n log n) sorting with guaranteed worst-case performance.</p>\n</div>\n</div>"
+}

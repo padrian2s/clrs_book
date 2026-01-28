@@ -1,0 +1,54 @@
+Problems for Chapter 4                                                            109
+
+
+b. Show that
+                     ´
+   F .´/ D
+                 1  ´  ´2
+                         ´
+            D
+                              y
+                 .1  ´/.1  ´/
+                                     
+                  1      1        1
+            D    p                     ;
+                   5 1  ´ 1  y  ´
+   where
+         p
+      1C 5
+   D      D 1:61803 : : :
+        2
+   and
+            p
+        1   5
+   y D        D 0:61803 : : : :
+           2
+c. Show that
+           X 1
+                1
+   F .´/ D      p . i  yi /´i :
+           i D0
+                 5
+
+                                     i
+                                        p
+d. Use part (c) to proveˇthat
+                           ˇ  Fi D    =  5 for i > 0, rounded to the nearest integer.
+   (Hint: Observe that ˇyˇ < 1.)
+
+4-5 Chip testing
+Professor Diogenes has n supposedly identical integrated-circuit chips that in prin-
+ciple are capable of testing each other. The professor’s test jig accommodates two
+chips at a time. When the jig is loaded, each chip tests the other and reports whether
+it is good or bad. A good chip always reports accurately whether the other chip is
+good or bad, but the professor cannot trust the answer of a bad chip. Thus, the four
+possible outcomes of a test are as follows:
+Chip A says     Chip B says    Conclusion
+B is good       A is good      both are good, or both are bad
+B is good       A is bad       at least one is bad
+B is bad        A is good      at least one is bad
+B is bad        A is bad       at least one is bad
+a. Show that if more than n=2 chips are bad, the professor cannot necessarily de-
+   termine which chips are good using any strategy based on this kind of pairwise
+   test. Assume that the bad chips can conspire to fool the professor.
+

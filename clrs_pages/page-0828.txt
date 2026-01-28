@@ -1,0 +1,43 @@
+Problems for Chapter 27                                                           807
+
+
+27-4 Multithreading reductions and preﬁx computations
+A ˝-reduction of an array xŒ1 : : n, where ˝ is an associative operator, is the value
+y D xŒ1 ˝ xŒ2 ˝    ˝ xŒn :
+The following procedure computes the ˝-reduction of a subarray xŒi : : j  serially.
+
+R EDUCE .x; i; j /
+1 y D xŒi
+2 for k D i C 1 to j
+3      y D y ˝ xŒk
+4 return y
+
+a. Use nested parallelism to implement a multithreaded algorithm P-R EDUCE,
+   which performs the same function with ‚.n/ work and ‚.lg n/ span. Analyze
+   your algorithm.
+
+   A related problem is that of computing a ˝-preﬁx computation, sometimes
+called a ˝-scan, on an array xŒ1 : : n, where ˝ is once again an associative op-
+erator. The ˝-scan produces the array yŒ1 : : n given by
+yŒ1 D xŒ1 ;
+yŒ2 D xŒ1 ˝ xŒ2 ;
+yŒ3 D xŒ1 ˝ xŒ2 ˝ xŒ3 ;
+     ::
+      :
+yŒn D xŒ1 ˝ xŒ2 ˝ xŒ3 ˝    ˝ xŒn ;
+that is, all preﬁxes of the array x “summed” using the ˝ operator. The following
+serial procedure S CAN performs a ˝-preﬁx computation:
+
+S CAN.x/
+1 n D x:length
+2 let yŒ1 : : n be a new array
+3 yŒ1 D xŒ1
+4 for i D 2 to n
+5      yŒi D yŒi  1 ˝ xŒi
+6 return y
+
+Unfortunately, multithreading S CAN is not straightforward. For example, changing
+the for loop to a parallel for loop would create races, since each iteration of the
+loop body depends on the previous iteration. The following procedure P-S CAN -1
+performs the ˝-preﬁx computation in parallel, albeit inefﬁciently:
+

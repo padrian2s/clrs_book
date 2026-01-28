@@ -1,0 +1,46 @@
+596             Chapter 22 Elementary Graph Algorithms
+
+
+            r      s      t       u                                     r      s      t       u
+            ∞      0      ∞       ∞                                     1      0      ∞       ∞
+      (a)                               Q    s                   (b)                                Q    w r
+            ∞      ∞      ∞       ∞          0                         ∞       1      ∞       ∞          1 1
+            v      w      x       y                                    v       w      x       y
+            r      s      t       u                                     r      s       t      u
+            1      0      2       ∞                                     1      0       2      ∞
+      (c)                               Q    r   t x             (d)                                Q    t x v
+            ∞      1      2       ∞          1   2 2                   2       1       2      ∞          2 2 2
+            v      w      x       y                                    v       w       x      y
+            r      s      t       u                                     r      s       t      u
+            1      0      2       3                                     1      0       2      3
+      (e)                               Q    x v u               (f)                                Q    v u y
+            2      1      2       ∞          2 2 3                     2       1       2      3          2 3 3
+            v      w      x       y                                    v       w       x      y
+            r      s      t       u                                     r      s       t      u
+            1      0      2       3                                     1      0       2      3
+      (g)                               Q    u y                 (h)                                Q    y
+            2      1      2       3          3 3                       2       1       2      3          3
+            v      w      x       y                                    v       w       x      y
+            r      s      t       u
+            1      0      2       3
+      (i)                               Q    ;
+            2      1      2       3
+            v      w      x       y
+
+
+                Figure 22.3 The operation of BFS on an undirected graph. Tree edges are shown shaded as they
+                are produced by BFS. The value of u: d appears within each vertex u. The queue Q is shown at the
+                beginning of each iteration of the while loop of lines 10–18. Vertex distances appear below vertices
+                in the queue.
+
+
+                Although we won’t use this loop invariant to prove correctness, it is easy to see
+                that it holds prior to the ﬁrst iteration and that each iteration of the loop maintains
+                the invariant. Prior to the ﬁrst iteration, the only gray vertex, and the only vertex
+                in Q, is the source vertex s. Line 11 determines the gray vertex u at the head of
+                the queue Q and removes it from Q. The for loop of lines 12–17 considers each
+                vertex  in the adjacency list of u. If  is white, then it has not yet been discovered,
+                and the procedure discovers it by executing lines 14–17. The procedure paints
+                vertex  gray, sets its distance :d to u:dC1, records u as its parent :, and places
+                it at the tail of the queue Q. Once the procedure has examined all the vertices on u’s
+

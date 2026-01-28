@@ -1,0 +1,55 @@
+1214   Appendix C     Counting and Probability
+
+
+       Corollary C.9
+       Consider a sequence of n Bernoulli trials, where in each trial success occurs with
+       probability p and failure occurs with probability q D 1  p. Then for r > np,
+                                      X
+                                      n
+       Pr fX  np  rg D                       b.kI n; p/
+                                    kDdnpCre
+                                     npe r
+                                                :
+                                       r
+
+       Proof       By equation (C.37), we have        D E ŒX  D np.
+
+       Exercises
+
+       C.5-1 ?
+       Which is less likely: obtaining no heads when you ﬂip a fair coin n times, or
+       obtaining fewer than n heads when you ﬂip the coin 4n times?
+
+       C.5-2 ?
+       Prove Corollaries C.6 and C.7.
+
+       C.5-3 ?
+       Show that
+              !
+       X n
+       k1
+                                    k
+                ai < .a C 1/n               b.kI n; a=.a C 1//
+       i D0
+            i                 na  k.a C 1/
+       for all a > 0 and all k such that 0 < k < na=.a C 1/.
+
+       C.5-4 ?
+       Prove that if 0 < k < np, where 0 < p < 1 and q D 1  p, then
+       X                      kq  np k  nq nk
+       k1
+              p i q ni <                          :
+       i D0
+                            np  k k      nk
+
+       C.5-5 ?
+       Show that the conditions of Theorem C.8 imply that
+                                    r
+                            .n  /e
+       Pr f  X  rg                   :
+                                r
+       Similarly, show that the conditions of Corollary C.9 imply that
+                             nqe r
+       Pr fnp  X  rg              :
+                               r
+

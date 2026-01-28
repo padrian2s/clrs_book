@@ -1,0 +1,43 @@
+Problems for Chapter 7                                                                   189
+
+
+sorted output array by A0 Œ1 : : n. Using the median-of-3 method to choose the
+pivot element x, deﬁne pi D Pr fx D A0 Œig.
+
+a. Give an exact formula for pi as a function of n and i for i D 2; 3; : : : ; n  1.
+   (Note that p1 D pn D 0.)
+
+b. By what amount have we increased the likelihood of choosing the pivot as
+   x D A0 Œb.n C 1/=2c, the median of AŒ1 : : n, compared with the ordinary
+   implementation? Assume that n ! 1, and give the limiting ratio of these
+   probabilities.
+
+c. If we deﬁne a “good” split to mean choosing the pivot as x D A0 Œi, where
+   n=3  i  2n=3, by what amount have we increased the likelihood of getting
+   a good split compared with the ordinary implementation? (Hint: Approximate
+   the sum by an integral.)
+
+d. Argue that in the .n lg n/ running time of quicksort, the median-of-3 method
+   affects only the constant factor.
+
+7-6 Fuzzy sorting of intervals
+Consider a sorting problem in which we do not know the numbers exactly. In-
+stead, for each number, we know an interval on the real line to which it belongs.
+That is, we are given n closed intervals of the form Œai ; bi , where ai  bi . We
+wish to fuzzy-sort these intervals, i.e., to produce a permutation hi1 ; i2 ; : : : ; in i of
+the intervals such that for j D 1; 2; : : : ; n, there exist cj 2 Œaij ; bij  satisfying
+c1  c2      cn .
+
+a. Design a randomized algorithm for fuzzy-sorting n intervals. Your algorithm
+   should have the general structure of an algorithm that quicksorts the left end-
+   points (the ai values), but it should take advantage of overlapping intervals to
+   improve the running time. (As the intervals overlap more and more, the prob-
+   lem of fuzzy-sorting the intervals becomes progressively easier. Your algorithm
+   should take advantage of such overlapping, to the extent that it exists.)
+
+b. Argue that your algorithm runs in expected time ‚.n lg n/ in general, but runs
+   in expected time ‚.n/ when all of the intervals overlap (i.e., when there exists a
+   value x such that x 2 Œai ; bi  for all i). Your algorithm should not be checking
+   for this case explicitly; rather, its performance should naturally improve as the
+   amount of overlap increases.
+

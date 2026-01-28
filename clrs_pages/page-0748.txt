@@ -1,0 +1,70 @@
+              26.2 The Ford-Fulkerson method                                                                   727
+
+
+                           4                                                         8/12
+                   v1             v3         12                                 v1           v3
+          8                                                                                         15/
+                           8                                             6                             20
+                                                                     8/1
+              8                         8
+(d)   s
+              9
+                     4     9        7             t            s                 4     9      7/7              t
+                          10                                        11/
+          4
+                   v2             v4
+                                             4                         13
+                                                                                v2                    4/4
+                                                                                             v4
+                           4                                                         11/14
+
+                           4                                                         12/12
+                   v1             v3                                            v1           v3     19/
+          8                                  5
+                           8                                         12   /16                             20
+               8                        15
+(e)   s
+              11
+                     4     9       7              t            s                 4     9      7/7              t
+                                                                    11/
+          2
+                   v2
+                           3
+                                  v4
+                                             4                            13
+                                                                                v2                    4/4
+                                                                                             v4
+                          11                                                         11/14
+
+                   v1     12      v3
+          4                                  1
+
+              12                        19
+(f)   s              4             7              t
+              11           9
+          2                3                 4
+                   v2             v4
+                          11
+
+
+              Figure 26.6, continued (f) The residual network at the last while loop test. It has no augmenting
+              paths, and the ﬂow f shown in (e) is therefore a maximum ﬂow. The value of the maximum ﬂow
+              found is 23.
+
+
+              The Edmonds-Karp algorithm
+              We can improve the bound on F ORD -F ULKERSON by ﬁnding the augmenting
+              path p in line 3 with a breadth-ﬁrst search. That is, we choose the augmenting
+              path as a shortest path from s to t in the residual network, where each edge has
+              unit distance (weight). We call the Ford-Fulkerson method so implemented the
+              Edmonds-Karp algorithm. We now prove that the Edmonds-Karp algorithm runs
+              in O.VE 2 / time.
+                 The analysis depends on the distances to vertices in the residual network Gf .
+              The following lemma uses the notation ıf .u; / for the shortest-path distance
+              from u to  in Gf , where each edge has unit distance.
+
+              Lemma 26.7
+              If the Edmonds-Karp algorithm is run on a ﬂow network G D .V; E/ with source s
+              and sink t, then for all vertices  2 V  fs; tg, the shortest-path distance ıf .s; /
+              in the residual network Gf increases monotonically with each ﬂow augmentation.
+

@@ -1,0 +1,46 @@
+784   Chapter 27 Multithreaded Algorithms
+
+
+
+                                                                              A
+                 A               B
+                                                                              B
+
+
+      Work: T1 .A [ B/ D T1 .A/ C T1 .B/                  Work: T1 .A [ B/ D T1 .A/ C T1 .B/
+      Span: T1 .A [ B/ D T1 .A/ C T1 .B/                  Span: T1 .A [ B/ D max.T1 .A/; T1 .B/)
+
+                        (a)                                                   (b)
+
+
+      Figure 27.3 The work and span of composed subcomputations. (a) When two subcomputations
+      are joined in series, the work of the composition is the sum of their work, and the span of the
+      composition is the sum of their spans. (b) When two subcomputations are joined in parallel, the
+      work of the composition remains the sum of their work, but the span of the composition is only the
+      maximum of their spans.
+
+
+      Analyzing multithreaded algorithms
+      We now have all the tools we need to analyze multithreaded algorithms and provide
+      good bounds on their running times on various numbers of processors. Analyzing
+      the work is relatively straightforward, since it amounts to nothing more than ana-
+      lyzing the running time of an ordinary serial algorithm—namely, the serialization
+      of the multithreaded algorithm—which you should already be familiar with, since
+      that is what most of this textbook is about! Analyzing the span is more interesting,
+      but generally no harder once you get the hang of it. We shall investigate the basic
+      ideas using the P-F IB program.
+         Analyzing the work T1 .n/ of P-F IB .n/ poses no hurdles, because we’ve already
+      done it. The original F IB procedure is essentially the serialization of P-F IB , and
+      hence T1 .n/ D T .n/ D ‚. n / from equation (27.1).
+         Figure 27.3 illustrates how to analyze the span. If two subcomputations are
+      joined in series, their spans add to form the span of their composition, whereas
+      if they are joined in parallel, the span of their composition is the maximum of the
+      spans of the two subcomputations. For P-F IB .n/, the spawned call to P-F IB .n  1/
+      in line 3 runs in parallel with the call to P-F IB .n  2/ in line 4. Hence, we can
+      express the span of P-F IB .n/ as the recurrence
+      T1 .n/ D max.T1 .n  1/; T1 .n  2// C ‚.1/
+             D T1 .n  1/ C ‚.1/ ;
+      which has solution T1 .n/ D ‚.n/.
+        The parallelism of P-F IB .n/ is T1 .n/=T1 .n/ D ‚. n =n/, which grows dra-
+      matically as n gets large. Thus, on even the largest parallel computers, a modest
+

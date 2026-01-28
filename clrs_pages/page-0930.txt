@@ -1,0 +1,50 @@
+30.2 The DFT and FFT                                                                              909
+
+
+X
+n1
+             j           .!nk /n  1
+       !nk          D
+j D0
+                          !nk  1
+                      .!nn /k  1
+                    D
+                        !nk  1
+                      .1/k  1
+                    D
+                       !nk  1
+                    D 0:
+Because we require that k is not divisible by n, and because !nk D 1 only when k
+is divisible by n, we ensure that the denominator is not 0.
+
+The DFT
+Recall that we wish to evaluate a polynomial
+             X
+             n1
+A.x/ D              aj x j
+             j D0
+
+of degree-bound n at !n0 ; !n1 ; !n2 ; : : : ; !nn1 (that is, at the n complex nth roots of
+unity).3 We assume that A is given in coefﬁcient form: a D .a0 ; a1 ; : : : ; an1 /. Let
+us deﬁne the results yk , for k D 0; 1; : : : ; n  1, by
+yk D A.!nk /
+     X
+     n1
+   D     aj !nkj :                                                                            (30.8)
+             j D0
+
+The vector y D .y0 ; y1 ; : : : ; yn1 / is the discrete Fourier transform (DFT) of the
+coefﬁcient vector a D .a0 ; a1 ; : : : ; an1 /. We also write y D DFTn .a/.
+
+The FFT
+By using a method known as the fast Fourier transform (FFT), which takes ad-
+vantage of the special properties of the complex roots of unity, we can compute
+DFTn .a/ in time ‚.n lg n/, as opposed to the ‚.n2 / time of the straightforward
+method. We assume throughout that n is an exact power of 2. Although strategies
+
+
+3 The length n is actually what we referred to as 2n in Section 30.1, since we double the degree-bound
+
+of the given polynomials prior to evaluation. In the context of polynomial multiplication, therefore,
+we are actually working with complex .2n/th roots of unity.
+

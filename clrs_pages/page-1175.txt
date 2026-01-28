@@ -1,0 +1,62 @@
+1154   Appendix A    Summations
+
+
+       of the terms starting at 1=2i and going up to but not including 1=2i C1 . The last
+       piece might contain terms not in the original harmonic series, and thus we have
+       X
+       n
+         1            XX
+                      blg nc 2i 1
+                                          1
+                 
+             k        i D0 j D0
+                                     2i C j
+       kD1
+
+                      XX 1
+                      blg nc 2i 1
+
+                 
+                      i D0 j D0
+                                     2i
+
+                      X
+                      blg nc
+
+                 D             1
+                      i D0
+                  lg n C 1 :                                                         (A.10)
+
+       Approximation by integrals
+                                        Pn
+       When a summation has the form kDm f .k/, where f .k/ is a monotonically in-
+       creasing function, we can approximate it by integrals:
+       Z n               Xn         Z nC1
+             f .x/ dx      f .k/        f .x/ dx :                       (A.11)
+        m1                    kDm            m
+
+       Figure A.1 justiﬁes this approximation. The summation is represented as the area
+       of the rectangles in the ﬁgure, and the integral is the shaded region under the curve.
+       When f .k/ is a monotonically decreasing function, we can use a similar method
+       to provide the bounds
+       Z nC1               Xn           Z n
+              f .x/ dx        f .k/        f .x/ dx :                               (A.12)
+        m                                     m1
+                               kDm
+
+          The integral approximation (A.12) gives a tight estimate for the nth harmonic
+       number. For a lower bound, we obtain
+       Xn           Z nC1
+           1              dx
+               
+           k         1     x
+       kD1
+                 D ln.n C 1/ :                                                        (A.13)
+       For the upper bound, we derive the inequality
+       Xn          Z n
+           1           dx
+               
+           k         1  x
+       kD2
+                 D ln n ;
+

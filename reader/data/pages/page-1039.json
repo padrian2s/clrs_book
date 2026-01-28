@@ -1,0 +1,5 @@
+{
+  "page": 1039,
+  "title": "Computational Geometry",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 33</div>\n    <h1>Computational Geometry</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>VII: Selected Topics</h4>\n    <h3>Chapter 33: Computational Geometry</h3>\n    <p><em>Algorithms for geometric problems</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>Cross product: left/right of a line</li>\n<li>Line segment intersection</li>\n<li>Convex hull: Graham scan, Jarvis march</li>\n<li>Closest pair: O(n log n) divide-and-conquer</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>Computer graphics, robotics, GIS, game collision</p>\n</div>\n</div>"
+}

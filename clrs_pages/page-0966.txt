@@ -1,0 +1,42 @@
+31.3 Modular arithmetic                                                                  945
+
+
+a.i / ˚ a.j / D a.i Cj / ;
+hai is closed and therefore, by Theorem 31.14, hai is a subgroup of S. For example,
+in Z6 , we have
+h0i D f0g ;
+h1i D f0; 1; 2; 3; 4; 5g ;
+h2i D f0; 2; 4g :
+Similarly, in Z7 , we have
+h1i D f1g ;
+h2i D f1; 2; 4g ;
+h3i D f1; 2; 3; 4; 5; 6g :
+   The order of a (in the group S), denoted ord.a/, is deﬁned as the smallest posi-
+tive integer t such that a.t / D e.
+
+Theorem 31.17
+For any ﬁnite group .S; ˚/ and any a 2 S, the order of a is equal to the size of the
+subgroup it generates, or ord.a/ D jhaij.
+
+Proof Let t D ord.a/. Since a.t / D e and a.t Ck/ D a.t / ˚ a.k/ D a.k/ for
+k  1, if i > t, then a.i / D a.j / for some j < i. Thus, as we generate ele-
+ments by a, we see no new elements after a.t / . Thus, hai D fa.1/ ; a.2/ ; : : : ; a.t / g,
+and so jhaij  t. To show that jhaij  t, we show that each element of the se-
+quence a.1/ ; a.2/ ; : : : ; a.t / is distinct. Suppose for the purpose of contradiction that
+a.i / D a.j / for some i and j satisfying 1  i < j  t. Then, a.i Ck/ D a.j Ck/
+for k  0. But this equality implies that a.i C.t j // D a.j C.t j // D e, a contradic-
+tion, since i C .t  j / < t but t is the least positive value such that a.t / D e. There-
+fore, each element of the sequence a.1/ ; a.2/ ; : : : ; a.t / is distinct, and jhaij  t. We
+conclude that ord.a/ D jhaij.
+
+Corollary 31.18
+The sequence a.1/ ; a.2/ ; : : : is periodic with period t D ord.a/; that is, a.i / D a.j /
+if and only if i  j .mod t/.
+
+  Consistent with the above corollary, we deﬁne a.0/ as e and a.i / as a.i mod t / ,
+where t D ord.a/, for all integers i.
+
+Corollary 31.19
+If .S; ˚/ is a ﬁnite group with identity e, then for all a 2 S,
+a.jSj/ D e :
+

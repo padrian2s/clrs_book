@@ -1,0 +1,43 @@
+9.3 Selection in worst-case linear time                                                          221
+
+
+
+
+                   x
+
+
+
+
+Figure 9.1 Analysis of the algorithm S ELECT . The n elements are represented by small circles,
+and each group of 5 elements occupies a column. The medians of the groups are whitened, and the
+median-of-medians x is labeled. (When ﬁnding the median of an even number of elements, we use
+the lower median.) Arrows go from larger elements to smaller, from which we can see that 3 out
+of every full group of 5 elements to the right of x are greater than x, and 3 out of every group of 5
+elements to the left of x are less than x. The elements known to be greater than x appear on a shaded
+background.
+
+
+step 2 are greater than or equal to the median-of-medians x.1 Thus, at least half
+of the dn=5e groups contribute at least 3 elements that are greater than x, except
+for the one group that has fewer than 5 elements if 5 does not divide n exactly, and
+the one group containing x itself. Discounting these two groups, it follows that the
+number of elements greater than x is at least
+   l m         
+      1 n                3n
+3             2            6:
+      2 5                10
+Similarly, at least 3n=10  6 elements are less than x. Thus, in the worst case,
+step 5 calls S ELECT recursively on at most 7n=10 C 6 elements.
+   We can now develop a recurrence for the worst-case running time T .n/ of the
+algorithm S ELECT. Steps 1, 2, and 4 take O.n/ time. (Step 2 consists of O.n/
+calls of insertion sort on sets of size O.1/.) Step 3 takes time T .dn=5e/, and step 5
+takes time at most T .7n=10 C 6/, assuming that T is monotonically increasing.
+We make the assumption, which seems unmotivated at ﬁrst, that any input of fewer
+than 140 elements requires O.1/ time; the origin of the magic constant 140 will be
+clear shortly. We can therefore obtain the recurrence
+
+
+1 Because of our assumption that the numbers are distinct, all medians except x are either greater
+
+than or less than x.
+

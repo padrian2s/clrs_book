@@ -1,0 +1,41 @@
+1094   Chapter 34 NP-Completeness
+
+
+       .Œw; x; 6; Œw; y; 1/ and .Œw; y; 6; Œw; ´; 1/. For each vertex u 2 V , these edges
+       in G 0 ﬁll in a path containing all widgets corresponding to edges incident on u
+       in G.
+          The intuition behind these edges is that if we choose a vertex u 2 V in the vertex
+       cover of G, we can construct a path from Œu; u.1/ ; 1 to Œu; u.degree.u// ; 6 in G 0 that
+       “covers” all widgets corresponding to edges incident on u. That is, for each of these
+       widgets, say Wu;u.i / , the path either includes all 12 vertices (if u is in the vertex
+       cover but u.i / is not) or just the six vertices Œu; u.i / ; 1; Œu; u.i / ; 2; : : : ; Œu; u.i / ; 6 (if
+       both u and u.i / are in the vertex cover).
+          The ﬁnal type of edge in E 0 joins the ﬁrst vertex Œu; u.1/ ; 1 and the last vertex
+       Œu; u.degree.u// ; 6 of each of these paths to each of the selector vertices. That is, we
+       include the edges
+       f.sj ; Œu; u.1/ ; 1/ W u 2 V and 1  j  kg
+                           [ f.sj ; Œu; u.degree.u// ; 6/ W u 2 V and 1  j  kg :
+          Next, we show that the size of G 0 is polynomial in the size of G, and hence we
+       can construct G 0 in time polynomial in the size of G. The vertices of G 0 are those
+       in the widgets, plus the selector vertices. With 12 vertices per widget, plus k  jV j
+       selector vertices, we have a total of
+       jV 0 j D 12 jEj C k
+               12 jEj C jV j
+       vertices. The edges of G 0 are those in the widgets, those that go between widgets,
+       and those connecting selector vertices to widgets. Each widget contains 14 edges,
+       totaling 14 jEj in all widgets. For each vertex u 2 V , graph G 0 has degree.u/  1
+       edges going between widgets, so that summed over all vertices in V ,
+       X
+           .degree.u/  1/ D 2 jEj  jV j
+       u2V
+
+       edges go between widgets. Finally, G 0 has two edges for each pair consisting of a
+       selector vertex and a vertex of V , totaling 2k jV j such edges. The total number of
+       edges of G 0 is therefore
+       jE 0 j D .14 jEj/ C .2 jEj  jV j/ C .2k jV j/
+              D 16 jEj C .2k  1/ jV j
+               16 jEj C .2 jV j  1/ jV j :
+         Now we show that the transformation from graph G to G 0 is a reduction. That is,
+       we must show that G has a vertex cover of size k if and only if G 0 has a hamiltonian
+       cycle.
+

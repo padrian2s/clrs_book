@@ -1,0 +1,43 @@
+34.4 NP-completeness proofs                                                               1083
+
+
+
+                                              y1
+                                          ^
+                          y2
+                      _                            :x2
+           y3                   y4
+       !                             :
+
+                                         y5
+x1               x2                  _
+                           y6
+                          $                   x4
+
+                :x1              x3
+
+
+Figure 34.11    The tree corresponding to the formula  D ..x1 ! x2 /_:..:x1 $ x3 /_x4 //^:x2 :
+
+
+  Mimicking the reduction in the proof of Theorem 34.9, we introduce a vari-
+able yi for the output of each internal node. Then, we rewrite the original for-
+mula  as the AND of the root variable and a conjunction of clauses describing the
+operation of each node. For the formula (34.3), the resulting expression is
+ 0 D y1 ^ .y1 $ .y2 ^ :x2 //
+         ^ .y2 $ .y3 _ y4 //
+         ^ .y3 $ .x1 ! x2 //
+         ^ .y4 $ :y5 /
+         ^ .y5 $ .y6 _ x4 //
+         ^ .y6 $ .:x1 $ x3 // :
+Observe that the formula  0 thus obtained is a conjunction of clauses i0 , each of
+which has at most 3 literals. The only requirement that we might fail to meet is
+that each clause has to be an OR of 3 literals.
+   The second step of the reduction converts each clause i0 into conjunctive normal
+form. We construct a truth table for i0 by evaluating all possible assignments to
+its variables. Each row of the truth table consists of a possible assignment of the
+variables of the clause, together with the value of the clause under that assignment.
+Using the truth-table entries that evaluate to 0, we build a formula in disjunctive
+normal form (or DNF)—an OR of ANDs—that is equivalent to :i0 . We then
+negate this formula and convert it into a CNF formula i00 by using DeMorgan’s
+

@@ -1,0 +1,45 @@
+21.2 Linked-list representation of disjoint sets                                567
+
+
+Proof Because each U NION operation unites two disjoint sets, we perform at
+most n  1 U NION operations over all. We now bound the total time taken by these
+U NION operations. We start by determining, for each object, an upper bound on the
+number of times the object’s pointer back to its set object is updated. Consider a
+particular object x. We know that each time x’s pointer was updated, x must have
+started in the smaller set. The ﬁrst time x’s pointer was updated, therefore, the
+resulting set must have had at least 2 members. Similarly, the next time x’s pointer
+was updated, the resulting set must have had at least 4 members. Continuing on,
+we observe that for any k  n, after x’s pointer has been updated dlg ke times,
+the resulting set must have at least k members. Since the largest set has at most n
+members, each object’s pointer is updated at most dlg ne times over all the U NION
+operations. Thus the total time spent updating object pointers over all U NION
+operations is O.n lg n/. We must also account for updating the tail pointers and
+the list lengths, which take only ‚.1/ time per U NION operation. The total time
+spent in all U NION operations is thus O.n lg n/.
+   The time for the entire sequence of m operations follows easily. Each M AKE -
+S ET and F IND -S ET operation takes O.1/ time, and there are O.m/ of them. The
+total time for the entire sequence is thus O.m C n lg n/.
+
+Exercises
+
+21.2-1
+Write pseudocode for M AKE -S ET, F IND -S ET, and U NION using the linked-list
+representation and the weighted-union heuristic. Make sure to specify the attributes
+that you assume for set objects and list objects.
+
+21.2-2
+Show the data structure that results and the answers returned by the F IND -S ET
+operations in the following program. Use the linked-list representation with the
+weighted-union heuristic.
+ 1    for i D 1 to 16
+ 2         M AKE -S ET .xi /
+ 3    for i D 1 to 15 by 2
+ 4         U NION .xi ; xi C1 /
+ 5    for i D 1 to 13 by 4
+ 6         U NION .xi ; xi C2 /
+ 7    U NION.x1 ; x5 /
+ 8    U NION.x11 ; x13 /
+ 9    U NION.x1 ; x10 /
+10    F IND -S ET .x2 /
+11    F IND -S ET .x9 /
+

@@ -1,0 +1,40 @@
+35.5 The subset-sum problem                                                         1129
+
+
+eratively computes Li , the list of sums of all subsets of fx1 ; : : : ; xi g that do not
+exceed t, and then it returns the maximum value in Ln .
+   If L is a list of positive integers and x is another positive integer, then we let
+L C x denote the list of integers derived from L by increasing each element of L
+by x. For example, if L D h1; 2; 3; 5; 9i, then L C 2 D h3; 4; 5; 7; 11i. We also use
+this notation for sets, so that
+S C x D fs C x W s 2 Sg :
+   We also use an auxiliary procedure M ERGE -L ISTS .L; L0 /, which returns the
+sorted list that is the merge of its two sorted input lists L and L0 with duplicate
+values removed. Like the M ERGE procedure we used in merge sort (Section 2.3.1),
+M ERGE -L ISTS runs in time O.jLj C jL0 j/. We omit the pseudocode for M ERGE -
+L ISTS.
+E XACT-S UBSET-S UM .S; t/
+1 n D jSj
+2 L0 D h0i
+3 for i D 1 to n
+4      Li D M ERGE -L ISTS .Li 1 ; Li 1 C xi /
+5      remove from Li every element that is greater than t
+6 return the largest element in Ln
+   To see how E XACT-S UBSET-S UM works, let Pi denote the set of all values
+obtained by selecting a (possibly empty) subset of fx1 ; x2 ; : : : ; xi g and summing
+its members. For example, if S D f1; 4; 5g, then
+P1 D f0; 1g ;
+P2 D f0; 1; 4; 5g ;
+P3 D f0; 1; 4; 5; 6; 9; 10g :
+Given the identity
+Pi D Pi 1 [ .Pi 1 C xi / ;                                                     (35.23)
+we can prove by induction on i (see Exercise 35.5-1) that the list Li is a sorted list
+containing every element of Pi whose value is not more than t. Since the length
+of Li can be as much as 2i , E XACT-S UBSET-S UM is an exponential-time algorithm
+in general, although it is a polynomial-time algorithm in the special cases in which t
+is polynomial in jSj or all the numbers in S are bounded by a polynomial in jSj.
+
+A fully polynomial-time approximation scheme
+We can derive a fully polynomial-time approximation scheme for the subset-sum
+problem by “trimming” each list Li after it is created. The idea behind trimming is
+

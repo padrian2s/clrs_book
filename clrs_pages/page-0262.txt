@@ -1,0 +1,44 @@
+           10.3 Implementing pointers and objects                                              241
+
+
+           10.2-6
+           The dynamic-set operation U NION takes two disjoint sets S1 and S2 as input, and
+           it returns a set S D S1 [ S2 consisting of all the elements of S1 and S2 . The
+           sets S1 and S2 are usually destroyed by the operation. Show how to support U NION
+           in O.1/ time using a suitable list data structure.
+
+           10.2-7
+           Give a ‚.n/-time nonrecursive procedure that reverses a singly linked list of n
+           elements. The procedure should use no more than constant storage beyond that
+           needed for the list itself.
+
+           10.2-8 ?
+           Explain how to implement doubly linked lists using only one pointer value x:np per
+           item instead of the usual two (next and pre). Assume that all pointer values can be
+           interpreted as k-bit integers, and deﬁne x:np to be x:np D x:next XOR x:pre,
+           the k-bit “exclusive-or” of x:next and x:pre. (The value NIL is represented by 0.)
+           Be sure to describe what information you need to access the head of the list. Show
+           how to implement the S EARCH, I NSERT, and D ELETE operations on such a list.
+           Also show how to reverse such a list in O.1/ time.
+
+
+
+10.3 Implementing pointers and objects
+
+           How do we implement pointers and objects in languages that do not provide them?
+           In this section, we shall see two ways of implementing linked data structures with-
+           out an explicit pointer data type. We shall synthesize objects and pointers from
+           arrays and array indices.
+
+           A multiple-array representation of objects
+           We can represent a collection of objects that have the same attributes by using an
+           array for each attribute. As an example, Figure 10.5 shows how we can implement
+           the linked list of Figure 10.3(a) with three arrays. The array key holds the values
+           of the keys currently in the dynamic set, and the pointers reside in the arrays next
+           and pre. For a given array index x, the array entries keyŒx, nextŒx, and preŒx
+           represent an object in the linked list. Under this interpretation, a pointer x is simply
+           a common index into the key, next, and pre arrays.
+              In Figure 10.3(a), the object with key 4 follows the object with key 16 in the
+           linked list. In Figure 10.5, key 4 appears in keyŒ2, and key 16 appears in keyŒ5,
+           and so nextŒ5 D 2 and preŒ2 D 5. Although the constant NIL appears in the next
+

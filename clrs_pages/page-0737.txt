@@ -1,0 +1,44 @@
+716   Chapter 26 Maximum Flow
+
+
+      it has already sent along an edge. Sending ﬂow back along an edge is equiva-
+      lent to decreasing the ﬂow on the edge, which is a necessary operation in many
+      algorithms.
+         More formally, suppose that we have a ﬂow network G D .V; E/ with source s
+      and sink t. Let f be a ﬂow in G, and consider a pair of vertices u;  2 V . We
+
+                     c.u; /  f .u; / if .u; / 2 E ;
+      deﬁne the residual capacity cf .u; / by
+
+
+      cf .u; / D     f .; u/           if .; u/ 2 E ;                          (26.2)
+                      0                  otherwise :
+      Because of our assumption that .u; / 2 E implies .; u/ 62 E, exactly one case in
+      equation (26.2) applies to each ordered pair of vertices.
+        As an example of equation (26.2), if c.u; / D 16 and f .u; / D 11, then we
+      can increase f .u; / by up to cf .u; / D 5 units before we exceed the capacity
+      constraint on edge .u; /. We also wish to allow an algorithm to return up to 11
+      units of ﬂow from  to u, and hence cf .; u/ D 11.
+        Given a ﬂow network G D .V; E/ and a ﬂow f , the residual network of G
+      induced by f is Gf D .V; Ef /, where
+      Ef D f.u; / 2 V       V W cf .u; / > 0g :                                 (26.3)
+      That is, as promised above, each edge of the residual network, or residual edge,
+      can admit a ﬂow that is greater than 0. Figure 26.4(a) repeats the ﬂow network G
+      and ﬂow f of Figure 26.1(b), and Figure 26.4(b) shows the corresponding residual
+      network Gf . The edges in Ef are either edges in E or their reversals, and thus
+      jEf j  2 jEj :
+         Observe that the residual network Gf is similar to a ﬂow network with capacities
+      given by cf . It does not satisfy our deﬁnition of a ﬂow network because it may
+      contain both an edge .u; / and its reversal .; u/. Other than this difference, a
+      residual network has the same properties as a ﬂow network, and we can deﬁne a
+      ﬂow in the residual network as one that satisﬁes the deﬁnition of a ﬂow, but with
+      respect to capacities cf in the network Gf .
+         A ﬂow in a residual network provides a roadmap for adding ﬂow to the original
+      ﬂow network. If f is a ﬂow in G and f 0 is a ﬂow in the corresponding residual
+      network Gf , we deﬁne f " f 0 , the augmentation of ﬂow f by f 0 , to be a function
+      from V V to R, deﬁned by
+                         (
+                           f .u; / C f 0 .u; /  f 0 .; u/ if .u; / 2 E ;
+      .f " f 0 /.u; / D                                                           (26.4)
+                           0                                  otherwise :
+

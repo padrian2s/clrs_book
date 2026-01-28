@@ -1,0 +1,5 @@
+{
+  "page": 953,
+  "title": "Number-Theoretic Algorithms",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 31</div>\n    <h1>Number-Theoretic Algorithms</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>VII: Selected Topics</h4>\n    <h3>Chapter 31: Number-Theoretic Algorithms</h3>\n    <p><em>Algorithms for integers: GCD, modular arithmetic, RSA</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>Euclidean algorithm: GCD in O(log n)</li>\n<li>Modular exponentiation: a^b mod n</li>\n<li>RSA: public-key cryptography</li>\n<li>Primality testing: Miller-Rabin</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>Cryptography - HTTPS, digital signatures</p>\n</div>\n</div>"
+}

@@ -1,0 +1,45 @@
+           Notes for Chapter 27                                                          811
+
+
+           d. Give pseudocode for a multithreaded algorithm for this simple stencil calcu-
+              lation that achieves ‚.n= lg n/ parallelism. Argue using notions of work and
+              span that the problem, in fact, has ‚.n/ inherent parallelism. As it turns out,
+              the divide-and-conquer nature of our multithreaded pseudocode does not let us
+              achieve this maximal parallelism.
+
+           27-6 Randomized multithreaded algorithms
+           Just as with ordinary serial algorithms, we sometimes want to implement random-
+           ized multithreaded algorithms. This problem explores how to adapt the various
+           performance measures in order to handle the expected behavior of such algorithms.
+           It also asks you to design and analyze a multithreaded algorithm for randomized
+           quicksort.
+
+           a. Explain how to modify the work law (27.2), span law (27.3), and greedy sched-
+              uler bound (27.4) to work with expectations when TP , T1 , and T1 are all ran-
+              dom variables.
+
+           b. Consider a randomized multithreaded algorithm for which 1% of the time we
+              have T1 D 104 and T10;000 D 1, but for 99% of the time we have T1 D
+              T10;000 D 109 . Argue that the speedup of a randomized multithreaded algo-
+              rithm should be deﬁned as E ŒT1  =E ŒTP , rather than E ŒT1 =TP .
+
+           c. Argue that the parallelism of a randomized multithreaded algorithm should be
+              deﬁned as the ratio E ŒT1  =E ŒT1 .
+
+           d. Multithread the R ANDOMIZED -Q UICKSORT algorithm on page 179 by using
+              nested parallelism. (Do not parallelize R ANDOMIZED -PARTITION.) Give the
+              pseudocode for your P-R ANDOMIZED -Q UICKSORT algorithm.
+
+           e. Analyze your multithreaded algorithm for randomized quicksort. (Hint: Re-
+              view the analysis of R ANDOMIZED -S ELECT on page 216.)
+
+
+Chapter notes
+
+           Parallel computers, models for parallel computers, and algorithmic models for par-
+           allel programming have been around in various forms for years. Prior editions of
+           this book included material on sorting networks and the PRAM (Parallel Random-
+           Access Machine) model. The data-parallel model [48, 168] is another popular al-
+           gorithmic programming model, which features operations on vectors and matrices
+           as primitives.
+

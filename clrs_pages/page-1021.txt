@@ -1,0 +1,46 @@
+1000   Chapter 32 String Matching
+
+
+
+                                     x
+
+                                                                    a
+
+                                                     Pq             a
+
+                                                           Pr
+
+
+
+       Figure 32.9 An illustration for the proof of Lemma 32.3. The ﬁgure shows that r D   .Pq a/,
+       where q D .x/ and r D .xa/.
+
+
+       dropping the a from the end of Pr and from the end of xa. Therefore, r 1  .x/,
+       since .x/ is the largest k such that Pk = x, and thus .xa/ D r  .x/ C 1.
+
+       Lemma 32.3 (Sufﬁx-function recursion lemma)
+       For any string x and character a, if q D .x/, then .xa/ D .Pq a/.
+
+       Proof From the deﬁnition of , we have Pq = x. As Figure 32.9 shows, we
+       also have Pq a = xa. If we let r D .xa/, then Pr = xa and, by Lemma 32.2,
+       r  q C 1. Thus, we have jPr j D r  q C 1 D jPq aj. Since Pq a = xa, Pr = xa,
+       and jPr j  jPq aj, Lemma 32.1 implies that Pr = Pq a. Therefore, r  .Pq a/,
+       that is, .xa/  .Pq a/. But we also have .Pq a/  .xa/, since Pq a = xa.
+       Thus, .xa/ D .Pq a/.
+
+          We are now ready to prove our main theorem characterizing the behavior of a
+       string-matching automaton on a given input text. As noted above, this theorem
+       shows that the automaton is merely keeping track, at each step, of the longest
+       preﬁx of the pattern that is a sufﬁx of what has been read so far. In other words,
+       the automaton maintains the invariant (32.5).
+
+       Theorem 32.4
+       If  is the ﬁnal-state function of a string-matching automaton for a given pattern P
+       and T Œ1 : : n is an input text for the automaton, then
+       .Ti / D .Ti /
+       for i D 0; 1; : : : ; n.
+
+       Proof The proof is by induction on i. For i D 0, the theorem is trivially true,
+       since T0 D ". Thus, .T0 / D 0 D .T0 /.
+

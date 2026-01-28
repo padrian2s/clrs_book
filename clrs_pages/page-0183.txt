@@ -1,0 +1,42 @@
+162          Chapter 6 Heapsort
+
+
+             6.4-5 ?
+             Show that when all elements are distinct, the best-case running time of H EAPSORT
+             is .n lg n/.
+
+
+
+6.5   Priority queues
+
+             Heapsort is an excellent algorithm, but a good implementation of quicksort, pre-
+             sented in Chapter 7, usually beats it in practice. Nevertheless, the heap data struc-
+             ture itself has many uses. In this section, we present one of the most popular ap-
+             plications of a heap: as an efﬁcient priority queue. As with heaps, priority queues
+             come in two forms: max-priority queues and min-priority queues. We will focus
+             here on how to implement max-priority queues, which are in turn based on max-
+             heaps; Exercise 6.5-3 asks you to write the procedures for min-priority queues.
+                A priority queue is a data structure for maintaining a set S of elements, each
+             with an associated value called a key. A max-priority queue supports the following
+             operations:
+             I NSERT .S; x/ inserts the element x into the set S, which is equivalent to the oper-
+                ation S D S [ fxg.
+             M AXIMUM .S/ returns the element of S with the largest key.
+             E XTRACT-M AX .S/ removes and returns the element of S with the largest key.
+             I NCREASE -K EY .S; x; k/ increases the value of element x’s key to the new value k,
+                which is assumed to be at least as large as x’s current key value.
+                Among their other applications, we can use max-priority queues to schedule
+             jobs on a shared computer. The max-priority queue keeps track of the jobs to
+             be performed and their relative priorities. When a job is ﬁnished or interrupted,
+             the scheduler selects the highest-priority job from among those pending by calling
+             E XTRACT-M AX. The scheduler can add a new job to the queue at any time by
+             calling I NSERT.
+                Alternatively, a min-priority queue supports the operations I NSERT, M INIMUM,
+             E XTRACT-M IN, and D ECREASE -K EY. A min-priority queue can be used in an
+             event-driven simulator. The items in the queue are events to be simulated, each
+             with an associated time of occurrence that serves as its key. The events must be
+             simulated in order of their time of occurrence, because the simulation of an event
+             can cause other events to be simulated in the future. The simulation program calls
+             E XTRACT-M IN at each step to choose the next event to simulate. As new events are
+             produced, the simulator inserts them into the min-priority queue by calling I NSERT.
+

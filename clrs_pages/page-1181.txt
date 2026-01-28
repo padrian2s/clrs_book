@@ -1,0 +1,48 @@
+1160       Appendix B   Sets, Etc.
+
+
+
+       A         B          A            B        A         B          A         B           A           B
+                                            D                    D                    [
+
+           C                         C                 C                     C                     C
+
+            A                  .B \ C /     D   A  .B \ C /     D        .A  B/     [         .A  C /
+
+
+           Figure B.1 A Venn diagram illustrating the ﬁrst of DeMorgan’s laws (B.2). Each of the sets A, B,
+           and C is represented as a circle.
+
+
+           Associative laws:
+                A \ .B \ C / D .A \ B/ \ C ;
+                A [ .B [ C / D .A [ B/ [ C :
+
+           Distributive laws:
+
+                A \ .B [ C / D .A \ B/ [ .A \ C / ;
+                                                                                                       (B.1)
+                A [ .B \ C / D .A [ B/ \ .A [ C / :
+
+           Absorption laws:
+                A \ .A [ B/ D A ;
+                A [ .A \ B/ D A :
+
+           DeMorgan’s laws:
+
+                A  .B \ C / D .A  B/ [ .A  C / ;
+                                                                                                       (B.2)
+                A  .B [ C / D .A  B/ \ .A  C / :
+
+           Figure B.1 illustrates the ﬁrst of DeMorgan’s laws, using a Venn diagram: a graph-
+           ical picture in which sets are represented as regions of the plane.
+              Often, all the sets under consideration are subsets of some larger set U called the
+           universe. For example, if we are considering various sets made up only of integers,
+           the set Z of integers is an appropriate universe. Given a universe U , we deﬁne the
+           complement of a set A as A D U  A D fx W x 2 U and x 62 Ag. For any set
+           A  U , we have the following laws:
+
+             A D A;
+           A\A D ;;
+           A[A D U :
+

@@ -1,0 +1,27 @@
+
+c 2009 Massachusetts Institute of Technology
+
+All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means
+(including photocopying, recording, or information storage and retrieval) without permission in writing from the
+publisher.
+
+For information about special quantity discounts, please email special sales@mitpress.mit.edu.
+
+This book was set in Times Roman and Mathtime Pro 2 by the authors.
+
+Printed and bound in the United States of America.
+
+Library of Congress Cataloging-in-Publication Data
+
+Introduction to algorithms / Thomas H. Cormen . . . [et al.].—3rd ed.
+    p. cm.
+  Includes bibliographical references and index.
+  ISBN 978-0-262-03384-8 (hardcover : alk. paper)—ISBN 978-0-262-53305-8 (pbk. : alk. paper)
+  1. Computer programming. 2. Computer algorithms. I. Cormen, Thomas H.
+
+QA76.6.I5858 2009
+005.1—dc22
+                                                           2009008593
+
+10 9 8 7 6 5 4 3 2
+

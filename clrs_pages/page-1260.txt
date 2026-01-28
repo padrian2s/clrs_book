@@ -1,0 +1,43 @@
+Bibliography                                                                                  1239
+
+
+ [143] Shaﬁ Goldwasser, Silvio Micali, and Ronald L. Rivest. A digital signature scheme secure
+       against adaptive chosen-message attacks. SIAM Journal on Computing, 17(2):281–308,
+       1988.
+ [144] Gene H. Golub and Charles F. Van Loan. Matrix Computations. The Johns Hopkins Uni-
+       versity Press, third edition, 1996.
+ [145] G. H. Gonnet. Handbook of Algorithms and Data Structures. Addison-Wesley, 1984.
+ [146] Rafael C. Gonzalez and Richard E. Woods. Digital Image Processing. Addison-Wesley,
+       1992.
+ [147] Michael T. Goodrich and Roberto Tamassia. Data Structures and Algorithms in Java. John
+       Wiley & Sons, 1998.
+ [148] Michael T. Goodrich and Roberto Tamassia. Algorithm Design: Foundations, Analysis, and
+       Internet Examples. John Wiley & Sons, 2001.
+ [149] Ronald L. Graham. Bounds for certain multiprocessor anomalies. Bell System Technical
+       Journal, 45(9):1563–1581, 1966.
+ [150] Ronald L. Graham. An efﬁcient algorithm for determining the convex hull of a ﬁnite planar
+       set. Information Processing Letters, 1(4):132–133, 1972.
+ [151] Ronald L. Graham and Pavol Hell. On the history of the minimum spanning tree problem.
+       Annals of the History of Computing, 7(1):43–57, 1985.
+ [152] Ronald L. Graham, Donald E. Knuth, and Oren Patashnik.              Concrete Mathematics.
+       Addison-Wesley, second edition, 1994.
+ [153] David Gries. The Science of Programming. Springer, 1981.
+ [154] M. Grötschel, László Lovász, and Alexander Schrijver. Geometric Algorithms and Combi-
+       natorial Optimization. Springer, 1988.
+ [155] Leo J. Guibas and Robert Sedgewick. A dichromatic framework for balanced trees. In
+       Proceedings of the 19th Annual Symposium on Foundations of Computer Science, pages
+       8–21, 1978.
+ [156] Dan Gusﬁeld. Algorithms on Strings, Trees, and Sequences: Computer Science and Com-
+       putational Biology. Cambridge University Press, 1997.
+ [157] H. Halberstam and R. E. Ingram, editors. The Mathematical Papers of Sir William Rowan
+       Hamilton, volume III (Algebra). Cambridge University Press, 1967.
+ [158] Yijie Han. Improved fast integer sorting in linear space. In Proceedings of the 12th ACM-
+       SIAM Symposium on Discrete Algorithms, pages 793–796, 2001.
+ [159] Yijie Han. An O.n3 .log log n= log n/5=4 / time algorithm for all pairs shortest path. Algo-
+       rithmica, 51(4):428–434, 2008.
+ [160] Frank Harary. Graph Theory. Addison-Wesley, 1969.
+ [161] Gregory C. Harfst and Edward M. Reingold. A potential-based amortized analysis of the
+       union-ﬁnd data structure. SIGACT News, 31(3):86–95, 2000.
+ [162] J. Hartmanis and R. E. Stearns. On the computational complexity of algorithms. Transac-
+       tions of the American Mathematical Society, 117:285–306, May 1965.
+

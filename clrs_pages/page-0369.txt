@@ -1,0 +1,44 @@
+348         Chapter 14 Augmenting Data Structures
+
+
+            14.2-3 ?
+            Let ˝ be an associative binary operator, and let a be an attribute maintained in each
+            node of a red-black tree. Suppose that we want to include in each node x an addi-
+            tional attribute f such that x:f D x1 :a ˝ x2 :a ˝    ˝ xm :a, where x1 ; x2 ; : : : ; xm
+            is the inorder listing of nodes in the subtree rooted at x. Show how to update the f
+            attributes in O.1/ time after a rotation. Modify your argument slightly to apply it
+            to the size attributes in order-statistic trees.
+
+            14.2-4 ?
+            We wish to augment red-black trees with an operation RB-E NUMERATE .x; a; b/
+            that outputs all the keys k such that a  k  b in a red-black tree rooted at x.
+            Describe how to implement RB-E NUMERATE in ‚.m C lg n/ time, where m is the
+            number of keys that are output and n is the number of internal nodes in the tree.
+            (Hint: You do not need to add new attributes to the red-black tree.)
+
+
+
+14.3 Interval trees
+
+            In this section, we shall augment red-black trees to support operations on dynamic
+            sets of intervals. A closed interval is an ordered pair of real numbers Œt1 ; t2 , with
+            t1  t2 . The interval Œt1 ; t2  represents the set ft 2 R W t1  t  t2 g. Open and
+            half-open intervals omit both or one of the endpoints from the set, respectively. In
+            this section, we shall assume that intervals are closed; extending the results to open
+            and half-open intervals is conceptually straightforward.
+               Intervals are convenient for representing events that each occupy a continuous
+            period of time. We might, for example, wish to query a database of time intervals
+            to ﬁnd out what events occurred during a given interval. The data structure in this
+            section provides an efﬁcient means for maintaining such an interval database.
+               We can represent an interval Œt1 ; t2  as an object i, with attributes i:low D t1
+            (the low endpoint) and i:high D t2 (the high endpoint). We say that intervals i
+            and i 0 overlap if i \ i 0 ¤ ;, that is, if i:low  i 0 :high and i 0 :low  i:high. As
+            Figure 14.3 shows, any two intervals i and i 0 satisfy the interval trichotomy; that
+            is, exactly one of the following three properties holds:
+            a. i and i 0 overlap,
+            b. i is to the left of i 0 (i.e., i:high < i 0 :low),
+            c. i is to the right of i 0 (i.e., i 0 :high < i:low).
+              An interval tree is a red-black tree that maintains a dynamic set of elements, with
+            each element x containing an interval x:int. Interval trees support the following
+            operations:
+

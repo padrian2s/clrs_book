@@ -1,0 +1,48 @@
+                8.2 Counting sort                                                                                          195
+
+
+    1   2   3   4   5   6   7   8                                                        1   2   3   4         5   6   7   8
+A 2     5   3   0   2   3   0   3             0   1   2   3   4   5                 B                                  3
+
+    0   1   2   3   4   5                 C 2     2   4   7   7   8                      0   1   2   3         4   5
+C 2     0   2   3   0   1                                                           C 2      2   4   6         7   8
+
+                (a)                                        (b)                                       (c)
+
+    1   2   3   4   5   6   7   8             1   2   3   4   5   6   7   8
+B       0                   3             B       0               3   3                  1   2   3   4         5   6   7   8
+
+    0   1   2   3   4   5                     0   1   2   3   4   5                 B 0      0   2   2         3   3   3   5
+C 1     2   4   6   7   8                 C 1     2   4   5   7   8
+
+                (d)                                        (e)                                           (f)
+
+
+                Figure 8.2 The operation of C OUNTING -S ORT on an input array AŒ1 : : 8, where each element
+                of A is a nonnegative integer no larger than k D 5. (a) The array A and the auxiliary array C after
+                line 5. (b) The array C after line 8. (c)–(e) The output array B and the auxiliary array C after one,
+                two, and three iterations of the loop in lines 10–12, respectively. Only the lightly shaded elements of
+                array B have been ﬁlled in. (f) The ﬁnal sorted output array B.
+
+
+                C OUNTING -S ORT .A; B; k/
+                 1 let C Œ0 : : k be a new array
+                 2 for i D 0 to k
+                 3      C Œi D 0
+                 4 for j D 1 to A:length
+                 5      C ŒAŒj  D C ŒAŒj  C 1
+                 6 // C Œi now contains the number of elements equal to i.
+                 7 for i D 1 to k
+                 8      C Œi D C Œi C C Œi  1
+                 9 // C Œi now contains the number of elements less than or equal to i.
+                10 for j D A:length downto 1
+                11      BŒC ŒAŒj  D AŒj 
+                12      C ŒAŒj  D C ŒAŒj   1
+
+                Figure 8.2 illustrates counting sort. After the for loop of lines 2–3 initializes the
+                array C to all zeros, the for loop of lines 4–5 inspects each input element. If the
+                value of an input element is i, we increment C Œi. Thus, after line 5, C Œi holds
+                the number of input elements equal to i for each integer i D 0; 1; : : : ; k. Lines 7–8
+                determine for each i D 0; 1; : : : ; k how many input elements are less than or equal
+                to i by keeping a running sum of the array C .
+

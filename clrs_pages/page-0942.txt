@@ -1,0 +1,48 @@
+Problems for Chapter 30                                                                          921
+
+
+c. Show how to multiply two n-bit integers in O.nlg 3 / steps, where each step
+   operates on at most a constant number of 1-bit values.
+
+30-2 Toeplitz matrices
+A Toeplitz matrix is an n n matrix A D .aij / such that aij D ai 1;j 1 for
+i D 2; 3; : : : ; n and j D 2; 3; : : : ; n.
+
+a. Is the sum of two Toeplitz matrices necessarily Toeplitz? What about the prod-
+   uct?
+
+b. Describe how to represent a Toeplitz matrix so that you can add two n                          n
+   Toeplitz matrices in O.n/ time.
+
+c. Give an O.n lg n/-time algorithm for multiplying an n n Toeplitz matrix by a
+   vector of length n. Use your representation from part (b).
+
+d. Give an efﬁcient algorithm for multiplying two n n Toeplitz matrices. Analyze
+   its running time.
+
+30-3 Multidimensional fast Fourier transform
+We can generalize the 1-dimensional discrete Fourier transform deﬁned by equa-
+tion (30.8) to d dimensions. The input is a d -dimensional array A D .aj1 ;j2 ;:::;jd /
+whose dimensions are n1 ; n2 ; : : : ; nd , where n1 n2    nd D n. We deﬁne the
+d -dimensional discrete Fourier transform by the equation
+                    X X
+                    n1 1 n2 1
+                                        X
+                                        nd 1
+
+yk1 ;k2 ;:::;kd D                            aj1 ;j2 ;:::;jd !nj11k1 !nj22k2    !njdd kd
+                    j1 D0 j2 D0         jd D0
+
+for 0  k1 < n1 , 0  k2 < n2 , . . . , 0  kd < nd .
+
+a. Show that we can compute a d -dimensional DFT by computing 1-dimensional
+   DFTs on each dimension in turn. That is, we ﬁrst compute n=n1 separate
+   1-dimensional DFTs along dimension 1. Then, using the result of the DFTs
+   along dimension 1 as the input, we compute n=n2 separate 1-dimensional DFTs
+   along dimension 2. Using this result as the input, we compute n=n3 separate
+   1-dimensional DFTs along dimension 3, and so on, through dimension d .
+
+b. Show that the ordering of dimensions does not matter, so that we can compute
+   a d -dimensional DFT by computing the 1-dimensional DFTs in any order of
+   the d dimensions.
+

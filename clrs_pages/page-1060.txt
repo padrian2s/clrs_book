@@ -1,0 +1,50 @@
+            33.4 Finding the closest pair of points                                                       1039
+
+
+                                                                                      q′
+
+
+
+
+                               p
+                                                                                  q
+
+
+                             (a)                                            (b)
+
+
+            Figure 33.10 The deﬁnition of a star-shaped polygon, for use in Exercise 33.3-4. (a) A star-shaped
+            polygon. The segment from point p to any point q on the boundary intersects the boundary only at q.
+            (b) A non-star-shaped polygon. The shaded region on the left is the shadow of q, and the shaded
+            region on the right is the shadow of q 0 . Since these regions are disjoint, the kernel is empty.
+
+
+            star-shaped polygon P speciﬁed by its vertices in counterclockwise order, show
+            how to compute CH.P / in O.n/ time.
+
+            33.3-5
+            In the on-line convex-hull problem, we are given the set Q of n points one point at
+            a time. After receiving each point, we compute the convex hull of the points seen
+            so far. Obviously, we could run Graham’s scan once for each point, with a total
+            running time of O.n2 lg n/. Show how to solve the on-line convex-hull problem in
+            a total of O.n2 / time.
+
+            33.3-6 ?
+            Show how to implement the incremental method for computing the convex hull
+            of n points so that it runs in O.n lg n/ time.
+
+
+
+33.4 Finding the closest pair of points
+
+            We now consider the problem of ﬁnding the closest pair of points in a set Q of
+            n  2 points. “Closest” refers to the usual euclidean
+                                                         p         distance: the distance between
+            points p1 D .x1 ; y1 / and p2 D .x2 ; y2 / is .x1  x2 /2 C .y1  y2 /2 . Two points
+            in set Q may be coincident, in which case the distance between them is zero. This
+            problem has applications in, for example, trafﬁc-control systems. A system for
+            controlling air or sea trafﬁc might need to identify the two closest vehicles in order
+            to detect potential collisions.
+               A brute-force closest-pair algorithm simply looks at all the n2 D ‚.n2 / pairs
+            of points. In this section, we shall describe a divide-and-conquer algorithm for
+

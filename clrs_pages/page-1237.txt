@@ -1,0 +1,20 @@
+1216       Appendix C   Counting and Probability
+
+
+
+
+Appendix notes
+
+           The ﬁrst general methods for solving probability problems were discussed in a
+           famous correspondence between B. Pascal and P. de Fermat, which began in 1654,
+           and in a book by C. Huygens in 1657. Rigorous probability theory began with the
+           work of J. Bernoulli in 1713 and A. De Moivre in 1730. Further developments of
+           the theory were provided by P.-S. Laplace, S.-D. Poisson, and C. F. Gauss.
+              Sums of random variables were originally studied by P. L. Chebyshev and A. A.
+           Markov. A. N. Kolmogorov axiomatized probability theory in 1933. Chernoff [66]
+           and Hoeffding [173] provided bounds on the tails of distributions. Seminal work
+           in random combinatorial structures was done by P. Erdös.
+              Knuth [209] and Liu [237] are good references for elementary combinatorics
+           and counting. Standard textbooks such as Billingsley [46], Chung [67], Drake [95],
+           Feller [104], and Rozanov [300] offer comprehensive introductions to probability.
+

@@ -1,0 +1,50 @@
+25.2 The Floyd-Warshall algorithm                                                      697
+
+
+choose the same predecessor of j that we chose on a shortest path from i with all
+intermediate vertices in the set f1; 2; : : : ; k  1g. Formally, for k  1,
+         (
+           ij.k1/ if dij.k1/  di.k1/ C dkj .k1/
+                                                      ;
+ij.k/ D     .k1/       .k1/
+                                     k
+                                    .k1/       .k1/                        (25.7)
+           kj      if dij      > di k    C dkj       :
+
+  We leave the incorporation of the ….k/ matrix computations into the F LOYD -
+WARSHALL procedure as Exercise 25.2-3. Figure 25.4 shows the sequence of ….k/
+matrices that the resulting algorithm computes for the graph of Figure 25.1. The
+exercise also asks for the more difﬁcult task of proving that the predecessor sub-
+graph G;i is a shortest-paths tree with root i. Exercise 25.2-7 asks for yet another
+way to reconstruct shortest paths.
+
+Transitive closure of a directed graph
+Given a directed graph G D .V; E/ with vertex set V D f1; 2; : : : ; ng, we might
+wish to determine whether G contains a path from i to j for all vertex pairs
+i; j 2 V . We deﬁne the transitive closure of G as the graph G  D .V; E  /, where
+E  D f.i; j / W there is a path from vertex i to vertex j in Gg :
+     One way to compute the transitive closure of a graph in ‚.n3 / time is to assign
+a weight of 1 to each edge of E and run the Floyd-Warshall algorithm. If there is a
+path from vertex i to vertex j , we get dij < n. Otherwise, we get dij D 1.
+     There is another, similar way to compute the transitive closure of G in ‚.n3 /
+time that can save time and space in practice. This method substitutes the logical
+operations _ (logical OR) and ^ (logical AND) for the arithmetic operations min
+and C in the Floyd-Warshall algorithm. For i; j; k D 1; 2; : : : ; n, we deﬁne tij.k/ to
+be 1 if there exists a path in graph G from vertex i to vertex j with all intermediate
+vertices in the set f1; 2; : : : ; kg, and 0 otherwise. We construct the transitive closure
+G  D .V; E  / by putting edge .i; j / into E  if and only if tij.n/ D 1. A recursive
+deﬁnition of tij.k/ , analogous to recurrence (25.5), is
+         (
+           0 if i ¤ j and .i; j / 62 E ;
+tij.0/ D
+           1 if i D j or .i; j / 2 E ;
+
+and for k  1,
+tij.k/ D tij.k1/ _ ti.k1/
+                       k
+                               .k1/
+                            ^ tkj    :                                              (25.8)
+
+  As in the Floyd-Warshall algorithm, we compute the matrices T .k/ D tij.k/ in
+order of increasing k.
+

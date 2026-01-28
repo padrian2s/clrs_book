@@ -1,0 +1,5 @@
+{
+  "page": 1034,
+  "title": "String Matching",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 32</div>\n    <h1>String Matching</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>VII: Selected Topics</h4>\n    <h3>Chapter 32: String Matching</h3>\n    <p><em>Finding a pattern within a text</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>Naive: O(nm) - try each position</li>\n<li>Rabin-Karp: hashing, O(n+m) expected</li>\n<li>KMP: O(n+m) worst case, no backtracking</li>\n<li>Automata: precompute all transitions</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>Text editors, grep, DNA analysis, plagiarism detection</p>\n</div>\n</div>"
+}

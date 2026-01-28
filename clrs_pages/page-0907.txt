@@ -1,0 +1,42 @@
+886          Chapter 29 Linear Programming
+
+
+             29.4-6
+             Which result from Chapter 26 can be interpreted as weak duality for the maximum-
+             ﬂow problem?
+
+
+
+29.5 The initial basic feasible solution
+
+             In this section, we ﬁrst describe how to test whether a linear program is feasible,
+             and if it is, how to produce a slack form for which the basic solution is feasible.
+             We conclude by proving the fundamental theorem of linear programming, which
+             says that the S IMPLEX procedure always produces the correct result.
+
+             Finding an initial solution
+             In Section 29.3, we assumed that we had a procedure I NITIALIZE -S IMPLEX that
+             determines whether a linear program has any feasible solutions, and if it does, gives
+             a slack form for which the basic solution is feasible. We describe this procedure
+             here.
+                A linear program can be feasible, yet the initial basic solution might not be
+             feasible. Consider, for example, the following linear program:
+             maximize     2x1        x2                                                   (29.102)
+             subject to
+                          2x1  x2             2                                          (29.103)
+                           x1  5x2           4                                          (29.104)
+                             x1 ; x2           0 :                                        (29.105)
+                If we were to convert this linear program to slack form, the basic solution would
+             set x1 D 0 and x2 D 0. This solution violates constraint (29.104), and so it is not a
+             feasible solution. Thus, I NITIALIZE -S IMPLEX cannot just return the obvious slack
+             form. In order to determine whether a linear program has any feasible solutions,
+             we will formulate an auxiliary linear program. For this auxiliary linear program,
+             we can ﬁnd (with a little work) a slack form for which the basic solution is feasible.
+             Furthermore, the solution of this auxiliary linear program determines whether the
+             initial linear program is feasible and if so, it provides a feasible solution with which
+             we can initialize S IMPLEX.
+
+             Lemma 29.11
+             Let L be a linear program in standard form, given as in (29.16)–(29.18). Let x0 be
+             a new variable, and let Laux be the following linear program with n C 1 variables:
+

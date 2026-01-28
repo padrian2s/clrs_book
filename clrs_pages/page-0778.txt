@@ -1,0 +1,60 @@
+26.5 The relabel-to-front algorithm                                                             757
+
+
+                                    y
+         6
+              s        8/14         0
+         5                                                            L:    y    x     z
+             –20
+         4                                                            N:    s    s     x
+(d)      3       /12
+                              5             8/8                             x    y     y
+               12
+         2                                        12/16                     z    z     t
+                         x
+         1                            7                                          t
+                         0                        z           t
+         0                                             10
+                                                  8          12
+
+
+                                    y
+         6
+              s        8/14         0
+         5                                                            L:    z    y     x
+             –20
+         4                                                            N:    x    s     s
+                              5             8/8
+(e)      3       /12                                                        y    x     y
+               12
+         2                                                                  t    z     z
+                         x          7             z
+         1                                            8/10                             t
+                         0                12/16   0           t
+         0
+                                                             20
+
+
+
+Figure 26.10, continued (d) Since vertex ´ follows vertex x in L, it is discharged. It is relabeled
+to height 1 and all 8 units of excess ﬂow are pushed to t. Because ´ is relabeled, it moves to the
+front of L. (e) Vertex y now follows vertex ´ in L and is therefore discharged. But because y has no
+excess, D ISCHARGE immediately returns, and y remains in place in L. Vertex x is then discharged.
+Because it, too, has no excess, D ISCHARGE again returns, and x remains in place in L. R ELABEL -
+T O -F RONT has reached the end of list L and terminates. There are no overﬂowing vertices, and the
+preﬂow is a maximum ﬂow.
+
+
+      least s and t), no edge can be admissible. Thus, Ef;h D ;, and any ordering of
+      V  fs; tg is a topological sort of Gf;h .
+      Because u is initially the head of the list L, there are no vertices before it and
+      so there are none before it with excess ﬂow.
+Maintenance: To see that each iteration of the while loop maintains the topolog-
+  ical sort, we start by observing that the admissible network is changed only by
+  push and relabel operations. By Lemma 26.27, push operations do not cause
+  edges to become admissible. Thus, only relabel operations can create admissi-
+  ble edges. After a vertex u is relabeled, however, Lemma 26.28 states that there
+  are no admissible edges entering u but there may be admissible edges leaving u.
+  Thus, by moving u to the front of L, the algorithm ensures that any admissible
+  edges leaving u satisfy the topological sort ordering.
+

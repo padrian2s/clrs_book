@@ -1,0 +1,53 @@
+1272   Index
+
+
+       loop, in pseudocode, 20                              for median ﬁnding, 227
+         parallel, 785–787                                  for merging, 208 pr.
+       loop invariant, 18–19                                for minimum-weight vertex cover,
+         for breadth-ﬁrst search, 595                          1124–1126
+         for building a heap, 157                           for multithreaded computations, 780
+         for consolidating the root list of a Fibonacci     and potential functions, 478
+            heap, 517                                       for priority-queue operations, 531
+         for determining the rank of an element in an       and recurrences, 67
+            order-statistic tree, 342                       for simultaneous minimum and maximum,
+         for Dijkstra’s algorithm, 660                         215 ex.
+         and for loops, 19 n.                               for size of an optimal vertex cover, 1110,
+         for the generic minimum-spanning-tree                 1135 pr.
+            method, 625                                     for sorting, 191–194, 205 pr., 211, 531
+         for the generic push-relabel algorithm, 743        for streaks, 136–138, 142 ex.
+         for Graham’s scan, 1034                            on summations, 1152, 1154
+         for heapsort, 160 ex.                            lower median, 213
+                                                                             p
+         for Horner’s rule, 41 pr.                        lower square root #      , 546
+         for increasing a key in a heap, 166 ex.          lower-triangular matrix, 1219, 1222 ex.,
+         initialization of, 19                                 1225 ex.
+         for insertion sort, 18                           low function, 537, 546
+         maintenance of, 19                               LU decomposition, 806 pr., 819–822
+         for merging, 32                                  LU-D ECOMPOSITION, 821
+         for modular exponentiation, 957                  LUP decomposition, 806 pr., 815
+         origin of, 42                                      computation of, 822–825
+         for partitioning, 171                              of a diagonal matrix, 827 ex.
+         for Prim’s algorithm, 636                          in matrix inversion, 828
+         for the Rabin-Karp algorithm, 993                  and matrix multiplication, 832 ex.
+         for randomly permuting an array, 127,              of a permutation matrix, 827 ex.
+            128 ex.                                         use of, 815–819
+         for red-black tree insertion, 318                LUP-D ECOMPOSITION, 824
+         for the relabel-to-front algorithm, 755          LUP-S OLVE , 817
+         for searching an interval tree, 352
+         for the simplex algorithm, 872                   main memory, 484
+         for string-matching automata, 998, 1000          M AKE -H EAP, 505
+         and termination, 19                              M AKE -S ET , 561
+       low endpoint of an interval, 348                     disjoint-set-forest implementation of, 571
+       lower bounds                                         linked-list implementation of, 564
+         on approximations, 1140                          makespan, 1136 pr.
+         asymptotic, 48                                   M AKE -T REE , 583 pr.
+         for average sorting, 207 pr.                     Manhattan distance, 225 pr., 1044 ex.
+         on binomial coefﬁcients, 1186                    marked node, 508, 519–520
+         for comparting water jugs, 206 pr.               Markov’s inequality, 1201 ex.
+         for convex hull, 1038 ex., 1047                  master method for solving a recurrence, 93–97
+         for disjoint-set data structures, 585            master theorem, 94
+         for ﬁnding the minimum, 214                        proof of, 97–106
+         for ﬁnding the predecessor, 560                  matched vertex, 732
+         for length of an optimal traveling-salesman      matching
+            tour, 1112–1115                                 bipartite, 732, 763 pr.
+

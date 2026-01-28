@@ -1,0 +1,44 @@
+746   Chapter 26 Maximum Flow
+
+
+      Lemma 26.23 (Bound on nonsaturating pushes)
+      During the execution of G ENERIC -P USH -R ELABEL on any ﬂow network G D
+      .V; E/, the number of nonsaturating pushes is less than 4 jV j2 .jV j C jEj/.
+                                                   P
+      Proof Deﬁne a potential function ˆ D We./>0 :h. Initially, ˆ D 0, and the
+      value of ˆ may change after each relabeling, saturating push, and nonsaturating
+      push. We will bound the amount that saturating pushes and relabelings can con-
+      tribute to the increase of ˆ. Then we will show that each nonsaturating push must
+      decrease ˆ by at least 1, and will use these bounds to derive an upper bound on the
+      number of nonsaturating pushes.
+         Let us examine the two ways in which ˆ might increase. First, relabeling a
+      vertex u increases ˆ by less than 2 jV j, since the set over which the sum is taken is
+      the same and the relabeling cannot increase u’s height by more than its maximum
+      possible height, which, by Lemma 26.20, is at most 2 jV j  1. Second, a saturating
+      push from a vertex u to a vertex  increases ˆ by less than 2 jV j, since no heights
+      change and only vertex , whose height is at most 2 jV j  1, can possibly become
+      overﬂowing.
+         Now we show that a nonsaturating push from u to  decreases ˆ by at least 1.
+      Why? Before the nonsaturating push, u was overﬂowing, and  may or may not
+      have been overﬂowing. By Lemma 26.13, u is no longer overﬂowing after the
+      push. In addition, unless  is the source, it may or may not be overﬂowing after
+      the push. Therefore, the potential function ˆ has decreased by exactly u:h, and it
+      has increased by either 0 or :h. Since u:h  :h D 1, the net effect is that the
+      potential function has decreased by at least 1.
+         Thus, during the course of the algorithm, the total amount of increase in ˆ is
+      due to relabelings and saturated pushes, and Corollary 26.21 and Lemma 26.22
+      constrain the increase to be less than .2 jV j/.2 jV j2 / C .2 jV j/.2 jV j jEj/ D
+      4 jV j2 .jV j C jEj/. Since ˆ  0, the total amount of decrease, and therefore the
+      total number of nonsaturating pushes, is less than 4 jV j2 .jV j C jEj/.
+
+         Having bounded the number of relabelings, saturating pushes, and nonsatu-
+      rating push, we have set the stage for the following analysis of the G ENERIC -
+      P USH -R ELABEL procedure, and hence of any algorithm based on the push-relabel
+      method.
+
+      Theorem 26.24
+      During the execution of G ENERIC -P USH -R ELABEL on any ﬂow network G D
+      .V; E/, the number of basic operations is O.V 2 E/.
+
+      Proof   Immediate from Corollary 26.21 and Lemmas 26.22 and 26.23.
+

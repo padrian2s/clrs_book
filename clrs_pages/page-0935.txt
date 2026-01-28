@@ -1,0 +1,50 @@
+914   Chapter 30 Polynomials and the FFT
+
+
+      Theorem 30.8 (Convolution theorem)
+      For any two vectors a and b of length n, where n is a power of 2,
+      a ˝ b D DFT1
+                 2n .DFT2n .a/  DFT2n .b// ;
+
+      where the vectors a and b are padded with 0s to length 2n and  denotes the com-
+      ponentwise product of two 2n-element vectors.
+
+
+      Exercises
+
+      30.2-1
+      Prove Corollary 30.4.
+
+      30.2-2
+      Compute the DFT of the vector .0; 1; 2; 3/.
+
+      30.2-3
+      Do Exercise 30.1-1 by using the ‚.n lg n/-time scheme.
+
+      30.2-4
+      Write pseudocode to compute DFT1
+                                     n in ‚.n lg n/ time.
+
+      30.2-5
+      Describe the generalization of the FFT procedure to the case in which n is a power
+      of 3. Give a recurrence for the running time, and solve the recurrence.
+
+      30.2-6 ?
+      Suppose that instead of performing an n-element FFT over the ﬁeld of complex
+      numbers (where n is even), we use the ring Zm of integers modulo m, where
+      m D 2t n=2 C 1 and t is an arbitrary positive integer. Use ! D 2t instead of !n
+      as a principal nth root of unity, modulo m. Prove that the DFT and the inverse DFT
+      are well deﬁned in this system.
+
+      30.2-7
+      Given a list of values ´0 ; ´1 ; : : : ; ´n1 (possibly with repetitions), show how to ﬁnd
+      the coefﬁcients of a polynomial P .x/ of degree-bound n C 1 that has zeros only
+      at ´0 ; ´1 ; : : : ; ´n1 (possibly with repetitions). Your procedure should run in time
+      O.n lg2 n/. (Hint: The polynomial P .x/ has a zero at ´j if and only if P .x/ is a
+      multiple of .x  ´j /.)
+
+      30.2-8 ?
+      The chirp transform of a vector        a D .a0 ; a1 ; : : : ; an1 / is the vector y D
+                                           Pn1
+      .y0 ; y1 ; : : : ; yn1 /, where yk D j D0 aj ´kj and ´ is any complex number. The
+

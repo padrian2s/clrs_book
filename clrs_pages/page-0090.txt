@@ -1,0 +1,48 @@
+4.1 The maximum-subarray problem                                                                   69
+
+
+11
+10
+ 9
+                                                      Day         0    1    2     3     4
+ 8                                                    Price      10   11    7    10     6
+ 7                                                    Change           1   4     3    4
+ 6
+       0       1      2       3       4
+
+
+Figure 4.2 An example showing that the maximum proﬁt does not always start at the lowest price
+or end at the highest price. Again, the horizontal axis indicates the day, and the vertical axis shows
+the price. Here, the maximum proﬁt of $3 per share would be earned by buying after day 2 and
+selling after day 3. The price of $7 after day 2 is not the lowest price overall, and the price of $10
+after day 3 is not the highest price overall.
+
+
+demonstrating that the maximum proﬁt sometimes comes neither by buying at the
+lowest price nor by selling at the highest price.
+
+A brute-force solution
+We can easily devise a brute-force solution to this problem: just try every possible
+pair of buy and sell dates in which the buy date precedes the sell date. A period of n
+days has n2 such pairs of dates. Since n2 is ‚.n2 /, and the best we can hope for
+is to evaluate each pair of dates in constant time, this approach would take .n2 /
+time. Can we do better?
+
+A transformation
+In order to design an algorithm with an o.n2 / running time, we will look at the
+input in a slightly different way. We want to ﬁnd a sequence of days over which
+the net change from the ﬁrst day to the last is maximum. Instead of looking at the
+daily prices, let us instead consider the daily change in price, where the change on
+day i is the difference between the prices after day i  1 and after day i. The table
+in Figure 4.1 shows these daily changes in the bottom row. If we treat this row as
+an array A, shown in Figure 4.3, we now want to ﬁnd the nonempty, contiguous
+subarray of A whose values have the largest sum. We call this contiguous subarray
+the maximum subarray. For example, in the array of Figure 4.3, the maximum
+subarray of AŒ1 : : 16 is AŒ8 : : 11, with the sum 43. Thus, you would want to buy
+the stock just before day 8 (that is, after day 7) and sell it after day 11, earning a
+proﬁt of $43 per share.
+   At ﬁrst glance, this transformation does not help. We still need to check
+ n1
+  2
+      D ‚.n2 / subarrays for a period of n days. Exercise 4.1-2 asks you to show
+

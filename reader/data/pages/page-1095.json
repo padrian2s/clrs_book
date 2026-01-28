@@ -1,0 +1,5 @@
+{
+  "page": 1095,
+  "title": "34.5 NP-Complete Problems",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 34.5</div>\n    <h1>NP-Complete Problems</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>A collection of important NP-complete problems.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>CLIQUE: is there a k-clique in graph G?</li>\n<li>VERTEX-COVER: can k vertices cover all edges?</li>\n<li>HAMILTONIAN-CYCLE: is there a cycle visiting all vertices?</li>\n<li>TRAVELING-SALESMAN: tour of length ≤ k?</li>\n<li>SUBSET-SUM: subset summing to target value?</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>All these problems: easy to verify (NP), hard to solve (NP-hard), polynomially equivalent via reductions.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Recognize NP-complete problems to know when to use heuristics/approximations.</p>\n</div>\n</div>"
+}

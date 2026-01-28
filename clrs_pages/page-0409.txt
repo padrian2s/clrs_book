@@ -1,0 +1,43 @@
+388   Chapter 15 Dynamic Programming
+
+
+      M EMOIZED -M ATRIX -C HAIN .p/
+      1 n D p:length  1
+      2 let mŒ1 : : n; 1 : : n be a new table
+      3 for i D 1 to n
+      4      for j D i to n
+      5            mŒi; j  D 1
+      6 return L OOKUP -C HAIN .m; p; 1; n/
+
+      L OOKUP -C HAIN .m; p; i; j /
+      1 if mŒi; j  < 1
+      2      return mŒi; j 
+      3 if i == j
+      4      mŒi; j  D 0
+      5 else for k D i to j  1
+      6            q D L OOKUP -C HAIN .m; p; i; k/
+                        C L OOKUP -C HAIN .m; p; k C 1; j / C pi 1 pk pj
+      7            if q < mŒi; j 
+      8                 mŒi; j  D q
+      9 return mŒi; j 
+
+         The M EMOIZED -M ATRIX -C HAIN procedure, like M ATRIX -C HAIN -O RDER,
+      maintains a table mŒ1 : : n; 1 : : n of computed values of mŒi; j , the minimum num-
+      ber of scalar multiplications needed to compute the matrix Ai ::j . Each table entry
+      initially contains the value 1 to indicate that the entry has yet to be ﬁlled in. Upon
+      calling L OOKUP -C HAIN .m; p; i; j /, if line 1 ﬁnds that mŒi; j  < 1, then the pro-
+      cedure simply returns the previously computed cost mŒi; j  in line 2. Otherwise,
+      the cost is computed as in R ECURSIVE -M ATRIX -C HAIN, stored in mŒi; j , and
+      returned. Thus, L OOKUP -C HAIN .m; p; i; j / always returns the value of mŒi; j ,
+      but it computes it only upon the ﬁrst call of L OOKUP -C HAIN with these speciﬁc
+      values of i and j .
+         Figure 15.7 illustrates how M EMOIZED -M ATRIX -C HAIN saves time compared
+      with R ECURSIVE -M ATRIX -C HAIN. Shaded subtrees represent values that it looks
+      up rather than recomputes.
+         Like the bottom-up dynamic-programming algorithm M ATRIX -C HAIN -O RDER,
+      the procedure M EMOIZED -M ATRIX -C HAIN runs in O.n3 / time. Line 5 of
+      M EMOIZED -M ATRIX -C HAIN executes ‚.n2 / times. We can categorize the calls
+      of L OOKUP -C HAIN into two types:
+      1. calls in which mŒi; j  D 1, so that lines 3–9 execute, and
+      2. calls in which mŒi; j  < 1, so that L OOKUP -C HAIN simply returns in line 2.
+

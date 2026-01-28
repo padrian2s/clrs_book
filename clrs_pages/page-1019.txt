@@ -1,0 +1,44 @@
+998   Chapter 32 String Matching
+
+
+         The state set Q is f0; 1; : : : ; mg. The start state q0 is state 0, and state m is the
+          only accepting state.
+         The transition function ı is deﬁned by the following equation, for any state q
+          and character a:
+
+          ı.q; a/ D .Pq a/ :                                                              (32.4)
+
+         We deﬁne ı.q; a/ D .Pq a/ because we want to keep track of the longest pre-
+      ﬁx of the pattern P that has matched the text string T so far. We consider the
+      most recently read characters of T . In order for a substring of T —let’s say the
+      substring ending at T Œi—to match some preﬁx Pj of P , this preﬁx Pj must be a
+      sufﬁx of Ti . Suppose that q D .Ti /, so that after reading Ti , the automaton is in
+      state q. We design the transition function ı so that this state number, q, tells us the
+      length of the longest preﬁx of P that matches a sufﬁx of Ti . That is, in state q,
+      Pq = Ti and q D .Ti /. (Whenever q D m, all m characters of P match a sufﬁx
+      of Ti , and so we have found a match.) Thus, since .Ti / and .Ti / both equal q,
+      we shall see (in Theorem 32.4, below) that the automaton maintains the following
+      invariant:
+      .Ti / D .Ti / :                                                                    (32.5)
+      If the automaton is in state q and reads the next character T Œi C 1 D a, then we
+      want the transition to lead to the state corresponding to the longest preﬁx of P that
+      is a sufﬁx of Ti a, and that state is .Ti a/. Because Pq is the longest preﬁx of P
+      that is a sufﬁx of Ti , the longest preﬁx of P that is a sufﬁx of Ti a is not only .Ti a/,
+      but also .Pq a/. (Lemma 32.3, on page 1000, proves that .Ti a/ D .Pq a/.)
+      Thus, when the automaton is in state q, we want the transition function on charac-
+      ter a to take the automaton to state .Pq a/.
+         There are two cases to consider. In the ﬁrst case, a D P Œq C 1, so that the
+      character a continues to match the pattern; in this case, because ı.q; a/ D qC1, the
+      transition continues to go along the “spine” of the automaton (the heavy edges in
+      Figure 32.7). In the second case, a ¤ P ŒqC1, so that a does not continue to match
+      the pattern. Here, we must ﬁnd a smaller preﬁx of P that is also a sufﬁx of Ti .
+      Because the preprocessing step matches the pattern against itself when creating the
+      string-matching automaton, the transition function quickly identiﬁes the longest
+      such smaller preﬁx of P .
+         Let’s look at an example. The string-matching automaton of Figure 32.7 has
+      ı.5; c/ D 6, illustrating the ﬁrst case, in which the match continues. To illus-
+      trate the second case, observe that the automaton of Figure 32.7 has ı.5; b/ D 4.
+      We make this transition because if the automaton reads a b in state q D 5, then
+      Pq b D ababab, and the longest preﬁx of P that is also a sufﬁx of ababab is
+      P4 D abab.
+

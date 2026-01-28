@@ -1,0 +1,5 @@
+{
+  "page": 1084,
+  "title": "34.4 NP-Completeness Proofs",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 34.4</div>\n    <h1>NP-Completeness Proofs</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>How to prove a problem is NP-complete.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Step 1: Show problem is in NP (verify solution in poly time)</li>\n<li>Step 2: Show problem is NP-hard (reduce from known NP-complete)</li>\n<li>Key: transform instances in polynomial time</li>\n<li>Preserve YES/NO answers</li>\n<li>Common source problems: 3-SAT, CLIQUE, VERTEX-COVER</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Prove VERTEX-COVER NP-complete: reduce from CLIQUE. G has k-clique iff complement has (n-k)-vertex-cover.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Toolkit for proving computational difficulty of new problems.</p>\n</div>\n</div>"
+}

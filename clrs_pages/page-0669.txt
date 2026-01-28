@@ -1,0 +1,52 @@
+648                Chapter 24 Single-Source Shortest Paths
+
+
+               t                 x                           t               x                          t               x
+                        6                                            6                                          6
+               3                 9                           3               9                          3               9
+       3                                             3                                          3
+                        4                                            4                                          4
+ s 0       2       1         2        7      s 0         2       1       2        7     s 0         2       1       2        7
+
+                        3                                            3                                          3
+       5                                             5                                          5
+               5                 11                          5               11                         5               11
+                        6                                            6                                          6
+               y                  z                          y                z                         y                z
+                (a)                                           (b)                                        (c)
+
+
+                   Figure 24.2 (a) A weighted, directed graph with shortest-path weights from source s. (b) The
+                   shaded edges form a shortest-paths tree rooted at the source s. (c) Another shortest-paths tree with
+                   the same root.
+
+                   Shortest paths are not necessarily unique, and neither are shortest-paths trees. For
+                   example, Figure 24.2 shows a weighted, directed graph and two shortest-paths trees
+                   with the same root.
+
+                   Relaxation
+                   The algorithms in this chapter use the technique of relaxation. For each vertex
+                    2 V , we maintain an attribute :d, which is an upper bound on the weight of
+                   a shortest path from source s to . We call :d a shortest-path estimate. We
+                   initialize the shortest-path estimates and predecessors by the following ‚.V /-time
+                   procedure:
+
+                   I NITIALIZE -S INGLE -S OURCE .G; s/
+                   1 for each vertex  2 G:V
+                   2       :d D 1
+                   3       : D NIL
+                   4 s:d D 0
+                   After initialization, we have : D NIL for all  2 V , s:d D 0, and :d D 1 for
+                    2 V  fsg.
+                     The process of relaxing an edge .u; / consists of testing whether we can im-
+                   prove the shortest path to  found so far by going through u and, if so, updat-
+                   ing :d and :. A relaxation step1 may decrease the value of the shortest-path
+
+
+                   1 It may seem strange that the term “relaxation” is used for an operation that tightens an upper bound.
+
+                   The use of the term is historical. The outcome of a relaxation step can be viewed as a relaxation
+                   of the constraint : d  u: d C w.u; /, which, by the triangle inequality (Lemma 24.10), must be
+                   satisﬁed if u: d D ı.s; u/ and : d D ı.s; /. That is, if : d  u: d C w.u; /, there is no “pressure”
+                   to satisfy this constraint, so the constraint is “relaxed.”
+

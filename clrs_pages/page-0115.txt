@@ -1,0 +1,42 @@
+94   Chapter 4 Divide-and-Conquer
+
+
+        The recurrence (4.20) describes the running time of an algorithm that divides a
+     problem of size n into a subproblems, each of size n=b, where a and b are positive
+     constants. The a subproblems are solved recursively, each in time T .n=b/. The
+     function f .n/ encompasses the cost of dividing the problem and combining the
+     results of the subproblems. For example, the recurrence arising from Strassen’s
+     algorithm has a D 7, b D 2, and f .n/ D ‚.n2 /.
+        As a matter of technical correctness, the recurrence is not actually well deﬁned,
+     because n=b might not be an integer. Replacing each of the a terms T .n=b/ with
+     either T .bn=bc/ or T .dn=be/ will not affect the asymptotic behavior of the recur-
+     rence, however. (We will prove this assertion in the next section.) We normally
+     ﬁnd it convenient, therefore, to omit the ﬂoor and ceiling functions when writing
+     divide-and-conquer recurrences of this form.
+
+     The master theorem
+     The master method depends on the following theorem.
+
+     Theorem 4.1 (Master theorem)
+     Let a  1 and b > 1 be constants, let f .n/ be a function, and let T .n/ be deﬁned
+     on the nonnegative integers by the recurrence
+     T .n/ D aT .n=b/ C f .n/ ;
+     where we interpret n=b to mean either bn=bc or dn=be. Then T .n/ has the follow-
+     ing asymptotic bounds:
+     1. If f .n/ D O.nlogb a / for some constant  > 0, then T .n/ D ‚.nlogb a /.
+     2. If f .n/ D ‚.nlogb a /, then T .n/ D ‚.nlogb a lg n/.
+     3. If f .n/ D .nlogb aC / for some constant  > 0, and if af .n=b/  cf .n/ for
+        some constant c < 1 and all sufﬁciently large n, then T .n/ D ‚.f .n//.
+
+
+        Before applying the master theorem to some examples, let’s spend a moment
+     trying to understand what it says. In each of the three cases, we compare the
+     function f .n/ with the function nlogb a . Intuitively, the larger of the two functions
+     determines the solution to the recurrence. If, as in case 1, the function nlogb a is the
+     larger, then the solution is T .n/ D ‚.nlogb a /. If, as in case 3, the function f .n/
+     is the larger, then the solution is T .n/ D ‚.f .n//. If, as in case 2, the two func-
+     tions are the same size, we multiply by a logarithmic factor, and the solution is
+     T .n/ D ‚.nlogb a lg n/ D ‚.f .n/ lg n/.
+        Beyond this intuition, you need to be aware of some technicalities. In the ﬁrst
+     case, not only must f .n/ be smaller than nlogb a , it must be polynomially smaller.
+

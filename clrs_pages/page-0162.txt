@@ -1,0 +1,58 @@
+5.4 Probabilistic analysis and further uses of indicator random variables          141
+
+
+Pr fSi g D Pr fBi \ Oi g D Pr fBi g Pr fOi g :
+The probability Pr fBi g is clearly 1=n, since the maximum is equally likely to
+be in any one of the n positions. For event Oi to occur, the maximum value in
+positions 1 through i 1, which is equally likely to be in any of these i 1 positions,
+must be in one of the ﬁrst k positions. Consequently, Pr fOi g D k=.i  1/ and
+Pr fSi g D k=.n.i  1//. Using equation (5.12), we have
+                X
+                n
+Pr fSg D                  Pr fSi g
+               i DkC1
+                 Xn
+                         k
+          D
+               i DkC1
+                      n.i  1/
+
+               k X 1
+                      n
+          D
+               n  i 1
+                  i DkC1
+
+               kX1
+                  n1
+          D        :
+               n i
+                  i Dk
+
+
+We approximate by integrals to bound this summation from above and below. By
+the inequalities (A.12), we have
+Z n           X
+              n1     Z n1
+     1            1          1
+       dx                    dx :
+  k x             i
+               i Dk     k1 x
+
+Evaluating these deﬁnite integrals gives us the bounds
+k                         k
+  .ln n  ln k/  Pr fSg  .ln.n  1/  ln.k  1// ;
+n                         n
+which provide a rather tight bound for Pr fSg. Because we wish to maximize our
+probability of success, let us focus on choosing the value of k that maximizes the
+lower bound on Pr fSg. (Besides, the lower-bound expression is easier to maximize
+than the upper-bound expression.) Differentiating the expression .k=n/.ln nln k/
+with respect to k, we obtain
+1
+   .ln n  ln k  1/ :
+n
+Setting this derivative equal to 0, we see that we maximize the lower bound on the
+probability when ln k D ln n  1 D ln.n=e/ or, equivalently, when k D n=e. Thus,
+if we implement our strategy with k D n=e, we succeed in hiring our best-qualiﬁed
+applicant with probability at least 1=e.
+

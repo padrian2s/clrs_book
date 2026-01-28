@@ -1,0 +1,61 @@
+218   Chapter 9 Medians and Order Statistics
+
+
+      Taking expected values, we have
+      E ŒT .n/
+             " n                                    #
+                X
+        E        Xk  T .max.k  1; n  k// C O.n/
+                 kD1
+           X
+           n
+       D         E ŒXk  T .max.k  1; n  k// C O.n/      (by linearity of expectation)
+           kD1
+           Xn
+       D         E ŒXk   E ŒT .max.k  1; n  k// C O.n/ (by equation (C.24))
+           kD1
+           Xn
+                 1
+       D            E ŒT .max.k  1; n  k// C O.n/       (by equation (9.1)) .
+                 n
+           kD1
+
+      In order to apply equation (C.24), we rely on Xk and T .max.k  1; n  k// being
+      independent random variables. Exercise 9.2-2 asks you to justify this assertion.
+         Let us consider the expression max.k  1; n  k/. We have
+                             (
+                               k  1 if k > dn=2e ;
+      max.k  1; n  k/ D
+                               n  k if k  dn=2e :
+
+      If n is even, each term from T .dn=2e/ up to T .n  1/ appears exactly twice in
+      the summation, and if n is odd, all these terms appear twice and T .bn=2c/ appears
+      once. Thus, we have
+
+                  2 X
+                    n1
+      E ŒT .n/        E ŒT .k/ C O.n/ :
+                  n
+                       kDbn=2c
+
+      We show that E ŒT .n/ D O.n/ by substitution. Assume that E ŒT .n/  cn for
+      some constant c that satisﬁes the initial conditions of the recurrence. We assume
+      that T .n/ D O.1/ for n less than some constant; we shall pick this constant later.
+      We also pick a constant a such that the function described by the O.n/ term above
+      (which describes the non-recursive component of the running time of the algo-
+      rithm) is bounded from above by an for all n > 0. Using this inductive hypothesis,
+      we have
+                        2 X
+                          n1
+      E ŒT .n/              ck C an
+                        n
+                          kDbn=2c
+                                                   !
+                        2c   X
+                             n1          X
+                                         bn=2c1
+
+                  D                 k             k C an
+                        n
+                             kD1          kD1
+

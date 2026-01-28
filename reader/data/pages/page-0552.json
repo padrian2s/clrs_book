@@ -1,0 +1,5 @@
+{
+  "page": 552,
+  "title": "Heapsort",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 6</div>\n    <h1>Heapsort</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>Counting Sort</h4>\n    <p><strong>Count each value, then place them in order</strong></p>\n    <p><em>Count how many of each score (0-100) students got. Then write down that many 0s, that many 1s, etc.</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>How It Works</h4>\n    <ol><li>Create count array for range [0, k]</li>\n<li>Count occurrences of each element</li>\n<li>Compute cumulative sums</li>\n<li>Place elements in output array using counts</li></ol>\n</div>\n<div class=\"figure-box\">\n    <h4>Complexity</h4>\n    <ul><li><strong>Time Best:</strong> O(n + k)</li><li><strong>Time Avg:</strong> O(n + k)</li><li><strong>Time Worst:</strong> O(n + k)</li><li><strong>Space:</strong> O(n + k)</li></ul>\n</div>\n<div class=\"highlight-box\">\n    <h4>When to Use</h4>\n    <ul><li>Integers in a known, small range</li>\n<li>k (range) is O(n)</li>\n<li>As subroutine in radix sort</li></ul>\n</div>\n</div>"
+}

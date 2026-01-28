@@ -1,0 +1,55 @@
+1186   Appendix C   Counting and Probability
+
+
+       These numbers are also known as binomial coefﬁcients, due to their appearance in
+       the binomial expansion:
+                          !
+                   Xn
+                        n
+       .x C y/n D           x k y nk :                                           (C.4)
+                        k
+                     kD0
+
+       A special case of the binomial expansion occurs when x D y D 1:
+                    !
+            Xn
+                  n
+       2n D           :
+                  k
+             kD0
+
+       This formula corresponds to counting the 2n binary n-strings by the number of 1s
+       they contain: nk binary n-strings contain exactly k 1s, since we have nk ways to
+       choose k out of the n positions in which to place the 1s.
+          Many identities involve binomial coefﬁcients. The exercises at the end of this
+       section give you the opportunity to prove a few.
+
+       Binomial bounds
+       We sometimes need to bound the size of a binomial coefﬁcient. For 1  k  n,
+       we have the lower bound
+          !
+        n         n.n  1/    .n  k C 1/
+             D
+        k               k.k  1/    1
+                  n n  1 n  k C 1
+                       
+             D                     
+                    k    k1                1
+                   n k
+                        :
+                    k
+       Taking advantage of the inequality kŠ  .k=e/k derived from Stirling’s approxi-
+       mation (3.18), we obtain the upper bounds
+          !
+        n         n.n  1/    .n  k C 1/
+             D
+        k               k.k  1/    1
+                nk
+              
+                kŠ
+                 en k
+                       :                                                          (C.5)
+                  k
+       For all integers k such that 0  k  n, we can use induction (see Exercise C.1-12)
+       to prove the bound
+

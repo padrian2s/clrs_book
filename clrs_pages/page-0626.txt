@@ -1,0 +1,57 @@
+                  22.3 Depth-ﬁrst search                                                                                     605
+
+
+ u           v         w           u           v         w         u           v         w           u         v         w
+1/                                1/          2/                  1/          2/                    1/        2/
+
+
+
+                                                                              3/                    4/        3/
+    x        y          z             x        y          z           x        y         z           x         y         z
+            (a)                               (b)                             (c)                             (d)
+
+ u           v         w           u           v         w         u           v         w           u         v         w
+1/          2/                    1/          2/                  1/          2/                    1/        2/7
+        B                                 B                               B                               B
+
+4/          3/                    4/5         3/                  4/5         3/6                   4/5       3/6
+ x           y          z          x           y          z        x           y         z           x         y         z
+            (e)                               (f)                             (g)                             (h)
+
+ u           v         w           u           v         w         u           v         w           u         v         w
+1/          2/7                   1/8         2/7                 1/8         2/7       9/          1/8       2/7       9/
+F       B                         F       B                       F       B                         F     B         C
+
+4/5         3/6                   4/5         3/6                 4/5         3/6                   4/5       3/6
+ x           y          z          x           y          z        x           y         z           x         y         z
+            (i)                               (j)                             (k)                             (l)
+
+ u           v         w           u           v         w         u           v         w           u         v         w
+1/8         2/7       9/          1/8         2/7       9/        1/8         2/7       9/          1/8       2/7       9/12
+F       B         C               F       B         C             F       B         C               F     B         C
+                                                              B                                 B                               B
+4/5         3/6       10/         4/5         3/6       10/       4/5         3/6       10/11       4/5       3/6       10/11
+ x           y          z          x           y          z        x           y          z          x         y          z
+            (m)                               (n)                             (o)                             (p)
+
+
+
+                  Figure 22.4 The progress of the depth-ﬁrst-search algorithm DFS on a directed graph. As edges
+                  are explored by the algorithm, they are shown as either shaded (if they are tree edges) or dashed
+                  (otherwise). Nontree edges are labeled B, C, or F according to whether they are back, cross, or
+                  forward edges. Timestamps within vertices indicate discovery time/ﬁnishing times.
+
+
+                  the root of a new tree in the depth-ﬁrst forest. When DFS returns, every vertex u
+                  has been assigned a discovery time u:d and a ﬁnishing time u:f .
+                     In each call DFS-V ISIT .G; u/, vertex u is initially white. Line 1 increments
+                  the global variable time, line 2 records the new value of time as the discovery
+                  time u:d, and line 3 paints u gray. Lines 4–7 examine each vertex  adjacent to u
+                  and recursively visit  if it is white. As each vertex  2 AdjŒu is considered in
+                  line 4, we say that edge .u; / is explored by the depth-ﬁrst search. Finally, after
+                  every edge leaving u has been explored, lines 8–10 paint u black, increment time,
+                  and record the ﬁnishing time in u:f .
+                     Note that the results of depth-ﬁrst search may depend upon the order in which
+                  line 5 of DFS examines the vertices and upon the order in which line 4 of DFS-
+                  V ISIT visits the neighbors of a vertex. These different visitation orders tend not
+

@@ -1,0 +1,39 @@
+31.1 Elementary number-theoretic notions                                              929
+
+
+Zn D fŒan W 0  a  n  1g :                                                      (31.1)
+When you see the deﬁnition
+Zn D f0; 1; : : : ; n  1g ;                                                       (31.2)
+you should read it as equivalent to equation (31.1) with the understanding that 0
+represents Œ0n , 1 represents Œ1n , and so on; each class is represented by its smallest
+nonnegative element. You should keep the underlying equivalence classes in mind,
+however. For example, if we refer to 1 as a member of Zn , we are really referring
+to Œn  1n , since 1  n  1 .mod n/.
+
+Common divisors and greatest common divisors
+If d is a divisor of a and d is also a divisor of b, then d is a common divisor of a
+and b. For example, the divisors of 30 are 1, 2, 3, 5, 6, 10, 15, and 30, and so the
+common divisors of 24 and 30 are 1, 2, 3, and 6. Note that 1 is a common divisor
+of any two integers.
+   An important property of common divisors is that
+d j a and d j b implies d j .a C b/ and d j .a  b/ :                              (31.3)
+More generally, we have that
+d j a and d j b implies d j .ax C by/                                              (31.4)
+for any integers x and y. Also, if a j b, then either jaj  jbj or b D 0, which
+implies that
+a j b and b j a implies a D ˙b :                                                   (31.5)
+   The greatest common divisor of two integers a and b, not both zero, is the
+largest of the common divisors of a and b; we denote it by gcd.a; b/. For example,
+gcd.24; 30/ D 6, gcd.5; 7/ D 1, and gcd.0; 9/ D 9. If a and b are both nonzero,
+then gcd.a; b/ is an integer between 1 and min.jaj ; jbj/. We deﬁne gcd.0; 0/ to
+be 0; this deﬁnition is necessary to make standard properties of the gcd function
+(such as equation (31.9) below) universally valid.
+   The following are elementary properties of the gcd function:
+gcd.a; b/     D    gcd.b; a/ ;                                                     (31.6)
+gcd.a; b/     D    gcd.a; b/ ;                                                    (31.7)
+gcd.a; b/     D    gcd.jaj ; jbj/ ;                                                (31.8)
+gcd.a; 0/     D    jaj ;                                                           (31.9)
+gcd.a; ka/    D    jaj       for any k 2 Z :                                      (31.10)
+  The following theorem provides an alternative and useful characterization of
+gcd.a; b/.
+

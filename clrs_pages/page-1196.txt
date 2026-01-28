@@ -1,0 +1,47 @@
+B.5 Trees                                                                                        1175
+
+
+
+                        p′
+
+                    x
+          w                                      v
+                y                 z
+ u
+                        p′′
+
+
+Figure B.5 A step in the proof of Theorem B.2: if (1) G is a free tree, then (2) any two vertices
+in G are connected by a unique simple path. Assume for the sake of contradiction that vertices u
+and  are connected by two distinct simple paths p1 and p2 . These paths ﬁrst diverge at vertex w,
+and they ﬁrst reconverge at vertex ´. The path p 0 concatenated with the reverse of the path p 00 forms
+a cycle, which yields the contradiction.
+
+
+that G is a tree. Thus, if G is a tree, there can be at most one simple path between
+two vertices.
+   (2) ) (3): If any two vertices in G are connected by a unique simple path,
+then G is connected. Let .u; / be any edge in E. This edge is a path from u to ,
+and so it must be the unique path from u to . If we remove .u; / from G, there
+is no path from u to , and hence its removal disconnects G.
+   (3) ) (4): By assumption, the graph G is connected, and by Exercise B.4-3, we
+have jEj  jV j  1. We shall prove jEj  jV j  1 by induction. A connected
+graph with n D 1 or n D 2 vertices has n  1 edges. Suppose that G has n  3
+vertices and that all graphs satisfying (3) with fewer than n vertices also satisfy
+jEj  jV j  1. Removing an arbitrary edge from G separates the graph into k  2
+connected components (actually k D 2). Each component satisﬁes (3), or else G
+would not satisfy (3). If we view each connected component Vi , with edge set Ei ,
+as its own free tree, then because each component has fewer than jV j vertices, by
+the inductive hypothesis we have jEi j  jVi j  1. Thus, the number of edges in all
+components combined is at most jV j  k  jV j  2. Adding in the removed edge
+yields jEj  jV j  1.
+   (4) ) (5): Suppose that G is connected and that jEj D jV j  1. We must show
+that G is acyclic. Suppose that G has a cycle containing k vertices 1 ; 2 ; : : : ; k ,
+and without loss of generality assume that this cycle is simple. Let Gk D .Vk ; Ek /
+be the subgraph of G consisting of the cycle. Note that jVk j D jEk j D k.
+If k < jV j, there must be a vertex kC1 2 V  Vk that is adjacent to some ver-
+tex i 2 Vk , since G is connected. Deﬁne GkC1 D .VkC1 ; EkC1 / to be the sub-
+graph of G with VkC1 D Vk [ fkC1 g and EkC1 D Ek [ f.i ; kC1 /g. Note that
+jVkC1 j D jEkC1 j D k C 1. If k C 1 < jV j, we can continue, deﬁning GkC2 in
+the same manner, and so forth, until we obtain Gn D .Vn ; En /, where n D jV j,
+

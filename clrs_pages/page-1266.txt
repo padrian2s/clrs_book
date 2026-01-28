@@ -1,0 +1,43 @@
+Bibliography                                                                                    1245
+
+
+ [264] J. Nievergelt and E. M. Reingold. Binary search trees of bounded balance. SIAM Journal
+       on Computing, 2(1):33–43, 1973.
+ [265] Ivan Niven and Herbert S. Zuckerman. An Introduction to the Theory of Numbers. John
+       Wiley & Sons, fourth edition, 1980.
+ [266] Alan V. Oppenheim and Ronald W. Schafer, with John R. Buck. Discrete-Time Signal
+       Processing. Prentice Hall, second edition, 1998.
+ [267] Alan V. Oppenheim and Alan S. Willsky, with S. Hamid Nawab. Signals and Systems.
+       Prentice Hall, second edition, 1997.
+ [268] James B. Orlin. A polynomial time primal network simplex algorithm for minimum cost
+       ﬂows. Mathematical Programming, 78(1):109–129, 1997.
+ [269] Joseph O’Rourke. Computational Geometry in C. Cambridge University Press, second
+       edition, 1998.
+ [270] Christos H. Papadimitriou. Computational Complexity. Addison-Wesley, 1994.
+ [271] Christos H. Papadimitriou and Kenneth Steiglitz. Combinatorial Optimization: Algorithms
+       and Complexity. Prentice Hall, 1982.
+ [272] Michael S. Paterson. Progress in selection. In Proceedings of the Fifth Scandinavian Work-
+       shop on Algorithm Theory, pages 368–379, 1996.
+ [273] Mihai Pǎtraşcu and Mikkel Thorup. Time-space trade-offs for predecessor search. In Pro-
+       ceedings of the 38th Annual ACM Symposium on Theory of Computing, pages 232–240,
+       2006.
+ [274] Mihai Pǎtraşcu and Mikkel Thorup. Randomization does not help searching predecessors.
+       In Proceedings of the 18th ACM-SIAM Symposium on Discrete Algorithms, pages 555–564,
+       2007.
+ [275] Pavel A. Pevzner. Computational Molecular Biology: An Algorithmic Approach. The MIT
+       Press, 2000.
+ [276] Steven Phillips and Jeffery Westbrook. Online load balancing and network ﬂow. In Pro-
+       ceedings of the 25th Annual ACM Symposium on Theory of Computing, pages 402–411,
+       1993.
+ [277] J. M. Pollard. A Monte Carlo method for factorization. BIT, 15(3):331–334, 1975.
+ [278] J. M. Pollard. Factoring with cubic integers. In A. K. Lenstra and H. W. Lenstra, Jr., editors,
+       The Development of the Number Field Sieve, volume 1554 of Lecture Notes in Mathematics,
+       pages 4–10. Springer, 1993.
+ [279] Carl Pomerance. On the distribution of pseudoprimes. Mathematics of Computation,
+       37(156):587–593, 1981.
+ [280] Carl Pomerance, editor. Proceedings of the AMS Symposia in Applied Mathematics: Com-
+       putational Number Theory and Cryptography. American Mathematical Society, 1990.
+ [281] William K. Pratt. Digital Image Processing. John Wiley & Sons, fourth edition, 2007.
+ [282] Franco P. Preparata and Michael Ian Shamos. Computational Geometry: An Introduction.
+       Springer, 1985.
+

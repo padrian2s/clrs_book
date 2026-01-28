@@ -1,0 +1,51 @@
+174          Chapter 7 Quicksort
+
+
+                     p           i                         j                    r
+             (a)                                           >x                   x
+
+                          ≤x                 >x
+
+                     p           i                              j               r
+                                                                                x
+
+                          ≤x                   >x
+
+
+                     p           i                         j                    r
+             (b)                                           ≤x                   x
+
+                          ≤x                 >x
+
+                     p               i                          j               r
+                                                                                x
+
+                            ≤x                    >x
+
+
+
+             Figure 7.3 The two cases for one iteration of procedure PARTITION. (a) If AŒj  > x, the only
+             action is to increment j , which maintains the loop invariant. (b) If AŒj   x, index i is incremented,
+             AŒi and AŒj  are swapped, and then j is incremented. Again, the loop invariant is maintained.
+
+
+             7.1-2
+             What value of q does PARTITION return when all elements in the array AŒp : : r
+             have the same value? Modify PARTITION so that q D b.p C r/=2c when all
+             elements in the array AŒp : : r have the same value.
+
+             7.1-3
+             Give a brief argument that the running time of PARTITION on a subarray of size n
+             is ‚.n/.
+
+             7.1-4
+             How would you modify Q UICKSORT to sort into nonincreasing order?
+
+
+
+7.2   Performance of quicksort
+
+             The running time of quicksort depends on whether the partitioning is balanced or
+             unbalanced, which in turn depends on which elements are used for partitioning.
+             If the partitioning is balanced, the algorithm runs asymptotically as fast as merge
+

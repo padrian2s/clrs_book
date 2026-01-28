@@ -1,0 +1,45 @@
+990        Chapter 32 String Matching
+
+
+           Note that the gap character may occur an arbitrary number of times in the pattern
+           but not at all in the text. Give a polynomial-time algorithm to determine whether
+           such a pattern P occurs in a given text T , and analyze the running time of your
+           algorithm.
+
+
+
+32.2 The Rabin-Karp algorithm
+
+           Rabin and Karp proposed a string-matching algorithm that performs well in prac-
+           tice and that also generalizes to other algorithms for related problems, such as
+           two-dimensional pattern matching. The Rabin-Karp algorithm uses ‚.m/ prepro-
+           cessing time, and its worst-case running time is ‚..nmC1/m/. Based on certain
+           assumptions, however, its average-case running time is better.
+              This algorithm makes use of elementary number-theoretic notions such as the
+           equivalence of two numbers modulo a third number. You might want to refer to
+           Section 31.1 for the relevant deﬁnitions.
+              For expository purposes, let us assume that † D f0; 1; 2; : : : ; 9g, so that each
+           character is a decimal digit. (In the general case, we can assume that each charac-
+           ter is a digit in radix-d notation, where d D j†j.) We can then view a string of k
+           consecutive characters as representing a length-k decimal number. The character
+           string 31415 thus corresponds to the decimal number 31,415. Because we inter-
+           pret the input characters as both graphical symbols and digits, we ﬁnd it convenient
+           in this section to denote them as we would digits, in our standard text font.
+              Given a pattern P Œ1 : : m, let p denote its corresponding decimal value. In a sim-
+           ilar manner, given a text T Œ1 : : n, let ts denote the decimal value of the length-m
+           substring T Œs C 1 : : s C m, for s D 0; 1; : : : ; n  m. Certainly, ts D p if and only
+           if T Œs C 1 : : s C m D P Œ1 : : m; thus, s is a valid shift if and only if ts D p. If we
+           could compute p in time ‚.m/ and all the ts values in a total of ‚.nmC1/ time,1
+           then we could determine all valid shifts s in time ‚.m/ C ‚.n  m C 1/ D ‚.n/
+           by comparing p with each of the ts values. (For the moment, let’s not worry about
+           the possibility that p and the ts values might be very large numbers.)
+              We can compute p in time ‚.m/ using Horner’s rule (see Section 30.1):
+           p D P Œm C 10 .P Œm  1 C 10.P Œm  2 C    C 10.P Œ2 C 10P Œ1/   // :
+           Similarly, we can compute t0 from T Œ1 : : m in time ‚.m/.
+
+
+           1 We write ‚.n  m C 1/ instead of ‚.n  m/ because s takes on n  m C 1 different values. The
+
+           “C1” is signiﬁcant in an asymptotic sense because when m D n, computing the lone ts value takes
+           ‚.1/ time, not ‚.0/ time.
+

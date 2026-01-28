@@ -1,0 +1,47 @@
+           11.4 Open addressing                                                           269
+
+
+           11.3-3
+           Consider a version of the division method in which h.k/ D k mod m, where
+           m D 2p  1 and k is a character string interpreted in radix 2p . Show that if we
+           can derive string x from string y by permuting its characters, then x and y hash to
+           the same value. Give an example of an application in which this property would be
+           undesirable in a hash function.
+
+           11.3-4
+           Consider a hash table of sizepm D 1000 and a corresponding hash function h.k/ D
+           bm .kA mod 1/c for A D . 5  1/=2. Compute the locations to which the keys
+           61, 62, 63, 64, and 65 are mapped.
+
+           11.3-5 ?
+           Deﬁne a family H of hash functions from a ﬁnite set U to a ﬁnite set B to be
+           -universal if for all pairs of distinct elements k and l in U ,
+           Pr fh.k/ D h.l/g   ;
+           where the probability is over the choice of the hash function h drawn at random
+           from the family H . Show that an -universal family of hash functions must have
+                 1   1
+                      :
+                jBj jU j
+
+           11.3-6 ?
+           Let U be the set of n-tuples of values drawn from Zp , and let B D Zp , where p
+           is prime. Deﬁne the hash function hb W U ! B for b 2 Zp on an input n-tuple
+           ha0 ; a1 ; : : : ; an1 i from U as
+                                                       !
+                                             X
+                                             n1
+           hb .ha0 ; a1 ; : : : ; an1 i/ D      aj b j mod p ;
+                                      j D0
+
+           and let H D fhb W b 2 Zp g. Argue that H is ..n  1/=p/-universal according to
+           the deﬁnition of -universal in Exercise 11.3-5. (Hint: See Exercise 31.4-4.)
+
+
+
+11.4 Open addressing
+
+           In open addressing, all elements occupy the hash table itself. That is, each table
+           entry contains either an element of the dynamic set or NIL. When searching for
+           an element, we systematically examine table slots until either we ﬁnd the desired
+           element or we have ascertained that the element is not in the table. No lists and
+

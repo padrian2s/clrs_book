@@ -1,0 +1,38 @@
+858   Chapter 29 Linear Programming
+
+
+      29.1-5
+      Convert the following linear program into slack form:
+      maximize     2x1                 6x3
+      subject to
+                    x1 C x2              x3      7
+                   3x1  x2                       8
+                   x1 C 2x2          C 2x3       0
+                      x1 ; x2 ; x3                0 :
+      What are the basic and nonbasic variables?
+
+      29.1-6
+      Show that the following linear program is infeasible:
+      maximize      3x1     2x2
+      subject to
+                     x1 C x2             2
+                   2x1  2x2          10
+                       x1 ; x2           0 :
+
+      29.1-7
+      Show that the following linear program is unbounded:
+      maximize        x1       x2
+      subject to
+                   2x1 C x2           1
+                    x1  2x2          2
+                       x1 ; x2          0 :
+
+      29.1-8
+      Suppose that we have a general linear program with n variables and m constraints,
+      and suppose that we convert it into standard form. Give an upper bound on the
+      number of variables and constraints in the resulting linear program.
+
+      29.1-9
+      Give an example of a linear program for which the feasible region is not bounded,
+      but the optimal objective value is ﬁnite.
+

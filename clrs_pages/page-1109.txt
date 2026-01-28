@@ -1,0 +1,47 @@
+1088      Chapter 34 NP-Completeness
+
+
+                                             C1 D x1 _ :x2 _ :x3
+
+                                            x1         :x2        :x3
+
+
+
+
+                             :x1                                                 x1
+
+
+
+       C2 D :x1 _ x2 _ x3     x2                                                 x2     C3 D x1 _ x2 _ x3
+
+
+
+                              x3                                                 x3
+
+
+
+          Figure 34.14 The graph G derived from the 3-CNF formula  D C1 ^ C2 ^ C3 , where C1 D
+          .x1 _ :x2 _ :x3 /, C2 D .:x1 _ x2 _ x3 /, and C3 D .x1 _ x2 _ x3 /, in reducing 3-CNF-SAT to
+          CLIQUE. A satisfying assignment of the formula has x2 D 0, x3 D 1, and x1 either 0 or 1. This
+          assignment satisﬁes C1 with :x2 , and it satisﬁes C2 and C3 with x3 , corresponding to the clique
+          with lightly shaded vertices.
+
+
+          1; 2; : : : ; k, each clause Cr has exactly three distinct literals l1r , l2r , and l3r . We shall
+          construct a graph G such that  is satisﬁable if and only if G has a clique of size k.
+              We construct the graph G D .V; E/ as follows. For each clause Cr D
+          .l1r _ l2r _ l3r / in , we place a triple of vertices 1r , 2r , and 3r into V . We put
+          an edge between two vertices ir and js if both of the following hold:
+             ir and js are in different triples, that is, r ¤ s, and
+             their corresponding literals are consistent, that is, lir is not the negation of ljs .
+          We can easily build this graph from  in polynomial time. As an example of this
+          construction, if we have
+           D .x1 _ :x2 _ :x3 / ^ .:x1 _ x2 _ x3 / ^ .x1 _ x2 _ x3 / ;
+          then G is the graph shown in Figure 34.14.
+             We must show that this transformation of  into G is a reduction. First, suppose
+          that  has a satisfying assignment. Then each clause Cr contains at least one
+          literal lir that is assigned 1, and each such literal corresponds to a vertex ir . Picking
+          one such “true” literal from each clause yields a set V 0 of k vertices. We claim that
+          V 0 is a clique. For any two vertices ir ; js 2 V 0 , where r ¤ s, both corresponding
+          literals lir and ljs map to 1 by the given satisfying assignment, and thus the literals
+

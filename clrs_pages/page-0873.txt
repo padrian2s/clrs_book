@@ -1,0 +1,40 @@
+852   Chapter 29 Linear Programming
+
+
+      Converting linear programs into standard form
+      It is always possible to convert a linear program, given as minimizing or maxi-
+      mizing a linear function subject to linear constraints, into standard form. A linear
+      program might not be in standard form for any of four possible reasons:
+      1. The objective function might be a minimization rather than a maximization.
+      2. There might be variables without nonnegativity constraints.
+      3. There might be equality constraints, which have an equal sign rather than a
+         less-than-or-equal-to sign.
+      4. There might be inequality constraints, but instead of having a less-than-or-
+         equal-to sign, they have a greater-than-or-equal-to sign.
+         When converting one linear program L into another linear program L0 , we would
+      like the property that an optimal solution to L0 yields an optimal solution to L. To
+      capture this idea, we say that two maximization linear programs L and L0 are
+      equivalent if for each feasible solution xN to L with objective value ´, there is
+      a corresponding feasible solution xN 0 to L0 with objective value ´, and for each
+      feasible solution xN 0 to L0 with objective value ´, there is a corresponding feasible
+      solution xN to L with objective value ´. (This deﬁnition does not imply a one-to-
+      one correspondence between feasible solutions.) A minimization linear program L
+      and a maximization linear program L0 are equivalent if for each feasible solution xN
+      to L with objective value ´, there is a corresponding feasible solution xN 0 to L0 with
+      objective value ´, and for each feasible solution xN 0 to L0 with objective value ´,
+      there is a corresponding feasible solution xN to L with objective value ´.
+         We now show how to remove, one by one, each of the possible problems in the
+      list above. After removing each one, we shall argue that the new linear program is
+      equivalent to the old one.
+         To convert a minimization linear program L into an equivalent maximization lin-
+      ear program L0 , we simply negate the coefﬁcients in the objective function. Since
+      L and L0 have identical sets of feasible solutions and, for any feasible solution, the
+      objective value in L is the negative of the objective value in L0 , these two linear
+      programs are equivalent. For example, if we have the linear program
+      minimize     2x1 C 3x2
+      subject to
+                      x1 C x2          D 7
+                      x1  2x2          4
+                      x1                0 ;
+      and we negate the coefﬁcients of the objective function, we obtain
+

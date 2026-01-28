@@ -1,0 +1,43 @@
+618   Chapter 22 Elementary Graph Algorithms
+
+
+         We extend the notation for discovery and ﬁnishing times to sets of vertices.
+      If U  V , then we deﬁne d.U / D minu2U fu:dg and f .U / D maxu2U fu:f g.
+      That is, d.U / and f .U / are the earliest discovery time and latest ﬁnishing time,
+      respectively, of any vertex in U .
+         The following lemma and its corollary give a key property relating strongly con-
+      nected components and ﬁnishing times in the ﬁrst depth-ﬁrst search.
+
+      Lemma 22.14
+      Let C and C 0 be distinct strongly connected components in directed graph G D
+      .V; E/. Suppose that there is an edge .u; / 2 E, where u 2 C and  2 C 0 . Then
+      f .C / > f .C 0 /.
+
+      Proof We consider two cases, depending on which strongly connected compo-
+      nent, C or C 0 , had the ﬁrst discovered vertex during the depth-ﬁrst search.
+         If d.C / < d.C 0 /, let x be the ﬁrst vertex discovered in C . At time x:d, all ver-
+      tices in C and C 0 are white. At that time, G contains a path from x to each vertex
+      in C consisting only of white vertices. Because .u; / 2 E, for any vertex w 2 C 0 ,
+      there is also a path in G at time x:d from x to w consisting only of white vertices:
+      x ; u !  ; w. By the white-path theorem, all vertices in C and C 0 become
+      descendants of x in the depth-ﬁrst tree. By Corollary 22.8, x has the latest ﬁnishing
+      time of any of its descendants, and so x:f D f .C / > f .C 0 /.
+         If instead we have d.C / > d.C 0 /, let y be the ﬁrst vertex discovered in C 0 .
+      At time y:d, all vertices in C 0 are white and G contains a path from y to each
+      vertex in C 0 consisting only of white vertices. By the white-path theorem, all ver-
+      tices in C 0 become descendants of y in the depth-ﬁrst tree, and by Corollary 22.8,
+      y:f D f .C 0 /. At time y:d, all vertices in C are white. Since there is an edge .u; /
+      from C to C 0 , Lemma 22.13 implies that there cannot be a path from C 0 to C .
+      Hence, no vertex in C is reachable from y. At time y:f , therefore, all vertices in C
+      are still white. Thus, for any vertex w 2 C , we have w:f > y:f , which implies
+      that f .C / > f .C 0 /.
+
+         The following corollary tells us that each edge in G T that goes between different
+      strongly connected components goes from a component with an earlier ﬁnishing
+      time (in the ﬁrst depth-ﬁrst search) to a component with a later ﬁnishing time.
+
+      Corollary 22.15
+      Let C and C 0 be distinct strongly connected components in directed graph G D
+      .V; E/. Suppose that there is an edge .u; / 2 E T , where u 2 C and  2 C 0 . Then
+      f .C / < f .C 0 /.
+

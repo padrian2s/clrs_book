@@ -1,0 +1,45 @@
+            4.5 The master method for solving recurrences                                  93
+
+
+            4.4-3
+            Use a recursion tree to determine a good asymptotic upper bound on the recurrence
+            T .n/ D 4T .n=2 C 2/ C n. Use the substitution method to verify your answer.
+
+            4.4-4
+            Use a recursion tree to determine a good asymptotic upper bound on the recurrence
+            T .n/ D 2T .n  1/ C 1. Use the substitution method to verify your answer.
+
+            4.4-5
+            Use a recursion tree to determine a good asymptotic upper bound on the recurrence
+            T .n/ D T .n1/CT .n=2/Cn. Use the substitution method to verify your answer.
+
+            4.4-6
+            Argue that the solution to the recurrence T .n/ D T .n=3/CT .2n=3/Ccn, where c
+            is a constant, is .n lg n/ by appealing to a recursion tree.
+
+            4.4-7
+            Draw the recursion tree for T .n/ D 4T .bn=2c/ C cn, where c is a constant, and
+            provide a tight asymptotic bound on its solution. Verify your bound by the substi-
+            tution method.
+
+            4.4-8
+            Use a recursion tree to give an asymptotically tight solution to the recurrence
+            T .n/ D T .n  a/ C T .a/ C cn, where a  1 and c > 0 are constants.
+
+            4.4-9
+            Use a recursion tree to give an asymptotically tight solution to the recurrence
+            T .n/ D T .˛ n/ C T ..1  ˛/n/ C cn, where ˛ is a constant in the range 0 < ˛ < 1
+            and c > 0 is also a constant.
+
+
+
+4.5 The master method for solving recurrences
+
+            The master method provides a “cookbook” method for solving recurrences of the
+            form
+            T .n/ D aT .n=b/ C f .n/ ;                                                  (4.20)
+            where a  1 and b > 1 are constants and f .n/ is an asymptotically positive
+            function. To use the master method, you will need to memorize three cases, but
+            then you will be able to solve many recurrences quite easily, often without pencil
+            and paper.
+

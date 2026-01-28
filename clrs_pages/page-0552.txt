@@ -1,0 +1,36 @@
+20   van Emde Boas Trees
+
+
+
+
+     In previous chapters, we saw data structures that support the operations of a priority
+     queue—binary heaps in Chapter 6, red-black trees in Chapter 13,1 and Fibonacci
+     heaps in Chapter 19. In each of these data structures, at least one important op-
+     eration took O.lg n/ time, either worst case or amortized. In fact, because each
+     of these data structures bases its decisions on comparing keys, the .n lg n/ lower
+     bound for sorting in Section 8.1 tells us that at least one operation will have to
+     take .lg n/ time. Why? If we could perform both the I NSERT and E XTRACT-M IN
+     operations in o.lg n/ time, then we could sort n keys in o.n lg n/ time by ﬁrst per-
+     forming n I NSERT operations, followed by n E XTRACT-M IN operations.
+        We saw in Chapter 8, however, that sometimes we can exploit additional infor-
+     mation about the keys to sort in o.n lg n/ time. In particular, with counting sort
+     we can sort n keys, each an integer in the range 0 to k, in time ‚.n C k/, which
+     is ‚.n/ when k D O.n/.
+        Since we can circumvent the .n lg n/ lower bound for sorting when the keys are
+     integers in a bounded range, you might wonder whether we can perform each of the
+     priority-queue operations in o.lg n/ time in a similar scenario. In this chapter, we
+     shall see that we can: van Emde Boas trees support the priority-queue operations,
+     and a few others, each in O.lg lg n/ worst-case time. The hitch is that the keys
+     must be integers in the range 0 to n  1, with no duplicates allowed.
+        Speciﬁcally, van Emde Boas trees support each of the dynamic set operations
+     listed on page 230—S EARCH, I NSERT, D ELETE, M INIMUM, M AXIMUM, S UC -
+     CESSOR , and P REDECESSOR —in O.lg lg n/ time. In this chapter, we will omit
+     discussion of satellite data and focus only on storing keys. Because we concentrate
+     on keys and disallow duplicate keys to be stored, instead of describing the S EARCH
+
+
+     1 Chapter 13 does not explicitly discuss how to implement E XTRACT-M IN and D ECREASE -K EY , but
+
+     we can easily build these operations for any data structure that supports M INIMUM, D ELETE , and
+     I NSERT .
+

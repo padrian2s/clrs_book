@@ -1,0 +1,52 @@
+Index                                                                                          1285
+
+
+Schur complement lemma, 834                         sequence (h i)
+S CRAMBLE -S EARCH, 143 pr.                            bitonic, 682 pr.
+seam carving, 409 pr., 413                             ﬁnite, 1166
+S EARCH, 230                                           inﬁnite, 1166
+searching, 22 ex.                                      inversion in, 41 pr., 122 ex., 345 ex.
+   binary search, 39 ex., 799–800                      probe, 270
+   in binary search trees, 289–291                  sequential consistency, 779, 812
+   in B-trees, 491–492                              serial algorithm versus parallel algorithm, 772
+   in chained hash tables, 258                      serialization, of a multithreaded algorithm,
+   in compact lists, 250 pr.                              774, 776
+   in direct-address tables, 254                    series, 108 pr., 1146–1148
+   for an exact interval, 354 ex.                      strands being logically in, 778
+   in interval trees, 350–353                       set (f g), 1158–1163
+   linear search, 22 ex.                               cardinality (j j), 1161
+   in linked lists, 237                                convex, 714 ex.
+   in open-address hash tables, 270–271                difference (), 1159
+   in proto van Emde Boas structures, 540–541          independent, 1101 pr.
+   in red-black trees, 311                             intersection (\), 1159
+   in an unsorted array, 143 pr.                       member (2), 1158
+   in Van Emde Boas trees, 550                         not a member (62), 1158
+search tree, see balanced search tree, binary          union ([), 1159
+      search tree, B-tree, exponential search       set-covering problem, 1117–1122, 1139
+      tree, interval tree, optimal binary search       weighted, 1135 pr.
+      tree, order-statistic tree, red-black tree,   set-partition problem, 1101 ex.
+      splay tree, 2-3 tree, 2-3-4 tree              shadow of a point, 1038 ex.
+secondary clustering, 272                           shared memory, 772
+secondary hash table, 278                           Shell’s sort, 42
+secondary storage                                   shift, in string matching, 985
+   search tree for, 484–504                         shift instruction, 24
+   stacks on, 502 pr.                               short-circuiting operator, 22
+second-best minimum spanning tree, 638 pr.          SHORTEST-PATH, 1050
+secret key, 959, 962                                shortest paths, 7, 643–707
+segment, see directed segment, line segment            all-pairs, 644, 684–707
+S EGMENTS -I NTERSECT, 1018                            Bellman-Ford algorithm for, 651–655
+S ELECT , 220                                          with bitonic paths, 682 pr.
+selection, 213                                         and breadth-ﬁrst search, 597–600, 644
+   of activities, 415–422, 450                         convergence property of, 650, 672–673
+   and comparison sorts, 222                           and difference constraints, 664–670
+   in expected linear time, 215–220                    Dijkstra’s algorithm for, 658–664
+   multithreaded, 805 ex.                              in a directed acyclic graph, 655–658
+   in order-statistic trees, 340–341                   in -dense graphs, 706 pr.
+   in worst-case linear time, 220–224                  estimate of, 648
+selection sort, 29 ex.                                 Floyd-Warshall algorithm for, 693–697,
+selector vertex, 1093                                     700 ex., 706
+self-loop, 1168                                        Gabow’s scaling algorithm for, 679 pr.
+self-organizing list, 476 pr., 478                     Johnson’s algorithm for, 700–706
+semiconnected graph, 621 ex.                           as a linear program, 859–860
+sentinel, 31, 238–240, 309                             and longest paths, 1048
+

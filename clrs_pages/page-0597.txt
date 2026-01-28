@@ -1,0 +1,42 @@
+576   Chapter 21 Data Structures for Disjoint Sets
+
+
+      Lemma 21.7
+      Suppose we convert a sequence S 0 of m0 M AKE -S ET, U NION, and F IND -S ET op-
+      erations into a sequence S of m M AKE -S ET, L INK, and F IND -S ET operations by
+      turning each U NION into two F IND -S ET operations followed by a L INK. Then, if
+      sequence S runs in O.m ˛.n// time, sequence S 0 runs in O.m0 ˛.n// time.
+
+      Proof Since each U NION operation in sequence S 0 is converted into three opera-
+      tions in S, we have m0  m  3m0 . Since m D O.m0 /, an O.m ˛.n// time bound
+      for the converted sequence S implies an O.m0 ˛.n// time bound for the original
+      sequence S 0 .
+
+         In the remainder of this section, we shall assume that the initial sequence of m0
+      M AKE -S ET, U NION, and F IND -S ET operations has been converted to a sequence
+      of m M AKE -S ET, L INK, and F IND -S ET operations. We now prove an O.m ˛.n//
+      time bound for the converted sequence and appeal to Lemma 21.7 to prove the
+      O.m0 ˛.n// running time of the original sequence of m0 operations.
+
+      Potential function
+      The potential function we use assigns a potential q .x/ to each node x in the
+      disjoint-set forest after q operations.
+                                         P     We sum the node potentials for the poten-
+      tial of the entire forest: ˆq D x q .x/, where ˆq denotes the potential of the
+      forest after q operations. The forest is empty prior to the ﬁrst operation, and we
+      arbitrarily set ˆ0 D 0. No potential ˆq will ever be negative.
+         The value of q .x/ depends on whether x is a tree root after the qth operation.
+      If it is, or if x:rank D 0, then q .x/ D ˛.n/  x:rank.
+         Now suppose that after the qth operation, x is not a root and that x:rank  1.
+      We need to deﬁne two auxiliary functions on x before we can deﬁne q .x/. First
+      we deﬁne
+      level.x/ D max fk W x:p:rank  Ak .x:rank/g :
+      That is, level.x/ is the greatest level k for which Ak , applied to x’s rank, is no
+      greater than x’s parent’s rank.
+        We claim that
+      0  level.x/ < ˛.n/ ;                                                        (21.1)
+      which we see as follows. We have
+      x:p:rank  x:rank C 1 (by Lemma 21.4)
+               D A0 .x:rank/ (by deﬁnition of A0 .j /) ,
+      which implies that level.x/  0, and we have
+

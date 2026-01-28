@@ -1,0 +1,53 @@
+1270   Index
+
+
+       Johnson’s algorithm, 700–706                  Lagrange’s theorem, 944
+       joining                                       Lamé’s theorem, 936
+          of red-black trees, 332 pr.                language, 1057
+          of 2-3-4 trees, 503 pr.                       completeness of, 1077 ex.
+       joint probability density function, 1197         proving NP-completeness of, 1078–1079
+       Josephus permutation, 355 pr.                    veriﬁcation of, 1063
+                                                     last-in, ﬁrst-out, 232
+       Karmarkar’s algorithm, 897                       see also stack
+       Karp’s minimum mean-weight cycle algorithm,   late task, 444
+             680 pr.                                 layers
+       k-ary tree, 1179                                 convex, 1044 pr.
+       k-CNF, 1049                                      maximal, 1045 pr.
+       k-coloring, 1103 pr., 1180 pr.                LCA, 584 pr.
+       k-combination, 1185                           lcm (least common multiple), 939 ex.
+       k-conjunctive normal form, 1049               LCS, 7, 390–397, 413
+       kernel of a polygon, 1038 ex.                 LCS-L ENGTH, 394
+       key, 16, 147, 162, 229                        leading submatrix, 833, 839 ex.
+         dummy, 397                                  leaf, 1176
+         interpreted as a natural number, 263        least common ancestor, 584 pr.
+         median, of a B-tree node, 493               least common multiple, 939 ex.
+         public, 959, 962                            least-squares approximation, 835–839
+         secret, 959, 962                            leaving a vertex, 1169
+         static, 277                                 leaving variable, 867
+       keywords, in pseudocode, 20–22                L EFT , 152
+         multithreaded, 774, 776–777, 785–786        left child, 1178
+       “killer adversary” for quicksort, 190         left-child, right-sibling representation, 246,
+       Kirchhoff’s current law, 708                        249 ex.
+       Kleene star ( ), 1058                        L EFT-ROTATE , 313, 353 ex.
+       KMP algorithm, 1002–1013                      left rotation, 312
+       KMP-M ATCHER, 1005                            left spine, 333 pr.
+       knapsack problem                              left subtree, 1178
+                                                                           a
+         fractional, 426, 428 ex.                    Legendre symbol . p     /, 982 pr.
+         0-1, 425, 427 ex., 1137 pr., 1139           length
+       k-neighbor tree, 338                             of a path, 1170
+       knot, of a spline, 840 pr.                       of a sequence, 1166
+       Knuth-Morris-Pratt algorithm, 1002–1013          of a spine, 333 pr.
+       k-permutation, 126, 1184                         of a string, 986, 1184
+       Kraft inequality, 1180 ex.                    level
+       Kruskal’s algorithm, 631–633, 642                of a function, 573
+         with integer edge weights, 637 ex.             of a tree, 1177
+       k-sorted, 207 pr.                             level function, 576
+       k-string, 1184                                lexicographically less than, 304 pr.
+       k-subset, 1161                                lexicographic sorting, 304 pr.
+       k-substring, 1184                             lg (binary logarithm), 56
+       kth power, 933 ex.                            lg (iterated logarithm function), 58–59
+       k-universal hashing, 284 pr.                  lgk (exponentiation of logarithms), 56
+                                                     lg lg (composition of logarithms), 56
+       Lagrange’s formula, 902                       LIFO (last-in, ﬁrst-out), 232
+

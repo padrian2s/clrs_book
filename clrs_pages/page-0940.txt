@@ -1,0 +1,46 @@
+30.3 Efﬁcient FFT implementations                                                                  919
+
+
+a0                                                                                          y0
+                 !20
+a1                                                                                          y1
+                                     !40
+a2                                                                                          y2
+                 !20                 !41
+a3                                                                                          y3
+                                                          !80
+a4                                                                                          y4
+                 !20                                      !81
+a5                                                                                          y5
+                                     !40                  !82
+a6                                                                                          y6
+                 !20                 !41                  !83
+a7                                                                                          y7
+                       stage s D 1         stage s D 2                 stage s D 3
+
+
+Figure 30.5 A circuit that computes the FFT in parallel, here shown on n D 8 inputs. Each
+butterﬂy operation takes as input the values on two wires, along with a twiddle factor, and it produces
+as outputs the values on two wires. The stages of butterﬂies are labeled to correspond to iterations
+of the outermost loop of the I TERATIVE -FFT procedure. Only the top and bottom wires passing
+through a butterﬂy interact with it; wires that pass through the middle of a butterﬂy do not affect
+that butterﬂy, nor are their values changed by that butterﬂy. For example, the top butterﬂy in stage 2
+has nothing to do with wire 1 (the wire whose output is labeled y1 ); its inputs and outputs are only
+on wires 0 and 2 (labeled y0 and y2 , respectively). This circuit has depth ‚.lg n/ and performs
+‚.n lg n/ butterﬂy operations altogether.
+
+
+A parallel FFT circuit
+We can exploit many of the properties that allowed us to implement an efﬁcient
+iterative FFT algorithm to produce an efﬁcient parallel algorithm for the FFT. We
+will express the parallel FFT algorithm as a circuit. Figure 30.5 shows a parallel
+FFT circuit, which computes the FFT on n inputs, for n D 8. The circuit begins
+with a bit-reverse permutation of the inputs, followed by lg n stages, each stage
+consisting of n=2 butterﬂies executed in parallel. The depth of the circuit—the
+maximum number of computational elements between any output and any input
+that can reach it—is therefore ‚.lg n/.
+   The leftmost part of the parallel FFT circuit performs the bit-reverse permuta-
+tion, and the remainder mimics the iterative I TERATIVE -FFT procedure. Because
+each iteration of the outermost for loop performs n=2 independent butterﬂy opera-
+tions, the circuit performs them in parallel. The value of s in each iteration within
+

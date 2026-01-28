@@ -1,0 +1,34 @@
+Preface
+
+
+
+
+          Before there were computers, there were algorithms. But now that there are com-
+          puters, there are even more algorithms, and algorithms lie at the heart of computing.
+             This book provides a comprehensive introduction to the modern study of com-
+          puter algorithms. It presents many algorithms and covers them in considerable
+          depth, yet makes their design and analysis accessible to all levels of readers. We
+          have tried to keep explanations elementary without sacriﬁcing depth of coverage
+          or mathematical rigor.
+             Each chapter presents an algorithm, a design technique, an application area, or a
+          related topic. Algorithms are described in English and in a pseudocode designed to
+          be readable by anyone who has done a little programming. The book contains 244
+          ﬁgures—many with multiple parts—illustrating how the algorithms work. Since
+          we emphasize efﬁciency as a design criterion, we include careful analyses of the
+          running times of all our algorithms.
+             The text is intended primarily for use in undergraduate or graduate courses in
+          algorithms or data structures. Because it discusses engineering issues in algorithm
+          design, as well as mathematical aspects, it is equally well suited for self-study by
+          technical professionals.
+             In this, the third edition, we have once again updated the entire book. The
+          changes cover a broad spectrum, including new chapters, revised pseudocode, and
+          a more active writing style.
+
+          To the teacher
+          We have designed this book to be both versatile and complete. You should ﬁnd it
+          useful for a variety of courses, from an undergraduate course in data structures up
+          through a graduate course in algorithms. Because we have provided considerably
+          more material than can ﬁt in a typical one-term course, you can consider this book
+          to be a “buffet” or “smorgasbord” from which you can pick and choose the material
+          that best supports the course you wish to teach.
+

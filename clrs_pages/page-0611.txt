@@ -1,0 +1,49 @@
+590        Chapter 22 Elementary Graph Algorithms
+
+
+                                                                                           1   2   3     4   5
+                                1        2        5                                    1   0   1   0     0   1
+      1     2                   2        1        5        3        4                  2   1   0   1     1   1
+                                3        2        4                                    3   0   1   0     1   0
+                   3
+                                4        2        5        3                           4   0   1   1     0   1
+      5     4                   5        4        1        2                           5   1   1   0     1   0
+
+          (a)                                      (b)                                             (c)
+
+
+           Figure 22.1 Two representations of an undirected graph. (a) An undirected graph G with 5 vertices
+           and 7 edges. (b) An adjacency-list representation of G. (c) The adjacency-matrix representation
+           of G.
+
+
+                                                                                       1   2   3   4     5   6
+                                         1        2        4                       1   0   1   0   1     0   0
+                                         2        5                                2   0   0   0   0     1   0
+      1     2          3                 3        6        5                       3   0   0   0   0     1   1
+                                         4        2                                4   0   1   0   0     0   0
+                                         5        4                                5   0   0   0   1     0   0
+      4     5          6                 6        6                                6   0   0   0   0     0   1
+
+            (a)                                    (b)                                         (c)
+
+
+           Figure 22.2 Two representations of a directed graph. (a) A directed graph G with 6 vertices and 8
+           edges. (b) An adjacency-list representation of G. (c) The adjacency-matrix representation of G.
+
+
+           shortest-paths algorithms presented in Chapter 25 assume that their input graphs
+           are represented by adjacency matrices.
+              The adjacency-list representation of a graph G D .V; E/ consists of an ar-
+           ray Adj of jV j lists, one for each vertex in V . For each u 2 V , the adjacency list
+           AdjŒu contains all the vertices  such that there is an edge .u; / 2 E. That is,
+           AdjŒu consists of all the vertices adjacent to u in G. (Alternatively, it may contain
+           pointers to these vertices.) Since the adjacency lists represent the edges of a graph,
+           in pseudocode we treat the array Adj as an attribute of the graph, just as we treat
+           the edge set E. In pseudocode, therefore, we will see notation such as G:AdjŒu.
+           Figure 22.1(b) is an adjacency-list representation of the undirected graph in Fig-
+           ure 22.1(a). Similarly, Figure 22.2(b) is an adjacency-list representation of the
+           directed graph in Figure 22.2(a).
+              If G is a directed graph, the sum of the lengths of all the adjacency lists is jEj,
+           since an edge of the form .u; / is represented by having  appear in AdjŒu. If G is
+

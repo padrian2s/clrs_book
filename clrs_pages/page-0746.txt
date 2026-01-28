@@ -1,0 +1,43 @@
+26.2 The Ford-Fulkerson method                                                                  725
+
+
+The F ORD -F ULKERSON algorithm simply expands on the F ORD -F ULKERSON -
+M ETHOD pseudocode given earlier. Figure 26.6 shows the result of each iteration
+in a sample run. Lines 1–2 initialize the ﬂow f to 0. The while loop of lines 3–8
+repeatedly ﬁnds an augmenting path p in Gf and augments ﬂow f along p by
+the residual capacity cf .p/. Each residual edge in path p is either an edge in the
+original network or the reversal of an edge in the original network. Lines 6–8
+update the ﬂow in each case appropriately, adding ﬂow when the residual edge is
+an original edge and subtracting it otherwise. When no augmenting paths exist, the
+ﬂow f is a maximum ﬂow.
+
+Analysis of Ford-Fulkerson
+The running time of F ORD -F ULKERSON depends on how we ﬁnd the augmenting
+path p in line 3. If we choose it poorly, the algorithm might not even terminate: the
+value of the ﬂow will increase with successive augmentations, but it need not even
+converge to the maximum ﬂow value.2 If we ﬁnd the augmenting path by using a
+breadth-ﬁrst search (which we saw in Section 22.2), however, the algorithm runs in
+polynomial time. Before proving this result, we obtain a simple bound for the case
+in which we choose the augmenting path arbitrarily and all capacities are integers.
+   In practice, the maximum-ﬂow problem often arises with integral capacities. If
+the capacities are rational numbers, we can apply an appropriate scaling transfor-
+mation to make them all integral. If f  denotes a maximum ﬂow in the transformed
+network, then a straightforward implementation of F ORD -F ULKERSON executes
+the while loop of lines 3–8 at most jf  j times, since the ﬂow value increases by at
+least one unit in each iteration.
+   We can perform the work done within the while loop efﬁciently if we implement
+the ﬂow network G D .V; E/ with the right data structure and ﬁnd an augmenting
+path by a linear-time algorithm. Let us assume that we keep a data structure cor-
+responding to a directed graph G 0 D .V; E 0 /, where E 0 D f.u; / W .u; / 2 E or
+.; u/ 2 Eg. Edges in the network G are also edges in G 0 , and therefore we can
+easily maintain capacities and ﬂows in this data structure. Given a ﬂow f on G,
+the edges in the residual network Gf consist of all edges .u; / of G 0 such that
+cf .u; / > 0, where cf conforms to equation (26.2). The time to ﬁnd a path in
+a residual network is therefore O.V C E 0 / D O.E/ if we use either depth-ﬁrst
+search or breadth-ﬁrst search. Each iteration of the while loop thus takes O.E/
+time, as does the initialization in lines 1–2, making the total running time of the
+F ORD -F ULKERSON algorithm O.E jf  j/.
+
+
+2 The Ford-Fulkerson method might fail to terminate only if edge capacities are irrational numbers.
+

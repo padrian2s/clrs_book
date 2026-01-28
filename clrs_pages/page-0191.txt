@@ -1,0 +1,33 @@
+7            Quicksort
+
+
+
+
+             The quicksort algorithm has a worst-case running time of ‚.n2 / on an input array
+             of n numbers. Despite this slow worst-case running time, quicksort is often the best
+             practical choice for sorting because it is remarkably efﬁcient on the average: its
+             expected running time is ‚.n lg n/, and the constant factors hidden in the ‚.n lg n/
+             notation are quite small. It also has the advantage of sorting in place (see page 17),
+             and it works well even in virtual-memory environments.
+                Section 7.1 describes the algorithm and an important subroutine used by quick-
+             sort for partitioning. Because the behavior of quicksort is complex, we start with
+             an intuitive discussion of its performance in Section 7.2 and postpone its precise
+             analysis to the end of the chapter. Section 7.3 presents a version of quicksort that
+             uses random sampling. This algorithm has a good expected running time, and no
+             particular input elicits its worst-case behavior. Section 7.4 analyzes the random-
+             ized algorithm, showing that it runs in ‚.n2 / time in the worst case and, assuming
+             distinct elements, in expected O.n lg n/ time.
+
+
+7.1   Description of quicksort
+
+             Quicksort, like merge sort, applies the divide-and-conquer paradigm introduced
+             in Section 2.3.1. Here is the three-step divide-and-conquer process for sorting a
+             typical subarray AŒp : : r:
+             Divide: Partition (rearrange) the array AŒp : : r into two (possibly empty) subar-
+                rays AŒp : : q  1 and AŒq C 1 : : r such that each element of AŒp : : q  1 is
+                less than or equal to AŒq, which is, in turn, less than or equal to each element
+                of AŒq C 1 : : r. Compute the index q as part of this partitioning procedure.
+             Conquer: Sort the two subarrays AŒp : : q  1 and AŒq C 1 : : r by recursive calls
+               to quicksort.
+

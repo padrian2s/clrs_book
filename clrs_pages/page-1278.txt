@@ -1,0 +1,52 @@
+Index                                                                                   1257
+
+
+closure                                          common multiple, 939 ex.
+   group property, 939                           common subexpression, 915
+   of a language, 1058                           common subsequence, 7, 391
+   operator ( ), 1058                             longest, 7, 390–397, 413
+   transitive, see transitive closure            commutative laws for sets, 1159
+cluster                                          commutative operation, 940
+   in a bit vector with a superimposed tree of   C OMPACTIFY-L IST , 245 ex.
+      constant height, 534                       compact list, 250 pr.
+   for parallel computing, 772                   C OMPACT-L IST-S EARCH, 250 pr.
+   in proto van Emde Boas structures, 538        C OMPACT-L IST-S EARCH0, 251 pr.
+   in van Emde Boas trees, 546                   comparable line segments, 1022
+clustering, 272                                  C OMPARE -E XCHANGE , 208 pr.
+CNF (conjunctive normal form), 1049, 1082        compare-exchange operation, 208 pr.
+CNF satisﬁability, 1127 ex.                      comparison sort, 191
+coarsening leaves of recursion                     and binary search trees, 289 ex.
+   in merge sort, 39 pr.                           randomized, 205 pr.
+   when recursively spawning, 787                  and selection, 222
+code, 428–429                                    compatible activities, 415
+   Huffman, 428–437, 450                         compatible matrices, 371, 1221
+codeword, 429                                    competitive analysis, 476 pr.
+codomain, 1166                                   complement
+coefﬁcient                                         of an event, 1190
+   binomial, 1186                                  of a graph, 1090
+   of a polynomial, 55, 898                        of a language, 1058
+   in slack form, 856                              Schur, 820, 834
+coefﬁcient representation, 900                     of a set, 1160
+   and fast multiplication, 903–905              complementary slackness, 894 pr.
+cofactor, 1224                                   complete graph, 1172
+coin changing, 446 pr.                           complete k-ary tree, 1179
+colinearity, 1016                                  see also heap
+collision, 257                                   completeness of a language, 1077 ex.
+   resolution by chaining, 257–260               complete step, 782
+   resolution by open addressing, 269–277        completion time, 447 pr., 1136 pr.
+collision-resistant hash function, 964           complexity class, 1059
+coloring, 1103 pr., 1180 pr.                       co-NP, 1064
+color, of a red-black-tree node, 308               NP, 1049, 1064
+column-major order, 208 pr.                        NPC, 1050, 1069
+column rank, 1223                                  P, 1049, 1055
+columnsort, 208 pr.                              complexity measure, 1059
+column vector, 1218                              complex numbers
+combination, 1185                                  inverting matrices of, 832 ex.
+combinational circuit, 1071                        multiplication of, 83 ex.
+combinational element, 1070                      complex root of unity, 906
+combine step, in divide-and-conquer, 30, 65        interpolation at, 912–913
+comment, in pseudocode (//), 21                  component
+commodity, 862                                     biconnected, 621 pr.
+common divisor, 929                                connected, 1170
+   greatest, see greatest common divisor           strongly connected, 1170
+

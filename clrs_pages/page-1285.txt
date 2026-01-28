@@ -1,0 +1,52 @@
+1264   Index
+
+
+       E XTENDED -E UCLID, 937                      F IB -H EAP -L INK, 516
+       E XTEND -S HORTEST-PATHS, 688                F IB -H EAP -P RUNE , 529 pr.
+       extension of a set, 438                      F IB -H EAP -U NION, 512
+       exterior of a polygon, 1020 ex.              Fibonacci heap, 505–530
+       external node, 1176                             changing a key in, 529 pr.
+       external path length, 1180 ex.                  compared with binary heaps, 506–507
+       extracting the maximum key                      creating, 510
+         from d -ary heaps, 167 pr.                    decreasing a key in, 519–522
+         from max-heaps, 163                           deletion from, 522, 526 pr.
+       extracting the minimum key                      in Dijkstra’s algorithm, 662
+         from Fibonacci heaps, 512–518                 extracting the minimum key from, 512–518
+         from 2-3-4 heaps, 529 pr.                     insertion into, 510–511
+         from Young tableaus, 167 pr.                  in Johnson’s algorithm, 704
+       E XTRACT-M AX, 162–163                          maximum degree of, 509, 523–526
+       E XTRACT-M IN, 162, 505                         minimum key of, 511
+                                                       potential function for, 509
+       factor, 928                                     in Prim’s algorithm, 636
+          twiddle, 912                                 pruning, 529 pr.
+       factorial function (Š), 57–58                   running times of operations on, 506 ﬁg.
+       factorization, 975–980, 984                     uniting, 511–512
+          unique, 931                               Fibonacci numbers, 59–60, 108 pr., 523
+       failure, in a Bernoulli trial, 1201             computation of, 774–780, 981 pr.
+       fair coin, 1191                              FIFO (ﬁrst-in, ﬁrst-out), 232
+       fan-out, 1071                                   see also queue
+       Farkas’s lemma, 895 pr.                      ﬁnal-state function, 996
+       farthest-pair problem, 1030                  ﬁnal strand, 779
+       FASTER -A LL -PAIRS -S HORTEST-PATHS, 691,   F IND -D EPTH, 583 pr.
+             692 ex.                                F IND -M AX -C ROSSING -S UBARRAY, 71
+       fast Fourier transform (FFT), 898–925        F IND -M AXIMUM -S UBARRAY, 72
+          circuit for, 919–920                      ﬁnd path, 569
+          iterative implementation of, 915–918      F IND -S ET , 562
+          multidimensional, 921 pr.                    disjoint-set-forest implementation of, 571,
+          multithreaded algorithm for, 804 ex.            585
+          recursive implementation of, 909–912         linked-list implementation of, 564
+          using modular arithmetic, 923 pr.         ﬁnished vertex, 603
+       feasibility problem, 665, 894 pr.            ﬁnishing time, in depth-ﬁrst search, 605
+       feasible linear program, 851                    and strongly connected components, 618
+       feasible region, 847                         ﬁnish time, in activity selection, 415
+       feasible solution, 665, 846, 851             ﬁnite automaton, 995
+       Fermat’s theorem, 954                           for string matching, 996–1002
+       FFT, see fast Fourier transform              F INITE -AUTOMATON -M ATCHER, 999
+       FFTW, 924                                    ﬁnite group, 940
+       F IB, 775                                    ﬁnite sequence, 1166
+       F IB -H EAP -C HANGE -K EY, 529 pr.          ﬁnite set, 1161
+       F IB -H EAP -D ECREASE -K EY, 519            ﬁrst-ﬁt heuristic, 1134 pr.
+       F IB -H EAP -D ELETE, 522                    ﬁrst-in, ﬁrst-out, 232
+       F IB -H EAP -E XTRACT-M IN, 513                 see also queue
+       F IB -H EAP -I NSERT , 510                   ﬁxed-length code, 429
+

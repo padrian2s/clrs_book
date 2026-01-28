@@ -1,0 +1,42 @@
+600   Chapter 22 Elementary Graph Algorithms
+
+
+      from s, one of the shortest paths from s to  is a shortest path from s to :
+      followed by the edge .:; /.
+
+      Proof Assume, for the purpose of contradiction, that some vertex receives a d
+      value not equal to its shortest-path distance. Let  be the vertex with min-
+      imum ı.s; / that receives such an incorrect d value; clearly  ¤ s. By
+      Lemma 22.2, :d  ı.s; /, and thus we have that :d > ı.s; /. Vertex  must be
+      reachable from s, for if it is not, then ı.s; / D 1  :d. Let u be the vertex im-
+      mediately preceding  on a shortest path from s to , so that ı.s; / D ı.s; u/ C 1.
+      Because ı.s; u/ < ı.s; /, and because of how we chose , we have u:d D ı.s; u/.
+      Putting these properties together, we have
+      :d > ı.s; / D ı.s; u/ C 1 D u:d C 1 :                                      (22.1)
+         Now consider the time when BFS chooses to dequeue vertex u from Q in
+      line 11. At this time, vertex  is either white, gray, or black. We shall show
+      that in each of these cases, we derive a contradiction to inequality (22.1). If  is
+      white, then line 15 sets :d D u:d C 1, contradicting inequality (22.1). If  is
+      black, then it was already removed from the queue and, by Corollary 22.4, we have
+      :d  u:d, again contradicting inequality (22.1). If  is gray, then it was painted
+      gray upon dequeuing some vertex w, which was removed from Q earlier than u
+      and for which :d D w:d C 1. By Corollary 22.4, however, w:d  u:d, and so we
+      have :d D w:d C 1  u:d C 1, once again contradicting inequality (22.1).
+         Thus we conclude that :d D ı.s; / for all  2 V . All vertices  reachable
+      from s must be discovered, for otherwise they would have 1 D :d > ı.s; /. To
+      conclude the proof of the theorem, observe that if : D u, then :d D u:d C 1.
+      Thus, we can obtain a shortest path from s to  by taking a shortest path from s
+      to : and then traversing the edge .:; /.
+
+
+      Breadth-ﬁrst trees
+      The procedure BFS builds a breadth-ﬁrst tree as it searches the graph, as Fig-
+      ure 22.3 illustrates. The tree corresponds to the  attributes. More formally, for
+      a graph G D .V; E/ with source s, we deﬁne the predecessor subgraph of G as
+      G D .V ; E /, where
+      V D f 2 V W : ¤ NILg [ fsg
+      and
+      E D f.:; / W  2 V  fsgg :
+      The predecessor subgraph G is a breadth-ﬁrst tree if V consists of the vertices
+      reachable from s and, for all  2 V , the subgraph G contains a unique simple
+

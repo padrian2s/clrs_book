@@ -1,0 +1,44 @@
+Bibliography                                                                                  1237
+
+
+ [108] Robert W. Floyd and Ronald L. Rivest. Expected time bounds for selection. Communica-
+       tions of the ACM, 18(3):165–172, 1975.
+ [109] Lestor R. Ford, Jr. and D. R. Fulkerson. Flows in Networks. Princeton University Press,
+       1962.
+ [110] Lestor R. Ford, Jr. and Selmer M. Johnson. A tournament problem. The American Mathe-
+       matical Monthly, 66(5):387–389, 1959.
+ [111] Michael L. Fredman. New bounds on the complexity of the shortest path problem. SIAM
+       Journal on Computing, 5(1):83–89, 1976.
+ [112] Michael L. Fredman, János Komlós, and Endre Szemerédi. Storing a sparse table with O.1/
+       worst case access time. Journal of the ACM, 31(3):538–544, 1984.
+ [113] Michael L. Fredman and Michael E. Saks. The cell probe complexity of dynamic data struc-
+       tures. In Proceedings of the Twenty First Annual ACM Symposium on Theory of Computing,
+       pages 345–354, 1989.
+ [114] Michael L. Fredman and Robert E. Tarjan. Fibonacci heaps and their uses in improved
+       network optimization algorithms. Journal of the ACM, 34(3):596–615, 1987.
+ [115] Michael L. Fredman and Dan E. Willard. Surpassing the information theoretic bound with
+       fusion trees. Journal of Computer and System Sciences, 47(3):424–436, 1993.
+ [116] Michael L. Fredman and Dan E. Willard. Trans-dichotomous algorithms for minimum span-
+       ning trees and shortest paths. Journal of Computer and System Sciences, 48(3):533–551,
+       1994.
+ [117] Matteo Frigo and Steven G. Johnson. The design and implementation of FFTW3. Proceed-
+       ings of the IEEE, 93(2):216–231, 2005.
+ [118] Matteo Frigo, Charles E. Leiserson, and Keith H. Randall. The implementation of the Cilk-5
+       multithreaded language. In Proceedings of the 1998 ACM SIGPLAN Conference on Pro-
+       gramming Language Design and Implementation, pages 212–223, 1998.
+ [119] Harold N. Gabow. Path-based depth-ﬁrst search for strong and biconnected components.
+       Information Processing Letters, 74(3–4):107–114, 2000.
+ [120] Harold N. Gabow, Z. Galil, T. Spencer, and Robert E. Tarjan. Efﬁcient algorithms for ﬁnd-
+       ing minimum spanning trees in undirected and directed graphs. Combinatorica, 6(2):109–
+       122, 1986.
+ [121] Harold N. Gabow and Robert E. Tarjan. A linear-time algorithm for a special case of disjoint
+       set union. Journal of Computer and System Sciences, 30(2):209–221, 1985.
+ [122] Harold N. Gabow and Robert E. Tarjan. Faster scaling algorithms for network problems.
+       SIAM Journal on Computing, 18(5):1013–1036, 1989.
+ [123] Zvi Galil and Oded Margalit. All pairs shortest distances for graphs with small integer
+       length edges. Information and Computation, 134(2):103–139, 1997.
+ [124] Zvi Galil and Oded Margalit. All pairs shortest paths for graphs with small integer length
+       edges. Journal of Computer and System Sciences, 54(2):243–254, 1997.
+ [125] Zvi Galil and Kunsoo Park. Dynamic programming with convexity, concavity and sparsity.
+       Theoretical Computer Science, 92(1):49–76, 1992.
+

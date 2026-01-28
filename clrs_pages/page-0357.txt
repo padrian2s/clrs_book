@@ -1,0 +1,49 @@
+336       Chapter 13 Red-Black Trees
+
+
+                           15                                                          15
+
+
+               9                     18                                    9                     18
+
+
+      3               12                       25                  3              12                       25
+
+
+           6                              21                           6                              21
+                           (a)                                                         (b)
+
+
+          Figure 13.11 Spines of a binary search tree. The left spine is shaded in (a), and the right spine is
+          shaded in (b).
+
+
+          c. Explain how T REAP -I NSERT works. Explain the idea in English and give pseu-
+             docode. (Hint: Execute the usual binary-search-tree insertion procedure and
+             then perform rotations to restore the min-heap order property.)
+
+          d. Show that the expected running time of T REAP -I NSERT is ‚.lg n/.
+
+          T REAP -I NSERT performs a search and then a sequence of rotations. Although
+          these two operations have the same expected running time, they have different
+          costs in practice. A search reads information from the treap without modifying it.
+          In contrast, a rotation changes parent and child pointers within the treap. On most
+          computers, read operations are much faster than write operations. Thus we would
+          like T REAP -I NSERT to perform few rotations. We will show that the expected
+          number of rotations performed is bounded by a constant.
+             In order to do so, we will need some deﬁnitions, which Figure 13.11 depicts.
+          The left spine of a binary search tree T is the simple path from the root to the node
+          with the smallest key. In other words, the left spine is the simple path from the
+          root that consists of only left edges. Symmetrically, the right spine of T is the
+          simple path from the root consisting of only right edges. The length of a spine is
+          the number of nodes it contains.
+
+          e. Consider the treap T immediately after T REAP -I NSERT has inserted node x.
+             Let C be the length of the right spine of the left subtree of x. Let D be the
+             length of the left spine of the right subtree of x. Prove that the total number of
+             rotations that were performed during the insertion of x is equal to C C D.
+
+          We will now calculate the expected values of C and D. Without loss of generality,
+          we assume that the keys are 1; 2; : : : ; n, since we are comparing them only to one
+          another.
+

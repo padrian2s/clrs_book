@@ -1,0 +1,45 @@
+1180       Appendix B   Sets, Etc.
+
+
+           B.5-2
+           Let G D .V; E/ be a directed acyclic graph in which there is a vertex 0 2 V
+           such that there exists a unique path from 0 to every vertex  2 V . Prove that the
+           undirected version of G forms a tree.
+
+           B.5-3
+           Show by induction that the number of degree-2 nodes in any nonempty binary tree
+           is 1 fewer than the number of leaves. Conclude that the number of internal nodes
+           in a full binary tree is 1 fewer than the number of leaves.
+
+           B.5-4
+           Use induction to show that a nonempty binary tree with n nodes has height at
+           least blg nc.
+
+           B.5-5 ?
+           The internal path length of a full binary tree is the sum, taken over all internal
+           nodes of the tree, of the depth of each node. Likewise, the external path length is
+           the sum, taken over all leaves of the tree, of the depth of each leaf. Consider a full
+           binary tree with n internal nodes, internal path length i, and external path length e.
+           Prove that e D i C 2n.
+
+           B.5-6 ?
+           Let us associate a “weight” w.x/ D 2d with each leafPx of depth d in a binary
+           tree T , and let L be the set of leaves of T . Prove that x2L w.x/  1. (This is
+           known as the Kraft inequality.)
+
+           B.5-7 ?
+           Show that if L  2, then every binary tree with L leaves contains a subtree having
+           between L=3 and 2L=3 leaves, inclusive.
+
+
+
+Problems
+
+           B-1 Graph coloring
+           Given an undirected graph G D .V; E/, a k-coloring of G is a function c W V !
+           f0; 1; : : : ; k  1g such that c.u/ ¤ c./ for every edge .u; / 2 E. In other words,
+           the numbers 0; 1; : : : ; k  1 represent the k colors, and adjacent vertices must have
+           different colors.
+
+           a. Show that any tree is 2-colorable.
+

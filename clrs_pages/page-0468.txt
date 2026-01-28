@@ -1,0 +1,44 @@
+Problems for Chapter 16                                                              447
+
+
+b. Suppose that the available coins are in the denominations that are powers of c,
+   i.e., the denominations are c 0 ; c 1 ; : : : ; c k for some integers c > 1 and k  1.
+   Show that the greedy algorithm always yields an optimal solution.
+
+c. Give a set of coin denominations for which the greedy algorithm does not yield
+   an optimal solution. Your set should include a penny so that there is a solution
+   for every value of n.
+
+d. Give an O.nk/-time algorithm that makes change for any set of k different coin
+   denominations, assuming that one of the coins is a penny.
+
+16-2 Scheduling to minimize average completion time
+Suppose you are given a set S D fa1 ; a2 ; : : : ; an g of tasks, where task ai re-
+quires pi units of processing time to complete, once it has started. You have one
+computer on which to run these tasks, and the computer can run only one task at a
+time. Let ci be the completion time of task ai , that is, the time at which task ai com-
+pletes processing. P Your goal is to minimize the average completion time, that is,
+                       n
+to minimize .1=n/ i D1 ci . For example, suppose there are two tasks, a1 and a2 ,
+with p1 D 3 and p2 D 5, and consider the schedule in which a2 runs ﬁrst, followed
+by a1 . Then c2 D 5, c1 D 8, and the average completion time is .5 C 8/=2 D 6:5.
+If task a1 runs ﬁrst, however, then c1 D 3, c2 D 8, and the average completion
+time is .3 C 8/=2 D 5:5.
+
+a. Give an algorithm that schedules the tasks so as to minimize the average com-
+   pletion time. Each task must run non-preemptively, that is, once task ai starts, it
+   must run continuously for pi units of time. Prove that your algorithm minimizes
+   the average completion time, and state the running time of your algorithm.
+
+b. Suppose now that the tasks are not all available at once. That is, each task
+   cannot start until its release time ri . Suppose also that we allow preemption, so
+   that a task can be suspended and restarted at a later time. For example, a task ai
+   with processing time pi D 6 and release time ri D 1 might start running at
+   time 1 and be preempted at time 4. It might then resume at time 10 but be
+   preempted at time 11, and it might ﬁnally resume at time 13 and complete at
+   time 15. Task ai has run for a total of 6 time units, but its running time has been
+   divided into three pieces. In this scenario, ai ’s completion time is 15. Give
+   an algorithm that schedules the tasks so as to minimize the average completion
+   time in this new scenario. Prove that your algorithm minimizes the average
+   completion time, and state the running time of your algorithm.
+

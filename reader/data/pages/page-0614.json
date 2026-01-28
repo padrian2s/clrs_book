@@ -1,0 +1,5 @@
+{
+  "page": 614,
+  "title": "22.4 Topological Sort",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 22.4</div>\n    <h1>Topological Sort</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Linear ordering of vertices such that all edges go forward.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Only for directed acyclic graphs (DAGs)</li>\n<li>If edge (u,v), then u appears before v in ordering</li>\n<li>Algorithm: DFS, prepend vertex to list when finished</li>\n<li>Time: O(V + E)</li>\n<li>Alternative: repeatedly remove vertices with no incoming edges</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Course prerequisites: must take CS101 before CS201, CS201 before CS301. Topological sort gives valid course order.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Scheduling tasks with dependencies, build systems, spreadsheet evaluation.</p>\n</div>\n</div>"
+}

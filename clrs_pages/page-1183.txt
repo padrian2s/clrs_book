@@ -1,0 +1,30 @@
+1162   Appendix B    Sets, Etc.
+
+
+         The Cartesian product of two sets A and B, denoted A B, is the set of all
+       ordered pairs such that the ﬁrst element of the pair is an element of A and the
+       second is an element of B. More formally,
+       A     B D f.a; b/ W a 2 A and b 2 Bg :
+       For example, fa; bg fa; b; cg D f.a; a/; .a; b/; .a; c/; .b; a/; .b; b/; .b; c/g. When
+       A and B are ﬁnite sets, the cardinality of their Cartesian product is
+       jA     Bj D jAj  jBj :                                                                   (B.4)
+           The Cartesian product of n sets A1 ; A2 ; : : : ; An is the set of n-tuples
+       A1     A2         An D f.a1 ; a2 ; : : : ; an / W ai 2 Ai for i D 1; 2; : : : ; ng ;
+       whose cardinality is
+       jA1     A2         An j D jA1 j  jA2 j    jAn j
+       if all sets are ﬁnite. We denote an n-fold Cartesian product over a single set A by
+       the set
+       An D A       A          A;
+       whose cardinality is jAn j D jAjn if A is ﬁnite. We can also view an n-tuple as a
+       ﬁnite sequence of length n (see page 1166).
+
+       Exercises
+
+       B.1-1
+       Draw Venn diagrams that illustrate the ﬁrst of the distributive laws (B.1).
+
+       B.1-2
+       Prove the generalization of DeMorgan’s laws to any ﬁnite collection of sets:
+       A1 \ A2 \    \ An D A1 [ A2 [    [ An ;
+       A1 [ A2 [    [ An D A1 \ A2 \    \ An :
+

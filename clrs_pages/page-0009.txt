@@ -1,0 +1,39 @@
+viii          Contents
+
+
+
+V Advanced Data Structures
+                    Introduction     481
+              18    B-Trees 484
+                    18.1 Deﬁnition of B-trees 488
+                    18.2 Basic operations on B-trees 491
+                    18.3 Deleting a key from a B-tree 499
+              19    Fibonacci Heaps 505
+                    19.1 Structure of Fibonacci heaps 507
+                    19.2 Mergeable-heap operations 510
+                    19.3 Decreasing a key and deleting a node 518
+                    19.4 Bounding the maximum degree 523
+              20    van Emde Boas Trees 531
+                    20.1 Preliminary approaches 532
+                    20.2 A recursive structure 536
+                    20.3 The van Emde Boas tree 545
+              21    Data Structures for Disjoint Sets 561
+                    21.1 Disjoint-set operations 561
+                    21.2 Linked-list representation of disjoint sets 564
+                    21.3 Disjoint-set forests 568
+              ?     21.4 Analysis of union by rank with path compression   573
+
+
+VI     Graph Algorithms
+
+                    Introduction     587
+              22    Elementary Graph Algorithms 589
+                    22.1 Representations of graphs 589
+                    22.2 Breadth-ﬁrst search 594
+                    22.3 Depth-ﬁrst search 603
+                    22.4 Topological sort 612
+                    22.5 Strongly connected components 615
+              23    Minimum Spanning Trees 624
+                    23.1 Growing a minimum spanning tree 625
+                    23.2 The algorithms of Kruskal and Prim 631
+

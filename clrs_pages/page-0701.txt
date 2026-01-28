@@ -1,0 +1,51 @@
+680   Chapter 24 Single-Source Shortest Paths
+
+
+      shortest-path weights ı1 .s; / for all  2 V , then computes ı2 .s; / for all  2 V ,
+      and so on, until it computes ık .s; / for all  2 V . We assume throughout that
+      jEj  jV j  1, and we shall see that computing ıi from ıi 1 takes O.E/ time, so
+      that the entire algorithm takes O.kE/ D O.E lg W / time.
+
+      a. Suppose that for all vertices  2 V , we have ı.s; /  jEj. Show that we can
+         compute ı.s; / for all  2 V in O.E/ time.
+
+      b. Show that we can compute ı1 .s; / for all  2 V in O.E/ time.
+
+      Let us now focus on computing ıi from ıi 1 .
+
+      c. Prove that for i D 2; 3; : : : ; k, we have either wi .u; / D 2wi 1 .u; / or
+         wi .u; / D 2wi 1 .u; / C 1. Then, prove that
+
+         2ıi 1 .s; /  ıi .s; /  2ıi 1 .s; / C jV j  1
+
+         for all  2 V .
+
+      d. Deﬁne for i D 2; 3; : : : ; k and all .u; / 2 E,
+
+         y i .u; / D wi .u; / C 2ıi 1 .s; u/  2ıi 1 .s; / :
+         w
+
+                                                                                      yi .u; /
+         Prove that for i D 2; 3; : : : ; k and all u;  2 V , the “reweighted” value w
+         of edge .u; / is a nonnegative integer.
+
+      e. Now, deﬁne ıyi .s; / as the shortest-path weight from s to  using the weight
+                  y i . Prove that for i D 2; 3; : : : ; k and all  2 V ,
+         function w
+
+         ıi .s; / D ıyi .s; / C 2ıi 1 .s; /
+
+         and that ıyi .s; /  jEj.
+
+      f. Show how to compute ıi .s; / from ıi 1 .s; / for all  2 V in O.E/ time, and
+         conclude that we can compute ı.s; / for all  2 V in O.E lg W / time.
+
+      24-5 Karp’s minimum mean-weight cycle algorithm
+      Let G D .V; E/ be a directed graph with weight function w W E ! R, and let
+      n D jV j. We deﬁne the mean weight of a cycle c D he1 ; e2 ; : : : ; ek i of edges in E
+      to be
+             1X
+                   k
+       .c/ D        w.ei / :
+             k i D1
+

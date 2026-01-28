@@ -1,0 +1,45 @@
+           Problems for Chapter 8                                                         205
+
+
+
+
+Problems
+
+           8-1 Probabilistic lower bounds on comparison sorting
+           In this problem, we prove a probabilistic .n lg n/ lower bound on the running time
+           of any deterministic or randomized comparison sort on n distinct input elements.
+           We begin by examining a deterministic comparison sort A with decision tree TA .
+           We assume that every permutation of A’s inputs is equally likely.
+
+           a. Suppose that each leaf of TA is labeled with the probability that it is reached
+              given a random input. Prove that exactly nŠ leaves are labeled 1=nŠ and that the
+              rest are labeled 0.
+
+           b. Let D.T / denote the external path length of a decision tree T ; that is, D.T /
+              is the sum of the depths of all the leaves of T . Let T be a decision tree with
+              k > 1 leaves, and let LT and RT be the left and right subtrees of T . Show that
+              D.T / D D.LT/ C D.RT/ C k.
+
+           c. Let d.k/ be the minimum value of D.T / over all decision trees T with k > 1
+              leaves. Show that d.k/ D min1i k1 fd.i/ C d.k  i/ C kg. (Hint: Consider
+              a decision tree T with k leaves that achieves the minimum. Let i0 be the number
+              of leaves in LT and k  i0 the number of leaves in RT.)
+
+           d. Prove that for a given value of k > 1 and i in the range 1  i  k  1, the
+              function i lg i C .k  i/ lg.k  i/ is minimized at i D k=2. Conclude that
+              d.k/ D .k lg k/.
+
+           e. Prove that D.TA / D .nŠ lg.nŠ//, and conclude that the average-case time to
+              sort n elements is .n lg n/.
+
+           Now, consider a randomized comparison sort B. We can extend the decision-
+           tree model to handle randomization by incorporating two kinds of nodes: ordinary
+           comparison nodes and “randomization” nodes. A randomization node models a
+           random choice of the form R ANDOM .1; r/ made by algorithm B; the node has r
+           children, each of which is equally likely to be chosen during an execution of the
+           algorithm.
+
+           f. Show that for any randomized comparison sort B, there exists a deterministic
+              comparison sort A whose expected number of comparisons is no more than
+              those made by B.
+

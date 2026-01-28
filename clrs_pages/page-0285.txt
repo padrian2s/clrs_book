@@ -1,0 +1,45 @@
+264   Chapter 11 Hash Tables
+
+
+                                                  w bits
+
+                                                    k
+
+                                 ×              s D A  2w
+
+                    r1                              r0
+                                                   extract p bits
+                                         h.k/
+
+
+
+      Figure 11.4 The multiplication method of hashing. The w-bit representation of the key k is multi-
+      plied by the w-bit value s D A  2w . The p highest-order bits of the lower w-bit half of the product
+      form the desired hash value h.k/.
+
+
+      fractional part of kA. Then, we multiply this value by m and take the ﬂoor of the
+      result. In short, the hash function is
+      h.k/ D bm .kA mod 1/c ;
+      where “kA mod 1” means the fractional part of kA, that is, kA  bkAc.
+         An advantage of the multiplication method is that the value of m is not critical.
+      We typically choose it to be a power of 2 (m D 2p for some integer p), since we
+      can then easily implement the function on most computers as follows. Suppose
+      that the word size of the machine is w bits and that k ﬁts into a single word. We
+      restrict A to be a fraction of the form s=2w , where s is an integer in the range
+      0 < s < 2w . Referring to Figure 11.4, we ﬁrst multiply k by the w-bit integer
+      s D A  2w . The result is a 2w-bit value r1 2w C r0 , where r1 is the high-order word
+      of the product and r0 is the low-order word of the product. The desired p-bit hash
+      value consists of the p most signiﬁcant bits of r0 .
+         Although this method works with any value of the constant A, it works better
+      with some values than with others. The optimal choice depends on the character-
+      istics of the data being hashed. Knuth [211] suggests that
+             p
+      A  . 5  1/=2 D 0:6180339887 : : :                                              (11.2)
+      is likely to work reasonably well.
+         As an example, suppose we have k D 123456, p D 14, m D 214 D 16384,
+      and w D 32. Adapting Knuth’spsuggestion, we choose A to be the fraction of the
+      form s=232 that is closest to . 5  1/=2, so that A D 2654435769=232 . Then
+      k  s D 327706022297664 D .76300  232 / C 17612864, and so r1 D 76300
+      and r0 D 17612864. The 14 most signiﬁcant bits of r0 yield the value h.k/ D 67.
+

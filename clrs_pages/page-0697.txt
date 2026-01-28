@@ -1,0 +1,47 @@
+676   Chapter 24 Single-Source Shortest Paths
+
+
+      Lemma 24.17 (Predecessor-subgraph property)
+      Let G D .V; E/ be a weighted, directed graph with weight function w W E ! R,
+      let s 2 V be a source vertex, and assume that G contains no negative-weight cycles
+      that are reachable from s. Let us call I NITIALIZE -S INGLE -S OURCE .G; s/ and then
+      execute any sequence of relaxation steps on edges of G that produces :d D ı.s; /
+      for all  2 V . Then, the predecessor subgraph G is a shortest-paths tree rooted
+      at s.
+
+      Proof We must prove that the three properties of shortest-paths trees given on
+      page 647 hold for G . To show the ﬁrst property, we must show that V is the set
+      of vertices reachable from s. By deﬁnition, a shortest-path weight ı.s; / is ﬁnite
+      if and only if  is reachable from s, and thus the vertices that are reachable from s
+      are exactly those with ﬁnite d values. But a vertex  2 V  fsg has been assigned
+      a ﬁnite value for :d if and only if : ¤ NIL . Thus, the vertices in V are exactly
+      those reachable from s.
+         The second property follows directly from Lemma 24.16.
+         It remains, therefore, to prove the last property of shortest-paths trees: for each
+                                                     p
+      vertex  2 V , the unique simple path s ;  in G is a shortest path from s to 
+      in G. Let p D h0 ; 1 ; : : : ; k i, where 0 D s and k D . For i D 1; 2; : : : ; k,
+      we have both i :d D ı.s; i / and i :d  i 1 :d C w.i 1 ; i /, from which we
+      conclude w.i 1 ; i /  ı.s; i /  ı.s; i 1 /. Summing the weights along path p
+      yields
+                   X
+                   k
+      w.p/ D              w.i 1 ; i /
+                   i D1
+
+                   X
+                   k
+                         .ı.s; i /  ı.s; i 1 //
+                   i D1
+              D ı.s; k /  ı.s; 0 /                  (because the sum telescopes)
+              D ı.s; k /                              (because ı.s; 0 / D ı.s; s/ D 0) .
+      Thus, w.p/  ı.s; k /. Since ı.s; k / is a lower bound on the weight of any path
+      from s to k , we conclude that w.p/ D ı.s; k /, and thus p is a shortest path
+      from s to  D k .
+
+      Exercises
+
+      24.5-1
+      Give two shortest-paths trees for the directed graph of Figure 24.2 (on page 648)
+      other than the two shown.
+

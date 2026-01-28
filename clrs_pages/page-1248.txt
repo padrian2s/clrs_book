@@ -1,0 +1,54 @@
+Problems for Appendix D                                                          1227
+
+
+is
+                                        Y
+det.V .x0 ; x1 ; : : : ; xn1 // D            .xk  xj / :
+                                     0j <kn1
+
+(Hint: Multiply column i by x0 and add it to column i C 1 for i D n  1;
+n  2; : : : ; 1, and then use induction.)
+
+D-2 Permutations deﬁned by matrix-vector multiplication over GF.2/
+One class of permutations of the integers in the set Sn D f0; 1; 2; : : : ; 2n  1g is
+
+
+ 
+deﬁned by matrix multiplication over GF.2/. For each integer x in Sn , we view its
+binary representation as an n-bit vector
+
+     x0
+     x1
+     x2        ;
+      ::
+       :
+     xn1
+              Pn1
+where x D i D0 xi 2i . If A is an n n matrix in which each entry is either 0
+or 1, then we can deﬁne a permutation mapping each value x in Sn to the number
+whose binary representation is the matrix-vector product Ax. Here, we perform
+all arithmetic over GF.2/: all values are either 0 or 1, and with one exception the
+usual rules of addition and multiplication apply. The exception is that 1 C 1 D 0.
+You can think of arithmetic over GF.2/ as being just like regular integer arithmetic,
+except that you use only the least signiﬁcant bit.
+   As an example, for S2 D f0; 1; 2; 3g, the matrix
+             
+         1 0
+AD
+         1 1
+deﬁnes the following permutation A : A .0/ D 0, A .1/ D 3, A .2/ D 2,
+A .3/ D 1. To see why A .3/ D 1, observe that, working in GF.2/,
+                     
+              1 0      1
+A .3/ D
+              1 1      1
+                          
+              11C01
+        D
+              11C11
+             
+              1
+        D          ;
+              0
+which is the binary representation of 1.
+

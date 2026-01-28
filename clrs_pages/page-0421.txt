@@ -1,0 +1,43 @@
+400   Chapter 15 Dynamic Programming
+
+
+      well for the subproblem with keys ki ; : : : ; kj and dummy keys di 1 ; : : : ; dj . The
+      usual cut-and-paste argument applies. If there were a subtree T 00 whose expected
+      cost is lower than that of T 0 , then we could cut T 0 out of T and paste in T 00 ,
+      resulting in a binary search tree of lower expected cost than T , thus contradicting
+      the optimality of T .
+          We need to use the optimal substructure to show that we can construct an opti-
+      mal solution to the problem from optimal solutions to subproblems. Given keys
+      ki ; : : : ; kj , one of these keys, say kr (i  r  j ), is the root of an optimal
+      subtree containing these keys. The left subtree of the root kr contains the keys
+      ki ; : : : ; kr1 (and dummy keys di 1 ; : : : ; dr1 ), and the right subtree contains the
+      keys krC1 ; : : : ; kj (and dummy keys dr ; : : : ; dj ). As long as we examine all candi-
+      date roots kr , where i  r  j , and we determine all optimal binary search trees
+      containing ki ; : : : ; kr1 and those containing krC1 ; : : : ; kj , we are guaranteed that
+      we will ﬁnd an optimal binary search tree.
+          There is one detail worth noting about “empty” subtrees. Suppose that in a
+      subtree with keys ki ; : : : ; kj , we select ki as the root. By the above argument, ki ’s
+      left subtree contains the keys ki ; : : : ; ki 1 . We interpret this sequence as containing
+      no keys. Bear in mind, however, that subtrees also contain dummy keys. We adopt
+      the convention that a subtree containing keys ki ; : : : ; ki 1 has no actual keys but
+      does contain the single dummy key di 1 . Symmetrically, if we select kj as the root,
+      then kj ’s right subtree contains the keys kj C1 ; : : : ; kj ; this right subtree contains
+      no actual keys, but it does contain the dummy key dj .
+
+      Step 2: A recursive solution
+      We are ready to deﬁne the value of an optimal solution recursively. We pick our
+      subproblem domain as ﬁnding an optimal binary search tree containing the keys
+      ki ; : : : ; kj , where i  1, j  n, and j  i  1. (When j D i  1, there
+      are no actual keys; we have just the dummy key di 1 .) Let us deﬁne eŒi; j  as
+      the expected cost of searching an optimal binary search tree containing the keys
+      ki ; : : : ; kj . Ultimately, we wish to compute eŒ1; n.
+          The easy case occurs when j D i  1. Then we have just the dummy key di 1 .
+      The expected search cost is eŒi; i  1 D qi 1 .
+          When j  i, we need to select a root kr from among ki ; : : : ; kj and then make an
+      optimal binary search tree with keys ki ; : : : ; kr1 as its left subtree and an optimal
+      binary search tree with keys krC1 ; : : : ; kj as its right subtree. What happens to the
+      expected search cost of a subtree when it becomes a subtree of a node? The depth
+      of each node in the subtree increases by 1. By equation (15.11), the expected search
+      cost of this subtree increases by the sum of all the probabilities in the subtree. For
+      a subtree with keys ki ; : : : ; kj , let us denote this sum of probabilities as
+

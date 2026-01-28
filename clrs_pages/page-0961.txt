@@ -1,0 +1,40 @@
+940   Chapter 31 Number-Theoretic Algorithms
+
+
+      4. Inverses: For each a 2 S, there exists a unique element b 2 S, called the
+         inverse of a, such that a ˚ b D b ˚ a D e.
+      As an example, consider the familiar group .Z; C/ of the integers Z under the
+      operation of addition: 0 is the identity, and the inverse of a is a. If a group .S; ˚/
+      satisﬁes the commutative law a ˚ b D b ˚ a for all a; b 2 S, then it is an abelian
+      group. If a group .S; ˚/ satisﬁes jSj < 1, then it is a ﬁnite group.
+
+      The groups deﬁned by modular addition and multiplication
+      We can form two ﬁnite abelian groups by using addition and multiplication mod-
+      ulo n, where n is a positive integer. These groups are based on the equivalence
+      classes of the integers modulo n, deﬁned in Section 31.1.
+         To deﬁne a group on Zn , we need to have suitable binary operations, which
+      we obtain by redeﬁning the ordinary operations of addition and multiplication.
+      We can easily deﬁne addition and multiplication operations for Zn , because the
+      equivalence class of two integers uniquely determines the equivalence class of their
+      sum or product. That is, if a  a0 .mod n/ and b  b 0 .mod n/, then
+      a C b  a0 C b 0 .mod n/ ;
+      ab     a0 b 0   .mod n/ :
+      Thus, we deﬁne addition and multiplication modulo n, denoted Cn and n , by
+      Œan Cn Œbn D Œa C bn ;                                                      (31.18)
+      Œan n Œbn D Œabn :
+      (We can deﬁne subtraction similarly on Zn by Œan n Œbn D Œa  bn , but divi-
+      sion is more complicated, as we shall see.) These facts justify the common and
+      convenient practice of using the smallest nonnegative element of each equivalence
+      class as its representative when performing computations in Zn . We add, subtract,
+      and multiply as usual on the representatives, but we replace each result x by the
+      representative of its class, that is, by x mod n.
+         Using this deﬁnition of addition modulo n, we deﬁne the additive group
+      modulo n as .Zn ; Cn /. The size of the additive group modulo n is jZn j D n.
+      Figure 31.2(a) gives the operation table for the group .Z6 ; C6 /.
+
+      Theorem 31.12
+      The system .Zn ; Cn / is a ﬁnite abelian group.
+
+      Proof Equation (31.18) shows that .Zn ; Cn / is closed. Associativity and com-
+      mutativity of Cn follow from the associativity and commutativity of C:
+

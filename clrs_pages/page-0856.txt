@@ -1,0 +1,42 @@
+28.3 Symmetric positive-deﬁnite matrices and least-squares approximation                 835
+
+
+Corollary 28.6
+LU decomposition of a symmetric positive-deﬁnite matrix never causes a division
+by 0.
+
+Proof Let A be a symmetric positive-deﬁnite matrix. We shall prove something
+stronger than the statement of the corollary: every pivot is strictly positive. The ﬁrst
+pivot is a11 . Let e1 be the ﬁrst unit vector, from which we obtain a11 D e1T Ae1 > 0.
+Since the ﬁrst step of LU decomposition produces the Schur complement of A
+with respect to A1 D .a11 /, Lemma 28.5 implies by induction that all pivots are
+positive.
+
+Least-squares approximation
+One important application of symmetric positive-deﬁnite matrices arises in ﬁtting
+curves to given sets of data points. Suppose that we are given a set of m data points
+.x1 ; y1 /; .x2 ; y2 /; : : : ; .xm ; ym / ;
+where we know that the yi are subject to measurement errors. We would like to
+determine a function F .x/ such that the approximation errors
+i D F .xi /  yi                                                                   (28.17)
+are small for i D 1; 2; : : : ; m. The form of the function F depends on the problem
+at hand. Here, we assume that it has the form of a linearly weighted sum,
+           X
+           n
+F .x/ D           cj fj .x/ ;
+           j D1
+
+where the number of summands n and the speciﬁc basis functions fj are chosen
+based on knowledge of the problem at hand. A common choice is fj .x/ D x j 1 ,
+which means that
+F .x/ D c1 C c2 x C c3 x 2 C    C cn x n1
+is a polynomial of degree n  1 in x. Thus, given m data points .x1 ; y1 /; .x2 ; y2 /;
+: : : ; .xm ; ym /, we wish to calculate n coefﬁcients c1 ; c2 ; : : : ; cn that minimize the
+approximation errors 1 ; 2 ; : : : ; m .
+    By choosing n D m, we can calculate each yi exactly in equation (28.17). Such
+a high-degree F “ﬁts the noise” as well as the data, however, and generally gives
+poor results when used to predict y for previously unseen values of x. It is usu-
+ally better to choose n signiﬁcantly smaller than m and hope that by choosing the
+coefﬁcients cj well, we can obtain a function F that ﬁnds the signiﬁcant patterns
+in the data points without paying undue attention to the noise. Some theoretical
+

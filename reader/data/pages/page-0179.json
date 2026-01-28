@@ -1,0 +1,5 @@
+{
+  "page": 179,
+  "title": "7.2 Performance of Quicksort",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 7.2</div>\n    <h1>Performance of Quicksort</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Quicksort&#x27;s performance depends on how balanced the partitions are.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Worst case O(n²): already sorted, always unbalanced</li>\n<li>Best case O(n log n): perfect splits every time</li>\n<li>Average case O(n log n): even slightly unbalanced splits are fine</li>\n<li>Even 99-1 splits give O(n log n)!</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Worst: [1,2,3,4,5] with last element as pivot → partitions of size n-1 and 0 each time.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Understanding performance helps choose when to use quicksort.</p>\n</div>\n</div>"
+}

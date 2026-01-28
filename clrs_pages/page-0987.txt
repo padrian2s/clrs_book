@@ -1,0 +1,43 @@
+966   Chapter 31 Number-Theoretic Algorithms
+
+
+      50,847,534 and n= ln n  48,254,942. (To a number theorist, 109 is a small num-
+      ber.)
+         We can view the process of randomly selecting an integer n and determining
+      whether it is prime as a Bernoulli trial (see Section C.4). By the prime number
+      theorem, the probability of a success—that is, the probability that n is prime—is
+      approximately 1= ln n. The geometric distribution tells us how many trials we need
+      to obtain a success, and by equation (C.32), the expected number of trials is ap-
+      proximately ln n. Thus, we would expect to examine approximately ln n integers
+      chosen randomly near n in order to ﬁnd a prime that is of the same length as n.
+      For example, we expect that ﬁnding a 1024-bit prime would require testing ap-
+      proximately ln 21024  710 randomly chosen 1024-bit numbers for primality. (Of
+      course, we can cut this ﬁgure in half by choosing only odd integers.)
+         In the remainder of this section, we consider the problem of determining whether
+      or not a large odd integer n is prime. For notational convenience, we assume that n
+      has the prime factorization
+      n D p1e1 p2e2    prer ;                                                             (31.39)
+      where r  1, p1 ; p2 ; : : : ; pr are the prime factors of n, and e1 ; e2 ; : : : ; er are posi-
+      tive integers. The integer n is prime if and only if r D 1 and e1 D 1.
+         One simple approach to the problem ofp         testing for primality is trial division. We
+      try dividing n by each integer 2; 3; : : : ; b nc. (Again, we may skip even integers
+      greater than 2.) It is easy to see that n is prime if and only if none of the trial divi-
+      sors divides n. Assuming
+                           p         that each trial division takes constant time, the worst-case
+      running time is ‚. n/, which is exponential in the length of n. p            (Recall that if n
+      is encoded in binary using ˇ bits, then ˇ D dlg.n C 1/e, and so n D ‚.2ˇ=2 /.)
+      Thus, trial division works well only if n is very small or happens to have a small
+      prime factor. When it works, trial division has the advantage that it not only de-
+      termines whether n is prime or composite, but also determines one of n’s prime
+      factors if n is composite.
+         In this section, we are interested only in ﬁnding out whether a given number n
+      is prime; if n is composite, we are not concerned with ﬁnding its prime factor-
+      ization. As we shall see in Section 31.9, computing the prime factorization of a
+      number is computationally expensive. It is perhaps surprising that it is much easier
+      to tell whether or not a given number is prime than it is to determine the prime
+      factorization of the number if it is not prime.
+
+      Pseudoprimality testing
+      We now consider a method for primality testing that “almost works” and in fact
+      is good enough for many practical applications. Later on, we shall present a re-
+

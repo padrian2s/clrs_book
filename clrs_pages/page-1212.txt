@@ -1,0 +1,41 @@
+C.2 Probability                                                                    1191
+
+
+  In our coin-ﬂipping example, suppose that each of the four elementary events
+has probability 1=4. Then the probability of getting at least one head is
+Pr fHH; HT ; TH g D Pr fHHg C Pr fHTg C Pr fTH g
+                  D 3=4 :
+Alternatively, since the probability of getting strictly less than one head is
+Pr fTT g D 1=4, the probability of getting at least one head is 1  1=4 D 3=4.
+
+Discrete probability distributions
+A probability distribution is discrete if it is deﬁned over a ﬁnite or countably inﬁnite
+sample space. Let S be the sample space. Then for any event A,
+         X
+Pr fAg D      Pr fsg ;
+          s2A
+
+since elementary events, speciﬁcally those in A, are mutually exclusive. If S is
+ﬁnite and every elementary event s 2 S has probability
+Pr fsg D 1= jSj ;
+then we have the uniform probability distribution on S. In such a case the experi-
+ment is often described as “picking an element of S at random.”
+   As an example, consider the process of ﬂipping a fair coin, one for which the
+probability of obtaining a head is the same as the probability of obtaining a tail, that
+is, 1=2. If we ﬂip the coin n times, we have the uniform probability distribution
+deﬁned on the sample space S D fH; Tgn , a set of size 2n . We can represent each
+elementary event in S as a string of length n over fH; Tg, each string occurring with
+probability 1=2n . The event
+A D fexactly k heads and exactly n  k tails occurg
+is a subset of S of size jAj D nk , since kn strings of length n over fH; Tg contain
+exactly k H’s. The probability of event A is thus Pr fAg D kn =2n .
+
+Continuous uniform probability distribution
+The continuous uniform probability distribution is an example of a probability
+distribution in which not all subsets of the sample space are considered to be
+events. The continuous uniform probability distribution is deﬁned over a closed
+interval Œa; b of the reals, where a < b. Our intuition is that each point in the in-
+terval Œa; b should be “equally likely.” There are an uncountable number of points,
+however, so if we give all points the same ﬁnite, positive probability, we cannot si-
+multaneously satisfy axioms 2 and 3. For this reason, we would like to associate a
+

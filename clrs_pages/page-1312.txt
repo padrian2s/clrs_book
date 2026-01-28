@@ -1,0 +1,53 @@
+Index                                                                                    1291
+
+
+  computing a minimum spanning tree in,        upper-bound property, 650, 671–672
+      624–642                                  upper median, 213
+                                                                 p
+  converting to, from a multigraph, 593 ex.    upper square root "     , 546
+  d -regular, 736 ex.                          upper-triangular matrix, 1219, 1225 ex.
+  grid, 760 pr.
+  hamiltonian, 1061                            valid shift, 985
+  independent set of, 1101 pr.                 value
+  matching of, 732                                of a ﬂow, 710
+  nonhamiltonian, 1061                            of a function, 1166
+  vertex cover of, 1089, 1108                     objective, 847, 851
+  see also graph                               value over replacement player, 411 pr.
+undirected version of a directed graph, 1172   Vandermonde matrix, 902, 1226 pr.
+uniform hashing, 271                           van Emde Boas tree, 531–560
+uniform probability distribution, 1191–1192       cluster in, 546
+uniform random permutation, 116, 125              compared with proto van Emde Boas
+union                                                structures, 547
+  of dynamic sets, see uniting                    deletion from, 554–556
+  of languages, 1058                              insertion into, 552–554
+  of sets ([), 1159                               maximum in, 550
+U NION, 505, 562                                  membership in, 550
+  disjoint-set-forest implementation of, 571      minimum in, 550
+  linked-list implementation of, 565–567,         predecessor in, 551–552
+      568 ex.                                     with reduced space, 557 pr.
+union by rank, 569                                successor in, 550–551
+unique factorization of integers, 931             summary in, 546
+unit (1), 928                                  Var Œ  (variance), 1199
+uniting                                        variable
+  of Fibonacci heaps, 511–512                     basic, 855
+  of heaps, 506                                   entering, 867
+  of linked lists, 241 ex.                        leaving, 867
+  of 2-3-4 heaps, 529 pr.                         nonbasic, 855
+unit lower-triangular matrix, 1219                in pseudocode, 21
+unit-time task, 443                               random, 1196–1201
+unit upper-triangular matrix, 1219                slack, 855
+unit vector, 1218                                 see also indicator random variable
+universal collection of hash functions, 265    variable-length code, 429
+universal hashing, 265–268                     variance, 1199
+universal sink, 593 ex.                           of a binomial distribution, 1205
+universe, 1160                                    of a geometric distribution, 1203
+  of keys in van Emde Boas trees, 532          V EB-E MPTY-T REE -I NSERT, 553
+universe size, 532                             vEB tree, see van Emde Boas tree
+unmatched vertex, 732                          V EB-T REE -D ELETE, 554
+unsorted linked list, 236                      V EB-T REE -I NSERT , 553
+  see also linked list                         V EB-T REE -M AXIMUM , 550
+until, in pseudocode, 20                       V EB-T REE -M EMBER , 550
+unweighted longest simple paths, 382           V EB-T REE -M INIMUM , 550
+unweighted shortest paths, 381                 V EB-T REE -P REDECESSOR, 552
+upper bound, 47                                V EB-T REE -S UCCESSOR , 551
+

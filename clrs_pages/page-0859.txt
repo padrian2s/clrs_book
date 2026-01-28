@@ -1,0 +1,57 @@
+838   Chapter 28 Matrix Operations
+
+
+                             y
+                           3.0
+
+
+                           2.5
+
+                           2.0                  F(x) = 1.2 – 0.757x + 0.214x2
+
+
+                           1.5
+
+
+                           1.0
+
+
+                           0.5
+
+                           0.0                                                               x
+        –2           –1          0        1          2          3           4           5
+
+
+
+
+      Figure 28.3 The least-squares ﬁt of a quadratic polynomial to the set of ﬁve data points
+      f.1; 2/; .1; 1/; .2; 1/; .3; 0/; .5; 3/g. The black dots are the data points, and the white dots are their
+      estimated values predicted by the polynomial F .x/ D 1:2  0:757x C 0:214x 2 , the quadratic poly-
+
+
+
+                                                         
+      nomial that minimizes the sum of the squared errors. Each shaded line shows the error for one data
+      point.
+
+
+                 1    x1    x12               1 1 1
+                 1    x2    x22               1  1 1
+      AD         1    x3    x32      D        1  2 4             ;
+                 1    x4    x42               1  3 9
+                 1    x5    x52               1  5 25
+
+               0:500
+      whose pseudoinverse is
+                          0:300  0:200  0:100 0:100
+                                                                                
+      AC D        0:388  0:093  0:190  0:193 0:088                                :
+                   0:060 0:036 0:048 0:036  0:060
+
+              1:200 
+      Multiplying y by AC , we obtain the coefﬁcient vector
+
+      cD       0:757        ;
+                0:214
+      which corresponds to the quadratic polynomial
+

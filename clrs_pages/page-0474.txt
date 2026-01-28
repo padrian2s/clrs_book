@@ -1,0 +1,48 @@
+17.1 Aggregate analysis                                                                    453
+
+
+top    23
+       17
+        6
+       39
+       10         top     10
+       47                 47
+
+       (a)                (b)              (c)
+
+
+Figure 17.1 The action of M ULTIPOP on a stack S, shown initially in (a). The top 4 objects are
+popped by M ULTIPOP.S; 4/, whose result is shown in (b). The next operation is M ULTIPOP.S; 7/,
+which empties the stack—shown in (c)—since there were fewer than 7 objects remaining.
+
+
+M ULTIPOP .S; k/
+1 while not S TACK -E MPTY .S/ and k > 0
+2      P OP.S/
+3      k D k1
+
+Figure 17.1 shows an example of M ULTIPOP.
+   What is the running time of M ULTIPOP .S; k/ on a stack of s objects? The
+actual running time is linear in the number of P OP operations actually executed,
+and thus we can analyze M ULTIPOP in terms of the abstract costs of 1 each for
+P USH and P OP. The number of iterations of the while loop is the number min.s; k/
+of objects popped off the stack. Each iteration of the loop makes one call to P OP in
+line 2. Thus, the total cost of M ULTIPOP is min.s; k/, and the actual running time
+is a linear function of this cost.
+   Let us analyze a sequence of n P USH, P OP, and M ULTIPOP operations on an ini-
+tially empty stack. The worst-case cost of a M ULTIPOP operation in the sequence
+is O.n/, since the stack size is at most n. The worst-case time of any stack opera-
+tion is therefore O.n/, and hence a sequence of n operations costs O.n2 /, since we
+may have O.n/ M ULTIPOP operations costing O.n/ each. Although this analysis
+is correct, the O.n2 / result, which we obtained by considering the worst-case cost
+of each operation individually, is not tight.
+   Using aggregate analysis, we can obtain a better upper bound that considers the
+entire sequence of n operations. In fact, although a single M ULTIPOP operation
+can be expensive, any sequence of n P USH, P OP, and M ULTIPOP operations on an
+initially empty stack can cost at most O.n/. Why? We can pop each object from the
+stack at most once for each time we have pushed it onto the stack. Therefore, the
+number of times that P OP can be called on a nonempty stack, including calls within
+M ULTIPOP, is at most the number of P USH operations, which is at most n. For any
+value of n, any sequence of n P USH, P OP, and M ULTIPOP operations takes a total
+of O.n/ time. The average cost of an operation is O.n/=n D O.1/. In aggregate
+

@@ -1,0 +1,38 @@
+31.7 The RSA public-key cryptosystem                                              963
+
+
+Proof    From equations (31.37) and (31.38), we have that for any M 2 Zn ,
+P .S.M // D S.P .M // D M ed .mod n/ :
+Since e and d are multiplicative inverses modulo .n/ D .p  1/.q  1/,
+ed D 1 C k.p  1/.q  1/
+for some integer k. But then, if M 6 0 .mod p/, we have
+M ed         M.M p1 /k.q1/           .mod p/
+             M..M mod p/p1 /k.q1/    .mod p/
+             M.1/k.q1/                .mod p/        (by Theorem 31.31)
+             M                         .mod p/ :
+Also, M ed  M .mod p/ if M  0 .mod p/. Thus,
+M ed  M .mod p/
+for all M . Similarly,
+M ed  M .mod q/
+for all M . Thus, by Corollary 31.29 to the Chinese remainder theorem,
+M ed  M .mod n/
+for all M .
+
+   The security of the RSA cryptosystem rests in large part on the difﬁculty of fac-
+toring large integers. If an adversary can factor the modulus n in a public key, then
+the adversary can derive the secret key from the public key, using the knowledge
+of the factors p and q in the same way that the creator of the public key used them.
+Therefore, if factoring large integers is easy, then breaking the RSA cryptosystem
+is easy. The converse statement, that if factoring large integers is hard, then break-
+ing RSA is hard, is unproven. After two decades of research, however, no easier
+method has been found to break the RSA public-key cryptosystem than to factor
+the modulus n. And as we shall see in Section 31.9, factoring large integers is sur-
+prisingly difﬁcult. By randomly selecting and multiplying together two 1024-bit
+primes, we can create a public key that cannot be “broken” in any feasible amount
+of time with current technology. In the absence of a fundamental breakthrough in
+the design of number-theoretic algorithms, and when implemented with care fol-
+lowing recommended standards, the RSA cryptosystem is capable of providing a
+high degree of security in applications.
+   In order to achieve security with the RSA cryptosystem, however, we should
+use integers that are quite long—hundreds or even more than one thousand bits
+

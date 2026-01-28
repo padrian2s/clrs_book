@@ -1,0 +1,44 @@
+1084   Chapter 34 NP-Completeness
+
+
+
+       y1    y2    x2     .y1 $ .y2 ^ :x2 //
+        1    1      1             0
+        1    1      0             1
+        1    0      1             0
+        1    0      0             0
+        0    1      1             1
+        0    1      0             0
+        0    0      1             1
+        0    0      0             1
+
+
+
+       Figure 34.12     The truth table for the clause .y1 $ .y2 ^ :x2 //.
+
+
+       laws for propositional logic,
+       :.a ^ b/ D :a _ :b ;
+       :.a _ b/ D :a ^ :b ;
+       to complement all literals, change ORs into ANDs, and change ANDs into ORs.
+          In our example, we convert the clause 10 D .y1 $ .y2 ^ :x2 // into CNF
+       as follows. The truth table for 10 appears in Figure 34.12. The DNF formula
+       equivalent to :10 is
+       .y1 ^ y2 ^ x2 / _ .y1 ^ :y2 ^ x2 / _ .y1 ^ :y2 ^ :x2 / _ .:y1 ^ y2 ^ :x2 / :
+       Negating and applying DeMorgan’s laws, we get the CNF formula
+       100 D .:y1 _ :y2 _ :x2 / ^ .:y1 _ y2 _ :x2 /
+               ^ .:y1 _ y2 _ x2 / ^ .y1 _ :y2 _ x2 / ;
+       which is equivalent to the original clause 10 .
+          At this point, we have converted each clause i0 of the formula  0 into a CNF
+       formula i00 , and thus  0 is equivalent to the CNF formula  00 consisting of the
+       conjunction of the i00 . Moreover, each clause of  00 has at most 3 literals.
+          The third and ﬁnal step of the reduction further transforms the formula so that
+       each clause has exactly 3 distinct literals. We construct the ﬁnal 3-CNF formula  000
+       from the clauses of the CNF formula  00 . The formula  000 also uses two auxiliary
+       variables that we shall call p and q. For each clause Ci of  00 , we include the
+       following clauses in  000 :
+           If Ci has 3 distinct literals, then simply include Ci as a clause of  000 .
+           If Ci has 2 distinct literals, that is, if Ci D .l1 _ l2 /, where l1 and l2 are literals,
+            then include .l1 _ l2 _ p/ ^ .l1 _ l2 _ :p/ as clauses of  000 . The literals
+            p and :p merely fulﬁll the syntactic requirement that each clause of  000 has
+

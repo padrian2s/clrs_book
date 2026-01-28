@@ -1,0 +1,5 @@
+{
+  "page": 626,
+  "title": "23.1 Growing a Minimum Spanning Tree",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 23.1</div>\n    <h1>Growing a Minimum Spanning Tree</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Generic MST algorithm: grow tree edge by edge using safe edges.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>MST connects all vertices with minimum total edge weight</li>\n<li>Generic approach: maintain set A of edges, add safe edges</li>\n<li>Safe edge: adding it keeps A a subset of some MST</li>\n<li>Cut property: lightest edge crossing any cut is safe</li>\n<li>A cut (S, V-S) respects A if no edge of A crosses it</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Start with empty A. Find any cut, add its lightest crossing edge. Repeat until tree complete.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Framework for understanding Kruskal and Prim algorithms.</p>\n</div>\n</div>"
+}

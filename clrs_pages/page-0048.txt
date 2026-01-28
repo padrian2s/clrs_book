@@ -1,0 +1,54 @@
+2.2 Analyzing algorithms                                                            27
+
+
+X
+n
+             n.n C 1/
+       j D            1
+j D2
+                2
+
+and
+X n
+               n.n  1/
+     .j  1/ D
+j D2
+                  2
+
+(see Appendix A for a review of how to solve these summations), we ﬁnd that in
+the worst case, the running time of I NSERTION -S ORT is
+                                                              
+                                                 n.n C 1/
+T .n/ D c1 n C c2 .n  1/ C c4 .n  1/ C c5                1
+                                                     2
+                                             
+                     n.n  1/          n.n  1/
+            C c6                C c7              C c8 .n  1/
+                        2                 2
+            c
+               5    c6    c7  2                    c5 c6 c7          
+       D         C     C      n C c1 C c2 C c4 C                 C c8 n
+              2      2    2                           2    2     2
+             .c2 C c4 C c5 C c8 / :
+We can express this worst-case running time as an2 C bn C c for constants a, b,
+and c that again depend on the statement costs ci ; it is thus a quadratic function
+of n.
+   Typically, as in insertion sort, the running time of an algorithm is ﬁxed for a
+given input, although in later chapters we shall see some interesting “randomized”
+algorithms whose behavior can vary even for a ﬁxed input.
+
+Worst-case and average-case analysis
+In our analysis of insertion sort, we looked at both the best case, in which the input
+array was already sorted, and the worst case, in which the input array was reverse
+sorted. For the remainder of this book, though, we shall usually concentrate on
+ﬁnding only the worst-case running time, that is, the longest running time for any
+input of size n. We give three reasons for this orientation.
+      The worst-case running time of an algorithm gives us an upper bound on the
+       running time for any input. Knowing it provides a guarantee that the algorithm
+       will never take any longer. We need not make some educated guess about the
+       running time and hope that it never gets much worse.
+      For some algorithms, the worst case occurs fairly often. For example, in search-
+       ing a database for a particular piece of information, the searching algorithm’s
+       worst case will often occur when the information is not present in the database.
+       In some applications, searches for absent information may be frequent.
+

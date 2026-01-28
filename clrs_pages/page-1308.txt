@@ -1,0 +1,52 @@
+Index                                                                                  1287
+
+
+  k-sorting, 207 pr.                          spurious hit, 991
+  lexicographic, 304 pr.                      square matrix, 1218
+  in linear time, 194–204, 206 pr.            S QUARE -M ATRIX -M ULTIPLY, 75, 689
+  lower bounds for, 191–194, 211, 531         S QUARE -M ATRIX -M ULTIPLY-R ECURSIVE,
+  merge sort, 12, 30–37, 797–805                    77
+  by oblivious compare-exchange algorithms,   square of a directed graph, 593 ex.
+      208 pr.                                 square root, modulo a prime, 982 pr.
+  in place, 17, 148, 206 pr.                  squaring, repeated
+  of points by polar angle, 1020 ex.             for all-pairs shortest paths, 689–691
+  probabilistic lower bound for, 205 pr.         for raising a number to a power, 956
+  quicksort, 170–190                          stability
+  radix sort, 197–200                            numerical, 813, 815, 842
+  selection sort, 29 ex.                         of sorting algorithms, 196, 200 ex.
+  Shell’s sort, 42                            stack, 232–233
+  stable, 196                                    in Graham’s scan, 1030
+  table of running times, 149                    implemented by queues, 236 ex.
+  topological, 8, 612–615, 623                   linked-list implementation of, 240 ex.
+  using a binary search tree, 299 ex.            operations analyzed by accounting method,
+  with variable-length items, 206 pr.               457–458
+  0-1 sorting lemma, 208 pr.                     operations analyzed by aggregate analysis,
+sorting network, 811                                452–454
+source vertex, 594, 644, 709, 712                operations analyzed by potential method,
+span law, 780                                       460–461
+spanning tree, 439, 624                          for procedure execution, 188 pr.
+  bottleneck, 640 pr.                            on secondary storage, 502 pr.
+  maximum, 1137 pr.                           S TACK -E MPTY, 233
+  veriﬁcation of, 642                         standard deviation, 1200
+  see also minimum spanning tree              standard encoding (h i), 1057
+span, of a multithreaded computation, 779     standard form, 846, 850–854
+sparse graph, 589                             star-shaped polygon, 1038 ex.
+  all-pairs shortest paths for, 700–705       start state, 995
+  and Prim’s algorithm, 638 pr.               start time, 415
+sparse-hulled distribution, 1046 pr.          state of a ﬁnite automaton, 995
+spawn, in pseudocode, 776–777                 static graph, 562 n.
+spawn edge, 778                               static set of keys, 277
+speedup, 780                                  static threading, 773
+  of a randomized multithreaded algorithm,    stencil, 809 pr.
+      811 pr.                                 stencil calculation, 809 pr.
+spindle, 485                                  Stirling’s approximation, 57
+spine                                         storage management, 151, 243–244, 245 ex.,
+  of a string-matching automaton, 997 ﬁg.           261 ex.
+  of a treap, 333 pr.                         store instruction, 23
+splay tree, 338, 482                          straddle, 1017
+spline, 840 pr.                               strand, 777
+splitting                                        ﬁnal, 779
+  of B-tree nodes, 493–495                       independent, 789
+  of 2-3-4 trees, 503 pr.                        initial, 779
+splitting summations, 1152–1154                  logically in parallel, 778
+

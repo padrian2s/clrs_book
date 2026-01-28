@@ -1,0 +1,54 @@
+306   Chapter 12 Binary Search Trees
+
+
+      At each recursive invocation of quicksort, we choose a random pivot element to
+      partition the set of elements being sorted. Each node of a binary search tree parti-
+      tions the set of elements that fall into the subtree rooted at that node.
+
+      f. Describe an implementation of quicksort in which the comparisons to sort a set
+         of elements are exactly the same as the comparisons to insert the elements into
+         a binary search tree. (The order in which comparisons are made may differ, but
+         the same comparisons must occur.)
+
+      12-4 Number of different binary trees
+      Let bn denote the number of different binary trees with n nodes. In this problem,
+      you will ﬁnd a formula for bn , as well as an asymptotic estimate.
+
+      a. Show that b0 D 1 and that, for n  1,
+
+                X
+                n1
+         bn D         bk bn1k :
+                kD0
+
+
+      b. Referring to Problem 4-4 for the deﬁnition of a generating function, let B.x/
+         be the generating function
+
+                   X
+                   1
+         B.x/ D             bn x n :
+                      nD0
+
+
+         Show that B.x/ D xB.x/2 C 1, and hence one way to express B.x/ in closed
+         form is
+                       1    p
+         B.x/ D          1  1  4x :
+                      2x
+      The Taylor expansion of f .x/ around the point x D a is given by
+                X
+                1
+                  f .k/ .a/
+      f .x/ D                     .x  a/k ;
+                        kŠ
+                kD0
+
+      where f .k/ .x/ is the kth derivative of f evaluated at x.
+
+      c. Show that
+                                 !
+               1  2n
+         bn D
+              nC1 n
+

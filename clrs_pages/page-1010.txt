@@ -1,0 +1,49 @@
+32.1 The naive string-matching algorithm                                        989
+
+
+   As we shall see, NAIVE -S TRING -M ATCHER is not an optimal procedure for this
+problem. Indeed, in this chapter we shall see that the Knuth-Morris-Pratt algorithm
+is much better in the worst case. The naive string-matcher is inefﬁcient because
+it entirely ignores information gained about the text for one value of s when it
+considers other values of s. Such information can be quite valuable, however. For
+example, if P D aaab and we ﬁnd that s D 0 is valid, then none of the shifts 1, 2,
+or 3 are valid, since T Œ4 D b. In the following sections, we examine several ways
+to make effective use of this sort of information.
+
+Exercises
+
+32.1-1
+Show the comparisons the naive string matcher makes for the pattern P D 0001
+in the text T D 000010001010001.
+
+32.1-2
+Suppose that all characters in the pattern P are different. Show how to accelerate
+NAIVE -S TRING -M ATCHER to run in time O.n/ on an n-character text T .
+
+32.1-3
+Suppose that pattern P and text T are randomly chosen strings of length m and n,
+respectively, from the d -ary alphabet †d D f0; 1; : : : ; d  1g, where d  2. Show
+that the expected number of character-to-character comparisons made by the im-
+plicit loop in line 4 of the naive algorithm is
+             1  d m
+.n  m C 1/              2.n  m C 1/
+             1  d 1
+over all executions of this loop. (Assume that the naive algorithm stops comparing
+characters for a given shift once it ﬁnds a mismatch or matches the entire pattern.)
+Thus, for randomly chosen strings, the naive algorithm is quite efﬁcient.
+
+32.1-4
+Suppose we allow the pattern P to contain occurrences of a gap character } that
+can match an arbitrary string of characters (even one of zero length). For example,
+the pattern ab}ba}c occurs in the text cabccbacbacab as
+
+  ’’’“’
+c ab cc ba cba c ab
+  ab     }       ba    }       c
+and as
+
+  ’—’’’
+      c ab :
+c ab ccbac ba
+  ab         }        ba   }       c
+

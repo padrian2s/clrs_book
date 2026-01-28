@@ -1,0 +1,5 @@
+{
+  "page": 404,
+  "title": "15.3 Elements of Dynamic Programming",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 15.3</div>\n    <h1>Elements of Dynamic Programming</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>When to use DP: optimal substructure + overlapping subproblems.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Optimal substructure: optimal solution contains optimal solutions to subproblems</li>\n<li>Overlapping subproblems: same subproblems solved many times</li>\n<li>Memoization: top-down recursion with caching</li>\n<li>Tabulation: bottom-up, fill table in dependency order</li>\n<li>Reconstruct solution by storing choices</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Fibonacci: fib(5) = fib(4) + fib(3), and both fib(4) and fib(3) need fib(2).</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Recognizing DP problems is a key interview skill.</p>\n</div>\n</div>"
+}

@@ -1,0 +1,27 @@
+Introduction
+
+               This part will start you thinking about designing and analyzing algorithms. It is
+               intended to be a gentle introduction to how we specify algorithms, some of the
+               design strategies we will use throughout this book, and many of the fundamental
+               ideas used in algorithm analysis. Later parts of this book will build upon this base.
+                  Chapter 1 provides an overview of algorithms and their place in modern com-
+               puting systems. This chapter deﬁnes what an algorithm is and lists some examples.
+               It also makes a case that we should consider algorithms as a technology, along-
+               side technologies such as fast hardware, graphical user interfaces, object-oriented
+               systems, and networks.
+                  In Chapter 2, we see our ﬁrst algorithms, which solve the problem of sorting
+               a sequence of n numbers. They are written in a pseudocode which, although not
+               directly translatable to any conventional programming language, conveys the struc-
+               ture of the algorithm clearly enough that you should be able to implement it in the
+               language of your choice. The sorting algorithms we examine are insertion sort,
+               which uses an incremental approach, and merge sort, which uses a recursive tech-
+               nique known as “divide-and-conquer.” Although the time each requires increases
+               with the value of n, the rate of increase differs between the two algorithms. We
+               determine these running times in Chapter 2, and we develop a useful notation to
+               express them.
+                  Chapter 3 precisely deﬁnes this notation, which we call asymptotic notation. It
+               starts by deﬁning several asymptotic notations, which we use for bounding algo-
+               rithm running times from above and/or below. The rest of Chapter 3 is primarily
+               a presentation of mathematical notation, more to ensure that your use of notation
+               matches that in this book than to teach you new mathematical concepts.
+

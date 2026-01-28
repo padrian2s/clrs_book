@@ -1,0 +1,44 @@
+15.1 Rod cutting                                                                  369
+
+
+E XTENDED -B OTTOM -U P -C UT-ROD .p; n/
+ 1 let rŒ0 : : n and sŒ0 : : n be new arrays
+ 2 rŒ0 D 0
+ 3 for j D 1 to n
+ 4      q D 1
+ 5      for i D 1 to j
+ 6             if q < pŒi C rŒj  i
+ 7                  q D pŒi C rŒj  i
+ 8                  sŒj  D i
+ 9      rŒj  D q
+10 return r and s
+
+This procedure is similar to B OTTOM -U P -C UT-ROD, except that it creates the ar-
+ray s in line 1, and it updates sŒj  in line 8 to hold the optimal size i of the ﬁrst
+piece to cut off when solving a subproblem of size j .
+   The following procedure takes a price table p and a rod size n, and it calls
+E XTENDED -B OTTOM -U P -C UT-ROD to compute the array sŒ1 : : n of optimal
+ﬁrst-piece sizes and then prints out the complete list of piece sizes in an optimal
+decomposition of a rod of length n:
+
+P RINT-C UT-ROD -S OLUTION .p; n/
+1 .r; s/ D E XTENDED -B OTTOM -U P -C UT-ROD .p; n/
+2 while n > 0
+3      print sŒn
+4      n D n  sŒn
+
+In our rod-cutting example, the call E XTENDED -B OTTOM -U P -C UT-ROD .p; 10/
+would return the following arrays:
+ i   0 1 2 3 4 5 6 7 8 9 10
+rŒi 0 1 5 8 10 13 17 18 22 25 30
+sŒi 0 1 2 3 2 2 6 1 2 3 10
+A call to P RINT-C UT-ROD -S OLUTION .p; 10/ would print just 10, but a call with
+n D 7 would print the cuts 1 and 6, corresponding to the ﬁrst optimal decomposi-
+tion for r7 given earlier.
+
+Exercises
+
+15.1-1
+Show that equation (15.4) follows from equation (15.3) and the initial condition
+T .0/ D 1.
+

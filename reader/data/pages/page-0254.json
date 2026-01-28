@@ -1,0 +1,5 @@
+{
+  "page": 254,
+  "title": "11.1 Direct-Address Tables",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 11.1</div>\n    <h1>Direct-Address Tables</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>The simplest dictionary: use key directly as array index.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Array T[0..m-1] where m = size of key universe</li>\n<li>T[k] holds element with key k (or NIL if empty)</li>\n<li>INSERT, DELETE, SEARCH all O(1)</li>\n<li>Problem: universe might be huge (e.g., all possible strings)</li>\n<li>Wastes space if actual keys are sparse</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Keys 0-999: array of 1000 slots. T[42] = element with key 42.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Conceptual foundation for hash tables.</p>\n</div>\n</div>"
+}

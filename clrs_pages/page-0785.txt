@@ -1,0 +1,46 @@
+764   Chapter 26 Maximum Flow
+
+
+      a. Show that if M is a matching and P is an augmenting path with respect to M ,
+         then the symmetric difference M ˚ P is a matching and jM ˚ P j D jM j C 1.
+         Show that if P1 ; P2 ; : : : ; Pk are vertex-disjoint augmenting paths with respect
+         to M , then the symmetric difference M ˚ .P1 [ P2 [    [ Pk / is a matching
+         with cardinality jM j C k.
+
+      The general structure of our algorithm is the following:
+
+      H OPCROFT-K ARP .G/
+      1 M D;
+      2 repeat
+      3     let P D fP1 ; P2 ; : : : ; Pk g be a maximal set of vertex-disjoint
+                 shortest augmenting paths with respect to M
+      4     M D M ˚ .P1 [ P2 [    [ Pk /
+      5 until P == ;
+      6 return M
+
+         The remainder of this problem asks you to analyze the number of iterations in
+      the algorithm (that is, the number of iterations in the repeat loop) and to describe
+      an implementation of line 3.
+
+      b. Given two matchings M and M  in G, show that every vertex in the graph
+         G 0 D .V; M ˚ M  / has degree at most 2. Conclude that G 0 is a disjoint
+         union of simple paths or cycles. Argue that edges in each such simple path
+         or cycle belong alternately to M or M  . Prove that if jM j  jM  j, then
+         M ˚ M  contains at least jM  j  jM j vertex-disjoint augmenting paths with
+         respect to M .
+
+      Let l be the length of a shortest augmenting path with respect to a matching M , and
+      let P1 ; P2 ; : : : ; Pk be a maximal set of vertex-disjoint augmenting paths of length l
+      with respect to M . Let M 0 D M ˚.P1 [   [Pk /, and suppose that P is a shortest
+      augmenting path with respect to M 0 .
+
+      c. Show that if P is vertex-disjoint from P1 ; P2 ; : : : ; Pk , then P has more than l
+         edges.
+
+      d. Now suppose that P is not vertex-disjoint from P1 ; P2 ; : : : ; Pk . Let A be the
+         set of edges .M ˚ M 0 / ˚ P . Show that A D .P1 [ P2 [    [ Pk / ˚ P and
+         that jAj  .k C 1/l. Conclude that P has more than l edges.
+
+      e. Prove that if a shortest augmenting path with respect to M has l edges, the size
+         of the maximum matching is at most jM j C jV j =.l C 1/.
+

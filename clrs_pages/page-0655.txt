@@ -1,0 +1,42 @@
+634   Chapter 23 Minimum Spanning Trees
+
+
+      Prim’s algorithm
+      Like Kruskal’s algorithm, Prim’s algorithm is a special case of the generic min-
+      imum-spanning-tree method from Section 23.1. Prim’s algorithm operates much
+      like Dijkstra’s algorithm for ﬁnding shortest paths in a graph, which we shall see in
+      Section 24.3. Prim’s algorithm has the property that the edges in the set A always
+      form a single tree. As Figure 23.5 shows, the tree starts from an arbitrary root
+      vertex r and grows until the tree spans all the vertices in V . Each step adds to the
+      tree A a light edge that connects A to an isolated vertex—one on which no edge
+      of A is incident. By Corollary 23.2, this rule adds only edges that are safe for A;
+      therefore, when the algorithm terminates, the edges in A form a minimum spanning
+      tree. This strategy qualiﬁes as greedy since at each step it adds to the tree an edge
+      that contributes the minimum amount possible to the tree’s weight.
+         In order to implement Prim’s algorithm efﬁciently, we need a fast way to select
+      a new edge to add to the tree formed by the edges in A. In the pseudocode below,
+      the connected graph G and the root r of the minimum spanning tree to be grown
+      are inputs to the algorithm. During execution of the algorithm, all vertices that
+      are not in the tree reside in a min-priority queue Q based on a key attribute. For
+      each vertex , the attribute :key is the minimum weight of any edge connecting 
+      to a vertex in the tree; by convention, :key D 1 if there is no such edge. The
+      attribute : names the parent of  in the tree. The algorithm implicitly maintains
+      the set A from G ENERIC -MST as
+      A D f.; :/ W  2 V  frg  Qg :
+      When the algorithm terminates, the min-priority queue Q is empty; the minimum
+      spanning tree A for G is thus
+      A D f.; :/ W  2 V  frgg :
+
+      MST-P RIM .G; w; r/
+       1 for each u 2 G:V
+       2      u:key D 1
+       3      u: D NIL
+       4 r:key D 0
+       5 Q D G:V
+       6 while Q ¤ ;
+       7      u D E XTRACT-M IN .Q/
+       8      for each  2 G:AdjŒu
+       9           if  2 Q and w.u; / < :key
+      10                : D u
+      11                :key D w.u; /
+

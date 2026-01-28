@@ -1,0 +1,45 @@
+542   Chapter 20 van Emde Boas Trees
+
+
+      P ROTO - V EB-M INIMUM .V /
+       1 if V:u == 2
+       2        if V:AŒ0 == 1
+       3             return 0
+       4        elseif V:AŒ1 == 1
+       5             return 1
+       6        else return NIL
+       7 else min-cluster D P ROTO - V EB-M INIMUM .V:summary/
+       8        if min-cluster == NIL
+       9             return NIL
+      10        else offset D P ROTO - V EB-M INIMUM .V:clusterŒmin-cluster/
+      11             return index.min-cluster; offset/
+
+         This procedure works as follows. Line 1 tests for the base case, which lines 2–6
+      handle by brute force. Lines 7–11 handle the recursive case. First, line 7 ﬁnds the
+      number of the ﬁrst cluster that contains an element of the set. It does so by recur-
+                                                                                      p
+      sively calling P ROTO - V EB-M INIMUM on V:summary, which is a proto-EB. u/
+      structure. Line 7 assigns this cluster number to the variable min-cluster. If the set
+      is empty, then the recursive call returned NIL, and line 9 returns NIL. Otherwise,
+      the minimum element of the set is somewhere in cluster number min-cluster. The
+      recursive call in line 10 ﬁnds the offset within the cluster of the minimum element
+      in this cluster. Finally, line 11 constructs the value of the minimum element from
+      the cluster number and offset, and it returns this value.
+         Although querying the summary information allows us to quickly ﬁnd the clus-
+      ter containing the minimum
+                            p         element, because this procedure makes two recursive
+      calls on proto-EB. u/ structures, it does not run in O.lg lg u/ time in the worst
+      case. Letting T .u/ denote the worst-case time for P ROTO - V EB-M INIMUM on a
+      proto-EB.u/ structure, we have the recurrence
+                    p
+      T .u/ D 2T . u/ C O.1/ :                                                       (20.3)
+      Again, we use a change of variables to solve this recurrence, letting m D lg u,
+      which gives
+      T .2m / D 2T .2m=2 / C O.1/ :
+      Renaming S.m/ D T .2m / gives
+      S.m/ D 2S.m=2/ C O.1/ ;
+      which, by case 1 of the master method, has the solution S.m/ D ‚.m/. By chang-
+      ing back from S.m/ to T .u/, we have that T .u/ D T .2m / D S.m/ D ‚.m/ D
+      ‚.lg u/. Thus, we see that because of the second recursive call, P ROTO - V EB-
+      M INIMUM runs in ‚.lg u/ time rather than the desired O.lg lg u/ time.
+

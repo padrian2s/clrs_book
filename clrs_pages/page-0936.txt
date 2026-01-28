@@ -1,0 +1,46 @@
+           30.3 Efﬁcient FFT implementations                                                915
+
+
+           DFT is therefore a special case of the chirp transform, obtained by taking ´ D !n .
+           Show how to evaluate the chirp transform in time O.n lg n/ for any complex num-
+           ber ´. (Hint: Use the equation
+                        n1 
+                        X                       
+                    2             2           2
+           yk D ´k =2        aj ´j =2 ´.kj / =2
+                        j D0
+
+           to view the chirp transform as a convolution.)
+
+
+
+30.3 Efﬁcient FFT implementations
+
+           Since the practical applications of the DFT, such as signal processing, demand the
+           utmost speed, this section examines two efﬁcient FFT implementations. First, we
+           shall examine an iterative version of the FFT algorithm that runs in ‚.n lg n/ time
+           but can have a lower constant hidden in the ‚-notation than the recursive version
+           in Section 30.2. (Depending on the exact implementation, the recursive version
+           may use the hardware cache more efﬁciently.) Then, we shall use the insights that
+           led us to the iterative implementation to design an efﬁcient parallel FFT circuit.
+
+           An iterative FFT implementation
+           We ﬁrst note that the for loop of lines 10–13 of R ECURSIVE -FFT involves com-
+           puting the value !nk ykŒ1 twice. In compiler terminology, we call such a value a
+           common subexpression. We can change the loop to compute it only once, storing
+           it in a temporary variable t.
+
+               for k D 0 to n=2  1
+                    t D ! ykŒ1
+                    yk D ykŒ0 C t
+                    ykC.n=2/ D ykŒ0  t
+                    ! D ! !n
+
+           The operation in this loop, multiplying the twiddle factor ! D !nk by ykŒ1 , storing
+           the product into t, and adding and subtracting t from ykŒ0 , is known as a butterﬂy
+           operation and is shown schematically in Figure 30.3.
+              We now show how to make the FFT algorithm iterative rather than recursive
+           in structure. In Figure 30.4, we have arranged the input vectors to the recursive
+           calls in an invocation of R ECURSIVE -FFT in a tree structure, where the initial
+           call is for n D 8. The tree has one node for each call of the procedure, labeled
+

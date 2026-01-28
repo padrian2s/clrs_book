@@ -1,0 +1,67 @@
+138   Chapter 5 Probabilistic Analysis and Randomized Algorithms
+
+
+                    X
+                    n
+      E ŒL D              j Pr fLj g
+                    j D0
+
+                      X
+                    b.lg n/=2c
+                                                      X
+                                                      n
+              D                  j Pr fLj g C                     j Pr fLj g
+                      j D0                      j Db.lg n/=2cC1
+
+                      X
+                    b.lg n/=2c
+                                                       X
+                                                       n
+                                0  Pr fLj g C                     b.lg n/=2c Pr fLj g
+                      j D0                        j Db.lg n/=2cC1
+
+                             X
+                        b.lg n/=2c
+                                                                      X
+                                                                      n
+              D 0                   Pr fLj g C b.lg n/=2c                       Pr fLj g
+                           j D0                                j Db.lg n/=2cC1
+
+               0 C b.lg n/=2c .1  O.1=n//                            (by inequality (5.11))
+              D .lg n/ :
+         As with the birthday paradox, we can obtain a simpler but approximate analysis
+      using indicator random variables. We let Xi k D I fAi k g be the indicator random
+      variable associated with a streak of heads of length at least k beginning with the
+      ith coin ﬂip. To count the total number of such streaks, we deﬁne
+             X
+            nkC1
+      XD            Xi k :
+             i D1
+
+      Taking expectations and using linearity of expectation, we have
+                   "nkC1       #
+                      X
+      E ŒX  D E           Xi k
+                             i D1
+
+                     X
+                    nkC1
+              D               E ŒXi k 
+                      i D1
+
+                     X
+                    nkC1
+              D               Pr fAi k g
+                      i D1
+
+                     X
+                    nkC1
+              D               1=2k
+                      i D1
+                   nkC1
+              D                :
+                       2k
+         By plugging in various values for k, we can calculate the expected number of
+      streaks of length k. If this number is large (much greater than 1), then we expect
+      many streaks of length k to occur and the probability that one occurs is high. If
+

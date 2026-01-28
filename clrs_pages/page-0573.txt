@@ -1,0 +1,44 @@
+552   Chapter 20 van Emde Boas Trees
+
+
+         The V EB-T REE -P REDECESSOR procedure is symmetric to the V EB-T REE -
+      S UCCESSOR procedure, but with one additional case:
+
+      V EB-T REE -P REDECESSOR .V; x/
+       1 if V:u == 2
+       2      if x == 1 and V:min == 0
+       3           return 0
+       4      else return NIL
+       5 elseif V:max ¤ NIL and x > V:max
+       6      return V:max
+       7 else min-low D V EB-T REE -M INIMUM .V:clusterŒhigh.x//
+       8      if min-low ¤ NIL and low.x/ > min-low
+       9           offset D V EB-T REE -P REDECESSOR .V:clusterŒhigh.x/; low.x//
+      10           return index.high.x/; offset/
+      11      else pred-cluster D V EB-T REE -P REDECESSOR .V:summary; high.x//
+      12           if pred-cluster == NIL
+      13                if V:min ¤ NIL and x > V:min
+      14                     return V:min
+      15                else return NIL
+      16           else offset D V EB-T REE -M AXIMUM .V:clusterŒpred-cluster/
+      17                return index.pred-cluster; offset/
+
+         Lines 13–14 form the additional case. This case occurs when x’s predecessor,
+      if it exists, does not reside in x’s cluster. In V EB-T REE -S UCCESSOR, we were
+      assured that if x’s successor resides outside of x’s cluster, then it must reside in
+      a higher-numbered cluster. But if x’s predecessor is the minimum value in vEB
+      tree V , then the successor resides in no cluster at all. Line 13 checks for this
+      condition, and line 14 returns the minimum value as appropriate.
+         This extra case does not affect the asymptotic running time of V EB-T REE -
+      P REDECESSOR when compared with V EB-T REE -S UCCESSOR, and so V EB-
+      T REE -P REDECESSOR runs in O.lg lg u/ worst-case time.
+
+      Inserting an element
+      Now we examine how to insert an element into a vEB tree. Recall that P ROTO -
+      V EB-I NSERT made two recursive calls: one to insert the element and one to insert
+      the element’s cluster number into the summary. The V EB-T REE -I NSERT proce-
+      dure will make only one recursive call. How can we get away with just one? When
+      we insert an element, either the cluster that it goes into already has another element
+      or it does not. If the cluster already has another element, then the cluster number
+      is already in the summary, and so we do not need to make that recursive call. If
+

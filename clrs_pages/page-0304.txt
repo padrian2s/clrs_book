@@ -1,0 +1,46 @@
+Problems for Chapter 11                                                          283
+
+
+11-2 Slot-size bound for chaining
+Suppose that we have a hash table with n slots, with collisions resolved by chain-
+ing, and suppose that n keys are inserted into the table. Each key is equally likely
+to be hashed to each slot. Let M be the maximum number of keys in any slot after
+all the keys have been inserted. Your mission is to prove an O.lg n= lg lg n/ upper
+bound on E ŒM , the expected value of M .
+a. Argue that the probability Qk that exactly k keys hash to a particular slot is
+   given by
+           k                !
+            1         1 nk n
+   Qk D          1               :
+            n        n        k
+
+b. Let Pk be the probability that M D k, that is, the probability that the slot
+   containing the most keys contains k keys. Show that Pk  nQk .
+
+c. Use Stirling’s approximation, equation (3.18), to show that Qk < e k =k k .
+
+d. Show that there exists a constant c > 1 such that Qk0 < 1=n3 for k0 D
+   c lg n= lg lg n. Conclude that Pk < 1=n2 for k  k0 D c lg n= lg lg n.
+
+e. Argue that
+                                               
+                    c lg n                 c lg n     c lg n
+   E ŒM   Pr M >            n C Pr M                    :
+                   lg lg n                lg lg n lg lg n
+   Conclude that E ŒM  D O.lg n= lg lg n/.
+
+11-3 Quadratic probing
+Suppose that we are given a key k to search for in a hash table with positions
+0; 1; : : : ; m  1, and suppose that we have a hash function h mapping the key space
+into the set f0; 1; : : : ; m  1g. The search scheme is as follows:
+1. Compute the value j D h.k/, and set i D 0.
+2. Probe in position j for the desired key k. If you ﬁnd it, or if this position is
+   empty, terminate the search.
+3. Set i D i C 1. If i now equals m, the table is full, so terminate the search.
+   Otherwise, set j D .i C j / mod m, and return to step 2.
+Assume that m is a power of 2.
+a. Show that this scheme is an instance of the general “quadratic probing” scheme
+   by exhibiting the appropriate constants c1 and c2 for equation (11.5).
+
+b. Prove that this algorithm examines every table position in the worst case.
+

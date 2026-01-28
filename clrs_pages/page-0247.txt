@@ -1,0 +1,54 @@
+226   Chapter 9 Medians and Order Statistics
+
+
+      a. Describe an algorithm that uses Ui .n/ comparisons to ﬁnd the ith smallest of n
+         elements, where
+                  (
+                    T .n/                          if i  n=2 ;
+         Ui .n/ D
+                    bn=2c C Ui .dn=2e/ C T .2i/ otherwise :
+
+         (Hint: Begin with bn=2c disjoint pairwise comparisons, and recurse on the set
+         containing the smaller element from each pair.)
+
+      b. Show that, if i < n=2, then Ui .n/ D n C O.T .2i/ lg.n=i//.
+
+      c. Show that if i is a constant less than n=2, then Ui .n/ D n C O.lg n/.
+
+      d. Show that if i D n=k for k  2, then Ui .n/ D n C O.T .2n=k/ lg k/.
+
+      9-4 Alternative analysis of randomized selection
+      In this problem, we use indicator random variables to analyze the R ANDOMIZED -
+      S ELECT procedure in a manner akin to our analysis of R ANDOMIZED -Q UICKSORT
+      in Section 7.4.2.
+         As in the quicksort analysis, we assume that all elements are distinct, and we
+      rename the elements of the input array A as ´1 ; ´2 ; : : : ; ´n , where ´i is the ith
+      smallest element. Thus, the call R ANDOMIZED -S ELECT .A; 1; n; k/ returns ´k .
+         For 1  i < j  n, let
+      Xijk D I f ´i is compared with ´j sometime during the execution of the algorithm
+                 to ﬁnd ´k g :
+
+      a. Give an exact expression for E ŒXijk . (Hint: Your expression may have differ-
+         ent values, depending on the values of i, j , and k.)
+
+      b. Let Xk denote the total number of comparisons between elements of array A
+         when ﬁnding ´k . Show that
+                                                                                  !
+                        X
+                        k X
+                          n
+                                       1      X
+                                              n
+                                                j k1 X ki 1
+                                                           k2
+         E ŒXk   2                        C            C                            :
+                        i D1 j Dk
+                                    j i C1     j  k C 1 i D1 k  i C 1
+                                               j DkC1
+
+
+      c. Show that E ŒXk   4n.
+
+      d. Conclude that, assuming all elements of array A are distinct, R ANDOMIZED -
+         S ELECT runs in expected time O.n/.
+

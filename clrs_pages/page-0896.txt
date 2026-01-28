@@ -1,0 +1,42 @@
+29.3 The simplex algorithm                                                        875
+
+
+   The assignment in line 14 of P IVOT, y D  C ce bye , changes the objective value.
+Since S IMPLEX calls P IVOT only when ce > 0, the only way for the objective
+value to remain unchanged (i.e., y D ) is for bye to be 0. This value is assigned
+as bye D bl =ale in line 3 of P IVOT. Since we always call P IVOT with ale ¤ 0, we
+see that for bye to equal 0, and hence the objective value to be unchanged, we must
+have bl D 0.
+   Indeed, this situation can occur. Consider the linear program
+ ´ D            x1      C x2     C x3
+x4 D 8         x1       x2
+x5 D                      x2      x3 :
+Suppose that we choose x1 as the entering variable and x4 as the leaving variable.
+After pivoting, we obtain
+ ´ D 8                  C x3      x4
+x1 D 8         x2                x4
+x5 D            x2       x3 :
+At this point, our only choice is to pivot with x3 entering and x5 leaving. Since
+b5 D 0, the objective value of 8 remains unchanged after pivoting:
+ ´ D 8        C x2       x4      x5
+x1 D 8         x2       x4
+x3 D            x2                x5 :
+The objective value has not changed, but our slack form has. Fortunately, if we
+pivot again, with x2 entering and x1 leaving, the objective value increases (to 16),
+and the simplex algorithm can continue.
+   Degeneracy can prevent the simplex algorithm from terminating, because it can
+lead to a phenomenon known as cycling: the slack forms at two different itera-
+tions of S IMPLEX are identical. Because of degeneracy, S IMPLEX could choose a
+sequence of pivot operations that leave the objective value unchanged but repeat
+a slack form within the sequence. Since S IMPLEX is a deterministic algorithm, if
+it cycles, then it will cycle through the same series of slack forms forever, never
+terminating.
+   Cycling is the only reason that S IMPLEX might not terminate. To show this fact,
+we must ﬁrst develop some additional machinery.
+   At each iteration, S IMPLEX maintains A, b, c, and  in addition to the sets
+N and B. Although we need to explicitly maintain A, b, c, and  in order to
+implement the simplex algorithm efﬁciently, we can get by without maintaining
+them. In other words, the sets of basic and nonbasic variables sufﬁce to uniquely
+determine the slack form. Before proving this fact, we prove a useful algebraic
+lemma.
+

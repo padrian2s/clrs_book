@@ -1,0 +1,42 @@
+466   Chapter 17 Amortized Analysis
+
+
+      no credit. We charge 3 dollars for each insertion. The elementary insertion that
+      occurs immediately costs 1 dollar. We place another dollar as credit on the item
+      inserted. We place the third dollar as credit on one of the m=2 items already in the
+      table. The table will not ﬁll again until we have inserted another m=2  1 items,
+      and thus, by the time the table contains m items and is full, we will have placed a
+      dollar on each item to pay to reinsert it during the expansion.
+         We can use the potential method to analyze a sequence of n TABLE -I NSERT
+      operations, and we shall use it in Section 17.4.2 to design a TABLE -D ELETE op-
+      eration that has an O.1/ amortized cost as well. We start by deﬁning a potential
+      function ˆ that is 0 immediately after an expansion but builds to the table size by
+      the time the table is full, so that we can pay for the next expansion by the potential.
+      The function
+      ˆ.T / D 2  T:num  T:size                                                      (17.5)
+      is one possibility. Immediately after an expansion, we have T:num D T:size=2,
+      and thus ˆ.T / D 0, as desired. Immediately before an expansion, we have
+      T:num D T:size, and thus ˆ.T / D T:num, as desired. The initial value of the
+      potential is 0, and since the table is always at least half full, T:num  T:size=2,
+      which implies that ˆ.T / is always nonnegative. Thus, the sum of the amortized
+      costs of n TABLE -I NSERT operations gives an upper bound on the sum of the actual
+      costs.
+         To analyze the amortized cost of the ith TABLE -I NSERT operation, we let numi
+      denote the number of items stored in the table after the ith operation, sizei denote
+      the total size of the table after the ith operation, and ˆi denote the potential after
+      the ith operation. Initially, we have num0 D 0, size0 D 0, and ˆ0 D 0.
+         If the ith TABLE -I NSERT operation does not trigger an expansion, then we have
+      sizei D sizei 1 and the amortized cost of the operation is
+      cyi   D   ci C ˆi  ˆi 1
+            D   1 C .2  numi  sizei /  .2  numi 1  sizei 1 /
+            D   1 C .2  numi  sizei /  .2.numi  1/  sizei /
+            D   3:
+      If the ith operation does trigger an expansion, then we have sizei D 2  sizei 1 and
+      sizei 1 D numi 1 D numi  1, which implies that sizei D 2  .numi  1/. Thus,
+      the amortized cost of the operation is
+      cyi   D   ci C ˆi  ˆi 1
+            D   numi C .2  numi  sizei /  .2  numi 1  sizei 1 /
+            D   numi C .2  numi  2  .numi  1//  .2.numi  1/  .numi  1//
+            D   numi C 2  .numi  1/
+            D   3:
+

@@ -1,0 +1,53 @@
+1288   Index
+
+
+          logically in series, 778                          success, in a Bernoulli trial, 1201
+       Strassen’s algorithm, 79–83, 111–112                 successor
+          multithreaded, 795–796                               in binary search trees, 291–292
+       streaks, 135–139                                        in a bit vector with a superimposed binary
+       strictly decreasing, 53                                    tree, 533
+       strictly increasing, 53                                 in a bit vector with a superimposed tree of
+       string, 985, 1184                                          constant height, 535
+       string matching, 985–1013                               ﬁnding ith, of a node in an order-statistic
+          based on repetition factors, 1012 pr.                   tree, 344 ex.
+          by ﬁnite automata, 995–1002                          in linked lists, 236
+          with gap characters, 989 ex., 1002 ex.               in order-statistic trees, 347 ex.
+          Knuth-Morris-Pratt algorithm for,                    in proto van Emde Boas structures, 543–544
+             1002–1013                                         in red-black trees, 311
+          naive algorithm for, 988–990                         in Van Emde Boas trees, 550–551
+          Rabin-Karp algorithm for, 990–995, 1013           S UCCESSOR, 230
+       string-matching automaton, 996–1002,                 such that (W), 1159
+             1002 ex.                                       sufﬁx (=), 986
+       strongly connected component, 1170                   sufﬁx function, 996
+          decomposition into, 615–621, 623                  sufﬁx-function inequality, 999
+       S TRONGLY-C ONNECTED -C OMPONENTS, 617               sufﬁx-function
+                                                                   P          recursion lemma, 1000
+       strongly connected graph, 1170                       sum . /, 1145
+       subgraph, 1171                                          Cartesian, 906 ex.
+          predecessor, see predecessor subgraph                inﬁnite, 1145
+       subgraph-isomorphism problem, 1100 ex.                  of matrices, 1220
+       subgroup, 943–946                                       of polynomials, 898
+       subpath, 1170                                           rule of, 1183
+       subproblem graph, 367–368                               telescoping, 1148
+       subroutine                                           S UM -A RRAYS, 805 pr.
+          calling, 21, 23, 25 n.                            S UM -A RRAYS0, 805 pr.
+          executing, 25 n.                                  summary
+       subsequence, 391                                        in a bit vector with a superimposed tree of
+       subset (), 1159, 1161                                     constant height, 534
+          hereditary family of, 437                            in proto van Emde Boas structures, 540
+          independent family of, 437                           in van Emde Boas trees, 546
+       SUBSET-SUM, 1097                                     summation, 1145–1157
+       subset-sum problem                                      in asymptotic notation, 49–50, 1146
+          approximation algorithm for, 1128–1134,              bounding, 1149–1156
+             1139                                              formulas and properties of, 1145–1149
+          NP-completeness of, 1097–1100                        linearity of, 1146
+          with unary target, 1101 ex.                       summation lemma, 908
+       substitution method, 83–88                           supercomputer, 772
+          and recursion trees, 91–92                        superpolynomial time, 1048
+       substring, 1184                                      supersink, 712
+       subtract instruction, 23                             supersource, 712
+       subtraction of matrices, 1221                        surjection, 1167
+       subtree, 1176                                        SVD, 842
+          maintaining sizes of, in order-statistic trees,   sweeping, 1021–1029, 1045 pr.
+             343–344                                           rotational, 1030–1038
+

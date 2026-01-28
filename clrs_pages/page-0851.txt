@@ -1,0 +1,43 @@
+830   Chapter 28 Matrix Operations
+
+                                                     
+               B   CT                1           R T
+      AD                    and A         D                 :                   (28.11)
+               C   D                              U V
+      Then, if we let
+      S D D  CB 1 C T                                                         (28.12)
+      be the Schur complement of A with respect to B (we shall see more about this form
+      of Schur complement in Section 28.3), we have
+                       1                                           
+        1      R T          B C B 1 C T S 1 CB 1 B 1 C T S 1
+      A D               D                                                ;      (28.13)
+                U V                S 1 CB 1               S 1
+      since AA1 D In , as you can verify by performing the matrix multiplication. Be-
+      cause A is symmetric and positive-deﬁnite, Lemmas 28.4 and 28.5 in Section 28.3
+      imply that B and S are both symmetric and positive-deﬁnite. By Lemma 28.3 in
+      Section 28.3, therefore, the inverses B 1 and S 1 exist, and by Exercise D.2-6,
+      B 1 and S 1 are symmetric, so that .B 1 /T D B 1 and .S 1 /T D S 1 . There-
+      fore, we can compute the submatrices R, T , U , and V of A1 as follows, where
+      all matrices mentioned are n=2 n=2:
+      1. Form the submatrices B, C , C T , and D of A.
+      2. Recursively compute the inverse B 1 of B.
+      3. Compute the matrix product W D CB 1 , and then compute its transpose W T ,
+         which equals B 1 C T (by Exercise D.1-2 and .B 1 /T D B 1 ).
+      4. Compute the matrix product X D W C T , which equals CB 1 C T , and then
+         compute the matrix S D D  X D D  CB 1 C T .
+      5. Recursively compute the inverse S 1 of S, and set V to S 1 .
+      6. Compute the matrix product Y D S 1 W , which equals S 1 CB 1 , and
+         then compute its transpose Y T , which equals B 1 C T S 1 (by Exercise D.1-2,
+         .B 1 /T D B 1 , and .S 1 /T D S 1 ). Set T to Y T and U to Y .
+      7. Compute the matrix product Z D W T Y , which equals B 1 C T S 1 CB 1 , and
+         set R to B 1 C Z.
+         Thus, we can invert an n n symmetric positive-deﬁnite matrix by inverting two
+      n=2 n=2 matrices in steps 2 and 5; performing four multiplications of n=2 n=2
+      matrices in steps 3, 4, 6, and 7; plus an additional cost of O.n2 / for extracting
+      submatrices from A, inserting submatrices into A1 , and performing a constant
+      number of additions, subtractions, and transposes on n=2 n=2 matrices. We get
+      the recurrence
+      I.n/  2I.n=2/ C 4M.n=2/ C O.n2 /
+           D 2I.n=2/ C ‚.M.n//
+           D O.M.n// :
+

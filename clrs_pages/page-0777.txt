@@ -1,0 +1,60 @@
+756   Chapter 26 Maximum Flow
+
+
+
+              6
+                    s
+              5                                                               L:     x    y     z
+                   –26
+              4                                                               N:     s    s     x
+                               14
+      (a)     3       12         /14                                                 y    x     y
+              2          /12                                                         z    z     t
+              1                                                                      t
+                                     x     5   y     8     z      10   t
+              0
+                                    12         14          0           0
+                                               7    16
+              6
+                    s
+              5                                                               L:     x    y     z
+                   –26
+              4                                                               N:     s    s     x
+                               14
+      (b)     3         /12      /14                                                 y    x     y
+                      12
+              2                                     7/16                             z    z     t
+                                    x                 7
+              1                                                                      t
+                                    0          y           z           t
+              0                          5/5          8           10
+                                               19          0           7
+
+
+                                               y
+              6
+                    s          8/14            0
+              5                                                               L:     y    x     z
+                   –20
+              4                                                               N:     s    s     x
+      (c)     3       12                 5          8/8                              x    y     y
+                         /12
+              2                                            7/16                      z    z     t
+                                    x
+              1                                 7                                         t
+                                    5                      z           t
+              0                                                   10
+                                                           8           7
+
+
+      Figure 26.10 The action of R ELABEL -T O -F RONT . (a) A ﬂow network just before the ﬁrst iteration
+      of the while loop. Initially, 26 units of ﬂow leave source s. On the right is shown the initial list
+      L D hx; y; ´i, where initially u D x. Under each vertex in list L is its neighbor list, with the current
+      neighbor shaded. Vertex x is discharged. It is relabeled to height 1, 5 units of excess ﬂow are pushed
+      to y, and the 7 remaining units of excess are pushed to the sink t. Because x is relabeled, it moves
+      to the head of L, which in this case does not change the structure of L. (b) After x, the next vertex
+      in L that is discharged is y. Figure 26.9 shows the detailed action of discharging y in this situation.
+      Because y is relabeled, it is moved to the head of L. (c) Vertex x now follows y in L, and so it is
+      again discharged, pushing all 5 units of excess ﬂow to t. Because vertex x is not relabeled in this
+      discharge operation, it remains in place in list L.
+

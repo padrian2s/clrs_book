@@ -1,0 +1,45 @@
+29.1 Standard and slack forms                                                     855
+
+
+be an inequality constraint. We introduce a new variable s and rewrite inequal-
+ity (29.29) as the two constraints
+              X
+              n
+s D bi              aij xj ;                                                 (29.30)
+              j D1
+s  0:                                                                        (29.31)
+We call s a slack variable because it measures the slack, or difference, between
+the left-hand and right-hand sides of equation (29.29). (We shall soon see why we
+ﬁnd it convenient to write the constraint with only the slack variable on the left-
+hand side.) Because inequality (29.29) is true if and only if both equation (29.30)
+and inequality (29.31) are true, we can convert each inequality constraint of a lin-
+ear program in this way to obtain an equivalent linear program in which the only
+inequality constraints are the nonnegativity constraints. When converting from
+standard to slack form, we shall use xnCi (instead of s) to denote the slack variable
+associated with the ith inequality. The ith constraint is therefore
+              X
+              n
+xnCi D bi           aij xj ;                                                 (29.32)
+              j D1
+
+along with the nonnegativity constraint xnCi  0.
+   By converting each constraint of a linear program in standard form, we obtain a
+linear program in a different form. For example, for the linear program described
+in (29.24)–(29.28), we introduce slack variables x4 , x5 , and x6 , obtaining
+maximize                              2x1      3x2   C 3x3                   (29.33)
+subject to
+              x4 D         7  x1              x2 C x3                       (29.34)
+              x5 D 7 C x1                    C x2  x3                       (29.35)
+              x6 D         4  x1             C 2x2  2x3                     (29.36)
+                x1 ; x2 ; x3 ; x4 ; x5 ; x6      0 :                         (29.37)
+In this linear program, all the constraints except for the nonnegativity constraints
+are equalities, and each variable is subject to a nonnegativity constraint. We write
+each equality constraint with one of the variables on the left-hand side of the equal-
+ity and all others on the right-hand side. Furthermore, each equation has the same
+set of variables on the right-hand side, and these variables are also the only ones
+that appear in the objective function. We call the variables on the left-hand side of
+the equalities basic variables and those on the right-hand side nonbasic variables.
+   For linear programs that satisfy these conditions, we shall sometimes omit the
+words “maximize” and “subject to,” as well as the explicit nonnegativity con-
+straints. We shall also use the variable ´ to denote the value of the objective func-
+

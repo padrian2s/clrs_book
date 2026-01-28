@@ -1,0 +1,5 @@
+{
+  "page": 24,
+  "title": "2.2 Analyzing Algorithms",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 2.2</div>\n    <h1>Analyzing Algorithms</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>How to measure algorithm performance: count operations as a function of input size.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Running time = number of primitive operations executed</li>\n<li>Focus on worst-case (guarantees), sometimes average-case</li>\n<li>Express time as T(n) where n = input size</li>\n<li>Ignore constants, focus on growth rate</li>\n<li>Insertion sort: T(n) = c₁n² + c₂n + c₃ ≈ O(n²)</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Insertion sort inner loop runs at most j-1 times for element j. Total: 1+2+3+...+(n-1) = n(n-1)/2 = O(n²)</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Analysis lets us predict performance and compare algorithms before implementing.</p>\n</div>\n</div>"
+}

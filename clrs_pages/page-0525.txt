@@ -1,0 +1,48 @@
+504        Chapter 18 B-Trees
+
+
+           how to implement these operations on 2-3-4 trees. We assume for convenience that
+           elements consist only of keys and that all key values are distinct.
+
+           a. Show how to maintain, for every node x of a 2-3-4 tree, the height of the subtree
+              rooted at x as an attribute x:height. Make sure that your implementation does
+              not affect the asymptotic running times of searching, insertion, and deletion.
+
+           b. Show how to implement the join operation. Given two 2-3-4 trees T 0 and T 00
+              and a key k, the join operation should run in O.1 C jh0  h00 j/ time, where h0
+              and h00 are the heights of T 0 and T 00 , respectively.
+
+           c. Consider the simple path p from the root of a 2-3-4 tree T to a given key k,
+              the set S 0 of keys in T that are less than k, and the set S 00 of keys in T that are
+              greater than k. Show that p breaks S 0 into a set of trees fT00 ; T10 ; : : : ; Tm0 g and a
+              set of keys fk10 ; k20 ; : : : ; km
+                                                0
+                                                  g, where, for i D 1; 2; : : : ; m, we have y < ki0 < ´
+              for any keys y 2 Ti 1 and ´ 2 Ti0 . What is the relationship between the heights
+                                      0
+
+              of Ti01 and Ti0 ? Describe how p breaks S 00 into sets of trees and keys.
+
+           d. Show how to implement the split operation on T . Use the join operation to
+              assemble the keys in S 0 into a single 2-3-4 tree T 0 and the keys in S 00 into a
+              single 2-3-4 tree T 00 . The running time of the split operation should be O.lg n/,
+              where n is the number of keys in T . (Hint: The costs for joining should tele-
+              scope.)
+
+
+Chapter notes
+
+           Knuth [211], Aho, Hopcroft, and Ullman [5], and Sedgewick [306] give further
+           discussions of balanced-tree schemes and B-trees. Comer [74] provides a compre-
+           hensive survey of B-trees. Guibas and Sedgewick [155] discuss the relationships
+           among various kinds of balanced-tree schemes, including red-black trees and 2-3-4
+           trees.
+              In 1970, J. E. Hopcroft invented 2-3 trees, a precursor to B-trees and 2-3-4
+           trees, in which every internal node has either two or three children. Bayer and
+           McCreight [35] introduced B-trees in 1972; they did not explain their choice of
+           name.
+              Bender, Demaine, and Farach-Colton [40] studied how to make B-trees perform
+           well in the presence of memory-hierarchy effects. Their cache-oblivious algo-
+           rithms work efﬁciently without explicitly knowing the data transfer sizes within
+           the memory hierarchy.
+

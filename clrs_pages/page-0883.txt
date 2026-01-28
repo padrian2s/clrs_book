@@ -1,0 +1,52 @@
+862   Chapter 29 Linear Programming
+
+
+             5                c=                                            1/
+           c= 2
+                      x      a= 2                        2/5 2       x     a= 2
+            a=                  7                        a=                   7
+                          c=1                                            1/1
+       s                              t             s                                  t
+                          a=3                                            a=3
+            c=                  4                        2/
+           a= 2       y      c= 1                       a= 2         y         3/4 1
+              5               a =                          5                   a=
+                     (a)                                            (b)
+
+
+      Figure 29.3 (a) An example of a minimum-cost-ﬂow problem. We denote the capacities by c and
+      the costs by a. Vertex s is the source and vertex t is the sink, and we wish to send 4 units of ﬂow
+      from s to t. (b) A solution to the minimum-cost ﬂow problem in which 4 units of ﬂow are sent from s
+      to t. For each edge, the ﬂow and capacity are written as ﬂow/capacity.
+
+
+      straint that the value of the ﬂow be exactly d units, and with the new objective
+      function of minimizing the cost:
+                      X
+      minimize             a.u; /fu                                         (29.51)
+                     .u;/2E
+      subject to
+                                          fu    c.u; / for each u;  2 V ;
+                     X              X
+                           fu           fu D 0                for each u 2 V  fs; tg ;
+                     2V            2V
+                     X              X
+                            fs          fs D d ;
+                     2V            2V
+                                          fu    0              for each u;  2 V :            (29.52)
+
+      Multicommodity ﬂow
+      As a ﬁnal example, we consider another ﬂow problem. Suppose that the Lucky
+      Puck company from Section 26.1 decides to diversify its product line and ship
+      not only hockey pucks, but also hockey sticks and hockey helmets. Each piece of
+      equipment is manufactured in its own factory, has its own warehouse, and must
+      be shipped, each day, from factory to warehouse. The sticks are manufactured in
+      Vancouver and must be shipped to Saskatoon, and the helmets are manufactured in
+      Edmonton and must be shipped to Regina. The capacity of the shipping network
+      does not change, however, and the different items, or commodities, must share the
+      same network.
+         This example is an instance of a multicommodity-ﬂow problem. In this problem,
+      we are again given a directed graph G D .V; E/ in which each edge .u; / 2 E
+      has a nonnegative capacity c.u; /  0. As in the maximum-ﬂow problem, we im-
+      plicitly assume that c.u; / D 0 for .u; / 62 E, and that the graph has no antipar-
+

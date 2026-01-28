@@ -1,0 +1,41 @@
+5.4 Probabilistic analysis and further uses of indicator random variables        137
+
+
+of length s by partitioning the n ﬂips into approximately n=s groups of s ﬂips
+each. If we choose s D b.lg n/=2c, we can show that it is likely that at least one
+of these groups comes up all heads, and hence it is likely that the longest streak
+has length at least s D .lg n/. We then show that the longest streak has expected
+length .lg n/.
+   We partition the n coin ﬂips into at least bn= b.lg n/=2cc groups of b.lg n/=2c
+consecutive ﬂips, and we bound the probability that no group comes up all heads.
+By equation (5.8), the probability that the group starting in position i comes up all
+heads is
+Pr fAi;b.lg n/=2c g D 1=2b.lg n/=2c
+                        p
+                     1= n :
+The probability that a streak of heads ofplength at least b.lg n/=2c does not begin
+in position i is therefore at most 1  1= n. Since the bn= b.lg n/=2cc groups are
+formed from mutually exclusive, independent coin ﬂips, the probability that every
+one of these groups fails to be a streak of length b.lg n/=2c is at most
+        p bn=b.lg n/=2cc               p n=b.lg n/=2c1
+ 1  1= n                   1  1= n
+                                       p 2n= lg n1
+                            1  1= n
+                                                 p
+                               e .2n= lg n1/= n
+                              D O.e  lg n /
+                              D O.1=n/ :
+                                                         x
+                                           p 1 C x  e , and the fact, which you
+For this argument, we used inequality (3.12),
+might want to verify, that .2n= lg n  1/= n  lg n for sufﬁciently large n.
+  Thus, the probability that the longest streak exceeds b.lg n/=2c is
+     X
+     n
+                  Pr fLj g  1  O.1=n/ :                                     (5.11)
+j Db.lg n/=2cC1
+
+We can now calculate a lower bound on the expected length of the longest streak,
+beginning with equation (5.10) and proceeding in a manner similar to our analysis
+of the upper bound:
+

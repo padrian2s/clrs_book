@@ -1,0 +1,5 @@
+{
+  "page": 443,
+  "title": "Greedy Algorithms",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 16</div>\n    <h1>Greedy Algorithms</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>IV: Advanced Techniques</h4>\n    <h3>Chapter 16: Greedy Algorithms</h3>\n    <p><em>Making locally optimal choices for global optimum</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>Greedy choice property: local best → global best</li>\n<li>Never reconsider choices</li>\n<li>Simpler than DP when it works</li>\n<li>Doesn&#x27;t always work - need proof!</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>Huffman coding, MST algorithms, activity scheduling</p>\n</div>\n</div>"
+}

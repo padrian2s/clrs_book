@@ -1,0 +1,47 @@
+30.1 Representing polynomials                                                    903
+
+
+f.x0 ; y0 /; .x1 ; y1 /; : : : ; .xn1 ; yn1 /g ;
+and for B,
+f.x0 ; y00 /; .x1 ; y10 /; : : : ; .xn1 ; yn1
+                                            0
+                                                /g
+(note that A and B are evaluated at the same n points), then a point-value repre-
+sentation for C is
+f.x0 ; y0 C y00 /; .x1 ; y1 C y10 /; : : : ; .xn1 ; yn1 C yn1
+                                                             0
+                                                                 /g :
+Thus, the time to add two polynomials of degree-bound n in point-value form
+is ‚.n/.
+   Similarly, the point-value representation is convenient for multiplying polyno-
+mials. If C.x/ D A.x/B.x/, then C.xk / D A.xk /B.xk / for any point xk , and
+we can pointwise multiply a point-value representation for A by a point-value rep-
+resentation for B to obtain a point-value representation for C . We must face the
+problem, however, that degree.C / D degree.A/ C degree.B/; if A and B are of
+degree-bound n, then C is of degree-bound 2n. A standard point-value represen-
+tation for A and B consists of n point-value pairs for each polynomial. When we
+multiply these together, we get n point-value pairs, but we need 2n pairs to interpo-
+late a unique polynomial C of degree-bound 2n. (See Exercise 30.1-4.) We must
+therefore begin with “extended” point-value representations for A and for B con-
+sisting of 2n point-value pairs each. Given an extended point-value representation
+for A,
+f.x0 ; y0 /; .x1 ; y1 /; : : : ; .x2n1 ; y2n1 /g ;
+and a corresponding extended point-value representation for B,
+f.x0 ; y00 /; .x1 ; y10 /; : : : ; .x2n1 ; y2n1
+                                             0
+                                                  /g ;
+then a point-value representation for C is
+f.x0 ; y0 y00 /; .x1 ; y1 y10 /; : : : ; .x2n1 ; y2n1 y2n1
+                                                         0
+                                                              /g :
+Given two input polynomials in extended point-value form, we see that the time to
+multiply them to obtain the point-value form of the result is ‚.n/, much less than
+the time required to multiply polynomials in coefﬁcient form.
+   Finally, we consider how to evaluate a polynomial given in point-value form at a
+new point. For this problem, we know of no simpler approach than converting the
+polynomial to coefﬁcient form ﬁrst, and then evaluating it at the new point.
+
+Fast multiplication of polynomials in coefﬁcient form
+Can we use the linear-time multiplication method for polynomials in point-value
+form to expedite polynomial multiplication in coefﬁcient form? The answer hinges
+

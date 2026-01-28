@@ -1,0 +1,43 @@
+292   Chapter 12 Binary Search Trees
+
+
+      successor of a node x is the node with the smallest key greater than x:key. The
+      structure of a binary search tree allows us to determine the successor of a node
+      without ever comparing keys. The following procedure returns the successor of a
+      node x in a binary search tree if it exists, and NIL if x has the largest key in the
+      tree:
+
+      T REE -S UCCESSOR .x/
+      1 if x:right ¤ NIL
+      2        return T REE -M INIMUM .x:right/
+      3 y D x:p
+      4 while y ¤ NIL and x == y:right
+      5        x Dy
+      6        y D y:p
+      7 return y
+
+         We break the code for T REE -S UCCESSOR into two cases. If the right subtree
+      of node x is nonempty, then the successor of x is just the leftmost node in x’s
+      right subtree, which we ﬁnd in line 2 by calling T REE -M INIMUM .x:right/. For
+      example, the successor of the node with key 15 in Figure 12.2 is the node with
+      key 17.
+         On the other hand, as Exercise 12.2-6 asks you to show, if the right subtree of
+      node x is empty and x has a successor y, then y is the lowest ancestor of x whose
+      left child is also an ancestor of x. In Figure 12.2, the successor of the node with
+      key 13 is the node with key 15. To ﬁnd y, we simply go up the tree from x until we
+      encounter a node that is the left child of its parent; lines 3–7 of T REE -S UCCESSOR
+      handle this case.
+         The running time of T REE -S UCCESSOR on a tree of height h is O.h/, since we
+      either follow a simple path up the tree or follow a simple path down the tree. The
+      procedure T REE -P REDECESSOR, which is symmetric to T REE -S UCCESSOR, also
+      runs in time O.h/.
+         Even if keys are not distinct, we deﬁne the successor and predecessor of any
+      node x as the node returned by calls made to T REE -S UCCESSOR .x/ and T REE -
+      P REDECESSOR.x/, respectively.
+         In summary, we have proved the following theorem.
+
+      Theorem 12.2
+      We can implement the dynamic-set operations S EARCH, M INIMUM, M AXIMUM,
+      S UCCESSOR, and P REDECESSOR so that each one runs in O.h/ time on a binary
+      search tree of height h.
+

@@ -1,0 +1,49 @@
+140   Chapter 5 Probabilistic Analysis and Randomized Algorithms
+
+
+      O N -L INE -M AXIMUM .k; n/
+      1 bestscore D 1
+      2 for i D 1 to k
+      3        if score.i/ > bestscore
+      4             bestscore D score.i/
+      5 for i D k C 1 to n
+      6        if score.i/ > bestscore
+      7             return i
+      8 return n
+
+         We wish to determine, for each possible value of k, the probability that we
+      hire the most qualiﬁed applicant. We then choose the best possible k, and
+      implement the strategy with that value. For the moment, assume that k is
+      ﬁxed. Let M.j / D max1i j fscore.i/g denote the maximum score among ap-
+      plicants 1 through j . Let S be the event that we succeed in choosing the best-
+      qualiﬁed applicant, and let Si be the event that we succeed when the best-qualiﬁed
+                     Pith
+      applicant is the
+                       n
+                           one interviewed. Since the various Si are disjoint, we have
+      that Pr fSg D i D1 Pr fSi g. Noting that we never succeed when the best-qualiﬁed
+      applicant is one of the ﬁrst k, we have that Pr fSi g D 0 for i D 1; 2; : : : ; k. Thus,
+      we obtain
+                  X
+                  n
+      Pr fSg D            Pr fSi g :                                                   (5.12)
+                 i DkC1
+
+         We now compute Pr fSi g. In order to succeed when the best-qualiﬁed applicant
+      is the ith one, two things must happen. First, the best-qualiﬁed applicant must be
+      in position i, an event which we denote by Bi . Second, the algorithm must not
+      select any of the applicants in positions k C 1 through i  1, which happens only if,
+      for each j such that k C 1  j  i  1, we ﬁnd that score.j / < bestscore in line 6.
+      (Because scores are unique, we can ignore the possibility of score.j / D bestscore.)
+      In other words, all of the values score.k C 1/ through score.i  1/ must be less
+      than M.k/; if any are greater than M.k/, we instead return the index of the ﬁrst
+      one that is greater. We use Oi to denote the event that none of the applicants in
+      position k C 1 through i  1 are chosen. Fortunately, the two events Bi and Oi
+      are independent. The event Oi depends only on the relative ordering of the values
+      in positions 1 through i  1, whereas Bi depends only on whether the value in
+      position i is greater than the values in all other positions. The ordering of the
+      values in positions 1 through i  1 does not affect whether the value in position i
+      is greater than all of them, and the value in position i does not affect the ordering
+      of the values in positions 1 through i  1. Thus we can apply equation (C.15) to
+      obtain
+

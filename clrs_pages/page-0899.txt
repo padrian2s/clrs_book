@@ -1,0 +1,43 @@
+878   Chapter 29 Linear Programming
+
+
+      Lemma 29.7
+      Assuming that I NITIALIZE -S IMPLEX returns a slack form for which the basic so-
+      lution is feasible, S IMPLEX either reports that a linear program is unbounded, or it
+      terminates with a feasible solution in at most nCmm
+                                                             iterations.
+
+      Proof Lemmas 29.2 and 29.6 show that if I NITIALIZE -S IMPLEX returns a slack
+      form for which the basic solution is feasible, S IMPLEX either reports that a linear
+      program is unbounded, or it terminates with a feasible solution. By the contra-
+      positive of Lemma 29.5, if S IMPLEX terminates with a feasible solution, then it
+      terminates in at most nCm
+                             m
+                                 iterations.
+
+      Exercises
+
+      29.3-1
+      Complete the proof of Lemma 29.4 by showing that it must be the case that c D c 0
+      and  D  0 .
+
+      29.3-2
+      Show that the call to P IVOT in line 12 of S IMPLEX never decreases the value of .
+
+      29.3-3
+      Prove that the slack form given to the P IVOT procedure and the slack form that the
+      procedure returns are equivalent.
+
+      29.3-4
+      Suppose we convert a linear program .A; b; c/ in standard form to slack form.
+      Show that the basic solution is feasible if and only if bi  0 for i D 1; 2; : : : ; m.
+
+      29.3-5
+      Solve the following linear program using S IMPLEX:
+      maximize     18x1 C 12:5x2
+      subject to
+                      x1 C            x2    20
+                      x1                    12
+                                      x2    16
+                        x1 ; x2             0 :
+

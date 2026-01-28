@@ -1,0 +1,46 @@
+192   Chapter 8 Sorting in Linear Time
+
+
+                                      1:2
+                           ≤                       >
+                 2:3                                      1:3
+           ≤               >                        ≤               >
+      〈1,2,3〉                  1:3             〈2,1,3〉                  2:3
+                       ≤             >                          ≤             >
+                〈1,3,2〉              〈3,1,2〉             〈2,3,1〉              〈3,2,1〉
+
+
+
+      Figure 8.1 The decision tree for insertion sort operating on three elements. An internal node an-
+      notated by i:j indicates a comparison between ai and aj . A leaf annotated by the permutation
+      h.1/; .2/; : : : ; .n/i indicates the ordering a.1/  a.2/      a.n/ . The shaded path
+      indicates the decisions made when sorting the input sequence ha1 D 6; a2 D 8; a3 D 5i; the
+      permutation h3; 1; 2i at the leaf indicates that the sorted ordering is a3 D 5  a1 D 6  a2 D 8.
+      There are 3Š D 6 possible permutations of the input elements, and so the decision tree must have at
+      least 6 leaves.
+
+
+      they yield identical information about the relative order of ai and aj . We therefore
+      assume that all comparisons have the form ai  aj .
+
+      The decision-tree model
+      We can view comparison sorts abstractly in terms of decision trees. A decision
+      tree is a full binary tree that represents the comparisons between elements that
+      are performed by a particular sorting algorithm operating on an input of a given
+      size. Control, data movement, and all other aspects of the algorithm are ignored.
+      Figure 8.1 shows the decision tree corresponding to the insertion sort algorithm
+      from Section 2.1 operating on an input sequence of three elements.
+         In a decision tree, we annotate each internal node by i:j for some i and j in the
+      range 1  i; j  n, where n is the number of elements in the input sequence. We
+      also annotate each leaf by a permutation h.1/; .2/; : : : ; .n/i. (See Section C.1
+      for background on permutations.) The execution of the sorting algorithm corre-
+      sponds to tracing a simple path from the root of the decision tree down to a leaf.
+      Each internal node indicates a comparison ai  aj . The left subtree then dictates
+      subsequent comparisons once we know that ai  aj , and the right subtree dictates
+      subsequent comparisons knowing that ai > aj . When we come to a leaf, the sort-
+      ing algorithm has established the ordering a.1/  a.2/      a.n/ . Because
+      any correct sorting algorithm must be able to produce each permutation of its input,
+      each of the nŠ permutations on n elements must appear as one of the leaves of the
+      decision tree for a comparison sort to be correct. Furthermore, each of these leaves
+      must be reachable from the root by a downward path corresponding to an actual
+

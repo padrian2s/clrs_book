@@ -1,0 +1,5 @@
+{
+  "page": 566,
+  "title": "21.2 Linked-list Representation",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 21.2</div>\n    <h1>Linked-list Representation</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Simple representation using linked lists.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Each set is a linked list</li>\n<li>Representative = head of list</li>\n<li>FIND-SET: follow pointer to head, O(1)</li>\n<li>UNION: append one list to another</li>\n<li>Naive UNION: O(n) - must update all pointers</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Union by appending smaller list to larger: amortized O(log n) per operation.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Simple but not optimal - motivates tree-based approach.</p>\n</div>\n</div>"
+}

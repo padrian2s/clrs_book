@@ -1,0 +1,45 @@
+29.3 The simplex algorithm                                                         871
+
+
+In Section 29.5, we shall show how to determine whether a problem is feasible,
+and if so, how to ﬁnd a slack form in which the initial basic solution is feasible.
+Therefore, let us assume that we have a procedure I NITIALIZE -S IMPLEX .A; b; c/
+that takes as input a linear program in standard form, that is, an m n matrix
+A D .aij /, an m-vector b D .bi /, and an n-vector c D .cj /. If the problem is
+infeasible, the procedure returns a message that the program is infeasible and then
+terminates. Otherwise, the procedure returns a slack form for which the initial
+basic solution is feasible.
+   The procedure S IMPLEX takes as input a linear program in standard form, as just
+described. It returns an n-vector xN D .xNj / that is an optimal solution to the linear
+program described in (29.19)–(29.21).
+
+S IMPLEX .A; b; c/
+ 1 .N; B; A; b; c; / D I NITIALIZE -S IMPLEX .A; b; c/
+ 2 let be a new vector of length n
+ 3 while some index j 2 N has cj > 0
+ 4      choose an index e 2 N for which ce > 0
+ 5      for each index i 2 B
+ 6           if ai e > 0
+ 7                       i D bi =ai e
+ 8           else i D 1
+ 9      choose an index l 2 B that minimizes i
+10      if l == 1
+11           return “unbounded”
+12      else .N; B; A; b; c; / D P IVOT .N; B; A; b; c; ; l; e/
+13 for i D 1 to n
+14      if i 2 B
+15           xN i D bi
+16      else xN i D 0
+17 return .xN 1 ; xN 2 ; : : : ; xN n /
+
+   The S IMPLEX procedure works as follows. In line 1, it calls the procedure
+I NITIALIZE -S IMPLEX .A; b; c/, described above, which either determines that the
+linear program is infeasible or returns a slack form for which the basic solution is
+feasible. The while loop of lines 3–12 forms the main part of the algorithm. If all
+coefﬁcients in the objective function are negative, then the while loop terminates.
+Otherwise, line 4 selects a variable xe , whose coefﬁcient in the objective function
+is positive, as the entering variable. Although we may choose any such variable as
+the entering variable, we assume that we use some prespeciﬁed deterministic rule.
+Next, lines 5–9 check each constraint and pick the one that most severely limits
+the amount by which we can increase xe without violating any of the nonnegativ-
+

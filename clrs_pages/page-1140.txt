@@ -1,0 +1,44 @@
+35.3 The set-covering problem                                                   1119
+
+
+A greedy approximation algorithm
+The greedy method works by picking, at each stage, the set S that covers the great-
+est number of remaining elements that are uncovered.
+
+G REEDY-S ET-C OVER .X; F /
+1 U DX
+2 C D;
+3 while U ¤ ;
+4      select an S 2 F that maximizes jS \ U j
+5      U D U S
+6      C D C [ fSg
+7 return C
+
+In the example of Figure 35.3, G REEDY-S ET-C OVER adds to C , in order, the sets
+S1 , S4 , and S5 , followed by either S3 or S6 .
+   The algorithm works as follows. The set U contains, at each stage, the set of
+remaining uncovered elements. The set C contains the cover being constructed.
+Line 4 is the greedy decision-making step, choosing a subset S that covers as many
+uncovered elements as possible (breaking ties arbitrarily). After S is selected,
+line 5 removes its elements from U , and line 6 places S into C . When the algorithm
+terminates, the set C contains a subfamily of F that covers X .
+   We can easily implement G REEDY-S ET-C OVER to run in time polynomial in jX j
+and jF j. Since the number of iterations of the loop on lines 3–6 is bounded from
+above by min.jX j ; jF j/, and we can implement the loop body to run in time
+O.jX j jF j/, a simple implementation runs in time O.jX j jF j min.jX j ; jF j//. Ex-
+ercise 35.3-3 asks for a linear-time algorithm.
+
+Analysis
+We now show that the greedy algorithm returns a set cover that is not too much
+larger than an optimal set cover. For convenience, in this chapter we denote the d th
+                            Pd
+harmonic number Hd D i D1 1=i (see Section A.1) by H.d /. As a boundary
+condition, we deﬁne H.0/ D 0.
+
+Theorem 35.4
+G REEDY-S ET-C OVER is a polynomial-time .n/-approximation algorithm, where
+.n/ D H.max fjSj W S 2 F g/ :
+
+Proof    We have already shown that G REEDY-S ET-C OVER runs in polynomial
+time.
+

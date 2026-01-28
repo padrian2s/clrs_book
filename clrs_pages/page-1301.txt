@@ -1,0 +1,52 @@
+1280   Index
+
+
+          kth, 933 ex.                                     similarity to Dijkstra’s algorithm, 634, 662
+          nontrivial, 933 ex.                              for sparse graphs, 638 pr.
+       power series, 108 pr.                            primality testing, 965–975, 983
+       power set, 1161                                     Miller-Rabin test, 968–975, 983
+       Pr f g (probability distribution), 1190             pseudoprimality testing, 966–968
+       PRAM, 811                                        primal linear program, 880
+       predecessor                                      primary clustering, 272
+          in binary search trees, 291–292               primary memory, 484
+          in a bit vector with a superimposed binary    prime distribution function, 965
+             tree, 534                                  prime number, 928
+          in a bit vector with a superimposed tree of      density of, 965–966
+             constant height, 535                       prime number theorem, 965
+          in breadth-ﬁrst trees, 594                    primitive root of Zn , 955
+          in B-trees, 497 ex.                           principal root of unity, 907
+          in linked lists, 236                          principle of inclusion and exclusion, 1163 ex.
+          in order-statistic trees, 347 ex.             P RINT-A LL -PAIRS -S HORTEST-PATH, 685
+          in proto van Emde Boas structures, 544 ex.    P RINT-C UT-ROD -S OLUTION, 369
+          in red-black trees, 311                       P RINT-I NTERSECTING -S EGMENTS, 1028 ex.
+          in shortest-paths trees, 647                  P RINT-LCS, 395
+          in Van Emde Boas trees, 551–552               P RINT-O PTIMAL -PARENS, 377
+       P REDECESSOR, 230                                P RINT-PATH, 601
+       predecessor matrix, 685                          P RINT-S ET , 572 ex.
+       predecessor subgraph                             priority queue, 162–166
+          in all-pairs shortest paths, 685                 in constructing Huffman codes, 431
+          in breadth-ﬁrst search, 600                      in Dijkstra’s algorithm, 661
+          in depth-ﬁrst search, 603                        heap implementation of, 162–166
+          in single-source shortest paths, 647             lower bounds for, 531
+       predecessor-subgraph property, 650, 676             max-priority queue, 162
+       preemption, 447 pr.                                 min-priority queue, 162, 165 ex.
+       preﬁx                                               with monotone extractions, 168
+          of a sequence, 392                               in Prim’s algorithm, 634, 636
+          of a string (<), 986                             proto van Emde Boas structure
+       preﬁx code, 429                                        implementation of, 538–545
+       preﬁx computation, 807 pr.                          van Emde Boas tree implementation of,
+       preﬁx function, 1003–1004                              531–560
+       preﬁx-function iteration lemma, 1007                see also binary search tree, binomial heap,
+       preﬂow, 736, 765                                       Fibonacci heap
+       preimage of a matrix, 1228 pr.                   probabilistically checkable proof, 1105, 1140
+       preorder, total, 1165                            probabilistic analysis, 115–116, 130–142
+       preorder tree walk, 287                             of approximation algorithm for
+       presorting, 1043                                       MAX-3-CNF satisﬁability, 1124
+       Prim’s algorithm, 634–636, 642                      and average inputs, 28
+          with an adjacency matrix, 637 ex.                of average node depth in a randomly built
+          in approximation algorithm for                      binary search tree, 304 pr.
+             traveling-salesman problem, 1112              of balls and bins, 133–134
+          implemented with a Fibonacci heap, 636           of birthday paradox, 130–133
+          implemented with a min-heap, 636                 of bucket sort, 201–204, 204 ex.
+          with integer edge weights, 637 ex.               of collisions, 261 ex., 282 ex.
+

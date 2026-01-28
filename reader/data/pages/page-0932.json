@@ -1,0 +1,5 @@
+{
+  "page": 932,
+  "title": "30.2 The DFT and FFT",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 30.2</div>\n    <h1>30.2 The DFT and FFT</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"highlight-box\">\n    <h4>Page Content</h4>\n    <p>This page contains detailed technical content. Use the image view (press <kbd>V</kbd>) to see the original material with all formulas and figures.</p>\n</div><div class=\"definition-box\">\n    <h4>Context: Chapter 30</h4>\n    <p><strong>Polynomials and the FFT</strong></p>\n    <p>Fast Fourier Transform - O(n log n) polynomial multiplication</p>\n</div>\n</div>"
+}

@@ -1,0 +1,62 @@
+A.2 Bounding summations                                                          1151
+
+
+example, a quick upper bound on the arithmetic series (A.1) is
+X
+n               X
+                n
+      k              n
+kD1             kD1
+
+           D n2 :
+                                 Pn
+In general, for a series          kD1 ak , if we let amax D max1kn ak , then
+
+X
+n
+      ak  n  amax :
+kD1
+
+   The technique of bounding each term in a series by the largest term is a weak
+methodPwhen the series can in fact be bounded by a geometric series. Given the
+         n
+series kD0 ak , suppose that akC1 =ak  r for all k  0, where 0 < r < 1 is a
+constant. We can bound the sum by an inﬁnite decreasing geometric series, since
+ak  a0 r k , and thus
+X
+n               X
+                1
+      ak             a0 r k
+kD0             kD0
+                      X
+                      1
+           D a0             rk
+                      kD0
+                       1
+           D a0           :
+                      1r
+                                                           P1        k
+   We can apply this method to bound the summation   P1      kD1 .k=3 /. In order to
+                                                                     kC1
+start the summation at k D 0, we rewrite it as kD0 ..k C 1/=3 /. The ﬁrst
+term (a0 ) is 1=3, and the ratio (r) of consecutive terms is
+.k C 2/=3kC2                 1 kC2
+                      D        
+.k C 1/=3kC1                 3 kC1
+                             2
+                      
+                             3
+for all k  0. Thus, we have
+X
+1
+  k              X
+                 1
+                   kC1
+            D
+      3k                  3kC1
+kD1              kD0
+              1    1
+               
+              3 1  2=3
+            D 1:
+

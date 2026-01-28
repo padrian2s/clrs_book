@@ -1,0 +1,50 @@
+15.3 Elements of dynamic programming                                                          385
+
+
+                                          1..4
+
+
+
+1..1         2..4                  1..2              3..4                  1..3        4..4
+
+
+
+  2..2   3..4    2..3   4..4   1..1    2..2      3..3    4..4   1..1   2..3    1..2   3..3
+
+
+
+  3..3   4..4    2..2   3..3                                    2..2   3..3    1..1   2..2
+
+
+
+Figure 15.7 The recursion tree for the computation of R ECURSIVE -M ATRIX -C HAIN.p; 1; 4/.
+Each node contains the parameters i and j . The computations performed in a shaded subtree are
+replaced by a single table lookup in M EMOIZED -M ATRIX -C HAIN.
+
+
+mŒ3; 5, and mŒ3; 6. If we were to recompute mŒ3; 4 each time, rather than just
+looking it up, the running time would increase dramatically. To see how, consider
+the following (inefﬁcient) recursive procedure that determines mŒi; j , the mini-
+mum number of scalar multiplications needed to compute the matrix-chain product
+Ai ::j D Ai Ai C1    Aj . The procedure is based directly on the recurrence (15.7).
+
+R ECURSIVE -M ATRIX -C HAIN .p; i; j /
+1 if i == j
+2      return 0
+3 mŒi; j  D 1
+4 for k D i to j  1
+5      q D R ECURSIVE -M ATRIX -C HAIN .p; i; k/
+            C R ECURSIVE -M ATRIX -C HAIN .p; k C 1; j /
+            C pi 1 pk pj
+6      if q < mŒi; j 
+7           mŒi; j  D q
+8 return mŒi; j 
+
+Figure 15.7 shows the recursion tree produced by the call R ECURSIVE -M ATRIX -
+C HAIN.p; 1; 4/. Each node is labeled by the values of the parameters i and j .
+Observe that some pairs of values occur many times.
+  In fact, we can show that the time to compute mŒ1; n by this recursive proce-
+dure is at least exponential in n. Let T .n/ denote the time taken by R ECURSIVE -
+M ATRIX -C HAIN to compute an optimal parenthesization of a chain of n matrices.
+Because the execution of lines 1–2 and of lines 6–7 each take at least unit time, as
+

@@ -1,0 +1,45 @@
+2.3 Designing algorithms                                                          31
+
+
+the output pile. We repeat this step until one input pile is empty, at which time
+we just take the remaining input pile and place it face down onto the output pile.
+Computationally, each basic step takes constant time, since we are comparing just
+the two top cards. Since we perform at most n basic steps, merging takes ‚.n/
+time.
+   The following pseudocode implements the above idea, but with an additional
+twist that avoids having to check whether either pile is empty in each basic step.
+We place on the bottom of each pile a sentinel card, which contains a special value
+that we use to simplify our code. Here, we use 1 as the sentinel value, so that
+whenever a card with 1 is exposed, it cannot be the smaller card unless both piles
+have their sentinel cards exposed. But once that happens, all the nonsentinel cards
+have already been placed onto the output pile. Since we know in advance that
+exactly r  p C 1 cards will be placed onto the output pile, we can stop once we
+have performed that many basic steps.
+
+M ERGE .A; p; q; r/
+ 1 n1 D q  p C 1
+ 2 n2 D r  q
+ 3 let LŒ1 : : n1 C 1 and RŒ1 : : n2 C 1 be new arrays
+ 4 for i D 1 to n1
+ 5      LŒi D AŒp C i  1
+ 6 for j D 1 to n2
+ 7      RŒj  D AŒq C j 
+ 8 LŒn1 C 1 D 1
+ 9 RŒn2 C 1 D 1
+10 i D 1
+11 j D 1
+12 for k D p to r
+13      if LŒi  RŒj 
+14            AŒk D LŒi
+15            i D i C1
+16      else AŒk D RŒj 
+17            j D j C1
+
+  In detail, the M ERGE procedure works as follows. Line 1 computes the length n1
+of the subarray AŒp : : q, and line 2 computes the length n2 of the subarray
+AŒq C 1 : : r. We create arrays L and R (“left” and “right”), of lengths n1 C 1
+and n2 C 1, respectively, in line 3; the extra position in each array will hold the
+sentinel. The for loop of lines 4–5 copies the subarray AŒp : : q into LŒ1 : : n1 ,
+and the for loop of lines 6–7 copies the subarray AŒq C 1 : : r into RŒ1 : : n2 .
+Lines 8–9 put the sentinels at the ends of the arrays L and R. Lines 10–17, illus-
+

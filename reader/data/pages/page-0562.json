@@ -1,0 +1,5 @@
+{
+  "page": 562,
+  "title": "21.1 Disjoint-set Operations",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 21.1</div>\n    <h1>Disjoint-set Operations</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Data structure for maintaining disjoint sets with efficient union and find.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>MAKE-SET(x): create singleton set containing x</li>\n<li>UNION(x, y): merge sets containing x and y</li>\n<li>FIND-SET(x): return representative of set containing x</li>\n<li>Used for connected components, Kruskal&#x27;s MST</li>\n<li>Goal: very fast operations (nearly O(1))</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Connected components: MAKE-SET for each vertex. For each edge (u,v), if FIND-SET(u) ≠ FIND-SET(v), UNION(u,v).</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Efficiently track connectivity as edges are added.</p>\n</div>\n</div>"
+}

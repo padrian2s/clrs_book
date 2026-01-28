@@ -1,0 +1,44 @@
+D.2 Basic matrix properties                                                      1225
+
+
+Theorem D.5
+An n n matrix A is singular if and only if det.A/ D 0.
+
+Positive-deﬁnite matrices
+Positive-deﬁnite matrices play an important role in many applications. An n n
+matrix A is positive-deﬁnite if x TAx > 0 for all n-vectors x ¤ 0. For
+example, the identity matrix is positive-deﬁnite, since for any nonzero vector
+x D . x 1 x 2    x n /T ,
+x T In x D x T x
+           Xn
+         D      xi2
+              i D1
+         > 0:
+   Matrices that arise in applications are often positive-deﬁnite due to the following
+theorem.
+
+Theorem D.6
+For any matrix A with full column rank, the matrix AT A is positive-deﬁnite.
+
+Proof We must show that x T .AT A/x > 0 for any nonzero vector x. For any
+vector x,
+x T .AT A/x D .Ax/T.Ax/ (by Exercise D.1-2)
+            D kAxk2 :
+Note that kAxk2 is just the sum of the squares of the elements of the vector Ax.
+Therefore, kAxk2  0. If kAxk2 D 0, every element of Ax is 0, which is to say
+Ax D 0. Since A has full column rank, Ax D 0 implies x D 0, by Theorem D.2.
+Hence, AT A is positive-deﬁnite.
+
+  Section 28.3 explores other properties of positive-deﬁnite matrices.
+
+Exercises
+
+D.2-1
+Prove that matrix inverses are unique, that is, if B and C are inverses of A, then
+B D C.
+
+D.2-2
+Prove that the determinant of a lower-triangular or upper-triangular matrix is equal
+to the product of its diagonal elements. Prove that the inverse of a lower-triangular
+matrix, if it exists, is lower-triangular.
+

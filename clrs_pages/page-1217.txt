@@ -1,0 +1,47 @@
+1196         Appendix C   Counting and Probability
+
+
+             have picked one curtain but before the curtain is lifted, the emcee lifts one of the
+             other curtains, knowing that it will reveal an empty stage, and asks if you would
+             like to switch from your current selection to the remaining curtain. How would
+             your chances change if you switch? (This question is the celebrated Monty Hall
+             problem, named after a game-show host who often presented contestants with just
+             this dilemma.)
+
+             C.2-10 ?
+             A prison warden has randomly picked one prisoner among three to go free. The
+             other two will be executed. The guard knows which one will go free but is forbid-
+             den to give any prisoner information regarding his status. Let us call the prisoners
+             X , Y , and Z. Prisoner X asks the guard privately which of Y or Z will be exe-
+             cuted, arguing that since he already knows that at least one of them must die, the
+             guard won’t be revealing any information about his own status. The guard tells X
+             that Y is to be executed. Prisoner X feels happier now, since he ﬁgures that either
+             he or prisoner Z will go free, which means that his probability of going free is
+             now 1=2. Is he right, or are his chances still 1=3? Explain.
+
+
+
+C.3    Discrete random variables
+
+             A (discrete) random variable X is a function from a ﬁnite or countably inﬁnite
+             sample space S to the real numbers. It associates a real number with each possible
+             outcome of an experiment, which allows us to work with the probability distribu-
+             tion induced on the resulting set of numbers. Random variables can also be deﬁned
+             for uncountably inﬁnite sample spaces, but they raise technical issues that are un-
+             necessary to address for our purposes. Henceforth, we shall assume that random
+             variables are discrete.
+                For a random variable X and a real number x, we deﬁne the event X D x to be
+             fs 2 S W X.s/ D xg; thus,
+                              X
+             Pr fX D xg D         Pr fsg :
+                           s2SWX.s/Dx
+
+             The function
+             f .x/ D Pr fX D xg
+
+                                           P of the random variable X . From the probability
+             is the probability density function
+             axioms, Pr fX D xg  0 and x Pr fX D xg D 1.
+                As an example, consider the experiment of rolling a pair of ordinary, 6-sided
+             dice. There are 36 possible elementary events in the sample space. We assume
+

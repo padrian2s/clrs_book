@@ -1,0 +1,52 @@
+1290   Index
+
+
+       traversal of a tree, 287, 293 ex., 342, 1114   T REE -P REDECESSOR, 292
+       treap, 333 pr., 338                            T REE -S EARCH, 290
+       T REAP -I NSERT , 333 pr.                      T REE -S UCCESSOR, 292
+       tree, 1173–1180                                tree walk, 287, 293 ex., 342, 1114
+          AA-trees, 338                               trial, Bernoulli, 1201
+          AVL, 333 pr., 337                           trial division, 966
+          binary, see binary tree                     triangle inequality, 1112
+          binomial, 527 pr.                              for shortest paths, 650, 671
+          bisection of, 1181 pr.                      triangular matrix, 1219, 1222 ex., 1225 ex.
+          breadth-ﬁrst, 594, 600                      trichotomy, interval, 348
+          B-trees, 484–504                            trichotomy property of real numbers, 52
+          decision, 192–193                           tridiagonal linear systems, 840 pr.
+          depth-ﬁrst, 603                             tridiagonal matrix, 1219
+          diameter of, 602 ex.                        trie (radix tree), 304 pr.
+          dynamic, 482                                   y-fast, 558 pr.
+          free, 1172–1176                             T RIM, 1130
+          full walk of, 1114                          trimming a list, 1130
+          fusion, 212, 483                            trivial divisor, 928
+          heap, 151–169                               truth assignment, 1072, 1079
+          height-balanced, 333 pr.                    truth table, 1070
+          height of, 1177                             TSP, 1096
+          interval, 348–354                           tuple, 1162
+          k-neighbor, 338                             twiddle factor, 912
+          minimum spanning, see minimum spanning      2-CNF-SAT, 1086 ex.
+             tree                                     2-CNF satisﬁability, 1086 ex.
+          optimal binary search, 397–404, 413            and 3-CNF satisﬁability, 1049
+          order-statistic, 339–345                    two-pass method, 571
+          parse, 1082                                 2-3-4 heap, 529 pr.
+          recursion, 37, 88–93                        2-3-4 tree, 489
+          red-black, see red-black tree                  joining, 503 pr.
+          rooted, 246–249, 1176                          splitting, 503 pr.
+          scapegoat, 338                              2-3 tree, 337, 504
+          search, see search tree
+          shortest-paths, 647–648, 673–676            unary, 1056
+          spanning, see minimum spanning tree,        unbounded linear program, 851
+             spanning tree                            unconditional branch instruction, 23
+          splay, 338, 482                             uncountable set, 1161
+          treap, 333 pr., 338                         underdetermined system of linear equations,
+          2-3, 337, 504                                    814
+          2-3-4, 489, 503 pr.                         underﬂow
+          van Emde Boas, 531–560                        of a queue, 234
+          walk of, 287, 293 ex., 342, 1114              of a stack, 233
+          weight-balanced trees, 338                  undirected graph, 1168
+       T REE -D ELETE, 298, 299 ex., 323–324            articulation point of, 621 pr.
+       tree edge, 601, 603, 609                         biconnected component of, 621 pr.
+       T REE -I NSERT , 294, 315                        bridge of, 621 pr.
+       T REE -M AXIMUM, 291                             clique in, 1086
+       T REE -M INIMUM, 291                             coloring of, 1103 pr., 1180 pr.
+

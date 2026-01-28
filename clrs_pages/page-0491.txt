@@ -1,0 +1,45 @@
+470   Chapter 17 Amortized Analysis
+
+
+      implies ˆ.T / D T:num, and thus the potential can pay for a contraction if an item
+      is deleted.
+         To analyze a sequence of n TABLE -I NSERT and TABLE -D ELETE operations,
+      we let ci denote the actual cost of the ith operation, cyi denote its amortized cost
+      with respect to ˆ, numi denote the number of items stored in the table after the ith
+      operation, sizei denote the total size of the table after the ith operation, ˛i denote
+      the load factor of the table after the ith operation, and ˆi denote the potential after
+      the ith operation. Initially, num0 D 0, size0 D 0, ˛0 D 1, and ˆ0 D 0.
+         We start with the case in which the ith operation is TABLE -I NSERT. The analy-
+      sis is identical to that for table expansion in Section 17.4.1 if ˛i 1  1=2. Whether
+      the table expands or not, the amortized cost cyi of the operation is at most 3.
+      If ˛i 1 < 1=2, the table cannot expand as a result of the operation, since the ta-
+      ble expands only when ˛i 1 D 1. If ˛i < 1=2 as well, then the amortized cost of
+      the ith operation is
+      cyi   D   ci C ˆi  ˆi 1
+            D   1 C .sizei =2  numi /  .sizei 1 =2  numi 1 /
+            D   1 C .sizei =2  numi /  .sizei =2  .numi  1//
+            D   0:
+      If ˛i 1 < 1=2 but ˛i  1=2, then
+      cyi   D ci C ˆi  ˆi 1
+            D 1 C .2  numi  sizei /  .sizei 1 =2  numi 1 /
+            D 1 C .2.numi 1 C 1/  sizei 1 /  .sizei 1 =2  numi 1 /
+                              3
+            D 3  numi 1  sizei 1 C 3
+                              2
+                                3
+            D 3˛i 1 sizei 1  sizei 1 C 3
+                                2
+              3             3
+            <   sizei 1  sizei 1 C 3
+              2             2
+            D 3:
+      Thus, the amortized cost of a TABLE -I NSERT operation is at most 3.
+        We now turn to the case in which the ith operation is TABLE -D ELETE. In this
+      case, numi D numi 1  1. If ˛i 1 < 1=2, then we must consider whether the
+      operation causes the table to contract. If it does not, then sizei D sizei 1 and the
+      amortized cost of the operation is
+      cyi   D   ci C ˆi  ˆi 1
+            D   1 C .sizei =2  numi /  .sizei 1 =2  numi 1 /
+            D   1 C .sizei =2  numi /  .sizei =2  .numi C 1//
+            D   2:
+

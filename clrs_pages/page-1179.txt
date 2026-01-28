@@ -1,0 +1,36 @@
+B            Sets, Etc.
+
+
+
+
+             Many chapters of this book touch on the elements of discrete mathematics. This
+             appendix reviews more completely the notations, deﬁnitions, and elementary prop-
+             erties of sets, relations, functions, graphs, and trees. If you are already well versed
+             in this material, you can probably just skim this chapter.
+
+
+B.1   Sets
+
+             A set is a collection of distinguishable objects, called its members or elements. If
+             an object x is a member of a set S, we write x 2 S (read “x is a member of S”
+             or, more brieﬂy, “x is in S”). If x is not a member of S, we write x 62 S. We
+             can describe a set by explicitly listing its members as a list inside braces. For
+             example, we can deﬁne a set S to contain precisely the numbers 1, 2, and 3 by
+             writing S D f1; 2; 3g. Since 2 is a member of the set S, we can write 2 2 S, and
+             since 4 is not a member, we have 4 … S. A set cannot contain the same object more
+             than once,1 and its elements are not ordered. Two sets A and B are equal, written
+             A D B, if they contain the same elements. For example, f1; 2; 3; 1g D f1; 2; 3g D
+             f3; 2; 1g.
+                We adopt special notations for frequently encountered sets:
+                ; denotes the empty set, that is, the set containing no members.
+                Z denotes the set of integers, that is, the set f: : : ; 2; 1; 0; 1; 2; : : :g.
+                R denotes the set of real numbers.
+                N denotes the set of natural numbers, that is, the set f0; 1; 2; : : :g.2
+
+
+             1 A variation of a set, which can contain the same object more than once, is called a multiset.
+
+             2 Some authors start the natural numbers with 1 instead of 0. The modern trend seems to be to start
+
+             with 0.
+

@@ -1,0 +1,5 @@
+{
+  "page": 215,
+  "title": "9.1 Minimum and Maximum",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 9.1</div>\n    <h1>Minimum and Maximum</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Find min or max in n-1 comparisons; find both in 3⌊n/2⌋ comparisons.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Finding min: n-1 comparisons (compare each to current min)</li>\n<li>Finding max: also n-1 comparisons</li>\n<li>Finding both naively: 2(n-1) comparisons</li>\n<li>Better: compare pairs first, then min with mins, max with maxes</li>\n<li>This gives 3⌊n/2⌋ comparisons total</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Array of 8 elements: 4 pairwise comparisons, 3 to find min of losers, 3 to find max of winners = 10 total (vs 14 naive).</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Shows careful algorithm design can reduce constant factors.</p>\n</div>\n</div>"
+}

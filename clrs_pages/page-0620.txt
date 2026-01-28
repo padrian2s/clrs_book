@@ -1,0 +1,44 @@
+22.2 Breadth-ﬁrst search                                                                599
+
+
+Lemma 22.3
+Suppose that during the execution of BFS on a graph G D .V; E/, the queue Q
+contains the vertices h1 ; 2 ; : : : ; r i, where 1 is the head of Q and r is the tail.
+Then, r :d  1 :d C 1 and i :d  i C1 :d for i D 1; 2; : : : ; r  1.
+
+Proof The proof is by induction on the number of queue operations. Initially,
+when the queue contains only s, the lemma certainly holds.
+   For the inductive step, we must prove that the lemma holds after both dequeuing
+and enqueuing a vertex. If the head 1 of the queue is dequeued, 2 becomes the
+new head. (If the queue becomes empty, then the lemma holds vacuously.) By the
+inductive hypothesis, 1 :d  2 :d. But then we have r :d  1 :d C 1  2 :d C 1,
+and the remaining inequalities are unaffected. Thus, the lemma follows with 2 as
+the head.
+   In order to understand what happens upon enqueuing a vertex, we need to ex-
+amine the code more closely. When we enqueue a vertex  in line 17 of BFS, it
+becomes rC1 . At that time, we have already removed vertex u, whose adjacency
+list is currently being scanned, from the queue Q, and by the inductive hypothesis,
+the new head 1 has 1 :d  u:d. Thus, rC1 :d D :d D u:d C1  1 :d C1. From
+the inductive hypothesis, we also have r :d  u:d C 1, and so r :d  u:d C 1 D
+:d D rC1 :d, and the remaining inequalities are unaffected. Thus, the lemma
+follows when  is enqueued.
+
+  The following corollary shows that the d values at the time that vertices are
+enqueued are monotonically increasing over time.
+
+Corollary 22.4
+Suppose that vertices i and j are enqueued during the execution of BFS, and
+that i is enqueued before j . Then i :d  j :d at the time that j is enqueued.
+
+Proof Immediate from Lemma 22.3 and the property that each vertex receives a
+ﬁnite d value at most once during the course of BFS.
+
+   We can now prove that breadth-ﬁrst search correctly ﬁnds shortest-path dis-
+tances.
+
+Theorem 22.5 (Correctness of breadth-ﬁrst search)
+Let G D .V; E/ be a directed or undirected graph, and suppose that BFS is run
+on G from a given source vertex s 2 V . Then, during its execution, BFS discovers
+every vertex  2 V that is reachable from the source s, and upon termination,
+:d D ı.s; / for all  2 V . Moreover, for any vertex  ¤ s that is reachable
+

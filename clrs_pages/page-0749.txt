@@ -1,0 +1,50 @@
+728                       Chapter 26 Maximum Flow
+
+
+
+                  0   u     1,0                                9   u     1,0                          9       u        999
+          00   ,00              00,                         ,99              00,                  ,99                       ,99
+      1,0
+                                    000                999                       000           999                                9
+                                                               1                                        1              1
+ s                        1                 t     s                    1           9   t   s    999               1           9       t
+                                                                               ,99                   ,99                   ,99
+      1,0                                             1,0                  999                            9           999
+         00,                          000                00,
+            000                   00,                        000                   1             1                           1
+                      v       1,0                                  v                                          v
+
+
+                      (a)                                          (b)                                        (c)
+
+
+                          Figure 26.7 (a) A ﬂow network for which F ORD -F ULKERSON can take ‚.E jf  j/ time,
+                          where f  is a maximum ﬂow, shown here with jf  j D 2,000,000. The shaded path is an aug-
+                          menting path with residual capacity 1. (b) The resulting residual network, with another augmenting
+                          path whose residual capacity is 1. (c) The resulting residual network.
+
+
+                          Proof We will suppose that for some vertex  2 V  fs; tg, there is a ﬂow aug-
+                          mentation that causes the shortest-path distance from s to  to decrease, and then
+                          we will derive a contradiction. Let f be the ﬂow just before the ﬁrst augmentation
+                          that decreases some shortest-path distance, and let f 0 be the ﬂow just afterward.
+                          Let  be the vertex with the minimum ıf 0 .s; / whose distance was decreased by
+                          the augmentation, so that ıf 0 .s; / < ıf .s; /. Let p D s ; u !  be a shortest
+                          path from s to  in Gf 0 , so that .u; / 2 Ef 0 and
+                          ıf 0 .s; u/ D ıf 0 .s; /  1 :                                                                    (26.12)
+                          Because of how we chose , we know that the distance of vertex u from the source s
+                          did not decrease, i.e.,
+                          ıf 0 .s; u/  ıf .s; u/ :                                                                          (26.13)
+                          We claim that .u; / 62 Ef . Why? If we had .u; / 2 Ef , then we would also have
+                          ıf .s; /  ıf .s; u/ C 1 (by Lemma 24.10, the triangle inequality)
+                                     ıf 0 .s; u/ C 1 (by inequality (26.13))
+                                    D ıf 0 .s; /     (by equation (26.12)) ,
+                          which contradicts our assumption that ıf 0 .s; / < ıf .s; /.
+                            How can we have .u; / 62 Ef and .u; / 2 Ef 0 ? The augmentation must
+                          have increased the ﬂow from  to u. The Edmonds-Karp algorithm always aug-
+                          ments ﬂow along shortest paths, and therefore the shortest path from s to u in Gf
+                          has .; u/ as its last edge. Therefore,
+                          ıf .s; / D ıf .s; u/  1
+                                     ıf 0 .s; u/  1 (by inequality (26.13))
+                                    D ıf 0 .s; /  2 (by equation (26.12)) ,
+

@@ -1,0 +1,46 @@
+840        Chapter 28 Matrix Operations
+
+
+           28.3-7
+           Show that the pseudoinverse AC satisﬁes the following four equations:
+            AAC A     D    A;
+           AC AAC     D    AC ;
+           .AAC /T    D    AAC ;
+           .AC A/T    D    AC A :
+
+
+
+Problems
+
+           28-1 Tridiagonal systems of linear equations
+
+                ˇ 1 1
+           Consider the tridiagonal matrix
+                                 0  0  0
+                                                
+                    1  2       1  0  0
+           AD        0 1        2 1  0            :
+                     0  0       1  2 1
+                     0  0        0 1  2
+           a. Find an LU decomposition of A.
+                                                                T
+           b. Solve the equation Ax D        1 1 1 1 1              by using forward and back sub-
+              stitution.
+
+           c. Find the inverse of A.
+
+           d. Show how, for any n n symmetric positive-deﬁnite, tridiagonal matrix A and
+              any n-vector b, to solve the equation Ax D b in O.n/ time by performing an
+              LU decomposition. Argue that any method based on forming A1 is asymptot-
+              ically more expensive in the worst case.
+
+           e. Show how, for any n n nonsingular, tridiagonal matrix A and any n-vector b, to
+              solve the equation Ax D b in O.n/ time by performing an LUP decomposition.
+
+           28-2 Splines
+           A practical method for interpolating a set of points with a curve is to use cu-
+           bic splines. We are given a set f.xi ; yi / W i D 0; 1; : : : ; ng of n C 1 point-value
+           pairs, where x0 < x1 <    < xn . We wish to ﬁt a piecewise-cubic curve
+           (spline) f .x/ to the points. That is, the curve f .x/ is made up of n cubic polyno-
+           mials fi .x/ D ai C bi x C ci x 2 C di x 3 for i D 0; 1; : : : ; n  1, where if x falls in
+

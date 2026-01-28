@@ -1,0 +1,53 @@
+Problems for Chapter 12                                                                           305
+
+
+
+               0                      1
+
+   0
+          1                               0
+                                     10
+                   1             0        1
+                   011         100
+                                               1
+                                              1011
+
+
+
+Figure 12.5 A radix tree storing the bit strings 1011, 10, 011, 100, and 0. We can determine each
+node’s key by traversing the simple path from the root to that node. There is no need, therefore, to
+store the keys in the nodes; the keys appear here for illustrative purposes only. Nodes are heavily
+shaded if the keys corresponding to them are not in the tree; such nodes are present only to establish
+a path to other nodes.
+
+
+a. Argue that the average depth of a node in T is
+    1X              1
+          d.x; T / D P .T / :
+    n x2T           n
+
+Thus, we wish to show that the expected value of P .T / is O.n lg n/.
+b. Let TL and TR denote the left and right subtrees of tree T , respectively. Argue
+   that if T has n nodes, then
+
+    P .T / D P .TL / C P .TR / C n  1 :
+
+c. Let P .n/ denote the average total path length of a randomly built binary search
+   tree with n nodes. Show that
+
+            1X
+                   n1
+    P .n/ D        .P .i/ C P .n  i  1/ C n  1/ :
+            n i D0
+
+d. Show how to rewrite P .n/ as
+
+            2X
+                   n1
+    P .n/ D    P .k/ C ‚.n/ :
+            n
+                   kD1
+
+e. Recalling the alternative analysis of the randomized version of quicksort given
+   in Problem 7-3, conclude that P .n/ D O.n lg n/.
+

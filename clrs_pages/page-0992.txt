@@ -1,0 +1,42 @@
+31.8 Primality testing                                                           971
+
+
+X D h241; 298; 166; 67; 1i. Thus, W ITNESS discovers a nontrivial square root
+of 1 in the last squaring step, since a280  67 .mod n/ and a560  1 .mod n/.
+Therefore, a D 7 is a witness to the compositeness of n, W ITNESS .7; n/ returns
+TRUE, and M ILLER -R ABIN returns COMPOSITE.
+   If n is a ˇ-bit number, M ILLER -R ABIN requires O.sˇ/ arithmetic operations
+and O.sˇ 3 / bit operations, since it requires asymptotically no more work than s
+modular exponentiations.
+
+Error rate of the Miller-Rabin primality test
+If M ILLER -R ABIN returns PRIME, then there is a very slim chance that it has made
+an error. Unlike P SEUDOPRIME, however, the chance of error does not depend
+on n; there are no bad inputs for this procedure. Rather, it depends on the size of s
+and the “luck of the draw” in choosing base values a. Moreover, since each test is
+more stringent than a simple check of equation (31.40), we can expect on general
+principles that the error rate should be small for randomly chosen integers n. The
+following theorem presents a more precise argument.
+
+Theorem 31.38
+If n is an odd composite number, then the number of witnesses to the composite-
+ness of n is at least .n  1/=2.
+
+Proof The proof shows that the number of nonwitnesses is at most .n  1/=2,
+which implies the theorem.
+   We start by claiming that any nonwitness must be a member of Zn . Why?
+Consider any nonwitness a. It must satisfy an1  1 .mod n/ or, equivalently,
+a  an2  1 .mod n/. Thus, the equation ax  1 .mod n/ has a solution,
+namely an2 . By Corollary 31.21, gcd.a; n/ j 1, which in turn implies that
+gcd.a; n/ D 1. Therefore, a is a member of Zn ; all nonwitnesses belong to Zn .
+   To complete the proof, we show that not only are all nonwitnesses contained
+in Zn , they are all contained in a proper subgroup B of Zn (recall that we say B
+is a proper subgroup of Zn when B is subgroup of Zn but B is not equal to Zn ).
+By Corollary 31.16, we then have jBj  jZn j =2. Since jZn j  n  1, we obtain
+jBj  .n  1/=2. Therefore, the number of nonwitnesses is at most .n  1/=2, so
+that the number of witnesses must be at least .n  1/=2.
+   We now show how to ﬁnd a proper subgroup B of Zn containing all of the
+nonwitnesses. We break the proof into two cases.
+   Case 1: There exists an x 2 Zn such that
+x n1 6 1 .mod n/ :
+

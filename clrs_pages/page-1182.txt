@@ -1,0 +1,42 @@
+B.1 Sets                                                                           1161
+
+
+We can rewrite DeMorgan’s laws (B.2) with set complements. For any two sets
+B; C  U , we have
+B \C       D B [C ;
+B [C       D B \C :
+  Two sets A and B are disjoint if they have no elements in common, that is, if
+A \ B D ;. A collection S D fSi g of nonempty sets forms a partition of a set S if
+   the sets are pairwise disjoint, that is, Si ; Sj 2 S and i ¤ j imply Si \ Sj D ;,
+    and
+   their union is S, that is,
+          [
+    SD        Si :
+           Si 2S
+
+
+In other words, S forms a partition of S if each element of S appears in exactly
+one Si 2 S .
+   The number of elements in a set is the cardinality (or size) of the set, denoted jSj.
+Two sets have the same cardinality if their elements can be put into a one-to-one
+correspondence. The cardinality of the empty set is j;j D 0. If the cardinality of a
+set is a natural number, we say the set is ﬁnite; otherwise, it is inﬁnite. An inﬁnite
+set that can be put into a one-to-one correspondence with the natural numbers N is
+countably inﬁnite; otherwise, it is uncountable. For example, the integers Z are
+countable, but the reals R are uncountable.
+   For any two ﬁnite sets A and B, we have the identity
+jA [ Bj D jAj C jBj  jA \ Bj ;                                                   (B.3)
+from which we can conclude that
+jA [ Bj  jAj C jBj :
+If A and B are disjoint, then jA \ Bj D 0 and thus jA [ Bj D jAj C jBj. If
+A  B, then jAj  jBj.
+   A ﬁnite set of n elements is sometimes called an n-set. A 1-set is called a
+singleton. A subset of k elements of a set is sometimes called a k-subset.
+   We denote the set of all subsets of a set S, including the empty set and S itself,
+by 2S ; we call 2S the power set of S. For example, 2fa;bg D f;; fag ; fbg ; fa; bgg.
+The power set of a ﬁnite set S has cardinality 2jSj (see Exercise B.1-5).
+   We sometimes care about setlike structures in which the elements are ordered.
+An ordered pair of two elements a and b is denoted .a; b/ and is deﬁned formally
+as the set .a; b/ D fa; fa; bgg. Thus, the ordered pair .a; b/ is not the same as the
+ordered pair .b; a/.
+

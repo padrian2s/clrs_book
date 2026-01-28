@@ -1,0 +1,14 @@
+Notes for Chapter 6                                                          169
+
+
+how to implement E XTRACT-M IN and I NSERT in O.lg C / amortized time (see
+Chapter 17 for more on amortized analysis) and D ECREASE -K EY in O.1/ time,
+      a data structure called a radix heap. The O.lg C / bound can be improved
+using p
+to O. lg C / using Fibonacci heaps (see Chapter 19) in conjunction with radix
+heaps. Cherkassky, Goldberg, and Silverstein [65] further improved the bound to
+O.lg1=3C C / expected time by combining the multilevel bucketing structure of
+Denardo and Fox [85] with the heap of Thorup mentioned earlier. Raman [291]
+further improved these results to obtain a bound of O.min.lg1=4C C; lg1=3C n//,
+for any ﬁxed  > 0.
+

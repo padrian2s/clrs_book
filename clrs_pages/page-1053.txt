@@ -1,0 +1,56 @@
+1032           Chapter 33 Computational Geometry
+
+
+                   p10                                                                p10
+
+
+                                    p6                                                                   p6
+             p11     p9        p7                                               p11     p9        p7
+                          p8             p5                                                  p8                p5
+                                               p4        p3                                                          p4        p3
+       p12                                                           p12
+                                                   p2                                                               p2
+                                                    p1                                                                    p1
+
+              p0                (a)                                               p0               (b)
+
+
+
+                   p10                                                                p10
+
+
+                                    p6                                                                   p6
+             p11     p9        p7                                               p11     p9        p7
+                                                                                                              p5
+                          p8             p5                                                  p8
+                                                         p3                                                                    p3
+       p12                                    p4                     p12                                            p4
+                                              p2                                                                    p2
+                                                    p1                                                                    p1
+
+              p0                (c)                                               p0               (d)
+
+
+
+                   p10                                                                p10
+
+
+                                    p6                                                                   p6
+             p11     p9        p7                                               p11     p9        p7
+                          p8             p5                                                  p8                p5
+                                               p4        p3                                                          p4        p3
+       p12                                                           p12
+                                              p2                                                                    p2
+                                                    p1                                                                    p1
+
+              p0                (e)                                               p0               (f)
+
+
+               Figure 33.7 The execution of G RAHAM -S CAN on the set Q of Figure 33.6. The current convex
+               hull contained in stack S is shown in gray at each step. (a) The sequence hp1 ; p2 ; : : : ; p12 i of points
+               numbered in order of increasing polar angle relative to p0 , and the initial stack S containing p0 , p1 ,
+               and p2 . (b)–(k) Stack S after each iteration of the for loop of lines 7–10. Dashed lines show nonleft
+               turns, which cause points to be popped from the stack. In part (h), for example, the right turn at
+               angle †p7 p8 p9 causes p8 to be popped, and then the right turn at angle †p6 p7 p9 causes p7 to be
+               popped.
+

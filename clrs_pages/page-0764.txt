@@ -1,0 +1,43 @@
+26.4 Push-relabel algorithms                                                    743
+
+
+we have h.s/  k < jV j, which contradicts the requirement that h.s/ D jV j in a
+height function.
+
+   We are now ready to show that if the generic push-relabel algorithm terminates,
+the preﬂow it computes is a maximum ﬂow.
+
+Theorem 26.18 (Correctness of the generic push-relabel algorithm)
+If the algorithm G ENERIC -P USH -R ELABEL terminates when run on a ﬂow net-
+work G D .V; E/ with source s and sink t, then the preﬂow f it computes is a
+maximum ﬂow for G.
+
+Proof    We use the following loop invariant:
+   Each time the while loop test in line 2 in G ENERIC -P USH -R ELABEL is
+   executed, f is a preﬂow.
+
+Initialization: I NITIALIZE -P REFLOW makes f a preﬂow.
+Maintenance: The only operations within the while loop of lines 2–3 are push and
+  relabel. Relabel operations affect only height attributes and not the ﬂow values;
+  hence they do not affect whether f is a preﬂow. As argued on page 739, if f is
+  a preﬂow prior to a push operation, it remains a preﬂow afterward.
+Termination: At termination, each vertex in V  fs; tg must have an excess of 0,
+   because by Lemma 26.14 and the invariant that f is always a preﬂow, there are
+   no overﬂowing vertices. Therefore, f is a ﬂow. Lemma 26.16 shows that h is
+   a height function at termination, and thus Lemma 26.17 tells us that there is no
+   path from s to t in the residual network Gf . By the max-ﬂow min-cut theorem
+   (Theorem 26.6), therefore, f is a maximum ﬂow.
+
+Analysis of the push-relabel method
+To show that the generic push-relabel algorithm indeed terminates, we shall bound
+the number of operations it performs. We bound separately each of the three types
+of operations: relabels, saturating pushes, and nonsaturating pushes. With knowl-
+edge of these bounds, it is a straightforward problem to construct an algorithm that
+runs in O.V 2 E/ time. Before beginning the analysis, however, we prove an im-
+portant lemma. Recall that we allow edges into the source in the residual network.
+
+Lemma 26.19
+Let G D .V; E/ be a ﬂow network with source s and sink t, and let f be a preﬂow
+in G. Then, for any overﬂowing vertex x, there is a simple path from x to s in the
+residual network Gf .
+

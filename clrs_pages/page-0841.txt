@@ -1,0 +1,51 @@
+820   Chapter 28 Matrix Operations
+
+
+      simply multiplying through), we can factor A as
+                         
+                a11 w T
+      A D
+                  A0
+                                                   
+                  1       0      a11        wT
+         D                                              :                        (28.8)
+                =a11 In1         0 A0  w T =a11
+      The 0s in the ﬁrst and second matrices of equation (28.8) are row and col-
+      umn .n  1/-vectors, respectively. The term w T =a11 , formed by taking the
+      outer product of  and w and dividing each element of the result by a11 , is an
+      .n  1/ .n  1/ matrix, which conforms in size to the matrix A0 from which it is
+      subtracted. The resulting .n  1/ .n  1/ matrix
+      A0  w T=a11                                                              (28.9)
+      is called the Schur complement of A with respect to a11 .
+         We claim that if A is nonsingular, then the Schur complement is nonsingular,
+      too. Why? Suppose that the Schur complement, which is .n  1/ .n  1/, is
+      singular. Then by Theorem D.1, it has row rank strictly less than n  1. Because
+      the bottom n  1 entries in the ﬁrst column of the matrix
+                            
+         a11         wT
+          0 A0  w T =a11
+      are all 0, the bottom n  1 rows of this matrix must have row rank strictly less
+      than n  1. The row rank of the entire matrix, therefore, is strictly less than n.
+      Applying Exercise D.2-8 to equation (28.8), A has rank strictly less than n, and
+      from Theorem D.1 we derive the contradiction that A is singular.
+         Because the Schur complement is nonsingular, we can now recursively ﬁnd an
+      LU decomposition for it. Let us say that
+      A0  w T=a11 D L0 U 0 ;
+      where L0 is unit lower-triangular and U 0 is upper-triangular. Then, using matrix
+      algebra, we have
+                                                   
+                   1      0       a11       wT
+      A D
+                 =a11 In1        0 A0  w T =a11
+                                          
+                   1      0       a11 w T
+          D
+                 =a11 In1        0 L0 U 0
+                                      
+                   1     0      a11 w T
+          D
+                 =a11 L0        0 U0
+          D LU ;
+      thereby providing our LU decomposition. (Note that because L0 is unit lower-
+      triangular, so is L, and because U 0 is upper-triangular, so is U .)
+

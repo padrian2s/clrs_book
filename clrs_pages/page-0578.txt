@@ -1,0 +1,44 @@
+           Problems for Chapter 20                                                           557
+
+
+
+
+Problems
+
+           20-1 Space requirements for van Emde Boas trees
+           This problem explores the space requirements for van Emde Boas trees and sug-
+           gests a way to modify the data structure to make its space requirement depend on
+           the number n of elements actuallypstored in the tree, rather than on the universe
+           size u. For simplicity, assume that u is always an integer.
+           a. Explain why the following recurrence characterizes the space requirement P .u/
+              of a van Emde Boas tree with universe size u:
+                        p          p          p
+              P .u/ D . u C 1/P . u/ C ‚. u/ :                                        (20.5)
+           b. Prove that recurrence (20.5) has the solution P .u/ D O.u/.
+           In order to reduce the space requirements, let us deﬁne a reduced-space van Emde
+           Boas tree, or RS-vEB tree, as a vEB tree V but with the following changes:
+              The attribute V:cluster, ratherpthan being stored as a simple array of pointers to
+               vEB trees with universe size u, is a hash table (see Chapter 11) stored as a dy-
+               namic table (see Section 17.4). Corresponding to the array version p of V:cluster,
+               the hash table stores pointers to RS-vEB trees with universe size u. To ﬁnd
+               the ith cluster, we look up the key i in the hash table, so that we can ﬁnd the
+               ith cluster by a single search in the hash table.
+              The hash table stores only pointers to nonempty clusters. A search in the hash
+               table for an empty cluster returns NIL, indicating that the cluster is empty.
+              The attribute V:summary is NIL if all clustersp
+                                                             are empty. Otherwise, V:summary
+               points to an RS-vEB tree with universe size u.
+           Because the hash table is implemented with a dynamic table, the space it requires
+           is proportional to the number of nonempty clusters.
+              When we need to insert an element into an empty RS-vEB tree, we create the RS-
+           vEB tree by calling the following procedure, where the parameter u is the universe
+           size of the RS-vEB tree:
+           C REATE -N EW-RS- V EB-T REE .u/
+           1 allocate a new vEB tree V
+           2 V:u D u
+           3 V:min D NIL
+           4 V:max D NIL
+           5 V:summary D NIL
+           6 create V:cluster as an empty dynamic hash table
+           7 return V
+

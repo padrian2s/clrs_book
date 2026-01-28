@@ -1,0 +1,50 @@
+62   Chapter 3 Growth of Functions
+
+
+                                  p
+        lg.lg n/      2lg n      . 2/lg n     n2         nŠ      .lg n/Š
+                                                            n
+          . 32 /n       n3         lg2 n     lg.nŠ/       22      n1= lg n
+          ln ln n      lg n       n  2n    nlg lg n    ln n      1
+                                                                 p
+           2lg n     .lg n/lg n      en       4lg n     .n C 1/Š  lg n
+                       p                                             nC1
+        lg .lg n/    2 2 lg n       n         2n        n lg n   22
+
+     b. Give an example of a single nonnegative function f .n/ such that for all func-
+        tions gi .n/ in part (a), f .n/ is neither O.gi .n// nor .gi .n//.
+
+     3-4 Asymptotic notation properties
+     Let f .n/ and g.n/ be asymptotically positive functions. Prove or disprove each of
+     the following conjectures.
+
+     a. f .n/ D O.g.n// implies g.n/ D O.f .n//.
+
+     b. f .n/ C g.n/ D ‚.min.f .n/; g.n///.
+
+     c. f .n/ D O.g.n// implies lg.f .n// D O.lg.g.n///, where lg.g.n//  1 and
+        f .n/  1 for all sufﬁciently large n.
+
+     d. f .n/ D O.g.n// implies 2f .n/ D O 2g.n/ .
+
+     e. f .n/ D O ..f .n//2 /.
+
+     f. f .n/ D O.g.n// implies g.n/ D .f .n//.
+
+     g. f .n/ D ‚.f .n=2//.
+
+     h. f .n/ C o.f .n// D ‚.f .n//.
+
+     3-5 Variations on O and ˝                                                 1
+     Some authors deﬁne  in a slightly different way than we do; let’s use  (read
+                                                                            1
+     “omega inﬁnity”) for this alternative deﬁnition. We say that f .n/ D .g.n// if
+     there exists a positive constant c such that f .n/  cg.n/  0 for inﬁnitely many
+     integers n.
+
+     a. Show that for any two functions f .n/ and g.n/ that are asymptotically nonneg-
+                                                  1
+        ative, either f .n/ D O.g.n// or f .n/ D .g.n// or both, whereas this is not
+                                     1
+        true if we use  in place of .
+

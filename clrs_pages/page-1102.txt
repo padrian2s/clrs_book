@@ -1,0 +1,45 @@
+34.4 NP-completeness proofs                                                                 1081
+
+
+x1                               x5
+x2
+                                               x8
+
+                                 x6
+
+                                               x9             x10
+
+              x4                 x7
+x3
+
+
+
+
+Figure 34.10 Reducing circuit satisﬁability to formula satisﬁability. The formula produced by the
+reduction algorithm has a variable for each wire in the circuit.
+
+
+has a variable xi . We can now express how each gate operates as a small formula
+involving the variables of its incident wires. For example, the operation of the
+output AND gate is x10 $ .x7 ^ x8 ^ x9 /. We call each of these small formulas a
+clause.
+   The formula  produced by the reduction algorithm is the AND of the circuit-
+output variable with the conjunction of clauses describing the operation of each
+gate. For the circuit in the ﬁgure, the formula is
+ D x10 ^ .x4 $ :x3 /
+        ^ .x5 $ .x1 _ x2 //
+        ^ .x6 $ :x4 /
+        ^ .x7 $ .x1 ^ x2 ^ x4 //
+        ^ .x8 $ .x5 _ x6 //
+        ^ .x9 $ .x6 _ x7 //
+        ^ .x10 $ .x7 ^ x8 ^ x9 // :
+Given a circuit C , it is straightforward to produce such a formula  in polynomial
+time.
+   Why is the circuit C satisﬁable exactly when the formula  is satisﬁable? If C
+has a satisfying assignment, then each wire of the circuit has a well-deﬁned value,
+and the output of the circuit is 1. Therefore, when we assign wire values to
+variables in , each clause of  evaluates to 1, and thus the conjunction of all
+evaluates to 1. Conversely, if some assignment causes  to evaluate to 1, the
+circuit C is satisﬁable by an analogous argument. Thus, we have shown that
+CIRCUIT-SAT P SAT, which completes the proof.
+

@@ -1,0 +1,42 @@
+808   Chapter 27 Multithreaded Algorithms
+
+
+      P-S CAN -1.x/
+      1 n D x:length
+      2 let yŒ1 : : n be a new array
+      3 P-S CAN -1-AUX .x; y; 1; n/
+      4 return y
+
+      P-S CAN -1-AUX .x; y; i; j /
+      1 parallel for l D i to j
+      2      yŒl D P-R EDUCE .x; 1; l/
+
+      b. Analyze the work, span, and parallelism of P-S CAN -1.
+
+         By using nested parallelism, we can obtain a more efﬁcient ˝-preﬁx computa-
+      tion:
+
+      P-S CAN -2.x/
+      1 n D x:length
+      2 let yŒ1 : : n be a new array
+      3 P-S CAN -2-AUX .x; y; 1; n/
+      4 return y
+
+      P-S CAN -2-AUX .x; y; i; j /
+      1 if i == j
+      2      yŒi D xŒi
+      3 else k D b.i C j /=2c
+      4      spawn P-S CAN -2-AUX .x; y; i; k/
+      5       P-S CAN -2-AUX .x; y; k C 1; j /
+      6      sync
+      7      parallel for l D k C 1 to j
+      8           yŒl D yŒk ˝ yŒl
+
+      c. Argue that P-S CAN -2 is correct, and analyze its work, span, and parallelism.
+
+         We can improve on both P-S CAN -1 and P-S CAN -2 by performing the ˝-preﬁx
+      computation in two distinct passes over the data. On the ﬁrst pass, we gather the
+      terms for various contiguous subarrays of x into a temporary array t, and on the
+      second pass we use the terms in t to compute the ﬁnal result y. The following
+      pseudocode implements this strategy, but certain expressions have been omitted:
+

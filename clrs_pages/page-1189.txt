@@ -1,0 +1,45 @@
+1168        Appendix B   Sets, Etc.
+
+
+            For example, the inverse of the function f .n/ D .1/n dn=2e is
+                       (
+                         2m          if m  0 ;
+            f 1 .m/ D
+                         2m  1 if m < 0 :
+
+            Exercises
+
+            B.3-1
+            Let A and B be ﬁnite sets, and let f W A ! B be a function. Show that
+            a. if f is injective, then jAj  jBj;
+            b. if f is surjective, then jAj  jBj.
+
+            B.3-2
+            Is the function f .x/ D x C 1 bijective when the domain and the codomain are N?
+            Is it bijective when the domain and the codomain are Z?
+
+            B.3-3
+            Give a natural deﬁnition for the inverse of a binary relation such that if a relation
+            is in fact a bijective function, its relational inverse is its functional inverse.
+
+            B.3-4 ?
+            Give a bijection from Z to Z     Z.
+
+
+
+B.4    Graphs
+
+            This section presents two kinds of graphs: directed and undirected. Certain def-
+            initions in the literature differ from those given here, but for the most part, the
+            differences are slight. Section 22.1 shows how we can represent graphs in com-
+            puter memory.
+               A directed graph (or digraph) G is a pair .V; E/, where V is a ﬁnite set and E
+            is a binary relation on V . The set V is called the vertex set of G, and its elements
+            are called vertices (singular: vertex). The set E is called the edge set of G, and its
+            elements are called edges. Figure B.2(a) is a pictorial representation of a directed
+            graph on the vertex set f1; 2; 3; 4; 5; 6g. Vertices are represented by circles in the
+            ﬁgure, and edges are represented by arrows. Note that self-loops—edges from a
+            vertex to itself—are possible.
+               In an undirected graph G D .V; E/, the edge set E consists of unordered
+            pairs of vertices, rather than ordered pairs. That is, an edge is a set fu; g, where
+

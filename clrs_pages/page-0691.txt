@@ -1,0 +1,45 @@
+670   Chapter 24 Single-Source Shortest Paths
+
+
+      24.4-5
+      Show how to modify the Bellman-Ford algorithm slightly so that when we use it
+      to solve a system of difference constraints with m inequalities on n unknowns, the
+      running time is O.nm/.
+
+      24.4-6
+      Suppose that in addition to a system of difference constraints, we want to handle
+      equality constraints of the form xi D xj C bk . Show how to adapt the Bellman-
+      Ford algorithm to solve this variety of constraint system.
+
+      24.4-7
+      Show how to solve a system of difference constraints by a Bellman-Ford-like algo-
+      rithm that runs on a constraint graph without the extra vertex 0 .
+
+      24.4-8 ?
+      Let Ax  b be a system of m difference constraints in n unknowns. Show that the
+      Bellman-Ford
+            Pn     algorithm, when run on the corresponding constraint graph, maxi-
+      mizes i D1 xi subject to Ax  b and xi  0 for all xi .
+
+      24.4-9 ?
+      Show that the Bellman-Ford algorithm, when run on the constraint graph for a sys-
+      tem Ax  b of difference constraints, minimizes the quantity .max fxi gmin fxi g/
+      subject to Ax  b. Explain how this fact might come in handy if the algorithm is
+      used to schedule construction jobs.
+
+      24.4-10
+      Suppose that every row in the matrix A of a linear program Ax  b corresponds to
+      a difference constraint, a single-variable constraint of the form xi  bk , or a single-
+      variable constraint of the form xi  bk . Show how to adapt the Bellman-Ford
+      algorithm to solve this variety of constraint system.
+
+      24.4-11
+      Give an efﬁcient algorithm to solve a system Ax  b of difference constraints
+      when all of the elements of b are real-valued and all of the unknowns xi must be
+      integers.
+
+      24.4-12 ?
+      Give an efﬁcient algorithm to solve a system Ax  b of difference constraints
+      when all of the elements of b are real-valued and a speciﬁed subset of some, but
+      not necessarily all, of the unknowns xi must be integers.
+

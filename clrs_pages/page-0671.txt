@@ -1,0 +1,43 @@
+650   Chapter 24 Single-Source Shortest Paths
+
+
+      Triangle inequality (Lemma 24.10)
+         For any edge .u; / 2 E, we have ı.s; /  ı.s; u/ C w.u; /.
+      Upper-bound property (Lemma 24.11)
+        We always have :d  ı.s; / for all vertices  2 V , and once :d achieves the
+        value ı.s; /, it never changes.
+      No-path property (Corollary 24.12)
+        If there is no path from s to , then we always have :d D ı.s; / D 1.
+      Convergence property (Lemma 24.14)
+        If s ; u !  is a shortest path in G for some u;  2 V , and if u:d D ı.s; u/ at
+        any time prior to relaxing edge .u; /, then :d D ı.s; / at all times afterward.
+      Path-relaxation property (Lemma 24.15)
+         If p D h0 ; 1 ; : : : ; k i is a shortest path from s D 0 to k , and we relax the
+         edges of p in the order .0 ; 1 /; .1 ; 2 /; : : : ; .k1 ; k /, then k :d D ı.s; k /.
+         This property holds regardless of any other relaxation steps that occur, even if
+         they are intermixed with relaxations of the edges of p.
+      Predecessor-subgraph property (Lemma 24.17)
+         Once :d D ı.s; / for all  2 V , the predecessor subgraph is a shortest-paths
+         tree rooted at s.
+
+
+      Chapter outline
+      Section 24.1 presents the Bellman-Ford algorithm, which solves the single-source
+      shortest-paths problem in the general case in which edges can have negative weight.
+      The Bellman-Ford algorithm is remarkably simple, and it has the further beneﬁt
+      of detecting whether a negative-weight cycle is reachable from the source. Sec-
+      tion 24.2 gives a linear-time algorithm for computing shortest paths from a single
+      source in a directed acyclic graph. Section 24.3 covers Dijkstra’s algorithm, which
+      has a lower running time than the Bellman-Ford algorithm but requires the edge
+      weights to be nonnegative. Section 24.4 shows how we can use the Bellman-Ford
+      algorithm to solve a special case of linear programming. Finally, Section 24.5
+      proves the properties of shortest paths and relaxation stated above.
+         We require some conventions for doing arithmetic with inﬁnities. We shall as-
+      sume that for any real number a ¤ 1, we have a C 1 D 1 C a D 1. Also, to
+      make our proofs hold in the presence of negative-weight cycles, we shall assume
+      that for any real number a ¤ 1, we have a C .1/ D .1/ C a D 1.
+         All algorithms in this chapter assume that the directed graph G is stored in the
+      adjacency-list representation. Additionally, stored with each edge is its weight, so
+      that as we traverse each adjacency list, we can determine the edge weights in O.1/
+      time per edge.
+

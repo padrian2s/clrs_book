@@ -1,0 +1,65 @@
+546   Chapter 20 van Emde Boas Trees
+
+
+
+          EB.u/       u         min           max
+                                                             p
+                                       0   1   2   3   …     "
+                                                                 u1
+          summary            cluster
+
+
+                   p
+               EB. " u/                   p       p
+                                           "
+                                             u EB. # u/ trees
+
+
+      Figure 20.5 The information in a EB.u/ tree when u > 2. The structure  p      contains the uni-
+                                                                              "
+      verse size u, p  elements pmin  and  max,  a pointer
+                                                     p      summary to a EB.   u/ tree, and an array
+      clusterŒ0 : : " u  1 of " u pointers to EB. # u/ trees.
+
+
+      ger—that is, if u is an odd power of 2 (u D 22kC1 for some integer k  0)—then
+      we will divide the lg u bits of a number into the most signiﬁcant d.lg u/=2e bits and
+      the least signiﬁcant b.lg u/=2c
+                                  p     bits. For convenience, we denote 2d.lg u/=2e (the “up-
+                                                                                          p
+      per square root”
+                     p  of u)
+                            p by u and 2b.lg u/=2c (the “lower square root” of u) by # u,
+                                  "
+
+                                                                                 2k
+      so that u Dp " u  p# u and, p when u is an even power of 2 (u D 2 for some
+                   "       #
+      integer k), u D u D u. Because we now allow u to be an odd power of 2,
+      we must redeﬁne our helpful functions from Section 20.2:
+                              p ˘
+          high.x/ D x= # u ;
+                                  p
+           low.x/ D x mod # u ;
+                           p
+      index.x; y/ D x # u C y :
+
+      20.3.1    van Emde Boas trees
+      The van Emde Boas tree, or vEB tree, modiﬁes the proto-vEB structure. We
+      denote a vEB tree with a universe size of u as EB.u/ and,p   unless u equals the
+                                                                "
+      base size ofp2, the attribute summary
+                                       p      points
+                                               p      to a EB.   u/  tree and the array
+      clusterŒ0 : : " u  1 points to " u EB. # u/ trees. As Figure 20.5 illustrates, a
+      vEB tree contains two attributes not found in a proto-vEB structure:
+         min stores the minimum element in the vEB tree, and
+         max stores the maximum element in the vEB tree.
+      Furthermore,
+                 p the element stored in min does not appear in any of the recur-
+      sive EB. # u/ trees that the cluster array points to. The elements stored in a
+      EB.u/ tree
+                p V , therefore, are V:min plus all the p elements recursively stored in
+      the EB. # u/ trees pointed to by V:clusterŒ0 : : " u  1. Note that when a vEB
+      tree contains two or more elements, we treat min and max differently: the element
+

@@ -1,0 +1,42 @@
+29.5 The initial basic feasible solution                                         891
+
+
+that after this pivot, all entries of b are nonnegative, and hence the basic solution
+to Laux is feasible. Letting xN be the basic solution after the call to P IVOT, and
+letting by and By be values returned by P IVOT, Lemma 29.1 implies that
+       (
+         bi  ai e bye if i 2 By  feg ;
+xN i D                                                                      (29.113)
+         bl =ale       if i D e :
+
+The call to P IVOT in line 8 has e D 0. If we rewrite inequalities (29.107), to
+include coefﬁcients ai 0 ,
+X
+n
+       aij xj  bi for i D 1; 2; : : : ; m ;                                (29.114)
+j D0
+
+then
+ai 0 D ai e D 1 for each i 2 B :                                           (29.115)
+(Note that ai 0 is the coefﬁcient of x0 as it appears in inequalities (29.114), not
+the negation of the coefﬁcient, because Laux is in standard rather than slack form.)
+Since l 2 B, we also have that ale D 1. Thus, bl =ale > 0, and so xN e > 0. For
+the remaining basic variables, we have
+
+xN i   D    bi  ai e bye          (by equation (29.113))
+       D    bi  ai e .bl =ale /   (by line 3 of P IVOT)
+       D    bi  bl                (by equation (29.115) and ale D 1)
+           0                      (by inequality (29.112)) ,
+which implies that each basic variable is now nonnegative. Hence the basic solu-
+tion after the call to P IVOT in line 8 is feasible. We next execute line 10, which
+solves Laux . Since we have assumed that L has a feasible solution, Lemma 29.11
+implies that Laux has an optimal solution with objective value 0. Since all the slack
+forms are equivalent, the ﬁnal basic solution to Laux must have xN 0 D 0, and after
+removing x0 from the linear program, we obtain a slack form that is feasible for L.
+Line 15 then returns this slack form.
+
+Fundamental theorem of linear programming
+We conclude this chapter by showing that the S IMPLEX procedure works. In par-
+ticular, any linear program either is infeasible, is unbounded, or has an optimal
+solution with a ﬁnite objective value. In each case, S IMPLEX acts appropriately.
+

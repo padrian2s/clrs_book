@@ -1,0 +1,45 @@
+31.5 The Chinese remainder theorem                                                         953
+
+
+
+      0     1    2   3     4     5   6      7    8    9    10    11   12
+0     0    40   15   55   30     5   45    20   60    35   10    50   25
+1     26    1   41   16   56    31   6     46   21    61   36    11   51
+2     52   27    2   42   17    57   32     7   47    22   62    37   12
+3     13   53   28   3    43    18   58    33    8    48   23    63   38
+4     39   14   54   29    4    44   19    59   34    9    49    24   64
+
+
+
+Figure 31.3 An illustration of the Chinese remainder theorem for n1 D 5 and n2 D 13. For this
+example, c1 D 26 and c2 D 40. In row i, column j is shown the value of a, modulo 65, such
+that a mod 5 D i and a mod 13 D j . Note that row 0, column 0 contains a 0. Similarly, row 4,
+column 12 contains a 64 (equivalent to 1). Since c1 D 26, moving down a row increases a by 26.
+Similarly, c2 D 40 means that moving right by a column increases a by 40. Increasing a by 1
+corresponds to moving diagonally downward and to the right, wrapping around from the bottom to
+the top and from the right to the left.
+
+
+   As an example of the application of the Chinese remainder theorem, suppose we
+are given the two equations
+a  2 .mod 5/ ;
+a  3 .mod 13/ ;
+so that a1 D 2, n1 D m2 D 5, a2 D 3, and n2 D m1 D 13, and we wish
+to compute a mod 65, since n D n1 n2 D 65. Because 131  2 .mod 5/ and
+51  8 .mod 13/, we have
+c1 D 13.2 mod 5/ D 26 ;
+c2 D 5.8 mod 13/ D 40 ;
+and
+a  2  26 C 3  40 .mod 65/
+   52 C 120        .mod 65/
+   42              .mod 65/ :
+See Figure 31.3 for an illustration of the Chinese remainder theorem, modulo 65.
+   Thus, we can work modulo n by working modulo n directly or by working in the
+transformed representation using separate modulo ni computations, as convenient.
+The computations are entirely equivalent.
+
+Exercises
+
+31.5-1
+Find all solutions to the equations x  4 .mod 5/ and x  5 .mod 11/.
+

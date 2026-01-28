@@ -1,0 +1,45 @@
+26.4 Push-relabel algorithms                                                    747
+
+
+   Thus, the algorithm terminates after O.V 2 E/ operations. All that remains is
+to give an efﬁcient method for implementing each operation and for choosing an
+appropriate operation to execute.
+
+Corollary 26.25
+There is an implementation of the generic push-relabel algorithm that runs in
+O.V 2 E/ time on any ﬂow network G D .V; E/.
+
+Proof Exercise 26.4-2 asks you to show how to implement the generic algorithm
+with an overhead of O.V / per relabel operation and O.1/ per push. It also asks
+you to design a data structure that allows you to pick an applicable operation in
+O.1/ time. The corollary then follows.
+
+Exercises
+
+26.4-1
+Prove that, after the procedure I NITIALIZE -P REFLOW .G; s/ terminates, we have
+s:e   jf  j, where f  is a maximum ﬂow for G.
+
+26.4-2
+Show how to implement the generic push-relabel algorithm using O.V / time per
+relabel operation, O.1/ time per push, and O.1/ time to select an applicable oper-
+ation, for a total time of O.V 2 E/.
+
+26.4-3
+Prove that the generic push-relabel algorithm spends a total of only O.VE/ time
+in performing all the O.V 2 / relabel operations.
+
+26.4-4
+Suppose that we have found a maximum ﬂow in a ﬂow network G D .V; E/ using
+a push-relabel algorithm. Give a fast algorithm to ﬁnd a minimum cut in G.
+
+26.4-5
+Give an efﬁcient push-relabel algorithm to ﬁnd a maximum matching in a bipartite
+graph. Analyze your algorithm.
+
+26.4-6
+Suppose that all edge capacities in a ﬂow network G D .V; E/ are in the set
+f1; 2; : : : ; kg. Analyze the running time of the generic push-relabel algorithm in
+terms of jV j, jEj, and k. (Hint: How many times can each edge support a nonsat-
+urating push before it becomes saturated?)
+

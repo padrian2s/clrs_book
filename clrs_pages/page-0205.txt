@@ -1,0 +1,63 @@
+184   Chapter 7 Quicksort
+
+
+      The second line follows because the two events are mutually exclusive. Combining
+      equations (7.2) and (7.3), we get that
+                 X
+                 n1 X
+                     n
+                                 2
+      E ŒX  D                        :
+                 i D1 j Di C1
+                              j i C1
+
+      We can evaluate this sum using a change of variables (k D j  i) and the bound
+      on the harmonic series in equation (A.7):
+                    X
+                    n1 X
+                        n
+                                    2
+      E ŒX  D
+                    i D1 j Di C1
+                                 j i C1
+                    X
+                    n1 X
+                        ni
+                                2
+              D
+                    i D1 kD1
+                               kC1
+                    X
+                    n1 X
+                        n
+                          2
+              <
+                    i D1 kD1
+                               k
+                    X
+                    n1
+              D            O.lg n/
+                    i D1
+              D O.n lg n/ :                                                      (7.4)
+      Thus we conclude that, using R ANDOMIZED -PARTITION, the expected running
+      time of quicksort is O.n lg n/ when element values are distinct.
+
+      Exercises
+
+      7.4-1
+      Show that in the recurrence
+      T .n/ D max .T .q/ C T .n  q  1// C ‚.n/ ;
+                 0qn1
+
+      T .n/ D .n2 /.
+
+      7.4-2
+      Show that quicksort’s best-case running time is .n lg n/.
+
+      7.4-3
+      Show that the expression q 2 C .n  q  1/2 achieves a maximum over q D
+      0; 1; : : : ; n  1 when q D 0 or q D n  1.
+
+      7.4-4
+      Show that R ANDOMIZED -Q UICKSORT’s expected running time is .n lg n/.
+

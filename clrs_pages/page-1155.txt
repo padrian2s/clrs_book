@@ -1,0 +1,46 @@
+1134       Chapter 35 Approximation Algorithms
+
+
+           35.5-4
+           How would you modify the approximation scheme presented in this section to ﬁnd
+           a good approximation to the smallest value not less than t that is a sum of some
+           subset of the given input list?
+
+           35.5-5
+           Modify the A PPROX -S UBSET-S UM procedure to also return the subset of S that
+           sums to the value ´ .
+
+
+
+Problems
+
+           35-1 Bin packing
+           Suppose that we are given a set of n objects, where the size si of the ith object
+           satisﬁes 0 < si < 1. We wish to pack all the objects into the minimum number of
+           unit-size bins. Each bin can hold any subset of the objects whose total size does
+           not exceed 1.
+           a. Prove that the problem of determining the minimum number of bins required is
+              NP-hard. (Hint: Reduce from the subset-sum problem.)
+           The ﬁrst-ﬁt heuristic takes each
+                                          Pobject in turn and places it into the ﬁrst bin that
+                                            n
+           can accommodate it. Let S D i D1 si .
+           b. Argue that the optimal number of bins required is at least dSe.
+
+           c. Argue that the ﬁrst-ﬁt heuristic leaves at most one bin less than half full.
+
+           d. Prove that the number of bins used by the ﬁrst-ﬁt heuristic is never more
+              than d2Se.
+
+           e. Prove an approximation ratio of 2 for the ﬁrst-ﬁt heuristic.
+
+           f. Give an efﬁcient implementation of the ﬁrst-ﬁt heuristic, and analyze its running
+              time.
+
+           35-2 Approximating the size of a maximum clique
+           Let G D .V; E/ be an undirected graph. For any k  1, deﬁne G .k/ to be the undi-
+           rected graph .V .k/ ; E .k/ /, where V .k/ is the set of all ordered k-tuples of vertices
+           from V and E .k/ is deﬁned so that .1 ; 2 ; : : : ; k / is adjacent to .w1 ; w2 ; : : : ; wk /
+           if and only if for i D 1; 2; : : : ; k, either vertex i is adjacent to wi in G, or else
+            i D wi .
+

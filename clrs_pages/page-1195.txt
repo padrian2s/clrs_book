@@ -1,0 +1,40 @@
+1174   Appendix B     Sets, Etc.
+
+
+
+
+                (a)                                   (b)                                  (c)
+
+
+       Figure B.4 (a) A free tree. (b) A forest. (c) A graph that contains a cycle and is therefore neither
+       a tree nor a forest.
+
+
+       for trees also work for forests. Figure B.4(a) shows a free tree, and Figure B.4(b)
+       shows a forest. The forest in Figure B.4(b) is not a tree because it is not connected.
+       The graph in Figure B.4(c) is connected but neither a tree nor a forest, because it
+       contains a cycle.
+          The following theorem captures many important facts about free trees.
+
+       Theorem B.2 (Properties of free trees)
+       Let G D .V; E/ be an undirected graph. The following statements are equivalent.
+       1. G is a free tree.
+       2. Any two vertices in G are connected by a unique simple path.
+       3. G is connected, but if any edge is removed from E, the resulting graph is dis-
+          connected.
+       4. G is connected, and jEj D jV j  1.
+       5. G is acyclic, and jEj D jV j  1.
+       6. G is acyclic, but if any edge is added to E, the resulting graph contains a cycle.
+
+
+       Proof (1) ) (2): Since a tree is connected, any two vertices in G are connected
+       by at least one simple path. Suppose, for the sake of contradiction, that vertices u
+       and  are connected by two distinct simple paths p1 and p2 , as shown in Figure B.5.
+       Let w be the vertex at which the paths ﬁrst diverge; that is, w is the ﬁrst vertex
+       on both p1 and p2 whose successor on p1 is x and whose successor on p2 is y,
+       where x ¤ y. Let ´ be the ﬁrst vertex at which the paths reconverge; that is, ´ is
+       the ﬁrst vertex following w on p1 that is also on p2 . Let p 0 be the subpath of p1
+       from w through x to ´, and let p 00 be the subpath of p2 from w through y to ´.
+       Paths p 0 and p 00 share no vertices except their endpoints. Thus, the path obtained by
+       concatenating p 0 and the reverse of p 00 is a cycle, which contradicts our assumption
+

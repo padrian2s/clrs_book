@@ -1,0 +1,5 @@
+{
+  "page": 320,
+  "title": "13.3 Insertion",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 13.3</div>\n    <h1>Insertion</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Insert like BST, color red, then fix violations with rotations.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Insert as in regular BST, color new node RED</li>\n<li>May violate: root is black, or red-red parent-child</li>\n<li>Six cases (symmetric pairs) handled by rotations and recoloring</li>\n<li>Key insight: push violations up the tree toward root</li>\n<li>At most O(log n) time, at most 2 rotations</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Insert creates red node. If parent is red, uncle determines which case. Recolor and/or rotate.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Maintains balance automatically during insertions.</p>\n</div>\n</div>"
+}

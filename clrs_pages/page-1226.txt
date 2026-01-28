@@ -1,0 +1,46 @@
+C.4 The geometric and binomial distributions                                   1205
+
+
+                 X
+                 n1
+        D np                b.kI n  1; p/
+                 kD0
+        D np                                   (by equation (C.36)) .        (C.37)
+   By using the linearity of expectation, we can obtain the same result with sub-
+stantially less algebra. Let Xi be the random variable describing the number of
+successes in the ith trial. Then E ŒXi  D p  1 C q  0 D p, and by linearity of
+expectation (equation (C.21)), the expected number of successes for n trials is
+               " n      #
+                 X
+E ŒX  D E           Xi
+                     i D1
+              X
+              n
+        D            E ŒXi 
+              i D1
+              X n
+        D            p
+              i D1
+        D np :                                                               (C.38)
+  We can use the same approach to calculate the variance of the distribution. Using
+equation (C.27), we have Var ŒXi  D E ŒXi2   E2 ŒXi . Since Xi only takes on the
+values 0 and 1, we have Xi2 D Xi , which implies E ŒXi2  D E ŒXi  D p. Hence,
+Var ŒXi  D p  p 2 D p.1  p/ D pq :                                        (C.39)
+   To compute the variance of X , we take advantage of the independence of the n
+trials; thus, by equation (C.29),
+                    " n     #
+                     X
+Var ŒX  D Var           Xi
+                            i D1
+                X
+                n
+          D              Var ŒXi 
+                i D1
+                X n
+          D              pq
+                i D1
+          D npq :                                                            (C.40)
+   As Figure C.2 shows, the binomial distribution b.kI n; p/ increases with k until
+it reaches the mean np, and then it decreases. We can prove that the distribution
+always behaves in this manner by looking at the ratio of successive terms:
+

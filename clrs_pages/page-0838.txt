@@ -1,0 +1,48 @@
+28.1 Solving systems of linear equations                                                   817
+
+
+                X
+                i 1
+yi D bŒi            lij yj :
+                j D1
+
+   Having solved for y, we solve for x in equation (28.6) using back substitution,
+which is similar to forward substitution. Here, we solve the nth equation ﬁrst and
+work backward to the ﬁrst equation. Like forward substitution, this process runs
+in ‚.n2 / time. Since U is upper-triangular, we can rewrite the system (28.6) as
+u11 x1 C u12 x2 C    C             u1;n2 xn2 C     u1;n1 xn1 C   u1n xn D y1 ;
+          u22 x2 C    C            u2;n2 xn2 C     u2;n1 xn1 C   u2n xn D y2 ;
+                                                                               ::
+                                                                                :
+                                  un2;n2 xn2 C un2;n1 xn1 C un2;n xn D yn2 ;
+                                                      un1;n1 xn1 C un1;n xn D yn1 ;
+                                                                        un;n xn D yn :
+Thus, we can solve for xn ; xn1 ; : : : ; x1 successively as follows:
+  xn D yn =un;n ;
+xn1 D .yn1  un1;n xn /=un1;n1 ;
+xn2 D .yn2  .un2;n1 xn1 C un2;n xn //=un2;n2 ;
+     ::
+      :
+or, in general,
+                                  !
+                X
+                n
+xi D y i               uij xj =ui i :
+              j Di C1
+
+   Given P , L, U , and b, the procedure LUP-S OLVE solves for x by combining
+forward and back substitution. The pseudocode assumes that the dimension n ap-
+pears in the attribute L:rows and that the permutation matrix P is represented by
+the array .
+
+LUP-S OLVE .L; U; ; b/
+1 n D L:rows
+2 let x be a new vector of length n
+3 for i D 1 to n
+                    P
+4      yi D bŒi   ji 1
+                        D1 lij yj
+5 for i D n downto  P1n
+6      xi D yi  j Di C1 uij xj =ui i
+7 return x
+

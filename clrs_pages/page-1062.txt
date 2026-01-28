@@ -1,0 +1,43 @@
+33.4 Finding the closest pair of points                                              1041
+
+
+    1. Create an array Y 0 , which is the array Y with all points not in the 2ı-wide
+       vertical strip removed. The array Y 0 is sorted by y-coordinate, just as Y is.
+    2. For each point p in the array Y 0 , try to ﬁnd points in Y 0 that are within ı
+       units of p. As we shall see shortly, only the 7 points in Y 0 that follow p need
+       be considered. Compute the distance from p to each of these 7 points, and
+       keep track of the closest-pair distance ı 0 found over all pairs of points in Y 0 .
+    3. If ı 0 < ı, then the vertical strip does indeed contain a closer pair than the
+       recursive calls found. Return this pair and its distance ı 0 . Otherwise, return
+       the closest pair and its distance ı found by the recursive calls.
+  The above description omits some implementation details that are necessary to
+achieve the O.n lg n/ running time. After proving the correctness of the algorithm,
+we shall show how to implement the algorithm to achieve the desired time bound.
+
+Correctness
+The correctness of this closest-pair algorithm is obvious, except for two aspects.
+First, by bottoming out the recursion when jP j  3, we ensure that we never try to
+solve a subproblem consisting of only one point. The second aspect is that we need
+only check the 7 points following each point p in array Y 0 ; we shall now prove this
+property.
+   Suppose that at some level of the recursion, the closest pair of points is pL 2 PL
+and pR 2 PR . Thus, the distance ı 0 between pL and pR is strictly less than ı.
+Point pL must be on or to the left of line l and less than ı units away. Similarly, pR
+is on or to the right of l and less than ı units away. Moreover, pL and pR are
+within ı units of each other vertically. Thus, as Figure 33.11(a) shows, pL and pR
+are within a ı 2ı rectangle centered at line l. (There may be other points within
+this rectangle as well.)
+   We next show that at most 8 points of P can reside within this ı 2ı rectangle.
+Consider the ı ı square forming the left half of this rectangle. Since all points
+within PL are at least ı units apart, at most 4 points can reside within this square;
+Figure 33.11(b) shows how. Similarly, at most 4 points in PR can reside within
+the ı ı square forming the right half of the rectangle. Thus, at most 8 points of P
+can reside within the ı 2ı rectangle. (Note that since points on line l may be in
+either PL or PR , there may be up to 4 points on l. This limit is achieved if there are
+two pairs of coincident points such that each pair consists of one point from PL and
+one point from PR , one pair is at the intersection of l and the top of the rectangle,
+and the other pair is where l intersects the bottom of the rectangle.)
+   Having shown that at most 8 points of P can reside within the rectangle, we
+can easily see why we need to check only the 7 points following each point in the
+array Y 0 . Still assuming that the closest pair is pL and pR , let us assume without
+

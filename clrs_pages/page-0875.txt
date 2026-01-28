@@ -1,0 +1,43 @@
+854   Chapter 29 Linear Programming
+
+
+      X
+      n
+             aij xj  bi
+      j D1
+
+      is equivalent to
+      X
+      n
+             aij xj  bi :
+      j D1
+
+      Thus, by replacing each coefﬁcient aij by aij and each value bi by bi , we obtain
+      an equivalent less-than-or-equal-to constraint.
+        Finishing our example, we replace the equality in constraint (29.22) by two in-
+      equalities, obtaining
+      maximize        2x1     3x20        C 3x200
+      subject to
+                       x1 C x20             x200       7
+                       x1 C x20             x200       7                         (29.23)
+                       x1  2x20           C 2x200      4
+                         x1 ; x20 ; x200                0 :
+      Finally, we negate constraint (29.23). For consistency in variable names, we re-
+      name x20 to x2 and x200 to x3 , obtaining the standard form
+      maximize        2x1      3x2        C 3x3                                   (29.24)
+      subject to
+                       x1 C x2              x3        7                          (29.25)
+                      x1  x2             C x3       7                          (29.26)
+                       x1  2x2            C 2x3       4                          (29.27)
+                         x1 ; x2 ; x3                  0 :                        (29.28)
+
+      Converting linear programs into slack form
+      To efﬁciently solve a linear program with the simplex algorithm, we prefer to ex-
+      press it in a form in which some of the constraints are equality constraints. More
+      precisely, we shall convert it into a form in which the nonnegativity constraints are
+      the only inequality constraints, and the remaining constraints are equalities. Let
+      X
+      n
+             aij xj  bi                                                           (29.29)
+      j D1
+

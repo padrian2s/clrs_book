@@ -1,0 +1,21 @@
+1182       Appendix B   Sets, Etc.
+
+
+           c. Show that by removing at most O.lg n/ edges, we can partition the vertices
+              of any n-vertex binary tree into two sets A and B such that jAj D bn=2c
+              and jBj D dn=2e.
+
+
+Appendix notes
+
+           G. Boole pioneered the development of symbolic logic, and he introduced many of
+           the basic set notations in a book published in 1854. Modern set theory was created
+           by G. Cantor during the period 1874–1895. Cantor focused primarily on sets of
+           inﬁnite cardinality. The term “function” is attributed to G. W. Leibniz, who used it
+           to refer to several kinds of mathematical formulas. His limited deﬁnition has been
+           generalized many times. Graph theory originated in 1736, when L. Euler proved
+           that it was impossible to cross each of the seven bridges in the city of Königsberg
+           exactly once and return to the starting point.
+              The book by Harary [160] provides a useful compendium of many deﬁnitions
+           and results from graph theory.
+

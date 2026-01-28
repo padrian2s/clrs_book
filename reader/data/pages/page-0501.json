@@ -1,0 +1,5 @@
+{
+  "page": 501,
+  "title": "18.3 Deleting a Key from a B-tree",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 18.3</div>\n    <h1>Deleting a Key from a B-tree</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Remove keys while maintaining B-tree properties.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Case 1: key in leaf → just remove (if ≥ t keys)</li>\n<li>Case 2: key in internal node → replace with predecessor/successor</li>\n<li>Case 3: ensure child has ≥ t keys before descending</li>\n<li>Merge siblings when both have t-1 keys</li>\n<li>Always delete from a node with ≥ t keys (single pass)</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Delete from internal node: find predecessor (largest in left subtree), swap, delete from leaf.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Complete B-tree implementation for dynamic databases.</p>\n</div>\n</div>"
+}

@@ -1,0 +1,58 @@
+1152   Appendix A    Summations
+
+
+          A common bug in applying this method is to show that the ratio of consecu-
+       tive terms is less than 1 and then to assume that the summation is bounded by a
+       geometric series. An example is the inﬁnite harmonic series, which diverges since
+       X
+       1
+         1                  X
+                            n
+                              1
+                 D    lim
+             k        n!1         k
+       kD1                  kD1
+                 D lim ‚.lg n/
+                   n!1
+                 D 1:
+       The ratio of the .k C1/st and kth terms in this series is k=.k C1/ < 1, but the series
+       is not bounded by a decreasing geometric series. To bound a series by a geometric
+       series, we must show that there is an r < 1, which is a constant, such that the ratio
+       of all pairs of consecutive terms never exceeds r. In the harmonic series, no such r
+       exists because the ratio becomes arbitrarily close to 1.
+
+       Splitting summations
+       One way to obtain bounds on a difﬁcult summation is to express the series as the
+       sum of two or more series by partitioning the range of the index and then to bound
+       each of the resulting series.
+                                 Pn For example, suppose we try to ﬁnd a lower bound
+       on the arithmetic series kD1 k, which we have already seen has an upper bound
+       of n2 . We might attempt to bound each term in the summation by the smallest term,
+       but since that term is 1, we get a lower bound of n for the summation—far off from
+       our upper bound of n2 .
+          We can obtain a better lower bound by ﬁrst splitting the summation. Assume for
+       convenience that n is even. We have
+       X
+       n             X
+                     n=2
+                                  X
+                                  n
+             k D           kC             k
+       kD1           kD1        kDn=2C1
+
+                     X
+                     n=2
+                                  X
+                                  n
+                          0C         .n=2/
+                     kD1        kDn=2C1
+
+                 D .n=2/2
+                 D .n2 / ;
+                                                    Pn
+       which is an asymptotically tight bound, since kD1 k D O.n2 /.
+          For a summation arising from the analysis of an algorithm, we can often split
+       the summation and ignore a constant number of the P initial terms. Generally, this
+                                                             n
+       technique applies when each term ak in a summation kD0 ak is independent of n.
+

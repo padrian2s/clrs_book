@@ -1,0 +1,41 @@
+32.2 The Rabin-Karp algorithm                                                     991
+
+
+   To compute the remaining values t1 ; t2 ; : : : ; tnm in time ‚.n  m/, we observe
+that we can compute tsC1 from ts in constant time, since
+tsC1 D 10.ts  10m1 T Œs C 1/ C T Œs C m C 1 :                              (32.1)
+Subtracting 10m1 T Œs C 1 removes the high-order digit from ts , multiplying the
+result by 10 shifts the number left by one digit position, and adding T Œs C m C 1
+brings in the appropriate low-order digit. For example, if m D 5 and ts D 31415,
+then we wish to remove the high-order digit T Œs C 1 D 3 and bring in the new
+low-order digit (suppose it is T Œs C 5 C 1 D 2) to obtain
+tsC1 D 10.31415  10000  3/ C 2
+     D 14152 :
+If we precompute the constant 10m1 (which we can do in time O.lg m/ using the
+techniques of Section 31.6, although for this application a straightforward O.m/-
+time method sufﬁces), then each execution of equation (32.1) takes a constant num-
+ber of arithmetic operations. Thus, we can compute p in time ‚.m/, and we can
+compute all of t0 ; t1 ; : : : ; tnm in time ‚.n  m C 1/. Therefore, we can ﬁnd all
+occurrences of the pattern P Œ1 : : m in the text T Œ1 : : n with ‚.m/ preprocessing
+time and ‚.n  m C 1/ matching time.
+   Until now, we have intentionally overlooked one problem: p and ts may be
+too large to work with conveniently. If P contains m characters, then we cannot
+reasonably assume that each arithmetic operation on p (which is m digits long)
+takes “constant time.” Fortunately, we can solve this problem easily, as Figure 32.5
+shows: compute p and the ts values modulo a suitable modulus q. We can compute
+p modulo q in ‚.m/ time and all the ts values modulo q in ‚.n  m C 1/ time.
+If we choose the modulus q as a prime such that 10q just ﬁts within one computer
+word, then we can perform all the necessary computations with single-precision
+arithmetic. In general, with a d -ary alphabet f0; 1; : : : ; d  1g, we choose q so
+that dq ﬁts within a computer word and adjust the recurrence equation (32.1) to
+work modulo q, so that it becomes
+tsC1 D .d.ts  T Œs C 1h/ C T Œs C m C 1/ mod q ;                            (32.2)
+where h  d m1 .mod q/ is the value of the digit “1” in the high-order position
+of an m-digit text window.
+   The solution of working modulo q is not perfect, however: ts  p .mod q/
+does not imply that ts D p. On the other hand, if ts 6 p .mod q/, then we
+deﬁnitely have that ts ¤ p, so that shift s is invalid. We can thus use the test
+ts  p .mod q/ as a fast heuristic test to rule out invalid shifts s. Any shift s for
+which ts  p .mod q/ must be tested further to see whether s is really valid or
+we just have a spurious hit. This additional test explicitly checks the condition
+

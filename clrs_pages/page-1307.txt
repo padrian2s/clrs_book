@@ -1,0 +1,52 @@
+1286   Index
+
+
+          by matrix multiplication, 686–693, 706–707   singly linked list, 236
+          and negative-weight cycles, 645, 653–654,       see also linked list
+             692 ex., 700 ex.                          singular matrix, 1223
+          with negative-weight edges, 645–646          singular value decomposition, 842
+          no-path property of, 650, 672                sink vertex, 593 ex., 709, 712
+          optimal substructure of, 644–645, 687,       size
+             693–694                                      of an algorithm’s input, 25, 926–927,
+          path-relaxation property of, 650, 673              1055–1057
+          predecessor-subgraph property of, 650, 676      of a binomial tree, 527 pr.
+          problem variants, 644                           of a boolean combinational circuit, 1072
+          and relaxation, 648–650                         of a clique, 1086
+          by repeated squaring, 689–691                   of a set, 1161
+          single-destination, 644                         of a subtree in a Fibonacci heap, 524
+          single-pair, 381, 644                           of a vertex cover, 1089, 1108
+          single-source, 643–683                       skip list, 338
+          tree of, 647–648, 673–676                    slack, 855
+          triangle inequality of, 650, 671             slack form, 846, 854–857
+          in an unweighted graph, 381, 597                uniqueness of, 876
+          upper-bound property of, 650, 671–672        slackness
+          in a weighted graph, 643                        complementary, 894 pr.
+       sibling, 1176                                      parallel, 781
+       side of a polygon, 1020 ex.                     slack variable, 855
+       signature, 960                                  slot
+       simple cycle, 1170                                 of a direct-access table, 254
+       simple graph, 1170                                 of a hash table, 256
+       simple path, 1170                               S LOW-A LL -PAIRS -S HORTEST-PATHS, 689
+          longest, 382, 1048                           smoothed analysis, 897
+       simple polygon, 1020 ex.                        ?Socrates, 790
+       simple stencil calculation, 809 pr.             solution
+       simple uniform hashing, 259                        to an abstract problem, 1054
+       simplex, 848                                       basic, 866
+       S IMPLEX, 871                                      to a computational problem, 6
+       simplex algorithm, 848, 864–879, 896–897           to a concrete problem, 1055
+       single-destination shortest paths, 644             feasible, 665, 846, 851
+       single-pair shortest path, 381, 644                infeasible, 851
+          as a linear program, 859–860                    optimal, 851
+       single-source shortest paths, 643–683              to a system of linear equations, 814
+          Bellman-Ford algorithm for, 651–655          sorted linked list, 236
+          with bitonic paths, 682 pr.                     see also linked list
+          and difference constraints, 664–670          sorting, 5, 16–20, 30–37, 147–212, 797–805
+          Dijkstra’s algorithm for, 658–664               bubblesort, 40 pr.
+          in a directed acyclic graph, 655–658            bucket sort, 200–204
+          in -dense graphs, 706 pr.                      columnsort, 208 pr.
+          Gabow’s scaling algorithm for, 679 pr.          comparison sort, 191
+          as a linear program, 863 ex.                    counting sort, 194–197
+          and longest paths, 1048                         fuzzy, 189 pr.
+       singleton, 1161                                    heapsort, 151–169
+       singly connected graph, 612 ex.                    insertion sort, 12, 16–20
+

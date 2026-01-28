@@ -1,0 +1,42 @@
+972   Chapter 31 Number-Theoretic Algorithms
+
+
+      In other words, n is not a Carmichael number. Because, as we noted earlier,
+      Carmichael numbers are extremely rare, case 1 is the main case that arises “in
+      practice” (e.g., when n has been chosen randomly and is being tested for primal-
+      ity).
+         Let B D fb 2 Zn W b n1  1 .mod n/g. Clearly, B is nonempty, since 1 2 B.
+      Since B is closed under multiplication modulo n, we have that B is a subgroup
+      of Zn by Theorem 31.14. Note that every nonwitness belongs to B, since a non-
+      witness a satisﬁes an1  1 .mod n/. Since x 2 Zn  B, we have that B is a
+      proper subgroup of Zn .
+         Case 2: For all x 2 Zn ,
+      x n1  1 .mod n/ :                                                                 (31.41)
+      In other words, n is a Carmichael number. This case is extremely rare in prac-
+      tice. However, the Miller-Rabin test (unlike a pseudo-primality test) can efﬁciently
+      determine that Carmichael numbers are composite, as we now show.
+         In this case, n cannot be a prime power. To see why, let us suppose to the
+      contrary that n D p e , where p is a prime and e > 1. We derive a contradiction
+      as follows. Since we assume that n is odd, p must also be odd. Theorem 31.32
+      implies that Zn is a cyclic group: it contains a generator g such that ordn .g/ D
+      jZn j D .n/ D p e .1  1=p/ D .p  1/p e1 . (The formula for .n/ comes from
+      equation (31.20).) By equation (31.41), we have g n1  1 .mod n/. Then the
+      discrete logarithm theorem (Theorem 31.33, taking y D 0) implies that n  1  0
+      .mod .n//, or
+      .p  1/p e1 j p e  1 :
+      This is a contradiction for e > 1, since .p  1/p e1 is divisible by the prime p
+      but p e  1 is not. Thus, n is not a prime power.
+         Since the odd composite number n is not a prime power, we decompose it into
+      a product n1 n2 , where n1 and n2 are odd numbers greater than 1 that are relatively
+      prime to each other. (There may be several ways to decompose n, and it does not
+      matter which one we choose. For example, if n D p1e1 p2e2    prer , then we can
+      choose n1 D p1e1 and n2 D p2e2 p3e3    prer .)
+         Recall that we deﬁne t and u so that n  1 D 2t u, where t  1 and u is odd, and
+      that for an input a, the procedure W ITNESS computes the sequence
+                           2           t
+      X D hau ; a2u ; a2 u ; : : : ; a2 u i
+      (all computations are performed modulo n).
+         Let us call a pair .; j / of integers acceptable if  2 Zn , j 2 f0; 1; : : : ; tg, and
+        j
+       2 u  1 .mod n/ :
+

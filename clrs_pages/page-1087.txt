@@ -1,0 +1,41 @@
+1066   Chapter 34 NP-Completeness
+
+
+       34.2-4
+       Prove that the class NP of languages is closed under union, intersection, concate-
+       nation, and Kleene star. Discuss the closure of NP under complement.
+
+       34.2-5
+       Show that any language in NP can be decided by an algorithm running in
+                k
+       time 2O.n / for some constant k.
+
+       34.2-6
+       A hamiltonian path in a graph is a simple path that visits every vertex exactly
+       once. Show that the language HAM-PATH D fhG; u; i W there is a hamiltonian
+       path from u to  in graph Gg belongs to NP.
+
+       34.2-7
+       Show that the hamiltonian-path problem from Exercise 34.2-6 can be solved in
+       polynomial time on directed acyclic graphs. Give an efﬁcient algorithm for the
+       problem.
+
+       34.2-8
+       Let  be a boolean formula constructed from the boolean input variables x1 ; x2 ;
+       : : : ; xk , negations (:), ANDs (^), ORs (_), and parentheses. The formula  is a
+       tautology if it evaluates to 1 for every assignment of 1 and 0 to the input variables.
+       Deﬁne TAUTOLOGY as the language of boolean formulas that are tautologies.
+       Show that TAUTOLOGY 2 co-NP.
+
+       34.2-9
+       Prove that P  co-NP.
+
+       34.2-10
+       Prove that if NP ¤ co-NP, then P ¤ NP.
+
+       34.2-11
+       Let G be a connected, undirected graph with at least 3 vertices, and let G 3 be the
+       graph obtained by connecting all pairs of vertices that are connected by a path in G
+       of length at most 3. Prove that G 3 is hamiltonian. (Hint: Construct a spanning tree
+       for G, and use an inductive argument.)
+

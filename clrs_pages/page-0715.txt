@@ -1,0 +1,47 @@
+694   Chapter 25 All-Pairs Shortest Paths
+
+
+      all intermediate vertices in f1; 2; : : : ; k  1g       all intermediate vertices in f1; 2; : : : ; k  1g
+
+
+                                        p1                 k
+                                                                            p2
+                                                                                         j
+                       i
+
+
+                               p: all intermediate vertices in f1; 2; : : : ; kg
+
+
+      Figure 25.3 Path p is a shortest path from vertex i to vertex j , and k is the highest-numbered
+      intermediate vertex of p. Path p1 , the portion of path p from vertex i to vertex k, has all intermediate
+      vertices in the set f1; 2; : : : ; k  1g. The same holds for path p2 from vertex k to vertex j .
+
+
+          fore, p1 is a shortest path from i to k with all intermediate vertices in the set
+          f1; 2; : : : ; k  1g. Similarly, p2 is a shortest path from vertex k to vertex j with
+          all intermediate vertices in the set f1; 2; : : : ; k  1g.
+
+
+      A recursive solution to the all-pairs shortest-paths problem
+      Based on the above observations, we deﬁne a recursive formulation of shortest-
+      path estimates that differs from the one in Section 25.1. Let dij.k/ be the weight
+      of a shortest path from vertex i to vertex j for which all intermediate vertices
+      are in the set f1; 2; : : : ; kg. When k D 0, a path from vertex i to vertex j with
+      no intermediate vertex numbered higher than 0 has no intermediate vertices at all.
+      Such a path has at most one edge, and hence dij.0/ D wij . Following the above
+      discussion, we deﬁne dij.k/ recursively by
+               (
+                 wij                               if k D 0 ;
+      dij.k/ D          .k1/       .k1/    .k1/                                  (25.5)
+                 min dij       ; di k     C dkj    if k  1 :
+
+      Because for any path, all intermediate vertices are in the set f1; 2; : : : ; ng, the ma-
+      trix D .n/ D dij.n/ gives the ﬁnal answer: dij.n/ D ı.i; j / for all i; j 2 V .
+
+      Computing the shortest-path weights bottom up
+      Based on recurrence (25.5), we can use the following bottom-up procedure to com-
+      pute the values dij.k/ in order of increasing values of k. Its input is an n n matrix W
+      deﬁned as in equation (25.1). The procedure returns the matrix D .n/ of shortest-
+      path weights.
+

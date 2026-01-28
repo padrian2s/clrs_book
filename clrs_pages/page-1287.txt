@@ -1,0 +1,52 @@
+1266   Index
+
+
+       global variable, 21                               G REEDY-ACTIVITY-S ELECTOR, 421
+       Goldberg’s algorithm, see push-relabel            greedy algorithm, 414–450
+            algorithm                                       for activity selection, 415–422
+       golden ratio (), 59, 108 pr.                        for coin changing, 446 pr.
+       gossiping, 478                                       compared with dynamic programming, 381,
+       G RAFT , 583 pr.                                        390 ex., 418, 423–427
+       Graham’s scan, 1030–1036, 1047                       Dijkstra’s algorithm, 658–664
+       G RAHAM -S CAN, 1031                                 elements of, 423–428
+       graph, 1168–1173                                     for fractional knapsack problem, 426
+         adjacency-list representation of, 590              greedy-choice property in, 424–425
+         adjacency-matrix representation of, 591            for Huffman code, 428–437
+         algorithms for, 587–766                            Kruskal’s algorithm, 631–633
+         and asymptotic notation, 588                       and matroids, 437–443
+         attributes of, 588, 592                            for minimum spanning tree, 631–638
+         breadth-ﬁrst search of, 594–602, 623               for multithreaded scheduling, 781–783
+         coloring of, 1103 pr.                              for off-line caching, 449 pr.
+         complement of, 1090                                optimal substructure in, 425
+         component, 617                                     Prim’s algorithm, 634–636
+         constraint, 666–668                                for set cover, 1117–1122, 1139
+         dense, 589                                         for task scheduling, 443–446, 447–448 pr.
+         depth-ﬁrst search of, 603–612, 623                 on a weighted matroid, 439–442
+         dynamic, 562 n.                                    for weighted set cover, 1135 pr.
+         -dense, 706 pr.                                greedy-choice property, 424–425
+         hamiltonian, 1061                                  of activity selection, 417–418
+         incidence matrix of, 448 pr., 593 ex.              of Huffman codes, 433–434
+         interval, 422 ex.                                  of a weighted matroid, 441
+         nonhamiltonian, 1061                            greedy scheduler, 782
+         shortest path in, 597                           G REEDY-S ET-C OVER, 1119
+         singly connected, 612 ex.                       grid, 760 pr.
+         sparse, 589                                     group, 939–946
+         static, 562 n.                                     cyclic, 955
+         subproblem, 367–368                                operator (˚), 939
+         tour of, 1096                                   guessing the solution, in the substitution
+         weighted, 591                                         method, 84–85
+         see also directed acyclic graph, directed
+            graph, ﬂow network, undirected graph,        half 3-CNF satisﬁability, 1101 ex.
+            tree                                         half-open interval, 348
+       graphic matroid, 437–438, 642                     Hall’s theorem, 735 ex.
+       GRAPH-ISOMORPHISM, 1065 ex.                       halting problem, 1048
+       gray vertex, 594, 603                             halving lemma, 908
+       greatest common divisor (gcd), 929–930,           HAM-CYCLE, 1062
+            933 ex.                                      hamiltonian cycle, 1049, 1061, 1091–1096,
+         binary gcd algorithm for, 981 pr.                    1105
+         Euclid’s algorithm for, 933–939, 981 pr., 983   hamiltonian graph, 1061
+         with more than two arguments, 939 ex.           hamiltonian path, 1066 ex., 1101 ex.
+         recursion theorem for, 934                      HAM-PATH, 1066 ex.
+       greedoid, 450                                     handle, 163, 507
+       G REEDY, 440                                      handshaking lemma, 1172 ex.
+

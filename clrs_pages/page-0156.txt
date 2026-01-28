@@ -1,0 +1,45 @@
+5.4 Probabilistic analysis and further uses of indicator random variables              135
+
+
+5.4.3 Streaks
+Suppose you ﬂip a fair coin n times. What is the longest streak of consecutive
+heads that you expect to see? The answer is ‚.lg n/, as the following analysis
+shows.
+   We ﬁrst prove that the expected length of the longest streak of heads is O.lg n/.
+The probability that each coin ﬂip is a head is 1=2. Let Ai k be the event that a
+streak of heads of length at least k begins with the ith coin ﬂip or, more precisely,
+the event that the k consecutive coin ﬂips i; i C 1; : : : ; i C k  1 yield only heads,
+where 1  k  n and 1  i  nk C1. Since coin ﬂips are mutually independent,
+for any given event Ai k , the probability that all k ﬂips are heads is
+Pr fAi k g D 1=2k :                                                                  (5.8)
+For k D 2 dlg ne,
+Pr fAi;2dlg ne g D 1=22dlg ne
+                  1=22 lg n
+                 D 1=n2 ;
+and thus the probability that a streak of heads of length at least 2 dlg ne begins in
+position i is quite small. There are at most n  2 dlg ne C 1 positions where such
+a streak can begin. The probability that a streak of heads of length at least 2 dlg ne
+begins anywhere is therefore
+   (n2dlg neC1            )
+        [                          X
+                               n2dlg neC1
+
+Pr              Ai;2dlg ne                1=n2
+        i D1                           i D1
+                                    X
+                                    n
+                                <          1=n2
+                                    i D1
+                                D 1=n ;                                              (5.9)
+since by Boole’s inequality (C.19), the probability of a union of events is at most
+the sum of the probabilities of the individual events. (Note that Boole’s inequality
+holds even for events such as these that are not independent.)
+   We now use inequality (5.9) to bound the length of the longest streak. For
+j D 0; 1; 2; : : : ; n, let Lj be the event that the longest streak of heads has length ex-
+actly j , and let L be the length of the longest streak. By the deﬁnition of expected
+value, we have
+          X
+          n
+E ŒL D          j Pr fLj g :                                                       (5.10)
+          j D0
+

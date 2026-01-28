@@ -1,0 +1,45 @@
+742   Chapter 26 Maximum Flow
+
+
+      Lemma 26.15 (Vertex heights never decrease)
+      During the execution of the G ENERIC -P USH -R ELABEL procedure on a ﬂow net-
+      work G D .V; E/, for each vertex u 2 V , the height u:h never decreases. More-
+      over, whenever a relabel operation is applied to a vertex u, its height u:h increases
+      by at least 1.
+
+      Proof Because vertex heights change only during relabel operations, it sufﬁces
+      to prove the second statement of the lemma. If vertex u is about to be rela-
+      beled, then for all vertices  such that .u; / 2 Ef , we have u:h  :h. Thus,
+      u:h < 1 C min f:h W .u; / 2 Ef g, and so the operation must increase u:h.
+
+      Lemma 26.16
+      Let G D .V; E/ be a ﬂow network with source s and sink t. Then the execution of
+      G ENERIC -P USH -R ELABEL on G maintains the attribute h as a height function.
+
+      Proof The proof is by induction on the number of basic operations performed.
+      Initially, h is a height function, as we have already observed.
+         We claim that if h is a height function, then an operation R ELABEL .u/ leaves h
+      a height function. If we look at a residual edge .u; / 2 Ef that leaves u, then
+      the operation R ELABEL .u/ ensures that u:h  :h C 1 afterward. Now consider
+      a residual edge .w; u/ that enters u. By Lemma 26.15, w:h  u:h C 1 before the
+      operation R ELABEL .u/ implies w:h < u:h C 1 afterward. Thus, the operation
+      R ELABEL .u/ leaves h a height function.
+         Now, consider an operation P USH .u; /. This operation may add the edge .; u/
+      to Ef , and it may remove .u; / from Ef . In the former case, we have
+      :h D u:h  1 < u:h C 1, and so h remains a height function. In the latter case,
+      removing .u; / from the residual network removes the corresponding constraint,
+      and h again remains a height function.
+
+        The following lemma gives an important property of height functions.
+
+      Lemma 26.17
+      Let G D .V; E/ be a ﬂow network with source s and sink t, let f be a preﬂow
+      in G, and let h be a height function on V . Then there is no path from the source s
+      to the sink t in the residual network Gf .
+
+      Proof Assume for the sake of contradiction that Gf contains a path p from s to t,
+      where p D h0 ; 1 ; : : : ; k i, 0 D s, and k D t. Without loss of generality, p
+      is a simple path, and so k < jV j. For i D 0; 1; : : : ; k  1, edge .i ; i C1 / 2 Ef .
+      Because h is a height function, h.i /  h.i C1 / C 1 for i D 0; 1; : : : ; k  1. Com-
+      bining these inequalities over path p yields h.s/  h.t/Ck. But because h.t/ D 0,
+

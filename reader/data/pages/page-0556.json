@@ -1,0 +1,5 @@
+{
+  "page": 556,
+  "title": "20.1 Preliminary approaches",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 20.1</div>\n    <h1>20.1 Preliminary approaches</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"highlight-box\">\n    <h4>Page Content</h4>\n    <p>This page contains detailed technical content. Use the image view (press <kbd>V</kbd>) to see the original material with all formulas and figures.</p>\n</div><div class=\"definition-box\">\n    <h4>Context: Chapter 20</h4>\n    <p><strong>van Emde Boas Trees</strong></p>\n    <p>O(log log U) operations for integers in [0, U)</p>\n</div>\n</div>"
+}

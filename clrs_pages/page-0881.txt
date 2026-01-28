@@ -1,0 +1,48 @@
+860   Chapter 29 Linear Programming
+
+
+      The source vertex initially receives a value ds D 0, which never changes. Thus
+      we obtain the following linear program to compute the shortest-path weight from s
+      to t:
+      maximize     dt                                                              (29.44)
+      subject to
+                   d  du C w.u; / for each edge .u; / 2 E ;                    (29.45)
+                   ds D 0 :                                                        (29.46)
+      You might be surprised that this linear program maximizes an objective function
+      when it is supposed to compute shortest paths. We do not want to minimize the
+      objective function, since then setting dN D 0 for all  2 V would yield an optimal
+      solution to the linear program without solving the shortest-paths problem. We
+                                                                                         N
+      maximize because ˚ an optimal solution to the shortest-paths problem sets each d
+                        N                        N
+      to minuW.u;/2E du C w.u; / , so that d is the largest value that is less than or
+                                              ˚
+      equal to all of the values in the set dNu C w.u; / . We want to maximize d
+      for all vertices  on a shortest path from s to t subject to these constraints on all
+      vertices , and maximizing d t achieves this goal.
+         This linear program has jV j variables d , one for each vertex  2 V . It also
+      has jEj C 1 constraints: one for each edge, plus the additional constraint that the
+      source vertex’s shortest-path weight always has the value 0.
+
+      Maximum ﬂow
+      Next, we express the maximum-ﬂow problem as a linear program. Recall that we
+      are given a directed graph G D .V; E/ in which each edge .u; / 2 E has a
+      nonnegative capacity c.u; /  0, and two distinguished vertices: a source s and
+      a sink t. As deﬁned in Section 26.1, a ﬂow is a nonnegative real-valued function
+      f W V V ! R that satisﬁes the capacity constraint and ﬂow conservation. A
+      maximum ﬂow is a ﬂow that satisﬁes these constraints and maximizes the ﬂow
+      value, which is the total ﬂow coming out of the source minus the total ﬂow into the
+      source. A ﬂow, therefore, satisﬁes linear constraints, and the value of a ﬂow is a
+      linear function. Recalling also that we assume that c.u; / D 0 if .u; / 62 E and
+      that there are no antiparallel edges, we can express the maximum-ﬂow problem as
+      a linear program:
+                    X              X
+      maximize          fs           fs                                        (29.47)
+                   2V            2V
+      subject to
+                         fu    c.u; / for each u;  2 V ;                       (29.48)
+                   X             X
+                         fu   D    fu for each u 2 V  fs; tg ;                  (29.49)
+                   2V            2V
+                         fu    0         for each u;  2 V :                     (29.50)
+

@@ -1,0 +1,42 @@
+1126   Chapter 35 Approximation Algorithms
+
+
+       A PPROX -M IN -W EIGHT-VC.G; w/
+       1 C D;
+       2 compute Nx, an optimal solution to the linear program in lines (35.17)–(35.20)
+       3 for each  2 V
+       4      if Nx./  1=2
+       5            C D C [ fg
+       6 return C
+
+          The A PPROX -M IN -W EIGHT-VC procedure works as follows. Line 1 initial-
+       izes the vertex cover to be empty. Line 2 formulates the linear program in
+       lines (35.17)–(35.20) and then solves this linear program. An optimal solution
+       gives each vertex  an associated value Nx./, where 0  Nx./  1. We use this
+       value to guide the choice of which vertices to add to the vertex cover C in lines 3–5.
+       If Nx./  1=2, we add  to C ; otherwise we do not. In effect, we are “rounding”
+       each fractional variable in the solution to the linear program to 0 or 1 in order to
+       obtain a solution to the 0-1 integer program in lines (35.14)–(35.16). Finally, line 6
+       returns the vertex cover C .
+
+       Theorem 35.7
+       Algorithm A PPROX -M IN -W EIGHT-VC is a polynomial-time 2-approximation al-
+       gorithm for the minimum-weight vertex-cover problem.
+
+       Proof Because there is a polynomial-time algorithm to solve the linear program
+       in line 2, and because the for loop of lines 3–5 runs in polynomial time, A PPROX -
+       M IN -W EIGHT-VC is a polynomial-time algorithm.
+          Now we show that A PPROX -M IN -W EIGHT-VC is a 2-approximation algo-
+       rithm. Let C  be an optimal solution to the minimum-weight vertex-cover prob-
+       lem, and let ´ be the value of an optimal solution to the linear program in
+       lines (35.17)–(35.20). Since an optimal vertex cover is a feasible solution to the
+       linear program, ´ must be a lower bound on w.C  /, that is,
+       ´  w.C  / :                                                                (35.21)
+       Next, we claim that by rounding the fractional values of the variables Nx./, we
+       produce a set C that is a vertex cover and satisﬁes w.C /  2´ . To see that C is
+       a vertex cover, consider any edge .u; / 2 E. By constraint (35.18), we know that
+       x.u/ C x./  1, which implies that at least one of Nx.u/ and Nx./ is at least 1=2.
+       Therefore, at least one of u and  is included in the vertex cover, and so every edge
+       is covered.
+          Now, we consider the weight of the cover. We have
+

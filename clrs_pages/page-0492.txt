@@ -1,0 +1,40 @@
+17.4 Dynamic tables                                                               471
+
+
+If ˛i 1 < 1=2 and the ith operation does trigger a contraction, then the actual cost
+of the operation is ci D numi C 1, since we delete one item and move numi items.
+We have sizei =2 D sizei 1 =4 D numi 1 D numi C 1, and the amortized cost of
+the operation is
+cyi   D   ci C ˆi  ˆi 1
+      D   .numi C 1/ C .sizei =2  numi /  .sizei 1 =2  numi 1 /
+      D   .numi C 1/ C ..numi C 1/  numi /  ..2  numi C 2/  .numi C 1//
+      D   1:
+When the ith operation is a TABLE -D ELETE and ˛i 1  1=2, the amortized cost
+is also bounded above by a constant. We leave the analysis as Exercise 17.4-2.
+   In summary, since the amortized cost of each operation is bounded above by
+a constant, the actual time for any sequence of n operations on a dynamic table
+is O.n/.
+
+Exercises
+
+17.4-1
+Suppose that we wish to implement a dynamic, open-address hash table. Why
+might we consider the table to be full when its load factor reaches some value ˛
+that is strictly less than 1? Describe brieﬂy how to make insertion into a dynamic,
+open-address hash table run in such a way that the expected value of the amortized
+cost per insertion is O.1/. Why is the expected value of the actual cost per insertion
+not necessarily O.1/ for all insertions?
+
+17.4-2
+Show that if ˛i 1  1=2 and the ith operation on a dynamic table is TABLE -
+D ELETE, then the amortized cost of the operation with respect to the potential
+function (17.6) is bounded above by a constant.
+
+17.4-3
+Suppose that instead of contracting a table by halving its size when its load factor
+drops below 1=4, we contract it by multiplying its size by 2=3 when its load factor
+drops below 1=3. Using the potential function
+ˆ.T / D j2  T:num  T:sizej ;
+show that the amortized cost of a TABLE -D ELETE that uses this strategy is bounded
+above by a constant.
+

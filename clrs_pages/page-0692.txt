@@ -1,0 +1,42 @@
+            24.5 Proofs of shortest-paths properties                                        671
+
+
+
+
+24.5 Proofs of shortest-paths properties
+
+            Throughout this chapter, our correctness arguments have relied on the triangle
+            inequality, upper-bound property, no-path property, convergence property, path-
+            relaxation property, and predecessor-subgraph property. We stated these properties
+            without proof at the beginning of this chapter. In this section, we prove them.
+
+            The triangle inequality
+            In studying breadth-ﬁrst search (Section 22.2), we proved as Lemma 22.1 a sim-
+            ple property of shortest distances in unweighted graphs. The triangle inequality
+            generalizes the property to weighted graphs.
+
+            Lemma 24.10 (Triangle inequality)
+            Let G D .V; E/ be a weighted, directed graph with weight function w W E ! R
+            and source vertex s. Then, for all edges .u; / 2 E, we have
+            ı.s; /  ı.s; u/ C w.u; / :
+
+
+            Proof Suppose that p is a shortest path from source s to vertex . Then p has
+            no more weight than any other path from s to . Speciﬁcally, path p has no more
+            weight than the particular path that takes a shortest path from source s to vertex u
+            and then takes edge .u; /.
+               Exercise 24.5-3 asks you to handle the case in which there is no shortest path
+            from s to .
+
+            Effects of relaxation on shortest-path estimates
+            The next group of lemmas describes how shortest-path estimates are affected when
+            we execute a sequence of relaxation steps on the edges of a weighted, directed
+            graph that has been initialized by I NITIALIZE -S INGLE -S OURCE.
+
+            Lemma 24.11 (Upper-bound property)
+            Let G D .V; E/ be a weighted, directed graph with weight function w W E ! R.
+            Let s 2 V be the source vertex, and let the graph be initialized by I NITIALIZE -
+            S INGLE -S OURCE.G; s/. Then, :d  ı.s; / for all  2 V , and this invariant is
+            maintained over any sequence of relaxation steps on the edges of G. Moreover,
+            once :d achieves its lower bound ı.s; /, it never changes.
+

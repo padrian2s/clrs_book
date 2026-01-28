@@ -1,0 +1,42 @@
+16.3 Huffman codes                                                               435
+
+
+   The next lemma shows that the problem of constructing optimal preﬁx codes has
+the optimal-substructure property.
+
+Lemma 16.3
+Let C be a given alphabet with frequency c:freq deﬁned for each character c 2 C .
+Let x and y be two characters in C with minimum frequency. Let C 0 be the
+alphabet C with the characters x and y removed and a new character ´ added,
+so that C 0 D C  fx; yg [ f´g. Deﬁne f for C 0 as for C , except that
+´:freq D x:freq C y:freq. Let T 0 be any tree representing an optimal preﬁx code
+for the alphabet C 0 . Then the tree T , obtained from T 0 by replacing the leaf node
+for ´ with an internal node having x and y as children, represents an optimal preﬁx
+code for the alphabet C .
+
+Proof We ﬁrst show how to express the cost B.T / of tree T in terms of the
+cost B.T 0 / of tree T 0 , by considering the component costs in equation (16.4).
+For each character c 2 C  fx; yg, we have that dT .c/ D dT 0 .c/, and hence
+c:freq  dT .c/ D c:freq  dT 0 .c/. Since dT .x/ D dT .y/ D dT 0 .´/ C 1, we have
+x:freq  dT .x/ C y:freq  dT .y/ D .x:freq C y:freq/.dT 0 .´/ C 1/
+                                  D ´:freq  dT 0 .´/ C .x:freq C y:freq/ ;
+from which we conclude that
+B.T / D B.T 0 / C x:freq C y:freq
+or, equivalently,
+B.T 0 / D B.T /  x:freq  y:freq :
+   We now prove the lemma by contradiction. Suppose that T does not repre-
+sent an optimal preﬁx code for C . Then there exists an optimal tree T 00 such that
+B.T 00 / < B.T /. Without loss of generality (by Lemma 16.2), T 00 has x and y as
+siblings. Let T 000 be the tree T 00 with the common parent of x and y replaced by a
+leaf ´ with frequency ´:freq D x:freq C y:freq. Then
+B.T 000 / D B.T 00 /  x:freq  y:freq
+          < B.T /  x:freq  y:freq
+          D B.T 0 / ;
+yielding a contradiction to the assumption that T 0 represents an optimal preﬁx code
+for C 0 . Thus, T must represent an optimal preﬁx code for the alphabet C .
+
+Theorem 16.4
+Procedure H UFFMAN produces an optimal preﬁx code.
+
+Proof   Immediate from Lemmas 16.2 and 16.3.
+

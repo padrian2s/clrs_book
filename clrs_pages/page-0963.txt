@@ -1,0 +1,42 @@
+942   Chapter 31 Number-Theoretic Algorithms
+
+
+      where the group operation is multiplication modulo 15. (Here we denote an el-
+      ement Œa15 as a; for example, we denote Œ715 as 7.) Figure 31.2(b) shows the
+      group .Z15 ; 15 /. For example, 8  11  13 .mod 15/, working in Z15 . The iden-
+      tity for this group is 1.
+
+      Theorem 31.13
+      The system .Zn ; n / is a ﬁnite abelian group.
+
+      Proof Theorem 31.6 implies that .Zn ; n / is closed. Associativity and commu-
+      tativity can be proved for n as they were for Cn in the proof of Theorem 31.12.
+      The identity element is Œ1n . To show the existence of inverses, let a be an element
+      of Zn and let .d; x; y/ be returned by E XTENDED -E UCLID .a; n/. Then, d D 1,
+      since a 2 Zn , and
+      ax C ny D 1                                                                       (31.19)
+      or, equivalently,
+      ax  1 .mod n/ :
+      Thus, Œxn is a multiplicative inverse of Œan , modulo n. Furthermore, we claim
+      that Œxn 2 Zn . To see why, equation (31.19) demonstrates that the smallest pos-
+      itive linear combination of x and n must be 1. Therefore, Theorem 31.2 implies
+      that gcd.x; n/ D 1. We defer the proof that inverses are uniquely deﬁned until
+      Corollary 31.26.
+
+         As an example of computing multiplicative inverses, suppose that a D 5 and
+      n D 11. Then E XTENDED -E UCLID .a; n/ returns .d; x; y/ D .1; 2; 1/, so that
+      1 D 5  .2/ C 11  1. Thus, Œ211 (i.e., Œ911 ) is the multiplicative inverse of Œ511 .
+         When working with the groups .Zn ; Cn / and .Zn ; n / in the remainder of this
+      chapter, we follow the convenient practice of denoting equivalence classes by their
+      representative elements and denoting the operations Cn and n by the usual arith-
+      metic notations C and  (or juxtaposition, so that ab D a  b) respectively. Also,
+      equivalences modulo n may also be interpreted as equations in Zn . For example,
+      the following two statements are equivalent:
+               ax  b .mod n/ ;
+      Œan n Œxn D Œbn :
+         As a further convenience, we sometimes refer to a group .S; ˚/ merely as S
+      when the operation ˚ is understood from context. We may thus refer to the groups
+      .Zn ; Cn / and .Zn ; n / as Zn and Zn , respectively.
+         We denote the (multiplicative) inverse of an element a by .a1 mod n/. Division
+      in Zn is deﬁned by the equation a=b  ab 1 .mod n/. For example, in Z15
+

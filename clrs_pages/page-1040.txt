@@ -1,0 +1,49 @@
+               33.1 Line-segment properties                                                                          1019
+
+
+      (p1–p3) × (p4–p3) < 0             p4                        (p1–p3) × (p4–p3) < 0                 p4
+                p1                   (p4–p1) × (p2–p1) < 0                  p1                     (p4–p1) × (p2–p1) < 0
+                                                                                       p2
+                                                                                             (p2–p3) × (p4–p3) < 0
+                                       p2
+(p3–p1) × (p2–p1) > 0                                                                  (p3–p1) × (p2–p1) > 0
+                        p3          (p2–p3) × (p4–p3) > 0                         p3
+                              (a)                                                      (b)
+
+
+
+                                        p4                                                         p4
+                p1                                                          p1
+
+
+                             p3
+                                       p2                                                     p2
+                                                                                                         p3
+                              (c)                                                      (d)
+
+
+
+               Figure 33.3 Cases in the procedure S EGMENTS -I NTERSECT . (a) The segments p1 p2 and p3 p4
+               straddle each other’s lines. Because p3 p4 straddles the line containing p1 p2 , the signs of the cross
+               products .p3  p1 / .p2  p1 / and .p4  p1 / .p2  p1 / differ. Because p1 p2 straddles the line
+               containing p3 p4 , the signs of the cross products .p1  p3 / .p4  p3 / and .p2  p3 / .p4  p3 /
+               differ. (b) Segment p3 p4 straddles the line containing p1 p2 , but p1 p2 does not straddle the line
+               containing p3 p4 . The signs of the cross products .p1  p3 / .p4  p3 / and .p2  p3 / .p4  p3 /
+               are the same. (c) Point p3 is colinear with p1 p2 and is between p1 and p2 . (d) Point p3 is colinear
+               with p1 p2 , but it is not between p1 and p2 . The segments do not intersect.
+
+
+               each other’s lines, although a boundary case may apply. If all the relative orienta-
+               tions are nonzero, no boundary case applies. All the tests against 0 in lines 7–13
+               then fail, and S EGMENTS -I NTERSECT returns FALSE in line 15. Figure 33.3(b)
+               shows this case.
+                  A boundary case occurs if any relative orientation dk is 0. Here, we know that pk
+               is colinear with the other segment. It is directly on the other segment if and only
+               if it is between the endpoints of the other segment. The procedure O N -S EGMENT
+               returns whether pk is between the endpoints of segment pi pj , which will be the
+               other segment when called in lines 7–13; the procedure assumes that pk is colinear
+               with segment pi pj . Figures 33.3(c) and (d) show cases with colinear points. In
+               Figure 33.3(c), p3 is on p1 p2 , and so S EGMENTS -I NTERSECT returns TRUE in
+               line 12. No endpoints are on other segments in Figure 33.3(d), and so S EGMENTS -
+               I NTERSECT returns FALSE in line 15.
+

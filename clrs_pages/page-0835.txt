@@ -1,0 +1,43 @@
+814   Chapter 28 Matrix Operations
+
+
+      a11 x1 C a12 x2 C    C a1n xn D b1 ;
+      a21 x1 C a22 x2 C    C a2n xn D b2 ;
+                                       ::                                                 (28.1)
+                                        :
+      an1 x1 C an2 x2 C    C ann xn D bn :
+      A solution to the equations (28.1) is a set of values for x1 ; x2 ; : : : ; xn that satisfy
+      all of the equations simultaneously. In this section, we treat only the case in which
+      there are exactly n equations in n unknowns.
+
+      ˙a                          ˙ x  ˙ b 
+         We can conveniently rewrite equations (28.1) as the matrix-vector equation
+                a12      a1n
+           11                          1            1
+         a21    a22      a2n       x2           b2
+          ::     ::   ::     ::        ::   D       ::
+           :      :       :   :         :            :
+         an1 an2         ann       xn           bn
+      or, equivalently, letting A D .aij /, x D .xi /, and b D .bi /, as
+      Ax D b :                                                                            (28.2)
+        If A is nonsingular, it possesses an inverse A1 , and
+      x D A1 b                                                                           (28.3)
+      is the solution vector. We can prove that x is the unique solution to equation (28.2)
+      as follows. If there are two solutions, x and x 0 , then Ax D Ax 0 D b and, letting I
+      denote an identity matrix,
+      x D       Ix
+        D       .A1 A/x
+        D       A1 .Ax/
+        D       A1 .Ax 0 /
+        D       .A1 A/x 0
+        D       x0 :
+         In this section, we shall be concerned predominantly with the case in which A
+      is nonsingular or, equivalently (by Theorem D.1), the rank of A is equal to the
+      number n of unknowns. There are other possibilities, however, which merit a brief
+      discussion. If the number of equations is less than the number n of unknowns—or,
+      more generally, if the rank of A is less than n—then the system is underdeter-
+      mined. An underdetermined system typically has inﬁnitely many solutions, al-
+      though it may have no solutions at all if the equations are inconsistent. If the
+      number of equations exceeds the number n of unknowns, the system is overdeter-
+      mined, and there may not exist any solutions. Section 28.3 addresses the important
+

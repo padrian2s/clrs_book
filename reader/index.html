@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Algorithms (CLRS) - Third Edition</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Progress indicator -->
+    <div class="page-indicator">
+        <div class="page-indicator-fill" id="progressBar"></div>
+    </div>
+
+    <!-- Current page badge -->
+    <div class="current-page-badge" id="pageBadge">Page 1 of 1313</div>
+
+    <!-- Main reading area -->
+    <main class="reader" id="reader">
+        <!-- Content loaded dynamically -->
+    </main>
+
+    <!-- Keyboard hints -->
+    <div class="keyboard-hint">
+        <kbd>&larr;</kbd> <kbd>&rarr;</kbd> Navigate &nbsp;&middot;&nbsp;
+        <kbd>T</kbd> TOC &nbsp;&middot;&nbsp;
+        <kbd>V</kbd> View &nbsp;&middot;&nbsp;
+        <kbd>+</kbd> <kbd>-</kbd> Zoom &nbsp;&middot;&nbsp;
+        <kbd>G</kbd> Go to Page
+    </div>
+
+    <!-- TOC trigger button -->
+    <button class="toc-trigger" id="tocTrigger" aria-label="Open table of contents">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="15" y2="12"></line>
+            <line x1="3" y1="18" x2="18" y2="18"></line>
+        </svg>
+    </button>
+
+    <!-- TOC overlay -->
+    <div class="toc-overlay" id="tocOverlay"></div>
+
+    <!-- TOC sidebar -->
+    <nav class="toc-sidebar" id="tocSidebar">
+        <div class="toc-header">
+            <h2>Table of Contents</h2>
+            <button class="toc-close" id="tocClose" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="toc-search">
+            <input type="text" id="tocSearch" placeholder="Filter chapters...">
+        </div>
+        <div class="toc-content" id="tocContent">
+            <!-- TOC items loaded by JavaScript -->
+        </div>
+        <div class="toc-footer">
+            <span>Press <kbd>T</kbd> to toggle</span>
+            <span id="tocPageCount">1313 pages</span>
+        </div>
+    </nav>
+
+    <!-- Menu trigger button -->
+    <button class="menu-trigger" id="menuTrigger" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+    </button>
+
+    <!-- Context menu overlay -->
+    <div class="context-menu-overlay" id="menuOverlay"></div>
+
+    <!-- Context menu -->
+    <nav class="context-menu" id="contextMenu">
+        <div class="menu-header">
+            <h3>Current Page</h3>
+            <div class="page-title" id="menuPageTitle">Cover</div>
+        </div>
+
+        <div class="menu-section">
+            <div class="menu-section-label">Navigation</div>
+            <div class="nav-controls">
+                <button class="nav-btn" id="prevBtn" aria-label="Previous page">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <input type="number" class="page-input" id="pageInput" value="1" min="1" max="1313">
+                <span class="page-total">/ 1313</span>
+                <button class="nav-btn" id="nextBtn" aria-label="Next page">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="menu-section-label">View</div>
+            <button class="menu-item active" id="viewImage" onclick="setView('image')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                Page Image (PNG)
+                <span class="shortcut">V</span>
+            </button>
+            <button class="menu-item" id="viewText" onclick="setView('text')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                Text Content
+                <span class="shortcut">V</span>
+            </button>
+        </div>
+
+        <div class="menu-section">
+            <div class="menu-section-label">Search</div>
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search content...">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <button class="menu-item" onclick="openFullscreen()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                Open Image in New Tab
+            </button>
+        </div>
+    </nav>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

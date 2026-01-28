@@ -1,0 +1,54 @@
+17.4 Dynamic tables                                                                              469
+
+
+32
+
+
+
+24
+                         sizei
+
+
+16
+                                          numi
+
+
+ 8
+                                     Φi
+
+
+ 0                                                                             i
+     0            8             16           24   32       40         48
+
+
+Figure 17.4 The effect of a sequence of n TABLE -I NSERT and TABLE -D ELETE operations on the
+number numi of items in the table, the number sizei of slots in the table, and the potential
+         
+             2  numi  sizei    if ˛i  1=2 ;
+ˆi D
+             sizei =2  numi     if ˛i < 1=2 ;
+
+each measured after the ith operation. The thin line shows numi , the dashed line shows sizei , and
+the thick line shows ˆi . Notice that immediately before an expansion, the potential has built up to
+the number of items in the table, and therefore it can pay for moving all the items to the new table.
+Likewise, immediately before a contraction, the potential has built up to the number of items in the
+table.
+
+
+tor of a nonempty table T by ˛.T / D T:num=T:size. Since for an empty table,
+T:num D T:size D 0 and ˛.T / D 1, we always have T:num D ˛.T /  T:size,
+whether the table is empty or not. We shall use as our potential function
+          (
+            2  T:num  T:size if ˛.T /  1=2 ;
+ˆ.T / D                                                                   (17.6)
+            T:size=2  T:num if ˛.T / < 1=2 :
+
+Observe that the potential of an empty table is 0 and that the potential is never
+negative. Thus, the total amortized cost of a sequence of operations with respect
+to ˆ provides an upper bound on the actual cost of the sequence.
+   Before proceeding with a precise analysis, we pause to observe some properties
+of the potential function, as illustrated in Figure 17.4. Notice that when the load
+factor is 1=2, the potential is 0. When the load factor is 1, we have T:size D T:num,
+which implies ˆ.T / D T:num, and thus the potential can pay for an expansion if
+an item is inserted. When the load factor is 1=4, we have T:size D 4T:num, which
+

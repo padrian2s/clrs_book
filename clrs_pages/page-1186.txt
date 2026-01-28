@@ -1,0 +1,45 @@
+B.2 Relations                                                                                   1165
+
+
+For example, the “” relation on the natural numbers is antisymmetric, since a  b
+and b  a imply a D b. A relation that is reﬂexive, antisymmetric, and transitive
+is a partial order, and we call a set on which a partial order is deﬁned a partially
+ordered set. For example, the relation “is a descendant of” is a partial order on the
+set of all people (if we view individuals as being their own descendants).
+   In a partially ordered set A, there may be no single “maximum” element a such
+that b R a for all b 2 A. Instead, the set may contain several maximal elements a
+such that for no b 2 A, where b ¤ a, is it the case that a R b. For example, a
+collection of different-sized boxes may contain several maximal boxes that don’t
+ﬁt inside any other box, yet it has no single “maximum” box into which any other
+box will ﬁt.3
+   A relation R on a set A is a total relation if for all a; b 2 A, we have a R b
+or b R a (or both), that is, if every pairing of elements of A is related by R. A
+partial order that is also a total relation is a total order or linear order. For example,
+the relation “” is a total order on the natural numbers, but the “is a descendant
+of” relation is not a total order on the set of all people, since there are individuals
+neither of whom is descended from the other. A total relation that is transitive, but
+not necessarily reﬂexive and antisymmetric, is a total preorder.
+
+Exercises
+
+B.2-1
+Prove that the subset relation “” on all subsets of Z is a partial order but not a
+total order.
+
+B.2-2
+Show that for any positive integer n, the relation “equivalent modulo n” is an equiv-
+alence relation on the integers. (We say that a  b .mod n/ if there exists an
+integer q such that a  b D q n.) Into what equivalence classes does this relation
+partition the integers?
+
+B.2-3
+Give examples of relations that are
+a. reﬂexive and symmetric but not transitive,
+b. reﬂexive and transitive but not symmetric,
+c. symmetric and transitive but not reﬂexive.
+
+
+3 To be precise, in order for the “ﬁt inside” relation to be a partial order, we need to view a box as
+
+ﬁtting inside itself.
+

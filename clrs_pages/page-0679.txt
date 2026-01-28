@@ -1,0 +1,45 @@
+658        Chapter 24 Single-Source Shortest Paths
+
+
+           24.2-4
+           Give an efﬁcient algorithm to count the total number of paths in a directed acyclic
+           graph. Analyze your algorithm.
+
+
+
+24.3 Dijkstra’s algorithm
+
+           Dijkstra’s algorithm solves the single-source shortest-paths problem on a weighted,
+           directed graph G D .V; E/ for the case in which all edge weights are nonnegative.
+           In this section, therefore, we assume that w.u; /  0 for each edge .u; / 2 E. As
+           we shall see, with a good implementation, the running time of Dijkstra’s algorithm
+           is lower than that of the Bellman-Ford algorithm.
+              Dijkstra’s algorithm maintains a set S of vertices whose ﬁnal shortest-path
+           weights from the source s have already been determined. The algorithm repeat-
+           edly selects the vertex u 2 V  S with the minimum shortest-path estimate, adds u
+           to S, and relaxes all edges leaving u. In the following implementation, we use a
+           min-priority queue Q of vertices, keyed by their d values.
+
+           D IJKSTRA .G; w; s/
+           1 I NITIALIZE -S INGLE -S OURCE .G; s/
+           2 S D;
+           3 Q D G:V
+           4 while Q ¤ ;
+           5      u D E XTRACT-M IN .Q/
+           6      S D S [ fug
+           7      for each vertex  2 G:AdjŒu
+           8           R ELAX .u; ; w/
+
+              Dijkstra’s algorithm relaxes edges as shown in Figure 24.6. Line 1 initializes
+           the d and  values in the usual way, and line 2 initializes the set S to the empty
+           set. The algorithm maintains the invariant that Q D V  S at the start of each
+           iteration of the while loop of lines 4–8. Line 3 initializes the min-priority queue Q
+           to contain all the vertices in V ; since S D ; at that time, the invariant is true after
+           line 3. Each time through the while loop of lines 4–8, line 5 extracts a vertex u from
+           Q D V  S and line 6 adds it to set S, thereby maintaining the invariant. (The ﬁrst
+           time through this loop, u D s.) Vertex u, therefore, has the smallest shortest-path
+           estimate of any vertex in V  S. Then, lines 7–8 relax each edge .u; / leaving u,
+           thus updating the estimate :d and the predecessor : if we can improve the
+           shortest path to  found so far by going through u. Observe that the algorithm
+           never inserts vertices into Q after line 3 and that each vertex is extracted from Q
+

@@ -1,0 +1,10 @@
+1140   Chapter 35 Approximation Algorithms
+
+
+          As mentioned in the chapter notes for Chapter 34, recent results in probabilisti-
+       cally checkable proofs have led to lower bounds on the approximability of many
+       problems, including several in this chapter. In addition to the references there,
+       the chapter by Arora and Lund [23] contains a good description of the relation-
+       ship between probabilistically checkable proofs and the hardness of approximating
+       various problems.
+

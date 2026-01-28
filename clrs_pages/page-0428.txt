@@ -1,0 +1,44 @@
+Problems for Chapter 15                                                           407
+
+
+   As an example, one way to transform the source string algorithm to the target
+string altruistic is to use the following sequence of operations, where the
+underlined characters are xŒi and ´Œj  after the operation:
+Operation            x                   ´
+initial strings      algorithm
+copy                 algorithm           a
+copy                 algorithm           al
+replace by t         algorithm           alt
+delete               algorithm           alt
+copy                 algorithm           altr
+insert u             algorithm           altru
+insert i             algorithm           altrui
+insert s             algorithm           altruis
+twiddle              algorithm           altruisti
+insert c             algorithm           altruistic
+kill                 algorithm           altruistic
+Note that there are several other sequences of transformation operations that trans-
+form algorithm to altruistic.
+   Each of the transformation operations has an associated cost. The cost of an
+operation depends on the speciﬁc application, but we assume that each operation’s
+cost is a constant that is known to us. We also assume that the individual costs of
+the copy and replace operations are less than the combined costs of the delete and
+insert operations; otherwise, the copy and replace operations would not be used.
+The cost of a given sequence of transformation operations is the sum of the costs
+of the individual operations in the sequence. For the sequence above, the cost of
+transforming algorithm to altruistic is
+.3  cost.copy// C cost.replace/ C cost.delete/ C .4  cost.insert//
+      C cost.twiddle/ C cost.kill/ :
+
+a. Given two sequences xŒ1 : : m and yŒ1 : : n and set of transformation-operation
+   costs, the edit distance from x to y is the cost of the least expensive operation
+   sequence that transforms x to y. Describe a dynamic-programming algorithm
+   that ﬁnds the edit distance from xŒ1 : : m to yŒ1 : : n and prints an optimal op-
+   eration sequence. Analyze the running time and space requirements of your
+   algorithm.
+
+The edit-distance problem generalizes the problem of aligning two DNA sequences
+(see, for example, Setubal and Meidanis [310, Section 3.2]). There are several
+methods for measuring the similarity of two DNA sequences by aligning them.
+One such method to align two sequences x and y consists of inserting spaces at
+

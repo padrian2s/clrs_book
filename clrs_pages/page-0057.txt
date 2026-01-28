@@ -1,0 +1,46 @@
+36   Chapter 2 Getting Started
+
+
+     the original problem size is a power of 2. Each divide step then yields two subse-
+     quences of size exactly n=2. In Chapter 4, we shall see that this assumption does
+     not affect the order of growth of the solution to the recurrence.
+        We reason as follows to set up the recurrence for T .n/, the worst-case running
+     time of merge sort on n numbers. Merge sort on just one element takes constant
+     time. When we have n > 1 elements, we break down the running time as follows.
+     Divide: The divide step just computes the middle of the subarray, which takes
+        constant time. Thus, D.n/ D ‚.1/.
+     Conquer: We recursively solve two subproblems, each of size n=2, which con-
+       tributes 2T .n=2/ to the running time.
+     Combine: We have already noted that the M ERGE procedure on an n-element
+       subarray takes time ‚.n/, and so C.n/ D ‚.n/.
+        When we add the functions D.n/ and C.n/ for the merge sort analysis, we are
+     adding a function that is ‚.n/ and a function that is ‚.1/. This sum is a linear
+     function of n, that is, ‚.n/. Adding it to the 2T .n=2/ term from the “conquer”
+     step gives the recurrence for the worst-case running time T .n/ of merge sort:
+              (
+                ‚.1/                 if n D 1 ;
+     T .n/ D                                                                        (2.1)
+                2T .n=2/ C ‚.n/ if n > 1 :
+     In Chapter 4, we shall see the “master theorem,” which we can use to show
+     that T .n/ is ‚.n lg n/, where lg n stands for log2 n. Because the logarithm func-
+     tion grows more slowly than any linear function, for large enough inputs, merge
+     sort, with its ‚.n lg n/ running time, outperforms insertion sort, whose running
+     time is ‚.n2 /, in the worst case.
+        We do not need the master theorem to intuitively understand why the solution to
+     the recurrence (2.1) is T .n/ D ‚.n lg n/. Let us rewrite recurrence (2.1) as
+              (
+                 c                if n D 1 ;
+     T .n/ D                                                                       (2.2)
+                 2T .n=2/ C cn if n > 1 ;
+     where the constant c represents the time required to solve problems of size 1 as
+     well as the time per array element of the divide and combine steps.9
+
+
+     9 It is unlikely that the same constant exactly represents both the time to solve problems of size 1
+
+     and the time per array element of the divide and combine steps. We can get around this problem by
+     letting c be the larger of these times and understanding that our recurrence gives an upper bound on
+     the running time, or by letting c be the lesser of these times and understanding that our recurrence
+     gives a lower bound on the running time. Both bounds are on the order of n lg n and, taken together,
+     give a ‚.n lg n/ running time.
+

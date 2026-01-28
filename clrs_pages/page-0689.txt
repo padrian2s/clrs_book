@@ -1,0 +1,40 @@
+668   Chapter 24 Single-Source Shortest Paths
+
+
+      xj D ı.0 ; j / satisﬁes the difference constraint xj  xi  w.i ; j / that corre-
+      sponds to edge .i ; j /.
+         Now we show that if the constraint graph contains a negative-weight cycle, then
+      the system of difference constraints has no feasible solution. Without loss of gen-
+      erality, let the negative-weight cycle be c D h1 ; 2 ; : : : ; k i, where 1 D k .
+      (The vertex 0 cannot be on cycle c, because it has no entering edges.) Cycle c
+      corresponds to the following difference constraints:
+          x2  x1  w.1 ; 2 / ;
+          x3  x2  w.2 ; 3 / ;
+                  ::
+                   :
+      xk1  xk2  w.k2 ; k1 / ;
+        xk  xk1  w.k1 ; k / :
+      We will assume that x has a solution satisfying each of these k inequalities and then
+      derive a contradiction. The solution must also satisfy the inequality that results
+      when we sum the k inequalities together. If we sum the left-hand sides, each
+      unknown xi is added in once and subtracted out once (remember that 1 D k
+      implies x1 D xk ), so that the left-hand side of the sum is 0. The right-hand side
+      sums to w.c/, and thus we obtain 0  w.c/. But since c is a negative-weight cycle,
+      w.c/ < 0, and we obtain the contradiction that 0  w.c/ < 0.
+
+      Solving systems of difference constraints
+      Theorem 24.9 tells us that we can use the Bellman-Ford algorithm to solve a
+      system of difference constraints. Because the constraint graph contains edges
+      from the source vertex 0 to all other vertices, any negative-weight cycle in the
+      constraint graph is reachable from 0 . If the Bellman-Ford algorithm returns
+      TRUE, then the shortest-path weights give a feasible solution to the system. In
+      Figure 24.8, for example, the shortest-path weights provide the feasible solution
+      x D .5; 3; 0; 1; 4/, and by Lemma 24.8, x D .d  5; d  3; d; d  1; d  4/
+      is also a feasible solution for any constant d . If the Bellman-Ford algorithm returns
+      FALSE, there is no feasible solution to the system of difference constraints.
+         A system of difference constraints with m constraints on n unknowns produces
+      a graph with n C 1 vertices and n C m edges. Thus, using the Bellman-Ford
+      algorithm, we can solve the system in O..n C 1/.n C m// D O.n2 C nm/ time.
+      Exercise 24.4-5 asks you to modify the algorithm to run in O.nm/ time, even if m
+      is much less than n.
+

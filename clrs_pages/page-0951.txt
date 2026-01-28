@@ -1,0 +1,41 @@
+930   Chapter 31 Number-Theoretic Algorithms
+
+
+      Theorem 31.2
+      If a and b are any integers, not both zero, then gcd.a; b/ is the smallest positive
+      element of the set fax C by W x; y 2 Zg of linear combinations of a and b.
+
+      Proof Let s be the smallest positive such linear combination of a and b, and let
+      s D ax C by for some x; y 2 Z. Let q D ba=sc. Equation (3.8) then implies
+      a mod s D a  qs
+              D a  q.ax C by/
+              D a .1  qx/ C b .qy/ ;
+      and so a mod s is a linear combination of a and b as well. But, since 0 
+      a mod s < s, we have that a mod s D 0, because s is the smallest positive such lin-
+      ear combination. Therefore, we have that s j a and, by analogous reasoning, s j b.
+      Thus, s is a common divisor of a and b, and so gcd.a; b/  s. Equation (31.4)
+      implies that gcd.a; b/ j s, since gcd.a; b/ divides both a and b and s is a linear
+      combination of a and b. But gcd.a; b/ j s and s > 0 imply that gcd.a; b/  s.
+      Combining gcd.a; b/  s and gcd.a; b/  s yields gcd.a; b/ D s. We conclude
+      that s is the greatest common divisor of a and b.
+
+      Corollary 31.3
+      For any integers a and b, if d j a and d j b, then d j gcd.a; b/.
+
+      Proof This corollary follows from equation (31.4), because gcd.a; b/ is a linear
+      combination of a and b by Theorem 31.2.
+
+      Corollary 31.4
+      For all integers a and b and any nonnegative integer n,
+      gcd.an; bn/ D n gcd.a; b/ :
+
+
+      Proof If n D 0, the corollary is trivial. If n > 0, then gcd.an; bn/ is the smallest
+      positive element of the set fanx C bny W x; y 2 Zg, which is n times the smallest
+      positive element of the set fax C by W x; y 2 Zg.
+
+      Corollary 31.5
+      For all positive integers n, a, and b, if n j ab and gcd.a; n/ D 1, then n j b.
+
+      Proof   We leave the proof as Exercise 31.1-5.
+

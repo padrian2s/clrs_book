@@ -1,0 +1,5 @@
+{
+  "page": 2,
+  "title": "Half Title",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Front Matter</div>\n    <h1>Introduction to Algorithms</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"highlight-box\">\n        <h4>Third Edition - What's New</h4>\n        <ul>\n            <li>New chapter on <strong>van Emde Boas trees</strong></li>\n            <li>New chapter on <strong>multithreaded algorithms</strong></li>\n            <li>Revised and updated throughout</li>\n            <li>More problems and exercises</li>\n        </ul>\n    </div>\n</div>"
+}

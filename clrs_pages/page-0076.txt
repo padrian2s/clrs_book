@@ -1,0 +1,47 @@
+3.2 Standard notations and common functions                                      55
+
+
+Polynomials
+Given a nonnegative integer d , a polynomial in n of degree d is a function p.n/
+of the form
+         X
+         d
+p.n/ D          a i ni ;
+         i D0
+
+where the constants a0 ; a1 ; : : : ; ad are the coefﬁcients of the polynomial and
+ad ¤ 0. A polynomial is asymptotically positive if and only if ad > 0. For an
+asymptotically positive polynomial p.n/ of degree d , we have p.n/ D ‚.nd /. For
+any real constant a  0, the function na is monotonically increasing, and for any
+real constant a  0, the function na is monotonically decreasing. We say that a
+function f .n/ is polynomially bounded if f .n/ D O.nk / for some constant k.
+
+Exponentials
+For all real a > 0, m, and n, we have the following identities:
+   a0    D      1;
+   a1    D      a;
+  a1    D      1=a ;
+.am /n   D      amn ;
+.am /n   D      .an /m ;
+am an    D      amCn :
+For all n and a  1, the function an is monotonically increasing in n. When
+convenient, we shall assume 00 D 1.
+  We can relate the rates of growth of polynomials and exponentials by the fol-
+lowing fact. For all real constants a and b such that a > 1,
+     nb
+lim     D0;                                                                  (3.10)
+n!1 a n
+
+from which we can conclude that
+nb D o.an / :
+Thus, any exponential function with a base strictly greater than 1 grows faster than
+any polynomial function.
+   Using e to denote 2:71828 : : :, the base of the natural logarithm function, we
+have for all real x,
+                 x2    x3          X 1
+                                        xi
+ x
+e D1CxC              C    C  D          ;                                  (3.11)
+                 2Š    3Š          i D0
+                                        iŠ
+

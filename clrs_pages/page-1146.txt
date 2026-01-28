@@ -1,0 +1,37 @@
+35.4 Randomization and linear programming                                        1125
+
+
+vertex cover, by using a linear program. We shall then “round” this solution and
+use it to obtain a vertex cover.
+   Suppose that we associate a variable x./ with each vertex  2 V , and let us
+require that x./ equals either 0 or 1 for each  2 V . We put  into the vertex cover
+if and only if x./ D 1. Then, we can write the constraint that for any edge .u; /,
+at least one of u and  must be in the vertex cover as x.u/ C x./  1. This view
+gives rise to the following 0-1 integer program for ﬁnding a minimum-weight
+vertex cover:
+              X
+minimize          w./ x./                                                    (35.14)
+             2V
+subject to
+              x.u/ C x./  1      for each .u; / 2 E                        (35.15)
+                     x./ 2 f0; 1g for each  2 V :                           (35.16)
+   In the special case in which all the weights w./ are equal to 1, this formu-
+lation is the optimization version of the NP-hard vertex-cover problem. Sup-
+pose, however, that we remove the constraint that x./ 2 f0; 1g and replace it
+by 0  x./  1. We then obtain the following linear program, which is known as
+the linear-programming relaxation:
+             X
+minimize         w./ x./                                                (35.17)
+             2V
+subject to
+              x.u/ C x./  1 for each .u; / 2 E                             (35.18)
+                     x./  1 for each  2 V                                  (35.19)
+                     x./  0 for each  2 V :                                (35.20)
+Any feasible solution to the 0-1 integer program in lines (35.14)–(35.16) is also
+a feasible solution to the linear program in lines (35.17)–(35.20). Therefore, the
+value of an optimal solution to the linear program gives a lower bound on the value
+of an optimal solution to the 0-1 integer program, and hence a lower bound on the
+optimal weight in the minimum-weight vertex-cover problem.
+   The following procedure uses the solution to the linear-programming relaxation
+to construct an approximate solution to the minimum-weight vertex-cover problem:
+

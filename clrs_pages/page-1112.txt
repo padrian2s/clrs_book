@@ -1,0 +1,43 @@
+34.5 NP-complete problems                                                             1091
+
+
+reduction: the graph G has a clique of size k if and only if the graph G has a vertex
+cover of size jV j  k.
+   Suppose that G has a clique V 0  V with jV 0 j D k. We claim that V  V 0 is a
+vertex cover in G. Let .u; / be any edge in E. Then, .u; / 62 E, which implies
+that at least one of u or  does not belong to V 0 , since every pair of vertices in V 0 is
+connected by an edge of E. Equivalently, at least one of u or  is in V  V 0 , which
+means that edge .u; / is covered by V  V 0 . Since .u; / was chosen arbitrarily
+from E, every edge of E is covered by a vertex in V  V 0 . Hence, the set V  V 0 ,
+which has size jV j  k, forms a vertex cover for G.
+   Conversely, suppose that G has a vertex cover V 0  V , where jV 0 j D jV j  k.
+Then, for all u;  2 V , if .u; / 2 E, then u 2 V 0 or  2 V 0 or both. The
+contrapositive of this implication is that for all u;  2 V , if u 62 V 0 and  62 V 0 ,
+then .u; / 2 E. In other words, V V 0 is a clique, and it has size jV jjV 0 j D k.
+
+   Since VERTEX-COVER is NP-complete, we don’t expect to ﬁnd a polynomial-
+time algorithm for ﬁnding a minimum-size vertex cover. Section 35.1 presents a
+polynomial-time “approximation algorithm,” however, which produces “approxi-
+mate” solutions for the vertex-cover problem. The size of a vertex cover produced
+by the algorithm is at most twice the minimum size of a vertex cover.
+   Thus, we shouldn’t give up hope just because a problem is NP-complete. We
+may be able to design a polynomial-time approximation algorithm that obtains
+near-optimal solutions, even though ﬁnding an optimal solution is NP-complete.
+Chapter 35 gives several approximation algorithms for NP-complete problems.
+
+34.5.3   The hamiltonian-cycle problem
+We now return to the hamiltonian-cycle problem deﬁned in Section 34.2.
+
+Theorem 34.13
+The hamiltonian cycle problem is NP-complete.
+
+Proof We ﬁrst show that HAM-CYCLE belongs to NP. Given a graph G D
+.V; E/, our certiﬁcate is the sequence of jV j vertices that makes up the hamiltonian
+cycle. The veriﬁcation algorithm checks that this sequence contains each vertex
+in V exactly once and that with the ﬁrst vertex repeated at the end, it forms a cycle
+in G. That is, it checks that there is an edge between each pair of consecutive
+vertices and between the ﬁrst and last vertices. We can verify the certiﬁcate in
+polynomial time.
+   We now prove that VERTEX-COVER P HAM-CYCLE, which shows that
+HAM-CYCLE is NP-complete. Given an undirected graph G D .V; E/ and an
+

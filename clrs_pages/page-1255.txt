@@ -1,0 +1,42 @@
+1234   Bibliography
+
+
+         [52] Robert D. Blumofe and Charles E. Leiserson. Scheduling multithreaded computations by
+              work stealing. Journal of the ACM, 46(5):720–748, 1999.
+         [53] Béla Bollobás. Random Graphs. Academic Press, 1985.
+         [54] Gilles Brassard and Paul Bratley. Fundamentals of Algorithmics. Prentice Hall, 1996.
+         [55] Richard P. Brent. The parallel evaluation of general arithmetic expressions. Journal of the
+              ACM, 21(2):201–206, 1974.
+         [56] Richard P. Brent. An improved Monte Carlo factorization algorithm. BIT, 20(2):176–184,
+              1980.
+         [57] J. P. Buhler, H. W. Lenstra, Jr., and Carl Pomerance. Factoring integers with the number
+              ﬁeld sieve. In A. K. Lenstra and H. W. Lenstra, Jr., editors, The Development of the Number
+              Field Sieve, volume 1554 of Lecture Notes in Mathematics, pages 50–94. Springer, 1993.
+         [58] J. Lawrence Carter and Mark N. Wegman. Universal classes of hash functions. Journal of
+              Computer and System Sciences, 18(2):143–154, 1979.
+         [59] Barbara Chapman, Gabriele Jost, and Ruud van der Pas. Using OpenMP: Portable Shared
+              Memory Parallel Programming. The MIT Press, 2007.
+         [60] Bernard Chazelle. A minimum spanning tree algorithm with inverse-Ackermann type com-
+              plexity. Journal of the ACM, 47(6):1028–1047, 2000.
+         [61] Joseph Cheriyan and Torben Hagerup. A randomized maximum-ﬂow algorithm. SIAM
+              Journal on Computing, 24(2):203–226, 1995.
+         [62] Joseph Cheriyan and S. N. Maheshwari. Analysis of preﬂow push algorithms for maximum
+              network ﬂow. SIAM Journal on Computing, 18(6):1057–1086, 1989.
+         [63] Boris V. Cherkassky and Andrew V. Goldberg. On implementing the push-relabel method
+              for the maximum ﬂow problem. Algorithmica, 19(4):390–410, 1997.
+         [64] Boris V. Cherkassky, Andrew V. Goldberg, and Tomasz Radzik. Shortest paths algorithms:
+              Theory and experimental evaluation. Mathematical Programming, 73(2):129–174, 1996.
+         [65] Boris V. Cherkassky, Andrew V. Goldberg, and Craig Silverstein. Buckets, heaps, lists and
+              monotone priority queues. SIAM Journal on Computing, 28(4):1326–1346, 1999.
+         [66] H. Chernoff. A measure of asymptotic efﬁciency for tests of a hypothesis based on the sum
+              of observations. Annals of Mathematical Statistics, 23(4):493–507, 1952.
+         [67] Kai Lai Chung. Elementary Probability Theory with Stochastic Processes. Springer, 1974.
+         [68] V. Chvátal. A greedy heuristic for the set-covering problem. Mathematics of Operations
+              Research, 4(3):233–235, 1979.
+         [69] V. Chvátal. Linear Programming. W. H. Freeman and Company, 1983.
+         [70] V. Chvátal, D. A. Klarner, and D. E. Knuth. Selected combinatorial research problems.
+              Technical Report STAN-CS-72-292, Computer Science Department, Stanford University,
+              1972.
+         [71] Cilk Arts, Inc., Burlington, Massachusetts. Cilk++ Programmer’s Guide, 2008. Available
+              at http://www.cilk.com/archive/docs/cilk1guide.
+

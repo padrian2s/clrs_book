@@ -1,0 +1,5 @@
+{
+  "page": 273,
+  "title": "11.3 Hash Functions",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 11.3</div>\n    <h1>Hash Functions</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>How to design good hash functions that distribute keys uniformly.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Goal: each key equally likely to hash to any slot</li>\n<li>Division method: h(k) = k mod m (avoid powers of 2 for m)</li>\n<li>Multiplication method: h(k) = ⌊m(kA mod 1)⌋ where 0 &lt; A &lt; 1</li>\n<li>Universal hashing: randomly choose h to prevent adversarial inputs</li>\n<li>Cryptographic hashes for security applications</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Multiplication with A = (√5-1)/2 ≈ 0.618 (golden ratio) works well. For k=123, m=100: h = ⌊100(123·0.618 mod 1)⌋.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Good hash functions are crucial for hash table performance.</p>\n</div>\n</div>"
+}

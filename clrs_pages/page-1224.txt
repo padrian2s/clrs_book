@@ -1,0 +1,51 @@
+C.4 The geometric and binomial distributions                                      1203
+
+
+   Assuming that q < 1, we can calculate the expectation of a geometric distribu-
+tion using identity (A.8):
+             X
+             1
+E ŒX  D         kq k1 p
+             kD1
+
+             pX k
+                   1
+        D          kq
+             q
+               kD0
+             p      q
+        D      
+             q .1  q/2
+             p q
+        D      
+             q p2
+        D    1=p :                                                              (C.32)
+Thus, on average, it takes 1=p trials before we obtain a success, an intuitive result.
+The variance, which can be calculated similarly, but using Exercise A.1-3, is
+Var ŒX  D q=p 2 :                                                              (C.33)
+   As an example, suppose we repeatedly roll two dice until we obtain either a
+seven or an eleven. Of the 36 possible outcomes, 6 yield a seven and 2 yield an
+eleven. Thus, the probability of success is p D 8=36 D 2=9, and we must roll
+1=p D 9=2 D 4:5 times on average to obtain a seven or eleven.
+
+The binomial distribution
+How many successes occur during n Bernoulli trials, where a success occurs with
+probability p and a failure with probability q D 1  p? Deﬁne the random vari-
+able X to be the number of successes in n trials. Then X has values in the range
+f0; 1; : : : ; ng, and for k D 0; 1; : : : ; n,
+                        !
+                      n k nk
+Pr fX D kg D              p q    ;                                        (C.34)
+                      k
+since there are kn ways to pick which k of the n trials are successes, and the
+probability that each occurs is p k q nk . A probability distribution satisfying equa-
+tion (C.34) is said to be a binomial distribution. For convenience, we deﬁne the
+family of binomial distributions using the notation
+                  !
+                n k
+b.kI n; p/ D        p .1  p/nk :                                               (C.35)
+                k
+Figure C.2 illustrates a binomial distribution. The name “binomial” comes from the
+right-hand side of equation (C.34) being the kth term of the expansion of .p C q/n .
+Consequently, since p C q D 1,
+

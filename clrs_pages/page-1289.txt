@@ -1,0 +1,52 @@
+1268   Index
+
+
+       H OARE -PARTITION, 185 pr.                    indicator random variable, 118–121
+       H OPCROFT-K ARP, 764 pr.                         in analysis of expected height of a randomly
+       Hopcroft-Karp bipartite matching algorithm,         built binary search tree, 300–303
+             763 pr.                                    in analysis of inserting into a treap, 333 pr.
+       horizontal ray, 1021 ex.                         in analysis of streaks, 138–139
+       Horner’s rule, 41 pr., 900                       in analysis of the birthday paradox, 132–133
+         in the Rabin-Karp algorithm, 990               in approximation algorithm for
+       H UFFMAN, 431                                       MAX-3-CNF satisﬁability, 1124
+       Huffman code, 428–437, 450                       in bounding the right tail of the binomial
+       hull, convex, 8, 1029–1039, 1046 pr.                distribution, 1212–1213
+       Human Genome Project, 6                          in bucket sort analysis, 202–204
+       hyperedge, 1172                                  expected value of, 118
+       hypergraph, 1172                                 in hashing analysis, 259–260
+         and bipartite graphs, 1173 ex.                 in hiring-problem analysis, 120–121
+                                                        and linearity of expectation, 119
+       ideal parallel computer, 779                     in quicksort analysis, 182–184, 187 pr.
+       idempotency laws for sets, 1159                  in randomized-selection analysis, 217–219,
+       identity, 939                                       226 pr.
+       identity matrix, 1218                            in universal-hashing analysis, 265–266
+       if, in pseudocode, 20                         induced subgraph, 1171
+       image, 1167                                   inequality constraint, 852
+       image compression, 409 pr., 413                  and equality constraints, 853
+       inadmissible edge, 749                        inequality, linear, 846
+       incidence, 1169                               infeasible linear program, 851
+       incidence matrix                              infeasible solution, 851
+           and difference constraints, 666           inﬁnite sequence, 1166
+           of a directed graph, 448 pr., 593 ex.     inﬁnite set, 1161
+           of an undirected graph, 448 pr.           inﬁnite sum, 1145
+       inclusion and exclusion, 1163 ex.             inﬁnity, arithmetic with, 650
+       incomplete step, 782                          I NITIALIZE -P REFLOW, 740
+       I NCREASE -K EY, 162                          I NITIALIZE -S IMPLEX, 871, 887
+       increasing a key, in a max-heap, 163–164      I NITIALIZE -S INGLE -S OURCE, 648
+       I NCREMENT , 454                              initial strand, 779
+       incremental design method, 29                 injective function, 1167
+           for ﬁnding the convex hull, 1030          inner product, 1222
+       in-degree, 1169                               inorder tree walk, 287, 293 ex., 342
+       indentation in pseudocode, 20                 I NORDER -T REE -WALK, 288
+       independence                                  in-place sorting, 17, 148, 206 pr.
+           of events, 1192–1193, 1195 ex.            input
+           of random variables, 1197                    to an algorithm, 5
+           of subproblems in dynamic programming,       to a combinational circuit, 1071
+              383–384                                   distribution of, 116, 122
+       independent family of subsets, 437               to a logic gate, 1070
+       independent set, 1101 pr.                        size of, 25
+           of tasks, 444                             input alphabet, 995
+       independent strands, 789                      I NSERT , 162, 230, 463 ex., 505
+       index function, 537, 546                      insertion
+       index of an element of Zn , 955                 into binary search trees, 294–295
+

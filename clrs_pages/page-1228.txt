@@ -1,0 +1,52 @@
+C.4 The geometric and binomial distributions                                      1207
+
+
+C.4-3
+Show that b.kI n; p/ D b.n  kI n; q/, where q D 1  p.
+
+C.4-4
+          p of the maximum of the binomial distribution b.kI n; p/ is approx-
+Show that value
+imately 1= 2 npq, where q D 1  p.
+
+C.4-5 ?
+Show that the probability of no successes in n Bernoulli trials, each with probability
+p D 1=n, is approximately 1=e. Show that the probability of exactly one success
+is also approximately 1=e.
+
+C.4-6 ?
+Professor Rosencrantz ﬂips a fair coin n times, and so does Professor Guildenstern.
+Show that the probability that they get the same number of heads is 2nn
+                                                                        =4n . (Hint:
+For Professor Rosencrantz, call a head a success; for Professor Guildenstern, call
+a tail a success.) Use your argument to verify the identity
+         !2        !
+Xn
+       n        2n
+            D        :
+       k         n
+kD0
+
+
+C.4-7 ?
+Show that for 0  k  n,
+b.kI n; 1=2/  2n H.k=n/n ;
+where H.x/ is the entropy function (C.7).
+
+C.4-8 ?
+Consider n Bernoulli trials, where for i D 1; 2; : : : ; n, the ith trial has probabil-
+ity pi of success, and let X be the random variable denoting the total number of
+successes. Let p  pi for all i D 1; 2; : : : ; n. Prove that for 1  k  n,
+                X
+                k1
+Pr fX < kg            b.iI n; p/ :
+                i D0
+
+
+C.4-9 ?
+Let X be the random variable for the total number of successes in a set A of n
+Bernoulli trials, where the ith trial has a probability pi of success, and let X 0
+be the random variable for the total number of successes in a second set A0 of n
+Bernoulli trials, where the ith trial has a probability pi0  pi of success. Prove that
+for 0  k  n,
+

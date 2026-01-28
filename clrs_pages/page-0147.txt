@@ -1,0 +1,47 @@
+126   Chapter 5 Probabilistic Analysis and Randomized Algorithms
+
+
+      that Pr fE2 j E1 g D 1=.n  1/ because given that element AŒ1 has the small-
+      est priority, each of the remaining n  1 elements has an equal chance of hav-
+      ing the second smallest priority. In general, for i D 2; 3; : : : ; n, we have that
+      Pr fEi j Ei 1 \ Ei 2 \    \ E1 g D 1=.n  i C 1/, since, given that elements AŒ1
+      through AŒi  1 have the i  1 smallest priorities (in order), each of the remaining
+      n  .i  1/ elements has an equal chance of having the ith smallest priority. Thus,
+      we have
+                                                                     
+                                                         1       1          1     1
+      Pr fE1 \ E2 \ E3 \    \ En1 \ En g D                         
+                                                        n      n1          2     1
+                                                       1
+                                                 D         ;
+                                                       nŠ
+      and we have shown that the probability of obtaining the identity permutation
+      is 1=nŠ.
+         We can extend this proof to work for any permutation of priorities. Consider
+      any ﬁxed permutation D h .1/; .2/; : : : ; .n/i of the set f1; 2; : : : ; ng. Let us
+      denote by ri the rank of the priority assigned to element AŒi, where the element
+      with the j th smallest priority has rank j . If we deﬁne Ei as the event in which
+      element AŒi receives the .i /th smallest priority, or ri D .i /, the same proof
+      still applies. Therefore, if we calculate the probability of obtaining any particular
+      permutation, the calculation is identical to the one above, so that the probability of
+      obtaining this permutation is also 1=nŠ.
+
+         You might think that to prove that a permutation is a uniform random permuta-
+      tion, it sufﬁces to show that, for each element AŒi, the probability that the element
+      winds up in position j is 1=n. Exercise 5.3-4 shows that this weaker condition is,
+      in fact, insufﬁcient.
+         A better method for generating a random permutation is to permute the given
+      array in place. The procedure R ANDOMIZE -I N -P LACE does so in O.n/ time. In
+      its ith iteration, it chooses the element AŒi randomly from among elements AŒi
+      through AŒn. Subsequent to the ith iteration, AŒi is never altered.
+
+      R ANDOMIZE -I N -P LACE .A/
+      1 n D A:length
+      2 for i D 1 to n
+      3      swap AŒi with AŒR ANDOM.i; n/
+
+        We shall use a loop invariant to show that procedure R ANDOMIZE -I N -P LACE
+      produces a uniform random permutation. A k-permutation on a set of n ele-
+      ments is a sequence containing k of the n elements, with no repetitions. (See
+      Appendix C.) There are nŠ=.n  k/Š such possible k-permutations.
+

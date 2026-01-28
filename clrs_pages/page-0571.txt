@@ -1,0 +1,40 @@
+550   Chapter 20 van Emde Boas Trees
+
+
+      V EB-T REE -M INIMUM .V /
+      1   return V:min
+
+      V EB-T REE -M AXIMUM .V /
+      1   return V:max
+
+      Determining whether a value is in the set
+      The procedure V EB-T REE -M EMBER .V; x/ has a recursive case like that of
+      P ROTO - V EB-M EMBER, but the base case is a little different. We also check di-
+      rectly whether x equals the minimum or maximum element. Since a vEB tree
+      doesn’t store bits as a proto-vEB structure does, we design V EB-T REE -M EMBER
+      to return TRUE or FALSE rather than 1 or 0.
+
+      V EB-T REE -M EMBER .V; x/
+      1   if x == V:min or x == V:max
+      2        return TRUE
+      3   elseif V:u == 2
+      4        return FALSE
+      5   else return V EB-T REE -M EMBER .V:clusterŒhigh.x/; low.x//
+
+      Line 1 checks to see whether x equals either the minimum or maximum element.
+      If it does, line 2 returns TRUE. Otherwise, line 3 tests for the base case. Since
+      a EB.2/ tree has no elements other than those in min and max, if it is the base
+      case, line 4 returns FALSE. The other possibility—it is not a base case and x equals
+      neither min nor max—is handled by the recursive call in line 5.
+         Recurrence (20.4) characterizes the running time of the V EB-T REE -M EMBER
+      procedure, and so this procedure takes O.lg lg u/ time.
+
+      Finding the successor and predecessor
+      Next we see how to implement the S UCCESSOR operation. Recall that the pro-
+      cedure P ROTO - V EB-S UCCESSOR .V; x/ could make two recursive calls: one to
+      determine whether x’s successor resides in the same cluster as x and, if it does
+      not, one to ﬁnd the cluster containing x’s successor. Because we can access the
+      maximum value in a vEB tree quickly, we can avoid making two recursive calls,
+      and instead make one recursive call on either a cluster or on the summary, but not
+      on both.
+

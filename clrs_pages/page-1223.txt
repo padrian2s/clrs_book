@@ -1,0 +1,48 @@
+1202   Appendix C       Counting and Probability
+
+
+        k1  
+        2      1
+        3      3
+
+       0.35
+
+       0.30
+
+
+       0.25
+
+
+       0.20
+
+
+       0.15
+
+
+       0.10
+
+
+       0.05
+
+
+                                                                       k
+              1     2    3   4   5   6   7   8   9 10 11 12 13 14 15
+
+
+       Figure C.1 A geometric distribution with probability p D 1=3 of success and a probability
+       q D 1  p of failure. The expectation of the distribution is 1=p D 3.
+
+
+       important distributions arise from Bernoulli trials: the geometric distribution and
+       the binomial distribution.
+
+       The geometric distribution
+       Suppose we have a sequence of Bernoulli trials, each with a probability p of suc-
+       cess and a probability q D 1p of failure. How many trials occur before we obtain
+       a success? Let us deﬁne the random variable X be the number of trials needed to
+       obtain a success. Then X has values in the range f1; 2; : : :g, and for k  1,
+       Pr fX D kg D q k1 p ;                                                            (C.31)
+       since we have k  1 failures before the one success. A probability distribution sat-
+       isfying equation (C.31) is said to be a geometric distribution. Figure C.1 illustrates
+       such a distribution.
+

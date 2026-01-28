@@ -1,0 +1,52 @@
+1118   Chapter 35 Approximation Algorithms
+
+
+
+
+                     S1
+
+
+
+                                    S2
+
+
+                     S6
+
+             S3             S4             S5
+
+
+
+       Figure 35.3 An instance .X; F / of the set-covering problem, where X consists of the 12 black
+       points and F D fS1 ; S2 ; S3 ; S4 ; S5 ; S6 g. A minimum-size set cover is C D fS3 ; S4 ; S5 g, with
+       size 3. The greedy algorithm produces a cover of size 4 by selecting either the sets S1 , S4 , S5 ,
+       and S3 or the sets S1 , S4 , S5 , and S6 , in order.
+
+
+          An instance .X; F / of the set-covering problem consists of a ﬁnite set X and
+       a family F of subsets of X , such that every element of X belongs to at least one
+       subset in F :
+             [
+       XD        S:
+             S2F
+
+       We say that a subset S 2 F covers its elements. The problem is to ﬁnd a minimum-
+       size subset C  F whose members cover all of X :
+             [
+       XD        S:                                                                (35.8)
+             S2C
+
+       We say that any C satisfying equation (35.8) covers X . Figure 35.3 illustrates the
+       set-covering problem. The size of C is the number of sets it contains, rather than
+       the number of individual elements in these sets, since every subset C that covers X
+       must contain all jX j individual elements. In Figure 35.3, the minimum set cover
+       has size 3.
+          The set-covering problem abstracts many commonly arising combinatorial prob-
+       lems. As a simple example, suppose that X represents a set of skills that are needed
+       to solve a problem and that we have a given set of people available to work on the
+       problem. We wish to form a committee, containing as few people as possible,
+       such that for every requisite skill in X , at least one member of the committee has
+       that skill. In the decision version of the set-covering problem, we ask whether a
+       covering exists with size at most k, where k is an additional parameter speciﬁed
+       in the problem instance. The decision version of the problem is NP-complete, as
+       Exercise 35.3-2 asks you to show.
+

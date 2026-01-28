@@ -1,0 +1,47 @@
+1136   Chapter 35 Approximation Algorithms
+
+
+       d. Consider a maximal matching M in G D .V; E/. Let
+          T D f 2 V W some edge in M is incident on g :
+          What can you say about the subgraph of G induced by the vertices of G that
+          are not in T ?
+
+       e. Conclude from part (d) that 2 jM j is the size of a vertex cover for G.
+
+       f. Using parts (c) and (e), prove that the greedy algorithm in part (b) is a 2-approx-
+          imation algorithm for maximum matching.
+
+       35-5 Parallel machine scheduling
+       In the parallel-machine-scheduling problem, we are given n jobs, J1 ; J2 ; : : : ; Jn ,
+       where each job Jk has an associated nonnegative processing time of pk . We are
+       also given m identical machines, M1 ; M2 ; : : : ; Mm . Any job can run on any ma-
+       chine. A schedule speciﬁes, for each job Jk , the machine on which it runs and
+       the time period during which it runs. Each job Jk must run on some machine Mi
+       for pk consecutive time units, and during that time period no other job may run
+       on Mi . Let Ck denote the completion time of job Jk , that is, the time at which
+       job Jk completes processing. Given a schedule, we deﬁne Cmax D max1j n Cj to
+       be the makespan of the schedule. The goal is to ﬁnd a schedule whose makespan
+       is minimum.
+          For example, suppose that we have two machines M1 and M2 and that we have
+       four jobs J1 ; J2 ; J3 ; J4 , with p1 D 2, p2 D 12, p3 D 4, and p4 D 5. Then one
+       possible schedule runs, on machine M1 , job J1 followed by job J2 , and on ma-
+       chine M2 , it runs job J4 followed by job J3 . For this schedule, C1 D 2, C2 D 14,
+       C3 D 9, C4 D 5, and Cmax D 14. An optimal schedule runs J2 on machine M1 , and
+       it runs jobs J1 , J3 , and J4 on machine M2 . For this schedule, C1 D 2, C2 D 12,
+       C3 D 6, C4 D 11, and Cmax D 12.
+                                                                   
+          Given a parallel-machine-scheduling problem, we let Cmax    denote the makespan
+       of an optimal schedule.
+       a. Show that the optimal makespan is at least as large as the greatest processing
+          time, that is,
+           
+          Cmax  max pk :
+                  1kn
+
+       b. Show that the optimal makespan is at least as large as the average machine load,
+          that is,
+                  1 X
+          Cmax            pk :
+                   m
+                      1kn
+

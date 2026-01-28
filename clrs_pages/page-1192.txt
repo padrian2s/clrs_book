@@ -1,0 +1,48 @@
+B.4 Graphs                                                                                        1171
+
+
+                    1                 2                                 1         2
+
+
+G           6                                 3
+                                                                5                         3
+
+                    5                 4                                     4
+
+
+
+
+G′    u         v       w         x       y       z        u        v       w         x       y
+
+
+
+                            (a)                                             (b)
+
+
+Figure B.3 (a) A pair of isomorphic graphs. The vertices of the top graph are mapped to the
+vertices of the bottom graph by f .1/ D u; f .2/ D ; f .3/ D w; f .4/ D x; f .5/ D y; f .6/ D ´.
+(b) Two graphs that are not isomorphic, since the top graph has a vertex of degree 4 and the bottom
+graph does not.
+
+
+alence classes of vertices under the “are mutually reachable” relation. A directed
+graph is strongly connected if it has only one strongly connected component. The
+graph in Figure B.2(a) has three strongly connected components: f1; 2; 4; 5g, f3g,
+and f6g. All pairs of vertices in f1; 2; 4; 5g are mutually reachable. The ver-
+tices f3; 6g do not form a strongly connected component, since vertex 6 cannot
+be reached from vertex 3.
+   Two graphs G D .V; E/ and G 0 D .V 0 ; E 0 / are isomorphic if there exists a
+bijection f W V ! V 0 such that .u; / 2 E if and only if .f .u/; f .// 2 E 0 .
+In other words, we can relabel the vertices of G to be vertices of G 0 , maintain-
+ing the corresponding edges in G and G 0 . Figure B.3(a) shows a pair of iso-
+morphic graphs G and G 0 with respective vertex sets V D f1; 2; 3; 4; 5; 6g and
+V 0 D fu; ; w; x; y; ´g. The mapping from V to V 0 given by f .1/ D u; f .2/ D ;
+f .3/ D w; f .4/ D x; f .5/ D y; f .6/ D ´ provides the required bijective func-
+tion. The graphs in Figure B.3(b) are not isomorphic. Although both graphs have
+5 vertices and 7 edges, the top graph has a vertex of degree 4 and the bottom graph
+does not.
+   We say that a graph G 0 D .V 0 ; E 0 / is a subgraph of G D .V; E/ if V 0  V
+and E 0  E. Given a set V 0  V , the subgraph of G induced by V 0 is the graph
+G 0 D .V 0 ; E 0 /, where
+E 0 D f.u; / 2 E W u;  2 V 0 g :
+

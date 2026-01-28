@@ -1,0 +1,42 @@
+           31.1 Elementary number-theoretic notions                                                   927
+
+
+           we shall measure the size of an input in terms of the number of bits required to
+           represent that input, not just the number of integers in the input. An algorithm
+           with integer inputs a1 ; a2 ; : : : ; ak is a polynomial-time algorithm if it runs in time
+           polynomial in lg a1 ; lg a2 ; : : : ; lg ak , that is, polynomial in the lengths of its binary-
+           encoded inputs.
+              In most of this book, we have found it convenient to think of the elemen-
+           tary arithmetic operations (multiplications, divisions, or computing remainders)
+           as primitive operations that take one unit of time. By counting the number of such
+           arithmetic operations that an algorithm performs, we have a basis for making a
+           reasonable estimate of the algorithm’s actual running time on a computer. Elemen-
+           tary operations can be time-consuming, however, when their inputs are large. It
+           thus becomes convenient to measure how many bit operations a number-theoretic
+           algorithm requires. In this model, multiplying two ˇ-bit integers by the ordinary
+           method uses ‚.ˇ 2 / bit operations. Similarly, we can divide a ˇ-bit integer by a
+           shorter integer or take the remainder of a ˇ-bit integer when divided by a shorter in-
+           teger in time ‚.ˇ 2 / by simple algorithms. (See Exercise 31.1-12.) Faster methods
+           are known. For example, a simple divide-and-conquer method for multiplying two
+           ˇ-bit integers has a running time of ‚.ˇ lg 3 /, and the fastest known method has
+           a running time of ‚.ˇ lg ˇ lg lg ˇ/. For practical purposes, however, the ‚.ˇ 2 /
+           algorithm is often best, and we shall use this bound as a basis for our analyses.
+              We shall generally analyze algorithms in this chapter in terms of both the number
+           of arithmetic operations and the number of bit operations they require.
+
+
+31.1 Elementary number-theoretic notions
+
+           This section provides a brief review of notions from elementary number theory
+           concerning the set Z D f: : : ; 2; 1; 0; 1; 2; : : :g of integers and the set N D
+           f0; 1; 2; : : :g of natural numbers.
+
+           Divisibility and divisors
+           The notion of one integer being divisible by another is key to the theory of numbers.
+           The notation d j a (read “d divides a”) means that a D kd for some integer k.
+           Every integer divides 0. If a > 0 and d j a, then jd j  jaj. If d j a, then we also
+           say that a is a multiple of d . If d does not divide a, we write d − a.
+              If d j a and d  0, we say that d is a divisor of a. Note that d j a if and only
+           if d j a, so that no generality is lost by deﬁning the divisors to be nonnegative,
+           with the understanding that the negative of any divisor of a also divides a. A
+

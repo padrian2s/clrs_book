@@ -1,0 +1,52 @@
+26.2 The Ford-Fulkerson method                                                                                   719
+
+
+where the second line follows because .f " f 0 /.w; x/ is 0 if .w; x/ 62 E. We now
+apply the deﬁnition of f " f 0 to equation (26.5), and then reorder and group terms
+to obtain
+jf " f 0 j
+       X                                          X
+  D        .f .s; / C f 0 .s; /  f 0 .; s//    .f .; s/ C f 0 .; s/  f 0 .s; //
+       2V1                                                      2V2
+       X                    X                         X
+                                     0                       0
+  D           f .s; / C           f .s; /              f .; s/
+       2V1                 2V1                   2V1
+                     X                     X                          X
+                           f .; s/             f 0 .; s/ C               f 0 .s; /
+                     2V2                  2V2                       2V2
+       X                    X
+  D           f .s; /            f .; s/
+       2V1                 2V2
+                     X                         X                       X                     X
+                 C          f 0 .s; / C              f 0 .s; /             f 0 .; s/           f 0 .; s/
+                     2V1                      2V2                    2V1                  2V2
+       X                    X                         X                            X
+                                                                  0
+  D           f .s; /            f .; s/ C                f .s; /                     f 0 .; s/ :      (26.6)
+       2V1                 2V2                  2V1 [V2                      2V1 [V2
+
+In equation (26.6), we can extend all four summations to sum over V , since each
+additional term has value 0. (Exercise 26.2-1 asks you to prove this formally.) We
+thus have
+               X              X             X                X
+jf " f 0 j D       f .s; /     f .; s/ C     f 0 .s; /    f 0 .; s/    (26.7)
+                  2V                    2V                 2V                     2V
+                               0
+              D jf j C jf j :
+
+
+Augmenting paths
+Given a ﬂow network G D .V; E/ and a ﬂow f , an augmenting path p is a
+simple path from s to t in the residual network Gf . By the deﬁnition of the resid-
+ual network, we may increase the ﬂow on an edge .u; / of an augmenting path
+by up to cf .u; / without violating the capacity constraint on whichever of .u; /
+and .; u/ is in the original ﬂow network G.
+   The shaded path in Figure 26.4(b) is an augmenting path. Treating the residual
+network Gf in the ﬁgure as a ﬂow network, we can increase the ﬂow through each
+edge of this path by up to 4 units without violating a capacity constraint, since the
+smallest residual capacity on this path is cf .2 ; 3 / D 4. We call the maximum
+amount by which we can increase the ﬂow on each edge in an augmenting path p
+the residual capacity of p, given by
+cf .p/ D min fcf .u; / W .u; / is on pg :
+

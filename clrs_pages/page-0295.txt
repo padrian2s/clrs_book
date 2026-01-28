@@ -1,0 +1,43 @@
+274   Chapter 11 Hash Tables
+
+
+      such values of m, the performance of double hashing appears to be very close to
+      the performance of the “ideal” scheme of uniform hashing.
+         Although values of m other than primes or powers of 2 could in principle be
+      used with double hashing, in practice it becomes more difﬁcult to efﬁciently gen-
+      erate h2 .k/ in a way that ensures that it is relatively prime to m, in part because the
+      relative density .m/=m of such numbers may be small (see equation (31.24)).
+
+      Analysis of open-address hashing
+      As in our analysis of chaining, we express our analysis of open addressing in terms
+      of the load factor ˛ D n=m of the hash table. Of course, with open addressing, at
+      most one element occupies each slot, and thus n  m, which implies ˛  1.
+         We assume that we are using uniform hashing. In this idealized scheme, the
+      probe sequence hh.k; 0/; h.k; 1/; : : : ; h.k; m  1/i used to insert or search for
+      each key k is equally likely to be any permutation of h0; 1; : : : ; m  1i. Of course,
+      a given key has a unique ﬁxed probe sequence associated with it; what we mean
+      here is that, considering the probability distribution on the space of keys and the
+      operation of the hash function on the keys, each possible probe sequence is equally
+      likely.
+         We now analyze the expected number of probes for hashing with open address-
+      ing under the assumption of uniform hashing, beginning with an analysis of the
+      number of probes made in an unsuccessful search.
+
+      Theorem 11.6
+      Given an open-address hash table with load factor ˛ D n=m < 1, the expected
+      number of probes in an unsuccessful search is at most 1=.1˛/, assuming uniform
+      hashing.
+
+      Proof In an unsuccessful search, every probe but the last accesses an occupied
+      slot that does not contain the desired key, and the last slot probed is empty. Let us
+      deﬁne the random variable X to be the number of probes made in an unsuccessful
+      search, and let us also deﬁne the event Ai , for i D 1; 2; : : :, to be the event that
+      an ith probe occurs and it is to an occupied slot. Then the event fX  ig is the
+      intersection of events A1 \ A2 \    \ Ai 1 . We will bound Pr fX  ig by bounding
+      Pr fA1 \ A2 \    \ Ai 1 g. By Exercise C.2-5,
+      Pr fA1 \ A2 \    \ Ai 1 g D Pr fA1 g  Pr fA2 j A1 g  Pr fA3 j A1 \ A2 g   
+                                      Pr fAi 1 j A1 \ A2 \    \ Ai 2 g :
+      Since there are n elements and m slots, Pr fA1 g D n=m. For j > 1, the probability
+      that there is a j th probe and it is to an occupied slot, given that the ﬁrst j  1
+      probes were to occupied slots, is .n  j C 1/=.m  j C 1/. This probability follows
+

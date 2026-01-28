@@ -1,0 +1,47 @@
+386   Chapter 15 Dynamic Programming
+
+
+      does the multiplication in line 5, inspection of the procedure yields the recurrence
+      T .1/  1 ;
+                  X
+                  n1
+      T .n/  1 C     .T .k/ C T .n  k/ C 1/            for n > 1 :
+                            kD1
+
+      Noting that for i D 1; 2; : : : ; n  1, each term T .i/ appears once as T .k/ and once
+      as T .n  k/, and collecting the n  1 1s in the summation together with the 1 out
+      front, we can rewrite the recurrence as
+                  X
+                  n1
+      T .n/  2          T .i/ C n :                                                  (15.8)
+                  i D1
+
+         We shall prove that T .n/ D .2n / using the substitution method. Speciﬁ-
+      cally, we shall show that T .n/  2n1 for all n  1. The basis is easy, since
+      T .1/  1 D 20 . Inductively, for n  2 we have
+                         X
+                         n1
+      T .n/  2                 2i 1 C n
+                         i D1
+
+                         X
+                         n2
+             D 2                2i C n
+                         i D0
+                            n1
+             D 2.2     1/ C n (by equation (A.5))
+                n
+             D 2 2Cn
+              2n1 ;
+      which completes the proof. Thus, the total amount of work performed by the call
+      R ECURSIVE -M ATRIX -C HAIN .p; 1; n/ is at least exponential in n.
+         Compare this top-down, recursive algorithm (without memoization) with the
+      bottom-up dynamic-programming algorithm. The latter is more efﬁcient because
+      it takes advantage of the overlapping-subproblems property. Matrix-chain mul-
+      tiplication has only ‚.n2 / distinct subproblems, and the dynamic-programming
+      algorithm solves each exactly once. The recursive algorithm, on the other hand,
+      must again solve each subproblem every time it reappears in the recursion tree.
+      Whenever a recursion tree for the natural recursive solution to a problem contains
+      the same subproblem repeatedly, and the total number of distinct subproblems is
+      small, dynamic programming can improve efﬁciency, sometimes dramatically.
+

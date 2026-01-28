@@ -1,0 +1,50 @@
+Problems for Chapter 7                                                           187
+
+
+   R ANDOMIZED -PARTITION 0 and recurses only on partitions of elements not
+   known to be equal to each other.
+
+d. Using Q UICKSORT 0 , how would you adjust the analysis in Section 7.4.2 to
+   avoid the assumption that all elements are distinct?
+
+7-3 Alternative quicksort analysis
+An alternative analysis of the running time of randomized quicksort focuses on
+the expected running time of each individual recursive call to R ANDOMIZED -
+Q UICKSORT, rather than on the number of comparisons performed.
+
+a. Argue that, given an array of size n, the probability that any particular element
+   is chosen as the pivot is 1=n. Use this to deﬁne indicator random variables
+   Xi D I fith smallest element is chosen as the pivotg. What is E ŒXi ?
+
+b. Let T .n/ be a random variable denoting the running time of quicksort on an
+   array of size n. Argue that
+                  " n                                   #
+                    X
+   E ŒT .n/ D E       Xq .T .q  1/ C T .n  q/ C ‚.n// :                (7.5)
+                     qD1
+
+
+c. Show that we can rewrite equation (7.5) as
+
+                 2X
+                    n1
+   E ŒT .n/ D         E ŒT .q/ C ‚.n/ :                                       (7.6)
+                 n qD2
+
+d. Show that
+
+   X
+   n1
+                 1         1
+         k lg k  n2 lg n  n2 :                                                (7.7)
+                 2         8
+   kD2
+
+
+   (Hint: Split the summation into two parts, one for k D 2; 3; : : : ; dn=2e  1 and
+   one for k D dn=2e ; : : : ; n  1.)
+
+e. Using the bound from equation (7.7), show that the recurrence in equation (7.6)
+   has the solution E ŒT .n/ D ‚.n lg n/. (Hint: Show, by substitution, that
+   E ŒT .n/  an lg n for sufﬁciently large n and for some positive constant a.)
+

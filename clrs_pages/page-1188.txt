@@ -1,0 +1,44 @@
+B.3 Functions                                                                      1167
+
+
+   When the domain of a function f is a Cartesian product, we often omit the extra
+parentheses surrounding the argument of f . For example, if we had a function
+f W A1 A2    An ! B, we would write b D f .a1 ; a2 ; : : : ; an / instead
+of b D f ..a1 ; a2 ; : : : ; an //. We also call each ai an argument to the function f ,
+though technically the (single) argument to f is the n-tuple .a1 ; a2 ; : : : ; an /.
+   If f W A ! B is a function and b D f .a/, then we sometimes say that b is the
+image of a under f . The image of a set A0  A under f is deﬁned by
+f .A0 / D fb 2 B W b D f .a/ for some a 2 A0 g :
+The range of f is the image of its domain, that is, f .A/. For example, the range
+of the function f W N ! N deﬁned by f .n/ D 2n is f .N/ D fm W m D 2n for
+some n 2 Ng, in other words, the set of nonnegative even integers.
+   A function is a surjection if its range is its codomain. For example, the function
+f .n/ D bn=2c is a surjective function from N to N, since every element in N
+appears as the value of f for some argument. In contrast, the function f .n/ D 2n
+is not a surjective function from N to N, since no argument to f can produce 3 as a
+value. The function f .n/ D 2n is, however, a surjective function from the natural
+numbers to the even numbers. A surjection f W A ! B is sometimes described as
+mapping A onto B. When we say that f is onto, we mean that it is surjective.
+   A function f W A ! B is an injection if distinct arguments to f produce
+distinct values, that is, if a ¤ a0 implies f .a/ ¤ f .a0 /. For example, the function
+f .n/ D 2n is an injective function from N to N, since each even number b is the
+image under f of at most one element of the domain, namely b=2. The function
+f .n/ D bn=2c is not injective, since the value 1 is produced by two arguments: 2
+and 3. An injection is sometimes called a one-to-one function.
+   A function f W A ! B is a bijection if it is injective and surjective. For example,
+the function f .n/ D .1/n dn=2e is a bijection from N to Z:
+0   ! 0;
+1   ! 1 ;
+2   ! 1;
+3   ! 2 ;
+4   ! 2;
+    ::
+     :
+The function is injective, since no element of Z is the image of more than one
+element of N. It is surjective, since every element of Z appears as the image of
+some element of N. Hence, the function is bijective. A bijection is sometimes
+called a one-to-one correspondence, since it pairs elements in the domain and
+codomain. A bijection from a set A to itself is sometimes called a permutation.
+   When a function f is bijective, we deﬁne its inverse f 1 as
+f 1 .b/ D a if and only if f .a/ D b :
+

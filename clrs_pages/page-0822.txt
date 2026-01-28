@@ -1,0 +1,42 @@
+27.3 Multithreaded merge sort                                                           801
+
+
+putes the index q3 of the element that divides the output subarray AŒp3 : : r3  into
+AŒp3 : : q3  1 and AŒq3 C1 : : r3 , and then line 12 copies T Œq1  directly into AŒq3 .
+   Then, we recurse using nested parallelism. Line 13 spawns the ﬁrst subproblem,
+while line 14 calls the second subproblem in parallel. The sync statement in line 15
+ensures that the subproblems have completed before the procedure returns. (Since
+every procedure implicitly executes a sync before returning, we could have omitted
+the sync statement in line 15, but including it is good coding practice.) There
+is some cleverness in the coding to ensure that when the subarray T Œp2 : : r2  is
+empty, the code operates correctly. The way it works is that on each recursive call,
+a median element of T Œp1 : : r1  is placed into the output subarray, until T Œp1 : : r1 
+itself ﬁnally becomes empty, triggering the base case.
+
+Analysis of multithreaded merging
+We ﬁrst derive a recurrence for the span PM 1 .n/ of P-M ERGE, where the two
+subarrays contain a total of n D n1 Cn2 elements. Because the spawn in line 13 and
+the call in line 14 operate logically in parallel, we need examine only the costlier of
+the two calls. The key is to understand that in the worst case, the maximum number
+of elements in either of the recursive calls can be at most 3n=4, which we see as
+follows. Because lines 3–6 ensure that n2  n1 , it follows that n2 D 2n2 =2 
+.n1 C n2 /=2 D n=2. In the worst case, one of the two recursive calls merges
+bn1 =2c elements of T Œp1 : : r1  with all n2 elements of T Œp2 : : r2 , and hence the
+number of elements involved in the call is
+bn1 =2c C n2        n1 =2 C n2 =2 C n2 =2
+                D    .n1 C n2 /=2 C n2 =2
+                    n=2 C n=4
+                D    3n=4 :
+Adding in the ‚.lg n/ cost of the call to B INARY-S EARCH in line 10, we obtain
+the following recurrence for the worst-case span:
+PM 1 .n/ D PM 1 .3n=4/ C ‚.lg n/ :                                                   (27.8)
+(For the base case, the span is ‚.1/, since lines 1–8 execute in constant time.)
+This recurrence does not fall under any of the cases of the master theorem, but it
+meets the condition of Exercise 4.6-2. Therefore, the solution to recurrence (27.8)
+is PM 1 .n/ D ‚.lg2 n/.
+   We now analyze the work PM1 .n/ of P-M ERGE on n elements, which turns out
+to be ‚.n/. Since each of the n elements must be copied from array T to array A,
+we have PM 1 .n/ D .n/. Thus, it remains only to show that PM 1 .n/ D O.n/.
+   We shall ﬁrst derive a recurrence for the worst-case work. The binary search in
+line 10 costs ‚.lg n/ in the worst case, which dominates the other work outside
+

@@ -1,0 +1,43 @@
+1128       Chapter 35 Approximation Algorithms
+
+
+           35.4-4
+           Show that the constraints in line (35.19) are redundant in the sense that if we re-
+           move them from the linear program in lines (35.17)–(35.20), any optimal solution
+           to the resulting linear program must satisfy x./  1 for each  2 V .
+
+
+
+35.5 The subset-sum problem
+
+           Recall from Section 34.5.5 that an instance of the subset-sum problem is a
+           pair .S; t/, where S is a set fx1 ; x2 ; : : : ; xn g of positive integers and t is a posi-
+           tive integer. This decision problem asks whether there exists a subset of S that
+           adds up exactly to the target value t. As we saw in Section 34.5.5, this problem is
+           NP-complete.
+              The optimization problem associated with this decision problem arises in prac-
+           tical applications. In the optimization problem, we wish to ﬁnd a subset of
+           fx1 ; x2 ; : : : ; xn g whose sum is as large as possible but not larger than t. For ex-
+           ample, we may have a truck that can carry no more than t pounds, and n different
+           boxes to ship, the ith of which weighs xi pounds. We wish to ﬁll the truck with as
+           heavy a load as possible without exceeding the given weight limit.
+              In this section, we present an exponential-time algorithm that computes the op-
+           timal value for this optimization problem, and then we show how to modify the
+           algorithm so that it becomes a fully polynomial-time approximation scheme. (Re-
+           call that a fully polynomial-time approximation scheme has a running time that is
+           polynomial in 1= as well as in the size of the input.)
+
+           An exponential-time exact algorithm
+           Suppose that we computed, for each subset S 0 of S, the sum of the elements
+           in S 0 , and then we selected, among the subsets whose sum does not exceed t,
+           the one whose sum was closest to t. Clearly this algorithm would return the op-
+           timal solution, but it could take exponential time. To implement this algorithm,
+           we could use an iterative procedure that, in iteration i, computes the sums of
+           all subsets of fx1 ; x2 ; : : : ; xi g, using as a starting point the sums of all subsets
+           of fx1 ; x2 ; : : : ; xi 1 g. In doing so, we would realize that once a particular subset S 0
+           had a sum exceeding t, there would be no reason to maintain it, since no super-
+           set of S 0 could be the optimal solution. We now give an implementation of this
+           strategy.
+              The procedure E XACT-S UBSET-S UM takes an input set S D fx1 ; x2 ; : : : ; xn g
+           and a target value t; we’ll see its pseudocode in a moment. This procedure it-
+

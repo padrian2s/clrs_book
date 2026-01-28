@@ -1,0 +1,46 @@
+1228   Appendix D   Matrices
+
+
+          For the remainder of this problem, we work over GF.2/, and all matrix and
+       vector entries are 0 or 1. We deﬁne the rank of a 0-1 matrix (a matrix for which
+       each entry is either 0 or 1) over GF.2/ the same as for a regular matrix, but with all
+       arithmetic that determines linear independence performed over GF.2/. We deﬁne
+       the range of an n n 0-1 matrix A by
+       R.A/ D fy W y D Ax for some x 2 Sn g ;
+       so that R.A/ is the set of numbers in Sn that we can produce by multiplying each
+       value x in Sn by A.
+
+       a. If r is the rank of matrix A, prove that jR.A/j D 2r . Conclude that A deﬁnes a
+          permutation on Sn only if A has full rank.
+
+          For a given n   n matrix A and a given value y 2 R.A/, we deﬁne the preimage
+       of y by
+       P .A; y/ D fx W Ax D yg ;
+       so that P .A; y/ is the set of values in Sn that map to y when multiplied by A.
+
+       b. If r is the rank of n   n matrix A and y 2 R.A/, prove that jP .A; y/j D 2nr .
+
+          Let 0  m  n, and suppose we partition the set Sn into blocks of consec-
+       utive numbers, where the ith block consists of the 2m numbers i2m ; i2m C 1;
+       i2m C 2; : : : ; .i C 1/2m  1. For any subset S  Sn , deﬁne B.S; m/ to be the
+       set of size-2m blocks of Sn containing some element of S. As an example, when
+       n D 3, m D 1, and S D f1; 4; 5g, then B.S; m/ consists of blocks 0 (since 1 is in
+       the 0th block) and 2 (since both 4 and 5 are in block 2).
+
+       c. Let r be the rank of the lower left .n  m/ m submatrix of A, that is, the
+          matrix formed by taking the intersection of the bottom n  m rows and the
+          leftmost m columns of A. Let S be any size-2m block of Sn , and let S 0 D
+          fy W y D Ax for some x 2 Sg. Prove that jB.S 0 ; m/j D 2r and that for each
+          block in B.S 0 ; m/, exactly 2mr numbers in S map to that block.
+
+          Because multiplying the zero vector by any matrix yields a zero vector, the set
+       of permutations of Sn deﬁned by multiplying by n n 0-1 matrices with full rank
+       over GF.2/ cannot include all permutations of Sn . Let us extend the class of per-
+       mutations deﬁned by matrix-vector multiplication to include an additive term, so
+       that x 2 Sn maps to Ax C c, where c is an n-bit vector and addition is performed
+       over GF.2/. For example, when
+                   
+               1 0
+       AD
+               1 1
+

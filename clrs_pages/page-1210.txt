@@ -1,0 +1,44 @@
+           C.2 Probability                                                                   1189
+
+
+           Provide both an algebraic proof and an argument based on a method for choosing
+           j C k items out of n. Give an example in which equality does not hold.
+
+           C.1-12 ?
+           Use induction on all integers k such that 0  k  n=2 to prove inequality (C.6),
+           and use equation (C.3) to extend it to all integers k such that 0  k  n.
+
+           C.1-13 ?
+           Use Stirling’s approximation to prove that
+               !
+            2n        22n
+                 D p .1 C O.1=n// :                                                        (C.10)
+             n         n
+
+           C.1-14 ?
+           By differentiating the entropy function H./, show that it achieves its maximum
+           value at  D 1=2. What is H.1=2/?
+
+           C.1-15 ?
+           Show that for any integer n  0,
+                  !
+           Xn
+                n
+                    k D n2n1 :                                                            (C.11)
+                k
+           kD0
+
+
+
+
+C.2 Probability
+
+           Probability is an essential tool for the design and analysis of probabilistic and ran-
+           domized algorithms. This section reviews basic probability theory.
+              We deﬁne probability in terms of a sample space S, which is a set whose ele-
+           ments are called elementary events. We can think of each elementary event as a
+           possible outcome of an experiment. For the experiment of ﬂipping two distinguish-
+           able coins, with each individual ﬂip resulting in a head (H) or a tail (T), we can view
+           the sample space as consisting of the set of all possible 2-strings over fH; T g:
+           S D fHH; HT ; TH ; TT g :
+

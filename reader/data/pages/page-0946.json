@@ -1,0 +1,5 @@
+{
+  "page": 946,
+  "title": "Polynomials and the FFT",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 30</div>\n    <h1>Polynomials and the FFT</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>VII: Selected Topics</h4>\n    <h3>Chapter 30: Polynomials and the FFT</h3>\n    <p><em>Fast Fourier Transform - O(n log n) polynomial multiplication</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>Polynomial multiplication: O(n²) naively</li>\n<li>FFT: O(n log n) via divide-and-conquer</li>\n<li>DFT: evaluates polynomial at roots of unity</li>\n<li>Inverse FFT: interpolate back to coefficients</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>Signal processing, audio, image compression</p>\n</div>\n</div>"
+}

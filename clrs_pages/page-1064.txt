@@ -1,0 +1,46 @@
+33.4 Finding the closest pair of points                                          1043
+
+
+Section 2.3.1: we are splitting a sorted array into two sorted arrays. The following
+pseudocode gives the idea.
+
+1 let YL Œ1 : : Y:length and YR Œ1 : : Y:length be new arrays
+2 YL :length D YR :length D 0
+3 for i D 1 to Y:length
+4      if Y Œi 2 PL
+5            YL :length D YL :length C 1
+6            YL ŒYL :length D Y Œi
+7      else YR :length D YR :length C 1
+8            YR ŒYR :length D Y Œi
+
+We simply examine the points in array Y in order. If a point Y Œi is in PL , we
+append it to the end of array YL ; otherwise, we append it to the end of array YR .
+Similar pseudocode works for forming arrays XL , XR , and Y 0 .
+    The only remaining question is how to get the points sorted in the ﬁrst place. We
+presort them; that is, we sort them once and for all before the ﬁrst recursive call.
+We pass these sorted arrays into the ﬁrst recursive call, and from there we whittle
+them down through the recursive calls as necessary. Presorting adds an additional
+O.n lg n/ term to the running time, but now each step of the recursion takes linear
+time exclusive of the recursive calls. Thus, if we let T .n/ be the running time of
+each recursive step and T 0 .n/ be the running time of the entire algorithm, we get
+T 0 .n/ D T .n/ C O.n lg n/ and
+         (
+           2T .n=2/ C O.n/ if n > 3 ;
+T .n/ D
+           O.1/                 if n  3 :
+
+Thus, T .n/ D O.n lg n/ and T 0 .n/ D O.n lg n/.
+
+Exercises
+
+33.4-1
+Professor Williams comes up with a scheme that allows the closest-pair algorithm
+to check only 5 points following each point in array Y 0 . The idea is always to place
+points on line l into set PL . Then, there cannot be pairs of coincident points on
+line l with one point in PL and one in PR . Thus, at most 6 points can reside in
+the ı 2ı rectangle. What is the ﬂaw in the professor’s scheme?
+
+33.4-2
+Show that it actually sufﬁces to check only the points in the 5 array positions fol-
+lowing each point in the array Y 0 .
+

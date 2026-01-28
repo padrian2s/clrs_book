@@ -1,0 +1,29 @@
+           Contents                                                  xi
+
+
+
+VIII Appendix: Mathematical Background
+
+                 Introduction     1143
+           A     Summations 1145
+                 A.1 Summation formulas and properties   1145
+                 A.2 Bounding summations 1149
+           B     Sets, Etc. 1158
+                 B.1 Sets 1158
+                 B.2 Relations 1163
+                 B.3 Functions 1166
+                 B.4 Graphs 1168
+                 B.5 Trees 1173
+           C     Counting and Probability 1183
+                 C.1 Counting 1183
+                 C.2 Probability 1189
+                 C.3 Discrete random variables 1196
+                 C.4 The geometric and binomial distributions 1201
+           ?     C.5 The tails of the binomial distribution 1208
+           D     Matrices 1217
+                 D.1 Matrices and matrix operations   1217
+                 D.2 Basic matrix properties 1222
+
+                 Bibliography     1231
+                 Index     1251
+

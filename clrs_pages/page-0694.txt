@@ -1,0 +1,43 @@
+24.5 Proofs of shortest-paths properties                                                    673
+
+
+some vertices u;  2 V . Suppose that G is initialized by I NITIALIZE -S INGLE -
+S OURCE.G; s/ and then a sequence of relaxation steps that includes the call
+R ELAX .u; ; w/ is executed on the edges of G. If u:d D ı.s; u/ at any time
+prior to the call, then :d D ı.s; / at all times after the call.
+
+Proof By the upper-bound property, if u:d D ı.s; u/ at some point prior to re-
+laxing edge .u; /, then this equality holds thereafter. In particular, after relaxing
+edge .u; /, we have
+:d  u:d C w.u; /     (by Lemma 24.13)
+    D ı.s; u/ C w.u; /
+    D ı.s; /           (by Lemma 24.1) .
+By the upper-bound property, :d  ı.s; /, from which we conclude that
+:d D ı.s; /, and this equality is maintained thereafter.
+
+Lemma 24.15 (Path-relaxation property)
+Let G D .V; E/ be a weighted, directed graph with weight function w W E ! R,
+and let s 2 V be a source vertex. Consider any shortest path p D h0 ; 1 ; : : : ; k i
+from s D 0 to k . If G is initialized by I NITIALIZE -S INGLE -S OURCE .G; s/ and
+then a sequence of relaxation steps occurs that includes, in order, relaxing the edges
+.0 ; 1 /; .1 ; 2 /; : : : ; .k1 ; k /, then k :d D ı.s; k / after these relaxations and
+at all times afterward. This property holds no matter what other edge relaxations
+occur, including relaxations that are intermixed with relaxations of the edges of p.
+
+
+Proof We show by induction that after the ith edge of path p is relaxed, we have
+i :d D ı.s; i /. For the basis, i D 0, and before any edges of p have been relaxed,
+we have from the initialization that 0 :d D s:d D 0 D ı.s; s/. By the upper-bound
+property, the value of s:d never changes after initialization.
+    For the inductive step, we assume that i 1 :d D ı.s; i 1 /, and we examine
+what happens when we relax edge .i 1 ; i /. By the convergence property, after
+relaxing this edge, we have i :d D ı.s; i /, and this equality is maintained at all
+times thereafter.
+
+Relaxation and shortest-paths trees
+We now show that once a sequence of relaxations has caused the shortest-path es-
+timates to converge to shortest-path weights, the predecessor subgraph G induced
+by the resulting  values is a shortest-paths tree for G. We start with the follow-
+ing lemma, which shows that the predecessor subgraph always forms a rooted tree
+whose root is the source.
+

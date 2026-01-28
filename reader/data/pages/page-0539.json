@@ -1,0 +1,5 @@
+{
+  "page": 539,
+  "title": "19.3 Decreasing a key and deleting a node\n\n In this section, we show how to decrease the key of a node in a Fibonacci heap\n in O",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 19.3</div>\n    <h1>19.3 Decreasing a key and deleting a node\n\n In this section, we show how to decrease the key of a node in a Fibonacci heap\n in O</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>V: Advanced Data Structures</h4>\n    <h3>Chapter 19: Fibonacci Heaps</h3>\n    <p><em>Heap with O(1) amortized insert and decrease-key</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>Lazy operations: delay work until necessary</li>\n<li>Insert: O(1) amortized</li>\n<li>Decrease-key: O(1) amortized</li>\n<li>Extract-min: O(log n) amortized</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>Faster Dijkstra and Prim for sparse graphs</p>\n</div>\n</div>"
+}

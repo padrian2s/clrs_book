@@ -1,0 +1,5 @@
+{
+  "page": 460,
+  "title": "17.2 The Accounting Method",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 17.2</div>\n    <h1>The Accounting Method</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Charge each operation an amortized cost, store credit for later.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Assign amortized cost (possibly different from actual) to each op</li>\n<li>Overcharging stores credit with objects</li>\n<li>Credit pays for future expensive operations</li>\n<li>Rule: total amortized cost ≥ total actual cost</li>\n<li>Credit can never go negative</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Stack: charge PUSH $2 (actual $1, store $1 credit). MULTIPOP uses stored credit. Amortized O(1) per op.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Intuitive way to think about amortized analysis.</p>\n</div>\n</div>"
+}

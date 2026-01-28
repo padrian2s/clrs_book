@@ -1,0 +1,44 @@
+76   Chapter 4 Divide-and-Conquer
+
+
+     for loop of lines 4–7 computes each of the entries cij , for each column j . Line 5
+     initializes cij to 0 as we start computing the sum given in equation (4.8), and each
+     iteration of the for loop of lines 6–7 adds in one more term of equation (4.8).
+        Because each of the triply-nested for loops runs exactly n iterations, and each
+     execution of line 7 takes constant time, the S QUARE -M ATRIX -M ULTIPLY proce-
+     dure takes ‚.n3 / time.
+        You might at ﬁrst think that any matrix multiplication algorithm must take .n3 /
+     time, since the natural deﬁnition of matrix multiplication requires that many mul-
+     tiplications. You would be incorrect, however: we have a way to multiply matrices
+     in o.n3 / time. In this section, we shall see Strassen’s remarkable recursive algo-
+     rithm for multiplying n n matrices. It runs in ‚.nlg 7 / time, which we shall show
+     in Section 4.5. Since lg 7 lies between 2:80 and 2:81, Strassen’s algorithm runs in
+     O.n2:81 / time, which is asymptotically better than the simple S QUARE -M ATRIX -
+     M ULTIPLY procedure.
+
+     A simple divide-and-conquer algorithm
+     To keep things simple, when we use a divide-and-conquer algorithm to compute
+     the matrix product C D A  B, we assume that n is an exact power of 2 in each of
+     the n n matrices. We make this assumption because in each divide step, we will
+     divide n n matrices into four n=2 n=2 matrices, and by assuming that n is an
+     exact power of 2, we are guaranteed that as long as n  2, the dimension n=2 is an
+     integer.
+        Suppose that we partition each of A, B, and C into four n=2 n=2 matrices
+                                                                   
+              A11 A12                B11 B12                 C11 C12
+     AD                  ; BD                      ; C D                  ;       (4.9)
+              A21 A22                B21 B22                 C21 C22
+     so that we rewrite the equation C D A  B as
+                                             
+       C11 C12            A11 A12        B11 B12
+                    D                              :                             (4.10)
+       C21 C22            A21 A22        B21 B22
+     Equation (4.10) corresponds to the four equations
+     C11   D   A11  B11 C A12  B21 ;                                            (4.11)
+     C12   D   A11  B12 C A12  B22 ;                                            (4.12)
+     C21   D   A21  B11 C A22  B21 ;                                            (4.13)
+     C22   D   A21  B12 C A22  B22 :                                            (4.14)
+     Each of these four equations speciﬁes two multiplications of n=2 n=2 matrices
+     and the addition of their n=2 n=2 products. We can use these equations to create
+     a straightforward, recursive, divide-and-conquer algorithm:
+

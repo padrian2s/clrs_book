@@ -1,0 +1,55 @@
+652             Chapter 24 Single-Source Shortest Paths
+
+
+            t           5       x                             t         5     x                             t         5      x
+            ∞          –2       ∞                             6        –2     ∞                             6        –2      4
+        6                                             6                                              6
+                            –3                                              –3                                            –3
+  s 0       8                                s 0             8                              s 0            8
+                            –4 7                                            –4 7                                          –4 7
+                       2                                               2                                             2
+        7                                             7                                              7
+            ∞                   ∞                             7               ∞                             7                2
+                       9                                               9                                             9
+            y                   z                             y               z                             y                z
+                (a)                                              (b)                                           (c)
+
+
+            t           5       x                             t         5      x
+            2          –2       4                             2        –2      4
+        6                                             6
+                            –3                                              –3
+  s 0       8                                s 0             8
+                            –4 7                                            –4 7
+                       2                                               2
+        7                                             7
+            7                   2                             7               –2
+                       9                                               9
+            y                   z                             y                z
+                (d)                                              (e)
+
+
+                Figure 24.4 The execution of the Bellman-Ford algorithm. The source is vertex s. The d val-
+                ues appear within the vertices, and shaded edges indicate predecessor values: if edge .u; / is
+                shaded, then :  D u. In this particular example, each pass relaxes the edges in the order
+                .t; x/; .t; y/; .t; ´/; .x; t/; .y; x/; .y; ´/; .´; x/; .´; s/; .s; t/; .s; y/. (a) The situation just before the
+                ﬁrst pass over the edges. (b)–(e) The situation after each successive pass over the edges. The d
+                and  values in part (e) are the ﬁnal values. The Bellman-Ford algorithm returns TRUE in this
+                example.
+
+
+                Lemma 24.2
+                Let G D .V; E/ be a weighted, directed graph with source s and weight func-
+                tion w W E ! R, and assume that G contains no negative-weight cycles that are
+                reachable from s. Then, after the jV j  1 iterations of the for loop of lines 2–4
+                of B ELLMAN -F ORD, we have :d D ı.s; / for all vertices  that are reachable
+                from s.
+
+                Proof We prove the lemma by appealing to the path-relaxation property. Con-
+                sider any vertex  that is reachable from s, and let p D h0 ; 1 ; : : : ; k i, where
+                0 D s and k D , be any shortest path from s to . Because shortest paths are
+                simple, p has at most jV j  1 edges, and so k  jV j  1. Each of the jV j  1 itera-
+                tions of the for loop of lines 2–4 relaxes all jEj edges. Among the edges relaxed in
+                the ith iteration, for i D 1; 2; : : : ; k, is .i 1 ; i /. By the path-relaxation property,
+                therefore, :d D k :d D ı.s; k / D ı.s; /.
+

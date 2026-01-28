@@ -1,0 +1,43 @@
+34.4 NP-completeness proofs                                                        1085
+
+
+    exactly 3 distinct literals. Whether p D 0 or p D 1, one of the clauses is
+    equivalent to l1 _ l2 , and the other evaluates to 1, which is the identity for AND.
+   If Ci has just 1 distinct literal l, then include .l _ p _ q/ ^ .l _ p _ :q/ ^
+    .l _ :p _ q/ ^ .l _ :p _ :q/ as clauses of  000 . Regardless of the values of p
+    and q, one of the four clauses is equivalent to l, and the other 3 evaluate to 1.
+   We can see that the 3-CNF formula  000 is satisﬁable if and only if  is satisﬁable
+by inspecting each of the three steps. Like the reduction from CIRCUIT-SAT to
+SAT, the construction of  0 from  in the ﬁrst step preserves satisﬁability. The
+second step produces a CNF formula  00 that is algebraically equivalent to  0 . The
+third step produces a 3-CNF formula  000 that is effectively equivalent to  00 , since
+any assignment to the variables p and q produces a formula that is algebraically
+equivalent to  00 .
+   We must also show that the reduction can be computed in polynomial time. Con-
+structing  0 from  introduces at most 1 variable and 1 clause per connective in .
+Constructing  00 from  0 can introduce at most 8 clauses into  00 for each clause
+from  0 , since each clause of  0 has at most 3 variables, and the truth table for
+each clause has at most 23 D 8 rows. The construction of  000 from  00 introduces
+at most 4 clauses into  000 for each clause of  00 . Thus, the size of the resulting
+formula  000 is polynomial in the length of the original formula. Each of the con-
+structions can easily be accomplished in polynomial time.
+
+Exercises
+
+34.4-1
+Consider the straightforward (nonpolynomial-time) reduction in the proof of The-
+orem 34.9. Describe a circuit of size n that, when converted to a formula by this
+method, yields a formula whose size is exponential in n.
+
+34.4-2
+Show the 3-CNF formula that results when we use the method of Theorem 34.10
+on the formula (34.3).
+
+34.4-3
+Professor Jagger proposes to show that SAT P 3-CNF-SAT by using only the
+truth-table technique in the proof of Theorem 34.10, and not the other steps. That
+is, the professor proposes to take the boolean formula , form a truth table for
+its variables, derive from the truth table a formula in 3-DNF that is equivalent
+to :, and then negate and apply DeMorgan’s laws to produce a 3-CNF formula
+equivalent to . Show that this strategy does not yield a polynomial-time reduction.
+

@@ -1,0 +1,5 @@
+{
+  "page": 192,
+  "title": "8.1 Lower Bounds for Sorting",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 8.1</div>\n    <h1>Lower Bounds for Sorting</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Comparison-based sorting cannot be faster than Ω(n log n).</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Any comparison sort can be viewed as a decision tree</li>\n<li>n! possible orderings → tree needs n! leaves</li>\n<li>Height h ≥ log(n!) = Ω(n log n)</li>\n<li>Therefore: worst-case comparisons ≥ Ω(n log n)</li>\n<li>Merge sort and heapsort are asymptotically optimal!</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Sorting 3 elements requires at least ⌈log(3!)⌉ = ⌈log 6⌉ = 3 comparisons.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Proves we can&#x27;t do better with comparisons alone. Need different model to beat n log n.</p>\n</div>\n</div>"
+}

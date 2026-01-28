@@ -1,0 +1,42 @@
+396   Chapter 15 Dynamic Programming
+
+
+      Improving the code
+      Once you have developed an algorithm, you will often ﬁnd that you can improve
+      on the time or space it uses. Some changes can simplify the code and improve
+      constant factors but otherwise yield no asymptotic improvement in performance.
+      Others can yield substantial asymptotic savings in time and space.
+         In the LCS algorithm, for example, we can eliminate the b table altogether. Each
+      cŒi; j  entry depends on only three other c table entries: cŒi  1; j  1, cŒi  1; j ,
+      and cŒi; j  1. Given the value of cŒi; j , we can determine in O.1/ time which of
+      these three values was used to compute cŒi; j , without inspecting table b. Thus, we
+      can reconstruct an LCS in O.mCn/ time using a procedure similar to P RINT-LCS.
+      (Exercise 15.4-2 asks you to give the pseudocode.) Although we save ‚.mn/ space
+      by this method, the auxiliary space requirement for computing an LCS does not
+      asymptotically decrease, since we need ‚.mn/ space for the c table anyway.
+         We can, however, reduce the asymptotic space requirements for LCS-L ENGTH,
+      since it needs only two rows of table c at a time: the row being computed and the
+      previous row. (In fact, as Exercise 15.4-4 asks you to show, we can use only slightly
+      more than the space for one row of c to compute the length of an LCS.) This
+      improvement works if we need only the length of an LCS; if we need to reconstruct
+      the elements of an LCS, the smaller table does not keep enough information to
+      retrace our steps in O.m C n/ time.
+
+      Exercises
+
+      15.4-1
+      Determine an LCS of h1; 0; 0; 1; 0; 1; 0; 1i and h0; 1; 0; 1; 1; 0; 1; 1; 0i.
+
+      15.4-2
+      Give pseudocode to reconstruct an LCS from the completed c table and the original
+      sequences X D hx1 ; x2 ; : : : ; xm i and Y D hy1 ; y2 ; : : : ; yn i in O.m C n/ time,
+      without using the b table.
+
+      15.4-3
+      Give a memoized version of LCS-L ENGTH that runs in O.mn/ time.
+
+      15.4-4
+      Show how to compute the length of an LCS using only 2min.m; n/ entries in the c
+      table plus O.1/ additional space. Then show how to do the same thing, but using
+      min.m; n/ entries plus O.1/ additional space.
+

@@ -1,0 +1,46 @@
+826               Chapter 28 Matrix Operations
+
+
+
+
+        1        2   0        2 0.6           3       5     5       4     2         3     5  5        4   2
+        2        3   3        4  –2           2       3     3       4    –2         2    0.6 0       1.6 –3.2
+        3        5   5        4  2            1       2     0       2    0.6        1    0.4 –2      0.4 –.2
+        4       –1   –2      3.4 –1           4       –1   –2      3.4   –1         4   –0.2 –1      4.2 –0.6
+                          (a)                                   (b)                               (c)
+
+
+        3         5  5        4   2           3        5    5       4   2           3     5   5           4   2
+        2        0.6 0       1.6 –3.2         1       0.4 –2       0.4 –0.2         1    0.4 –2          0.4 –0.2
+        1        0.4 –2      0.4 –0.2         2       0.6 0        1.6 –3.2         2    0.6 0           1.6 –3.2
+        4       –0.2 –1      4.2 –0.6         4       –0.2 –1      4.2 –0.6         4   –0.2 0.5          4 –0.5
+                          (d)                                   (e)                                (f)
+
+
+        3         5   5     4 2               3        5    5     4 2               3     5   5           4   2
+        1        0.4 –2 0.4 –0.2              1       0.4 –2 0.4 –0.2               1    0.4 –2          0.4 –0.2
+        2        0.6 0 1.6 –3.2               4       –0.2 0.5 4 –0.5               4   –0.2 0.5          4 –0.5
+        4       –0.2 0.5 4 –0.5               2       0.6 0 1.6 –3.2                2    0.6 0           0.4 –3
+                        (g)                                   (h)                                  (i)
+
+      0 0 1 0˘  2              0  2 0:6
+                                                  ˘         1        0  0      0
+                                                                                    ˘ 5 5     4    2
+                                                                                                                    ˘
+       1 0 0 0                3  3  4 2                         0:4  1  0      0        0 2 0:4 0:2
+                                                       D
+       0 0 0 1                5  5  4   2                       0:2 0:5 1      0        0 0   4 0:5
+       0 1 0 0               1 2 3:4 1                        0:6  0 0:4     1        0 0   0   3
+            P                           A                                L                         U
+                                                           (j)
+
+
+                  Figure 28.2 The operation of LUP-D ECOMPOSITION. (a) The input matrix A with the identity
+                  permutation of the rows on the left. The ﬁrst step of the algorithm determines that the element 5
+                  in the black circle in the third row is the pivot for the ﬁrst column. (b) Rows 1 and 3 are swapped
+                  and the permutation is updated. The shaded column and row represent  and w T . (c) The vector 
+                  is replaced by =5, and the lower right of the matrix is updated with the Schur complement. Lines
+                  divide the matrix into three regions: elements of U (above), elements of L (left), and elements of the
+                  Schur complement (lower right). (d)–(f) The second step. (g)–(i) The third step. No further changes
+                  occur on the fourth (ﬁnal) step. (j) The LUP decomposition PA D LU .
+

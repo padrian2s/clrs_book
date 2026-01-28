@@ -1,0 +1,50 @@
+           Problems for Chapter 13                                                                              335
+
+
+
+
+                             G: 4                                                     G: 4
+
+               B: 7                  H: 5             C: 25               B: 7                  H: 5
+
+
+       A: 10           E: 23                K: 65                 A: 10            E: 23               K: 65
+
+                                        I: 73                                C: 25                  I: 73
+                              (a)                                                         (b)
+
+
+
+                             G: 4                                                     G: 4
+
+D: 9           B: 7                  H: 5                                 B: 7                  H: 5
+
+
+       A: 10           E: 23                K: 65                 A: 10            E: 23               K: 65
+
+                 C: 25                  I: 73                                 D: 9                  I: 73
+
+
+                      D: 9                                                 C: 25
+                              (c)                                                         (d)
+
+
+
+                             G: 4                                                      F: 2
+
+               B: 7                  H: 5              F: 2               B: 7                  G: 4
+                                                              …
+       A: 10           D: 9                 K: 65                 A: 10            D: 9                 H: 5
+
+                C: 25        E: 23      I: 73                               C: 25      E: 23                 K: 65
+
+
+                                                                                                            I: 73
+                              (e)                                                         (f)
+
+
+           Figure 13.10 The operation of T REAP -I NSERT . (a) The original treap, prior to insertion. (b) The
+           treap after inserting a node with key C and priority 25. (c)–(d) Intermediate stages when inserting a
+           node with key D and priority 9. (e) The treap after the insertion of parts (c) and (d) is done. (f) The
+           treap after inserting a node with key F and priority 2.
+

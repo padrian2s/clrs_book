@@ -1,0 +1,50 @@
+1210   Appendix C    Counting and Probability
+
+
+       If we let
+                     kq
+       x D
+                  .n  k/p
+                      kq
+              <
+                  .n  np/p
+                   kq
+              D
+                  nqp
+                   k
+              D
+                  np
+              <   1;
+       it follows that
+       b.i  1I n; p/ < x b.iI n; p/
+       for 0 < i  k. Iteratively applying this inequality k  i times, we obtain
+       b.iI n; p/ < x ki b.kI n; p/
+       for 0  i < k, and hence
+       X
+       k1                    X
+                              k1
+              b.iI n; p/ <           x ki b.kI n; p/
+       i D0                   i D0
+                                            X
+                                            1
+                          < b.kI n; p/             xi
+                                            i D0
+                                 x
+                         D          b.kI n; p/
+                               1x
+                                 kq
+                         D            b.kI n; p/ :
+                               np  k
+
+
+       Corollary C.5
+       Consider a sequence of n Bernoulli trials, where success occurs with probability p
+       and failure with probability q D 1  p. Then for 0 < k  np=2, the probability of
+       fewer than k successes is less than one half of the probability of fewer than k C 1
+       successes.
+
+       Proof       Because k  np=2, we have
+         kq                .np=2/q
+                    
+       np  k            np  .np=2/
+

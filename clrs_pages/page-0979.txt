@@ -1,0 +1,46 @@
+958        Chapter 31 Number-Theoretic Algorithms
+
+
+           Maintenance: Let c 0 and d 0 denote the values of c and d at the end of an iteration
+             of the for loop, and thus the values prior to the next iteration. Each iteration
+             updates c 0 D 2c (if bi D 0) or c 0 D 2c C 1 (if bi D 1), so that c will be correct
+             prior to the next iteration. If bi D 0, then d 0 D d 2 mod n D .ac /2 mod n D
+                              0
+             a2c mod n D ac mod n. If bi D 1, then d 0 D d 2 a mod n D .ac /2 a mod n D
+                                  0
+             a2cC1 mod n D ac mod n. In either case, d D ac mod n prior to the next
+             iteration.
+           Termination: At termination, i D 1. Thus, c D b, since c has the value of the
+              preﬁx hbk ; bk1 ; : : : ; b0 i of b’s binary representation. Hence d D ac mod n D
+              ab mod n.
+              If the inputs a, b, and n are ˇ-bit numbers, then the total number of arith-
+           metic operations required is O.ˇ/ and the total number of bit operations required
+           is O.ˇ 3 /.
+
+           Exercises
+
+           31.6-1
+           Draw a table showing the order of every element in Z11 . Pick the smallest primitive
+           root g and compute a table giving ind11;g .x/ for all x 2 Z11 .
+
+           31.6-2
+           Give a modular exponentiation algorithm that examines the bits of b from right to
+           left instead of left to right.
+
+           31.6-3
+           Assuming that you know .n/, explain how to compute a1 mod n for any a 2 Zn
+           using the procedure M ODULAR -E XPONENTIATION.
+
+
+
+31.7 The RSA public-key cryptosystem
+
+           With a public-key cryptosystem, we can encrypt messages sent between two com-
+           municating parties so that an eavesdropper who overhears the encrypted messages
+           will not be able to decode them. A public-key cryptosystem also enables a party
+           to append an unforgeable “digital signature” to the end of an electronic message.
+           Such a signature is the electronic version of a handwritten signature on a paper doc-
+           ument. It can be easily checked by anyone, forged by no one, yet loses its validity
+           if any bit of the message is altered. It therefore provides authentication of both the
+           identity of the signer and the contents of the signed message. It is the perfect tool
+

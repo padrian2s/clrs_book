@@ -1,0 +1,46 @@
+C.3 Discrete random variables                                                     1197
+
+
+that the probability distribution is uniform, so that each elementary event s 2 S is
+equally likely: Pr fsg D 1=36. Deﬁne the random variable X to be the maximum of
+the two values showing on the dice. We have Pr fX D 3g D 5=36, since X assigns
+a value of 3 to 5 of the 36 possible elementary events, namely, .1; 3/, .2; 3/, .3; 3/,
+.3; 2/, and .3; 1/.
+   We often deﬁne several random variables on the same sample space. If X and Y
+are random variables, the function
+f .x; y/ D Pr fX D x and Y D yg
+is the joint probability density function of X and Y . For a ﬁxed value y,
+                X
+Pr fY D yg D        Pr fX D x and Y D yg ;
+                 x
+
+and similarly, for a ﬁxed value x,
+                X
+Pr fX D xg D         Pr fX D x and Y D yg :
+                 y
+
+Using the deﬁnition (C.14) of conditional probability, we have
+                          Pr fX D x and Y D yg
+Pr fX D x j Y D yg D                           :
+                               Pr fY D yg
+We deﬁne two random variables X and Y to be independent if for all x and y, the
+events X D x and Y D y are independent or, equivalently, if for all x and y, we
+have Pr fX D x and Y D yg D Pr fX D xg Pr fY D yg.
+  Given a set of random variables deﬁned over the same sample space, we can
+deﬁne new random variables as sums, products, or other functions of the original
+variables.
+
+Expected value of a random variable
+The simplest and most useful summary of the distribution of a random variable is
+the “average” of the values it takes on. The expected value (or, synonymously,
+expectation or mean) of a discrete random variable X is
+         X
+E ŒX  D    x  Pr fX D xg ;                                             (C.20)
+           x
+
+which is well deﬁned if the sum is ﬁnite or converges absolutely. Sometimes the
+expectation of X is denoted by X or, when the random variable is apparent from
+context, simply by .
+   Consider a game in which you ﬂip two fair coins. You earn $3 for each head but
+lose $2 for each tail. The expected value of the random variable X representing
+

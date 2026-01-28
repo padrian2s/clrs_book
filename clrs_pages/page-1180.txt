@@ -1,0 +1,41 @@
+B.1 Sets                                                                        1159
+
+
+   If all the elements of a set A are contained in a set B, that is, if x 2 A implies
+x 2 B, then we write A  B and say that A is a subset of B. A set A is a
+proper subset of B, written A B, if A  B but A ¤ B. (Some authors use the
+symbol “ ” to denote the ordinary subset relation, rather than the proper-subset
+relation.) For any set A, we have A  A. For two sets A and B, we have A D B
+if and only if A  B and B  A. For any three sets A, B, and C , if A  B
+and B  C , then A  C . For any set A, we have ;  A.
+   We sometimes deﬁne sets in terms of other sets. Given a set A, we can deﬁne a
+set B  A by stating a property that distinguishes the elements of B. For example,
+we can deﬁne the set of even integers by fx W x 2 Z and x=2 is an integerg. The
+colon in this notation is read “such that.” (Some authors use a vertical bar in place
+of the colon.)
+   Given two sets A and B, we can also deﬁne new sets by applying set operations:
+   The intersection of sets A and B is the set
+
+    A \ B D fx W x 2 A and x 2 Bg :
+
+   The union of sets A and B is the set
+
+    A [ B D fx W x 2 A or x 2 Bg :
+
+   The difference between two sets A and B is the set
+
+    A  B D fx W x 2 A and x … Bg :
+
+    Set operations obey the following laws:
+Empty set laws:
+    A\; D ;;
+    A[; D A:
+
+Idempotency laws:
+    A\A D A;
+    A[A D A:
+
+Commutative laws:
+    A\B D B \A;
+    A[B D B [A:
+

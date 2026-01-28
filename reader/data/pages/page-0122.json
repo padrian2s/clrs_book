@@ -1,0 +1,5 @@
+{
+  "page": 122,
+  "title": "5.2 Indicator Random Variables",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 5.2</div>\n    <h1>Indicator Random Variables</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>A simple but powerful technique for computing expected values.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Indicator I{A} = 1 if event A occurs, 0 otherwise</li>\n<li>E[I{A}] = Pr{A} (expected value equals probability!)</li>\n<li>Key insight: E[X + Y] = E[X] + E[Y], even if X and Y are dependent</li>\n<li>Use indicators to break complex counting into simple events</li>\n<li>Avoid complex probability calculations</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Expected number of heads in n coin flips. X = X₁ + X₂ + ... + Xₙ where Xᵢ = 1 if flip i is heads. E[X] = n/2.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Makes many probabilistic analyses surprisingly simple.</p>\n</div>\n</div>"
+}

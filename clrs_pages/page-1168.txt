@@ -1,0 +1,58 @@
+A.1 Summation formulas and properties                                          1147
+
+
+Sums of squares and cubes
+We have the following summations of squares and cubes:
+Xn
+             n.n C 1/.2n C 1/
+   k2 D                       ;                                               (A.3)
+                     6
+kD0
+Xn
+              n2 .n C 1/2
+      k3 D                :                                                   (A.4)
+                   4
+kD0
+
+
+Geometric series
+For real x ¤ 1, the summation
+Xn
+    xk D 1 C x C x2 C    C xn
+kD0
+
+is a geometric or exponential series and has the value
+X n
+          x nC1  1
+     xk D           :                                                         (A.5)
+            x1
+kD0
+
+When the summation is inﬁnite and jxj < 1, we have the inﬁnite decreasing geo-
+metric series
+X
+1
+             1
+   xk D        :                                                         (A.6)
+           1x
+kD0
+
+
+Harmonic series
+For positive integers n, the nth harmonic number is
+               1 1        1         1
+Hn D 1 C C C C    C
+               2 3        4         n
+          Xn
+               1
+     D
+               k
+          kD1
+      D ln n C O.1/ :                                                         (A.7)
+(We shall prove a related bound in Section A.2.)
+
+Integrating and differentiating series
+By integrating or differentiating the formulas above, additional formulas arise. For
+example, by differentiating both sides of the inﬁnite geometric series (A.6) and
+multiplying by x, we get
+

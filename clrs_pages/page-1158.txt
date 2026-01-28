@@ -1,0 +1,49 @@
+Problems for Chapter 35                                                       1137
+
+
+Suppose that we use the following greedy algorithm for parallel machine schedul-
+ing: whenever a machine is idle, schedule any job that has not yet been scheduled.
+
+c. Write pseudocode to implement this greedy algorithm. What is the running
+   time of your algorithm?
+
+d. For the schedule returned by the greedy algorithm, show that
+
+            1 X
+   Cmax        pk C max pk :
+            m       1kn
+               1kn
+
+
+   Conclude that this algorithm is a polynomial-time 2-approximation algorithm.
+
+35-6 Approximating a maximum spanning tree
+Let G D .V; E/ be an undirected graph with distinct edge weights w.u; / on each
+edge .u; / 2 E. For each vertex  2 V , let max./ D max.u;/2E fw.u; /g be
+the maximum-weight edge incident on that vertex. Let SG D fmax./ W  2 V g
+be the set of maximum-weight edges incident on each vertex, and let TG be the
+maximum-weight spanning tree of G, that is, the spanningPtree of maximum total
+weight. For any subset of edges E 0  E, deﬁne w.E 0 / D .u;/2E 0 w.u; /.
+
+a. Give an example of a graph with at least 4 vertices for which SG D TG .
+
+b. Give an example of a graph with at least 4 vertices for which SG ¤ TG .
+
+c. Prove that SG  TG for any graph G.
+
+d. Prove that w.TG /  w.SG /=2 for any graph G.
+
+e. Give an O.V C E/-time algorithm to compute a 2-approximation to the maxi-
+   mum spanning tree.
+
+35-7 An approximation algorithm for the 0-1 knapsack problem
+Recall the knapsack problem from Section 16.2. There are n items, where the ith
+item is worth i dollars and weighs wi pounds. We are also given a knapsack
+that can hold at most W pounds. Here, we add the further assumptions that each
+weight wi is at most W and that the items are indexed in monotonically decreasing
+order of their values: 1  2      n .
+   In the 0-1 knapsack problem, we wish to ﬁnd a subset of the items whose total
+weight is at most W and whose total value is maximum. The fractional knapsack
+problem is like the 0-1 knapsack problem, except that we are allowed to take a
+fraction of each item, rather than being restricted to taking either all or none of
+

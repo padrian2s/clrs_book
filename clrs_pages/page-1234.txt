@@ -1,0 +1,50 @@
+C.5 The tails of the binomial distribution                                        1213
+
+
+which follows from (C.24), since the mutual independence of the random vari-
+ables Xi implies the mutual independence of the random variables e ˛.Xi pi / (see
+Exercise C.3-5). By the deﬁnition of expectation,
+             
+E e ˛.Xi pi / D e ˛.1pi / pi C e ˛.0pi / qi
+                D pi e ˛qi C qi e ˛pi
+                 pi e ˛ C 1                                              (C.45)
+                            ˛
+                 exp.pi e / ;
+where exp.x/ denotes the exponential function: exp.x/ D e x . (Inequality (C.45)
+follows from the inequalities ˛ > 0, qi  1, e ˛qi  e ˛ , and e ˛pi  1, and the last
+line follows from inequality (3.12).) Consequently,
+  ˛.X /    Y
+              n
+                              
+E e         D   E e ˛.Xi pi /
+                     i D1
+                     Y
+                     n
+                           exp.pi e ˛ /
+                     i D1
+                                                !
+                              X
+                              n
+                                            ˛
+                D exp                pi e
+                              i D1
+                                 ˛
+               D exp. e / ;                                                 (C.46)
+             Pn
+since    D       i D1 pi . Therefore, from equation (C.43) and inequalities (C.44)
+and (C.46), it follows that
+Pr fX        rg  exp. e ˛  ˛r/ :                                            (C.47)
+Choosing ˛ D ln.r= / (see Exercise C.5-7), we obtain
+Pr fX        rg  exp. e ln.r= /  r ln.r= //
+                  D exp.r  r ln.r= //
+                      er
+                  D
+                    .r= /r
+                     e r
+                  D         :
+                      r
+
+  When applied to Bernoulli trials in which each trial has the same probability of
+success, Theorem C.8 yields the following corollary bounding the right tail of a
+binomial distribution.
+

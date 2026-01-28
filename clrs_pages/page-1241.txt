@@ -1,0 +1,38 @@
+1220   Appendix D   Matrices
+
+
+       6. A permutation matrix P has exactly one 1 in each row or column, and 0s
+          elsewhere. An example of a permutation matrix is
+                ˇ0 1 0 0 0
+                    0    0     0   1   0
+          P D       1    0     0   0   0   :
+                    0    0     0   0   1
+                    0    0     1   0   0
+
+          Such a matrix is called a permutation matrix because multiplying a vector x
+          by a permutation matrix has the effect of permuting (rearranging) the elements
+          of x. Exercise D.1-4 explores additional properties of permutation matrices.
+       7. A symmetric matrix A satisﬁes the condition A D AT . For example,
+          1 2 3
+             2 6 4
+             3 4 5
+
+          is a symmetric matrix.
+
+       Basic matrix operations
+       The elements of a matrix or vector are numbers from a number system, such as
+       the real numbers, the complex numbers, or integers modulo a prime. The number
+       system deﬁnes how to add and multiply numbers. We can extend these deﬁnitions
+       to encompass addition and multiplication of matrices.
+          We deﬁne matrix addition as follows. If A D .aij / and B D .bij / are m n
+       matrices, then their matrix sum C D .cij / D A C B is the m n matrix deﬁned by
+       cij D aij C bij
+       for i D 1; 2; : : : ; m and j D 1; 2; : : : ; n. That is, matrix addition is performed
+       componentwise. A zero matrix is the identity for matrix addition:
+       AC0 DAD 0CA:
+         If  is a number and A D .aij / is a matrix, then A D .aij / is the scalar
+       multiple of A obtained by multiplying each of its elements by . As a special case,
+       we deﬁne the negative of a matrix A D .aij / to be 1  A D A, so that the ij th
+       entry of A is aij . Thus,
+       A C .A/ D 0 D .A/ C A :
+

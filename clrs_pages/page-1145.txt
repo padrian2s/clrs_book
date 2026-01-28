@@ -1,0 +1,48 @@
+1124   Chapter 35 Approximation Algorithms
+
+
+       Theorem 35.6
+       Given an instance of MAX-3-CNF satisﬁability with n variables x1 ; x2 ; : : : ; xn
+       and m clauses, the randomized algorithm that independently sets each vari-
+       able to 1 with probability 1=2 and to 0 with probability 1=2 is a randomized
+       8=7-approximation algorithm.
+
+       Proof Suppose that we have independently set each variable to 1 with probabil-
+       ity 1=2 and to 0 with probability 1=2. For i D 1; 2; : : : ; m, we deﬁne the indicator
+       random variable
+       Yi D I fclause i is satisﬁedg ;
+       so that Yi D 1 as long as we have set at least one of the literals in the ith clause
+       to 1. Since no literal appears more than once in the same clause, and since we have
+       assumed that no variable and its negation appear in the same clause, the settings of
+       the three literals in each clause are independent. A clause is not satisﬁed only if all
+       three of its literals are set to 0, and so Pr fclause i is not satisﬁedg D .1=2/3 D 1=8.
+       Thus, we have Pr fclause i is satisﬁedg D 1  1=8 D 7=8, and by Lemma 5.1,
+       we have E ŒYi  D 7=8. Let Y be the number of satisﬁed clauses overall, so that
+       Y D Y1 C Y2 C    C Ym . Then, we have
+                        " m #
+                         X
+       E ŒY  D E             Yi
+                           i D1
+                   X
+                   m
+               D           E ŒYi    (by linearity of expectation)
+                    i D1
+                   X
+                   m
+               D           7=8
+                    i D1
+               D 7m=8 :
+       Clearly, m is an upper bound on the number of satisﬁed clauses, and hence the
+       approximation ratio is at most m=.7m=8/ D 8=7.
+
+       Approximating weighted vertex cover using linear programming
+       In the minimum-weight vertex-cover problem, we are given an undirected graph
+       G D .V; E/ in which each vertex  2 V has an associated positive weight w./.
+                                0                                                  0
+       P any vertex cover V  V , we deﬁne the weight of the vertex cover w.V / D
+       For
+          2V 0 w./. The goal is to ﬁnd a vertex cover of minimum weight.
+          We cannot apply the algorithm used for unweighted vertex cover, nor can we use
+       a random solution; both methods may return solutions that are far from optimal.
+       We shall, however, compute a lower bound on the weight of the minimum-weight
+

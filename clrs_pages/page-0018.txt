@@ -1,0 +1,38 @@
+Preface                                                                           xvii
+
+
+   We revised our treatment of dynamic programming and greedy algorithms. Dy-
+    namic programming now leads off with a more interesting problem, rod cutting,
+    than the assembly-line scheduling problem from the second edition. Further-
+    more, we emphasize memoization a bit more than we did in the second edition,
+    and we introduce the notion of the subproblem graph as a way to understand
+    the running time of a dynamic-programming algorithm. In our opening exam-
+    ple of greedy algorithms, the activity-selection problem, we get to the greedy
+    algorithm more directly than we did in the second edition.
+   The way we delete a node from binary search trees (which includes red-black
+    trees) now guarantees that the node requested for deletion is the node that is
+    actually deleted. In the ﬁrst two editions, in certain cases, some other node
+    would be deleted, with its contents moving into the node passed to the deletion
+    procedure. With our new way to delete nodes, if other components of a program
+    maintain pointers to nodes in the tree, they will not mistakenly end up with stale
+    pointers to nodes that have been deleted.
+   The material on ﬂow networks now bases ﬂows entirely on edges. This ap-
+    proach is more intuitive than the net ﬂow used in the ﬁrst two editions.
+   With the material on matrix basics and Strassen’s algorithm moved to other
+    chapters, the chapter on matrix operations is smaller than in the second edition.
+   We have modiﬁed our treatment of the Knuth-Morris-Pratt string-matching al-
+    gorithm.
+   We corrected several errors. Most of these errors were posted on our Web site
+    of second-edition errata, but a few were not.
+   Based on many requests, we changed the syntax (as it were) of our pseudocode.
+    We now use “D” to indicate assignment and “==” to test for equality, just as C,
+    C++, Java, and Python do. Likewise, we have eliminated the keywords do and
+    then and adopted “//” as our comment-to-end-of-line symbol. We also now use
+    dot-notation to indicate object attributes. Our pseudocode remains procedural,
+    rather than object-oriented. In other words, rather than running methods on
+    objects, we simply call procedures, passing objects as parameters.
+   We added 100 new exercises and 28 new problems. We also updated many
+    bibliography entries and added several new ones.
+   Finally, we went through the entire book and rewrote sentences, paragraphs,
+    and sections to make the writing clearer and more active.
+

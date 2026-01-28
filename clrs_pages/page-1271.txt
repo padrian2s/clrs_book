@@ -1,0 +1,7 @@
+1250   Bibliography
+
+
+        [361] Yinyu Ye. Interior Point Algorithms: Theory and Analysis. John Wiley & Sons, 1997.
+        [362] Daniel Zwillinger, editor. CRC Standard Mathematical Tables and Formulae. Chapman &
+              Hall/CRC Press, 31st edition, 2003.
+

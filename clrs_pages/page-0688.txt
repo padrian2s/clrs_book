@@ -1,0 +1,49 @@
+24.4 Difference constraints and shortest paths                                                   667
+
+
+
+                    0              v1
+                    0              –5
+                         –1                    0
+                   v5
+                   –4                          1      –3
+            0                                         v2
+v0 0
+                    –3             –3      5
+                               4
+                    0              –1
+                          –1                   0 v3
+                          v4
+                    0
+
+
+
+Figure 24.8 The constraint graph corresponding to the system (24.3)–(24.10) of difference con-
+straints. The value of ı.0 ; i / appears in each vertex i . One feasible solution to the system is
+x D .5; 3; 0; 1; 4/.
+
+
+The constraint graph contains the additional vertex 0 , as we shall see shortly, to
+guarantee that the graph has some vertex which can reach all other vertices. Thus,
+the vertex set V consists of a vertex i for each unknown xi , plus an additional
+vertex 0 . The edge set E contains an edge for each difference constraint, plus
+an edge .0 ; i / for each unknown xi . If xj  xi  bk is a difference constraint,
+then the weight of edge .i ; j / is w.i ; j / D bk . The weight of each edge leav-
+ing 0 is 0. Figure 24.8 shows the constraint graph for the system (24.3)–(24.10)
+of difference constraints.
+   The following theorem shows that we can ﬁnd a solution to a system of differ-
+ence constraints by ﬁnding shortest-path weights in the corresponding constraint
+graph.
+
+Theorem 24.9
+Given a system Ax  b of difference constraints, let G D .V; E/ be the corre-
+sponding constraint graph. If G contains no negative-weight cycles, then
+x D .ı.0 ; 1 /; ı.0 ; 2 /; ı.0 ; 3 /; : : : ; ı.0 ; n //                           (24.11)
+is a feasible solution for the system. If G contains a negative-weight cycle, then
+there is no feasible solution for the system.
+
+Proof We ﬁrst show that if the constraint graph contains no negative-weight
+cycles, then equation (24.11) gives a feasible solution. Consider any edge
+.i ; j / 2 E. By the triangle inequality, ı.0 ; j /  ı.0 ; i / C w.i ; j / or,
+equivalently, ı.0 ; j /  ı.0 ; i /  w.i ; j /. Thus, letting xi D ı.0 ; i / and
+

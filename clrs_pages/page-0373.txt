@@ -1,0 +1,43 @@
+352   Chapter 14 Augmenting Data Structures
+
+
+
+                                                                                                 i′′
+                                                                                       i′′
+                     i′                                                         i′′
+               i′                    i                           i                i′
+
+
+                          (a)                                                   (b)
+
+
+      Figure 14.5 Intervals in the proof of Theorem 14.2. The value of x: left: max is shown in each case
+      as a dashed line. (a) The search goes right. No interval i 0 in x’s left subtree can overlap i. (b) The
+      search goes left. The left subtree of x contains an interval that overlaps i (situation not shown),
+      or x’s left subtree contains an interval i 0 such that i 0 : high D x: left: max. Since i does not overlap i 0 ,
+      neither does it overlap any interval i 00 in x’s right subtree, since i 0 : low  i 00 : low.
+
+
+      Proof The while loop of lines 2–5 terminates either when x D T:nil or i over-
+      laps x:int. In the latter case, it is certainly correct to return x. Therefore, we focus
+      on the former case, in which the while loop terminates because x D T:nil.
+         We use the following invariant for the while loop of lines 2–5:
+          If tree T contains an interval that overlaps i, then the subtree rooted at x
+          contains such an interval.
+      We use this loop invariant as follows:
+      Initialization: Prior to the ﬁrst iteration, line 1 sets x to be the root of T , so that
+         the invariant holds.
+      Maintenance: Each iteration of the while loop executes either line 4 or line 5. We
+        shall show that both cases maintain the loop invariant.
+          If line 5 is executed, then because of the branch condition in line 3, we
+          have x:left D T:nil, or x:left:max < i:low. If x:left D T:nil, the subtree
+          rooted at x:left clearly contains no interval that overlaps i, and so setting x
+          to x:right maintains the invariant. Suppose, therefore, that x:left ¤ T:nil and
+          x:left:max < i:low. As Figure 14.5(a) shows, for each interval i 0 in x’s left
+          subtree, we have
+          i 0 :high  x:left:max
+                    < i:low :
+          By the interval trichotomy, therefore, i 0 and i do not overlap. Thus, the left
+          subtree of x contains no intervals that overlap i, so that setting x to x:right
+          maintains the invariant.
+

@@ -1,0 +1,8 @@
+1144   Part VIII Appendix: Mathematical Background
+
+
+          Appendix D deﬁnes matrices, their operations, and some of their basic prop-
+       erties. You have probably seen most of this material already if you have taken a
+       course in linear algebra, but you might ﬁnd it helpful to have one place to look for
+       our notation and deﬁnitions.
+

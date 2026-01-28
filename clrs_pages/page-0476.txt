@@ -1,0 +1,60 @@
+17.1 Aggregate analysis                                                                            455
+
+
+Counter   A[ 7
+          A[ ]
+            6
+          A[ ]                       Total
+ value                               cost
+            5
+          A[ ]
+             4
+          A[ ]
+          A[ 3]
+             2
+          A[ ]
+          A[1]
+             0]
+   0       0 0 0 0 0 0 0 0             0
+   1       0 0 0 0 0 0 0 1             1
+   2       0 0 0 0 0 0 1 0             3
+   3       0 0 0 0 0 0 1 1             4
+   4       0 0 0 0 0 1 0 0             7
+   5       0 0 0 0 0 1 0 1             8
+   6       0 0 0 0 0 1 1 0            10
+   7       0 0 0 0 0 1 1 1            11
+   8       0 0 0 0 1 0 0 0            15
+   9       0 0 0 0 1 0 0 1            16
+  10       0 0 0 0 1 0 1 0            18
+  11       0 0 0 0 1 0 1 1            19
+  12       0 0 0 0 1 1 0 0            22
+  13       0 0 0 0 1 1 0 1            23
+  14       0 0 0 0 1 1 1 0            25
+  15       0 0 0 0 1 1 1 1            26
+  16       0 0 0 1 0 0 0 0            31
+
+
+Figure 17.2 An 8-bit binary counter as its value goes from 0 to 16 by a sequence of 16 I NCREMENT
+operations. Bits that ﬂip to achieve the next value are shaded. The running cost for ﬂipping bits is
+shown at the right. Notice that the total cost is always less than twice the total number of I NCREMENT
+operations.
+
+
+operations on an initially zero counter causes AŒ1 to ﬂip bn=2c times. Similarly,
+bit AŒ2 ﬂips only every fourth time, or bn=4c times in a sequence of n I NCREMENT
+operations. In general, for i D 0; 1; : : : ; k  1, bit AŒi ﬂips bn=2i c times in a
+sequence of n I NCREMENT operations on an initially zero counter. For i  k,
+bit AŒi does not exist, and so it cannot ﬂip. The total number of ﬂips in the
+sequence is thus
+Xj
+k1
+       nk     X 1      1
+          < n
+i D0
+       2i     i D0
+                   2i
+              D 2n ;
+by equation (A.6). The worst-case time for a sequence of n I NCREMENT operations
+on an initially zero counter is therefore O.n/. The average cost of each operation,
+and therefore the amortized cost per operation, is O.n/=n D O.1/.
+

@@ -1,0 +1,45 @@
+158   Chapter 6 Heapsort
+
+
+
+            A 4       1       3        2 16 9 10 14 8          7
+
+                                            1                                                       1
+                                            4                                                       4
+                          2                           3                              2                        3
+                          1                           3                              1                        3
+             4                          5         6                7        4                  5          6        7
+             2                    i 16            9            10      i    2                  16         9        10
+        8         9               10                                   8         9        10
+       14         8               7                                    14        8        7
+                                            (a)                                                     (b)
+
+                                            1                                                       1
+                                            4                                                       4
+                          2                           3                              2                        3
+                          1                           3    i                     i   1                        10
+             4                          5         6                7        4                  5          6        7
+            14                         16         9            10           14                 16         9        3
+        8         9               10                                   8         9        10
+        2         8               7                                    2         8        7
+                                            (c)                                                     (d)
+
+                                            1                                                       1
+                                        i   4                                                       16
+                          2                           3                              2                        3
+                       16                             10                             14                       10
+             4                          5         6                7        4                  5          6        7
+            14                          7         9                3        8                  7          9        3
+        8         9               10                                   8         9        10
+        2         8               1                                    2         4        1
+                                            (e)                                                     (f)
+
+
+      Figure 6.3 The operation of B UILD -M AX -H EAP, showing the data structure before the call to
+      M AX -H EAPIFY in line 3 of B UILD -M AX -H EAP. (a) A 10-element input array A and the bi-
+      nary tree it represents. The ﬁgure shows that the loop index i refers to node 5 before the call
+      M AX -H EAPIFY.A; i/. (b) The data structure that results. The loop index i for the next iteration
+      refers to node 4. (c)–(e) Subsequent iterations of the for loop in B UILD -M AX -H EAP. Observe that
+      whenever M AX -H EAPIFY is called on a node, the two subtrees of that node are both max-heaps.
+      (f) The max-heap after B UILD -M AX -H EAP ﬁnishes.
+

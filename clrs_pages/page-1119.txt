@@ -1,0 +1,41 @@
+1098   Chapter 34 NP-Completeness
+
+
+       three distinct literals, the reduction algorithm constructs an instance hS; ti of the
+       subset-sum problem such that  is satisﬁable if and only if there exists a subset
+       of S whose sum is exactly t. Without loss of generality, we make two simplifying
+       assumptions about the formula . First, no clause contains both a variable and its
+       negation, for such a clause is automatically satisﬁed by any assignment of values
+       to the variables. Second, each variable appears in at least one clause, because it
+       does not matter what value is assigned to a variable that appears in no clauses.
+          The reduction creates two numbers in set S for each variable xi and two numbers
+       in S for each clause Cj . We shall create numbers in base 10, where each number
+       contains nCk digits and each digit corresponds to either one variable or one clause.
+       Base 10 (and other bases, as we shall see) has the property we need of preventing
+       carries from lower digits to higher digits.
+          As Figure 34.19 shows, we construct set S and target t as follows. We label
+       each digit position by either a variable or a clause. The least signiﬁcant k digits are
+       labeled by the clauses, and the most signiﬁcant n digits are labeled by variables.
+          The target t has a 1 in each digit labeled by a variable and a 4 in each digit
+           labeled by a clause.
+          For each variable xi , set S contains two integers i and i0 . Each of i and i0
+           has a 1 in the digit labeled by xi and 0s in the other variable digits. If literal xi
+           appears in clause Cj , then the digit labeled by Cj in i contains a 1. If lit-
+           eral :xi appears in clause Cj , then the digit labeled by Cj in i0 contains a 1.
+           All other digits labeled by clauses in i and i0 are 0.
+           All i and i0 values in set S are unique. Why? For l ¤ i, no l or l0 values can
+           equal i and i0 in the most signiﬁcant n digits. Furthermore, by our simplifying
+           assumptions above, no i and i0 can be equal in all k least signiﬁcant digits.
+           If i and i0 were equal, then xi and :xi would have to appear in exactly the
+           same set of clauses. But we assume that no clause contains both xi and :xi
+           and that either xi or :xi appears in some clause, and so there must be some
+           clause Cj for which i and i0 differ.
+          For each clause Cj , set S contains two integers sj and sj0 . Each of sj and sj0 has
+           0s in all digits other than the one labeled by Cj . For sj , there is a 1 in the Cj
+           digit, and sj0 has a 2 in this digit. These integers are “slack variables,” which we
+           use to get each clause-labeled digit position to add to the target value of 4.
+           Simple inspection of Figure 34.19 demonstrates that all sj and sj0 values in S
+           are unique in set S.
+          Note that the greatest sum of digits in any one digit position is 6, which occurs in
+       the digits labeled by clauses (three 1s from the i and i0 values, plus 1 and 2 from
+

@@ -1,0 +1,45 @@
+724   Chapter 26 Maximum Flow
+
+
+      u 2 S and  2 T . If .u; / 2 E, we must have f .u; / D c.u; /, since
+      otherwise .u; / 2 Ef , which would place  in set S. If .; u/ 2 E, we must
+      have f .; u/ D 0, because otherwise cf .u; / D f .; u/ would be positive and
+      we would have .u; / 2 Ef , which would place  in S. Of course, if neither .u; /
+      nor .; u/ is in E, then f .u; / D f .; u/ D 0. We thus have
+                       XX                XX
+      f .S; T / D             f .u; /          f .; u/
+                        u2S 2T               2T u2S
+                        XX                    XX
+                  D               c.u; /              0
+                        u2S 2T               2T u2S
+                  D c.S; T / :
+      By Lemma 26.4, therefore, jf j D f .S; T / D c.S; T /.
+         .3/ ) .1/: By Corollary 26.5, jf j  c.S; T / for all cuts .S; T /. The condition
+      jf j D c.S; T / thus implies that f is a maximum ﬂow.
+
+      The basic Ford-Fulkerson algorithm
+      In each iteration of the Ford-Fulkerson method, we ﬁnd some augmenting path p
+      and use p to modify the ﬂow f . As Lemma 26.2 and Corollary 26.3 suggest, we
+      replace f by f " fp , obtaining a new ﬂow whose value is jf j C jfp j. The follow-
+      ing implementation of the method computes the maximum ﬂow in a ﬂow network
+      G D .V; E/ by updating the ﬂow attribute .u; /:f for each edge .u; / 2 E.1
+      If .u; / 62 E, we assume implicitly that .u; /:f D 0. We also assume that we
+      are given the capacities c.u; / along with the ﬂow network, and c.u; / D 0
+      if .u; / 62 E. We compute the residual capacity cf .u; / in accordance with the
+      formula (26.2). The expression cf .p/ in the code is just a temporary variable that
+      stores the residual capacity of the path p.
+
+      F ORD -F ULKERSON .G; s; t/
+      1 for each edge .u; / 2 G:E
+      2       .u; /:f D 0
+      3 while there exists a path p from s to t in the residual network Gf
+      4       cf .p/ D min fcf .u; / W .u; / is in pg
+      5       for each edge .u; / in p
+      6            if .u; / 2 E
+      7                 .u; /:f D .u; /:f C cf .p/
+      8            else .; u/:f D .; u/:f  cf .p/
+
+
+      1 Recall from Section 22.1 that we represent an attribute f   for edge .u; / with the same style of
+      notation—.u; /: f —that we use for an attribute of any other object.
+

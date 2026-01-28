@@ -1,0 +1,45 @@
+3.2 Standard notations and common functions                                     57
+
+
+   By equation (3.15), changing the base of a logarithm from one constant to an-
+other changes the value of the logarithm by only a constant factor, and so we shall
+often use the notation “lg n” when we don’t care about constant factors, such as in
+O-notation. Computer scientists ﬁnd 2 to be the most natural base for logarithms
+because so many algorithms and data structures involve splitting a problem into
+two parts.
+   There is a simple series expansion for ln.1 C x/ when jxj < 1:
+                   x2   x3 x4   x5
+ln.1 C x/ D x        C      C      :
+                   2    3   4   5
+We also have the following inequalities for x > 1:
+ x
+        ln.1 C x/  x ;                                                    (3.17)
+1Cx
+where equality holds only for x D 0.
+   We say that a function f .n/ is polylogarithmically bounded if f .n/ D O.lgk n/
+for some constant k. We can relate the growth of polynomials and polylogarithms
+by substituting lg n for n and 2a for a in equation (3.10), yielding
+     lgb n           lgb n
+lim           D  lim       D0:
+n!1 .2a /lg n   n!1 na
+
+From this limit, we can conclude that
+lgb n D o.na /
+for any constant a > 0. Thus, any positive polynomial function grows faster than
+any polylogarithmic function.
+
+Factorials
+The notation nŠ (read “n factorial”) is deﬁned for integers n  0 as
+     (
+       1             if n D 0 ;
+nŠ D
+       n  .n  1/Š if n > 0 :
+
+Thus, nŠ D 1  2  3    n.
+   A weak upper bound on the factorial function is nŠ  nn , since each of the n
+terms in the factorial product is at most n. Stirling’s approximation,
+              n n           
+     p                         1
+nŠ D 2 n              1C‚            ;                                   (3.18)
+               e               n
+

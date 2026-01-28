@@ -1,0 +1,5 @@
+{
+  "page": 710,
+  "title": "26.1 Flow Networks",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 26.1</div>\n    <h1>Flow Networks</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Model flow of commodities through a network with capacities.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Directed graph with source s and sink t</li>\n<li>Each edge (u,v) has capacity c(u,v) ≥ 0</li>\n<li>Flow f(u,v): actual flow through edge</li>\n<li>Capacity constraint: 0 ≤ f(u,v) ≤ c(u,v)</li>\n<li>Flow conservation: flow into v = flow out of v (except s,t)</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Water pipes, network bandwidth, traffic routing. Source produces, sink consumes, edges have maximum capacity.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Models many real-world optimization problems.</p>\n</div>\n</div>"
+}

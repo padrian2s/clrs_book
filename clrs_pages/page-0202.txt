@@ -1,0 +1,42 @@
+7.4 Analysis of quicksort                                                        181
+
+
+observation gives us the bound max0qn1 .q 2 C .n  q  1/2 /  .n  1/2 D
+n2  2n C 1. Continuing with our bounding of T .n/, we obtain
+T .n/  cn2  c.2n  1/ C ‚.n/
+       cn2 ;
+since we can pick the constant c large enough so that the c.2n  1/ term dom-
+inates the ‚.n/ term. Thus, T .n/ D O.n2 /. We saw in Section 7.2 a speciﬁc
+case in which quicksort takes .n2 / time: when partitioning is unbalanced. Al-
+ternatively, Exercise 7.4-1 asks you to show that recurrence (7.1) has a solution of
+T .n/ D .n2 /. Thus, the (worst-case) running time of quicksort is ‚.n2 /.
+
+7.4.2 Expected running time
+We have already seen the intuition behind why the expected running time of
+R ANDOMIZED -Q UICKSORT is O.n lg n/: if, in each level of recursion, the split
+induced by R ANDOMIZED -PARTITION puts any constant fraction of the elements
+on one side of the partition, then the recursion tree has depth ‚.lg n/, and O.n/
+work is performed at each level. Even if we add a few new levels with the most un-
+balanced split possible between these levels, the total time remains O.n lg n/. We
+can analyze the expected running time of R ANDOMIZED -Q UICKSORT precisely
+by ﬁrst understanding how the partitioning procedure operates and then using this
+understanding to derive an O.n lg n/ bound on the expected running time. This
+upper bound on the expected running time, combined with the ‚.n lg n/ best-case
+bound we saw in Section 7.2, yields a ‚.n lg n/ expected running time. We assume
+throughout that the values of the elements being sorted are distinct.
+
+Running time and comparisons
+The Q UICKSORT and R ANDOMIZED -Q UICKSORT procedures differ only in how
+they select pivot elements; they are the same in all other respects. We can therefore
+couch our analysis of R ANDOMIZED -Q UICKSORT by discussing the Q UICKSORT
+and PARTITION procedures, but with the assumption that pivot elements are se-
+lected randomly from the subarray passed to R ANDOMIZED -PARTITION.
+   The running time of Q UICKSORT is dominated by the time spent in the PARTI -
+TION procedure. Each time the PARTITION procedure is called, it selects a pivot
+element, and this element is never included in any future recursive calls to Q UICK -
+SORT and PARTITION . Thus, there can be at most n calls to PARTITION over the
+entire execution of the quicksort algorithm. One call to PARTITION takes O.1/
+time plus an amount of time that is proportional to the number of iterations of the
+for loop in lines 3–6. Each iteration of this for loop performs a comparison in
+line 4, comparing the pivot element to another element of the array A. Therefore,
+

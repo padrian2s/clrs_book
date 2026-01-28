@@ -1,0 +1,43 @@
+1130   Chapter 35 Approximation Algorithms
+
+
+       that if two values in L are close to each other, then since we want just an approxi-
+       mate solution, we do not need to maintain both of them explicitly. More precisely,
+       we use a trimming parameter ı such that 0 < ı < 1. When we trim a list L by ı,
+       we remove as many elements from L as possible, in such a way that if L0 is the
+       result of trimming L, then for every element y that was removed from L, there is
+       an element ´ still in L0 that approximates y, that is,
+          y
+               ´y:                                                                (35.24)
+       1Cı
+       We can think of such a ´ as “representing” y in the new list L0 . Each removed
+       element y is represented by a remaining element ´ satisfying inequality (35.24).
+       For example, if ı D 0:1 and
+       L D h10; 11; 12; 15; 20; 21; 22; 23; 24; 29i ;
+       then we can trim L to obtain
+       L0 D h10; 12; 15; 20; 23; 29i ;
+       where the deleted value 11 is represented by 10, the deleted values 21 and 22
+       are represented by 20, and the deleted value 24 is represented by 23. Because
+       every element of the trimmed version of the list is also an element of the original
+       version of the list, trimming can dramatically decrease the number of elements kept
+       while keeping a close (and slightly smaller) representative value in the list for each
+       deleted element.
+          The following procedure trims list L D hy1 ; y2 ; : : : ; ym i in time ‚.m/, given L
+       and ı, and assuming that L is sorted into monotonically increasing order. The
+       output of the procedure is a trimmed, sorted list.
+       T RIM .L; ı/
+       1 let m be the length of L
+       2 L0 D hy1 i
+       3 last D y1
+       4 for i D 2 to m
+       5       if yi > last  .1 C ı/     // yi  last because L is sorted
+       6            append yi onto the end of L0
+       7            last D yi
+       8 return L0
+       The procedure scans the elements of L in monotonically increasing order. A num-
+       ber is appended onto the returned list L0 only if it is the ﬁrst element of L or if it
+       cannot be represented by the most recent number placed into L0 .
+         Given the procedure T RIM, we can construct our approximation scheme as fol-
+       lows. This procedure takes as input a set S D fx1 ; x2 ; : : : ; xn g of n integers (in
+       arbitrary order), a target integer t, and an “approximation parameter” , where
+

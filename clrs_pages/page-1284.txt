@@ -1,0 +1,52 @@
+Index                                                                                 1263
+
+
+   continuation, 778                         violation of, 865
+   critical, 729                           equation
+   cross, 609                                and asymptotic notation, 49–50
+   forward, 609                              normal, 837
+   inadmissible, 749                         recurrence, see recurrence
+   light, 626                              equivalence class, 1164
+   negative-weight, 645–646                  modulo n (Œan ), 928
+   residual, 716                           equivalence, modular (), 54, 1165 ex.
+   return, 779                             equivalence relation, 1164
+   safe, 626                                 and modular equivalence, 1165 ex.
+   saturated, 739                          equivalent linear programs, 852
+   spawn, 778                              error, in pseudocode, 22
+   tree, 601, 603, 609                     escape problem, 760 pr.
+   weight of, 591                          E UCLID, 935
+edge connectivity, 731 ex.                 Euclid’s algorithm, 933–939, 981 pr., 983
+edge set, 1168                             euclidean distance, 1039
+edit distance, 406 pr.                     euclidean norm (k k), 1222
+Edmonds-Karp algorithm, 727–730            Euler’s constant, 943
+elementary event, 1189                     Euler’s phi function, 943
+elementary insertion, 465                  Euler’s theorem, 954, 975 ex.
+element of a set (2), 1158                 Euler tour, 623 pr., 1048
+ellipsoid algorithm, 850, 897                and hamiltonian cycles, 1048
+elliptic-curve factorization method, 984   evaluation of a polynomial, 41 pr., 900, 905 ex.
+elseif, in pseudocode, 20 n.                 derivatives of, 922 pr.
+else, in pseudocode, 20                      at multiple points, 923 pr.
+empty language (;), 1058                   event, 1190
+empty set (;), 1158                        event point, 1023
+empty set laws, 1159                       event-point schedule, 1023
+empty stack, 233                           E XACT-S UBSET-S UM, 1129
+empty string ("), 986, 1058                excess ﬂow, 736
+empty tree, 1178                           exchange property, 437
+encoding of problem instances, 1055–1057   exclusion and inclusion, 1163 ex.
+endpoint                                   execute a subroutine, 25 n.
+   of an interval, 348                     expansion of a dynamic table, 464–467
+   of a line segment, 1015                 expectation, see expected value
+E NQUEUE , 235                             expected running time, 28, 117
+entering a vertex, 1169                    expected value, 1197–1199
+entering variable, 867                       of a binomial distribution, 1204
+entropy function, 1187                       of a geometric distribution, 1202
+-dense graph, 706 pr.                       of an indicator random variable, 118
+-universal hash function, 269 ex.         explored vertex, 605
+equality                                   exponential function, 55–56
+   of functions, 1166                      exponential height, 300
+   linear, 845                             exponential search tree, 212, 483
+   of sets, 1158                           exponential series, 1147
+equality constraint, 670 ex., 852          exponentiation instruction, 24
+   and inequality constraints, 853         exponentiation, modular, 956
+   tight, 865                              E XTENDED -B OTTOM -U P -C UT-ROD, 369
+

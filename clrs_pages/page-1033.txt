@@ -1,0 +1,47 @@
+1012       Chapter 32 String Matching
+
+
+           32.4-4
+           Use an aggregate analysis to show that the running time of KMP-M ATCHER
+           is ‚.n/.
+
+           32.4-5
+           Use a potential function to show that the running time of KMP-M ATCHER is ‚.n/.
+
+           32.4-6
+           Show how to improve KMP-M ATCHER by replacing the occurrence of  in line 7
+           (but not line 12) by  0 , where  0 is deﬁned recursively for q D 1; 2; : : : ; m  1 by
+
+                     0
+           the equation
+
+                               if Œq D 0 ;
+            0             0
+            Œq D     ŒŒq if Œq ¤ 0 and P ŒŒq C 1 D P Œq C 1 ;
+                      Œq     if Œq ¤ 0 and P ŒŒq C 1 ¤ P Œq C 1 :
+           Explain why the modiﬁed algorithm is correct, and explain in what sense this
+           change constitutes an improvement.
+
+           32.4-7
+           Give a linear-time algorithm to determine whether a text T is a cyclic rotation of
+           another string T 0 . For example, arc and car are cyclic rotations of each other.
+
+           32.4-8 ?
+           Give an O.m j†j/-time algorithm for computing the transition function ı for the
+           string-matching automaton corresponding to a given pattern P . (Hint: Prove that
+           ı.q; a/ D ı.Œq; a/ if q D m or P Œq C 1 ¤ a.)
+
+
+
+Problems
+
+           32-1 String matching based on repetition factors
+           Let y i denote the concatenation of string y with itself i times. For example,
+           .ab/3 D ababab. We say that a string x 2 † has repetition factor r if x D y r
+           for some string y 2 † and some r > 0. Let .x/ denote the largest r such that x
+           has repetition factor r.
+
+           a. Give an efﬁcient algorithm that takes as input a pattern P Œ1 : : m and computes
+              the value .Pi / for i D 1; 2; : : : ; m. What is the running time of your algo-
+              rithm?
+

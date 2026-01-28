@@ -1,0 +1,43 @@
+1248   Bibliography
+
+
+        [320] Daniel D. Sleator and Robert E. Tarjan. Self-adjusting binary search trees. Journal of the
+              ACM, 32(3):652–686, 1985.
+        [321] Joel Spencer. Ten Lectures on the Probabilistic Method, volume 64 of CBMS-NSF Regional
+              Conference Series in Applied Mathematics. Society for Industrial and Applied Mathematics,
+              1993.
+        [322] Daniel A. Spielman and Shang-Hua Teng. Smoothed analysis of algorithms: Why the sim-
+              plex algorithm usually takes polynomial time. Journal of the ACM, 51(3):385–463, 2004.
+        [323] Gilbert Strang. Introduction to Applied Mathematics. Wellesley-Cambridge Press, 1986.
+        [324] Gilbert Strang. Linear Algebra and Its Applications. Thomson Brooks/Cole, fourth edition,
+              2006.
+        [325] Volker Strassen. Gaussian elimination is not optimal. Numerische Mathematik, 14(3):354–
+              356, 1969.
+        [326] T. G. Szymanski. A special case of the maximal common subsequence problem. Technical
+              Report TR-170, Computer Science Laboratory, Princeton University, 1975.
+        [327] Robert E. Tarjan. Depth ﬁrst search and linear graph algorithms. SIAM Journal on Com-
+              puting, 1(2):146–160, 1972.
+        [328] Robert E. Tarjan. Efﬁciency of a good but not linear set union algorithm. Journal of the
+              ACM, 22(2):215–225, 1975.
+        [329] Robert E. Tarjan. A class of algorithms which require nonlinear time to maintain disjoint
+              sets. Journal of Computer and System Sciences, 18(2):110–127, 1979.
+        [330] Robert E. Tarjan. Data Structures and Network Algorithms. Society for Industrial and
+              Applied Mathematics, 1983.
+        [331] Robert E. Tarjan. Amortized computational complexity. SIAM Journal on Algebraic and
+              Discrete Methods, 6(2):306–318, 1985.
+        [332] Robert E. Tarjan. Class notes: Disjoint set union. COS 423, Princeton University, 1999.
+        [333] Robert E. Tarjan and Jan van Leeuwen. Worst-case analysis of set union algorithms. Jour-
+              nal of the ACM, 31(2):245–281, 1984.
+        [334] George B. Thomas, Jr., Maurice D. Weir, Joel Hass, and Frank R. Giordano. Thomas’
+              Calculus. Addison-Wesley, eleventh edition, 2005.
+        [335] Mikkel Thorup. Faster deterministic sorting and priority queues in linear space. In Pro-
+              ceedings of the 9th ACM-SIAM Symposium on Discrete Algorithms, pages 550–555, 1998.
+        [336] Mikkel Thorup. Undirected single-source shortest paths with positive integer weights in
+              linear time. Journal of the ACM, 46(3):362–394, 1999.
+        [337] Mikkel Thorup. On RAM priority queues. SIAM Journal on Computing, 30(1):86–109,
+              2000.
+        [338] Richard Tolimieri, Myoung An, and Chao Lu. Mathematics of Multidimensional Fourier
+              Transform Algorithms. Springer, second edition, 1997.
+        [339] P. van Emde Boas. Preserving order in a forest in less than logarithmic time. In Proceedings
+              of the 16th Annual Symposium on Foundations of Computer Science, pages 75–84, 1975.
+

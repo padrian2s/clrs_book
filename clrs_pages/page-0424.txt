@@ -1,0 +1,44 @@
+15.5 Optimal binary search trees                                                                                  403
+
+
+                       e                                                                               w
+                   5       1                                                                       5  1
+        j      4      2.75   2         i                                       j               4 1.00   2     i
+            3     1.75 2.00    3                                                       3     0.70 0.80    3
+        2     1.25 1.20 1.30  4                                                2         0.55 0.50 0.60
+                                                                                                4
+    1     0.90 0.70 0.60 0.90   5                                      1    0.45 0.35 0.30 0.50   5
+0     0.45 0.40 0.25 0.30 0.50    6                               0     0.30 0.25 0.15 0.20 0.35    6
+  0.05 0.10 0.05 0.05 0.05 0.10                                     0.05 0.10 0.05 0.05 0.05 0.10
+
+
+                                                       root
+                                                   5          1
+                                   j           4        2          2               i
+                                           3       2          4            3
+                                   2           2        2           5              4
+                             1             1       2          4            5               5
+                                 1             2        3           4                  5
+
+
+
+Figure 15.10 The tables eŒi; j , wŒi; j , and rootŒi; j  computed by O PTIMAL -BST on the key
+distribution shown in Figure 15.9. The tables are rotated so that the diagonals run horizontally.
+
+
+the diagonals run horizontally. O PTIMAL -BST computes the rows from bottom to
+top and from left to right within each row.
+   The O PTIMAL -BST procedure takes ‚.n3 / time, just like M ATRIX -C HAIN -
+O RDER. We can easily see that its running time is O.n3 /, since its for loops are
+nested three deep and each loop index takes on at most n values. The loop indices in
+O PTIMAL -BST do not have exactly the same bounds as those in M ATRIX -C HAIN -
+O RDER, but they are within at most 1 in all directions. Thus, like M ATRIX -C HAIN -
+O RDER, the O PTIMAL -BST procedure takes .n3 / time.
+
+Exercises
+
+15.5-1
+Write pseudocode for the procedure C ONSTRUCT-O PTIMAL -BST.root/ which,
+given the table root, outputs the structure of an optimal binary search tree. For the
+example in Figure 15.10, your procedure should print out the structure
+

@@ -1,0 +1,47 @@
+34.5 NP-complete problems                                                                 1097
+
+
+   To prove that TSP is NP-hard, we show that HAM-CYCLE P TSP. Let
+G D .V; E/ be an instance of HAM-CYCLE. We construct an instance of TSP as
+follows. We form the complete graph G 0 D .V; E 0 /, where E 0 D f.i; j / W i; j 2 V
+and i ¤ j g, and we deﬁne the cost function c by
+           (
+             0 if .i; j / 2 E ;
+c.i; j / D
+             1 if .i; j / 62 E :
+(Note that because G is undirected, it has no self-loops, and so c.; / D 1 for all
+vertices  2 V .) The instance of TSP is then hG 0 ; c; 0i, which we can easily create
+in polynomial time.
+   We now show that graph G has a hamiltonian cycle if and only if graph G 0 has a
+tour of cost at most 0. Suppose that graph G has a hamiltonian cycle h. Each edge
+in h belongs to E and thus has cost 0 in G 0 . Thus, h is a tour in G 0 with cost 0.
+Conversely, suppose that graph G 0 has a tour h0 of cost at most 0. Since the costs
+of the edges in E 0 are 0 and 1, the cost of tour h0 is exactly 0 and each edge on the
+tour must have cost 0. Therefore, h0 contains only edges in E. We conclude that h0
+is a hamiltonian cycle in graph G.
+
+34.5.5    The subset-sum problem
+We next consider an arithmetic NP-complete problem. In the subset-sum problem,
+we are given a ﬁnite set S of positive integers and an integer target t > 0. We ask
+whether there exists a subset S 0  S whose elements sum to t. For example,
+if S D f1; 2; 7; 14; 49; 98; 343; 686; 2409; 2793; 16808; 17206; 117705; 117993g
+and t D 138457, then the subset S 0 D f1; 2; 7; 98; 343; 686; 2409; 17206; 117705g
+is a solution.
+   As usual, we deﬁne the problem as a language:
+                                                                        P
+SUBSET-SUM D fhS; ti W there exists a subset S 0  S such that t D s2S 0 sg :
+As with any arithmetic problem, it is important to recall that our standard encoding
+assumes that the input integers are coded in binary. With this assumption in mind,
+we can show that the subset-sum problem is unlikely to have a fast algorithm.
+
+Theorem 34.15
+The subset-sum problem is NP-complete.
+
+Proof To show that SUBSET-SUM is in NP, for an instance hS; ti of the problem,
+                     0
+    Pthe subset S be the certiﬁcate. A veriﬁcation algorithm can check whether
+we let
+t D s2S 0 s in polynomial time.
+  We now show that 3-CNF-SAT P SUBSET-SUM. Given a 3-CNF formula 
+over variables x1 ; x2 ; : : : ; xn with clauses C1 ; C2 ; : : : ; Ck , each containing exactly
+

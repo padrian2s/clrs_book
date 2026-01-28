@@ -1,0 +1,44 @@
+22.1 Representations of graphs                                                     593
+
+
+22.1-4
+Given an adjacency-list representation of a multigraph G D .V; E/, describe an
+O.V C E/-time algorithm to compute the adjacency-list representation of the
+“equivalent” undirected graph G 0 D .V; E 0 /, where E 0 consists of the edges in E
+with all multiple edges between two vertices replaced by a single edge and with all
+self-loops removed.
+
+22.1-5
+The square of a directed graph G D .V; E/ is the graph G 2 D .V; E 2 / such that
+.u; / 2 E 2 if and only G contains a path with at most two edges between u and .
+Describe efﬁcient algorithms for computing G 2 from G for both the adjacency-
+list and adjacency-matrix representations of G. Analyze the running times of your
+algorithms.
+
+22.1-6
+Most graph algorithms that take an adjacency-matrix representation as input re-
+quire time .V 2 /, but there are some exceptions. Show how to determine whether
+a directed graph G contains a universal sink—a vertex with in-degree jV j  1 and
+out-degree 0—in time O.V /, given an adjacency matrix for G.
+
+22.1-7
+The incidence matrix of a directed graph G D .V; E/ with no self-loops is a
+
+         1 if edge j leaves vertex i ;
+jV j jEj matrix B D .bij / such that
+
+
+bij D     1    if edge j enters vertex i ;
+          0    otherwise :
+
+Describe what the entries of the matrix product BB T represent, where B T is the
+transpose of B.
+
+22.1-8
+Suppose that instead of a linked list, each array entry AdjŒu is a hash table contain-
+ing the vertices  for which .u; / 2 E. If all edge lookups are equally likely, what
+is the expected time to determine whether an edge is in the graph? What disadvan-
+tages does this scheme have? Suggest an alternate data structure for each edge list
+that solves these problems. Does your alternative have disadvantages compared to
+the hash table?
+

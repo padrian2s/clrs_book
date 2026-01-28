@@ -1,0 +1,47 @@
+Chapter 24   Single-Source Shortest Paths                                              645
+
+
+Lemma 24.1 (Subpaths of shortest paths are shortest paths)
+Given a weighted, directed graph G D .V; E/ with weight function w W E ! R,
+let p D h0 ; 1 ; : : : ; k i be a shortest path from vertex 0 to vertex k and, for any
+i and j such that 0  i  j  k, let pij D hi ; i C1 ; : : : ; j i be the subpath of p
+from vertex i to vertex j . Then, pij is a shortest path from i to j .
+                                              p       pij         pj k
+Proof If we decompose path p into 0 ;  0i
+                                           i ; j ; k , then we have that
+w.p/ D w.p0i / C w.pij / C w.pjk /. Now, assume that there is a path pij0 from i
+                                                             0
+                                                  p         pij      pj k
+to j with weight w.pij0 / < w.pij /. Then, 0 ;0i
+                                                   i ; j ; k is a path from 0
+                                   0
+to k whose weight w.p0i /Cw.pij /Cw.pjk / is less than w.p/, which contradicts
+the assumption that p is a shortest path from 0 to k .
+
+Negative-weight edges
+Some instances of the single-source shortest-paths problem may include edges
+whose weights are negative. If the graph G D .V; E/ contains no negative-
+weight cycles reachable from the source s, then for all  2 V , the shortest-path
+weight ı.s; / remains well deﬁned, even if it has a negative value. If the graph
+contains a negative-weight cycle reachable from s, however, shortest-path weights
+are not well deﬁned. No path from s to a vertex on the cycle can be a short-
+est path—we can always ﬁnd a path with lower weight by following the proposed
+“shortest” path and then traversing the negative-weight cycle. If there is a negative-
+weight cycle on some path from s to , we deﬁne ı.s; / D 1.
+   Figure 24.1 illustrates the effect of negative weights and negative-weight cy-
+cles on shortest-path weights. Because there is only one path from s to a (the
+path hs; ai), we have ı.s; a/ D w.s; a/ D 3. Similarly, there is only one path
+from s to b, and so ı.s; b/ D w.s; a/ C w.a; b/ D 3 C .4/ D 1. There are
+inﬁnitely many paths from s to c: hs; ci, hs; c; d; ci, hs; c; d; c; d; ci, and so on.
+Because the cycle hc; d; ci has weight 6 C .3/ D 3 > 0, the shortest path from s
+to c is hs; ci, with weight ı.s; c/ D w.s; c/ D 5. Similarly, the shortest path from s
+to d is hs; c; d i, with weight ı.s; d / D w.s; c/Cw.c; d / D 11. Analogously, there
+are inﬁnitely many paths from s to e: hs; ei, hs; e; f; ei, hs; e; f; e; f; ei, and so
+on. Because the cycle he; f; ei has weight 3 C .6/ D 3 < 0, however, there
+is no shortest path from s to e. By traversing the negative-weight cycle he; f; ei
+arbitrarily many times, we can ﬁnd paths from s to e with arbitrarily large negative
+weights, and so ı.s; e/ D 1. Similarly, ı.s; f / D 1. Because g is reachable
+from f , we can also ﬁnd paths with arbitrarily large negative weights from s to g,
+and so ı.s; g/ D 1. Vertices h, i, and j also form a negative-weight cycle. They
+are not reachable from s, however, and so ı.s; h/ D ı.s; i/ D ı.s; j / D 1.
+

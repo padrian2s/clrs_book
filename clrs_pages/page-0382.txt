@@ -1,0 +1,44 @@
+            15.1 Rod cutting                                                                                   361
+
+
+        9                        1         8                    5         5                  8             1
+
+
+
+    (a)                              (b)                            (c)                          (d)
+
+
+1   1         5              1       5         1            5         1       1        1     1         1       1
+
+
+
+    (e)                              (f)                            (g)                          (h)
+
+
+
+            Figure 15.2 The 8 possible ways of cutting up a rod of length 4. Above each piece is the
+            value of that piece, according to the sample price chart of Figure 15.1. The optimal strategy is
+            part (c)—cutting the rod into two pieces of length 2—which has total value 10.
+
+
+            for i D 1; 2; : : : ; n  1.1 We denote a decomposition into pieces using ordinary
+            additive notation, so that 7 D 2 C 2 C 3 indicates that a rod of length 7 is cut into
+            three pieces—two of length 2 and one of length 3. If an optimal solution cuts the
+            rod into k pieces, for some 1  k  n, then an optimal decomposition
+            n D i1 C i2 C    C ik
+            of the rod into pieces of lengths i1 , i2 , . . . , ik provides maximum corresponding
+            revenue
+            rn D pi 1 C pi 2 C    C pi k :
+              For our sample problem, we can determine the optimal revenue ﬁgures ri , for
+            i D 1; 2; : : : ; 10, by inspection, with the corresponding optimal decompositions
+
+
+            1 If we required the pieces to be cut in order of nondecreasing size, there would be fewer ways
+
+            to consider. For n D 4, we would consider only 5 such ways: parts (a), (b), (c), (e), and (h)
+            in p
+               Figure 15.2. The number of ways is called the partition function; it is approximately equal to
+                         p
+            e  2n=3 =4n 3. This quantity is less than 2n1 , but still much greater than any polynomial in n.
+            We shall not pursue this line of inquiry further, however.
+

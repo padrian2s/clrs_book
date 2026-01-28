@@ -1,0 +1,41 @@
+Preface                                                                           xix
+
+
+Science and Artiﬁcial Intelligence Laboratory, and the Columbia University De-
+partment of Industrial Engineering and Operations Research. We thank our re-
+spective universities and colleagues for providing such supportive and stimulating
+environments.
+   Julie Sussman, P.P.A., once again bailed us out as the technical copyeditor. Time
+and again, we were amazed at the errors that eluded us, but that Julie caught. She
+also helped us improve our presentation in several places. If there is a Hall of Fame
+for technical copyeditors, Julie is a sure-ﬁre, ﬁrst-ballot inductee. She is nothing
+short of phenomenal. Thank you, thank you, thank you, Julie! Priya Natarajan also
+found some errors that we were able to correct before this book went to press. Any
+errors that remain (and undoubtedly, some do) are the responsibility of the authors
+(and probably were inserted after Julie read the material).
+   The treatment for van Emde Boas trees derives from Erik Demaine’s notes,
+which were in turn inﬂuenced by Michael Bender. We also incorporated ideas
+from Javed Aslam, Bradley Kuszmaul, and Hui Zha into this edition.
+   The chapter on multithreading was based on notes originally written jointly with
+Harald Prokop. The material was inﬂuenced by several others working on the Cilk
+project at MIT, including Bradley Kuszmaul and Matteo Frigo. The design of the
+multithreaded pseudocode took its inspiration from the MIT Cilk extensions to C
+and by Cilk Arts’s Cilk++ extensions to C++.
+   We also thank the many readers of the ﬁrst and second editions who reported
+errors or submitted suggestions for how to improve this book. We corrected all the
+bona ﬁde errors that were reported, and we incorporated as many suggestions as
+we could. We rejoice that the number of such contributors has grown so great that
+we must regret that it has become impractical to list them all.
+   Finally, we thank our wives—Nicole Cormen, Wendy Leiserson, Gail Rivest,
+and Rebecca Ivry—and our children—Ricky, Will, Debby, and Katie Leiserson;
+Alex and Christopher Rivest; and Molly, Noah, and Benjamin Stein—for their love
+and support while we prepared this book. The patience and encouragement of our
+families made this project possible. We affectionately dedicate this book to them.
+
+T HOMAS H. C ORMEN                                        Lebanon, New Hampshire
+C HARLES E. L EISERSON                                   Cambridge, Massachusetts
+RONALD L. R IVEST                                        Cambridge, Massachusetts
+C LIFFORD S TEIN                                               New York, New York
+
+February 2009
+

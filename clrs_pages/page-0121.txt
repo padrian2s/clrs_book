@@ -1,0 +1,61 @@
+100   Chapter 4 Divide-and-Conquer
+
+
+      cost of all the leaves, which is the cost of doing all nlogb a subproblems of size 1,
+      is ‚.nlogb a /.
+
+         In terms of the recursion tree, the three cases of the master theorem correspond
+      to cases in which the total cost of the tree is (1) dominated by the costs in the
+      leaves, (2) evenly distributed among the levels of the tree, or (3) dominated by the
+      cost of the root.
+         The summation in equation (4.21) describes the cost of the dividing and com-
+      bining steps in the underlying divide-and-conquer algorithm. The next lemma pro-
+      vides asymptotic bounds on the summation’s growth.
+
+      Lemma 4.3
+      Let a  1 and b > 1 be constants, and let f .n/ be a nonnegative function deﬁned
+      on exact powers of b. A function g.n/ deﬁned over exact powers of b by
+                X
+               logb n1
+
+      g.n/ D              aj f .n=b j /                                               (4.22)
+                j D0
+
+      has the following asymptotic bounds for exact powers of b:
+      1. If f .n/ D O.nlogb a / for some constant  > 0, then g.n/ D O.nlogb a /.
+      2. If f .n/ D ‚.nlogb a /, then g.n/ D ‚.nlogb a lg n/.
+      3. If af .n=b/  cf .n/ for some constant c < 1 and for all sufﬁciently large n,
+         then g.n/ D ‚.f .n//.
+
+      Proof For case 1, we have f .n/ D O.nlogb a /, which implies that f .n=b j / D
+      O..n=b j /logb a /. Substituting into equation (4.22) yields
+                                              !
+                      X
+                   logb n1      n logb a
+                              j
+      g.n/ D O              a                   :                              (4.23)
+                      j D0
+                                 bj
+
+      We bound the summation within the O-notation by factoring out terms and simpli-
+      fying, which leaves an increasing geometric series:
+                    n logb a              logb n1           
+        X
+      logb n1
+                                                X         ab  j
+                 j                   logb a
+               a                 D n
+        j D0
+                    bj                          j D0
+                                                         b logb a
+                                                      X
+                                                     logb n1
+
+                                    D n   logb a
+                                                                .b  /j
+                                                      j D0
+                                                   log n 
+                                        logb a  b b 1
+                                    D n
+                                                    b  1
+

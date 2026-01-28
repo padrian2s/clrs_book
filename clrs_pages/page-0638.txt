@@ -1,0 +1,44 @@
+22.5 Strongly connected components                                                  617
+
+
+  The following linear-time (i.e., ‚.V CE/-time) algorithm computes the strongly
+connected components of a directed graph G D .V; E/ using two depth-ﬁrst
+searches, one on G and one on G T .
+S TRONGLY-C ONNECTED -C OMPONENTS .G/
+1 call DFS.G/ to compute ﬁnishing times u:f for each vertex u
+2 compute G T
+3 call DFS.G T /, but in the main loop of DFS, consider the vertices
+       in order of decreasing u:f (as computed in line 1)
+4 output the vertices of each tree in the depth-ﬁrst forest formed in line 3 as a
+       separate strongly connected component
+   The idea behind this algorithm comes from a key property of the component
+graph G SCC D .V SCC ; E SCC /, which we deﬁne as follows. Suppose that G
+has strongly connected components C1 ; C2 ; : : : ; Ck . The vertex set V SCC is
+f1 ; 2 ; : : : ; k g, and it contains a vertex i for each strongly connected compo-
+nent Ci of G. There is an edge .i ; j / 2 E SCC if G contains a directed edge .x; y/
+for some x 2 Ci and some y 2 Cj . Looked at another way, by contracting all
+edges whose incident vertices are within the same strongly connected component
+of G, the resulting graph is G SCC . Figure 22.9(c) shows the component graph of
+the graph in Figure 22.9(a).
+   The key property is that the component graph is a dag, which the following
+lemma implies.
+
+Lemma 22.13
+Let C and C 0 be distinct strongly connected components in directed graph G D
+.V; E/, let u;  2 C , let u0 ;  0 2 C 0 , and suppose that G contains a path u ; u0 .
+Then G cannot also contain a path  0 ; .
+
+Proof If G contains a path  0 ; , then it contains paths u ; u0 ;  0 and
+ 0 ;  ; u. Thus, u and  0 are reachable from each other, thereby contradicting
+the assumption that C and C 0 are distinct strongly connected components.
+
+   We shall see that by considering vertices in the second depth-ﬁrst search in de-
+creasing order of the ﬁnishing times that were computed in the ﬁrst depth-ﬁrst
+search, we are, in essence, visiting the vertices of the component graph (each of
+which corresponds to a strongly connected component of G) in topologically sorted
+order.
+   Because the S TRONGLY-C ONNECTED -C OMPONENTS procedure performs two
+depth-ﬁrst searches, there is the potential for ambiguity when we discuss u:d
+or u:f . In this section, these values always refer to the discovery and ﬁnishing
+times as computed by the ﬁrst call of DFS, in line 1.
+

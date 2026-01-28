@@ -1,0 +1,45 @@
+582        Chapter 21 Data Structures for Disjoint Sets
+
+
+           words, if x:rank > 0 and x:p is not a root, then level.x/  level.x:p/. Is the
+           professor correct?
+
+           21.4-6 ?
+           Consider the function ˛ 0 .n/ D min fk W Ak .1/  lg.n C 1/g. Show that ˛ 0 .n/  3
+           for all practical values of n and, using Exercise 21.4-2, show how to modify the
+           potential-function argument to prove that we can perform a sequence of m M AKE -
+           S ET, U NION, and F IND -S ET operations, n of which are M AKE -S ET operations, on
+           a disjoint-set forest with union by rank and path compression in worst-case time
+           O.m ˛ 0 .n//.
+
+
+
+Problems
+
+           21-1 Off-line minimum
+           The off-line minimum problem asks us to maintain a dynamic set T of elements
+           from the domain f1; 2; : : : ; ng under the operations I NSERT and E XTRACT-M IN.
+           We are given a sequence S of n I NSERT and m E XTRACT-M IN calls, where each
+           key in f1; 2; : : : ; ng is inserted exactly once. We wish to determine which key
+           is returned by each E XTRACT-M IN call. Speciﬁcally, we wish to ﬁll in an array
+           extractedŒ1 : : m, where for i D 1; 2; : : : ; m, extractedŒi is the key returned by
+           the ith E XTRACT-M IN call. The problem is “off-line” in the sense that we are
+           allowed to process the entire sequence S before determining any of the returned
+           keys.
+
+           a. In the following instance of the off-line minimum problem, each operation
+              I NSERT .i/ is represented by the value of i and each E XTRACT-M IN is rep-
+              resented by the letter E:
+
+               4; 8; E; 3; E; 9; 2; 6; E; E; E; 1; 7; E; 5 :
+
+               Fill in the correct values in the extracted array.
+
+           To develop an algorithm for this problem, we break the sequence S into homoge-
+           neous subsequences. That is, we represent S by
+           I1 ; E; I2 ; E; I3 ; : : : ; Im ; E; ImC1 ;
+           where each E represents a single E XTRACT-M IN call and each Ij represents a (pos-
+           sibly empty) sequence of I NSERT calls. For each subsequence Ij , we initially place
+           the keys inserted by these operations into a set Kj , which is empty if Ij is empty.
+           We then do the following:
+

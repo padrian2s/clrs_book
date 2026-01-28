@@ -1,0 +1,42 @@
+804   Chapter 27 Multithreaded Algorithms
+
+
+      PMS1 .n/ D PMS1 .n=2/ C PM1 .n/
+               D PMS1 .n=2/ C ‚.lg2 n/ :                                            (27.10)
+      As for recurrence (27.8), the master theorem does not apply to recurrence (27.10),
+      but Exercise 4.6-2 does. The solution is PMS1 .n/ D ‚.lg3 n/, and so the span of
+      P-M ERGE -S ORT is ‚.lg3 n/.
+         Parallel merging gives P-M ERGE -S ORT a signiﬁcant parallelism advantage over
+      M ERGE -S ORT 0 . Recall that the parallelism of M ERGE -S ORT 0 , which calls the se-
+      rial M ERGE procedure, is only ‚.lg n/. For P-M ERGE -S ORT, the parallelism is
+      PMS1 .n/=PMS1 .n/ D ‚.n lg n/=‚.lg3 n/
+                        D ‚.n= lg2 n/ ;
+      which is much better both in theory and in practice. A good implementation in
+      practice would sacriﬁce some parallelism by coarsening the base case in order to
+      reduce the constants hidden by the asymptotic notation. The straightforward way
+      to coarsen the base case is to switch to an ordinary serial sort, perhaps quicksort,
+      when the size of the array is sufﬁciently small.
+
+      Exercises
+
+      27.3-1
+      Explain how to coarsen the base case of P-M ERGE.
+
+      27.3-2
+      Instead of ﬁnding a median element in the larger subarray, as P-M ERGE does, con-
+      sider a variant that ﬁnds a median element of all the elements in the two sorted
+      subarrays using the result of Exercise 9.3-8. Give pseudocode for an efﬁcient
+      multithreaded merging procedure that uses this median-ﬁnding procedure. Ana-
+      lyze your algorithm.
+
+      27.3-3
+      Give an efﬁcient multithreaded algorithm for partitioning an array around a pivot,
+      as is done by the PARTITION procedure on page 171. You need not partition the ar-
+      ray in place. Make your algorithm as parallel as possible. Analyze your algorithm.
+      (Hint: You may need an auxiliary array and may need to make more than one pass
+      over the input elements.)
+
+      27.3-4
+      Give a multithreaded version of R ECURSIVE -FFT on page 911. Make your imple-
+      mentation as parallel as possible. Analyze your algorithm.
+

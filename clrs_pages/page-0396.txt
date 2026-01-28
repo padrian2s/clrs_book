@@ -1,0 +1,45 @@
+15.2 Matrix-chain multiplication                                                   375
+
+
+   Observe that we have relatively few distinct subproblems: one subproblem for
+each choice of i and j satisfying 1  i  j  n, or n2 C n D ‚.n2 / in all.
+A recursive algorithm may encounter each subproblem many times in different
+branches of its recursion tree. This property of overlapping subproblems is the
+second hallmark of when dynamic programming applies (the ﬁrst hallmark being
+optimal substructure).
+   Instead of computing the solution to recurrence (15.7) recursively, we compute
+the optimal cost by using a tabular, bottom-up approach. (We present the corre-
+sponding top-down approach using memoization in Section 15.3.)
+   We shall implement the tabular, bottom-up method in the procedure M ATRIX -
+C HAIN -O RDER, which appears below. This procedure assumes that matrix Ai
+has dimensions pi 1 pi for i D 1; 2; : : : ; n. Its input is a sequence p D
+hp0 ; p1 ; : : : ; pn i, where p:length D n C 1. The procedure uses an auxiliary
+table mŒ1 : : n; 1 : : n for storing the mŒi; j  costs and another auxiliary table
+sŒ1 : : n  1; 2 : : n that records which index of k achieved the optimal cost in com-
+puting mŒi; j . We shall use the table s to construct an optimal solution.
+   In order to implement the bottom-up approach, we must determine which entries
+of the table we refer to when computing mŒi; j . Equation (15.7) shows that the
+cost mŒi; j  of computing a matrix-chain product of j i C1 matrices depends only
+on the costs of computing matrix-chain products of fewer than j  i C 1 matrices.
+That is, for k D i; i C 1; : : : ; j  1, the matrix Ai ::k is a product of k  i C 1 <
+j  i C 1 matrices and the matrix AkC1::j is a product of j  k < j  i C 1
+matrices. Thus, the algorithm should ﬁll in the table m in a manner that corresponds
+to solving the parenthesization problem on matrix chains of increasing length. For
+the subproblem of optimally parenthesizing the chain Ai Ai C1    Aj , we consider
+the subproblem size to be the length j  i C 1 of the chain.
+M ATRIX -C HAIN -O RDER .p/
+ 1 n D p:length  1
+ 2 let mŒ1 : : n; 1 : : n and sŒ1 : : n  1; 2 : : n be new tables
+ 3 for i D 1 to n
+ 4       mŒi; i D 0
+ 5 for l D 2 to n                   // l is the chain length
+ 6       for i D 1 to n  l C 1
+ 7            j D i Cl 1
+ 8            mŒi; j  D 1
+ 9            for k D i to j  1
+10                 q D mŒi; k C mŒk C 1; j  C pi 1 pk pj
+11                 if q < mŒi; j 
+12                        mŒi; j  D q
+13                        sŒi; j  D k
+14 return m and s
+

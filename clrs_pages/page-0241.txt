@@ -1,0 +1,40 @@
+220          Chapter 9 Medians and Order Statistics
+
+
+             9.2-4
+             Suppose we use R ANDOMIZED -S ELECT to select the minimum element of the
+             array A D h3; 2; 9; 0; 7; 5; 4; 8; 6; 1i. Describe a sequence of partitions that results
+             in a worst-case performance of R ANDOMIZED -S ELECT.
+
+
+
+9.3   Selection in worst-case linear time
+
+             We now examine a selection algorithm whose running time is O.n/ in the worst
+             case. Like R ANDOMIZED -S ELECT, the algorithm S ELECT ﬁnds the desired ele-
+             ment by recursively partitioning the input array. Here, however, we guarantee a
+             good split upon partitioning the array. S ELECT uses the deterministic partitioning
+             algorithm PARTITION from quicksort (see Section 7.1), but modiﬁed to take the
+             element to partition around as an input parameter.
+                The S ELECT algorithm determines the ith smallest of an input array of n > 1
+             distinct elements by executing the following steps. (If n D 1, then S ELECT merely
+             returns its only input value as the ith smallest.)
+             1. Divide the n elements of the input array into bn=5c groups of 5 elements each
+                and at most one group made up of the remaining n mod 5 elements.
+             2. Find the median of each of the dn=5e groups by ﬁrst insertion-sorting the ele-
+                ments of each group (of which there are at most 5) and then picking the median
+                from the sorted list of group elements.
+             3. Use S ELECT recursively to ﬁnd the median x of the dn=5e medians found in
+                step 2. (If there are an even number of medians, then by our convention, x is
+                the lower median.)
+             4. Partition the input array around the median-of-medians x using the modiﬁed
+                version of PARTITION. Let k be one more than the number of elements on the
+                low side of the partition, so that x is the kth smallest element and there are nk
+                elements on the high side of the partition.
+             5. If i D k, then return x. Otherwise, use S ELECT recursively to ﬁnd the ith
+                smallest element on the low side if i < k, or the .i  k/th smallest element on
+                the high side if i > k.
+               To analyze the running time of S ELECT, we ﬁrst determine a lower bound on the
+             number of elements that are greater than the partitioning element x. Figure 9.1
+             helps us to visualize this bookkeeping. At least half of the medians found in
+

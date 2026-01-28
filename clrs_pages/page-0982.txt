@@ -1,0 +1,49 @@
+31.7 The RSA public-key cryptosystem                                                           961
+
+
+             Alice                                                  Bob
+
+              sign                                                 verify
+                       D SA .M 0 /
+               SA                                                   PA
+
+                                                                            =?      accept
+                                               0                        0
+                                            .M ; /                  M
+M0
+                                     communication channel
+
+
+Figure 31.6 Digital signatures in a public-key system. Alice signs the message M 0 by appending
+her digital signature D SA .M 0 / to it. She transmits the message/signature pair .M 0 ; / to Bob,
+who veriﬁes it by checking the equation M 0 D PA . /. If the equation holds, he accepts .M 0 ; / as
+a message that Alice has signed.
+
+
+    Alice sends the message/signature pair .M 0 ; / to Bob.
+    When Bob receives .M 0 ; /, he can verify that it originated from Alice by us-
+     ing Alice’s public key to verify the equation M 0 D PA . /. (Presumably, M 0
+     contains Alice’s name, so Bob knows whose public key to use.) If the equation
+     holds, then Bob concludes that the message M 0 was actually signed by Alice.
+     If the equation fails to hold, Bob concludes either that the message M 0 or the
+     digital signature was corrupted by transmission errors or that the pair .M 0 ; /
+     is an attempted forgery.
+Because a digital signature provides both authentication of the signer’s identity and
+authentication of the contents of the signed message, it is analogous to a handwrit-
+ten signature at the end of a written document.
+   A digital signature must be veriﬁable by anyone who has access to the signer’s
+public key. A signed message can be veriﬁed by one party and then passed on to
+other parties who can also verify the signature. For example, the message might
+be an electronic check from Alice to Bob. After Bob veriﬁes Alice’s signature on
+the check, he can give the check to his bank, who can then also verify the signature
+and effect the appropriate funds transfer.
+   A signed message is not necessarily encrypted; the message can be “in the clear”
+and not protected from disclosure. By composing the above protocols for encryp-
+tion and for signatures, we can create messages that are both signed and encrypted.
+The signer ﬁrst appends his or her digital signature to the message and then en-
+crypts the resulting message/signature pair with the public key of the intended re-
+cipient. The recipient decrypts the received message with his or her secret key to
+obtain both the original message and its digital signature. The recipient can then
+verify the signature using the public key of the signer. The corresponding com-
+bined process using paper-based systems would be to sign the paper document and
+

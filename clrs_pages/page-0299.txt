@@ -1,0 +1,51 @@
+278   Chapter 11 Hash Tables
+
+
+                             S
+          T         m0 a0 b0 0
+      0             1 0 0 10
+                                0                S2
+      1             m2 a2 b2
+      2             9 10 18                  60 72            75
+      3                         0    1   2   3   4    5   6   7        8
+                                S5
+      4             m5 a5 b5
+      5             1 0 0 70
+                                0                                 S7
+      6             m7 a7 b7
+      7             16 23 88                                  40 52 22                             37
+      8                         0    1   2   3   4    5   6   7        8   9   10   11   12   13   14   15
+
+
+
+
+      Figure 11.6 Using perfect hashing to store the set K D f10; 22; 37; 40; 52; 60; 70; 72; 75g. The
+      outer hash function is h.k/ D ..ak C b/ mod p/ mod m, where a D 3, b D 42, p D 101, and
+      m D 9. For example, h.75/ D 2, and so key 75 hashes to slot 2 of table T . A secondary hash
+      table Sj stores all keys hashing to slot j . The size of hash table Sj is mj D nj2 , and the associated
+      hash function is hj .k/ D ..aj k C bj / mod p/ mod mj . Since h2 .75/ D 7, key 75 is stored in slot 7
+      of secondary hash table S2 . No collisions occur in any of the secondary hash tables, and so searching
+      takes constant time in the worst case.
+
+
+      call a hashing technique perfect hashing if O.1/ memory accesses are required to
+      perform a search in the worst case.
+         To create a perfect hashing scheme, we use two levels of hashing, with universal
+      hashing at each level. Figure 11.6 illustrates the approach.
+         The ﬁrst level is essentially the same as for hashing with chaining: we hash
+      the n keys into m slots using a hash function h carefully selected from a family of
+      universal hash functions.
+         Instead of making a linked list of the keys hashing to slot j , however, we use a
+      small secondary hash table Sj with an associated hash function hj . By choosing
+      the hash functions hj carefully, we can guarantee that there are no collisions at the
+      secondary level.
+         In order to guarantee that there are no collisions at the secondary level, however,
+      we will need to let the size mj of hash table Sj be the square of the number nj of
+      keys hashing to slot j . Although you might think that the quadratic dependence
+      of mj on nj may seem likely to cause the overall storage requirement to be exces-
+      sive, we shall show that by choosing the ﬁrst-level hash function well, we can limit
+      the expected total amount of space used to O.n/.
+         We use hash functions chosen from the universal classes of hash functions of
+      Section 11.3.3. The ﬁrst-level hash function comes from the class Hpm , where as
+      in Section 11.3.3, p is a prime number greater than any key value. Those keys
+

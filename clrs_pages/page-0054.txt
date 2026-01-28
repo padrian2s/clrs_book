@@ -1,0 +1,49 @@
+        2.3 Designing algorithms                                                                                   33
+
+
+        8   9   10 11 12 13 14 15 16 17                              8   9   10 11 12 13 14 15 16 17
+    A … 1       2   2   3         1   2   3   6 …                A … 1       2   2   3         4   2   3   6 …
+                                  k                                                                k
+    1   2   3   4   5                 1   2   3   4   5          1   2   3   4   5                 1   2   3   4   5
+L   2   4   5   7 ∞           R 1         2   3   6 ∞        L   2   4   5   7 ∞           R 1         2   3   6 ∞
+        i                                         j                      i                                     j
+                        (e)                                                              (f)
+
+
+        8   9   10 11 12 13 14 15 16 17                              8   9   10 11 12 13 14 15 16 17
+    A … 1       2   2   3         4   5   3   6 …                A … 1       2   2   3         4   5 6     6 …
+                                          k                                                                k
+    1   2   3   4   5                 1   2   3   4   5          1   2   3   4   5                 1   2   3   4   5
+L   2   4   5   7 ∞           R 1         2   3   6 ∞        L   2   4   5   7 ∞           R 1         2   3   6 ∞
+                i                                 j                          i                                   j
+                        (g)                                                          (h)
+
+
+        8   9   10 11 12 13 14 15 16 17
+    A … 1       2   2   3         4   5 6     7 …
+                                                k
+    1   2   3   4   5                 1   2   3   4   5
+L   2   4   5   7 ∞           R 1         2   3   6 ∞
+                  i                                 j
+                            (i)
+
+
+        Figure 2.3, continued (i) The arrays and indices at termination. At this point, the subarray in
+        AŒ9 : : 16 is sorted, and the two sentinels in L and R are the only two elements in these arrays that
+        have not been copied into A.
+
+
+        Maintenance: To see that each iteration maintains the loop invariant, let us ﬁrst
+          suppose that LŒi  RŒj . Then LŒi is the smallest element not yet copied
+          back into A. Because AŒp : : k  1 contains the k  p smallest elements, after
+          line 14 copies LŒi into AŒk, the subarray AŒp : : k will contain the k  p C 1
+          smallest elements. Incrementing k (in the for loop update) and i (in line 15)
+          reestablishes the loop invariant for the next iteration. If instead LŒi > RŒj ,
+          then lines 16–17 perform the appropriate action to maintain the loop invariant.
+        Termination: At termination, k D r C 1. By the loop invariant, the subarray
+           AŒp : : k  1, which is AŒp : : r, contains the k  p D r  p C 1 smallest
+           elements of LŒ1 : : n1 C 1 and RŒ1 : : n2 C 1, in sorted order. The arrays L
+           and R together contain n1 C n2 C 2 D r  p C 3 elements. All but the two
+           largest have been copied back into A, and these two largest elements are the
+           sentinels.
+

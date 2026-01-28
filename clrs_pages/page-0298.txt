@@ -1,0 +1,46 @@
+           11.5 Perfect hashing                                                             277
+
+
+           Exercises
+
+           11.4-1
+           Consider inserting the keys 10; 22; 31; 4; 15; 28; 17; 88; 59 into a hash table of
+           length m D 11 using open addressing with the auxiliary hash function h0 .k/ D k.
+           Illustrate the result of inserting these keys using linear probing, using quadratic
+           probing with c1 D 1 and c2 D 3, and using double hashing with h1 .k/ D k and
+           h2 .k/ D 1 C .k mod .m  1//.
+
+           11.4-2
+           Write pseudocode for H ASH -D ELETE as outlined in the text, and modify H ASH -
+           I NSERT to handle the special value DELETED.
+
+           11.4-3
+           Consider an open-address hash table with uniform hashing. Give upper bounds
+           on the expected number of probes in an unsuccessful search and on the expected
+           number of probes in a successful search when the load factor is 3=4 and when it
+           is 7=8.
+
+           11.4-4 ?
+           Suppose that we use double hashing to resolve collisions—that is, we use the hash
+           function h.k; i/ D .h1 .k/ C ih2 .k// mod m. Show that if m and h2 .k/ have
+           greatest common divisor d  1 for some key k, then an unsuccessful search for
+           key k examines .1=d /th of the hash table before returning to slot h1 .k/. Thus,
+           when d D 1, so that m and h2 .k/ are relatively prime, the search may examine the
+           entire hash table. (Hint: See Chapter 31.)
+
+           11.4-5 ?
+           Consider an open-address hash table with a load factor ˛. Find the nonzero value ˛
+           for which the expected number of probes in an unsuccessful search equals twice
+           the expected number of probes in a successful search. Use the upper bounds given
+           by Theorems 11.6 and 11.8 for these expected numbers of probes.
+
+
+
+? 11.5 Perfect hashing
+
+           Although hashing is often a good choice for its excellent average-case perfor-
+           mance, hashing can also provide excellent worst-case performance when the set of
+           keys is static: once the keys are stored in the table, the set of keys never changes.
+           Some applications naturally have static sets of keys: consider the set of reserved
+           words in a programming language, or the set of ﬁle names on a CD-ROM. We
+

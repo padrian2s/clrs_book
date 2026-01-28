@@ -1,0 +1,72 @@
+A.2 Bounding summations                                                             1153
+
+
+Then for any constant k0 > 0, we can write
+X
+n                    X
+                     k0 1
+                                      X
+                                      n
+      ak D                   ak C            ak
+kD0                  kD0              kDk0
+
+                                  X
+                                  n
+               D ‚.1/ C                  ak ;
+                                  kDk0
+
+since the initial terms of the summation are all constant andPthere are a constant
+                                                               n
+number of them. We can then use other methods to bound kDk0 ak . This tech-
+nique applies to inﬁnite summations as well. For example, to ﬁnd an asymptotic
+upper bound on
+X
+1
+  k2
+           ;
+      2k
+kD0
+
+we observe that the ratio of consecutive terms is
+.k C 1/2 =2kC1                    .k C 1/2
+                             D
+    k 2 =2k                         2k 2
+                                  8
+                             
+                                  9
+if k  3. Thus, the summation can be split into
+X
+1
+  k2                 X
+                     2
+                       k2             X
+                                      1
+                                        k2
+               D                  C
+      2k                     2k
+                              2k
+kD0                  kD0              kD3
+
+                 X           1  
+                          9X 8 k
+                  2
+                     k2
+                       C
+                 kD0
+                     2k   8 kD0 9
+               D O.1/ ;
+since the ﬁrst summation has a constant number of terms and the second summation
+is a decreasing geometric series.
+   The technique of splitting summations can help us determine asymptotic bounds
+in much more difﬁcult situations. For example, we can obtain a bound of O.lg n/
+on the harmonic series (A.7):
+           X
+           n
+             1
+Hn D                 :
+                 k
+           kD1
+
+We do so by splitting the range 1 to n into blg nc C 1 pieces and upper-bounding
+the contribution of each piece by 1. For i D 0; 1; : : : ; blg nc, the ith piece consists
+

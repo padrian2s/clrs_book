@@ -1,0 +1,48 @@
+27.2 Multithreaded matrix multiplication                                            793
+
+
+P-S QUARE -M ATRIX -M ULTIPLY .A; B/
+1 n D A:rows
+2 let C be a new n  n matrix
+3 parallel for i D 1 to n
+4      parallel for j D 1 to n
+5          cij D 0
+6          for k D 1 to n
+7               cij D cij C ai k  bkj
+8 return C
+
+   To analyze this algorithm, observe that since the serialization of the algorithm is
+just S QUARE -M ATRIX -M ULTIPLY, the work is therefore simply T1 .n/ D ‚.n3 /,
+the same as the running time of S QUARE -M ATRIX -M ULTIPLY. The span is
+T1 .n/ D ‚.n/, because it follows a path down the tree of recursion for the
+parallel for loop starting in line 3, then down the tree of recursion for the parallel
+for loop starting in line 4, and then executes all n iterations of the ordinary for loop
+starting in line 6, resulting in a total span of ‚.lg n/ C ‚.lg n/ C ‚.n/ D ‚.n/.
+Thus, the parallelism is ‚.n3 /=‚.n/ D ‚.n2 /. Exercise 27.2-3 asks you to par-
+allelize the inner loop to obtain a parallelism of ‚.n3 = lg n/, which you cannot do
+straightforwardly using parallel for, because you would create races.
+
+A divide-and-conquer multithreaded algorithm for matrix multiplication
+As we learned in Section 4.2, we can multiply n  n matrices serially in time
+‚.nlg 7 / D O.n2:81 / using Strassen’s divide-and-conquer strategy, which motivates
+us to look at multithreading such an algorithm. We begin, as we did in Section 4.2,
+with multithreading a simpler divide-and-conquer algorithm.
+   Recall from page 77 that the S QUARE -M ATRIX -M ULTIPLY-R ECURSIVE proce-
+dure, which multiplies two n  n matrices A and B to produce the n  n matrix C ,
+relies on partitioning each of the three matrices into four n=2  n=2 submatrices:
+      Â             Ã          Â            Ã            Â          Ã
+         A11 A12                  B11 B12                  C11 C12
+AD                    ; BD                     ; C D                   :
+         A21 A22                  B21 B22                  C21 C22
+Then, we can write the matrix product as
+Â          Ã        Â            ÃÂ          Ã
+  C11 C12              A11 A12       B11 B12
+               D
+  C21 C22              A21 A22       B21 B22
+                    Â                    Ã Â                 Ã
+                       A11 B11 A11 B12       A12 B21 A12 B22
+               D                          C                    :                 (27.6)
+                       A21 B11 A21 B12       A22 B21 A22 B22
+Thus, to multiply two nn matrices, we perform eight multiplications of n=2n=2
+matrices and one addition of nn matrices. The following pseudocode implements
+

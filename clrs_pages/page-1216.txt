@@ -1,0 +1,44 @@
+C.2 Probability                                                                      1195
+
+
+C.2-2
+Prove Boole’s inequality: For any ﬁnite or countably inﬁnite sequence of events
+A1 ; A2 ; : : :,
+Pr fA1 [ A2 [   g  Pr fA1 g C Pr fA2 g C    :                               (C.19)
+
+C.2-3
+Suppose we shufﬂe a deck of 10 cards, each bearing a distinct number from 1 to 10,
+to mix the cards thoroughly. We then remove three cards, one at a time, from the
+deck. What is the probability that we select the three cards in sorted (increasing)
+order?
+
+C.2-4
+Prove that
+               ˚
+Pr fA j Bg C Pr A j B D 1 :
+
+C.2-5
+Prove that for any collection of events A1 ; A2 ; : : : ; An ,
+Pr fA1 \ A2 \    \ An g D Pr fA1 g  Pr fA2 j A1 g  Pr fA3 j A1 \ A2 g   
+                             Pr fAn j A1 \ A2 \    \ An1 g :
+
+C.2-6 ?
+Describe a procedure that takes as input two integers a and b such that 0 < a < b
+and, using fair coin ﬂips, produces as output heads with probability a=b and tails
+with probability .b  a/=b. Give a bound on the expected number of coin ﬂips,
+which should be O.1/. (Hint: Represent a=b in binary.)
+
+C.2-7 ?
+Show how to construct a set of n events that are pairwise independent but such that
+no subset of k > 2 of them is mutually independent.
+
+C.2-8 ?
+Two events A and B are conditionally independent, given C , if
+Pr fA \ B j C g D Pr fA j C g  Pr fB j C g :
+Give a simple but nontrivial example of two events that are not independent but are
+conditionally independent given a third event.
+
+C.2-9 ?
+You are a contestant in a game show in which a prize is hidden behind one of
+three curtains. You will win the prize if you select the correct curtain. After you
+

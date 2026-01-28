@@ -1,0 +1,42 @@
+29.3 The simplex algorithm                                                         873
+
+
+   An iteration of the while loop exchanges the role of a basic and a nonbasic
+   variable by calling the P IVOT procedure. By Exercise 29.3-3, the slack form is
+   equivalent to the one from the previous iteration which, by the loop invariant,
+   is equivalent to the initial slack form.
+   We now demonstrate the second part of the loop invariant. We assume that at
+   the start of each iteration of the while loop, bi  0 for each i 2 B, and we shall
+   show that these inequalities remain true after the call to P IVOT in line 12. Since
+   the only changes to the variables bi and the set B of basic variables occur in this
+   assignment, it sufﬁces to show that line 12 maintains this part of the invariant.
+   We let bi , aij , and B refer to values before the call of P IVOT, and byi refer to
+   values returned from P IVOT.
+   First, we observe that bye  0 because bl  0 by the loop invariant, ale > 0 by
+   lines 6 and 9 of S IMPLEX, and bye D bl =ale by line 3 of P IVOT.
+   For the remaining indices i 2 B  flg, we have that
+   byi   D bi  ai e bye        (by line 9 of P IVOT)
+         D bi  ai e .bl =ale / (by line 3 of P IVOT) .                        (29.76)
+   We have two cases to consider, depending on whether ai e > 0 or ai e  0.
+   If ai e > 0, then since we chose l such that
+
+   bl =ale  bi =ai e for all i 2 B ;                                          (29.77)
+
+   we have
+   byi   D   bi  ai e .bl =ale / (by equation (29.76))
+            bi  ai e .bi =ai e / (by inequality (29.77))
+         D   bi  bi
+         D   0;
+   and thus byi  0. If ai e  0, then because ale , bi , and bl are all nonnegative,
+   equation (29.76) implies that byi must be nonnegative, too.
+   We now argue that the basic solution is feasible, i.e., that all variables have non-
+   negative values. The nonbasic variables are set to 0 and thus are nonnegative.
+   Each basic variable xi is deﬁned by the equation
+             X
+   xi D bi      aij xj :
+               j 2N
+
+
+   The basic solution sets xN i D bi . Using the second part of the loop invariant, we
+   conclude that each basic variable xN i is nonnegative.
+

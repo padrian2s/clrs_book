@@ -1,0 +1,61 @@
+           21.4 Analysis of union by rank with path compression                               573
+
+
+
+? 21.4 Analysis of union by rank with path compression
+
+           As noted in Section 21.3, the combined union-by-rank and path-compression heu-
+           ristic runs in time O.m ˛.n// for m disjoint-set operations on n elements. In this
+           section, we shall examine the function ˛ to see just how slowly it grows. Then we
+           prove this running time using the potential method of amortized analysis.
+
+           A very quickly growing function and its very slowly growing inverse
+           For integers k  0 and j  1, we deﬁne the function Ak .j / as
+                     (
+                       j C1        if k D 0 ;
+           Ak .j / D     .j C1/
+                       Ak1 .j / if k  1 ;
+
+           where the expression A.j   C1/
+                                    k1 .j / uses the functional-iteration notation given in Sec-
+           tion 3.2. Speciﬁcally, Ak1 .j / D j and A.ik1
+                                     .0/                   /
+                                                             .j / D Ak1 .A.ik1
+                                                                              1/
+                                                                                  .j // for i  1.
+           We will refer to the parameter k as the level of the function A.
+              The function Ak .j / strictly increases with both j and k. To see just how quickly
+           this function grows, we ﬁrst obtain closed-form expressions for A1 .j / and A2 .j /.
+
+           Lemma 21.2
+           For any integer j  1, we have A1 .j / D 2j C 1.
+
+           Proof We ﬁrst use induction on i to show that A.i0 / .j / D j Ci. For the base case,
+           we have A.0/
+                      0 .j / D j D j C 0. For the inductive step, assume that A0
+                                                                                    .i 1/
+                                                                                           .j / D
+                                .i /             .i 1/
+           j C .i  1/. Then A0 .j / D A0 .A0 .j // D .j C .i  1// C 1 D j C i. Finally,
+           we note that A1 .j / D A.j0
+                                       C1/
+                                           .j / D j C .j C 1/ D 2j C 1.
+
+           Lemma 21.3
+           For any integer j  1, we have A2 .j / D 2j C1 .j C 1/  1.
+
+           Proof We ﬁrst use induction on i to show that A.i1 / .j / D 2i .j C 1/  1. For
+           the base case, we have A.0/                    0
+                                      1 .j / D j D 2 .j C 1/  1. For the inductive step,
+           assume that A1 .j / D 2 .j C 1/  1. Then A.i1 / .j / D A1 .A.i1 1/ .j // D
+                           .i 1/        i 1
+
+           A1 .2i 1 .j C 1/  1/ D 2.2i 1 .j C1/1/C1 D 2i .j C1/2C1 D 2i .j C1/1.
+           Finally, we note that A2 .j / D A.j1
+                                                C1/
+                                                    .j / D 2j C1 .j C 1/  1.
+
+             Now we can see how quickly Ak .j / grows by simply examining Ak .1/ for levels
+           k D 0; 1; 2; 3; 4. From the deﬁnition of A0 .k/ and the above lemmas, we have
+           A0 .1/ D 1 C 1 D 2, A1 .1/ D 2  1 C 1 D 3, and A2 .1/ D 21C1  .1 C 1/  1 D 7.
+

@@ -1,0 +1,44 @@
+Bibliography                                                                                  1243
+
+
+ [224] Eugene L. Lawler. Combinatorial Optimization: Networks and Matroids. Holt, Rinehart,
+       and Winston, 1976.
+ [225] Eugene L. Lawler, J. K. Lenstra, A. H. G. Rinnooy Kan, and D. B. Shmoys, editors. The
+       Traveling Salesman Problem. John Wiley & Sons, 1985.
+ [226] C. Y. Lee. An algorithm for path connection and its applications. IRE Transactions on
+       Electronic Computers, EC-10(3):346–365, 1961.
+ [227] Tom Leighton. Tight bounds on the complexity of parallel sorting. IEEE Transactions on
+       Computers, C-34(4):344–354, 1985.
+ [228] Tom Leighton. Notes on better master theorems for divide-and-conquer recurrences. Class
+       notes. Available at http://citeseer.ist.psu.edu/252350.html, October 1996.
+ [229] Tom Leighton and Satish Rao. Multicommodity max-ﬂow min-cut theorems and their use
+       in designing approximation algorithms. Journal of the ACM, 46(6):787–832, 1999.
+ [230] Daan Leijen and Judd Hall. Optimize managed code for multi-core machines. MSDN
+       Magazine, October 2007.
+ [231] Debra A. Lelewer and Daniel S. Hirschberg. Data compression. ACM Computing Surveys,
+       19(3):261–296, 1987.
+ [232] A. K. Lenstra, H. W. Lenstra, Jr., M. S. Manasse, and J. M. Pollard. The number ﬁeld sieve.
+       In A. K. Lenstra and H. W. Lenstra, Jr., editors, The Development of the Number Field Sieve,
+       volume 1554 of Lecture Notes in Mathematics, pages 11–42. Springer, 1993.
+ [233] H. W. Lenstra, Jr. Factoring integers with elliptic curves.        Annals of Mathematics,
+       126(3):649–673, 1987.
+ [234] L. A. Levin. Universal sorting problems. Problemy Peredachi Informatsii, 9(3):265–266,
+       1973. In Russian.
+ [235] Anany Levitin. Introduction to the Design & Analysis of Algorithms. Addison-Wesley,
+       2007.
+ [236] Harry R. Lewis and Christos H. Papadimitriou. Elements of the Theory of Computation.
+       Prentice Hall, second edition, 1998.
+ [237] C. L. Liu. Introduction to Combinatorial Mathematics. McGraw-Hill, 1968.
+ [238] László Lovász. On the ratio of optimal integral and fractional covers. Discrete Mathemat-
+       ics, 13(4):383–390, 1975.
+ [239] László Lovász and M. D. Plummer. Matching Theory, volume 121 of Annals of Discrete
+       Mathematics. North Holland, 1986.
+ [240] Bruce M. Maggs and Serge A. Plotkin. Minimum-cost spanning tree as a path-ﬁnding
+       problem. Information Processing Letters, 26(6):291–293, 1988.
+ [241] Michael Main. Data Structures and Other Objects Using Java. Addison-Wesley, 1999.
+ [242] Udi Manber. Introduction to Algorithms: A Creative Approach. Addison-Wesley, 1989.
+ [243] Conrado Martı́nez and Salvador Roura. Randomized binary search trees. Journal of the
+       ACM, 45(2):288–323, 1998.
+ [244] William J. Masek and Michael S. Paterson. A faster algorithm computing string edit dis-
+       tances. Journal of Computer and System Sciences, 20(1):18–31, 1980.
+

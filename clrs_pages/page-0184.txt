@@ -1,0 +1,45 @@
+6.5 Priority queues                                                             163
+
+
+We shall see other uses for min-priority queues, highlighting the D ECREASE -K EY
+operation, in Chapters 23 and 24.
+   Not surprisingly, we can use a heap to implement a priority queue. In a given ap-
+plication, such as job scheduling or event-driven simulation, elements of a priority
+queue correspond to objects in the application. We often need to determine which
+application object corresponds to a given priority-queue element, and vice versa.
+When we use a heap to implement a priority queue, therefore, we often need to
+store a handle to the corresponding application object in each heap element. The
+exact makeup of the handle (such as a pointer or an integer) depends on the ap-
+plication. Similarly, we need to store a handle to the corresponding heap element
+in each application object. Here, the handle would typically be an array index.
+Because heap elements change locations within the array during heap operations,
+an actual implementation, upon relocating a heap element, would also have to up-
+date the array index in the corresponding application object. Because the details
+of accessing application objects depend heavily on the application and its imple-
+mentation, we shall not pursue them here, other than noting that in practice, these
+handles do need to be correctly maintained.
+   Now we discuss how to implement the operations of a max-priority queue. The
+procedure H EAP -M AXIMUM implements the M AXIMUM operation in ‚.1/ time.
+
+H EAP -M AXIMUM .A/
+1 return AŒ1
+
+   The procedure H EAP -E XTRACT-M AX implements the E XTRACT-M AX opera-
+tion. It is similar to the for loop body (lines 3–5) of the H EAPSORT procedure.
+
+H EAP -E XTRACT-M AX .A/
+1 if A:heap-size < 1
+2       error “heap underﬂow”
+3 max D AŒ1
+4 AŒ1 D AŒA:heap-size
+5 A:heap-size D A:heap-size  1
+6 M AX -H EAPIFY .A; 1/
+7 return max
+
+The running time of H EAP -E XTRACT-M AX is O.lg n/, since it performs only a
+constant amount of work on top of the O.lg n/ time for M AX -H EAPIFY.
+   The procedure H EAP -I NCREASE -K EY implements the I NCREASE -K EY opera-
+tion. An index i into the array identiﬁes the priority-queue element whose key we
+wish to increase. The procedure ﬁrst updates the key of element AŒi to its new
+value. Because increasing the key of AŒi might violate the max-heap property,
+

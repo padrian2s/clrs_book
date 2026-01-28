@@ -1,0 +1,47 @@
+28.2 Inverting matrices                                                       829
+
+      I   n       A 0
+                          
+DD       0         In B       :
+         0         0 In
+
+          I A AB 
+The inverse of D is
+               n
+D 1 D         0    In    B      ;
+               0    0     In
+and thus we can compute the product AB by taking the upper right n n submatrix
+of D 1 .
+   We can construct matrix D in ‚.n2 / time, which is O.I.n// because we assume
+that I.n/ D .n2 /, and we can invert D in O.I.3n// D O.I.n// time, by the
+regularity condition on I.n/. We thus have M.n/ D O.I.n//.
+
+   Note that I.n/ satisﬁes the regularity condition whenever I.n/ D ‚.nc lgd n/
+for any constants c > 0 and d  0.
+   The proof that matrix inversion is no harder than matrix multiplication relies
+on some properties of symmetric positive-deﬁnite matrices that we will prove in
+Section 28.3.
+
+Theorem 28.2 (Inversion is no harder than multiplication)
+Suppose we can multiply two n n real matrices in time M.n/, where M.n/ D
+.n2 / and M.n/ satisﬁes the two regularity conditions M.n C k/ D O.M.n// for
+any k in the range 0  k  n and M.n=2/  cM.n/ for some constant c < 1=2.
+Then we can compute the inverse of any real nonsingular n n matrix in time
+O.M.n//.
+
+Proof We prove the theorem here for real matrices. Exercise 28.2-6 asks you to
+generalize the proof for matrices whose entries are complex numbers.
+  We can assume that n is an exact power of 2, since we have
+        1  1            
+  A 0              A      0
+              D
+  0 Ik               0 Ik
+for any k > 0. Thus, by choosing k such that n C k is a power of 2, we enlarge
+the matrix to a size that is the next power of 2 and obtain the desired answer A1
+from the answer to the enlarged problem. The ﬁrst regularity condition on M.n/
+ensures that this enlargement does not cause the running time to increase by more
+than a constant factor.
+   For the moment, let us assume that the n n matrix A is symmetric and positive-
+deﬁnite. We partition each of A and its inverse A1 into four n=2 n=2 submatri-
+ces:
+

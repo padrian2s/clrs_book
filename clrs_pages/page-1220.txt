@@ -1,0 +1,47 @@
+C.3 Discrete random variables                                                    1199
+
+
+  When a random variable X takes on values from the set of natural numbers
+N D f0; 1; 2; : : :g, we have a nice formula for its expectation:
+             X
+             1
+E ŒX  D            i  Pr fX D ig
+             i D0
+             X 1
+        D           i.Pr fX  ig  Pr fX  i C 1g/
+             i D0
+             X 1
+        D           Pr fX  ig ;                                               (C.25)
+             i D1
+
+since each term Pr fX  ig is added in i times and subtracted out i  1 times
+(except Pr fX  0g, which is added in 0 times and not subtracted out at all).
+   When we apply a convex function f .x/ to a random variable X , Jensen’s in-
+equality gives us
+E Œf .X /  f .E ŒX / ;                                                      (C.26)
+provided that the expectations exist and are ﬁnite. (A function f .x/ is convex
+if for all x and y and for all 0    1, we have f .x C .1  /y/ 
+f .x/ C .1  /f .y/.)
+
+Variance and standard deviation
+The expected value of a random variable does not tell us how “spread out” the
+variable’s values are. For example, if we have random variables X and Y for which
+Pr fX D 1=4g D Pr fX D 3=4g D 1=2 and Pr fY D 0g D Pr fY D 1g D 1=2,
+then both E ŒX  and E ŒY  are 1=2, yet the actual values taken on by Y are farther
+from the mean than the actual values taken on by X .
+   The notion of variance mathematically expresses how far from the mean a ran-
+dom variable’s values are likely to be. The variance of a random variable X with
+mean E ŒX  is
+                               
+Var ŒX  D E .X  E ŒX /2
+                                           
+          D E X 2  2X E ŒX  C E2 ŒX 
+                  
+          D E X 2  2E ŒX E ŒX  C E2 ŒX 
+                  
+          D E X 2  2E2 ŒX  C E2 ŒX 
+                  
+          D E X 2  E2 ŒX  :                                                (C.27)
+To justify the equality E ŒE2 ŒX  D E2 ŒX , note that because E ŒX  is a real num-
+ber and not a random variable, so is E2 ŒX . The equality E ŒX E ŒX  D E2 ŒX 
+

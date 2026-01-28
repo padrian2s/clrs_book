@@ -1,0 +1,44 @@
+402   Chapter 15 Dynamic Programming
+
+
+      ‚.j  i/ additions—we store these values in a table wŒ1 : : n C 1; 0 : : n. For the
+      base case, we compute wŒi; i  1 D qi 1 for 1  i  n C 1. For j  i, we
+      compute
+      wŒi; j  D wŒi; j  1 C pj C qj :                                               (15.15)
+      Thus, we can compute the ‚.n2 / values of wŒi; j  in ‚.1/ time each.
+         The pseudocode that follows takes as inputs the probabilities p1 ; : : : ; pn and
+      q0 ; : : : ; qn and the size n, and it returns the tables e and root.
+
+      O PTIMAL -BST.p; q; n/
+       1 let eŒ1 : : n C 1; 0 : : n, wŒ1 : : n C 1; 0 : : n,
+                     and rootŒ1 : : n; 1 : : n be new tables
+       2 for i D 1 to n C 1
+       3      eŒi; i  1 D qi 1
+       4      wŒi; i  1 D qi 1
+       5 for l D 1 to n
+       6      for i D 1 to n  l C 1
+       7             j D i Cl 1
+       8             eŒi; j  D 1
+       9             wŒi; j  D wŒi; j  1 C pj C qj
+      10             for r D i to j
+      11                  t D eŒi; r  1 C eŒr C 1; j  C wŒi; j 
+      12                  if t < eŒi; j 
+      13                       eŒi; j  D t
+      14                       rootŒi; j  D r
+      15 return e and root
+
+      From the description above and the similarity to the M ATRIX -C HAIN -O RDER pro-
+      cedure in Section 15.2, you should ﬁnd the operation of this procedure to be fairly
+      straightforward. The for loop of lines 2–4 initializes the values of eŒi; i  1
+      and wŒi; i  1. The for loop of lines 5–14 then uses the recurrences (15.14)
+      and (15.15) to compute eŒi; j  and wŒi; j  for all 1  i  j  n. In the ﬁrst itera-
+      tion, when l D 1, the loop computes eŒi; i and wŒi; i for i D 1; 2; : : : ; n. The sec-
+      ond iteration, with l D 2, computes eŒi; i C1 and wŒi; i C1 for i D 1; 2; : : : ; n1,
+      and so forth. The innermost for loop, in lines 10–14, tries each candidate index r
+      to determine which key kr to use as the root of an optimal binary search tree con-
+      taining keys ki ; : : : ; kj . This for loop saves the current value of the index r in
+      rootŒi; j  whenever it ﬁnds a better key to use as the root.
+         Figure 15.10 shows the tables eŒi; j , wŒi; j , and rootŒi; j  computed by the
+      procedure O PTIMAL -BST on the key distribution shown in Figure 15.9. As in the
+      matrix-chain multiplication example of Figure 15.5, the tables are rotated to make
+

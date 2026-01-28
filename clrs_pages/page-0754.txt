@@ -1,0 +1,43 @@
+26.3 Maximum bipartite matching                                                              733
+
+
+
+
+                                                         s                                    t
+
+
+
+
+L            R              L             R                         L              R
+     (a)                           (b)                                     (c)
+
+
+Figure 26.8 A bipartite graph G D .V; E/ with vertex partition V D L [ R. (a) A matching
+with cardinality 2, indicated by shaded edges. (b) A maximum matching with cardinality 3. (c) The
+corresponding ﬂow network G 0 with a maximum ﬂow shown. Each edge has unit capacity. Shaded
+edges have a ﬂow of 1, and all other edges carry no ﬂow. The shaded edges from L to R correspond
+to those in the maximum matching from (b).
+
+
+directed edges of G 0 are the edges of E, directed from L to R, along with jV j new
+directed edges:
+E 0 D f.s; u/ W u 2 Lg [ f.u; / W .u; / 2 Eg [ f.; t/ W  2 Rg :
+To complete the construction, we assign unit capacity to each edge in E 0 . Since
+each vertex in V has at least one incident edge, jEj  jV j =2. Thus, jEj  jE 0 j D
+jEj C jV j  3 jEj, and so jE 0 j D ‚.E/.
+   The following lemma shows that a matching in G corresponds directly to a ﬂow
+in G’s corresponding ﬂow network G 0 . We say that a ﬂow f on a ﬂow network
+G D .V; E/ is integer-valued if f .u; / is an integer for all .u; / 2 V V .
+
+Lemma 26.9
+Let G D .V; E/ be a bipartite graph with vertex partition V D L [ R, and let
+G 0 D .V 0 ; E 0 / be its corresponding ﬂow network. If M is a matching in G, then
+there is an integer-valued ﬂow f in G 0 with value jf j D jM j. Conversely, if f
+is an integer-valued ﬂow in G 0 , then there is a matching M in G with cardinality
+jM j D jf j.
+
+Proof We ﬁrst show that a matching M in G corresponds to an integer-valued
+ﬂow f in G 0 . Deﬁne f as follows. If .u; / 2 M , then f .s; u/ D f .u; / D
+f .; t/ D 1. For all other edges .u; / 2 E 0 , we deﬁne f .u; / D 0. It is simple
+to verify that f satisﬁes the capacity constraint and ﬂow conservation.
+

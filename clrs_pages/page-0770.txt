@@ -1,0 +1,47 @@
+26.5 The relabel-to-front algorithm                                                 749
+
+
+   The correctness and analysis of the relabel-to-front algorithm depend on the
+notion of “admissible” edges: those edges in the residual network through which
+ﬂow can be pushed. After proving some properties about the network of admissible
+edges, we shall investigate the discharge operation and then present and analyze the
+relabel-to-front algorithm itself.
+
+Admissible edges and networks
+If G D .V; E/ is a ﬂow network with source s and sink t, f is a preﬂow in G, and h
+is a height function, then we say that .u; / is an admissible edge if cf .u; / > 0
+and h.u/ D h./ C 1. Otherwise, .u; / is inadmissible. The admissible network
+is Gf;h D .V; Ef;h /, where Ef;h is the set of admissible edges.
+   The admissible network consists of those edges through which we can push ﬂow.
+The following lemma shows that this network is a directed acyclic graph (dag).
+
+Lemma 26.26 (The admissible network is acyclic)
+If G D .V; E/ is a ﬂow network, f is a preﬂow in G, and h is a height function
+on G, then the admissible network Gf;h D .V; Ef;h / is acyclic.
+
+Proof The proof is by contradiction. Suppose that Gf;h contains a cycle p D
+h0 ; 1 ; : : : ; k i, where 0 D k and k > 0. Since each edge in p is admissible, we
+have h.i 1 / D h.i / C 1 for i D 1; 2; : : : ; k. Summing around the cycle gives
+X
+k                    X
+                     k
+       h.i 1 / D          .h.i / C 1/
+i D1                 i D1
+
+                     X
+                     k
+                D           h.i / C k :
+                     i D1
+
+Because each vertex in cycle p appears once in each of the summations, we derive
+the contradiction that 0 D k.
+
+   The next two lemmas show how push and relabel operations change the admis-
+sible network.
+
+Lemma 26.27
+Let G D .V; E/ be a ﬂow network, let f be a preﬂow in G, and suppose that the
+attribute h is a height function. If a vertex u is overﬂowing and .u; / is an ad-
+missible edge, then P USH .u; / applies. The operation does not create any new
+admissible edges, but it may cause .u; / to become inadmissible.
+

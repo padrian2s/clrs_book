@@ -1,0 +1,47 @@
+28.1 Solving systems of linear equations                                          825
+
+
+   Like LU-D ECOMPOSITION, our LUP-D ECOMPOSITION procedure replaces
+the recursion with an iteration loop. As an improvement over a direct implemen-
+tation of the recursion, we dynamically maintain the permutation matrix P as an
+array , where Œi D j means that the ith row of P contains a 1 in column j .
+We also implement the code to compute L and U “in place” in the matrix A. Thus,
+when the procedure terminates,
+       (
+         lij if i > j ;
+aij D
+         uij if i  j :
+   Figure 28.2 illustrates how LUP-D ECOMPOSITION factors a matrix. Lines 3–4
+initialize the array  to represent the identity permutation. The outer for loop
+beginning in line 5 implements the recursion. Each time through the outer loop,
+lines 6–10 determine the element ak0 k with largest absolute value of those in the
+current ﬁrst column (column k) of the .n  k C 1/ .n  k C 1/ matrix whose
+LUP decomposition we are ﬁnding. If all elements in the current ﬁrst column are
+zero, lines 11–12 report that the matrix is singular. To pivot, we exchange Œk 0 
+with Œk in line 13 and exchange the kth and k 0 th rows of A in lines 14–15,
+thereby making the pivot element akk . (The entire rows are swapped because in
+the derivation of the method above, not only is A0  w T =ak1 multiplied by P 0 , but
+so is =ak1 .) Finally, the Schur complement is computed by lines 16–19 in much
+the same way as it is computed by lines 7–12 of LU-D ECOMPOSITION, except that
+here the operation is written to work in place.
+   Because of its triply nested loop structure, LUP-D ECOMPOSITION has a run-
+ning time of ‚.n3 /, which is the same as that of LU-D ECOMPOSITION. Thus,
+pivoting costs us at most a constant factor in time.
+
+Exercises
+
+28.1-1
+ 1 0 0  x   3 
+Solve the equation
+                          1
+    4 1 0             x2      D   14
+   6 5 1             x3          7
+by using forward substitution.
+
+28.1-2
+ 4 5            
+Find an LU decomposition of the matrix
+          6
+    8 6 7            :
+   12 7 12
+

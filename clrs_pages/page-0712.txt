@@ -1,0 +1,48 @@
+25.1 Shortest paths and matrix multiplication                                             691
+
+
+          1             2
+  1                2             3
+
+–4                 7        10       –8
+      2       –1        5
+
+  4                5             6
+          3
+
+
+Figure 25.2 A weighted, directed graph for use in Exercises 25.1-1, 25.2-1, and 25.3-1.
+
+
+FASTER -A LL -PAIRS -S HORTEST-PATHS .W /
+1 n D W:rows
+2 L.1/ D W
+3 mD1
+4 while m < n  1
+5      let L.2m/ be a new n n matrix
+6      L.2m/ D E XTEND -S HORTEST-PATHS .L.m/ ; L.m/ /
+7      m D 2m
+8 return L.m/
+
+                                                                                           2
+In each iteration of the while loop of lines 4–7, we compute L.2m/ D L.m/ ,
+starting with m D 1. At the end of each iteration, we double the value
+of m. The ﬁnal iteration computes L.n1/ by actually computing L.2m/ for some
+n  1  2m < 2n  2. By equation (25.3), L.2m/ D L.n1/ . The next time the test
+in line 4 is performed, m has been doubled, so now m  n  1, the test fails, and
+the procedure returns the last matrix it computed.
+   Because each of the dlg.n  1/e matrix products takes ‚.n3 / time, FASTER -
+A LL -PAIRS -S HORTEST-PATHS runs in ‚.n3 lg n/ time. Observe that the code
+is tight, containing no elaborate data structures, and the constant hidden in the
+‚-notation is therefore small.
+
+Exercises
+
+25.1-1
+Run S LOW-A LL -PAIRS -S HORTEST-PATHS on the weighted, directed graph of
+Figure 25.2, showing the matrices that result for each iteration of the loop. Then
+do the same for FASTER -A LL -PAIRS -S HORTEST-PATHS.
+
+25.1-2
+Why do we require that wi i D 0 for all 1  i  n?
+

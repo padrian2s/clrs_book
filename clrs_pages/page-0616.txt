@@ -1,0 +1,44 @@
+22.2 Breadth-ﬁrst search                                                          595
+
+
+   The breadth-ﬁrst-search procedure BFS below assumes that the input graph
+G D .V; E/ is represented using adjacency lists. It attaches several additional
+attributes to each vertex in the graph. We store the color of each vertex u 2 V
+in the attribute u:color and the predecessor of u in the attribute u:. If u has no
+predecessor (for example, if u D s or u has not been discovered), then u: D NIL .
+The attribute u:d holds the distance from the source s to vertex u computed by the
+algorithm. The algorithm also uses a ﬁrst-in, ﬁrst-out queue Q (see Section 10.1)
+to manage the set of gray vertices.
+
+BFS.G; s/
+ 1 for each vertex u 2 G:V  fsg
+ 2      u:color D WHITE
+ 3      u:d D 1
+ 4      u: D NIL
+ 5 s:color D GRAY
+ 6 s:d D 0
+ 7 s: D NIL
+ 8 QD;
+ 9 E NQUEUE .Q; s/
+10 while Q ¤ ;
+11      u D D EQUEUE .Q/
+12      for each  2 G:AdjŒu
+13           if :color == WHITE
+14                :color D GRAY
+15                :d D u:d C 1
+16                : D u
+17                E NQUEUE .Q; /
+18      u:color D BLACK
+
+Figure 22.3 illustrates the progress of BFS on a sample graph.
+   The procedure BFS works as follows. With the exception of the source vertex s,
+lines 1–4 paint every vertex white, set u:d to be inﬁnity for each vertex u, and set
+the parent of every vertex to be NIL. Line 5 paints s gray, since we consider it to be
+discovered as the procedure begins. Line 6 initializes s:d to 0, and line 7 sets the
+predecessor of the source to be NIL. Lines 8–9 initialize Q to the queue containing
+just the vertex s.
+   The while loop of lines 10–18 iterates as long as there remain gray vertices,
+which are discovered vertices that have not yet had their adjacency lists fully ex-
+amined. This while loop maintains the following invariant:
+   At the test in line 10, the queue Q consists of the set of gray vertices.
+

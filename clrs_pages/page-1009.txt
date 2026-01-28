@@ -1,0 +1,47 @@
+988           Chapter 32 String Matching
+
+
+
+
+32.1 The naive string-matching algorithm
+
+              The naive algorithm ﬁnds all valid shifts using a loop that checks the condition
+              P Œ1 : : m D T Œs C 1 : : s C m for each of the n  m C 1 possible values of s.
+
+              NAIVE -S TRING -M ATCHER .T; P /
+              1 n D T:length
+              2 m D P:length
+              3 for s D 0 to n  m
+              4      if P Œ1 : : m == T Œs C 1 : : s C m
+              5           print “Pattern occurs with shift” s
+
+                 Figure 32.4 portrays the naive string-matching procedure as sliding a “template”
+              containing the pattern over the text, noting for which shifts all of the characters
+              on the template equal the corresponding characters in the text. The for loop of
+              lines 3–5 considers each possible shift explicitly. The test in line 4 determines
+              whether the current shift is valid; this test implicitly loops to check corresponding
+              character positions until all positions match successfully or a mismatch is found.
+              Line 5 prints out each valid shift s.
+                 Procedure NAIVE -S TRING -M ATCHER takes time O..n  m C 1/m/, and this
+              bound is tight in the worst case. For example, consider the text string an (a string
+              of n a’s) and the pattern am . For each of the nmC1 possible values of the shift s,
+              the implicit loop on line 4 to compare corresponding characters must execute m
+              times to validate the shift. The worst-case running time is thus ‚..n  m C 1/m/,
+              which is ‚.n2 / if m D bn=2c. Because it requires no preprocessing, NAIVE -
+              S TRING -M ATCHER’s running time equals its matching time.
+
+
+      a c a a b c                a c a a b c                    a c a a b c                    a c a a b c
+
+s=0                           s=1                               s=2                              s=3
+      a a b                          a a b                              a a b                             a a b
+
+          (a)                             (b)                            (c)                           (d)
+
+              Figure 32.4 The operation of the naive string matcher for the pattern P D aab and the text
+              T D acaabc. We can imagine the pattern P as a template that we slide next to the text. (a)–(d) The
+              four successive alignments tried by the naive string matcher. In each part, vertical lines connect cor-
+              responding regions found to match (shown shaded), and a jagged line connects the ﬁrst mismatched
+              character found, if any. The algorithm ﬁnds one occurrence of the pattern, at shift s D 2, shown in
+              part (c).
+

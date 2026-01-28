@@ -1,0 +1,16 @@
+           Notes for Appendix A                                                         1157
+
+
+                 X
+                 n
+           c.          k r lgs k.
+                 kD1
+
+
+
+Appendix notes
+
+           Knuth [209] provides an excellent reference for the material presented here. You
+           can ﬁnd basic properties of series in any good calculus book, such as Apostol [18]
+           or Thomas et al. [334].
+

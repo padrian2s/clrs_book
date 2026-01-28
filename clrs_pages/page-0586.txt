@@ -1,0 +1,47 @@
+                   21.2 Linked-list representation of disjoint sets                                                   565
+
+
+
+
+(a)                       f           g          d                                 c          h           e          b
+           head                                                  head
+      S1                                                    S2
+            tail                                                  tail
+
+
+
+
+(b)                       f           g          d           c           h             e          b
+           head
+      S1
+            tail
+
+
+
+
+                   Figure 21.2 (a) Linked-list representations of two sets. Set S1 contains members d , f , and g, with
+                   representative f , and set S2 contains members b, c, e, and h, with representative c. Each object in
+                   the list contains a set member, a pointer to the next object in the list, and a pointer back to the set
+                   object. Each set object has pointers head and tail to the ﬁrst and last objects, respectively. (b) The
+                   result of U NION.g; e/, which appends the linked list containing e to the linked list containing g. The
+                   representative of the resulting set is f . The set object for e’s list, S2 , is destroyed.
+
+
+                   A simple implementation of union
+                   The simplest implementation of the U NION operation using the linked-list set rep-
+                   resentation takes signiﬁcantly more time than M AKE -S ET or F IND -S ET. As Fig-
+                   ure 21.2(b) shows, we perform U NION .x; y/ by appending y’s list onto the end
+                   of x’s list. The representative of x’s list becomes the representative of the resulting
+                   set. We use the tail pointer for x’s list to quickly ﬁnd where to append y’s list. Be-
+                   cause all members of y’s list join x’s list, we can destroy the set object for y’s list.
+                   Unfortunately, we must update the pointer to the set object for each object origi-
+                   nally on y’s list, which takes time linear in the length of y’s list. In Figure 21.2, for
+                   example, the operation U NION .g; e/ causes pointers to be updated in the objects
+                   for b, c, e, and h.
+                      In fact, we can easily construct a sequence of m operations on n objects that
+                   requires ‚.n2 / time. Suppose that we have objects x1 ; x2 ; : : : ; xn . We execute
+                   the sequence of n M AKE -S ET operations followed by n  1 U NION operations
+                   shown in Figure 21.3, so that m D 2n  1. We spend ‚.n/ time performing the n
+                   M AKE -S ET operations. Because the ith U NION operation updates i objects, the
+                   total number of objects updated by all n  1 U NION operations is
+

@@ -1,0 +1,43 @@
+            C.4 The geometric and binomial distributions                                   1201
+
+
+            C.3-4
+            Argue that if X and Y are nonnegative random variables, then
+            E Œmax.X; Y /  E ŒX  C E ŒY  :
+
+            C.3-5 ?
+            Let X and Y be independent random variables. Prove that f .X / and g.Y / are
+            independent for any choice of functions f and g.
+
+            C.3-6 ?
+            Let X be a nonnegative random variable, and suppose that E ŒX  is well deﬁned.
+            Prove Markov’s inequality:
+            Pr fX  tg  E ŒX  =t                                                       (C.30)
+            for all t > 0.
+
+            C.3-7 ?
+            Let S be a sample space, and let X and X 0 be random variables such that
+            X.s/  X 0 .s/ for all s 2 S. Prove that for any real constant t,
+            Pr fX  tg  Pr fX 0  tg :
+
+            C.3-8
+            Which is larger: the expectation of the square of a random variable, or the square
+            of its expectation?
+
+            C.3-9
+            Show that for any random variable X that takes on only the values 0 and 1, we have
+            Var ŒX  D E ŒX  E Œ1  X .
+
+            C.3-10
+            Prove that Var ŒaX  D a2 Var ŒX  from the deﬁnition (C.27) of variance.
+
+
+
+C.4 The geometric and binomial distributions
+
+            We can think of a coin ﬂip as an instance of a Bernoulli trial, which is an experi-
+            ment with only two possible outcomes: success, which occurs with probability p,
+            and failure, which occurs with probability q D 1p. When we speak of Bernoulli
+            trials collectively, we mean that the trials are mutually independent and, unless we
+            speciﬁcally say otherwise, that each has the same probability p for success. Two
+

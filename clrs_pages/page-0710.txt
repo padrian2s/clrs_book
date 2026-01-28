@@ -1,0 +1,44 @@
+25.1 Shortest paths and matrix multiplication                                  689
+
+
+identity for C), we obtain the same ‚.n3 /-time procedure for multiplying square
+matrices that we saw in Section 4.2:
+
+S QUARE -M ATRIX -M ULTIPLY .A; B/
+1 n D A:rows
+2 let C be a new n n matrix
+3 for i D 1 to n
+4      for j D 1 to n
+5           cij D 0
+6           for k D 1 to n
+7                cij D cij C ai k  bkj
+8 return C
+
+Returning to the all-pairs shortest-paths problem, we compute the shortest-path
+weights by extending shortest paths edge by edge. Letting A  B denote the ma-
+trix “product” returned by E XTEND -S HORTEST-PATHS .A; B/, we compute the se-
+quence of n  1 matrices
+  L.1/ D        L.0/  W      D W ;
+  L.2/ D        L.1/  W      D W2 ;
+  L.3/ D        L.2/  W      D W3 ;
+                    ::
+                     :
+L.n1/ D L.n2/  W           D W n1 :
+As we argued above, the matrix L.n1/ D W n1 contains the shortest-path weights.
+The following procedure computes this sequence in ‚.n4 / time.
+
+S LOW-A LL -PAIRS -S HORTEST-PATHS .W /
+1 n D W:rows
+2 L.1/ D W
+3 for m D 2 to n  1
+4      let L.m/ be a new n n matrix
+5      L.m/ D E XTEND -S HORTEST-PATHS .L.m1/ ; W /
+6 return L.n1/
+
+Figure 25.1 shows a graph and the matrices L.m/ computed by the procedure
+S LOW-A LL -PAIRS -S HORTEST-PATHS.
+
+Improving the running time
+Our goal, however, is not to compute all the L.m/ matrices: we are interested
+only in matrix L.n1/ . Recall that in the absence of negative-weight cycles, equa-
+

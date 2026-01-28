@@ -1,0 +1,58 @@
+136   Chapter 5 Probabilistic Analysis and Randomized Algorithms
+
+
+      We could try to evaluate this sum using upper bounds on each Pr fLj g similar to
+      those computed in inequality (5.9). Unfortunately, this method would yield weak
+      bounds. We can use some intuition gained by the above analysis to obtain a good
+      bound, however. Informally, we observe that for no individual term in the sum-
+      mation in equation (5.10) are both the factors j and Pr fLj g large. Why? When
+      j  2 dlg ne, then Pr fLj g is very small, and when j < 2 dlg ne, then j is fairly
+      small. More formally, we note that the events Lj for j D 0; 1; : : : ; n are disjoint,
+      and so the
+               Pprobability that a streak of heads of length at Pleast 2 dlg ne begins any-
+      where is jnD2dlg ne Pr fLj g. By inequality (5.9), we have jnD2dlg ne Pr fLj g < 1=n.
+                        Pn                                   P2dlg ne1
+      Also, noting that j D0 Pr fLj g D 1, we have that j D0            Pr fLj g  1. Thus,
+      we obtain
+                   X
+                   n
+      E ŒL D             j Pr fLj g
+                   j D0
+
+                     X
+                   2dlg ne1
+                                                 X
+                                                 n
+              D                j Pr fLj g C                 j Pr fLj g
+                     j D0                      j D2dlg ne
+
+                     X
+                   2dlg ne1
+                                                              X
+                                                              n
+              <              .2 dlg ne/ Pr fLj g C                       n Pr fLj g
+                     j D0                                   j D2dlg ne
+
+                                 X
+                               2dlg ne1
+                                                               X
+                                                               n
+              D 2 dlg ne                   Pr fLj g C n                  Pr fLj g
+                                 j D0                       j D2dlg ne
+
+              < 2 dlg ne  1 C n  .1=n/
+              D O.lg n/ :
+        The probability that a streak of heads exceeds r dlg ne ﬂips diminishes quickly
+      with r. For r  1, the probability that a streak of at least r dlg ne heads starts in
+      position i is
+      Pr fAi;rdlg ne g D 1=2rdlg ne
+                        1=nr :
+      Thus, the probability is at most n=nr D 1=nr1 that the longest streak is at
+      least r dlg ne, or equivalently, the probability is at least 1  1=nr1 that the longest
+      streak has length less than r dlg ne.
+         As an example, for n D 1000 coin ﬂips, the probability of having a streak of at
+      least 2 dlg ne D 20 heads is at most 1=n D 1=1000. The chance of having a streak
+      longer than 3 dlg ne D 30 heads is at most 1=n2 D 1=1,000,000.
+         We now prove a complementary lower bound: the expected length of the longest
+      streak of heads in n coin ﬂips is .lg n/. To prove this bound, we look for streaks
+

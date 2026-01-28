@@ -1,0 +1,49 @@
+30.2 The DFT and FFT                                                                                907
+
+
+
+                   i    !82
+     !83                               !81
+
+
+  !84                                  !80 D !88
+
+  1                                         1
+
+
+     !85                               !87
+                 i     !86
+
+
+
+
+Figure 30.2 The values of !80 ; !81 ; : : : ; !87 in the complex plane, where !8 D e 2 i=8 is the prin-
+cipal 8th root of unity.
+
+!n D e 2 i=n                                                                                   (30.6)
+is the principal nth root of unity;2 all other complex nth roots of unity are powers
+of !n .
+   The n complex nth roots of unity,
+!n0 ; !n1 ; : : : ; !nn1 ;
+form a group under multiplication (see Section 31.3). This group has the same
+structure as the additive group .Zn ; C/ modulo n, since !nn D !n0 D 1 implies that
+!nj !nk D !nj Ck D !n.j Ck/ mod n . Similarly, !n1 D !nn1 . The following lemmas
+furnish some essential properties of the complex nth roots of unity.
+
+Lemma 30.3 (Cancellation lemma)
+For any integers n  0, k  0, and d > 0,
+!ddnk D !nk :                                                                                   (30.7)
+
+Proof       The lemma follows directly from equation (30.6), since
+                                  dk
+!ddnk D         e 2 i=d n
+                              k
+           D    e 2 i=n
+           D !nk :
+
+
+2 Many other authors deﬁne ! differently: ! D e 2 i=n . This alternative deﬁnition tends to be
+                              n               n
+used for signal-processing applications. The underlying mathematics is substantially the same with
+either deﬁnition of !n .
+

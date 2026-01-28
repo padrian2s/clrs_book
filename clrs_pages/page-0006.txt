@@ -1,0 +1,33 @@
+Contents
+
+
+
+
+                Preface     xiii
+
+I Foundations
+                Introduction       3
+           1    The Role of Algorithms in Computing 5
+                1.1 Algorithms 5
+                1.2 Algorithms as a technology 11
+           2    Getting Started 16
+                2.1 Insertion sort 16
+                2.2 Analyzing algorithms 23
+                2.3 Designing algorithms 29
+           3    Growth of Functions 43
+                3.1 Asymptotic notation 43
+                3.2 Standard notations and common functions       53
+           4    Divide-and-Conquer 65
+                4.1 The maximum-subarray problem 68
+                4.2 Strassen’s algorithm for matrix multiplication 75
+                4.3 The substitution method for solving recurrences 83
+                4.4 The recursion-tree method for solving recurrences 88
+                4.5 The master method for solving recurrences 93
+           ?    4.6 Proof of the master theorem 97
+           5    Probabilistic Analysis and Randomized Algorithms 114
+                5.1 The hiring problem 114
+                5.2 Indicator random variables 118
+                5.3 Randomized algorithms 122
+           ?    5.4 Probabilistic analysis and further uses of indicator random variables
+                     130
+

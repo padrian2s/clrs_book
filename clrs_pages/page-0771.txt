@@ -1,0 +1,42 @@
+750   Chapter 26 Maximum Flow
+
+
+      Proof By the deﬁnition of an admissible edge, we can push ﬂow from u to .
+      Since u is overﬂowing, the operation P USH .u; / applies. The only new residual
+      edge that pushing ﬂow from u to  can create is .; u/. Since :h D u:h  1,
+      edge .; u/ cannot become admissible. If the operation is a saturating push, then
+      cf .u; / D 0 afterward and .u; / becomes inadmissible.
+
+      Lemma 26.28
+      Let G D .V; E/ be a ﬂow network, let f be a preﬂow in G, and suppose that
+      the attribute h is a height function. If a vertex u is overﬂowing and there are no
+      admissible edges leaving u, then R ELABEL .u/ applies. After the relabel operation,
+      there is at least one admissible edge leaving u, but there are no admissible edges
+      entering u.
+
+      Proof If u is overﬂowing, then by Lemma 26.14, either a push or a relabel op-
+      eration applies to it. If there are no admissible edges leaving u, then no ﬂow
+      can be pushed from u and so R ELABEL .u/ applies. After the relabel operation,
+      u:h D 1 C min f:h W .u; / 2 Ef g. Thus, if  is a vertex that realizes the mini-
+      mum in this set, the edge .u; / becomes admissible. Hence, after the relabel, there
+      is at least one admissible edge leaving u.
+         To show that no admissible edges enter u after a relabel operation, suppose that
+      there is a vertex  such that .; u/ is admissible. Then, :h D u:h C 1 after the
+      relabel, and so :h > u:h C 1 just before the relabel. But by Lemma 26.12, no
+      residual edges exist between vertices whose heights differ by more than 1. More-
+      over, relabeling a vertex does not change the residual network. Thus, .; u/ is not
+      in the residual network, and hence it cannot be in the admissible network.
+
+      Neighbor lists
+      Edges in the relabel-to-front algorithm are organized into “neighbor lists.” Given
+      a ﬂow network G D .V; E/, the neighbor list u:N for a vertex u 2 V is a singly
+      linked list of the neighbors of u in G. Thus, vertex  appears in the list u:N if
+      .u; / 2 E or .; u/ 2 E. The neighbor list u:N contains exactly those vertices 
+      for which there may be a residual edge .u; /. The attribute u:N:head points to
+      the ﬁrst vertex in u:N, and :next-neighbor points to the vertex following  in a
+      neighbor list; this pointer is NIL if  is the last vertex in the neighbor list.
+         The relabel-to-front algorithm cycles through each neighbor list in an arbitrary
+      order that is ﬁxed throughout the execution of the algorithm. For each vertex u,
+      the attribute u:current points to the vertex currently under consideration in u:N.
+      Initially, u:current is set to u:N:head.
+

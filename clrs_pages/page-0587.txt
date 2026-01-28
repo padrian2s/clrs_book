@@ -1,0 +1,49 @@
+566   Chapter 21 Data Structures for Disjoint Sets
+
+
+
+      Operation             Number of objects updated
+      M AKE -S ET.x1 /                 1
+      M AKE -S ET.x2 /                 1
+               ::                      ::
+                :                       :
+      M AKE -S ET.xn /                 1
+      U NION.x2 ; x1 /                 1
+      U NION.x3 ; x2 /                 2
+      U NION.x4 ; x3 /                 3
+              ::                        ::
+               :                         :
+      U NION.xn ; xn1 /             n1
+
+
+
+      Figure 21.3 A sequence of 2n  1 operations on n objects that takes ‚.n2 / time, or ‚.n/ time
+      per operation on average, using the linked-list set representation and the simple implementation of
+      U NION.
+
+
+      X
+      n1
+             i D ‚.n2 / :
+      i D1
+
+      The total number of operations is 2n 1, and so each operation on average requires
+      ‚.n/ time. That is, the amortized time of an operation is ‚.n/.
+
+      A weighted-union heuristic
+      In the worst case, the above implementation of the U NION procedure requires an
+      average of ‚.n/ time per call because we may be appending a longer list onto
+      a shorter list; we must update the pointer to the set object for each member of
+      the longer list. Suppose instead that each list also includes the length of the list
+      (which we can easily maintain) and that we always append the shorter list onto the
+      longer, breaking ties arbitrarily. With this simple weighted-union heuristic, a sin-
+      gle U NION operation can still take .n/ time if both sets have .n/ members. As
+      the following theorem shows, however, a sequence of m M AKE -S ET, U NION, and
+      F IND -S ET operations, n of which are M AKE -S ET operations, takes O.m C n lg n/
+      time.
+
+      Theorem 21.1
+      Using the linked-list representation of disjoint sets and the weighted-union heuris-
+      tic, a sequence of m M AKE -S ET, U NION, and F IND -S ET operations, n of which
+      are M AKE -S ET operations, takes O.m C n lg n/ time.
+

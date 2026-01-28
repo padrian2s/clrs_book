@@ -1,0 +1,5 @@
+{
+  "page": 251,
+  "title": "10.4 Representing Rooted Trees",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 10.4</div>\n    <h1>Representing Rooted Trees</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Different ways to store tree structures in memory.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Binary trees: left, right, parent pointers</li>\n<li>Unbounded branching: left-child, right-sibling representation</li>\n<li>Each node has: parent, left-child, right-sibling</li>\n<li>Children form a linked list via right-sibling</li>\n<li>Compact: only 3 pointers regardless of number of children</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Node with 5 children: left-child points to first child, that child&#x27;s right-sibling points to second child, etc.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Foundation for tree-based data structures throughout the book.</p>\n</div>\n</div>"
+}

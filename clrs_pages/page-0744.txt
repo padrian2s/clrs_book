@@ -1,0 +1,45 @@
+26.2 The Ford-Fulkerson method                                                  723
+
+
+Corollary 26.5
+The value of any ﬂow f in a ﬂow network G is bounded from above by the capacity
+of any cut of G.
+
+Proof Let .S; T / be any cut of G and let f be any ﬂow. By Lemma 26.4 and the
+capacity constraint,
+jf j D f .S; T /
+       XX                  XX
+     D          f .u; /     f .; u/
+          u2S 2T              u2S 2T
+          XX
+                   f .u; /
+          u2S 2T
+          XX
+                   c.u; /
+          u2S 2T
+     D c.S; T / :
+
+   Corollary 26.5 yields the immediate consequence that the value of a maximum
+ﬂow in a network is bounded from above by the capacity of a minimum cut of
+the network. The important max-ﬂow min-cut theorem, which we now state and
+prove, says that the value of a maximum ﬂow is in fact equal to the capacity of a
+minimum cut.
+
+Theorem 26.6 (Max-ﬂow min-cut theorem)
+If f is a ﬂow in a ﬂow network G D .V; E/ with source s and sink t, then the
+following conditions are equivalent:
+1. f is a maximum ﬂow in G.
+2. The residual network Gf contains no augmenting paths.
+3. jf j D c.S; T / for some cut .S; T / of G.
+
+Proof .1/ ) .2/: Suppose for the sake of contradiction that f is a maximum
+ﬂow in G but that Gf has an augmenting path p. Then, by Corollary 26.3, the
+ﬂow found by augmenting f by fp , where fp is given by equation (26.8), is a ﬂow
+in G with value strictly greater than jf j, contradicting the assumption that f is a
+maximum ﬂow.
+   .2/ ) .3/: Suppose that Gf has no augmenting path, that is, that Gf contains
+no path from s to t. Deﬁne
+S D f 2 V W there exists a path from s to  in Gf g
+and T D V  S. The partition .S; T / is a cut: we have s 2 S trivially and t 62 S
+because there is no path from s to t in Gf . Now consider a pair of vertices
+

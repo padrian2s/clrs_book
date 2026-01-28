@@ -1,0 +1,45 @@
+3.1 Asymptotic notation                                                                        47
+
+
+expression does not indicate what variable is tending to inﬁnity.2 We shall often
+use the notation ‚.1/ to mean either a constant or a constant function with respect
+to some variable.
+
+O-notation
+The ‚-notation asymptotically bounds a function from above and below. When
+we have only an asymptotic upper bound, we use O-notation. For a given func-
+tion g.n/, we denote by O.g.n// (pronounced “big-oh of g of n” or sometimes
+just “oh of g of n”) the set of functions
+O.g.n// D ff .n/ W there exist positive constants c and n0 such that
+                   0  f .n/  cg.n/ for all n  n0 g :
+We use O-notation to give an upper bound on a function, to within a constant
+factor. Figure 3.1(b) shows the intuition behind O-notation. For all values n at and
+to the right of n0 , the value of the function f .n/ is on or below cg.n/.
+   We write f .n/ D O.g.n// to indicate that a function f .n/ is a member of the
+set O.g.n//. Note that f .n/ D ‚.g.n// implies f .n/ D O.g.n//, since ‚-
+notation is a stronger notion than O-notation. Written set-theoretically, we have
+‚.g.n//  O.g.n//. Thus, our proof that any quadratic function an2 C bn C c,
+where a > 0, is in ‚.n2 / also shows that any such quadratic function is in O.n2 /.
+What may be more surprising is that when a > 0, any linear function an C b is
+in O.n2 /, which is easily veriﬁed by taking c D a C jbj and n0 D max.1; b=a/.
+   If you have seen O-notation before, you might ﬁnd it strange that we should
+write, for example, n D O.n2 /. In the literature, we sometimes ﬁnd O-notation
+informally describing asymptotically tight bounds, that is, what we have deﬁned
+using ‚-notation. In this book, however, when we write f .n/ D O.g.n//, we
+are merely claiming that some constant multiple of g.n/ is an asymptotic upper
+bound on f .n/, with no claim about how tight an upper bound it is. Distinguish-
+ing asymptotic upper bounds from asymptotically tight bounds is standard in the
+algorithms literature.
+   Using O-notation, we can often describe the running time of an algorithm
+merely by inspecting the algorithm’s overall structure. For example, the doubly
+nested loop structure of the insertion sort algorithm from Chapter 2 immediately
+yields an O.n2 / upper bound on the worst-case running time: the cost of each it-
+eration of the inner loop is bounded from above by O.1/ (constant), the indices i
+
+
+2 The real problem is that our ordinary notation for functions does not distinguish functions from
+
+values. In -calculus, the parameters to a function are clearly speciﬁed: the function n2 could be
+written as n:n2 , or even r:r 2 . Adopting a more rigorous notation, however, would complicate
+algebraic manipulations, and so we choose to tolerate the abuse.
+

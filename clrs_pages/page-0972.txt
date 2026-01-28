@@ -1,0 +1,41 @@
+31.5 The Chinese remainder theorem                                                  951
+
+
+for arbitrary integers k. The “Chinese remainder theorem” provides a correspon-
+dence between a system of equations modulo a set of pairwise relatively prime
+moduli (for example, 3, 5, and 7) and an equation modulo their product (for exam-
+ple, 105).
+   The Chinese remainder theorem has two major applications. Let the inte-
+ger n be factored as n D n1 n2    nk , where the factors ni are pairwise relatively
+prime. First, the Chinese remainder theorem is a descriptive “structure theorem”
+that describes the structure of Zn as identical to that of the Cartesian product
+Zn1 Zn2    Znk with componentwise addition and multiplication modulo ni
+in the ith component. Second, this description helps us to design efﬁcient algo-
+rithms, since working in each of the systems Zni can be more efﬁcient (in terms of
+bit operations) than working modulo n.
+
+Theorem 31.27 (Chinese remainder theorem)
+Let n D n1 n2    nk , where the ni are pairwise relatively prime. Consider the
+correspondence
+a $ .a1 ; a2 ; : : : ; ak / ;                                                   (31.27)
+where a 2 Zn , ai 2 Zni , and
+ai D a mod ni
+for i D 1; 2; : : : ; k. Then, mapping (31.27) is a one-to-one correspondence (bijec-
+tion) between Zn and the Cartesian product Zn1 Zn2    Znk . Operations per-
+formed on the elements of Zn can be equivalently performed on the corresponding
+k-tuples by performing the operations independently in each coordinate position in
+the appropriate system. That is, if
+a $ .a1 ; a2 ; : : : ; ak / ;
+b $ .b1 ; b2 ; : : : ; bk / ;
+then
+.a C b/ mod n $ ..a1 C b1 / mod n1 ; : : : ; .ak C bk / mod nk / ;              (31.28)
+.a  b/ mod n $ ..a1  b1 / mod n1 ; : : : ; .ak  bk / mod nk / ;              (31.29)
+.ab/ mod n    $ .a1 b1 mod n1 ; : : : ; ak bk mod nk / :                        (31.30)
+
+Proof Transforming between the two representations is fairly straightforward.
+Going from a to .a1 ; a2 ; : : : ; ak / is quite easy and requires only k “mod” opera-
+tions.
+   Computing a from inputs .a1 ; a2 ; : : : ; ak / is a bit more complicated. We begin
+by deﬁning mi D n=ni for i D 1; 2; : : : ; k; thus mi is the product of all of the nj ’s
+other than ni : mi D n1 n2    ni 1 ni C1    nk . We next deﬁne
+

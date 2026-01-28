@@ -1,0 +1,45 @@
+1138       Chapter 35 Approximation Algorithms
+
+
+           each item. If we take a fraction xi of item i, where 0  xi  1, we contribute
+           xi wi to the weight of the knapsack and receive value xi i . Our goal is to develop
+           a polynomial-time 2-approximation algorithm for the 0-1 knapsack problem.
+              In order to design a polynomial-time algorithm, we consider restricted instances
+           of the 0-1 knapsack problem. Given an instance I of the knapsack problem, we
+           form restricted instances Ij , for j D 1; 2; : : : ; n, by removing items 1; 2; : : : ; j  1
+           and requiring the solution to include item j (all of item j in both the fractional
+           and 0-1 knapsack problems). No items are removed in instance I1 . For instance Ij ,
+           let Pj denote an optimal solution to the 0-1 problem and Qj denote an optimal
+           solution to the fractional problem.
+           a. Argue that an optimal solution to instance I of the 0-1 knapsack problem is one
+              of fP1 ; P2 ; : : : ; Pn g.
+
+           b. Prove that we can ﬁnd an optimal solution Qj to the fractional problem for in-
+              stance Ij by including item j and then using the greedy algorithm in which
+              at each step, we take as much as possible of the unchosen item in the set
+              fj C 1; j C 2; : : : ; ng with maximum value per pound i =wi .
+
+           c. Prove that we can always construct an optimal solution Qj to the fractional
+              problem for instance Ij that includes at most one item fractionally. That is, for
+              all items except possibly one, we either include all of the item or none of the
+              item in the knapsack.
+
+           d. Given an optimal solution Qj to the fractional problem for instance Ij , form
+              solution Rj from Qj by deleting any fractional items from Qj . Let .S/ denote
+              the total value of items taken in a solution S. Prove that .Rj /  .Qj /=2 
+              .Pj /=2.
+
+           e. Give a polynomial-time algorithm that returns a maximum-value solution from
+              the set fR1 ; R2 ; : : : ; Rn g, and prove that your algorithm is a polynomial-time
+              2-approximation algorithm for the 0-1 knapsack problem.
+
+
+Chapter notes
+
+           Although methods that do not necessarily compute exact solutions have been
+           known for thousands of years (for example, methods to approximate the value
+           of ), the notion of an approximation algorithm is much more recent. Hochbaum
+           [172] credits Garey, Graham, and Ullman [128] and Johnson [190] with formal-
+           izing the concept of a polynomial-time approximation algorithm. The ﬁrst such
+           algorithm is often credited to Graham [149].
+

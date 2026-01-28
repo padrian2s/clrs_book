@@ -1,0 +1,40 @@
+288   Chapter 12 Binary Search Trees
+
+
+      I NORDER -T REE -WALK .x/
+      1 if x ¤ NIL
+      2      I NORDER -T REE -WALK .x:left/
+      3      print x:key
+      4      I NORDER -T REE -WALK .x:right/
+
+      As an example, the inorder tree walk prints the keys in each of the two binary
+      search trees from Figure 12.1 in the order 2; 5; 5; 6; 7; 8. The correctness of the
+      algorithm follows by induction directly from the binary-search-tree property.
+         It takes ‚.n/ time to walk an n-node binary search tree, since after the ini-
+      tial call, the procedure calls itself recursively exactly twice for each node in the
+      tree—once for its left child and once for its right child. The following theorem
+      gives a formal proof that it takes linear time to perform an inorder tree walk.
+
+      Theorem 12.1
+      If x is the root of an n-node subtree, then the call I NORDER -T REE -WALK .x/
+      takes ‚.n/ time.
+
+      Proof Let T .n/ denote the time taken by I NORDER -T REE -WALK when it is
+      called on the root of an n-node subtree. Since I NORDER -T REE -WALK visits all n
+      nodes of the subtree, we have T .n/ D .n/. It remains to show that T .n/ D O.n/.
+         Since I NORDER -T REE -WALK takes a small, constant amount of time on an
+      empty subtree (for the test x ¤ NIL ), we have T .0/ D c for some constant c > 0.
+         For n > 0, suppose that I NORDER -T REE -WALK is called on a node x whose
+      left subtree has k nodes and whose right subtree has n  k  1 nodes. The time to
+      perform I NORDER -T REE -WALK .x/ is bounded by T .n/  T .k/CT .nk1/Cd
+      for some constant d > 0 that reﬂects an upper bound on the time to execute the
+      body of I NORDER -T REE -WALK .x/, exclusive of the time spent in recursive calls.
+         We use the substitution method to show that T .n/ D O.n/ by proving that
+      T .n/  .c C d /n C c. For n D 0, we have .c C d /  0 C c D c D T .0/. For n > 0,
+      we have
+      T .n/      T .k/ C T .n  k  1/ C d
+            D     ..c C d /k C c/ C ..c C d /.n  k  1/ C c/ C d
+            D     .c C d /n C c  .c C d / C c C d
+            D     .c C d /n C c ;
+      which completes the proof.
+

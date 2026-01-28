@@ -1,0 +1,5 @@
+{
+  "page": 311,
+  "title": "13.1 Properties of Red-Black Trees",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 13.1</div>\n    <h1>Properties of Red-Black Trees</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>A self-balancing BST with color properties ensuring O(log n) height.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Every node is RED or BLACK</li>\n<li>Root is BLACK</li>\n<li>Every leaf (NIL) is BLACK</li>\n<li>Red node&#x27;s children must be BLACK (no two reds in a row)</li>\n<li>All paths from node to descendant leaves have same black-height</li>\n<li>Height ≤ 2 log(n+1) guaranteed!</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>A red-black tree with 15 nodes has height at most 2·log(16) = 8.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Guaranteed O(log n) for all operations. Used in many standard libraries.</p>\n</div>\n</div>"
+}

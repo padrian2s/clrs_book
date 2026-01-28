@@ -1,0 +1,58 @@
+176   Chapter 7 Quicksort
+
+
+                                              n                                          cn
+
+
+                               1                          9
+                               10
+                                  n                       10
+                                                             n                           cn
+
+            log10 n
+                        1              9           9             81
+                       100
+                           n          100
+                                          n       100
+                                                      n          100
+                                                                     n                   cn
+
+      log10=9 n
+                                                           81         729
+                   1                                      1000
+                                                               n     1000
+                                                                          n              cn
+
+
+                                                                                       cn
+
+
+                                                                              1        cn
+
+                                                                                  O.n lg n/
+
+
+      Figure 7.4 A recursion tree for Q UICKSORT in which PARTITION always produces a 9-to-1 split,
+      yielding a running time of O.n lg n/. Nodes show subproblem sizes, with per-level costs on the right.
+      The per-level costs include the constant c implicit in the ‚.n/ term.
+
+
+      ing why is to understand how the balance of the partitioning is reﬂected in the
+      recurrence that describes the running time.
+         Suppose, for example, that the partitioning algorithm always produces a 9-to-1
+      proportional split, which at ﬁrst blush seems quite unbalanced. We then obtain the
+      recurrence
+      T .n/ D T .9n=10/ C T .n=10/ C cn ;
+      on the running time of quicksort, where we have explicitly included the constant c
+      hidden in the ‚.n/ term. Figure 7.4 shows the recursion tree for this recurrence.
+      Notice that every level of the tree has cost cn, until the recursion reaches a bound-
+      ary condition at depth log10 n D ‚.lg n/, and then the levels have cost at most cn.
+      The recursion terminates at depth log10=9 n D ‚.lg n/. The total cost of quick-
+      sort is therefore O.n lg n/. Thus, with a 9-to-1 proportional split at every level of
+      recursion, which intuitively seems quite unbalanced, quicksort runs in O.n lg n/
+      time—asymptotically the same as if the split were right down the middle. Indeed,
+      even a 99-to-1 split yields an O.n lg n/ running time. In fact, any split of constant
+      proportionality yields a recursion tree of depth ‚.lg n/, where the cost at each level
+      is O.n/. The running time is therefore O.n lg n/ whenever the split has constant
+      proportionality.
+

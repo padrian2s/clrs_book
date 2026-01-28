@@ -1,0 +1,41 @@
+50   Chapter 3 Growth of Functions
+
+
+     there is only a single anonymous function (a function of i). This expression is thus
+     not the same as O.1/ C O.2/ C    C O.n/, which doesn’t really have a clean
+     interpretation.
+        In some cases, asymptotic notation appears on the left-hand side of an equation,
+     as in
+     2n2 C ‚.n/ D ‚.n2 / :
+     We interpret such equations using the following rule: No matter how the anony-
+     mous functions are chosen on the left of the equal sign, there is a way to choose
+     the anonymous functions on the right of the equal sign to make the equation valid.
+     Thus, our example means that for any function f .n/ 2 ‚.n/, there is some func-
+     tion g.n/ 2 ‚.n2 / such that 2n2 C f .n/ D g.n/ for all n. In other words, the
+     right-hand side of an equation provides a coarser level of detail than the left-hand
+     side.
+        We can chain together a number of such relationships, as in
+     2n2 C 3n C 1 D 2n2 C ‚.n/
+                  D ‚.n2 / :
+     We can interpret each equation separately by the rules above. The ﬁrst equa-
+     tion says that there is some function f .n/ 2 ‚.n/ such that 2n2 C 3n C 1 D
+     2n2 C f .n/ for all n. The second equation says that for any function g.n/ 2 ‚.n/
+     (such as the f .n/ just mentioned), there is some function h.n/ 2 ‚.n2 / such
+     that 2n2 C g.n/ D h.n/ for all n. Note that this interpretation implies that
+     2n2 C 3n C 1 D ‚.n2 /, which is what the chaining of equations intuitively gives
+     us.
+
+     o-notation
+     The asymptotic upper bound provided by O-notation may or may not be asymp-
+     totically tight. The bound 2n2 D O.n2 / is asymptotically tight, but the bound
+     2n D O.n2 / is not. We use o-notation to denote an upper bound that is not asymp-
+     totically tight. We formally deﬁne o.g.n// (“little-oh of g of n”) as the set
+     o.g.n// D ff .n/ W for any positive constant c > 0, there exists a constant
+                        n0 > 0 such that 0  f .n/ < cg.n/ for all n  n0 g :
+     For example, 2n D o.n2 /, but 2n2 ¤ o.n2 /.
+        The deﬁnitions of O-notation and o-notation are similar. The main difference
+     is that in f .n/ D O.g.n//, the bound 0  f .n/  cg.n/ holds for some con-
+     stant c > 0, but in f .n/ D o.g.n//, the bound 0  f .n/ < cg.n/ holds for all
+     constants c > 0. Intuitively, in o-notation, the function f .n/ becomes insigniﬁcant
+     relative to g.n/ as n approaches inﬁnity; that is,
+

@@ -1,0 +1,5 @@
+{
+  "page": 979,
+  "title": "Modular Arithmetic",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Mathematical Foundations</div>\n    <h1>Modular Arithmetic</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>The Modulo Operation</h4>\n    <p><strong>a mod n</strong> = remainder when a is divided by n</p>\n    <ul>\n        <li>17 mod 5 = 2 (because 17 = 3×5 + 2)</li>\n        <li>10 mod 3 = 1</li>\n        <li>12 mod 4 = 0</li>\n    </ul>\n</div>\n<div class=\"definition-box\">\n    <h4>Congruence</h4>\n    <p><strong>a ≡ b (mod n)</strong> means a and b have the same remainder when divided by n</p>\n    <ul>\n        <li>17 ≡ 2 (mod 5) ✓</li>\n        <li>17 ≡ 7 (mod 5) ✓</li>\n        <li>17 ≡ 22 (mod 5) ✓</li>\n    </ul>\n</div>\n<div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <ul>\n        <li><strong>Hash tables:</strong> index = hash(key) mod table_size</li>\n        <li><strong>Cryptography:</strong> RSA uses modular exponentiation</li>\n        <li><strong>Circular arrays:</strong> next_index = (i + 1) mod n</li>\n    </ul>\n</div>\n</div>"
+}

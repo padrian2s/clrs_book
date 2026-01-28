@@ -1,0 +1,46 @@
+864        Chapter 29 Linear Programming
+
+
+           linear program for which the solution has the property that d is the shortest-path
+           weight from s to  for each vertex  2 V .
+
+           29.2-4
+           Write out explicitly the linear program corresponding to ﬁnding the maximum ﬂow
+           in Figure 26.1(a).
+
+           29.2-5
+           Rewrite the linear program for maximum ﬂow (29.47)–(29.50) so that it uses only
+           O.V C E/ constraints.
+
+           29.2-6
+           Write a linear program that, given a bipartite graph G D .V; E/, solves the maxi-
+           mum-bipartite-matching problem.
+
+           29.2-7
+           In the minimum-cost multicommodity-ﬂow problem, we are given directed graph
+           G D .V; E/ in which each edge .u; / 2 E has a nonnegative capacity c.u; /  0
+           and a cost a.u; /. As in the multicommodity-ﬂow problem, we are given k dif-
+           ferent commodities, K1 ; K2 ; : : : ; Kk , where we specify commodity i by the triple
+           Ki D .si ; ti ; di /. We deﬁne the ﬂow fi for commodity i and the aggregate ﬂow fu
+           on edge .u; / as in the multicommodity-ﬂow problem. A feasible ﬂow is one
+           in which the aggregate ﬂow on each     Pedge .u; / is no more than the capacity of
+           edge .u; /. The cost of a ﬂow is u;2V a.u; /fu , and the goal is to ﬁnd the
+           feasible ﬂow of minimum cost. Express this problem as a linear program.
+
+
+
+29.3 The simplex algorithm
+
+           The simplex algorithm is the classical method for solving linear programs. In con-
+           trast to most of the other algorithms in this book, its running time is not polynomial
+           in the worst case. It does yield insight into linear programs, however, and is often
+           remarkably fast in practice.
+              In addition to having a geometric interpretation, described earlier in this chapter,
+           the simplex algorithm bears some similarity to Gaussian elimination, discussed in
+           Section 28.1. Gaussian elimination begins with a system of linear equalities whose
+           solution is unknown. In each iteration, we rewrite this system in an equivalent
+           form that has some additional structure. After some number of iterations, we have
+           rewritten the system so that the solution is simple to obtain. The simplex algo-
+           rithm proceeds in a similar manner, and we can view it as Gaussian elimination for
+           inequalities.
+

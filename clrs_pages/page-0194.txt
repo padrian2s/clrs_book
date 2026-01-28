@@ -1,0 +1,45 @@
+7.1 Description of quicksort                                                                             173
+
+
+ p            i                            j                   r
+                                                               x
+
+      ≤x                   >x                  unrestricted
+
+
+Figure 7.2 The four regions maintained by the procedure PARTITION on a subarray AŒp : : r. The
+values in AŒp : : i are all less than or equal to x, the values in AŒi C 1 : : j  1 are all greater than x,
+and AŒr D x. The subarray AŒj : : r  1 can take on any values.
+
+
+Initialization: Prior to the ﬁrst iteration of the loop, i D p  1 and j D p. Be-
+   cause no values lie between p and i and no values lie between i C 1 and j  1,
+   the ﬁrst two conditions of the loop invariant are trivially satisﬁed. The assign-
+   ment in line 1 satisﬁes the third condition.
+Maintenance: As Figure 7.3 shows, we consider two cases, depending on the
+  outcome of the test in line 4. Figure 7.3(a) shows what happens when AŒj  > x;
+  the only action in the loop is to increment j . After j is incremented, condition 2
+  holds for AŒj  1 and all other entries remain unchanged. Figure 7.3(b) shows
+  what happens when AŒj   x; the loop increments i, swaps AŒi and AŒj ,
+  and then increments j . Because of the swap, we now have that AŒi  x, and
+  condition 1 is satisﬁed. Similarly, we also have that AŒj  1 > x, since the
+  item that was swapped into AŒj  1 is, by the loop invariant, greater than x.
+Termination: At termination, j D r. Therefore, every entry in the array is in one
+   of the three sets described by the invariant, and we have partitioned the values
+   in the array into three sets: those less than or equal to x, those greater than x,
+   and a singleton set containing x.
+   The ﬁnal two lines of PARTITION ﬁnish up by swapping the pivot element with
+the leftmost element greater than x, thereby moving the pivot into its correct place
+in the partitioned array, and then returning the pivot’s new index. The output of
+PARTITION now satisﬁes the speciﬁcations given for the divide step. In fact, it
+satisﬁes a slightly stronger condition: after line 2 of Q UICKSORT, AŒq is strictly
+less than every element of AŒq C 1 : : r.
+   The running time of PARTITION on the subarray AŒp : : r is ‚.n/, where
+n D r  p C 1 (see Exercise 7.1-3).
+
+Exercises
+
+7.1-1
+Using Figure 7.1 as a model, illustrate the operation of PARTITION on the array
+A D h13; 19; 9; 5; 12; 8; 7; 4; 21; 2; 6; 11i.
+

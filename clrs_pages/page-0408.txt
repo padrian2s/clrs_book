@@ -1,0 +1,39 @@
+15.3 Elements of dynamic programming                                                          387
+
+
+Reconstructing an optimal solution
+As a practical matter, we often store which choice we made in each subproblem in
+a table so that we do not have to reconstruct this information from the costs that we
+stored.
+   For matrix-chain multiplication, the table sŒi; j  saves us a signiﬁcant amount of
+work when reconstructing an optimal solution. Suppose that we did not maintain
+the sŒi; j  table, having ﬁlled in only the table mŒi; j  containing optimal subprob-
+lem costs. We choose from among j  i possibilities when we determine which
+subproblems to use in an optimal solution to parenthesizing Ai Ai C1    Aj , and
+j  i is not a constant. Therefore, it would take ‚.j  i/ D !.1/ time to recon-
+struct which subproblems we chose for a solution to a given problem. By storing
+in sŒi; j  the index of the matrix at which we split the product Ai Ai C1    Aj , we
+can reconstruct each choice in O.1/ time.
+
+Memoization
+As we saw for the rod-cutting problem, there is an alternative approach to dy-
+namic programming that often offers the efﬁciency of the bottom-up dynamic-
+programming approach while maintaining a top-down strategy. The idea is to
+memoize the natural, but inefﬁcient, recursive algorithm. As in the bottom-up ap-
+proach, we maintain a table with subproblem solutions, but the control structure
+for ﬁlling in the table is more like the recursive algorithm.
+   A memoized recursive algorithm maintains an entry in a table for the solution to
+each subproblem. Each table entry initially contains a special value to indicate that
+the entry has yet to be ﬁlled in. When the subproblem is ﬁrst encountered as the
+recursive algorithm unfolds, its solution is computed and then stored in the table.
+Each subsequent time that we encounter this subproblem, we simply look up the
+value stored in the table and return it.5
+   Here is a memoized version of R ECURSIVE -M ATRIX -C HAIN. Note where it
+resembles the memoized top-down method for the rod-cutting problem.
+
+
+5 This approach presupposes that we know the set of all possible subproblem parameters and that we
+
+have established the relationship between table positions and subproblems. Another, more general,
+approach is to memoize by using hashing with the subproblem parameters as keys.
+

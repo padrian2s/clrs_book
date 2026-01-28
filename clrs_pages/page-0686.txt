@@ -1,0 +1,48 @@
+24.4 Difference constraints and shortest paths                                   665
+
+
+can cast a given problem as a polynomial-sized linear-programming problem, then
+we immediately have a polynomial-time algorithm to solve the problem. Second,
+faster algorithms exist for many special cases of linear programming. For exam-
+ple, the single-pair shortest-path problem (Exercise 24.4-4) and the maximum-ﬂow
+problem (Exercise 26.1-5) are special cases of linear programming.
+   Sometimes we don’t really care about the objective function; we just wish to ﬁnd
+any feasible solution, that is, any vector x that satisﬁes Ax  b, or to determine
+that no feasible solution exists. We shall focus on one such feasibility problem.
+
+Systems of difference constraints
+In a system of difference constraints, each row of the linear-programming matrix A
+contains one 1 and one 1, and all other entries of A are 0. Thus, the constraints
+given by Ax  b are a set of m difference constraints involving n unknowns, in
+which each constraint is a simple linear inequality of the form
+xj  xi  bk ;
+
+
+
+                                ˘ˇ   ˘
+where 1  i; j  n, i ¤ j , and 1  k  m.
+  For example, consider the problem of ﬁnding a 5-vector x D .xi / that satisﬁes
+     1 1  0  0  0                                    0
+     1  0  0  0 1                                   1
+                                         x1
+     0  1  0  0 1                                    1
+                                         x2
+    1  0  1  0  0                                    5
+                                         x3              :
+    1  0  0  1  0                                    4
+                                         x4
+     0  0 1  1  0                                   1
+                                         x5
+     0  0 1  0  1                                   3
+     0  0  0 1  1                                   3
+This problem is equivalent to ﬁnding values for the unknowns x1 ; x2 ; x3 ; x4 ; x5 ,
+satisfying the following 8 difference constraints:
+x1  x2         0,                                                           (24.3)
+x1  x5        1 ,                                                          (24.4)
+x2  x5         1,                                                           (24.5)
+x3  x1         5,                                                           (24.6)
+x4  x1         4,                                                           (24.7)
+x4  x3        1 ,                                                          (24.8)
+x5  x3        3 ,                                                          (24.9)
+x5  x4        3 .                                                         (24.10)
+

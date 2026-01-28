@@ -1,0 +1,45 @@
+366   Chapter 15 Dynamic Programming
+
+
+      M EMOIZED -C UT-ROD -AUX .p; n; r/
+      1 if rŒn  0
+      2      return rŒn
+      3 if n == 0
+      4      q D0
+      5 else q D 1
+      6      for i D 1 to n
+      7           q D max.q; pŒi C M EMOIZED -C UT-ROD -AUX .p; n  i; r//
+      8 rŒn D q
+      9 return q
+
+         Here, the main procedure M EMOIZED -C UT-ROD initializes a new auxiliary ar-
+      ray rŒ0 : : n with the value 1, a convenient choice with which to denote “un-
+      known.” (Known revenue values are always nonnegative.) It then calls its helper
+      routine, M EMOIZED -C UT-ROD -AUX.
+         The procedure M EMOIZED -C UT-ROD -AUX is just the memoized version of our
+      previous procedure, C UT-ROD. It ﬁrst checks in line 1 to see whether the desired
+      value is already known and, if it is, then line 2 returns it. Otherwise, lines 3–7
+      compute the desired value q in the usual manner, line 8 saves it in rŒn, and line 9
+      returns it.
+         The bottom-up version is even simpler:
+
+      B OTTOM -U P -C UT-ROD .p; n/
+      1 let rŒ0 : : n be a new array
+      2 rŒ0 D 0
+      3 for j D 1 to n
+      4      q D 1
+      5      for i D 1 to j
+      6             q D max.q; pŒi C rŒj  i/
+      7      rŒj  D q
+      8 return rŒn
+
+         For the bottom-up dynamic-programming approach, B OTTOM -U P -C UT-ROD
+      uses the natural ordering of the subproblems: a problem of size i is “smaller”
+      than a subproblem of size j if i < j . Thus, the procedure solves subproblems of
+      sizes j D 0; 1; : : : ; n, in that order.
+         Line 1 of procedure B OTTOM -U P -C UT-ROD creates a new array rŒ0 : : n in
+      which to save the results of the subproblems, and line 2 initializes rŒ0 to 0, since
+      a rod of length 0 earns no revenue. Lines 3–6 solve each subproblem of size j , for
+      j D 1; 2; : : : ; n, in order of increasing size. The approach used to solve a problem
+      of a particular size j is the same as that used by C UT-ROD, except that line 6 now
+

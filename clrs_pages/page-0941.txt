@@ -1,0 +1,47 @@
+920        Chapter 30 Polynomials and the FFT
+
+
+           I TERATIVE -FFT corresponds to a stage of butterﬂies shown in Figure 30.5. For
+           s D 1; 2; : : : ; lg n, stage s consists of n=2s groups of butterﬂies (corresponding to
+           each value of k in I TERATIVE -FFT), with 2s1 butterﬂies per group (corresponding
+           to each value of j in I TERATIVE -FFT). The butterﬂies shown in Figure 30.5 corre-
+           spond to the butterﬂy operations of the innermost loop (lines 9–12 of I TERATIVE -
+           FFT). Note also that the twiddle factors used in the butterﬂies correspond to those
+                                                              0    1            m=21
+           used in I TERATIVE -FFT: in stage s, we use !m       ; !m ; : : : ; !m     , where m D 2s .
+
+           Exercises
+
+           30.3-1
+           Show how I TERATIVE -FFT computes the DFT of the input vector .0; 2; 3; 1; 4;
+           5; 7; 9/.
+
+           30.3-2
+           Show how to implement an FFT algorithm with the bit-reversal permutation occur-
+           ring at the end, rather than at the beginning, of the computation. (Hint: Consider
+           the inverse DFT.)
+
+           30.3-3
+           How many times does I TERATIVE -FFT compute twiddle factors in each stage?
+           Rewrite I TERATIVE -FFT to compute twiddle factors only 2s1 times in stage s.
+
+           30.3-4 ?
+           Suppose that the adders within the butterﬂy operations of the FFT circuit some-
+           times fail in such a manner that they always produce a zero output, independent
+           of their inputs. Suppose that exactly one adder has failed, but that you don’t know
+           which one. Describe how you can identify the failed adder by supplying inputs to
+           the overall FFT circuit and observing the outputs. How efﬁcient is your method?
+
+
+
+Problems
+
+           30-1 Divide-and-conquer multiplication
+           a. Show how to multiply two linear polynomials ax C b and cx C d using only
+              three multiplications. (Hint: One of the multiplications is .a C b/  .c C d /.)
+
+           b. Give two divide-and-conquer algorithms for multiplying two polynomials of
+              degree-bound n in ‚.nlg 3 / time. The ﬁrst algorithm should divide the input
+              polynomial coefﬁcients into a high half and a low half, and the second algorithm
+              should divide them according to whether their index is odd or even.
+

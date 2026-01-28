@@ -1,0 +1,48 @@
+202   Chapter 8 Sorting in Linear Time
+
+
+         To analyze the cost of the calls to insertion sort, let ni be the random variable
+      denoting the number of elements placed in bucket BŒi. Since insertion sort runs
+      in quadratic time (see Section 2.2), the running time of bucket sort is
+                            X
+                            n1
+      T .n/ D ‚.n/ C               O.n2i / :
+                            i D0
+
+         We now analyze the average-case running time of bucket sort, by computing the
+      expected value of the running time, where we take the expectation over the input
+      distribution. Taking expectations of both sides and using linearity of expectation,
+      we have
+                       "                     #
+                                 X
+                                 n1
+      E ŒT .n/ D E ‚.n/ C           O.n2i /
+                                             i D0
+
+                                      X
+                                      n1
+                                                      
+                     D ‚.n/ C                E O.n2i /     (by linearity of expectation)
+                                      i D0
+
+                                      X
+                                      n1
+                                                 
+                     D ‚.n/ C                O E n2i       (by equation (C.22)) .          (8.1)
+                                      i D0
+
+      We claim that
+        
+      E n2i D 2  1=n                                                                      (8.2)
+      for i D 0; 1; : : : ; n  1. It is no surprise that each bucket i has the same value of
+      E Œn2i , since each value in the input array A is equally likely to fall in any bucket.
+      To prove equation (8.2), we deﬁne indicator random variables
+      Xij D I fAŒj  falls in bucket i g
+      for i D 0; 1; : : : ; n  1 and j D 1; 2; : : : ; n. Thus,
+             X
+             n
+      ni D          Xij :
+             j D1
+
+      To compute E Œn2i , we expand the square and regroup terms:
+

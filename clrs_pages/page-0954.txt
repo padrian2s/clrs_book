@@ -1,0 +1,43 @@
+           31.2 Greatest common divisor                                                     933
+
+
+           31.1-8
+           For any integer k > 0, an integer n is a kth power if there exists an integer a such
+           that ak D n. Furthermore, n > 1 is a nontrivial power if it is a kth power for
+           some integer k > 1. Show how to determine whether a given ˇ-bit integer n is a
+           nontrivial power in time polynomial in ˇ.
+
+           31.1-9
+           Prove equations (31.6)–(31.10).
+
+           31.1-10
+           Show that the gcd operator is associative. That is, prove that for all integers a, b,
+           and c,
+           gcd.a; gcd.b; c// D gcd.gcd.a; b/; c/ :
+
+           31.1-11 ?
+           Prove Theorem 31.8.
+
+           31.1-12
+           Give efﬁcient algorithms for the operations of dividing a ˇ-bit integer by a shorter
+           integer and of taking the remainder of a ˇ-bit integer when divided by a shorter
+           integer. Your algorithms should run in time ‚.ˇ 2 /.
+
+           31.1-13
+           Give an efﬁcient algorithm to convert a given ˇ-bit (binary) integer to a decimal
+           representation. Argue that if multiplication or division of integers whose length
+           is at most ˇ takes time M.ˇ/, then we can convert binary to decimal in time
+           ‚.M.ˇ/ lg ˇ/. (Hint: Use a divide-and-conquer approach, obtaining the top and
+           bottom halves of the result with separate recursions.)
+
+
+
+31.2 Greatest common divisor
+
+           In this section, we describe Euclid’s algorithm for efﬁciently computing the great-
+           est common divisor of two integers. When we analyze the running time, we shall
+           see a surprising connection with the Fibonacci numbers, which yield a worst-case
+           input for Euclid’s algorithm.
+              We restrict ourselves in this section to nonnegative integers. This restriction is
+           justiﬁed by equation (31.8), which states that gcd.a; b/ D gcd.jaj ; jbj/.
+

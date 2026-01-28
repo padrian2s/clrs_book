@@ -1,0 +1,39 @@
+4.6 Proof of the master theorem                                                 103
+
+
+and for case 2,
+T .n/ D ‚.nlogb a / C ‚.nlogb a lg n/
+      D ‚.nlogb a lg n/ :
+For case 3,
+T .n/ D ‚.nlogb a / C ‚.f .n//
+      D ‚.f .n// ;
+because f .n/ D .nlogb aC /.
+
+4.6.2 Floors and ceilings
+To complete the proof of the master theorem, we must now extend our analysis to
+the situation in which ﬂoors and ceilings appear in the master recurrence, so that
+the recurrence is deﬁned for all integers, not for just exact powers of b. Obtaining
+a lower bound on
+T .n/ D aT .dn=be/ C f .n/                                                   (4.25)
+and an upper bound on
+T .n/ D aT .bn=bc/ C f .n/                                                   (4.26)
+is routine, since we can push through the bound dn=be  n=b in the ﬁrst case to
+yield the desired result, and we can push through the bound bn=bc  n=b in the
+second case. We use much the same technique to lower-bound the recurrence (4.26)
+as to upper-bound the recurrence (4.25), and so we shall present only this latter
+bound.
+   We modify the recursion tree of Figure 4.7 to produce the recursion tree in Fig-
+ure 4.8. As we go down in the recursion tree, we obtain a sequence of recursive
+invocations on the arguments
+n;
+dn=be ;
+ddn=be =be ;
+dddn=be =be =be ;
+        ::
+         :
+Let us denote the j th element in the sequence by nj , where
+      (
+        n            if j D 0 ;
+nj D                                                                         (4.27)
+        dnj 1 =be if j > 0 :
+

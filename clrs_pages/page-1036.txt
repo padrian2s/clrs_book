@@ -1,0 +1,50 @@
+           33.1 Line-segment properties                                                      1015
+
+
+           an O.n lg n/-time divide-and-conquer algorithm for ﬁnding the closest pair of
+           points in a set of n points in the plane.
+
+
+33.1 Line-segment properties
+
+           Several of the computational-geometry algorithms in this chapter require answers
+           to questions about the properties of line segments. A convex combination of two
+           distinct points p1 D .x1 ; y1 / and p2 D .x2 ; y2 / is any point p3 D .x3 ; y3 / such
+           that for some ˛ in the range 0  ˛  1, we have x3 D ˛x1 C .1  ˛/x2 and
+           y3 D ˛y1 C .1  ˛/y2 . We also write that p3 D ˛p1 C .1  ˛/p2 . Intuitively, p3
+           is any point that is on the line passing through p1 and p2 and is on or between p1
+           and p2 on the line. Given two distinct points p1 and p2 , the line segment p1 p2
+           is the set of convex combinations of p1 and p2 . We call p1 and p2 the endpoints
+           of segment p1 p2 . Sometimes the ordering of p1 and p2 matters, and we speak of
+           the directed segment  p1p
+                                      !. If p is the origin .0; 0/, then we can treat the directed
+                                        2    1
+                     !
+           segment p1 p2 as the vector p2 .
+              In this section, we shall explore the following questions:
+           1. Given two directed segments      ! and 
+                                            p0p     p0p
+                                                          !, is 
+                                                                p0p
+                                                                    ! clockwise from 
+                                                                                     p0p
+                                                                                         !
+                                                  1         2         1                    2
+              with respect to their common endpoint p0 ?
+           2. Given two line segments p0 p1 and p1 p2 , if we traverse p0 p1 and then p1 p2 ,
+              do we make a left turn at point p1 ?
+           3. Do line segments p1 p2 and p3 p4 intersect?
+           There are no restrictions on the given points.
+              We can answer each question in O.1/ time, which should come as no surprise
+           since the input size of each question is O.1/. Moreover, our methods use only ad-
+           ditions, subtractions, multiplications, and comparisons. We need neither division
+           nor trigonometric functions, both of which can be computationally expensive and
+           prone to problems with round-off error. For example, the “straightforward” method
+           of determining whether two segments intersect—compute the line equation of the
+           form y D mx C b for each segment (m is the slope and b is the y-intercept),
+           ﬁnd the point of intersection of the lines, and check whether this point is on both
+           segments—uses division to ﬁnd the point of intersection. When the segments are
+           nearly parallel, this method is very sensitive to the precision of the division opera-
+           tion on real computers. The method in this section, which avoids division, is much
+           more accurate.
+

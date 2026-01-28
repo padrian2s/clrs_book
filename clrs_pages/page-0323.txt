@@ -1,0 +1,60 @@
+302   Chapter 12 Binary Search Trees
+
+
+         Using the substitution method, we shall show that for all positive integers n, the
+      recurrence (12.2) has the solution
+                         !
+                1 nC3
+      E ŒYn               :
+                4    3
+      In doing so, we shall use the identity
+                 !            !
+      X
+      n1
+            i C3        nC3
+                    D            :                                                  (12.3)
+      i D0
+              3            4
+      (Exercise 12.4-1 asks you to prove this identity.)
+        For the base cases, we note that the bounds 0 D Y0 D E ŒY0   .1=4/ 33 D 1=4
+      and 1 D Y1 D E ŒY1   .1=4/ 1C33
+                                          D 1 hold. For the inductive case, we have that
+                    4X
+                      n1
+      E ŒYn              E ŒYi 
+                    n i D0
+                                     !
+                    4 X1 i C3
+                      n1
+                                        (by the inductive hypothesis)
+                    n i D0 4   3
+                                 !
+                    1 X i C3
+                      n1
+                D
+                    n i D0   3
+                             !
+                    1 nC3
+                D                        (by equation (12.3))
+                    n      4
+                    1 .n C 3/Š
+                D     
+                    n 4Š .n  1/Š
+                    1 .n C 3/Š
+                D     
+                    4   3Š nŠ!
+                    1 nC3
+                D              :
+                    4   3
+         We have bounded E ŒYn , but our ultimate goal is to bound E ŒXn . As Exer-
+      cise 12.4-4 asks you to show, the function f .x/ D 2x is convex (see page 1199).
+      Therefore, we can employ Jensen’s inequality (C.26), which says that
+                        
+      2EŒXn   E 2Xn
+              D E ŒYn  ;
+      as follows:
+                              !
+                    1 nC3
+      2EŒXn    
+                    4  3
+

@@ -1,0 +1,52 @@
+Index                                                                                 1265
+
+
+ﬂoating-point data type, 23                  full walk of a tree, 1114
+ﬂoor function (b c), 54                      fully parenthesized matrix-chain product, 370
+   in master theorem, 103–106                fully polynomial-time approximation scheme,
+ﬂoor instruction, 23                               1107
+ﬂow, 709–714                                    for subset sum, 1128–1134, 1139
+   aggregate, 863                            function, 1166–1168
+   augmentation of, 716                         Ackermann’s, 585
+   blocking, 765                                basis, 835
+   cancellation of, 717                         convex, 1199
+   excess, 736                                  ﬁnal-state, 996
+   integer-valued, 733                          hash, see hash function
+   net, across a cut, 720                       linear, 26, 845
+   value of, 710                                objective, 664, 847, 851
+ﬂow conservation, 709–710                       potential, 459
+ﬂow network, 709–714                            preﬁx, 1003–1004
+   corresponding to a bipartite graph, 732      quadratic, 27
+   cut of, 720–724                              reduction, 1067
+   with multiple sources and sinks, 712         sufﬁx, 996
+F LOYD -WARSHALL , 695                          transition, 995, 1001–1002, 1012 ex.
+F LOYD -WARSHALL 0, 699 ex.                  functional iteration, 58
+Floyd-Warshall algorithm, 693–697,           fundamental theorem of linear programming,
+      699–700 ex., 706                             892
+   multithreaded, 797 ex.                    furthest-in-future strategy, 449 pr.
+F ORD -F ULKERSON, 724                       fusion tree, 212, 483
+Ford-Fulkerson method, 714–731, 765          fuzzy sorting, 189 pr.
+F ORD -F ULKERSON -M ETHOD, 715
+forest, 1172–1173                            Gabow’s scaling algorithm for single-source
+   depth-ﬁrst, 603                                 shortest paths, 679 pr.
+   disjoint-set, 568–572                     gap character, 989 ex., 1002 ex.
+for, in pseudocode, 20–21                    gap heuristic, 760 ex., 766
+   and loop invariants, 19 n.                garbage collection, 151, 243
+formal power series, 108 pr.                 gate, 1070
+formula satisﬁability, 1079–1081, 1105       Gaussian elimination, 819, 842
+forward edge, 609                            gcd, see greatest common divisor
+forward substitution, 816–817                general number-ﬁeld sieve, 984
+Fourier transform, see discrete Fourier      generating function, 108 pr.
+      transform, fast Fourier transform      generator
+fractional knapsack problem, 426, 428 ex.       of a subgroup, 944
+free agent, 411 pr.                             of Zn , 955
+freeing of objects, 243–244                  G ENERIC -MST, 626
+free list, 243                               G ENERIC -P USH -R ELABEL, 741
+F REE -O BJECT , 244                         generic push-relabel algorithm, 740–748
+free tree, 1172–1176                         geometric distribution, 1202–1203
+frequency domain, 898                           and balls and bins, 134
+full binary tree, 1178, 1180 ex.             geometric series, 1147
+   relation to optimal code, 430             geometry, computational, 1014–1047
+full node, 489                               GF.2/, 1227 pr.
+full rank, 1223                              gift wrapping, 1037, 1047
+

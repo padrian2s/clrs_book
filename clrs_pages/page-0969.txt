@@ -1,0 +1,41 @@
+948   Chapter 31 Number-Theoretic Algorithms
+
+
+      the length-.n=d / block of values hai repeats exactly d times as i increases from 0
+      to n1. The indices x of the d positions for which ax mod n D b are the solutions
+      of the equation ax  b .mod n/.
+
+      Theorem 31.23
+      Let d D gcd.a; n/, and suppose that d D ax 0 C ny 0 for some integers x 0 and y 0
+      (for example, as computed by E XTENDED -E UCLID). If d j b, then the equation
+      ax  b .mod n/ has as one of its solutions the value x0 , where
+      x0 D x 0 .b=d / mod n :
+
+      Proof    We have
+      ax0  ax 0 .b=d / .mod n/
+           d.b=d / .mod n/                  (because ax 0  d .mod n/)
+           b           .mod n/ ;
+      and thus x0 is a solution to ax  b .mod n/.
+
+      Theorem 31.24
+      Suppose that the equation ax  b .mod n/ is solvable (that is, d j b, where
+      d D gcd.a; n/) and that x0 is any solution to this equation. Then, this equa-
+      tion has exactly d distinct solutions, modulo n, given by xi D x0 C i.n=d / for
+      i D 0; 1; : : : ; d  1.
+
+      Proof Because n=d > 0 and 0  i.n=d / < n for i D 0; 1; : : : ; d  1, the
+      values x0 ; x1 ; : : : ; xd 1 are all distinct, modulo n. Since x0 is a solution of ax  b
+      .mod n/, we have ax0 mod n  b .mod n/. Thus, for i D 0; 1; : : : ; d  1, we
+      have
+      axi mod n D a.x0 C i n=d / mod n
+                D .ax0 C ai n=d / mod n
+                D ax0 mod n (because d j a implies that ai n=d is a multiple of n)
+                 b .mod n/ ;
+      and hence axi  b .mod n/, making xi a solution, too. By Corollary 31.22, the
+      equation ax  b .mod n/ has exactly d solutions, so that x0 ; x1 ; : : : ; xd 1 must
+      be all of them.
+
+        We have now developed the mathematics needed to solve the equation ax  b
+      .mod n/; the following algorithm prints all solutions to this equation. The inputs
+      a and n are arbitrary positive integers, and b is an arbitrary integer.
+

@@ -1,0 +1,43 @@
+            16.1 An activity-selection problem                                                    415
+
+
+            this chapter and Chapter 23 independently of each other, you might ﬁnd it useful
+            to read them together.
+
+
+16.1 An activity-selection problem
+
+            Our ﬁrst example is the problem of scheduling several competing activities that re-
+            quire exclusive use of a common resource, with a goal of selecting a maximum-size
+            set of mutually compatible activities. Suppose we have a set S D fa1 ; a2 ; : : : ; an g
+            of n proposed activities that wish to use a resource, such as a lecture hall, which
+            can serve only one activity at a time. Each activity ai has a start time si and a ﬁnish
+            time fi , where 0  si < fi < 1. If selected, activity ai takes place during the
+            half-open time interval Œsi ; fi /. Activities ai and aj are compatible if the intervals
+            Œsi ; fi / and Œsj ; fj / do not overlap. That is, ai and aj are compatible if si  fj
+            or sj  fi . In the activity-selection problem, we wish to select a maximum-size
+            subset of mutually compatible activities. We assume that the activities are sorted
+            in monotonically increasing order of ﬁnish time:
+            f1  f2  f3      fn1  fn :                                                 (16.1)
+            (We shall see later the advantage that this assumption provides.) For example,
+            consider the following set S of activities:
+            i    1   2   3    4   5   6     7    8     9   10   11
+            si   1   3   0    5   3   5     6    8     8    2   12
+            fi   4   5   6    7   9   9    10    11   12   14   16
+
+            For this example, the subset fa3 ; a9 ; a11 g consists of mutually compatible activities.
+            It is not a maximum subset, however, since the subset fa1 ; a4 ; a8 ; a11 g is larger. In
+            fact, fa1 ; a4 ; a8 ; a11 g is a largest subset of mutually compatible activities; another
+            largest subset is fa2 ; a4 ; a9 ; a11 g.
+                We shall solve this problem in several steps. We start by thinking about a
+            dynamic-programming solution, in which we consider several choices when deter-
+            mining which subproblems to use in an optimal solution. We shall then observe that
+            we need to consider only one choice—the greedy choice—and that when we make
+            the greedy choice, only one subproblem remains. Based on these observations, we
+            shall develop a recursive greedy algorithm to solve the activity-scheduling prob-
+            lem. We shall complete the process of developing a greedy solution by converting
+            the recursive algorithm to an iterative one. Although the steps we shall go through
+            in this section are slightly more involved than is typical when developing a greedy
+            algorithm, they illustrate the relationship between greedy algorithms and dynamic
+            programming.
+

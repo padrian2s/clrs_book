@@ -1,0 +1,44 @@
+Bibliography                                                                                 1235
+
+
+  [72] Alan Cobham. The intrinsic computational difﬁculty of functions. In Proceedings of the
+       1964 Congress for Logic, Methodology, and the Philosophy of Science, pages 24–30. North-
+       Holland, 1964.
+  [73] H. Cohen and H. W. Lenstra, Jr. Primality testing and Jacobi sums. Mathematics of Com-
+       putation, 42(165):297–330, 1984.
+  [74] D. Comer. The ubiquitous B-tree. ACM Computing Surveys, 11(2):121–137, 1979.
+  [75] Stephen Cook. The complexity of theorem proving procedures. In Proceedings of the Third
+       Annual ACM Symposium on Theory of Computing, pages 151–158, 1971.
+  [76] James W. Cooley and John W. Tukey. An algorithm for the machine calculation of complex
+       Fourier series. Mathematics of Computation, 19(90):297–301, 1965.
+  [77] Don Coppersmith. Modiﬁcations to the number ﬁeld sieve.            Journal of Cryptology,
+       6(3):169–180, 1993.
+  [78] Don Coppersmith and Shmuel Winograd. Matrix multiplication via arithmetic progression.
+       Journal of Symbolic Computation, 9(3):251–280, 1990.
+  [79] Thomas H. Cormen, Thomas Sundquist, and Leonard F. Wisniewski. Asymptotically tight
+       bounds for performing BMMC permutations on parallel disk systems. SIAM Journal on
+       Computing, 28(1):105–136, 1998.
+  [80] Don Dailey and Charles E. Leiserson. Using Cilk to write multiprocessor chess programs.
+       In H. J. van den Herik and B. Monien, editors, Advances in Computer Games, volume 9,
+       pages 25–52. University of Maastricht, Netherlands, 2001.
+  [81] Paolo D’Alberto and Alexandru Nicolau. Adaptive Strassen’s matrix multiplication. In
+       Proceedings of the 21st Annual International Conference on Supercomputing, pages 284–
+       292, June 2007.
+  [82] Sanjoy Dasgupta, Christos Papadimitriou, and Umesh Vazirani. Algorithms. McGraw-Hill,
+       2008.
+  [83] Roman Dementiev, Lutz Kettner, Jens Mehnert, and Peter Sanders. Engineering a sorted list
+       data structure for 32 bit keys. In Proceedings of the Sixth Workshop on Algorithm Engineer-
+       ing and Experiments and the First Workshop on Analytic Algorithmics and Combinatorics,
+       pages 142–151, January 2004.
+  [84] Camil Demetrescu and Giuseppe F. Italiano. Fully dynamic all pairs shortest paths with real
+       edge weights. Journal of Computer and System Sciences, 72(5):813–837, 2006.
+  [85] Eric V. Denardo and Bennett L. Fox. Shortest-route methods: 1. Reaching, pruning, and
+       buckets. Operations Research, 27(1):161–186, 1979.
+  [86] Martin Dietzfelbinger, Anna Karlin, Kurt Mehlhorn, Friedhelm Meyer auf der Heide, Hans
+       Rohnert, and Robert E. Tarjan. Dynamic perfect hashing: Upper and lower bounds. SIAM
+       Journal on Computing, 23(4):738–761, 1994.
+  [87] Whitﬁeld Difﬁe and Martin E. Hellman. New directions in cryptography. IEEE Transac-
+       tions on Information Theory, IT-22(6):644–654, 1976.
+  [88] E. W. Dijkstra. A note on two problems in connexion with graphs. Numerische Mathematik,
+       1(1):269–271, 1959.
+

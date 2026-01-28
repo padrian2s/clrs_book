@@ -1,0 +1,5 @@
+{
+  "page": 1122,
+  "title": "NP-Completeness",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 34</div>\n    <h1>NP-Completeness</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>VII: Selected Topics</h4>\n    <h3>Chapter 34: NP-Completeness</h3>\n    <p><em>Some problems are (probably) inherently hard</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>P: solvable in polynomial time</li>\n<li>NP: verifiable in polynomial time</li>\n<li>NP-complete: hardest problems in NP</li>\n<li>P = NP? The million-dollar question</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>Know what&#x27;s hard → don&#x27;t waste time on impossible solutions</p>\n</div>\n</div>"
+}

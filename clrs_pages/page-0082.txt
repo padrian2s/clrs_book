@@ -1,0 +1,46 @@
+           Problems for Chapter 3                                                             61
+
+
+
+
+Problems
+
+           3-1 Asymptotic behavior of polynomials
+           Let
+                    X
+                    d
+           p.n/ D           a i ni ;
+                     i D0
+
+           where ad > 0, be a degree-d polynomial in n, and let k be a constant. Use the
+           deﬁnitions of the asymptotic notations to prove the following properties.
+
+           a. If k  d , then p.n/ D O.nk /.
+
+           b. If k  d , then p.n/ D .nk /.
+
+           c. If k D d , then p.n/ D ‚.nk /.
+
+           d. If k > d , then p.n/ D o.nk /.
+
+           e. If k < d , then p.n/ D !.nk /.
+
+           3-2 Relative asymptotic growths
+           Indicate, for each pair of expressions .A; B/ in the table below, whether A is O, o,
+           , !, or ‚ of B. Assume that k  1,  > 0, and c > 1 are constants. Your answer
+           should be in the form of the table with “yes” or “no” written in each box.
+                  A             B       O   o              !        ‚
+           a.   lgk n           n
+           b.    nk             cn
+                 p
+           c.     n           nsin n
+           d.     2n          2n=2
+           e.    nlg c         c lg n
+           f.   lg.nŠ/       lg.nn /
+
+           3-3 Ordering by asymptotic growth rates
+           a. Rank the following functions by order of growth; that is, ﬁnd an arrangement
+              g1 ; g2 ; : : : ; g30 of the functions satisfying g1 D .g2 /, g2 D .g3 /, . . . ,
+              g29 D .g30 /. Partition your list into equivalence classes such that functions
+              f .n/ and g.n/ are in the same class if and only if f .n/ D ‚.g.n//.
+

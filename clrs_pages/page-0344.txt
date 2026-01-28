@@ -1,0 +1,38 @@
+           13.4 Deletion                                                                    323
+
+
+
+
+13.4 Deletion
+
+           Like the other basic operations on an n-node red-black tree, deletion of a node takes
+           time O.lg n/. Deleting a node from a red-black tree is a bit more complicated than
+           inserting a node.
+              The procedure for deleting a node from a red-black tree is based on the T REE -
+           D ELETE procedure (Section 12.3). First, we need to customize the T RANSPLANT
+           subroutine that T REE -D ELETE calls so that it applies to a red-black tree:
+
+           RB-T RANSPLANT .T; u; /
+           1 if u:p == T:nil
+           2      T:root D 
+           3 elseif u == u:p:left
+           4      u:p:left D 
+           5 else u:p:right D 
+           6 :p D u:p
+
+           The procedure RB-T RANSPLANT differs from T RANSPLANT in two ways. First,
+           line 1 references the sentinel T:nil instead of NIL. Second, the assignment to :p in
+           line 6 occurs unconditionally: we can assign to :p even if  points to the sentinel.
+           In fact, we shall exploit the ability to assign to :p when  D T:nil.
+              The procedure RB-D ELETE is like the T REE -D ELETE procedure, but with ad-
+           ditional lines of pseudocode. Some of the additional lines keep track of a node y
+           that might cause violations of the red-black properties. When we want to delete
+           node ´ and ´ has fewer than two children, then ´ is removed from the tree, and we
+           want y to be ´. When ´ has two children, then y should be ´’s successor, and y
+           moves into ´’s position in the tree. We also remember y’s color before it is re-
+           moved from or moved within the tree, and we keep track of the node x that moves
+           into y’s original position in the tree, because node x might also cause violations
+           of the red-black properties. After deleting node ´, RB-D ELETE calls an auxiliary
+           procedure RB-D ELETE -F IXUP, which changes colors and performs rotations to
+           restore the red-black properties.
+

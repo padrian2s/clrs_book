@@ -1,0 +1,48 @@
+1208        Appendix C   Counting and Probability
+
+
+            Pr fX 0  kg  Pr fX  kg :
+            (Hint: Show how to obtain the Bernoulli trials in A0 by an experiment involving
+            the trials of A, and use the result of Exercise C.3-7.)
+
+
+
+? C.5 The tails of the binomial distribution
+
+            The probability of having at least, or at most, k successes in n Bernoulli trials,
+            each with probability p of success, is often of more interest than the probability of
+            having exactly k successes. In this section, we investigate the tails of the binomial
+            distribution: the two regions of the distribution b.kI n; p/ that are far from the
+            mean np. We shall prove several important bounds on (the sum of all terms in) a
+            tail.
+               We ﬁrst provide a bound on the right tail of the distribution b.kI n; p/. We can
+            determine bounds on the left tail by inverting the roles of successes and failures.
+
+            Theorem C.2
+            Consider a sequence of n Bernoulli trials, where success occurs with probability p.
+            Let X be the random variable denoting the total number of successes. Then for
+            0  k  n, the probability of at least k successes is
+                                X
+                                n
+            Pr fX  kg D               b.iI n; p/
+                                i Dk
+                                    !
+                                  n k
+                                     p :
+                                  k
+
+
+            Proof For S  f1; 2; : : : ; ng, we let AS denote the event that the ith trial is a
+            success for every i 2 S. Clearly Pr fAS g D p k if jSj D k. We have
+            Pr fX  kg D Pr fthere exists S  f1; 2; : : : ; ng W jSj D k and AS g
+                                   [         
+                       D Pr                AS
+                                       Sf1;2;:::;ngWjSjDk
+                                         X
+                                                 Pr fAS g   (by inequality (C.19))
+                                Sf1;2;:::;ngWjSjDk
+                                    !
+                                  n k
+                           D          p :
+                                  k
+

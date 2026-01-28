@@ -1,0 +1,38 @@
+80   Chapter 4 Divide-and-Conquer
+
+
+     We have traded off one matrix multiplication for a constant number of matrix ad-
+     ditions. Once we understand recurrences and their solutions, we shall see that this
+     tradeoff actually leads to a lower asymptotic running time. By the master method
+     in Section 4.5, recurrence (4.18) has the solution T .n/ D ‚.nlg 7 /.
+        We now proceed to describe the details. In step 2, we create the following 10
+     matrices:
+     S1     D   B12  B22 ;
+     S2     D   A11 C A12 ;
+     S3     D   A21 C A22 ;
+     S4     D   B21  B11 ;
+     S5     D   A11 C A22 ;
+     S6     D   B11 C B22 ;
+     S7     D   A12  A22 ;
+     S8     D   B21 C B22 ;
+     S9     D   A11  A21 ;
+     S10    D   B11 C B12 :
+     Since we must add or subtract n=2 n=2 matrices 10 times, this step does indeed
+     take ‚.n2 / time.
+        In step 3, we recursively multiply n=2 n=2 matrices seven times to compute the
+     following n=2 n=2 matrices, each of which is the sum or difference of products
+     of A and B submatrices:
+     P1    D A11  S1   D A11  B12  A11  B22 ;
+     P2    D S2  B22   D A11  B22 C A12  B22 ;
+     P3    D S3  B11   D A21  B11 C A22  B11 ;
+     P4    D A22  S4   D A22  B21  A22  B11 ;
+     P5    D S5  S6    D A11  B11 C A11  B22 C A22  B11 C A22  B22 ;
+     P6    D S7  S8    D A12  B21 C A12  B22  A22  B21  A22  B22 ;
+     P7    D S9  S10   D A11  B11 C A11  B12  A21  B11  A21  B12 :
+     Note that the only multiplications we need to perform are those in the middle col-
+     umn of the above equations. The right-hand column just shows what these products
+     equal in terms of the original submatrices created in step 1.
+       Step 4 adds and subtracts the Pi matrices created in step 3 to construct the four
+     n=2 n=2 submatrices of the product C . We start with
+     C11 D P5 C P4  P2 C P6 :
+

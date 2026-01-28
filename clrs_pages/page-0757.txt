@@ -1,0 +1,48 @@
+736        Chapter 26 Maximum Flow
+
+
+           that is, the set of vertices adjacent to some member of X . Prove Hall’s theorem:
+           there exists a perfect matching in G if and only if jAj  jN.A/j for every subset
+           A  L.
+
+           26.3-5 ?
+           We say that a bipartite graph G D .V; E/, where V D L [ R, is d-regular if every
+           vertex  2 V has degree exactly d . Every d -regular bipartite graph has jLj D jRj.
+           Prove that every d -regular bipartite graph has a matching of cardinality jLj by
+           arguing that a minimum cut of the corresponding ﬂow network has capacity jLj.
+
+
+
+? 26.4 Push-relabel algorithms
+
+           In this section, we present the “push-relabel” approach to computing maximum
+           ﬂows. To date, many of the asymptotically fastest maximum-ﬂow algorithms are
+           push-relabel algorithms, and the fastest actual implementations of maximum-ﬂow
+           algorithms are based on the push-relabel method. Push-relabel methods also efﬁ-
+           ciently solve other ﬂow problems, such as the minimum-cost ﬂow problem. This
+           section introduces Goldberg’s “generic” maximum-ﬂow algorithm, which has a
+           simple implementation that runs in O.V 2 E/ time, thereby improving upon the
+           O.VE 2 / bound of the Edmonds-Karp algorithm. Section 26.5 reﬁnes the generic
+           algorithm to obtain another push-relabel algorithm that runs in O.V 3 / time.
+              Push-relabel algorithms work in a more localized manner than the Ford-
+           Fulkerson method. Rather than examine the entire residual network to ﬁnd an aug-
+           menting path, push-relabel algorithms work on one vertex at a time, looking only
+           at the vertex’s neighbors in the residual network. Furthermore, unlike the Ford-
+           Fulkerson method, push-relabel algorithms do not maintain the ﬂow-conservation
+           property throughout their execution. They do, however, maintain a preﬂow, which
+           is a function f W V V ! R that satisﬁes the capacity constraint and the following
+           relaxation of ﬂow conservation:
+           X               X
+                f .; u/     f .u; /  0
+           2V           2V
+
+           for all vertices u 2 V  fsg. That is, the ﬂow into a vertex may exceed the ﬂow
+           out. We call the quantity
+                    X               X
+           e.u/ D        f .; u/    f .u; /                                      (26.14)
+                   2V           2V
+
+           the excess ﬂow into vertex u. The excess at a vertex is the amount by which the
+           ﬂow in exceeds the ﬂow out. We say that a vertex u 2 V  fs; tg is overﬂowing if
+           e.u/ > 0.
+

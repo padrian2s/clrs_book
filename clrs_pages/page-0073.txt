@@ -1,0 +1,42 @@
+52   Chapter 3 Growth of Functions
+
+
+     Symmetry:
+
+        f .n/ D ‚.g.n// if and only if g.n/ D ‚.f .n// :
+
+     Transpose symmetry:
+
+        f .n/ D O.g.n// if and only if g.n/ D .f .n// ;
+        f .n/ D o.g.n//       if and only if g.n/ D !.f .n// :
+
+        Because these properties hold for asymptotic notations, we can draw an analogy
+     between the asymptotic comparison of two functions f and g and the comparison
+     of two real numbers a and b:
+     f .n/ D O.g.n//       is like   ab;
+     f .n/ D .g.n//       is like   ab;
+     f .n/ D ‚.g.n//       is like   aDb;
+     f .n/ D o.g.n//       is like   a<b;
+     f .n/ D !.g.n//       is like   a>b:
+     We say that f .n/ is asymptotically smaller than g.n/ if f .n/ D o.g.n//, and f .n/
+     is asymptotically larger than g.n/ if f .n/ D !.g.n//.
+        One property of real numbers, however, does not carry over to asymptotic nota-
+     tion:
+     Trichotomy: For any two real numbers a and b, exactly one of the following must
+        hold: a < b, a D b, or a > b.
+     Although any two real numbers can be compared, not all functions are asymptot-
+     ically comparable. That is, for two functions f .n/ and g.n/, it may be the case
+     that neither f .n/ D O.g.n// nor f .n/ D .g.n// holds. For example, we cannot
+     compare the functions n and n1Csin n using asymptotic notation, since the value of
+     the exponent in n1Csin n oscillates between 0 and 2, taking on all values in between.
+
+     Exercises
+
+     3.1-1
+     Let f .n/ and g.n/ be asymptotically nonnegative functions. Using the basic deﬁ-
+     nition of ‚-notation, prove that max.f .n/; g.n// D ‚.f .n/ C g.n//.
+
+     3.1-2
+     Show that for any real constants a and b, where b > 0,
+     .n C a/b D ‚.nb / :                                                             (3.2)
+

@@ -1,0 +1,67 @@
+           26.2 The Ford-Fulkerson method                                                                              717
+
+
+
+                 v1     12/12   v3                                                  v1       12          v3
+                                        15/                                                                        5
+    11    /16                              20                          5
+                                                                           11                4                15
+s                 1/4    4/9      7/7              t            s
+                                                                           5
+                                                                                1        3                7            t
+                                                                                                     5
+    8/1
+          3
+                 v2             v4        4/4                         8             v2
+                                                                                                 3
+                                                                                                         v4
+                                                                                                                   4
+                        11/14                                                                11
+                         (a)                                                                 (b)
+
+
+                 v1     12/12   v3                                                  v1       12          v3
+                                        19/                                                                        1
+    11    /16                                 20                       5
+                                                                           11                                 19
+s                 1/4     9       7/7              t            s
+                                                                           1
+                                                                                1        3       9        7            t
+    12/
+       13
+                 v2             v4        4/4                         12
+                                                                                    v2
+                                                                                                 3
+                                                                                                         v4
+                                                                                                                   4
+                        11/14                                                                11
+                         (c)                                                                 (d)
+
+
+
+           Figure 26.4 (a) The ﬂow network G and ﬂow f of Figure 26.1(b). (b) The residual network Gf
+           with augmenting path p shaded; its residual capacity is cf .p/ D cf .2 ; 3 / D 4. Edges with
+           residual capacity equal to 0, such as .1 ; 3 /, are not shown, a convention we follow in the remainder
+           of this section. (c) The ﬂow in G that results from augmenting along path p by its residual capacity 4.
+           Edges carrying no ﬂow, such as .3 ; 2 /, are labeled only by their capacity, another convention we
+           follow throughout. (d) The residual network induced by the ﬂow in (c).
+
+
+             The intuition behind this deﬁnition follows the deﬁnition of the residual network.
+           We increase the ﬂow on .u; / by f 0 .u; / but decrease it by f 0 .; u/ because
+           pushing ﬂow on the reverse edge in the residual network signiﬁes decreasing the
+           ﬂow in the original network. Pushing ﬂow on the reverse edge in the residual
+           network is also known as cancellation. For example, if we send 5 crates of hockey
+           pucks from u to  and send 2 crates from  to u, we could equivalently (from the
+           perspective of the ﬁnal result) just send 3 creates from u to  and none from  to u.
+           Cancellation of this type is crucial for any maximum-ﬂow algorithm.
+
+           Lemma 26.1
+           Let G D .V; E/ be a ﬂow network with source s and sink t, and let f be a ﬂow
+           in G. Let Gf be the residual network of G induced by f , and let f 0 be a ﬂow
+           in Gf . Then the function f " f 0 deﬁned in equation (26.4) is a ﬂow in G with
+           value jf " f 0 j D jf j C jf 0 j.
+
+           Proof We ﬁrst verify that f " f 0 obeys the capacity constraint for each edge in E
+           and ﬂow conservation at each vertex in V  fs; tg.
+

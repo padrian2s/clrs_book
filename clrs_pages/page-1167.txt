@@ -1,0 +1,58 @@
+1146   Appendix A     Summations
+
+
+       X
+       1
+             ak ;
+       kD1
+
+       which we interpret to mean
+              X
+              n
+       lim          ak :
+       n!1
+              kD1
+
+       If the limit does not exist, the series diverges; otherwise, it converges. The terms
+       of a convergent series cannot always be added in any order. We can, P       however,
+                                                                                     1
+       rearrange the terms Pof an absolutely convergent series, that is, a series kD1 ak
+                               1
+       for which the series kD1 jak j also converges.
+
+       Linearity
+       For any real number c and any ﬁnite sequences a1 ; a2 ; : : : ; an and b1 ; b2 ; : : : ; bn ,
+       X
+       n                       X
+                               n            X
+                                            n
+             .cak C bk / D c         ak C         bk :
+       kD1                     kD1          kD1
+
+       The linearity property also applies to inﬁnite convergent series.
+          We can exploit the linearity property to manipulate summations incorporating
+       asymptotic notation. For example,
+                                     !
+       Xn                   Xn
+           ‚.f .k// D ‚         f .k/ :
+       kD1                     kD1
+
+       In this equation, the ‚-notation on the left-hand side applies to the variable k, but
+       on the right-hand side, it applies to n. We can also apply such manipulations to
+       inﬁnite convergent series.
+
+       Arithmetic series
+       The summation
+       Xn
+          k D 1 C 2 C  C n ;
+       kD1
+
+       is an arithmetic series and has the value
+       X n
+                   1
+           k D       n.n C 1/                                                                  (A.1)
+                   2
+       kD1
+
+                D ‚.n2 / :                                                                     (A.2)
+

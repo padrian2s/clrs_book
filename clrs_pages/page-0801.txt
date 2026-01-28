@@ -1,0 +1,45 @@
+780   Chapter 27 Multithreaded Algorithms
+
+
+      path, so that if each strand takes unit time, its work is 17 time units and its span
+      is 8 time units.
+         The actual running time of a multithreaded computation depends not only on
+      its work and its span, but also on how many processors are available and how
+      the scheduler allocates strands to processors. To denote the running time of a
+      multithreaded computation on P processors, we shall subscript by P . For example,
+      we might denote the running time of an algorithm on P processors by TP . The
+      work is the running time on a single processor, or T1 . The span is the running time
+      if we could run each strand on its own processor—in other words, if we had an
+      unlimited number of processors—and so we denote the span by T1 .
+         The work and span provide lower bounds on the running time TP of a multi-
+      threaded computation on P processors:
+         In one step, an ideal parallel computer with P processors can do at most P
+          units of work, and thus in TP time, it can perform at most P TP work. Since the
+          total work to do is T1 , we have P TP  T1 . Dividing by P yields the work law:
+
+          TP  T1 =P :                                                             (27.2)
+
+         A P -processor ideal parallel computer cannot run any faster than a machine
+          with an unlimited number of processors. Looked at another way, a machine
+          with an unlimited number of processors can emulate a P -processor machine by
+          using just P of its processors. Thus, the span law follows:
+
+          TP  T1 :                                                                (27.3)
+
+         We deﬁne the speedup of a computation on P processors by the ratio T1 =TP ,
+      which says how many times faster the computation is on P processors than
+      on 1 processor. By the work law, we have TP  T1 =P , which implies that
+      T1 =TP  P . Thus, the speedup on P processors can be at most P . When the
+      speedup is linear in the number of processors, that is, when T1 =TP D ‚.P /, the
+      computation exhibits linear speedup, and when T1 =TP D P , we have perfect
+      linear speedup.
+         The ratio T1 =T1 of the work to the span gives the parallelism of the multi-
+      threaded computation. We can view the parallelism from three perspectives. As a
+      ratio, the parallelism denotes the average amount of work that can be performed in
+      parallel for each step along the critical path. As an upper bound, the parallelism
+      gives the maximum possible speedup that can be achieved on any number of pro-
+      cessors. Finally, and perhaps most important, the parallelism provides a limit on
+      the possibility of attaining perfect linear speedup. Speciﬁcally, once the number of
+      processors exceeds the parallelism, the computation cannot possibly achieve per-
+      fect linear speedup. To see this last point, suppose that P > T1 =T1 , in which case
+

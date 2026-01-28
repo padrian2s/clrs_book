@@ -1,0 +1,46 @@
+890   Chapter 29 Linear Programming
+
+
+                 4       9x1         x4
+       ´ D          C          
+                 5        5          5
+                 4        x1         x4
+      x2 D           C          C
+                 5         5         5
+                14       9x1         x4
+      x3 D                     C        :
+                5         5          5
+      This slack form has a feasible basic solution, and we can return it to procedure
+      S IMPLEX.
+         We now formally show the correctness of I NITIALIZE -S IMPLEX.
+
+      Lemma 29.12
+      If a linear program L has no feasible solution, then I NITIALIZE -S IMPLEX returns
+      “infeasible.” Otherwise, it returns a valid slack form for which the basic solution
+      is feasible.
+
+      Proof First suppose that the linear program L has no feasible solution. Then by
+      Lemma 29.11, the optimal objective value of Laux , deﬁned in (29.106)–(29.108),
+      is nonzero, and by the nonnegativity constraint on x0 , the optimal objective value
+      must be negative. Furthermore, this objective value must be ﬁnite, since setting
+      xi D 0, for i D 1; 2; : : : ; n, and x0 D jminm   i D1 fbi gj is feasible, and this solution
+      has objective value  jminm   i D1 fb i gj. Therefore,  line 10 of I NITIALIZE -S IMPLEX
+      ﬁnds a solution with a nonpositive objective value. Let xN be the basic solution
+      associated with the ﬁnal slack form. We cannot have xN 0 D 0, because then Laux
+      would have objective value 0, which contradicts that the objective value is negative.
+      Thus the test in line 11 results in line 16 returning “infeasible.”
+         Suppose now that the linear program L does have a feasible solution. From
+      Exercise 29.3-4, we know that if bi  0 for i D 1; 2; : : : ; m, then the basic solution
+      associated with the initial slack form is feasible. In this case, lines 2–3 return the
+      slack form associated with the input. (Converting the standard form to slack form
+      is easy, since A, b, and c are the same in both.)
+         In the remainder of the proof, we handle the case in which the linear program is
+      feasible but we do not return in line 3. We argue that in this case, lines 4–10 ﬁnd a
+      feasible solution to Laux with objective value 0. First, by lines 1–2, we must have
+      bk < 0 ;
+      and
+      bk  bi for each i 2 B :                                                          (29.112)
+      In line 8, we perform one pivot operation in which the leaving variable xl (recall
+      that l D n C k, so that bl < 0) is the left-hand side of the equation with mini-
+      mum bi , and the entering variable is x0 , the extra added variable. We now show
+

@@ -1,0 +1,41 @@
+734   Chapter 26 Maximum Flow
+
+
+         Intuitively, each edge .u; / 2 M corresponds to one unit of ﬂow in G 0 that
+      traverses the path s ! u !  ! t. Moreover, the paths induced by edges in M
+      are vertex-disjoint, except for s and t. The net ﬂow across cut .L [ fsg ; R [ ftg/
+      is equal to jM j; thus, by Lemma 26.4, the value of the ﬂow is jf j D jM j.
+         To prove the converse, let f be an integer-valued ﬂow in G 0 , and let
+      M D f.u; / W u 2 L;  2 R; and f .u; / > 0g :
+      Each vertex u 2 L has only one entering edge, namely .s; u/, and its capacity
+      is 1. Thus, each u 2 L has at most one unit of ﬂow entering it, and if one unit of
+      ﬂow does enter, by ﬂow conservation, one unit of ﬂow must leave. Furthermore,
+      since f is integer-valued, for each u 2 L, the one unit of ﬂow can enter on at most
+      one edge and can leave on at most one edge. Thus, one unit of ﬂow enters u if and
+      only if there is exactly one vertex  2 R such that f .u; / D 1, and at most one
+      edge leaving each u 2 L carries positive ﬂow. A symmetric argument applies to
+      each  2 R. The set M is therefore a matching.
+         To see that jM j D jf j, observe that for every matched vertex u 2 L, we have
+      f .s; u/ D 1, and for every edge .u; / 2 E  M , we have f .u; / D 0. Conse-
+      quently, f .L [ fsg ; R [ ftg/, the net ﬂow across cut .L [ fsg ; R [ ftg/, is equal
+      to jM j. Applying Lemma 26.4, we have that jf j D f .L [ fsg ; R [ ftg/ D jM j.
+
+         Based on Lemma 26.9, we would like to conclude that a maximum matching
+      in a bipartite graph G corresponds to a maximum ﬂow in its corresponding ﬂow
+      network G 0 , and we can therefore compute a maximum matching in G by running
+      a maximum-ﬂow algorithm on G 0 . The only hitch in this reasoning is that the
+      maximum-ﬂow algorithm might return a ﬂow in G 0 for which some f .u; / is
+      not an integer, even though the ﬂow value jf j must be an integer. The following
+      theorem shows that if we use the Ford-Fulkerson method, this difﬁculty cannot
+      arise.
+
+      Theorem 26.10 (Integrality theorem)
+      If the capacity function c takes on only integral values, then the maximum ﬂow f
+      produced by the Ford-Fulkerson method has the property that jf j is an integer.
+      Moreover, for all vertices u and , the value of f .u; / is an integer.
+
+      Proof The proof is by induction on the number of iterations. We leave it as
+      Exercise 26.3-2.
+
+        We can now prove the following corollary to Lemma 26.9.
+

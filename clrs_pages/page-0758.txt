@@ -1,0 +1,44 @@
+26.4 Push-relabel algorithms                                                       737
+
+
+  We shall begin this section by describing the intuition behind the push-relabel
+method. We shall then investigate the two operations employed by the method:
+“pushing” preﬂow and “relabeling” a vertex. Finally, we shall present a generic
+push-relabel algorithm and analyze its correctness and running time.
+
+Intuition
+You can understand the intuition behind the push-relabel method in terms of ﬂuid
+ﬂows: we consider a ﬂow network G D .V; E/ to be a system of interconnected
+pipes of given capacities. Applying this analogy to the Ford-Fulkerson method,
+we might say that each augmenting path in the network gives rise to an additional
+stream of ﬂuid, with no branch points, ﬂowing from the source to the sink. The
+Ford-Fulkerson method iteratively adds more streams of ﬂow until no more can be
+added.
+   The generic push-relabel algorithm has a rather different intuition. As before,
+directed edges correspond to pipes. Vertices, which are pipe junctions, have two
+interesting properties. First, to accommodate excess ﬂow, each vertex has an out-
+ﬂow pipe leading to an arbitrarily large reservoir that can accumulate ﬂuid. Second,
+each vertex, its reservoir, and all its pipe connections sit on a platform whose height
+increases as the algorithm progresses.
+   Vertex heights determine how ﬂow is pushed: we push ﬂow only downhill, that
+is, from a higher vertex to a lower vertex. The ﬂow from a lower vertex to a higher
+vertex may be positive, but operations that push ﬂow push it only downhill. We
+ﬁx the height of the source at jV j and the height of the sink at 0. All other vertex
+heights start at 0 and increase with time. The algorithm ﬁrst sends as much ﬂow as
+possible downhill from the source toward the sink. The amount it sends is exactly
+enough to ﬁll each outgoing pipe from the source to capacity; that is, it sends the
+capacity of the cut .s; V  fsg/. When ﬂow ﬁrst enters an intermediate vertex, it
+collects in the vertex’s reservoir. From there, we eventually push it downhill.
+   We may eventually ﬁnd that the only pipes that leave a vertex u and are not
+already saturated with ﬂow connect to vertices that are on the same level as u or
+are uphill from u. In this case, to rid an overﬂowing vertex u of its excess ﬂow, we
+must increase its height—an operation called “relabeling” vertex u. We increase
+its height to one unit more than the height of the lowest of its neighbors to which
+it has an unsaturated pipe. After a vertex is relabeled, therefore, it has at least one
+outgoing pipe through which we can push more ﬂow.
+   Eventually, all the ﬂow that can possibly get through to the sink has arrived there.
+No more can arrive, because the pipes obey the capacity constraints; the amount of
+ﬂow across any cut is still limited by the capacity of the cut. To make the preﬂow
+a “legal” ﬂow, the algorithm then sends the excess collected in the reservoirs of
+overﬂowing vertices back to the source by continuing to relabel vertices to above
+

@@ -1,0 +1,46 @@
+132   Chapter 5 Probabilistic Analysis and Randomized Algorithms
+
+
+      Pr fBk g D Pr fBk1 g Pr fAk j Bk1 g
+               D Pr fBk2 g Pr fAk1 j Bk2 g Pr fAk j Bk1 g
+               ::
+                :
+               D Pr fB1 g Pr fA2 j B1 g Pr fA3 j B2 g    Pr fAk j Bk1 g
+                                                        
+                      n1        n2           nkC1
+               D 1                       
+                        n          n               n
+                                                        
+                           1         2             k1
+               D 1 1          1         1                :
+                           n         n                 n
+      Inequality (3.12), 1 C x  e x , gives us
+      Pr fBk g  e 1=n e 2=n    e .k1/=n
+                        Pk1
+                D e  i D1 i=n
+                D e k.k1/=2n
+                 1=2
+      when k.k  1/=2n  ln.1=2/. The probability that all k birthdays are distinct
+      is at most 1=2
+                 p when k.k  1/  2n ln 2 or, solving the quadratic equation, when
+      k  .1 C 1 C .8 ln 2/n/=2. For n D 365, we must have k  23. Thus, if at
+      least 23 people are in a room, the probability is at least 1=2 that at least two people
+      have the same birthday. On Mars, a year is 669 Martian days long; it therefore
+      takes 31 Martians to get the same effect.
+
+      An analysis using indicator random variables
+      We can use indicator random variables to provide a simpler but approximate anal-
+      ysis of the birthday paradox. For each pair .i; j / of the k people in the room, we
+      deﬁne the indicator random variable Xij , for 1  i < j  k, by
+      Xij   D I fperson i and person j have the same birthdayg
+              (
+                 1 if person i and person j have the same birthday ;
+            D
+                 0 otherwise :
+      By equation (5.6), the probability that two people have matching birthdays is 1=n,
+      and thus by Lemma 5.1, we have
+      E ŒXij  D Pr fperson i and person j have the same birthdayg
+               D 1=n :
+      Letting X be the random variable that counts the number of pairs of individuals
+      having the same birthday, we have
+

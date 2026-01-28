@@ -1,0 +1,45 @@
+678        Chapter 24 Single-Source Shortest Paths
+
+
+
+
+Problems
+
+           24-1 Yen’s improvement to Bellman-Ford
+           Suppose that we order the edge relaxations in each pass of the Bellman-Ford al-
+           gorithm as follows. Before the ﬁrst pass, we assign an arbitrary linear order
+           1 ; 2 ; : : : ; jV j to the vertices of the input graph G D .V; E/. Then, we parti-
+           tion the edge set E into Ef [ Eb , where Ef D f.i ; j / 2 E W i < j g and
+           Eb D f.i ; j / 2 E W i > j g. (Assume that G contains no self-loops, so that every
+           edge is in either Ef or Eb .) Deﬁne Gf D .V; Ef / and Gb D .V; Eb /.
+
+           a. Prove that Gf is acyclic with topological sort h1 ; 2 ; : : : ; jV j i and that Gb is
+              acyclic with topological sort hjV j ; jV j1 ; : : : ; 1 i.
+
+           Suppose that we implement each pass of the Bellman-Ford algorithm in the fol-
+           lowing way. We visit each vertex in the order 1 ; 2 ; : : : ; jV j , relaxing edges of Ef
+           that leave the vertex. We then visit each vertex in the order jV j ; jV j1 ; : : : ; 1 ,
+           relaxing edges of Eb that leave the vertex.
+
+           b. Prove that with this scheme, if G contains no negative-weight cycles that are
+              reachable from the source vertex s, then after only djV j =2e passes over the
+              edges, :d D ı.s; / for all vertices  2 V .
+
+           c. Does this scheme improve the asymptotic running time of the Bellman-Ford
+              algorithm?
+
+           24-2 Nesting boxes
+           A d -dimensional box with dimensions .x1 ; x2 ; : : : ; xd / nests within another box
+           with dimensions .y1 ; y2 ; : : : ; yd / if there exists a permutation  on f1; 2; : : : ; d g
+           such that x.1/ < y1 , x.2/ < y2 , . . . , x.d / < yd .
+
+           a. Argue that the nesting relation is transitive.
+
+           b. Describe an efﬁcient method to determine whether or not one d -dimensional
+              box nests inside another.
+
+           c. Suppose that you are given a set of n d -dimensional boxes fB1 ; B2 ; : : : ; Bn g.
+              Give an efﬁcient algorithm to ﬁnd the longest sequence hBi1 ; Bi2 ; : : : ; Bik i of
+              boxes such that Bij nests within Bij C1 for j D 1; 2; : : : ; k  1. Express the
+              running time of your algorithm in terms of n and d .
+

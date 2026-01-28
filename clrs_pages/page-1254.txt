@@ -1,0 +1,45 @@
+Bibliography                                                                                   1233
+
+
+  [33] Surender Baswana, Ramesh Hariharan, and Sandeep Sen. Improved decremental algo-
+       rithms for maintaining transitive closure and all-pairs shortest paths. Journal of Algorithms,
+       62(2):74–92, 2007.
+  [34] R. Bayer. Symmetric binary B-trees: Data structure and maintenance algorithms. Acta
+       Informatica, 1(4):290–306, 1972.
+  [35] R. Bayer and E. M. McCreight. Organization and maintenance of large ordered indexes.
+       Acta Informatica, 1(3):173–189, 1972.
+  [36] Pierre Beauchemin, Gilles Brassard, Claude Crépeau, Claude Goutier, and Carl Pomerance.
+       The generation of random numbers that are probably prime. Journal of Cryptology, 1(1):53–
+       64, 1988.
+  [37] Richard Bellman. Dynamic Programming. Princeton University Press, 1957.
+  [38] Richard Bellman. On a routing problem. Quarterly of Applied Mathematics, 16(1):87–90,
+       1958.
+  [39] Michael Ben-Or. Lower bounds for algebraic computation trees. In Proceedings of the
+       Fifteenth Annual ACM Symposium on Theory of Computing, pages 80–86, 1983.
+  [40] Michael A. Bender, Erik D. Demaine, and Martin Farach-Colton. Cache-oblivious B-trees.
+       In Proceedings of the 41st Annual Symposium on Foundations of Computer Science, pages
+       399–409, 2000.
+  [41] Samuel W. Bent and John W. John. Finding the median requires 2n comparisons. In Pro-
+       ceedings of the Seventeenth Annual ACM Symposium on Theory of Computing, pages 213–
+       216, 1985.
+  [42] Jon L. Bentley. Writing Efﬁcient Programs. Prentice Hall, 1982.
+  [43] Jon L. Bentley. Programming Pearls. Addison-Wesley, 1986.
+  [44] Jon L. Bentley, Dorothea Haken, and James B. Saxe. A general method for solving divide-
+       and-conquer recurrences. SIGACT News, 12(3):36–44, 1980.
+  [45] Daniel Bienstock and Benjamin McClosky. Tightening simplex mixed-integer sets with
+       guaranteed bounds. Optimization Online, July 2008.
+  [46] Patrick Billingsley. Probability and Measure. John Wiley & Sons, second edition, 1986.
+  [47] Guy E. Blelloch. Scan Primitives and Parallel Vector Models. PhD thesis, Department of
+       Electrical Engineering and Computer Science, MIT, 1989. Available as MIT Laboratory for
+       Computer Science Technical Report MIT/LCS/TR-463.
+  [48] Guy E. Blelloch. Programming parallel algorithms.            Communications of the ACM,
+       39(3):85–97, 1996.
+  [49] Guy E. Blelloch, Phillip B. Gibbons, and Yossi Matias. Provably efﬁcient scheduling for
+       languages with ﬁne-grained parallelism. In Proceedings of the 7th Annual ACM Symposium
+       on Parallel Algorithms and Architectures, pages 1–12, 1995.
+  [50] Manuel Blum, Robert W. Floyd, Vaughan Pratt, Ronald L. Rivest, and Robert E. Tarjan.
+       Time bounds for selection. Journal of Computer and System Sciences, 7(4):448–461, 1973.
+  [51] Robert D. Blumofe, Christopher F. Joerg, Bradley C. Kuszmaul, Charles E. Leiserson,
+       Keith H. Randall, and Yuli Zhou. Cilk: An efﬁcient multithreaded runtime system. Journal
+       of Parallel and Distributed Computing, 37(1):55–69, 1996.
+

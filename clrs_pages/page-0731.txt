@@ -1,0 +1,53 @@
+710               Chapter 26 Maximum Flow
+
+
+                   Edmonton             Saskatoon
+                       v1         12       v3                                       v1      12/12   v3
+                                                    20                          6                          15/
+ Vancouver   16                                             Winnipeg        1/1                               20
+                                                                           1
+       s                 4         9        7                t         s              1/4    4/9     7/7           t
+
+             13                                                            8/1
+                       v2                  v4
+                                                        4                      3
+                                                                                    v2              v4       4/4
+                                  14                                                        11/14
+                    Calgary              Regina
+                                  (a)                                                        (b)
+
+
+
+                  Figure 26.1 (a) A ﬂow network G D .V; E/ for the Lucky Puck Company’s trucking problem.
+                  The Vancouver factory is the source s, and the Winnipeg warehouse is the sink t. The company ships
+                  pucks through intermediate cities, but only c.u; / crates per day can go from city u to city . Each
+                  edge is labeled with its capacity. (b) A ﬂow f in G with value jf j D 19. Each edge .u; / is labeled
+                  by f .u; /=c.u; /. The slash notation merely separates the ﬂow and capacity; it does not indicate
+                  division.
+
+
+                     We call the nonnegative quantity f .u; / the ﬂow from vertex u to vertex . The
+                  value jf j of a ﬂow f is deﬁned as
+                         X               X
+                  jf j D      f .s; /    f .; s/ ;                                          (26.1)
+                            2V                   2V
+
+                  that is, the total ﬂow out of the source minus the ﬂow into the source. (Here, the jj
+                  notation denotes ﬂow value, not absolute value or cardinality.) Typically, a ﬂow
+                  network will not haveP any edges into the source, and the ﬂow into the source, given
+                  by the summation 2V f .; s/, will be 0. We include it, however, because when
+                  we introduce residual networks later in this chapter, the ﬂow into the source will
+                  become signiﬁcant. In the maximum-ﬂow problem, we are given a ﬂow network G
+                  with source s and sink t, and we wish to ﬁnd a ﬂow of maximum value.
+                     Before seeing an example of a network-ﬂow problem, let us brieﬂy explore the
+                  deﬁnition of ﬂow and the two ﬂow properties. The capacity constraint simply
+                  says that the ﬂow from one vertex to another must be nonnegative and must not
+                  exceed the given capacity. The ﬂow-conservation property says that the total ﬂow
+                  into a vertex other than the source or sink must equal the total ﬂow out of that
+                  vertex—informally, “ﬂow in equals ﬂow out.”
+
+                  An example of ﬂow
+                  A ﬂow network can model the trucking problem shown in Figure 26.1(a). The
+                  Lucky Puck Company has a factory (source s) in Vancouver that manufactures
+                  hockey pucks, and it has a warehouse (sink t) in Winnipeg that stocks them. Lucky
+

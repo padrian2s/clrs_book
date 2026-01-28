@@ -1,0 +1,52 @@
+38   Chapter 2 Getting Started
+
+
+
+
+     T(n)                        cn                                               cn
+
+
+
+
+                     T(n/2)            T(n/2)                    cn/2                            cn/2
+
+
+
+
+                                                        T(n/4)           T(n/4)         T(n/4)          T(n/4)
+
+     (a)                         (b)                                              (c)
+
+
+
+
+                                             cn                                           cn
+
+
+
+
+                          cn/2                                cn/2                        cn
+
+
+
+     lg n
+                   cn/4           cn/4                 cn/4          cn/4                 cn
+
+
+
+                                                                                         …
+
+               c      c       c          c         c     …           c      c             cn
+
+
+                                             n
+
+                                             (d)                         Total: cn lg n + cn
+
+
+
+     Figure 2.5 How to construct a recursion tree for the recurrence T .n/ D 2T .n=2/ C cn.
+     Part (a) shows T .n/, which progressively expands in (b)–(d) to form the recursion tree. The fully
+     expanded tree in part (d) has lg n C 1 levels (i.e., it has height lg n, as indicated), and each level
+     contributes a total cost of cn. The total cost, therefore, is cn lg n C cn, which is ‚.n lg n/.
+

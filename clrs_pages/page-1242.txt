@@ -1,0 +1,46 @@
+D.1 Matrices and matrix operations                                                1221
+
+
+We use the negative of a matrix to deﬁne matrix subtraction: A  B D A C .B/.
+   We deﬁne matrix multiplication as follows. We start with two matrices A and B
+that are compatible in the sense that the number of columns of A equals the number
+of rows of B. (In general, an expression containing a matrix product AB is always
+assumed to imply that matrices A and B are compatible.) If A D .ai k / is an m n
+matrix and B D .bkj / is an n p matrix, then their matrix product C D AB is the
+m p matrix C D .cij /, where
+        X
+        n
+cij D         ai k bkj                                                           (D.2)
+        kD1
+
+for i D 1; 2; : : : ; m and j D 1; 2; : : : ; p. The procedure S QUARE -M ATRIX -
+M ULTIPLY in Section 4.2 implements matrix multiplication in the straightfor-
+ward manner based on equation (D.2), assuming that the matrices are square:
+m D n D p. To multiply n n matrices, S QUARE -M ATRIX -M ULTIPLY per-
+forms n3 multiplications and n2 .n  1/ additions, and so its running time is ‚.n3 /.
+   Matrices have many (but not all) of the algebraic properties typical of numbers.
+Identity matrices are identities for matrix multiplication:
+Im A D AIn D A
+for any m        n matrix A. Multiplying by a zero matrix gives a zero matrix:
+A0 D 0 :
+Matrix multiplication is associative:
+A.BC / D .AB/C
+for compatible matrices A, B, and C . Matrix multiplication distributes over addi-
+tion:
+A.B C C / D AB C AC ;
+.B C C /D D BD C CD :
+For n> 1, multiplication
+                       of n n matrices is not commutative. For example, if
+       0 1                0 0
+AD            and B D          , then
+       0 0                1 0
+             
+        1 0
+AB D
+        0 0
+and
+                   
+            0 0
+BA D                     :
+            0 1
+

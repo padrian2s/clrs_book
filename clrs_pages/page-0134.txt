@@ -1,0 +1,27 @@
+Notes for Chapter 4                                                           113
+
+
+   bi is a constant in the range 0 < bi < 1 for i D 1; 2; : : : ; k,
+   k  1 is an integer constant, and
+   f .x/ is a nonnegative function that satisﬁes the polynomial-growth condi-
+    tion: there exist positive constants c1 and c2 such that for all x  1, for
+    i D 1; 2; : : : ; k, and for all u such that bi x  u  x, we have c1 f .x/ 
+    f .u/  c2 f .x/. (If jf 0 .x/j is upper-bounded by some polynomial in x, then
+    f .x/ satisﬁes the polynomial-growth condition. For example, f .x/ D x ˛ lgˇ x
+    satisﬁes this condition for any real constants ˛ and ˇ.)
+Although the master method does not apply to a recurrence such as T .n/ D
+T .bn=3c/ C T .b2n=3c/ C O.n/, the Akra-Bazzi method does. To solve the re-
+                                                                 Pk
+currence (4.30), we ﬁrst ﬁnd the unique real number p such that i D1 ai bip D 1.
+(Such a p always exists.) The solution to the recurrence is then
+                   Z x           
+              p           f .u/
+T .n/ D ‚ x 1 C            pC1
+                                du      :
+                       1 u
+
+The Akra-Bazzi method can be somewhat difﬁcult to use, but it serves in solving
+recurrences that model division of the problem into substantially unequally sized
+subproblems. The master method is simpler to use, but it applies only when sub-
+problem sizes are equal.
+

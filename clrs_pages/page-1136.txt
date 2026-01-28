@@ -1,0 +1,45 @@
+35.2 The traveling-salesman problem                                             1115
+
+
+ery vertex is visited exactly once, and in fact it is the cycle computed by A PPROX -
+TSP-T OUR. Since H is obtained by deleting vertices from the full walk W , we
+have
+c.H /  c.W / :                                                               (35.7)
+                                                                
+Combining inequalities (35.6) and (35.7) gives c.H /  2c.H /, which completes
+the proof.
+
+   In spite of the nice approximation ratio provided by Theorem 35.2, A PPROX -
+TSP-T OUR is usually not the best practical choice for this problem. There are other
+approximation algorithms that typically perform much better in practice. (See the
+references at the end of this chapter.)
+
+35.2.2   The general traveling-salesman problem
+If we drop the assumption that the cost function c satisﬁes the triangle inequality,
+then we cannot ﬁnd good approximate tours in polynomial time unless P D NP.
+
+Theorem 35.3
+If P ¤ NP, then for any constant   1, there is no polynomial-time approximation
+algorithm with approximation ratio  for the general traveling-salesman problem.
+
+Proof The proof is by contradiction. Suppose to the contrary that for some num-
+ber   1, there is a polynomial-time approximation algorithm A with approx-
+imation ratio . Without loss of generality, we assume that  is an integer, by
+rounding it up if necessary. We shall then show how to use A to solve instances
+of the hamiltonian-cycle problem (deﬁned in Section 34.2) in polynomial time.
+Since Theorem 34.13 tells us that the hamiltonian-cycle problem is NP-complete,
+Theorem 34.4 implies that if we can solve it in polynomial time, then P D NP.
+   Let G D .V; E/ be an instance of the hamiltonian-cycle problem. We wish to
+determine efﬁciently whether G contains a hamiltonian cycle by making use of
+the hypothesized approximation algorithm A. We turn G into an instance of the
+traveling-salesman problem as follows. Let G 0 D .V; E 0 / be the complete graph
+on V ; that is,
+E 0 D f.u; / W u;  2 V and u ¤ g :
+Assign an integer cost to each edge in E 0 as follows:
+          (
+            1            if .u; / 2 E ;
+c.u; / D
+             jV j C 1 otherwise :
+We can create representations of G 0 and c from a representation of G in time poly-
+nomial in jV j and jEj.
+

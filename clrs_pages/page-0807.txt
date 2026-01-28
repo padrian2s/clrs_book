@@ -1,0 +1,52 @@
+786               Chapter 27 Multithreaded Algorithms
+
+
+
+
+                                                    1,8
+
+
+
+
+                           1,4                                                          5,8
+
+
+
+
+            1,2                           3,4                            5,6                            7,8
+
+
+
+
+      1,1            2,2            3,3             4,4            5,5            6,6             7,7            8,8
+
+
+
+                  Figure 27.4 A dag representing the computation of M AT-V EC -M AIN -L OOP.A; x; y; 8; 1; 8/. The
+                  two numbers within each rounded rectangle give the values of the last two parameters (i and i 0 in
+                  the procedure header) in the invocation (spawn or call) of the procedure. The black circles repre-
+                  sent strands corresponding to either the base case or the part of the procedure up to the spawn of
+                  M AT-V EC -M AIN -L OOP in line 5; the shaded circles represent strands corresponding to the part of
+                  the procedure that calls M AT-V EC -M AIN -L OOP in line 6 up to the sync in line 7, where it suspends
+                  until the spawned subroutine in line 5 returns; and the white circles represent strands corresponding
+                  to the (negligible) part of the procedure after the sync up to the point where it returns.
+
+
+                  M AT-V EC -M AIN -L OOP .A; x; y; n; i; i 0 /
+                  1 if i == i 0
+                  2      for j D 1 to n
+                  3             yi D yi C aij xj
+                  4 else mid D b.i C i 0 /=2c
+                  5      spawn M AT-V EC -M AIN -L OOP .A; x; y; n; i; mid/
+                  6       M AT-V EC -M AIN -L OOP .A; x; y; n; mid C 1; i 0 /
+                  7      sync
+
+                  This code recursively spawns the ﬁrst half of the iterations of the loop to execute
+                  in parallel with the second half of the iterations and then executes a sync, thereby
+                  creating a binary tree of execution where the leaves are individual loop iterations,
+                  as shown in Figure 27.4.
+                     To calculate the work T1 .n/ of M AT-V EC on an n n matrix, we simply compute
+                  the running time of its serialization, which we obtain by replacing the parallel for
+                  loops with ordinary for loops. Thus, we have T1 .n/ D ‚.n2 /, because the qua-
+                  dratic running time of the doubly nested loops in lines 5–7 dominates. This analysis
+

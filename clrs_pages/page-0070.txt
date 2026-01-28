@@ -1,0 +1,44 @@
+3.1 Asymptotic notation                                                             49
+
+
+   When we say that the running time (no modiﬁer) of an algorithm is .g.n//,
+we mean that no matter what particular input of size n is chosen for each value
+of n, the running time on that input is at least a constant times g.n/, for sufﬁciently
+large n. Equivalently, we are giving a lower bound on the best-case running time
+of an algorithm. For example, the best-case running time of insertion sort is .n/,
+which implies that the running time of insertion sort is .n/.
+   The running time of insertion sort therefore belongs to both .n/ and O.n2 /,
+since it falls anywhere between a linear function of n and a quadratic function of n.
+Moreover, these bounds are asymptotically as tight as possible: for instance, the
+running time of insertion sort is not .n2 /, since there exists an input for which
+insertion sort runs in ‚.n/ time (e.g., when the input is already sorted). It is not
+contradictory, however, to say that the worst-case running time of insertion sort
+is .n2 /, since there exists an input that causes the algorithm to take .n2 / time.
+
+Asymptotic notation in equations and inequalities
+We have already seen how asymptotic notation can be used within mathematical
+formulas. For example, in introducing O-notation, we wrote “n D O.n2 /.” We
+might also write 2n2 C 3n C 1 D 2n2 C ‚.n/. How do we interpret such formulas?
+   When the asymptotic notation stands alone (that is, not within a larger formula)
+on the right-hand side of an equation (or inequality), as in n D O.n2 /, we have
+already deﬁned the equal sign to mean set membership: n 2 O.n2 /. In general,
+however, when asymptotic notation appears in a formula, we interpret it as stand-
+ing for some anonymous function that we do not care to name. For example, the
+formula 2n2 C 3n C 1 D 2n2 C ‚.n/ means that 2n2 C 3n C 1 D 2n2 C f .n/,
+where f .n/ is some function in the set ‚.n/. In this case, we let f .n/ D 3n C 1,
+which indeed is in ‚.n/.
+   Using asymptotic notation in this manner can help eliminate inessential detail
+and clutter in an equation. For example, in Chapter 2 we expressed the worst-case
+running time of merge sort as the recurrence
+T .n/ D 2T .n=2/ C ‚.n/ :
+If we are interested only in the asymptotic behavior of T .n/, there is no point in
+specifying all the lower-order terms exactly; they are all understood to be included
+in the anonymous function denoted by the term ‚.n/.
+   The number of anonymous functions in an expression is understood to be equal
+to the number of times the asymptotic notation appears. For example, in the ex-
+pression
+X
+n
+       O.i/ ;
+i D1
+

@@ -1,0 +1,53 @@
+834   Chapter 28 Matrix Operations
+
+
+         We now turn to some essential properties of the Schur complement. Let A be
+      a symmetric positive-deﬁnite matrix, and let Ak be a leading k k submatrix
+      of A. Partition A once again according to equation (28.14). We generalize equa-
+      tion (28.9) to deﬁne the Schur complement S of A with respect to Ak as
+      S D C  BA1 T
+                k B :                                                                (28.15)
+      (By Lemma 28.4, Ak is symmetric and positive-deﬁnite; therefore, A1 k exists by
+      Lemma 28.3, and S is well deﬁned.) Note that our earlier deﬁnition (28.9) of the
+      Schur complement is consistent with equation (28.15), by letting k D 1.
+         The next lemma shows that the Schur-complement matrices of symmetric posi-
+      tive-deﬁnite matrices are themselves symmetric and positive-deﬁnite. We used this
+      result in Theorem 28.2, and we need its corollary to prove the correctness of LU
+      decomposition for symmetric positive-deﬁnite matrices.
+
+      Lemma 28.5 (Schur complement lemma)
+      If A is a symmetric positive-deﬁnite matrix and Ak is a leading k k submatrix
+      of A, then the Schur complement S of A with respect to Ak is symmetric and
+      positive-deﬁnite.
+
+      Proof Because A is symmetric, so is the submatrix C . By Exercise D.2-6, the
+      product BA1       T
+                   k B is symmetric, and by Exercise D.1-1, S is symmetric.
+          It remains to show that S is positive-deﬁnite. Consider the partition of A given in
+      equation (28.14). For any nonzero vector x, we have x T Ax > 0 by the assumption
+      that A is positive-deﬁnite. Let us break x into two subvectors y and ´ compatible
+      with Ak and C , respectively. Because A1   k exists, we have
+                                                
+        T               T   T     Ak B T        y
+      x Ax D . y ´ /
+                                  B C           ´
+                                            T
+                                                
+                                  Ak y C B ´
+                D . y T ´T /
+                                   By C C ´
+              D y T Ak y C y T B T ´ C ´T By C ´T C ´
+              D .y C A1    T    T           1 T     T    1 T
+                         k B ´/ Ak .y C Ak B ´/ C ´ .C  BAk B /´ ;                  (28.16)
+      by matrix magic. (Verify by multiplying through.) This last equation amounts to
+      “completing the square” of the quadratic form. (See Exercise 28.3-2.)
+         Since x T Ax > 0 holds for any nonzero x, let us pick any nonzero ´ and then
+      choose y D A1     T
+                      k B ´, which causes the ﬁrst term in equation (28.16) to vanish,
+      leaving
+      ´T .C  BA1 T      T
+                k B /´ D ´ S´
+
+      as the value of the expression. For any ´ ¤ 0, we therefore have ´T S´ D
+      x T Ax > 0, and thus S is positive-deﬁnite.
+

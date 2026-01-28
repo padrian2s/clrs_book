@@ -1,0 +1,43 @@
+968   Chapter 31 Number-Theoretic Algorithms
+
+
+      As we shall see, a little more cleverness, and some randomization, will yield a
+      primality-testing routine that works well on all inputs.
+         Unfortunately, we cannot entirely eliminate all the errors by simply checking
+      equation (31.40) for a second base number, say a D 3, because there exist com-
+      posite integers n, known as Carmichael numbers, that satisfy equation (31.40) for
+      all a 2 Zn . (We note that equation (31.40) does fail when gcd.a; n/ > 1—that
+      is, when a 62 Zn —but hoping to demonstrate that n is composite by ﬁnding such
+      an a can be difﬁcult if n has only large prime factors.) The ﬁrst three Carmichael
+      numbers are 561, 1105, and 1729. Carmichael numbers are extremely rare; there
+      are, for example, only 255 of them less than 100,000,000. Exercise 31.8-2 helps
+      explain why they are so rare.
+         We next show how to improve our primality test so that it won’t be fooled by
+      Carmichael numbers.
+
+      The Miller-Rabin randomized primality test
+      The Miller-Rabin primality test overcomes the problems of the simple test P SEU -
+      DOPRIME with two modiﬁcations:
+
+         It tries several randomly chosen base values a instead of just one base value.
+         While computing each modular exponentiation, it looks for a nontrivial square
+          root of 1, modulo n, during the ﬁnal set of squarings. If it ﬁnds one, it stops
+          and returns COMPOSITE. Corollary 31.35 from Section 31.6 justiﬁes detecting
+          composites in this manner.
+         The pseudocode for the Miller-Rabin primality test follows. The input n > 2 is
+      the odd number to be tested for primality, and s is the number of randomly cho-
+      sen base values from ZC  n to be tried. The code uses the random-number generator
+      R ANDOM described on page 117: R ANDOM.1; n  1/ returns a randomly chosen
+      integer a satisfying 1  a  n1. The code uses an auxiliary procedure W ITNESS
+      such that W ITNESS .a; n/ is TRUE if and only if a is a “witness” to the composite-
+      ness of n—that is, if it is possible using a to prove (in a manner that we shall see)
+      that n is composite. The test W ITNESS .a; n/ is an extension of, but more effective
+      than, the test
+      an1 6 1 .mod n/
+      that formed the basis (using a D 2) for P SEUDOPRIME. We ﬁrst present and
+      justify the construction of W ITNESS, and then we shall show how we use it in the
+      Miller-Rabin primality test. Let n  1 D 2t u where t  1 and u is odd; i.e.,
+      the binary representation of n  1 is the binary representation of the odd integer u
+                                                              t
+      followed by exactly t zeros. Therefore, an1  .au /2 .mod n/, so that we can
+

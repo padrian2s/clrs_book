@@ -1,0 +1,46 @@
+          A.2 Bounding summations                                                       1149
+
+
+          Exercises
+
+          A.1-1                    Pn
+          Find a simple formula for kD1 .2k  1/.
+
+          A.1-2 ? P                      p
+          Show that nkD1 1=.2k  1/ D ln. n/ C O.1/ by manipulating the harmonic
+          series.
+
+          A.1-3    P1
+          Show that kD0 k 2 x k D x.1 C x/=.1  x/3 for 0 < jxj < 1.
+
+          A.1-4 ? P
+                    1
+          Show that kD0 .k  1/=2k D 0.
+
+          A.1-5 ?         P1
+          Evaluate the sum kD1 .2k C 1/x 2k .
+
+          A.1-6     Pn                 Pn
+          Prove that kD1 O.fk .i// D O  kD1 fk .i/ by using the linearity property of
+          summations.
+
+          A.1-7               Qn
+          Evaluate the product kD1 2  4k .
+
+          A.1-8 ?             Qn
+          Evaluate the product kD2 .1  1=k 2 /.
+
+
+
+A.2 Bounding summations
+
+          We have many techniques at our disposal for bounding the summations that de-
+          scribe the running times of algorithms. Here are some of the most frequently used
+          methods.
+
+          Mathematical induction
+          The most basic way to evaluate a series is to use
+                                                          Pn mathematical induction. As an
+          example, let us prove that the arithmetic series kD1 k evaluates to 12 n.n C 1/. We
+          can easily verify this assertion for n D 1. We make the inductive assumption that
+

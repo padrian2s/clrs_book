@@ -1,0 +1,45 @@
+26.3 Maximum bipartite matching                                               735
+
+
+Corollary 26.11
+The cardinality of a maximum matching M in a bipartite graph G equals the value
+of a maximum ﬂow f in its corresponding ﬂow network G 0 .
+
+Proof We use the nomenclature from Lemma 26.9. Suppose that M is a max-
+imum matching in G and that the corresponding ﬂow f in G 0 is not maximum.
+Then there is a maximum ﬂow f 0 in G 0 such that jf 0 j > jf j. Since the ca-
+pacities in G 0 are integer-valued, by Theorem 26.10, we can assume that f 0 is
+integer-valued. Thus, f 0 corresponds to a matching M 0 in G with cardinality
+jM 0 j D jf 0 j > jf j D jM j, contradicting our assumption that M is a maximum
+matching. In a similar manner, we can show that if f is a maximum ﬂow in G 0 , its
+corresponding matching is a maximum matching on G.
+
+   Thus, given a bipartite undirected graph G, we can ﬁnd a maximum matching by
+creating the ﬂow network G 0 , running the Ford-Fulkerson method, and directly ob-
+taining a maximum matching M from the integer-valued maximum ﬂow f found.
+Since any matching in a bipartite graph has cardinality at most min.L; R/ D O.V /,
+the value of the maximum ﬂow in G 0 is O.V /. We can therefore ﬁnd a maximum
+matching in a bipartite graph in time O.VE 0 / D O.VE/, since jE 0 j D ‚.E/.
+
+Exercises
+
+26.3-1
+Run the Ford-Fulkerson algorithm on the ﬂow network in Figure 26.8(c) and show
+the residual network after each ﬂow augmentation. Number the vertices in L top
+to bottom from 1 to 5 and in R top to bottom from 6 to 9. For each iteration, pick
+the augmenting path that is lexicographically smallest.
+
+26.3-2
+Prove Theorem 26.10.
+
+26.3-3
+Let G D .V; E/ be a bipartite graph with vertex partition V D L [ R, and let G 0
+be its corresponding ﬂow network. Give a good upper bound on the length of any
+augmenting path found in G 0 during the execution of F ORD -F ULKERSON.
+
+26.3-4 ?
+A perfect matching is a matching in which every vertex is matched. Let G D
+.V; E/ be an undirected bipartite graph with vertex partition V D L [ R, where
+jLj D jRj. For any X  V , deﬁne the neighborhood of X as
+N.X / D fy 2 V W .x; y/ 2 E for some x 2 X g ;
+

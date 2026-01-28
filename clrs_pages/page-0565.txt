@@ -1,0 +1,45 @@
+544   Chapter 20 van Emde Boas Trees
+
+
+      We can employ the same technique that we used for recurrence (20.1) to show
+      that this recurrence has the solution T .u/ D ‚.lg u lg lg u/. Thus, P ROTO - V EB-
+      S UCCESSOR is asymptotically slower than P ROTO - V EB-M INIMUM.
+
+      Inserting an element
+      To insert an element, we need to insert it into the appropriate cluster and also set
+      the summary bit for that cluster to 1. The procedure P ROTO - V EB-I NSERT .V; x/
+      inserts the value x into the proto-vEB structure V .
+
+      P ROTO - V EB-I NSERT .V; x/
+      1 if V:u == 2
+      2        V:AŒx D 1
+      3 else P ROTO - V EB-I NSERT .V:clusterŒhigh.x/; low.x//
+      4        P ROTO - V EB-I NSERT .V:summary; high.x//
+
+      In the base case, line 2 sets the appropriate bit in the array A to 1. In the recursive
+      case, the recursive call in line 3 inserts x into the appropriate cluster, and line 4
+      sets the summary bit for that cluster to 1.
+         Because P ROTO - V EB-I NSERT makes two recursive calls in the worst case, re-
+      currence (20.3) characterizes its running time. Hence, P ROTO - V EB-I NSERT runs
+      in ‚.lg u/ time.
+
+      Deleting an element
+      The D ELETE operation is more complicated than insertion. Whereas we can always
+      set a summary bit to 1 when inserting, we cannot always reset the same summary
+      bit to 0 when deleting. We need to determine whether any bit in the appropriate
+          p is 1. As we have deﬁned proto-vEB structures, we would have to examine
+      cluster
+      all u bits within a cluster to determine whether any of them are 1. Alternatively,
+      we could add an attribute n to the proto-vEB structure, counting how many el-
+      ements it has. We leave implementation of P ROTO - V EB-D ELETE as Exercises
+      20.2-2 and 20.2-3.
+
+         Clearly, we need to modify the proto-vEB structure to get each operation down
+      to making at most one recursive call. We will see in the next section how to do so.
+
+      Exercises
+
+      20.2-1
+      Write pseudocode for the procedures P ROTO - V EB-M AXIMUM and P ROTO - V EB-
+      P REDECESSOR.
+

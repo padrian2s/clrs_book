@@ -1,0 +1,43 @@
+24.3 Dijkstra’s algorithm                                                       661
+
+
+   to S. Edge .x; y/ was relaxed at that time, and the claim follows from the
+   convergence property.
+   We can now obtain a contradiction to prove that u:d D ı.s; u/. Because y
+   appears before u on a shortest path from s to u and all edge weights are non-
+   negative (notably those on path p2 ), we have ı.s; y/  ı.s; u/, and thus
+   y:d D ı.s; y/
+        ı.s; u/                                                             (24.2)
+        u:d     (by the upper-bound property) .
+   But because both vertices u and y were in V  S when u was chosen in line 5,
+   we have u:d  y:d. Thus, the two inequalities in (24.2) are in fact equalities,
+   giving
+
+   y:d D ı.s; y/ D ı.s; u/ D u:d :
+
+   Consequently, u:d D ı.s; u/, which contradicts our choice of u. We conclude
+   that u:d D ı.s; u/ when u is added to S, and that this equality is maintained at
+   all times thereafter.
+Termination: At termination, Q D ; which, along with our earlier invariant that
+   Q D V  S, implies that S D V . Thus, u:d D ı.s; u/ for all vertices u 2 V .
+
+Corollary 24.7
+If we run Dijkstra’s algorithm on a weighted, directed graph G D .V; E/ with
+nonnegative weight function w and source s, then at termination, the predecessor
+subgraph G is a shortest-paths tree rooted at s.
+
+Proof    Immediate from Theorem 24.6 and the predecessor-subgraph property.
+
+Analysis
+How fast is Dijkstra’s algorithm? It maintains the min-priority queue Q by call-
+ing three priority-queue operations: I NSERT (implicit in line 3), E XTRACT-M IN
+(line 5), and D ECREASE -K EY (implicit in R ELAX, which is called in line 8). The
+algorithm calls both I NSERT and E XTRACT-M IN once per vertex. Because each
+vertex u 2 V is added to set S exactly once, each edge in the adjacency list AdjŒu
+is examined in the for loop of lines 7–8 exactly once during the course of the al-
+gorithm. Since the total number of edges in all the adjacency lists is jEj, this for
+loop iterates a total of jEj times, and thus the algorithm calls D ECREASE -K EY at
+most jEj times overall. (Observe once again that we are using aggregate analysis.)
+   The running time of Dijkstra’s algorithm depends on how we implement the
+min-priority queue. Consider ﬁrst the case in which we maintain the min-priority
+

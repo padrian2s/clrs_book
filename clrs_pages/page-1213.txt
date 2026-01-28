@@ -1,0 +1,44 @@
+1192   Appendix C   Counting and Probability
+
+
+       probability only with some of the subsets of S, in such a way that the axioms are
+       satisﬁed for these events.
+          For any closed interval Œc; d , where a  c  d  b, the continuous uniform
+       probability distribution deﬁnes the probability of the event Œc; d  to be
+                       d c
+       Pr fŒc; d g D         :
+                       ba
+       Note that for any point x D Œx; x, the probability of x is 0. If we remove
+       the endpoints of an interval Œc; d , we obtain the open interval .c; d /. Since
+       Œc; d  D Œc; c [ .c; d / [ Œd; d , axiom 3 gives us Pr fŒc; d g D Pr f.c; d /g. Gen-
+       erally, the set of events for the continuous uniform probability distribution contains
+       any subset of the sample space Œa; b that can be obtained by a ﬁnite or countable
+       union of open and closed intervals, as well as certain more complicated sets.
+
+       Conditional probability and independence
+       Sometimes we have some prior partial knowledge about the outcome of an exper-
+       iment. For example, suppose that a friend has ﬂipped two fair coins and has told
+       you that at least one of the coins showed a head. What is the probability that both
+       coins are heads? The information given eliminates the possibility of two tails. The
+       three remaining elementary events are equally likely, so we infer that each occurs
+       with probability 1=3. Since only one of these elementary events shows two heads,
+       the answer to our question is 1=3.
+          Conditional probability formalizes the notion of having prior partial knowledge
+       of the outcome of an experiment. The conditional probability of an event A given
+       that another event B occurs is deﬁned to be
+                      Pr fA \ Bg
+       Pr fA j Bg D                                                                 (C.14)
+                         Pr fBg
+       whenever Pr fBg ¤ 0. (We read “Pr fA j Bg” as “the probability of A given B.”)
+       Intuitively, since we are given that event B occurs, the event that A also occurs
+       is A \ B. That is, A \ B is the set of outcomes in which both A and B occur.
+       Because the outcome is one of the elementary events in B, we normalize the prob-
+       abilities of all the elementary events in B by dividing them by Pr fBg, so that they
+       sum to 1. The conditional probability of A given B is, therefore, the ratio of the
+       probability of event A \ B to the probability of event B. In the example above, A
+       is the event that both coins are heads, and B is the event that at least one coin is a
+       head. Thus, Pr fA j Bg D .1=4/=.3=4/ D 1=3.
+          Two events are independent if
+       Pr fA \ Bg D Pr fAg Pr fBg ;                                                     (C.15)
+       which is equivalent, if Pr fBg ¤ 0, to the condition
+

@@ -1,0 +1,44 @@
+Problems for Chapter 21                                                            583
+
+
+O FF -L INE -M INIMUM .m; n/
+1 for i D 1 to n
+2        determine j such that i 2 Kj
+3        if j ¤ m C 1
+4             extractedŒj  D i
+5             let l be the smallest value greater than j
+                    for which set Kl exists
+6             Kl D Kj [ Kl , destroying Kj
+7 return extracted
+
+b. Argue that the array extracted returned by O FF -L INE -M INIMUM is correct.
+
+c. Describe how to implement O FF -L INE -M INIMUM efﬁciently with a disjoint-
+   set data structure. Give a tight bound on the worst-case running time of your
+   implementation.
+
+21-2 Depth determination
+In the depth-determination problem, we maintain a forest F D fTi g of rooted
+trees under three operations:
+M AKE -T REE ./ creates a tree whose only node is .
+F IND -D EPTH ./ returns the depth of node  within its tree.
+G RAFT .r; / makes node r, which is assumed to be the root of a tree, become the
+  child of node , which is assumed to be in a different tree than r but may or may
+  not itself be a root.
+
+a. Suppose that we use a tree representation similar to a disjoint-set forest: :p
+   is the parent of node , except that :p D  if  is a root. Suppose further
+   that we implement G RAFT .r; / by setting r:p D  and F IND -D EPTH ./ by
+   following the ﬁnd path up to the root, returning a count of all nodes other than 
+   encountered. Show that the worst-case running time of a sequence of m M AKE -
+   T REE, F IND -D EPTH, and G RAFT operations is ‚.m2 /.
+
+By using the union-by-rank and path-compression heuristics, we can reduce the
+worst-case running time. We use the disjoint-set forest S D fSi g, where each
+set Si (which is itself a tree) corresponds to a tree Ti in the forest F . The tree
+structure within a set Si , however, does not necessarily correspond to that of Ti . In
+fact, the implementation of Si does not record the exact parent-child relationships
+but nevertheless allows us to determine any node’s depth in Ti .
+   The key idea is to maintain in each node  a “pseudodistance” :d, which is
+deﬁned so that the sum of the pseudodistances along the simple path from  to the
+

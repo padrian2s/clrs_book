@@ -1,0 +1,52 @@
+1278   Index
+
+
+       order statistics, 213–227                          of a multithreaded computation, 780
+          dynamic, 339–345                                nested, 776
+          multithreaded algorithm for, 805 ex.            of a randomized multithreaded algorithm,
+       order-statistic tree, 339–345                          811 pr.
+          querying, 347 ex.                             parallel loop, 785–787, 805 pr.
+       OR gate, 1070                                    parallel-machine-scheduling problem, 1136 pr.
+       origin, 1015                                     parallel preﬁx, 807 pr.
+       or, in pseudocode, 22                            parallel random-access machine, 811
+       orthonormal, 842                                 parallel slackness, 781
+       OS-K EY-R ANK, 344 ex.                             rule of thumb, 783
+       OS-R ANK, 342                                    parallel, strands being logically in, 778
+       OS-S ELECT , 341                                 parameter, 21
+       out-degree, 1169                                   costs of passing, 107 pr.
+       outer product, 1222                              parent
+       output                                             in a breadth-ﬁrst tree, 594
+          of an algorithm, 5                              in a multithreaded computation, 776
+          of a combinational circuit, 1071                in a rooted tree, 1176
+          of a logic gate, 1070                         PARENT , 152
+       overdetermined system of linear equations, 814   parenthesis structure of depth-ﬁrst search, 606
+       overﬂow                                          parenthesis theorem, 606
+          of a queue, 235                               parenthesization of a matrix-chain product, 370
+          of a stack, 233                               parse tree, 1082
+       overﬂowing vertex, 736                           partially ordered set, 1165
+          discharge of, 751                             partial order, 1165
+       overlapping intervals, 348                       PARTITION, 171
+          ﬁnding all, 354 ex.                           PARTITION0, 186 pr.
+          point of maximum overlap, 354 pr.             partition function, 361 n.
+       overlapping rectangles, 354 ex.                  partitioning, 171–173
+       overlapping subproblems, 384–386                   around median of 3 elements, 185 ex.
+       overlapping-sufﬁx lemma, 987                       Hoare’s method for, 185 pr.
+                                                          multithreaded algorithm for, 804 ex.
+       P (complexity class), 1049, 1055, 1059,            randomized, 179
+             1061 ex., 1105                             partition of a set, 1161, 1164
+       package wrapping, 1037, 1047                     Pascal’s triangle, 1188 ex.
+       page on a disk, 486, 499 ex., 502 pr.            path, 1170
+       pair, ordered, 1161                                augmenting, 719–720, 763 pr.
+       pairwise disjoint sets, 1161                       critical, 657
+       pairwise independence, 1193                        ﬁnd, 569
+       pairwise relatively prime, 931                     hamiltonian, 1066 ex.
+       palindrome, 405 pr.                                longest, 382, 1048
+       Pan’s method for matrix multiplication, 82 ex.     shortest, see shortest paths
+       parallel algorithm, 10, 772                        simple, 1170
+          see also multithreaded algorithm                weight of, 643
+       parallel computer, 772                           PATH, 1051, 1058
+          ideal, 779                                    path compression, 569
+       parallel for, in pseudocode, 785–786             path cover, 761 pr.
+       parallelism                                      path length, of a tree, 304 pr., 1180 ex.
+          logical, 777                                  path-relaxation property, 650, 673
+

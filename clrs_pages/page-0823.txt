@@ -1,0 +1,34 @@
+802   Chapter 27 Multithreaded Algorithms
+
+
+      of the recursive calls. For the recursive calls, observe that although the recursive
+      calls in lines 13 and 14 might merge different numbers of elements, together the
+      two recursive calls merge at most n elements (actually n  1 elements, since T Œq1 
+      does not participate in either recursive call). Moreover, as we saw in analyzing the
+      span, a recursive call operates on at most 3n=4 elements. We therefore obtain the
+      recurrence
+      PM 1 .n/ D PM 1 .˛ n/ C PM 1 ..1  ˛/n/ C O.lg n/ ;                            (27.9)
+      where ˛ lies in the range 1=4  ˛  3=4, and where we understand that the actual
+      value of ˛ may vary for each level of recursion.
+        We prove that recurrence (27.9) has solution PM 1 D O.n/ via the substitution
+      method. Assume that PM 1 .n/  c1 nc2 lg n for some positive constants c1 and c2 .
+      Substituting gives us
+      PM 1 .n/      .c1 ˛ n  c2 lg.˛ n// C .c1 .1  ˛/n  c2 lg..1  ˛/n// C ‚.lg n/
+               D     c1 .˛ C .1  ˛//n  c2 .lg.˛ n/ C lg..1  ˛/n// C ‚.lg n/
+               D     c1 n  c2 .lg ˛ C lg n C lg.1  ˛/ C lg n/ C ‚.lg n/
+               D     c1 n  c2 lg n  .c2 .lg n C lg.˛.1  ˛///  ‚.lg n//
+                    c1 n  c2 lg n ;
+      since we can choose c2 large enough that c2 .lg n C lg.˛.1  ˛/// dominates the
+      ‚.lg n/ term. Furthermore, we can choose c1 large enough to satisfy the base
+      conditions of the recurrence. Since the work PM 1 .n/ of P-M ERGE is both .n/
+      and O.n/, we have PM 1 .n/ D ‚.n/.
+         The parallelism of P-M ERGE is PM 1 .n/=PM 1 .n/ D ‚.n= lg2 n/.
+
+      Multithreaded merge sort
+      Now that we have a nicely parallelized multithreaded merging procedure, we can
+      incorporate it into a multithreaded merge sort. This version of merge sort is similar
+      to the M ERGE -S ORT 0 procedure we saw earlier, but unlike M ERGE -S ORT 0 , it takes
+      as an argument an output subarray B, which will hold the sorted result. In par-
+      ticular, the call P-M ERGE -S ORT .A; p; r; B; s/ sorts the elements in AŒp : : r and
+      stores them in BŒs : : s C r  p.
+

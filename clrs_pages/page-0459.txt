@@ -1,0 +1,49 @@
+438   Chapter 16 Greedy Algorithms
+
+
+      Theorem 16.5
+      If G D .V; E/ is an undirected graph, then MG D .SG ;  G / is a matroid.
+
+      Proof Clearly, SG D E is a ﬁnite set. Furthermore,  G is hereditary, since a
+      subset of a forest is a forest. Putting it another way, removing edges from an
+      acyclic set of edges cannot create cycles.
+        Thus, it remains to show that MG satisﬁes the exchange property. Suppose that
+      GA D .V; A/ and GB D .V; B/ are forests of G and that jBj > jAj. That is, A
+      and B are acyclic sets of edges, and B contains more edges than A does.
+        We claim that a forest F D .VF ; EF / contains exactly jVF j  jEF j trees. To
+      see why, suppose that F consists of t trees, where the ith tree contains i vertices
+      and ei edges. Then, we have
+                  X
+                  t
+      jEF j D            ei
+                  i D1
+
+                  X
+                  t
+             D      .i  1/ (by Theorem B.2)
+                  i D1
+
+                  X
+                  t
+             D           i  t
+                  i D1
+             D jVF j  t ;
+      which implies that t D jVF j  jEF j. Thus, forest GA contains jV j  jAj trees, and
+      forest GB contains jV j  jBj trees.
+         Since forest GB has fewer trees than forest GA does, forest GB must contain
+      some tree T whose vertices are in two different trees in forest GA . Moreover,
+      since T is connected, it must contain an edge .u; / such that vertices u and 
+      are in different trees in forest GA . Since the edge .u; / connects vertices in two
+      different trees in forest GA , we can add the edge .u; / to forest GA without creating
+      a cycle. Therefore, MG satisﬁes the exchange property, completing the proof that
+      MG is a matroid.
+
+         Given a matroid M D .S;  /, we call an element x … A an extension of A 2 
+      if we can add x to A while preserving independence; that is, x is an extension
+      of A if A [ fxg 2  . As an example, consider a graphic matroid MG . If A is an
+      independent set of edges, then edge e is an extension of A if and only if e is not
+      in A and the addition of e to A does not create a cycle.
+         If A is an independent subset in a matroid M , we say that A is maximal if it has
+      no extensions. That is, A is maximal if it is not contained in any larger independent
+      subset of M . The following property is often useful.
+

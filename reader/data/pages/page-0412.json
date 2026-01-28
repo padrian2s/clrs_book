@@ -1,0 +1,5 @@
+{
+  "page": 412,
+  "title": "15.4 Longest Common Subsequence",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 15.4</div>\n    <h1>Longest Common Subsequence</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Find the longest subsequence common to two sequences.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Subsequence: not necessarily contiguous, but in order</li>\n<li>DP: c[i,j] = LCS length for first i chars of X and first j chars of Y</li>\n<li>If X[i] = Y[j]: c[i,j] = c[i-1,j-1] + 1</li>\n<li>Else: c[i,j] = max(c[i-1,j], c[i,j-1])</li>\n<li>Time: O(mn), Space: O(mn) or O(min(m,n))</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>X = &#x27;ABCBDAB&#x27;, Y = &#x27;BDCABA&#x27;. LCS = &#x27;BCBA&#x27; (length 4).</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Used in diff tools, DNA sequence alignment, version control.</p>\n</div>\n</div>"
+}

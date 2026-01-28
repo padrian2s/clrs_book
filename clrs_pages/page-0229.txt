@@ -1,0 +1,44 @@
+208   Chapter 8 Sorting in Linear Time
+
+
+      8-6 Lower bound on merging sorted lists
+      The problem of merging two sorted lists arises frequently. We have seen a pro-
+      cedure for it as the subroutine M ERGE in Section 2.3.1. In this problem, we will
+      prove a lower bound of 2n  1 on the worst-case number of comparisons required
+      to merge two sorted lists, each containing n items.
+         First we will show a lower bound of 2n  o.n/ comparisons by using a decision
+      tree.
+      a. Given 2n numbers, compute the number of possible ways to divide them into
+         two sorted lists, each with n numbers.
+
+      b. Using a decision tree and your answer to part (a), show that any algorithm that
+         correctly merges two sorted lists must perform at least 2n  o.n/ comparisons.
+      Now we will show a slightly tighter 2n  1 bound.
+      c. Show that if two elements are consecutive in the sorted order and from different
+         lists, then they must be compared.
+
+      d. Use your answer to the previous part to show a lower bound of 2n  1 compar-
+         isons for merging two sorted lists.
+
+      8-7 The 0-1 sorting lemma and columnsort
+      A compare-exchange operation on two array elements AŒi and AŒj , where i < j ,
+      has the form
+
+      C OMPARE -E XCHANGE .A; i; j /
+      1 if AŒi > AŒj 
+      2      exchange AŒi with AŒj 
+
+      After the compare-exchange operation, we know that AŒi  AŒj .
+         An oblivious compare-exchange algorithm operates solely by a sequence of
+      prespeciﬁed compare-exchange operations. The indices of the positions compared
+      in the sequence must be determined in advance, and although they can depend
+      on the number of elements being sorted, they cannot depend on the values being
+      sorted, nor can they depend on the result of any prior compare-exchange operation.
+      For example, here is insertion sort expressed as an oblivious compare-exchange
+      algorithm:
+
+      I NSERTION -S ORT .A/
+      1 for j D 2 to A:length
+      2       for i D j  1 downto 1
+      3            C OMPARE -E XCHANGE .A; i; i C 1/
+

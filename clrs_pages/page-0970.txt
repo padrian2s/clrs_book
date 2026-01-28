@@ -1,0 +1,44 @@
+31.4 Solving modular linear equations                                             949
+
+
+M ODULAR -L INEAR -E QUATION -S OLVER .a; b; n/
+1 .d; x 0 ; y 0 / D E XTENDED -E UCLID .a; n/
+2 if d j b
+3      x0 D x 0 .b=d / mod n
+4      for i D 0 to d  1
+5               print .x0 C i.n=d // mod n
+6 else print “no solutions”
+
+   As an example of the operation of this procedure, consider the equation 14x 
+30 .mod 100/ (here, a D 14, b D 30, and n D 100). Calling E XTENDED -
+E UCLID in line 1, we obtain .d; x 0 ; y 0 / D .2; 7; 1/. Since 2 j 30, lines 3–5
+execute. Line 3 computes x0 D .7/.15/ mod 100 D 95. The loop on lines 4–5
+prints the two solutions 95 and 45.
+   The procedure M ODULAR -L INEAR -E QUATION -S OLVER works as follows.
+Line 1 computes d D gcd.a; n/, along with two values x 0 and y 0 such that d D
+ax 0 C ny 0 , demonstrating that x 0 is a solution to the equation ax 0  d .mod n/.
+If d does not divide b, then the equation ax  b .mod n/ has no solution, by
+Corollary 31.21. Line 2 checks to see whether d j b; if not, line 6 reports that there
+are no solutions. Otherwise, line 3 computes a solution x0 to ax  b .mod n/,
+in accordance with Theorem 31.23. Given one solution, Theorem 31.24 states that
+adding multiples of .n=d /, modulo n, yields the other d  1 solutions. The for
+loop of lines 4–5 prints out all d solutions, beginning with x0 and spaced n=d
+apart, modulo n.
+   M ODULAR -L INEAR -E QUATION -S OLVER performs O.lg n C gcd.a; n// arith-
+metic operations, since E XTENDED -E UCLID performs O.lg n/ arithmetic opera-
+tions, and each iteration of the for loop of lines 4–5 performs a constant number of
+arithmetic operations.
+   The following corollaries of Theorem 31.24 give specializations of particular
+interest.
+
+Corollary 31.25
+For any n > 1, if gcd.a; n/ D 1, then the equation ax  b .mod n/ has a unique
+solution, modulo n.
+
+ If b D 1, a common case of considerable interest, the x we are looking for is a
+multiplicative inverse of a, modulo n.
+
+Corollary 31.26
+For any n > 1, if gcd.a; n/ D 1, then the equation ax  1 .mod n/ has a unique
+solution, modulo n. Otherwise, it has no solution.
+

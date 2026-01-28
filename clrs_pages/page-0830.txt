@@ -1,0 +1,45 @@
+Problems for Chapter 27                                                              809
+
+
+P-S CAN -3.x/
+1 n D x:length
+2 let yŒ1 : : n and tŒ1 : : n be new arrays
+3 yŒ1 D xŒ1
+4 if n > 1
+5      P-S CAN -U P .x; t; 2; n/
+6      P-S CAN -D OWN .xŒ1; x; t; y; 2; n/
+7 return y
+
+P-S CAN -U P .x; t; i; j /
+1 if i == j
+2      return xŒi
+3 else
+4      k D b.i C j /=2c
+5      tŒk D spawn P-S CAN -U P .x; t; i; k/
+6      right D P-S CAN -U P .x; t; k C 1; j /
+7      sync
+8      return                      // ﬁll in the blank
+
+P-S CAN -D OWN .; x; t; y; i; j /
+1 if i == j
+2      yŒi D  ˝ xŒi
+3 else
+4      k D b.i C j /=2c
+5      spawn P-S CAN -D OWN .               ; x; t; y; i; k/   // ﬁll in the blank
+6       P-S CAN -D OWN .           ; x; t; y; k C 1; j /       // ﬁll in the blank
+7      sync
+
+d. Fill in the three missing expressions in line 8 of P-S CAN -U P and lines 5 and 6
+   of P-S CAN -D OWN. Argue that with expressions you supplied, P-S CAN -3 is
+   correct. (Hint: Prove that the value  passed to P-S CAN -D OWN .; x; t; y; i; j /
+   satisﬁes  D xŒ1 ˝ xŒ2 ˝    ˝ xŒi  1.)
+
+e. Analyze the work, span, and parallelism of P-S CAN -3.
+
+27-5 Multithreading a simple stencil calculation
+Computational science is replete with algorithms that require the entries of an array
+to be ﬁlled in with values that depend on the values of certain already computed
+neighboring entries, along with other information that does not change over the
+course of the computation. The pattern of neighboring entries does not change
+during the computation and is called a stencil. For example, Section 15.4 presents
+

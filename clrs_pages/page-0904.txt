@@ -1,0 +1,51 @@
+29.4 Duality                                                                                     883
+
+
+If we deﬁne
+cj0 D 0 for all j 2 B ;                                                                      (29.95)
+we can rewrite equation (29.93) as
+          X
+´ D 0 C       cj0 xj
+                j 2N
+                X                    X
+   D 0 C              cj0 xj C             cj0 xj (because cj0 D 0 if j 2 B)
+                j 2N                 j 2B
+
+                X
+                nCm
+   D 0 C              cj0 xj                       (because N [ B D f1; 2; : : : ; n C mg) . (29.96)
+                j D1
+
+For the basic solution xN associated with this ﬁnal slack form, xNj D 0 for all j 2 N ,
+and ´ D  0 . Since all slack forms are equivalent, if we evaluate the original objec-
+tive function on Nx, we must obtain the same objective value:
+X
+n                               X
+                                nCm
+                        0
+       cj xNj   D  C                  cj0 xNj                                               (29.97)
+j D1                            j D1
+                                X                  X
+                D 0 C                 cj0 xNj C          cj0 xNj
+                                j 2N               j 2B
+                                X                    X
+                        0
+                D  C                  .cj0  0/ C          .0  xNj /                       (29.98)
+                                j 2N                 j 2B
+
+                D 0 :
+   We shall now show that N      y, deﬁned by equation
+                                                Pm (29.91), is feasible
+                                                                  Pn for the dual
+linear program and that its objective value i D1 bi yNi equals j D1 cj xNj . Equa-
+tion (29.97) says that the ﬁrst and last slack forms, evaluated at Nx, are equal. More
+generally, the equivalence of all slack forms implies that for any set of values
+x D .x1 ; x2 ; : : : ; xn /, we have
+X
+n                           X
+                            nCm
+       cj xj D  0 C               cj0 xj :
+j D1                        j D1
+
+Therefore, for any particular set of values xN D .xN 1 ; xN 2 ; : : : ; xN n /, we have
+

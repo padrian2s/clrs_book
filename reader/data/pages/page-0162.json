@@ -1,0 +1,5 @@
+{
+  "page": 162,
+  "title": "6.3 Building a Heap",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 6.3</div>\n    <h1>Building a Heap</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>Convert an unsorted array into a max-heap in O(n) time.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>Start from last non-leaf node, heapify each going up</li>\n<li>Leaves (n/2+1 to n) are already valid heaps</li>\n<li>Time: O(n), not O(n log n)!</li>\n<li>Why O(n)? Most nodes are near leaves where heapify is fast</li></ul>\n    </div>\n\n    <div class=\"algorithm\">\n    <h4>Pseudocode</h4>\n    <pre style=\"font-size: 0.85rem; line-height: 1.6;\">BUILD-MAX-HEAP(A):\n    heap-size = n\n    for i = ⌊n/2⌋ downto 1:\n        MAX-HEAPIFY(A, i)</pre>\n</div>\n    \n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Enables heapsort and efficient priority queue construction.</p>\n</div>\n</div>"
+}

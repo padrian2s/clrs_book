@@ -1,0 +1,52 @@
+524   Chapter 19 Fibonacci Heaps
+
+
+      Lemma 19.2
+      For all integers k  0,
+                        X
+                        k
+      FkC2 D 1 C               Fi :
+                        i D0
+
+
+      Proof       The proof is by induction on k. When k D 0,
+           X
+           0
+      1C          Fi    D 1 C F0
+           i D0
+                        D 1C0
+                        D F2 :
+                                                                           Pk1
+        We now assume the inductive hypothesis that FkC1 D 1 C                i D0 Fi , and we
+      have
+      FkC2 D Fk C FkC1
+                                                         !
+                                             X
+                                             k1
+              D Fk C 1 C                            Fi
+                                             i D0
+
+                           X
+                           k
+              D 1C                    Fi :
+                               i D0
+
+
+
+      Lemma 19.3
+      For all integers k  0, the .k C 2/nd Fibonacci number satisﬁes FkC2   k .
+
+      Proof The proof is by induction on k. The base cases are for k D 0 and k D 1.
+      When k D 0 we have F2 D 1 D  0 , and when k D 1 we have F3 D 2 >
+      1:619 >  1 . The inductive step is for k  2, and we assume that Fi C2 >  i for
+      i D 0; 1; : : : ; k1. Recall that  is the positive root of equation (3.23), x 2 D x C1.
+      Thus, we have
+      FkC2 D           FkC1 C Fk
+                       k1 C  k2 (by the inductive hypothesis)
+           D            k2 . C 1/
+           D            k2   2   (by equation (3.23))
+                         k
+           D            :
+
+        The following lemma and its corollary complete the analysis.
+

@@ -1,0 +1,5 @@
+{
+  "page": 515,
+  "title": "B-Trees",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 18</div>\n    <h1>B-Trees</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>V: Advanced Data Structures</h4>\n    <h3>Chapter 18: B-Trees</h3>\n    <p><em>Trees optimized for disk access</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>High branching factor (many children per node)</li>\n<li>Minimizes disk reads</li>\n<li>All leaves at same depth</li>\n<li>B+ trees: data only in leaves</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>Databases, file systems - your data is probably in a B-tree</p>\n</div>\n</div>"
+}

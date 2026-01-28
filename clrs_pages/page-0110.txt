@@ -1,0 +1,80 @@
+                         4.4 The recursion-tree method for solving recurrences                                                                   89
+
+
+
+
+T .n/                         cn2                                                                  cn2
+
+
+
+
+                     n             n             n                  n 2                             n 2                             n 2
+               T     4
+                             T     4
+                                           T     4
+                                                               c    4
+                                                                                               c    4
+                                                                                                                                c   4
+
+
+
+
+                                                         n          n         n         n           n           n          n        n           n
+                                                     T   16
+                                                               T    16
+                                                                          T   16
+                                                                                    T   16
+                                                                                               T    16
+                                                                                                            T   16
+                                                                                                                       T   16
+                                                                                                                                T   16
+                                                                                                                                            T   16
+
+ (a)                             (b)                                                               (c)
+
+
+
+
+                                                                   cn2                                                                          cn2
+
+
+
+
+                             n 2                                    n 2                                   n 2                                3
+                         c   4
+                                                               c    4
+                                                                                                    c     4                                 16
+                                                                                                                                               cn2
+
+
+
+log4 n
+               n 2           n 2           n 2           n 2       n 2        n 2            n 2         n 2         n 2                   3 2
+           c   16
+                         c   16
+                                       c   16
+                                                     c   16
+                                                               c   16
+                                                                          c   16
+                                                                                        c    16
+                                                                                                    c    16
+                                                                                                                c    16                   16
+                                                                                                                                               cn2
+
+
+
+                                                                                                                                            …
+
+         T .1/ T .1/ T .1/ T .1/ T .1/ T .1/ T .1/ T .1/ T .1/ T .1/                         …          T .1/ T .1/ T .1/                ‚.nlog4 3 /
+
+
+                                                               nlog4 3
+
+                                                                   (d)                                                              Total: O.n2 /
+
+
+
+                         Figure 4.5 Constructing a recursion tree for the recurrence T .n/ D 3T .n=4/ C cn2 . Part (a)
+                         shows T .n/, which progressively expands in (b)–(d) to form the recursion tree. The fully expanded
+                         tree in part (d) has height log4 n (it has log4 n C 1 levels).
+

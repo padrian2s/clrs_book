@@ -1,0 +1,50 @@
+31.8 Primality testing                                                                 973
+
+
+Acceptable pairs certainly exist since u is odd; we can choose  D n  1 and
+j D 0, so that .n  1; 0/ is an acceptable pair. Now pick the largest possible j such
+that there exists an acceptable pair .; j /, and ﬁx  so that .; j / is an acceptable
+pair. Let
+                    j
+B D fx 2 Zn W x 2 u  ˙1 .mod n/g :
+Since B is closed under multiplication modulo n, it is a subgroup of Zn . By Theo-
+rem 31.15, therefore, jBj divides jZn j. Every nonwitness must be a member of B,
+since the sequence X produced by a nonwitness must either be all 1s or else contain
+a 1 no later than the j th position, by the maximality of j . (If .a; j 0 / is acceptable,
+where a is a nonwitness, we must have j 0  j by how we chose j .)
+   We now use the existence of  to demonstrate that there exists a w 2 Zn  B,
+                                                         j
+and hence that B is a proper subgroup of Zn . Since  2 u  1 .mod n/, we have
+   j
+ 2 u  1 .mod n1 / by Corollary 31.29 to the Chinese remainder theorem. By
+Corollary 31.28, there exists a w simultaneously satisfying the equations
+w   .mod n1 / ;
+w  1 .mod n2 / :
+Therefore,
+   j
+w 2 u  1 .mod n1 / ;
+   j
+w2 u          1 .mod n2 / :
+                           j                                   j
+By Corollary 31.29, w 2 u 6 1 .mod n1 / implies w 2 u 6 1 .mod n/, and
+    j                                j
+w 2 u 6 1 .mod n2 / implies w 2 u 6 1 .mod n/. Hence, we conclude that
+    j
+w 2 u 6 ˙1 .mod n/, and so w 62 B.
+   It remains to show that w 2 Zn , which we do by ﬁrst working separately mod-
+ulo n1 and modulo n2 . Working modulo n1 , we observe that since  2 Zn , we
+have that gcd.; n/ D 1, and so also gcd.; n1 / D 1; if  does not have any com-
+mon divisors with n, then it certainly does not have any common divisors with n1 .
+Since w   .mod n1 /, we see that gcd.w; n1 / D 1. Working modulo n2 , we
+observe that w  1 .mod n2 / implies gcd.w; n2 / D 1. To combine these results,
+we use Theorem 31.6, which implies that gcd.w; n1 n2 / D gcd.w; n/ D 1. That is,
+w 2 Zn .
+   Therefore w 2 Zn  B, and we ﬁnish case 2 with the conclusion that B is a
+proper subgroup of Zn .
+   In either case, we see that the number of witnesses to the compositeness of n is
+at least .n  1/=2.
+
+Theorem 31.39
+For any odd integer n > 2 and positive integer s, the probability that M ILLER -
+R ABIN.n; s/ errs is at most 2s .
+

@@ -1,0 +1,59 @@
+632                    Chapter 23 Minimum Spanning Trees
+
+
+                          8                7                                                8               7
+               b                   c            d                                   b               c           d
+          4                                           9                        4                                      9
+                               2                                                                2
+(a)   a       11          i            4         14        e        (b)    a       11       i           4        14        e
+                   7           6                                                        7       6
+          8                                           10                       8                                      10
+               h                   g             f                                  h               g            f
+                          1                2                                                1               2
+
+
+                          8                7                                                8               7
+               b                   c            d                                   b               c           d
+          4                                           9                        4                                      9
+                               2                                                                2
+(c)   a       11          i            4         14        e        (d)    a       11       i           4        14        e
+                   7           6                                                        7       6
+          8                                           10                       8                                      10
+               h                   g             f                                  h               g            f
+                          1                2                                                1               2
+
+
+                          8                7                                                8               7
+               b                   c            d                                   b               c           d
+          4                                           9                        4                                      9
+                               2                                                                2
+(e)   a       11          i            4         14        e         (f)   a       11       i           4        14        e
+                   7           6                                                        7       6
+          8                                           10                       8                                      10
+               h                   g             f                                  h               g            f
+                          1                2                                                1               2
+
+
+                          8                7                                                8               7
+               b                   c            d                                   b               c           d
+          4                                           9                        4                                      9
+                               2                                                                2
+(g)   a       11          i            4         14        e        (h)    a       11       i           4        14        e
+                   7           6                                                        7       6
+          8                                           10                       8                                      10
+               h                   g             f                                  h               g            f
+                          1                2                                                1               2
+
+
+                       Figure 23.4 The execution of Kruskal’s algorithm on the graph from Figure 23.1. Shaded edges
+                       belong to the forest A being grown. The algorithm considers each edge in sorted order by weight.
+                       An arrow points to the edge under consideration at each step of the algorithm. If the edge joins two
+                       distinct trees in the forest, it is added to the forest, thereby merging the two trees.
+
+
+                       checks, for each edge .u; /, whether the endpoints u and  belong to the same
+                       tree. If they do, then the edge .u; / cannot be added to the forest without creating
+                       a cycle, and the edge is discarded. Otherwise, the two vertices belong to different
+                       trees. In this case, line 7 adds the edge .u; / to A, and line 8 merges the vertices
+                       in the two trees.
+

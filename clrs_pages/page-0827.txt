@@ -1,0 +1,42 @@
+806   Chapter 27 Multithreaded Algorithms
+
+
+      b. Suppose that we set grain-size D 1. What is the parallelism of this implemen-
+         tation?
+
+      c. Give a formula for the span of S UM -A RRAYS 0 in terms of n and grain-size.
+         Derive the best value for grain-size to maximize parallelism.
+
+      27-2 Saving temporary space in matrix multiplication
+      The P-M ATRIX -M ULTIPLY-R ECURSIVE procedure has the disadvantage that it
+      must allocate a temporary matrix T of size n n, which can adversely affect the
+      constants hidden by the ‚-notation. The P-M ATRIX -M ULTIPLY-R ECURSIVE pro-
+      cedure does have high parallelism, however. For example, ignoring the constants
+      in the ‚-notation, the parallelism for multiplying 1000 1000 matrices comes to
+      approximately 10003 =102 D 107 , since lg 1000  10. Most parallel computers
+      have far fewer than 10 million processors.
+
+      a. Describe a recursive multithreaded algorithm that eliminates the need for the
+         temporary matrix T at the cost of increasing the span to ‚.n/. (Hint: Com-
+         pute C D C C AB following the general strategy of P-M ATRIX -M ULTIPLY-
+         R ECURSIVE, but initialize C in parallel and insert a sync in a judiciously cho-
+         sen location.)
+
+      b. Give and solve recurrences for the work and span of your implementation.
+
+      c. Analyze the parallelism of your implementation. Ignoring the constants in the
+         ‚-notation, estimate the parallelism on 1000 1000 matrices. Compare with
+         the parallelism of P-M ATRIX -M ULTIPLY-R ECURSIVE.
+
+      27-3 Multithreaded matrix algorithms
+      a. Parallelize the LU-D ECOMPOSITION procedure on page 821 by giving pseu-
+         docode for a multithreaded version of this algorithm. Make your implementa-
+         tion as parallel as possible, and analyze its work, span, and parallelism.
+
+      b. Do the same for LUP-D ECOMPOSITION on page 824.
+
+      c. Do the same for LUP-S OLVE on page 817.
+
+      d. Do the same for a multithreaded algorithm based on equation (28.13) for in-
+         verting a symmetric positive-deﬁnite matrix.
+

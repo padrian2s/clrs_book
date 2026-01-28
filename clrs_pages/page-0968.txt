@@ -1,0 +1,42 @@
+31.4 Solving modular linear equations                                              947
+
+
+Theorem 31.20
+For any positive integers a and n, if d D gcd.a; n/, then
+hai D hd i D f0; d; 2d; : : : ; ..n=d /  1/d g                                (31.26)
+in Zn , and thus
+jhaij D n=d :
+
+Proof We begin by showing that d 2 hai. Recall that E XTENDED -E UCLID .a; n/
+produces integers x 0 and y 0 such that ax 0 C ny 0 D d . Thus, ax 0  d .mod n/, so
+that d 2 hai. In other words, d is a multiple of a in Zn .
+   Since d 2 hai, it follows that every multiple of d belongs to hai, because any
+multiple of a multiple of a is itself a multiple of a. Thus, hai contains every element
+in f0; d; 2d; : : : ; ..n=d /  1/d g. That is, hd i  hai.
+   We now show that hai  hd i. If m 2 hai, then m D ax mod n for some
+integer x, and so m D ax C ny for some integer y. However, d j a and d j n, and
+so d j m by equation (31.4). Therefore, m 2 hd i.
+   Combining these results, we have that hai D hd i. To see that jhaij D n=d ,
+observe that there are exactly n=d multiples of d between 0 and n  1, inclusive.
+
+Corollary 31.21
+The equation ax  b .mod n/ is solvable for the unknown x if and only if d j b,
+where d D gcd.a; n/.
+
+Proof The equation ax  b .mod n/ is solvable if and only if Œb 2 hai, which
+is the same as saying
+.b mod n/ 2 f0; d; 2d; : : : ; ..n=d /  1/d g ;
+by Theorem 31.20. If 0  b < n, then b 2 hai if and only if d j b, since the
+members of hai are precisely the multiples of d . If b < 0 or b  n, the corollary
+then follows from the observation that d j b if and only if d j .b mod n/, since b
+and b mod n differ by a multiple of n, which is itself a multiple of d .
+
+Corollary 31.22
+The equation ax  b .mod n/ either has d distinct solutions modulo n, where
+d D gcd.a; n/, or it has no solutions.
+
+Proof If ax  b .mod n/ has a solution, then b 2 hai. By Theorem 31.17,
+ord.a/ D jhaij, and so Corollary 31.18 and Theorem 31.20 imply that the sequence
+ai mod n, for i D 0; 1; : : :, is periodic with period jhaij D n=d . If b 2 hai, then b
+appears exactly d times in the sequence ai mod n, for i D 0; 1; : : : ; n  1, since
+

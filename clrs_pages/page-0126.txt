@@ -1,0 +1,64 @@
+4.6 Proof of the master theorem                                                    105
+
+
+
+          n    X
+               j 1
+                    1
+nj          C
+          bj   i D0
+                    b i
+
+
+          n     X 1
+                     1
+     <      j
+              C
+          b     i D0
+                     bi
+          n      b
+     D      j
+              C     :
+          b     b1
+Letting j D blogb nc, we obtain
+                      n          b
+nblogb nc <                    C
+                  b blogb nc    b1
+                       n          b
+          <         log   n1
+                              C
+                  b     b       b1
+                    n         b
+          D               C
+                  n=b        b1
+                            b
+          D       bC
+                          b1
+          D       O.1/ ;
+and thus we see that at depth blogb nc, the problem size is at most a constant.
+  From Figure 4.8, we see that
+
+                               X
+                           blogb nc1
+
+T .n/ D ‚.nlogb a / C                   aj f .nj / ;                            (4.28)
+                               j D0
+
+which is much the same as equation (4.21), except that n is an arbitrary integer and
+not restricted to be an exact power of b.
+  We can now evaluate the summation
+           X
+         blogb nc1
+
+g.n/ D                aj f .nj /                                                (4.29)
+           j D0
+
+from equation (4.28) in a manner analogous to the proof of Lemma 4.3. Beginning
+with case 3, if af .dn=be/  cf .n/ for n > bCb=.b1/, where c < 1 is a constant,
+then it follows that aj f .nj /  c j f .n/. Therefore, we can evaluate the sum in
+equation (4.29) just as in Lemma 4.3. For case 2, we have f .n/ D ‚.nlogb a /. If we
+can show that f .nj / D O.nlogb a =aj / D O..n=b j /logb a /, then the proof for case 2
+of Lemma 4.3 will go through. Observe that j  blogb nc implies b j =n  1. The
+bound f .n/ D O.nlogb a / implies that there exists a constant c > 0 such that for all
+sufﬁciently large nj ,
+

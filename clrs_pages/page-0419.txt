@@ -1,0 +1,56 @@
+398   Chapter 15 Dynamic Programming
+
+
+                         k2                                                                    k2
+
+
+             k1                         k4                                       k1                         k5
+
+
+       d0         d1          k3                  k5                        d0         d1         k4             d5
+
+                       d2          d3        d4        d5                                    k3        d4
+
+
+                                                                                       d2         d3
+
+
+                               (a)                                                                  (b)
+
+
+      Figure 15.9        Two binary search trees for a set of n D 5 keys with the following probabilities:
+       i          0      1             2        3         4         5
+      pi                0.15         0.10     0.05       0.10     0.20
+      qi     0.05       0.10         0.05     0.05       0.05     0.10
+      (a) A binary search tree with expected search cost 2.80. (b) A binary search tree with expected search
+      cost 2.75. This tree is optimal.
+
+
+      d0 ; d1 ; d2 ; : : : ; dn representing values not in K. In particular, d0 represents all val-
+      ues less than k1 , dn represents all values greater than kn , and for i D 1; 2; : : : ; n1,
+      the dummy key di represents all values between ki and ki C1 . For each dummy
+      key di , we have a probability qi that a search will correspond to di . Figure 15.9
+      shows two binary search trees for a set of n D 5 keys. Each key ki is an internal
+      node, and each dummy key di is a leaf. Every search is either successful (ﬁnding
+      some key ki ) or unsuccessful (ﬁnding some dummy key di ), and so we have
+      X
+      n                X
+                       n
+             pi C             qi D 1 :                                                                                (15.10)
+      i D1             i D0
+
+         Because we have probabilities of searches for each key and each dummy key,
+      we can determine the expected cost of a search in a given binary search tree T . Let
+      us assume that the actual cost of a search equals the number of nodes examined,
+      i.e., the depth of the node found by the search in T , plus 1. Then the expected cost
+      of a search in T is
+                                Xn                            X
+                                                              n
+      E Œsearch cost in T  D       .depthT .ki / C 1/  pi C    .depthT .di / C 1/  qi
+                                              i D1                                     i D0
+                                                       X
+                                                       n                            X
+                                                                                    n
+                                         D 1C                 depthT .ki /  pi C            depthT .di /  qi ;      (15.11)
+                                                       i D1                           i D0
+

@@ -1,0 +1,49 @@
+20.1 Preliminary approaches                                                                                                     533
+
+
+                                                                1
+
+
+                                1                                                               1
+
+
+                1                               1                               0                               1
+
+
+        0               1               1               1               0               0               0               1
+
+
+A 0         0       1       1       1       1       0 1             0       0       0       0       0       0       1       1
+    0       1       2       3       4       5       6       7       8       9       10 11 12 13 14 15
+
+
+
+Figure 20.1 A binary tree of bits superimposed on top of a bit vector representing the set
+f2; 3; 4; 5; 7; 14; 15g when u D 16. Each internal node contains a 1 if and only if some leaf in
+its subtree contains a 1. The arrows show the path followed to determine the predecessor of 14 in the
+set.
+
+
+we might have to scan through ‚.u/ elements.2 For example, if a set contains only
+the values 0 and u  1, then to ﬁnd the successor of 0, we would have to scan
+entries 1 through u  2 before ﬁnding a 1 in AŒu  1.
+
+Superimposing a binary tree structure
+We can short-cut long scans in the bit vector by superimposing a binary tree of bits
+on top of it. Figure 20.1 shows an example. The entries of the bit vector form the
+leaves of the binary tree, and each internal node contains a 1 if and only if any leaf
+in its subtree contains a 1. In other words, the bit stored in an internal node is the
+logical-or of its two children.
+   The operations that took ‚.u/ worst-case time with an unadorned bit vector now
+use the tree structure:
+   To ﬁnd the minimum value in the set, start at the root and head down toward
+    the leaves, always taking the leftmost node containing a 1.
+   To ﬁnd the maximum value in the set, start at the root and head down toward
+    the leaves, always taking the rightmost node containing a 1.
+
+
+2 We assume throughout this chapter that M INIMUM and M AXIMUM return NIL if the dynamic set
+
+is empty and that S UCCESSOR and P REDECESSOR return NIL if the element they are given has no
+successor or predecessor, respectively.
+

@@ -1,0 +1,42 @@
+vi          Contents
+
+
+
+II Sorting and Order Statistics
+
+                  Introduction     147
+            6     Heapsort 151
+                  6.1 Heaps 151
+                  6.2 Maintaining the heap property      154
+                  6.3 Building a heap 156
+                  6.4 The heapsort algorithm 159
+                  6.5 Priority queues 162
+            7     Quicksort 170
+                  7.1 Description of quicksort 170
+                  7.2 Performance of quicksort 174
+                  7.3 A randomized version of quicksort        179
+                  7.4 Analysis of quicksort 180
+            8     Sorting in Linear Time 191
+                  8.1 Lower bounds for sorting     191
+                  8.2 Counting sort 194
+                  8.3 Radix sort 197
+                  8.4 Bucket sort 200
+            9     Medians and Order Statistics 213
+                  9.1 Minimum and maximum 214
+                  9.2 Selection in expected linear time 215
+                  9.3 Selection in worst-case linear time 220
+
+III Data Structures
+                  Introduction     229
+            10    Elementary Data Structures 232
+                  10.1 Stacks and queues 232
+                  10.2 Linked lists 236
+                  10.3 Implementing pointers and objects       241
+                  10.4 Representing rooted trees 246
+            11    Hash Tables 253
+                  11.1 Direct-address tables 254
+                  11.2 Hash tables 256
+                  11.3 Hash functions 262
+                  11.4 Open addressing 269
+            ?     11.5 Perfect hashing 277
+

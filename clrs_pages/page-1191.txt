@@ -1,0 +1,49 @@
+1170   Appendix B   Sets, Etc.
+
+
+       degree plus its out-degree. Vertex 2 in Figure B.2(a) has in-degree 2, out-degree 3,
+       and degree 5.
+          A path of length k from a vertex u to a vertex u0 in a graph G D .V; E/
+       is a sequence h0 ; 1 ; 2 ; : : : ; k i of vertices such that u D 0 , u0 D k , and
+       .i 1 ; i / 2 E for i D 1; 2; : : : ; k. The length of the path is the number of
+       edges in the path. The path contains the vertices 0 ; 1 ; : : : ; k and the edges
+       .0 ; 1 /; .1 ; 2 /; : : : ; .k1 ; k /. (There is always a 0-length path from u to u.) If
+       there is a path p from u to u0 , we say that u0 is reachable from u via p, which we
+                                         p
+       sometimes write as u ; u0 if G is directed. A path is simple4 if all vertices in the
+       path are distinct. In Figure B.2(a), the path h1; 2; 5; 4i is a simple path of length 3.
+       The path h2; 5; 4; 5i is not simple.
+          A subpath of path p D h0 ; 1 ; : : : ; k i is a contiguous subsequence of its ver-
+       tices. That is, for any 0  i  j  k, the subsequence of vertices hi ; i C1 ; : : : ; j i
+       is a subpath of p.
+          In a directed graph, a path h0 ; 1 ; : : : ; k i forms a cycle if 0 D k and the
+       path contains at least one edge. The cycle is simple if, in addition, 1 ; 2 ; : : : ; k
+       are distinct. A self-loop is a cycle of length 1. Two paths h0 ; 1 ; 2 ; : : : ; k1 ; 0 i
+       and h00 ; 10 ; 20 ; : : : ; k1
+                                       0
+                                           ; 00 i form the same cycle if there exists an integer j such
+       that i0 D .i Cj / mod k for i D 0; 1; : : : ; k  1. In Figure B.2(a), the path h1; 2; 4; 1i
+       forms the same cycle as the paths h2; 4; 1; 2i and h4; 1; 2; 4i. This cycle is simple,
+       but the cycle h1; 2; 4; 5; 4; 1i is not. The cycle h2; 2i formed by the edge .2; 2/ is
+       a self-loop. A directed graph with no self-loops is simple. In an undirected graph,
+       a path h0 ; 1 ; : : : ; k i forms a cycle if k  3 and 0 D k ; the cycle is simple if
+       1 ; 2 ; : : : ; k are distinct. For example, in Figure B.2(b), the path h1; 2; 5; 1i is a
+       simple cycle. A graph with no cycles is acyclic.
+          An undirected graph is connected if every vertex is reachable from all other
+       vertices. The connected components of a graph are the equivalence classes of
+       vertices under the “is reachable from” relation. The graph in Figure B.2(b) has
+       three connected components: f1; 2; 5g, f3; 6g, and f4g. Every vertex in f1; 2; 5g is
+       reachable from every other vertex in f1; 2; 5g. An undirected graph is connected
+       if it has exactly one connected component. The edges of a connected component
+       are those that are incident on only the vertices of the component; in other words,
+       edge .u; / is an edge of a connected component only if both u and  are vertices
+       of the component.
+          A directed graph is strongly connected if every two vertices are reachable from
+       each other. The strongly connected components of a directed graph are the equiv-
+
+
+       4 Some authors refer to what we call a path as a “walk” and to what we call a simple path as just a
+
+       “path.” We use the terms “path” and “simple path” throughout this book in a manner consistent with
+       their deﬁnitions.
+

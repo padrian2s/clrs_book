@@ -1,0 +1,52 @@
+1284   Index
+
+
+       relaxed heap, 530                             row-major order, 394
+       relaxed red-black tree, 311 ex.               row rank, 1223
+       release time, 447 pr.                         row vector, 1218
+       remainder, 54, 928                            RSA public-key cryptosystem, 958–965, 983
+       remainder instruction, 23                     RS-vEB tree, 557 pr.
+       repeated squaring                             rule of product, 1184
+          for all-pairs shortest paths, 689–691      rule of sum, 1183
+          for raising a number to a power, 956       running time, 25
+       repeat, in pseudocode, 20                        average-case, 28, 116
+       repetition factor, of a string, 1012 pr.         best-case, 29 ex., 49
+       R EPETITION -M ATCHER, 1013 pr.                  expected, 28, 117
+       representative of a set, 561                     of a graph algorithm, 588
+       R ESET , 459 ex.                                 and multithreaded computation, 779–780
+       residual capacity, 716, 719                      order of growth, 28
+       residual edge, 716                               rate of growth, 28
+       residual network, 715–719                        worst-case, 27, 49
+       residue, 54, 928, 982 pr.
+       respecting a set of edges, 626                sabermetrics, 412 n.
+       return edge, 779                              safe edge, 626
+       return, in pseudocode, 22                     S AME -C OMPONENT , 563
+       return instruction, 23                        sample space, 1189
+       reweighting                                   sampling, 129 ex., 179
+          in all-pairs shortest paths, 700–702       SAT, 1079
+          in single-source shortest paths, 679 pr.   satellite data, 147, 229
+       rho heuristic, 976–980, 980 ex., 984          satisﬁability, 1072, 1079–1081, 1105,
+       .n/-approximation algorithm, 1106, 1123            1123–1124, 1127 ex., 1139
+       R IGHT , 152                                  satisﬁable formula, 1049, 1079
+       right child, 1178                             satisfying assignment, 1072, 1079
+       right-conversion, 314 ex.                     saturated edge, 739
+       right horizontal ray, 1021 ex.                saturating push, 739, 745
+       R IGHT-ROTATE , 313                           scalar ﬂow product, 714 ex.
+       right rotation, 312                           scalar multiple, 1220
+       right spine, 333 pr.                          scaling
+       right subtree, 1178                              in maximum ﬂow, 762 pr., 765
+       rod-cutting, 360–370, 390 ex.                    in single-source shortest paths, 679 pr.
+       root                                          scan, 807 pr.
+          of a tree, 1176                            S CAN, 807 pr.
+          of unity, 906–907                          scapegoat tree, 338
+          of Zn , 955                               schedule, 444, 1136 pr.
+       rooted tree, 1176                                event-point, 1023
+          representation of, 246–249                 scheduler, for multithreaded computations,
+       root list, of a Fibonacci heap, 509                 777, 781–783, 812
+       rotation                                         centralized, 782
+          cyclic, 1012 ex.                              greedy, 782
+          in a red-black tree, 312–314                  work-stealing algorithm for, 812
+       rotational sweep, 1030–1038                   scheduling, 443–446, 447 pr., 450, 1104 pr.,
+       rounding, 1126                                      1136 pr.
+          randomized, 1139                           Schur complement, 820, 834
+

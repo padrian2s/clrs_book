@@ -1,0 +1,47 @@
+Problems for Chapter 17                                                                473
+
+
+17-2 Making binary search dynamic
+Binary search of a sorted array takes logarithmic search time, but the time to insert
+a new element is linear in the size of the array. We can improve the time for
+insertion by keeping several sorted arrays.
+   Speciﬁcally, suppose that we wish to support S EARCH and I NSERT on a set
+of n elements. Let k D dlg.n C 1/e, and let the binary representation of n
+be hnk1 ; nk2 ; : : : ; n0 i. We have k sorted arrays A0 ; A1 ; : : : ; Ak1 , where for
+i D 0; 1; : : : ; k  1, the length of array Ai is 2i . Each array is either full or empty,
+depending on whether ni D 1 or ni D 0, respectively. The total number of ele-
+                                            Pk1
+ments held in all k arrays is therefore i D0 ni 2i D n. Although each individual
+array is sorted, elements in different arrays bear no particular relationship to each
+other.
+
+a. Describe how to perform the S EARCH operation for this data structure. Analyze
+   its worst-case running time.
+
+b. Describe how to perform the I NSERT operation. Analyze its worst-case and
+   amortized running times.
+
+c. Discuss how to implement D ELETE.
+
+17-3 Amortized weight-balanced trees
+Consider an ordinary binary search tree augmented by adding to each node x the
+attribute x:size giving the number of keys stored in the subtree rooted at x. Let ˛
+be a constant in the range 1=2  ˛ < 1. We say that a given node x is ˛-balanced
+if x:left:size  ˛  x:size and x:right:size  ˛  x:size. The tree as a whole
+is ˛-balanced if every node in the tree is ˛-balanced. The following amortized
+approach to maintaining weight-balanced trees was suggested by G. Varghese.
+
+a. A 1=2-balanced tree is, in a sense, as balanced as it can be. Given a node x
+   in an arbitrary binary search tree, show how to rebuild the subtree rooted at x
+   so that it becomes 1=2-balanced. Your algorithm should run in time ‚.x:size/,
+   and it can use O.x:size/ auxiliary storage.
+
+b. Show that performing a search in an n-node ˛-balanced binary search tree
+   takes O.lg n/ worst-case time.
+
+For the remainder of this problem, assume that the constant ˛ is strictly greater
+than 1=2. Suppose that we implement I NSERT and D ELETE as usual for an n-node
+binary search tree, except that after every such operation, if any node in the tree
+is no longer ˛-balanced, then we “rebuild” the subtree rooted at the highest such
+node in the tree so that it becomes 1=2-balanced.
+

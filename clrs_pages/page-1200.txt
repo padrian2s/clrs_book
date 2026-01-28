@@ -1,0 +1,47 @@
+B.5 Trees                                                                           1179
+
+
+                                                                   depth 0
+
+
+                                                                   depth 1
+height = 3
+                                                                   depth 2
+
+
+                                                                   depth 3
+
+
+
+Figure B.8 A complete binary tree of height 3 with 8 leaves and 7 internal nodes.
+
+
+children of a node are labeled with distinct positive integers. The ith child of a
+node is absent if no child is labeled with integer i. A k-ary tree is a positional tree
+in which for every node, all children with labels greater than k are missing. Thus,
+a binary tree is a k-ary tree with k D 2.
+   A complete k-ary tree is a k-ary tree in which all leaves have the same depth
+and all internal nodes have degree k. Figure B.8 shows a complete binary tree of
+height 3. How many leaves does a complete k-ary tree of height h have? The root
+has k children at depth 1, each of which has k children at depth 2, etc. Thus, the
+number of leaves at depth h is k h . Consequently, the height of a complete k-ary
+tree with n leaves is logk n. The number of internal nodes of a complete k-ary tree
+of height h is
+                                     X
+                                     h1
+1 C k C k 2 C    C k h1 D                ki
+                                      i D0
+
+                                      kh  1
+                                D
+                                      k1
+by equation (A.5). Thus, a complete binary tree has 2h  1 internal nodes.
+
+Exercises
+
+B.5-1
+Draw all the free trees composed of the three vertices x, y, and ´. Draw all the
+rooted trees with nodes x, y, and ´ with x as the root. Draw all the ordered trees
+with nodes x, y, and ´ with x as the root. Draw all the binary trees with nodes x,
+y, and ´ with x as the root.
+

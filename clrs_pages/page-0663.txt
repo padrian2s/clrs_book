@@ -1,0 +1,37 @@
+642   Chapter 23 Minimum Spanning Trees
+
+
+      procedure MST-R EDUCE described in Problem 23-2. Kruskal’s algorithm was
+      reported by Kruskal [222] in 1956. The algorithm commonly known as Prim’s
+      algorithm was indeed invented by Prim [285], but it was also invented earlier by
+      V. Jarnı́k in 1930.
+         The reason underlying why greedy algorithms are effective at ﬁnding minimum
+      spanning trees is that the set of forests of a graph forms a graphic matroid. (See
+      Section 16.4.)
+         When jEj D .V lg V /, Prim’s algorithm, implemented with Fibonacci heaps,
+      runs in O.E/ time. For sparser graphs, using a combination of the ideas from
+      Prim’s algorithm, Kruskal’s algorithm, and Boru̇vka’s algorithm, together with ad-
+      vanced data structures, Fredman and Tarjan [114] give an algorithm that runs in
+      O.E lg V / time. Gabow, Galil, Spencer, and Tarjan [120] improved this algo-
+      rithm to run in O.E lg lg V / time. Chazelle [60] gives an algorithm that runs
+      in O.E ˛  y.E; V // time, where ˛y.E; V / is the functional inverse of Ackermann’s
+      function. (See the chapter notes for Chapter 21 for a brief discussion of Acker-
+      mann’s function and its inverse.) Unlike previous minimum-spanning-tree algo-
+      rithms, Chazelle’s algorithm does not follow the greedy method.
+         A related problem is spanning-tree veriﬁcation, in which we are given a graph
+      G D .V; E/ and a tree T  E, and we wish to determine whether T is a minimum
+      spanning tree of G. King [203] gives a linear-time algorithm to verify a spanning
+      tree, building on earlier work of Komlós [215] and Dixon, Rauch, and Tarjan [90].
+         The above algorithms are all deterministic and fall into the comparison-based
+      model described in Chapter 8. Karger, Klein, and Tarjan [195] give a randomized
+      minimum-spanning-tree algorithm that runs in O.V C E/ expected time. This
+      algorithm uses recursion in a manner similar to the linear-time selection algorithm
+      in Section 9.3: a recursive call on an auxiliary problem identiﬁes a subset of the
+      edges E 0 that cannot be in any minimum spanning tree. Another recursive call
+      on E  E 0 then ﬁnds the minimum spanning tree. The algorithm also uses ideas
+      from Boru̇vka’s algorithm and King’s algorithm for spanning-tree veriﬁcation.
+         Fredman and Willard [116] showed how to ﬁnd a minimum spanning tree in
+      O.V CE/ time using a deterministic algorithm that is not comparison based. Their
+      algorithm assumes that the data are b-bit integers and that the computer memory
+      consists of addressable b-bit words.
+

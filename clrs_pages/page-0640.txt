@@ -1,0 +1,45 @@
+22.5 Strongly connected components                                                619
+
+
+Proof Since .u; / 2 E T , we have .; u/ 2 E. Because the strongly con-
+nected components of G and G T are the same, Lemma 22.14 implies that
+f .C / < f .C 0 /.
+
+   Corollary 22.15 provides the key to understanding why the strongly connected
+components algorithm works. Let us examine what happens when we perform the
+second depth-ﬁrst search, which is on G T . We start with the strongly connected
+component C whose ﬁnishing time f .C / is maximum. The search starts from
+some vertex x 2 C , and it visits all vertices in C . By Corollary 22.15, G T contains
+no edges from C to any other strongly connected component, and so the search
+from x will not visit vertices in any other component. Thus, the tree rooted at x
+contains exactly the vertices of C . Having completed visiting all vertices in C ,
+the search in line 3 selects as a root a vertex from some other strongly connected
+component C 0 whose ﬁnishing time f .C 0 / is maximum over all components other
+than C . Again, the search will visit all vertices in C 0 , but by Corollary 22.15,
+the only edges in G T from C 0 to any other component must be to C , which we
+have already visited. In general, when the depth-ﬁrst search of G T in line 3 visits
+any strongly connected component, any edges out of that component must be to
+components that the search already visited. Each depth-ﬁrst tree, therefore, will be
+exactly one strongly connected component. The following theorem formalizes this
+argument.
+
+Theorem 22.16
+The S TRONGLY-C ONNECTED -C OMPONENTS procedure correctly computes the
+strongly connected components of the directed graph G provided as its input.
+
+Proof We argue by induction on the number of depth-ﬁrst trees found in the
+depth-ﬁrst search of G T in line 3 that the vertices of each tree form a strongly
+connected component. The inductive hypothesis is that the ﬁrst k trees produced
+in line 3 are strongly connected components. The basis for the induction, when
+k D 0, is trivial.
+   In the inductive step, we assume that each of the ﬁrst k depth-ﬁrst trees produced
+in line 3 is a strongly connected component, and we consider the .k C 1/st tree
+produced. Let the root of this tree be vertex u, and let u be in strongly connected
+component C . Because of how we choose roots in the depth-ﬁrst search in line 3,
+u:f D f .C / > f .C 0 / for any strongly connected component C 0 other than C
+that has yet to be visited. By the inductive hypothesis, at the time that the search
+visits u, all other vertices of C are white. By the white-path theorem, therefore, all
+other vertices of C are descendants of u in its depth-ﬁrst tree. Moreover, by the
+inductive hypothesis and by Corollary 22.15, any edges in G T that leave C must be
+to strongly connected components that have already been visited. Thus, no vertex
+

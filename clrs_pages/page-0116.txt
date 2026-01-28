@@ -1,0 +1,40 @@
+4.5 The master method for solving recurrences                                       95
+
+
+That is, f .n/ must be asymptotically smaller than nlogb a by a factor of n for some
+constant  > 0. In the third case, not only must f .n/ be larger than nlogb a , it also
+must be polynomially larger and in addition satisfy the “regularity” condition that
+af .n=b/  cf .n/. This condition is satisﬁed by most of the polynomially bounded
+functions that we shall encounter.
+   Note that the three cases do not cover all the possibilities for f .n/. There is
+a gap between cases 1 and 2 when f .n/ is smaller than nlogb a but not polynomi-
+ally smaller. Similarly, there is a gap between cases 2 and 3 when f .n/ is larger
+than nlogb a but not polynomially larger. If the function f .n/ falls into one of these
+gaps, or if the regularity condition in case 3 fails to hold, you cannot use the master
+method to solve the recurrence.
+
+Using the master method
+To use the master method, we simply determine which case (if any) of the master
+theorem applies and write down the answer.
+   As a ﬁrst example, consider
+T .n/ D 9T .n=3/ C n :
+For this recurrence, we have a D 9, b D 3, f .n/ D n, and thus we have that
+nlogb a D nlog3 9 D ‚.n2 ). Since f .n/ D O.nlog3 9 /, where  D 1, we can apply
+case 1 of the master theorem and conclude that the solution is T .n/ D ‚.n2 /.
+   Now consider
+T .n/ D T .2n=3/ C 1;
+in which a D 1, b D 3=2, f .n/ D 1, and nlogb a D nlog3=2 1 D n0 D 1. Case 2
+applies, since f .n/ D ‚.nlogb a / D ‚.1/, and thus the solution to the recurrence
+is T .n/ D ‚.lg n/.
+   For the recurrence
+T .n/ D 3T .n=4/ C n lg n ;
+we have a D 3, b D 4, f .n/ D n lg n, and nlogb a D nlog4 3 D O.n0:793 /.
+Since f .n/ D .nlog4 3C /, where   0:2, case 3 applies if we can show that
+the regularity condition holds for f .n/. For sufﬁciently large n, we have that
+af .n=b/ D 3.n=4/ lg.n=4/  .3=4/n lg n D cf .n/ for c D 3=4. Consequently,
+by case 3, the solution to the recurrence is T .n/ D ‚.n lg n/.
+   The master method does not apply to the recurrence
+T .n/ D 2T .n=2/ C n lg n ;
+even though it appears to have the proper form: a D 2, b D 2, f .n/ D n lg n,
+and nlogb a D n. You might mistakenly think that case 3 should apply, since
+

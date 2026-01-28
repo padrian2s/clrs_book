@@ -1,0 +1,46 @@
+740   Chapter 26 Maximum Flow
+
+
+      The relabel operation
+      The basic operation R ELABEL .u/ applies if u is overﬂowing and if u:h  :h for
+      all edges .u; / 2 Ef . In other words, we can relabel an overﬂowing vertex u if
+      for every vertex  for which there is residual capacity from u to , ﬂow cannot be
+      pushed from u to  because  is not downhill from u. (Recall that by deﬁnition,
+      neither the source s nor the sink t can be overﬂowing, and so s and t are ineligible
+      for relabeling.)
+
+      R ELABEL .u/
+      1 // Applies when: u is overﬂowing and for all  2 V such that .u; / 2 Ef ,
+                 we have u:h  :h.
+      2 // Action: Increase the height of u.
+      3 u:h D 1 C min f:h W .u; / 2 Ef g
+
+      When we call the operation R ELABEL .u/, we say that vertex u is relabeled. Note
+      that when u is relabeled, Ef must contain at least one edge that leaves u, so that
+      the minimization in the code is over a nonempty set. This property follows from
+      the assumption that u is overﬂowing, which in turn tells us that
+             X             X
+      u:e D     f .; u/       f .u; / > 0 :
+             2V           2V
+
+      Since all ﬂows are nonnegative, we must therefore have at least one vertex  such
+      that .; u/:f > 0. But then, cf .u; / > 0, which implies that .u; / 2 Ef . The
+      operation R ELABEL .u/ thus gives u the greatest height allowed by the constraints
+      on height functions.
+
+      The generic algorithm
+      The generic push-relabel algorithm uses the following subroutine to create an ini-
+      tial preﬂow in the ﬂow network.
+
+      I NITIALIZE -P REFLOW .G; s/
+        1 for each vertex  2 G:V
+        2      :h D 0
+        3      :e D 0
+        4 for each edge .u; / 2 G:E
+        5      .u; /:f D 0
+        6 s:h D jG:Vj
+        7 for each vertex  2 s:Adj
+        8      .s; /:f D c.s; /
+        9      :e D c.s; /
+      10       s:e D s:e  c.s; /
+

@@ -1,0 +1,66 @@
+                                          20.2 A recursive structure                                                                                                                                                             539
+
+
+
+
+                                                                         proto-vEB(16)                                                       0   1   2                  3
+                                                                        u 16                summary                     cluster
+
+
+
+
+           proto-vEB(4)                                cluster                      proto-vEB(4)                                 cluster                            proto-vEB(4)                                 cluster
+            u       summary                                     0   1                u        summary                                    0   1                       u        summary                                    0   1
+            4                                                                        4                                                                               4
+
+
+                   u                      u                         u                       u                       u                        u                              u                        u                       u
+
+
+
+proto-vEB(2)                                     proto-vEB(2)            proto-vEB(2)                                     proto-vEB(2)                   proto-vEB(2)                                    proto-vEB(2)
+                   2                      2                         2                       2                       2                        2                              2                        2                       2
+
+
+                       proto-vEB(2)                                                              proto-vEB(2)                                                                     proto-vEB(2)
+                 A                      A                         A                       A                       A                        A                              A                        A                       A
+               0 1                    0 1                       0 0                     0 0                     0 0                      0 1                            0 1                      0 1                     0 0
+               1 1                    1 1                       1 1                     1 1                     1 0                      1 1                            1 1                      1 1                     1 1
+
+                       clusters 0,1              clusters 2,3                                   elements 0,1             elements 2,3                                            elements 4,5            elements 6,7
+
+
+
+                                                                                    proto-vEB(4)                                 cluster                            proto-vEB(4)                                 cluster
+                                                                                     u        summary                                    0   1                       u        summary                                    0   1
+                                                                                     4                                                                               4
+
+
+                                                                                            u                       u                        u                              u                        u                       u
+
+
+
+                                                                         proto-vEB(2)                                                                    proto-vEB(2)
+                                                                                            2                       2                        2                              2                        2                       2
+
+
+                                                                                                 proto-vEB(2)             proto-vEB(2)                                            proto-vEB(2)            proto-vEB(2)
+                                                                                          A                       A                        A                              A                        A                       A
+                                                                                        0 0                     0 0                      0 0                            0 0                      0 0                     0 1
+                                                                                        1 0                     1 0                      1 0                            1 1                      1 0                     1 1
+
+                                                                                                elements 8,9 elements 10,11                                                     elements 12,13 elements 14,15
+
+
+
+
+                                          Figure 20.4 A proto-EB.16/ structure representing the set f2; 3; 4; 5; 7; 14; 15g. It points to four
+                                          proto-EB.4/ structures in clusterŒ0 : : 3, and to a summary structure, which is also a proto-EB.4/.
+                                          Each proto-EB.4/ structure points to two proto-EB.2/ structures in clusterŒ0 : : 1, and to a
+                                          proto-EB.2/ summary. Each proto-EB.2/ structure contains just an array AŒ0 : : 1 of two bits.
+                                          The proto-EB.2/ structures above “elements i,j ” store bits i and j of the actual dynamic set, and
+                                          the proto-EB.2/ structures above “clusters i,j ” store the summary bits for clusters i and j in the
+                                          top-level proto-EB.16/ structure. For clarity, heavy shading indicates the top level of a proto-vEB
+                                          structure that stores summary information for its parent structure; such a proto-vEB structure is
+                                          otherwise identical to any other proto-vEB structure with the same universe size.
+

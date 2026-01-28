@@ -1,0 +1,5 @@
+{
+  "page": 1075,
+  "title": "34.3 NP-Completeness and Reducibility",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 34.3</div>\n    <h1>NP-Completeness and Reducibility</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>The hardest problems in NP.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>NP-hard: at least as hard as any problem in NP</li>\n<li>NP-complete = NP-hard ∩ NP</li>\n<li>Reduction: A ≤_P B means solving B solves A</li>\n<li>If any NP-complete problem is in P, then P = NP</li>\n<li>Cook-Levin theorem: SAT is NP-complete</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>3-SAT ≤_P CLIQUE: convert formula to graph where clique exists iff formula satisfiable.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Shows many problems are computationally equivalent - solving one solves all.</p>\n</div>\n</div>"
+}

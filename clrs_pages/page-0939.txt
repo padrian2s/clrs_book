@@ -1,0 +1,47 @@
+918   Chapter 30 Polynomials and the FFT
+
+
+      is a bit-reversal permutation. That is, if we let rev.k/ be the lg n-bit integer
+      formed by reversing the bits of the binary representation of k, then we want to
+      place vector element ak in array position AŒrev.k/. In Figure 30.4, for exam-
+      ple, the leaves appear in the order 0; 4; 2; 6; 1; 5; 3; 7; this sequence in binary is
+      000; 100; 010; 110; 001; 101; 011; 111, and when we reverse the bits of each value
+      we get the sequence 000; 001; 010; 011; 100; 101; 110; 111. To see that we want a
+      bit-reversal permutation in general, we note that at the top level of the tree, indices
+      whose low-order bit is 0 go into the left subtree and indices whose low-order bit
+      is 1 go into the right subtree. Stripping off the low-order bit at each level, we con-
+      tinue this process down the tree, until we get the order given by the bit-reversal
+      permutation at the leaves.
+         Since we can easily compute the function rev.k/, the B IT-R EVERSE -C OPY pro-
+      cedure is simple:
+
+      B IT-R EVERSE -C OPY .a; A/
+      1 n D a:length
+      2 for k D 0 to n  1
+      3       AŒrev.k/ D ak
+
+         The iterative FFT implementation runs in time ‚.n lg n/. The call to B IT-
+      R EVERSE -C OPY.a; A/ certainly runs in O.n lg n/ time, since we iterate n times
+      and can reverse an integer between 0 and n  1, with lg n bits, in O.lg n/ time.
+      (In practice, because we usually know the initial value of n in advance, we would
+      probably code a table mapping k to rev.k/, making B IT-R EVERSE -C OPY run in
+      ‚.n/ time with a low hidden constant. Alternatively, we could use the clever amor-
+      tized reverse binary counter scheme described in Problem 17-1.) To complete the
+      proof that I TERATIVE -FFT runs in time ‚.n lg n/, we show that L.n/, the number
+      of times the body of the innermost loop (lines 8–13) executes, is ‚.n lg n/. The
+      for loop of lines 6–13 iterates n=m D n=2s times for each value of s, and the
+      innermost loop of lines 8–13 iterates m=2 D 2s1 times. Thus,
+                  X
+                  lg n
+                       n
+      L.n/ D                 2s1
+                  sD1
+                      2s
+                  X
+                  lg n
+                       n
+             D
+                  sD1
+                        2
+             D ‚.n lg n/ :
+

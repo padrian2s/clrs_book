@@ -1,0 +1,38 @@
+4.2 Strassen’s algorithm for matrix multiplication                                    81
+
+
+Expanding out the right-hand side, with the expansion of each Pi on its own line
+and vertically aligning terms that cancel out, we see that C11 equals
+A11  B11 C A11  B22 C A22  B11 C A22  B22
+                       A22  B11             C A22  B21
+           A11  B22                                      A12  B22
+                                   A22  B22  A22  B21 C A12  B22 C A12  B21
+
+A11  B11                                                            C A12  B21 ;
+which corresponds to equation (4.11).
+Similarly, we set
+C12 D P1 C P2 ;
+and so C12 equals
+A11  B12  A11  B22
+          C A11  B22 C A12  B22
+
+A11  B12               C A12  B22 ;
+corresponding to equation (4.12).
+Setting
+C21 D P3 C P4
+makes C21 equal
+A21  B11 C A22  B11
+           A22  B11 C A22  B21
+
+A21  B11               C A22  B21 ;
+corresponding to equation (4.13).
+Finally, we set
+C22 D P5 C P1  P3  P7 ;
+so that C22 equals
+  A11  B11 C A11  B22 C A22  B11 C A22  B22
+             A11  B22                         C A11  B12
+                         A22  B11                          A21  B11
+ A11  B11                                      A11  B12 C A21  B11 C A21  B12
+
+                                           A22  B22                   C A21  B12 ;
+

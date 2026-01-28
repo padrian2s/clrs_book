@@ -1,0 +1,53 @@
+1258   Index
+
+
+       component graph, 617                                 violation of, 865
+       composite number, 928                             constraint graph, 666–668
+         witness to, 968                                 contain, in a path, 1170
+       composition, of multithreaded computations,       continuation edge, 778
+            784 ﬁg.                                      continuous uniform probability distribution,
+       computational depth, 812                                1192
+       computational geometry, 1014–1047                 contraction
+       computational problem, 5–6                           of a dynamic table, 467–471
+       computation dag, 777                                 of a matroid, 442
+       computation, multithreaded, 777                      of an undirected graph by an edge, 1172
+       C OMPUTE -P REFIX -F UNCTION, 1006                control instructions, 23
+       C OMPUTE -T RANSITION -F UNCTION, 1001            convergence property, 650, 672–673
+       concatenation                                     convergent series, 1146
+         of languages, 1058                              converting binary to decimal, 933 ex.
+         of strings, 986                                 convex combination of points, 1015
+       concrete problem, 1055                            convex function, 1199
+       concurrency keywords, 774, 776, 785               convex hull, 8, 1029–1039, 1046 pr.
+       concurrency platform, 773                         convex layers, 1044 pr.
+       conditional branch instruction, 23                convex polygon, 1020 ex.
+       conditional independence, 1195 ex.                convex set, 714 ex.
+       conditional probability, 1192, 1194               convolution (˝), 901
+       conﬁguration, 1074                                convolution theorem, 913
+       conjugate of the golden ratio ( y
+                                      ), 59             copy instruction, 23
+       conjugate transpose, 832 ex.                      correctness of an algorithm, 6
+       conjunctive normal form, 1049, 1082               corresponding ﬂow network for bipartite
+       connected component, 1170                               matching, 732
+         identiﬁed using depth-ﬁrst search, 612 ex.      countably inﬁnite set, 1161
+         identiﬁed using disjoint-set data structures,   counter, see binary counter
+            562–564                                      counting, 1183–1189
+       C ONNECTED -C OMPONENTS, 563                         probabilistic, 143 pr.
+       connected graph, 1170                             counting sort, 194–197
+       connective, 1079                                     in radix sort, 198
+       co-NP (complexity class), 1064                    C OUNTING -S ORT , 195
+       conquer step, in divide-and-conquer, 30, 65       coupon collector’s problem, 134
+       conservation of ﬂow, 709–710                      cover
+       consistency                                          path, 761 pr.
+         of literals, 1088                                  by a subset, 1118
+         sequential, 779, 812                               vertex, 1089, 1108, 1124–1127, 1139
+       C ONSOLIDATE , 516                                covertical, 1024
+       consolidating a Fibonacci-heap root list,         C REATE -N EW-RS- V EB-T REE , 557 pr.
+            513–517                                      credit, 456
+       constraint, 851                                   critical edge, 729
+         difference, 665                                 critical path
+         equality, 670 ex., 852–853                         of a dag, 657
+         inequality, 852–853                                of a multithreaded computation, 779
+         linear, 846                                     cross a cut, 626
+         nonnegativity, 851, 853                         cross edge, 609
+         tight, 865                                      cross product ( ), 1016
+

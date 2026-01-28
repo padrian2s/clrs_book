@@ -1,0 +1,41 @@
+298   Chapter 12 Binary Search Trees
+
+
+        With the T RANSPLANT procedure in hand, here is the procedure that deletes
+      node ´ from binary search tree T :
+
+      T REE -D ELETE .T; ´/
+       1 if ´:left == NIL
+       2        T RANSPLANT .T; ´; ´:right/
+       3 elseif ´:right == NIL
+       4        T RANSPLANT .T; ´; ´:left/
+       5 else y D T REE -M INIMUM .´:right/
+       6        if y:p ¤ ´
+       7             T RANSPLANT .T; y; y:right/
+       8             y:right D ´:right
+       9             y:right:p D y
+      10        T RANSPLANT .T; ´; y/
+      11        y:left D ´:left
+      12        y:left:p D y
+
+         The T REE -D ELETE procedure executes the four cases as follows. Lines 1–2
+      handle the case in which node ´ has no left child, and lines 3–4 handle the case in
+      which ´ has a left child but no right child. Lines 5–12 deal with the remaining two
+      cases, in which ´ has two children. Line 5 ﬁnds node y, which is the successor
+      of ´. Because ´ has a nonempty right subtree, its successor must be the node in
+      that subtree with the smallest key; hence the call to T REE -M INIMUM .´:right/. As
+      we noted before, y has no left child. We want to splice y out of its current location,
+      and it should replace ´ in the tree. If y is ´’s right child, then lines 10–12 replace ´
+      as a child of its parent by y and replace y’s left child by ´’s left child. If y is
+      not ´’s left child, lines 7–9 replace y as a child of its parent by y’s right child and
+      turn ´’s right child into y’s right child, and then lines 10–12 replace ´ as a child of
+      its parent by y and replace y’s left child by ´’s left child.
+         Each line of T REE -D ELETE, including the calls to T RANSPLANT, takes constant
+      time, except for the call to T REE -M INIMUM in line 5. Thus, T REE -D ELETE runs
+      in O.h/ time on a tree of height h.
+         In summary, we have proved the following theorem.
+
+      Theorem 12.3
+      We can implement the dynamic-set operations I NSERT and D ELETE so that each
+      one runs in O.h/ time on a binary search tree of height h.
+

@@ -1,0 +1,45 @@
+            24.2 Single-source shortest paths in directed acyclic graphs                     655
+
+
+            24.1-5 ?
+            Let G D .V; E/ be a weighted, directed graph with weight function w W E ! R.
+            Give an O.VE/-time algorithm to ﬁnd, for each vertex  2 V , the value ı  ./ D
+            minu2V fı.u; /g.
+
+            24.1-6 ?
+            Suppose that a weighted, directed graph G D .V; E/ has a negative-weight cycle.
+            Give an efﬁcient algorithm to list the vertices of one such cycle. Prove that your
+            algorithm is correct.
+
+
+
+24.2 Single-source shortest paths in directed acyclic graphs
+
+            By relaxing the edges of a weighted dag (directed acyclic graph) G D .V; E/
+            according to a topological sort of its vertices, we can compute shortest paths from
+            a single source in ‚.V C E/ time. Shortest paths are always well deﬁned in a dag,
+            since even if there are negative-weight edges, no negative-weight cycles can exist.
+               The algorithm starts by topologically sorting the dag (see Section 22.4) to im-
+            pose a linear ordering on the vertices. If the dag contains a path from vertex u to
+            vertex , then u precedes  in the topological sort. We make just one pass over the
+            vertices in the topologically sorted order. As we process each vertex, we relax each
+            edge that leaves the vertex.
+
+            DAG -S HORTEST-PATHS .G; w; s/
+            1 topologically sort the vertices of G
+            2 I NITIALIZE -S INGLE -S OURCE .G; s/
+            3 for each vertex u, taken in topologically sorted order
+            4       for each vertex  2 G:AdjŒu
+            5            R ELAX .u; ; w/
+
+            Figure 24.5 shows the execution of this algorithm.
+               The running time of this algorithm is easy to analyze. As shown in Section 22.4,
+            the topological sort of line 1 takes ‚.V C E/ time. The call of I NITIALIZE -
+            S INGLE -S OURCE in line 2 takes ‚.V / time. The for loop of lines 3–5 makes one
+            iteration per vertex. Altogether, the for loop of lines 4–5 relaxes each edge exactly
+            once. (We have used an aggregate analysis here.) Because each iteration of the
+            inner for loop takes ‚.1/ time, the total running time is ‚.V C E/, which is linear
+            in the size of an adjacency-list representation of the graph.
+               The following theorem shows that the DAG -S HORTEST-PATHS procedure cor-
+            rectly computes the shortest paths.
+

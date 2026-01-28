@@ -1,0 +1,46 @@
+404        Chapter 15 Dynamic Programming
+
+
+                k2 is the root
+                k1 is the left child of k2
+                d0 is the left child of k1
+                d1 is the right child of k1
+                k5 is the right child of k2
+                k4 is the left child of k5
+                k3 is the left child of k4
+                d2 is the left child of k3
+                d3 is the right child of k3
+                d4 is the right child of k4
+                d5 is the right child of k5
+           corresponding to the optimal binary search tree shown in Figure 15.9(b).
+
+           15.5-2
+           Determine the cost and structure of an optimal binary search tree for a set of n D 7
+           keys with the following probabilities:
+            i     0      1       2      3      4       5      6      7
+           pi           0.04   0.06   0.08    0.02   0.10   0.12   0.14
+           qi    0.06   0.06   0.06   0.06    0.05   0.05   0.05   0.05
+
+
+           15.5-3
+           Suppose that instead of maintaining the table wŒi; j , we computed the value
+           of w.i; j / directly from equation (15.12) in line 9 of O PTIMAL -BST and used this
+           computed value in line 11. How would this change affect the asymptotic running
+           time of O PTIMAL -BST?
+
+           15.5-4 ?
+           Knuth [212] has shown that there are always roots of optimal subtrees such that
+           rootŒi; j  1  rootŒi; j   rootŒi C 1; j  for all 1  i < j  n. Use this fact to
+           modify the O PTIMAL -BST procedure to run in ‚.n2 / time.
+
+
+
+Problems
+
+           15-1 Longest simple path in a directed acyclic graph
+           Suppose that we are given a directed acyclic graph G D .V; E/ with real-
+           valued edge weights and two distinguished vertices s and t. Describe a dynamic-
+           programming approach for ﬁnding a longest weighted simple path from s to t.
+           What does the subproblem graph look like? What is the efﬁciency of your algo-
+           rithm?
+

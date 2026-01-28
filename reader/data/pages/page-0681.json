@@ -1,0 +1,5 @@
+{
+  "page": 681,
+  "title": "Single-Source Shortest Paths",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 24</div>\n    <h1>Single-Source Shortest Paths</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>VI: Graph Algorithms</h4>\n    <h3>Chapter 24: Single-Source Shortest Paths</h3>\n    <p><em>Finding shortest paths from one source</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>Relaxation: can we improve distance via this edge?</li>\n<li>Dijkstra: non-negative weights, O((V+E) log V)</li>\n<li>Bellman-Ford: handles negative weights, O(VE)</li>\n<li>DAG: topological order, O(V+E)</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>GPS, network routing (OSPF, RIP)</p>\n</div>\n</div>"
+}

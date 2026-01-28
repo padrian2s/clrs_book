@@ -1,0 +1,44 @@
+1200   Appendix C   Counting and Probability
+
+
+       follows from equation (C.22), with a D E ŒX . Rewriting equation (C.27) yields
+       an expression for the expectation of the square of a random variable:
+          
+       E X 2 D Var ŒX  C E2 ŒX  :                                            (C.28)
+         The variance of a random variable X and the variance of aX are related (see
+       Exercise C.3-10):
+       Var ŒaX  D a2 Var ŒX  :
+       When X and Y are independent random variables,
+       Var ŒX C Y  D Var ŒX  C Var ŒY  :
+       In general, if n random variables X1 ; X2 ; : : : ; Xn are pairwise independent, then
+           " n      #
+            X             Xn
+       Var      Xi D         Var ŒXi  :                                                (C.29)
+            i D1          i D1
+
+          The standard deviation of a random variable X is the nonnegative square root
+       of the variance of X . The standard deviation of a random variable X is sometimes
+       denoted X or simply when the random variable X is understood from context.
+       With this notation, the variance of X is denoted 2 .
+
+       Exercises
+
+       C.3-1
+       Suppose we roll two ordinary, 6-sided dice. What is the expectation of the sum
+       of the two values showing? What is the expectation of the maximum of the two
+       values showing?
+
+       C.3-2
+       An array AŒ1 : : n contains n distinct numbers that are randomly ordered, with each
+       permutation of the n numbers being equally likely. What is the expectation of the
+       index of the maximum element in the array? What is the expectation of the index
+       of the minimum element in the array?
+
+       C.3-3
+       A carnival game consists of three dice in a cage. A player can bet a dollar on any
+       of the numbers 1 through 6. The cage is shaken, and the payoff is as follows. If the
+       player’s number doesn’t appear on any of the dice, he loses his dollar. Otherwise,
+       if his number appears on exactly k of the three dice, for k D 1; 2; 3, he keeps his
+       dollar and wins k more dollars. What is his expected gain from playing the carnival
+       game once?
+

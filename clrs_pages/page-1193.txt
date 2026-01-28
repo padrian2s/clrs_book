@@ -1,0 +1,44 @@
+1172   Appendix B   Sets, Etc.
+
+
+       The subgraph induced by the vertex set f1; 2; 3; 6g in Figure B.2(a) appears in
+       Figure B.2(c) and has the edge set f.1; 2/; .2; 2/; .6; 3/g.
+          Given an undirected graph G D .V; E/, the directed version of G is the directed
+       graph G 0 D .V; E 0 /, where .u; / 2 E 0 if and only if .u; / 2 E. That is, we
+       replace each undirected edge .u; / in G by the two directed edges .u; / and .; u/
+       in the directed version. Given a directed graph G D .V; E/, the undirected version
+       of G is the undirected graph G 0 D .V; E 0 /, where .u; / 2 E 0 if and only if u ¤ 
+       and .u; / 2 E. That is, the undirected version contains the edges of G “with
+       their directions removed” and with self-loops eliminated. (Since .u; / and .; u/
+       are the same edge in an undirected graph, the undirected version of a directed
+       graph contains it only once, even if the directed graph contains both edges .u; /
+       and .; u/.) In a directed graph G D .V; E/, a neighbor of a vertex u is any vertex
+       that is adjacent to u in the undirected version of G. That is,  is a neighbor of u if
+       u ¤  and either .u; / 2 E or .; u/ 2 E. In an undirected graph, u and  are
+       neighbors if they are adjacent.
+          Several kinds of graphs have special names. A complete graph is an undirected
+       graph in which every pair of vertices is adjacent. A bipartite graph is an undirected
+       graph G D .V; E/ in which V can be partitioned into two sets V1 and V2 such that
+       .u; / 2 E implies either u 2 V1 and  2 V2 or u 2 V2 and  2 V1 . That is, all
+       edges go between the two sets V1 and V2 . An acyclic, undirected graph is a forest,
+       and a connected, acyclic, undirected graph is a (free) tree (see Section B.5). We
+       often take the ﬁrst letters of “directed acyclic graph” and call such a graph a dag.
+          There are two variants of graphs that you may occasionally encounter. A multi-
+       graph is like an undirected graph, but it can have both multiple edges between ver-
+       tices and self-loops. A hypergraph is like an undirected graph, but each hyperedge,
+       rather than connecting two vertices, connects an arbitrary subset of vertices. Many
+       algorithms written for ordinary directed and undirected graphs can be adapted to
+       run on these graphlike structures.
+          The contraction of an undirected graph G D .V; E/ by an edge e D .u; / is a
+       graph G 0 D .V 0 ; E 0 /, where V 0 D V  fu; g [ fxg and x is a new vertex. The set
+       of edges E 0 is formed from E by deleting the edge .u; / and, for each vertex w
+       incident on u or , deleting whichever of .u; w/ and .; w/ is in E and adding the
+       new edge .x; w/. In effect, u and  are “contracted” into a single vertex.
+
+       Exercises
+
+       B.4-1
+       Attendees of a faculty party shake hands to greet each other, and each professor
+       remembers how many times he or she shook hands. At the end of the party, the
+       department head adds up the number of times that each professor shook hands.
+

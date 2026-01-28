@@ -1,0 +1,47 @@
+            4.2 Strassen’s algorithm for matrix multiplication                             75
+
+
+            ray is 0. How would you change any of the algorithms that do not allow empty
+            subarrays to permit an empty subarray to be the result?
+
+            4.1-5
+            Use the following ideas to develop a nonrecursive, linear-time algorithm for the
+            maximum-subarray problem. Start at the left end of the array, and progress toward
+            the right, keeping track of the maximum subarray seen so far. Knowing a maximum
+            subarray of AŒ1 : : j , extend the answer to ﬁnd a maximum subarray ending at in-
+            dex j C1 by using the following observation: a maximum subarray of AŒ1 : : j C 1
+            is either a maximum subarray of AŒ1 : : j  or a subarray AŒi : : j C 1, for some
+            1  i  j C 1. Determine a maximum subarray of the form AŒi : : j C 1 in
+            constant time based on knowing a maximum subarray ending at index j .
+
+
+
+4.2 Strassen’s algorithm for matrix multiplication
+
+            If you have seen matrices before, then you probably know how to multiply them.
+            (Otherwise, you should read Section D.1 in Appendix D.) If A D .aij / and
+            B D .bij / are square n n matrices, then in the product C D A  B, we deﬁne the
+            entry cij , for i; j D 1; 2; : : : ; n, by
+                    X
+                    n
+            cij D         ai k  bkj :                                                   (4.8)
+                    kD1
+
+            We must compute n2 matrix entries, and each is the sum of n values. The following
+            procedure takes n n matrices A and B and multiplies them, returning their n n
+            product C . We assume that each matrix has an attribute rows, giving the number
+            of rows in the matrix.
+
+            S QUARE -M ATRIX -M ULTIPLY .A; B/
+            1 n D A:rows
+            2 let C be a new n n matrix
+            3 for i D 1 to n
+            4      for j D 1 to n
+            5           cij D 0
+            6           for k D 1 to n
+            7                cij D cij C ai k  bkj
+            8 return C
+
+              The S QUARE -M ATRIX -M ULTIPLY procedure works as follows. The for loop
+            of lines 3–7 computes the entries of each row i, and within a given row i, the
+

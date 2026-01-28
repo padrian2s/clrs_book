@@ -1,0 +1,45 @@
+15.2 Matrix-chain multiplication                                                         371
+
+
+.A1 .A2 .A3 A4 /// ;
+.A1 ..A2 A3 /A4 // ;
+..A1 A2 /.A3 A4 // ;
+..A1 .A2 A3 //A4 / ;
+...A1 A2 /A3 /A4 / :
+   How we parenthesize a chain of matrices can have a dramatic impact on the cost
+of evaluating the product. Consider ﬁrst the cost of multiplying two matrices. The
+standard algorithm is given by the following pseudocode, which generalizes the
+S QUARE -M ATRIX -M ULTIPLY procedure from Section 4.2. The attributes rows
+and columns are the numbers of rows and columns in a matrix.
+
+M ATRIX -M ULTIPLY .A; B/
+1 if A:columns ¤ B:rows
+2      error “incompatible dimensions”
+3 else let C be a new A:rows B:columns matrix
+4      for i D 1 to A:rows
+5           for j D 1 to B:columns
+6                cij D 0
+7                for k D 1 to A:columns
+8                     cij D cij C ai k  bkj
+9      return C
+
+We can multiply two matrices A and B only if they are compatible: the number of
+columns of A must equal the number of rows of B. If A is a p q matrix and B is
+a q r matrix, the resulting matrix C is a p r matrix. The time to compute C is
+dominated by the number of scalar multiplications in line 8, which is pqr. In what
+follows, we shall express costs in terms of the number of scalar multiplications.
+   To illustrate the different costs incurred by different parenthesizations of a matrix
+product, consider the problem of a chain hA1 ; A2 ; A3 i of three matrices. Suppose
+that the dimensions of the matrices are 10 100, 100 5, and 5 50, respec-
+tively. If we multiply according to the parenthesization ..A1 A2 /A3 /, we perform
+10  100  5 D 5000 scalar multiplications to compute the 10 5 matrix prod-
+uct A1 A2 , plus another 10  5  50 D 2500 scalar multiplications to multiply this
+matrix by A3 , for a total of 7500 scalar multiplications. If instead we multiply
+according to the parenthesization .A1 .A2 A3 //, we perform 100  5  50 D 25,000
+scalar multiplications to compute the 100 50 matrix product A2 A3 , plus another
+10  100  50 D 50,000 scalar multiplications to multiply A1 by this matrix, for a
+total of 75,000 scalar multiplications. Thus, computing the product according to
+the ﬁrst parenthesization is 10 times faster.
+   We state the matrix-chain multiplication problem as follows: given a chain
+hA1 ; A2 ; : : : ; An i of n matrices, where for i D 1; 2; : : : ; n, matrix Ai has dimension
+

@@ -1,0 +1,41 @@
+35.5 The subset-sum problem                                                     1131
+
+
+0<<1:                                                                       (35.25)
+It returns a value ´ whose value is within a 1 C  factor of the optimal solution.
+A PPROX -S UBSET-S UM .S; t; /
+1 n D jSj
+2 L0 D h0i
+3 for i D 1 to n
+4      Li D M ERGE -L ISTS .Li 1 ; Li 1 C xi /
+5      Li D T RIM .Li ; =2n/
+6      remove from Li every element that is greater than t
+7 let ´ be the largest value in Ln
+8 return ´
+Line 2 initializes the list L0 to be the list containing just the element 0. The for
+loop in lines 3–6 computes Li as a sorted list containing a suitably trimmed ver-
+sion of the set Pi , with all elements larger than t removed. Since we create Li
+from Li 1 , we must ensure that the repeated trimming doesn’t introduce too much
+compounded inaccuracy. In a moment, we shall see that A PPROX -S UBSET-S UM
+returns a correct approximation if one exists.
+   As an example, suppose we have the instance
+S D h104; 102; 201; 101i
+with t D 308 and  D 0:40. The trimming parameter ı is =8 D 0:05. A PPROX -
+S UBSET-S UM computes the following values on the indicated lines:
+line 2:   L0 D h0i ;
+
+line 4:   L1 D h0; 104i ;
+line 5:   L1 D h0; 104i ;
+line 6:   L1 D h0; 104i ;
+
+line 4:   L2 D h0; 102; 104; 206i ;
+line 5:   L2 D h0; 102; 206i ;
+line 6:   L2 D h0; 102; 206i ;
+
+line 4:   L3 D h0; 102; 201; 206; 303; 407i ;
+line 5:   L3 D h0; 102; 201; 303; 407i ;
+line 6:   L3 D h0; 102; 201; 303i ;
+line 4:   L4 D h0; 101; 102; 201; 203; 302; 303; 404i ;
+line 5:   L4 D h0; 101; 201; 302; 404i ;
+line 6:   L4 D h0; 101; 201; 302i :
+

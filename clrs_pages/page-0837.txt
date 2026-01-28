@@ -1,0 +1,37 @@
+816   Chapter 28 Matrix Operations
+
+
+      for the unknown x by a method called “back substitution.” Because the permu-
+      tation matrix P is invertible (Exercise D.2-3), multiplying both sides of equa-
+      tion (28.4) by P 1 gives P 1 PA D P 1 LU , so that
+      A D P 1 LU :                                                                       (28.7)
+      Hence, the vector x is our solution to Ax D b:
+      Ax D       P 1 LUx (by equation (28.7))
+         D       P 1 Ly  (by equation (28.6))
+                   1
+         D       P Pb     (by equation (28.5))
+         D       b:
+         Our next step is to show how forward and back substitution work and then attack
+      the problem of computing the LUP decomposition itself.
+
+      Forward and back substitution
+      Forward substitution can solve the lower-triangular system (28.5) in ‚.n2 / time,
+      given L, P , and b. For convenience, we represent the permutation P compactly
+      by an array Œ1 : : n. For i D 1; 2; : : : ; n, the entry Œi indicates that Pi;Œi  D 1
+      and Pij D 0 for j ¤ Œi. Thus, PA has aŒi ;j in row i and column j , and P b
+      has bŒi  as its ith element. Since L is unit lower-triangular, we can rewrite equa-
+      tion (28.5) as
+         y1                                       D bŒ1 ;
+      l21 y1 C     y2                             D bŒ2 ;
+      l31 y1 C l32 y2 C       y3                  D bŒ3 ;
+                                                  ::
+                                                   :
+      ln1 y1 C ln2 y2 C ln3 y3 C    C yn D bŒn :
+      The ﬁrst equation tells us that y1 D bŒ1 . Knowing the value of y1 , we can
+      substitute it into the second equation, yielding
+      y2 D bŒ2  l21 y1 :
+      Now, we can substitute both y1 and y2 into the third equation, obtaining
+      y3 D bŒ3  .l31 y1 C l32 y2 / :
+      In general, we substitute y1 ; y2 ; : : : ; yi 1 “forward” into the ith equation to solve
+      for yi :
+

@@ -1,0 +1,47 @@
+Problems for Chapter 24                                                            681
+
+
+Let  D minc .c/, where c ranges over all directed cycles in G. We call a cycle c
+for which .c/ D  a minimum mean-weight cycle. This problem investigates
+an efﬁcient algorithm for computing  .
+   Assume without loss of generality that every vertex  2 V is reachable from a
+source vertex s 2 V . Let ı.s; / be the weight of a shortest path from s to , and let
+ık .s; / be the weight of a shortest path from s to  consisting of exactly k edges.
+If there is no path from s to  with exactly k edges, then ık .s; / D 1.
+a. Show that if  D 0, then G contains no negative-weight cycles and ı.s; / D
+   min0kn1 ık .s; / for all vertices  2 V .
+                    
+b. Show that if         D 0, then
+           ın .s; /  ık .s; /
+     max                         0
+   0kn1         nk
+   for all vertices  2 V . (Hint: Use both properties from part (a).)
+
+c. Let c be a 0-weight cycle, and let u and  be any two vertices on c. Suppose
+   that  D 0 and that the weight of the simple path from u to  along the cycle
+   is x. Prove that ı.s; / D ı.s; u/ C x. (Hint: The weight of the simple path
+   from  to u along the cycle is x.)
+
+d. Show that if  D 0, then on each minimum mean-weight cycle there exists a
+   vertex  such that
+           ın .s; /  ık .s; /
+     max                         D0:
+   0kn1         nk
+   (Hint: Show how to extend a shortest path to any vertex on a minimum mean-
+   weight cycle along the cycle to make a shortest path to the next vertex on the
+   cycle.)
+                    
+e. Show that if         D 0, then
+                ın .s; /  ık .s; /
+   min max                            D0:
+    2V 0kn1         nk
+                                                                                     
+f. Show that if we add a constant t to the weight of each edge of G, then
+   increases by t. Use this fact to show that
+
+                         ın .s; /  ık .s; /
+         D min max                              :
+           2V 0kn1            nk
+                                                    
+g. Give an O.VE/-time algorithm to compute              .
+

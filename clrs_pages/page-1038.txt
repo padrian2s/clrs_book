@@ -1,0 +1,57 @@
+33.1 Line-segment properties                                                                  1017
+
+
+               p2                                           p2
+
+                            p1              p1
+counterclockwise                                            clockwise
+
+               p0                                           p0
+                    (a)                               (b)
+
+
+Figure 33.2 Using the cross product to determine how consecutive line segments p0 p1 and p1 p2
+turn at point p1 . We check whether the directed segment pp
+                                                             !
+                                                            0 2 is clockwise or counterclockwise
+                                 p
+relative to the directed segment p  !. (a) If counterclockwise, the points make a left turn. (b) If
+                                   0 1
+clockwise, they make a right turn.
+
+
+.p1  p0 /     .p2  p0 / D .x1  x0 /.y2  y0 /  .x2  x0 /.y1  y0 / :
+If this cross product is positive, then    p1 is clockwise from 
+                                        p0!                    p0p
+                                                                     !; if negative, it
+                                                                       2
+is counterclockwise.
+
+Determining whether consecutive segments turn left or right
+Our next question is whether two consecutive line segments p0 p1 and p1 p2 turn
+left or right at point p1 . Equivalently, we want a method to determine which way a
+given angle †p0 p1 p2 turns. Cross products allow us to answer this question with-
+out computing the angle. As Figure 33.2 shows, we simply check whether directed
+segment       p2 is clockwise or counterclockwise relative to directed segment 
+           p0!                                                                 p0p
+                                                                                     !.
+                                                                                       1
+To do so, we compute the cross product .p2  p0 / .p1  p0 /. If the sign of
+this cross product is negative, then     p2 is counterclockwise with respect to 
+                                      p0!                                      p0p
+                                                                                     !,
+                                                                                       1
+and thus we make a left turn at p1 . A positive cross product indicates a clockwise
+orientation and a right turn. A cross product of 0 means that points p0 , p1 , and p2
+are colinear.
+
+Determining whether two line segments intersect
+To determine whether two line segments intersect, we check whether each segment
+straddles the line containing the other. A segment p1 p2 straddles a line if point p1
+lies on one side of the line and point p2 lies on the other side. A boundary case
+arises if p1 or p2 lies directly on the line. Two line segments intersect if and only
+if either (or both) of the following conditions holds:
+1. Each segment straddles the line containing the other.
+2. An endpoint of one segment lies on the other segment. (This condition comes
+   from the boundary case.)
+

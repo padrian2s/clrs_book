@@ -1,0 +1,44 @@
+16.5 A task-scheduling problem as a matroid                                      445
+
+
+Lemma 16.12
+For any set of tasks A, the following statements are equivalent.
+1. The set A is independent.
+2. For t D 0; 1; 2; : : : ; n, we have N t .A/  t.
+3. If the tasks in A are scheduled in order of monotonically increasing deadlines,
+   then no task is late.
+
+Proof To show that (1) implies (2), we prove the contrapositive: if N t .A/ > t for
+some t, then there is no way to make a schedule with no late tasks for set A, because
+more than t tasks must ﬁnish before time t. Therefore, (1) implies (2). If (2) holds,
+then (3) must follow: there is no way to “get stuck” when scheduling the tasks in
+order of monotonically increasing deadlines, since (2) implies that the ith largest
+deadline is at least i. Finally, (3) trivially implies (1).
+
+   Using property 2 of Lemma 16.12, we can easily compute whether or not a given
+set of tasks is independent (see Exercise 16.5-2).
+   The problem of minimizing the sum of the penalties of the late tasks is the same
+as the problem of maximizing the sum of the penalties of the early tasks. The
+following theorem thus ensures that we can use the greedy algorithm to ﬁnd an
+independent set A of tasks with the maximum total penalty.
+
+Theorem 16.13
+If S is a set of unit-time tasks with deadlines, and  is the set of all independent
+sets of tasks, then the corresponding system .S;  / is a matroid.
+
+Proof Every subset of an independent set of tasks is certainly independent. To
+prove the exchange property, suppose that B and A are independent sets of tasks
+and that jBj > jAj. Let k be the largest t such that N t .B/  N t .A/. (Such a value
+of t exists, since N0 .A/ D N0 .B/ D 0.) Since Nn .B/ D jBj and Nn .A/ D jAj,
+but jBj > jAj, we must have that k < n and that Nj .B/ > Nj .A/ for all j in
+the range k C 1  j  n. Therefore, B contains more tasks with deadline k C 1
+than A does. Let ai be a task in B  A with deadline k C 1. Let A0 D A [ fai g.
+   We now show that A0 must be independent by using property 2 of Lemma 16.12.
+For 0  t  k, we have N t .A0 / D N t .A/  t, since A is independent. For
+k < t  n, we have N t .A0 /  N t .B/  t, since B is independent. Therefore, A0
+is independent, completing our proof that .S;  / is a matroid.
+
+   By Theorem 16.11, we can use a greedy algorithm to ﬁnd a maximum-weight
+independent set of tasks A. We can then create an optimal schedule having the
+tasks in A as its early tasks. This method is an efﬁcient algorithm for scheduling
+

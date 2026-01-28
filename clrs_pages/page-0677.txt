@@ -1,0 +1,50 @@
+656               Chapter 24 Single-Source Shortest Paths
+
+
+                       6                  1                                              6                   1
+      r       s        t         x        y         z                 r         s        t          x        y        z
+          5       2         7        –1        –2                          5         2        7         –1       –2
+      ∞       0        ∞         ∞        ∞         ∞                 ∞         0        ∞          ∞        ∞        ∞
+              3                  4            2                                 3                   4            2
+                           (a)                                                               (b)
+
+                       6                  1                                              6                   1
+      r       s        t         x        y         z                 r         s        t          x        y         z
+          5       2         7        –1        –2                          5         2        7         –1       –2
+      ∞       0        2         6        ∞         ∞                 ∞         0        2          6        6         4
+              3                  4            2                                 3                   4            2
+                           (c)                                                               (d)
+
+                       6                  1                                              6                   1
+      r       s        t         x        y         z                 r         s        t          x        y         z
+          5       2         7        –1        –2                          5         2        7         –1       –2
+      ∞       0        2         6        5         4                 ∞         0        2          6        5         3
+              3                  4            2                                 3                   4            2
+                           (e)                                                                (f)
+
+                       6                  1
+      r       s        t         x        y         z
+          5       2         7        –1        –2
+      ∞       0        2         6        5         3
+              3                  4            2
+                           (g)
+
+
+                  Figure 24.5 The execution of the algorithm for shortest paths in a directed acyclic graph. The
+                  vertices are topologically sorted from left to right. The source vertex is s. The d values appear
+                  within the vertices, and shaded edges indicate the  values. (a) The situation before the ﬁrst iteration
+                  of the for loop of lines 3–5. (b)–(g) The situation after each iteration of the for loop of lines 3–5.
+                  The newly blackened vertex in each iteration was used as u in that iteration. The values shown in
+                  part (g) are the ﬁnal values.
+
+
+                  Theorem 24.5
+                  If a weighted, directed graph G D .V; E/ has source vertex s and no cycles, then
+                  at the termination of the DAG -S HORTEST-PATHS procedure, :d D ı.s; / for all
+                  vertices  2 V , and the predecessor subgraph G is a shortest-paths tree.
+
+                  Proof We ﬁrst show that :d D ı.s; / for all vertices  2 V at termina-
+                  tion. If  is not reachable from s, then :d D ı.s; / D 1 by the no-path
+                  property. Now, suppose that  is reachable from s, so that there is a short-
+                  est path p D h0 ; 1 ; : : : ; k i, where 0 D s and k D . Because we pro-
+

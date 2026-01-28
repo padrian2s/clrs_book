@@ -1,0 +1,37 @@
+A          Summations
+
+
+
+
+           When an algorithm contains an iterative control construct such as a while or for
+           loop, we can express its running time as the sum of the times spent on each exe-
+           cution of the body of the loop. For example, we found in Section 2.2 that the j th
+           iteration of insertion sort took time proportional to j in the worst case. By adding
+           up the time spent on each iteration, we obtained the summation (or series)
+           X n
+                j :
+           j D2
+
+           When we evaluated this summation, we attained a bound of ‚.n2 / on the worst-
+           case running time of the algorithm. This example illustrates why you should know
+           how to manipulate and bound summations.
+              Section A.1 lists several basic formulas involving summations. Section A.2 of-
+           fers useful techniques for bounding summations. We present the formulas in Sec-
+           tion A.1 without proof, though proofs for some of them appear in Section A.2 to
+           illustrate the methods of that section. You can ﬁnd most of the other proofs in any
+           calculus text.
+
+
+A.1 Summation formulas and properties
+
+           Given a sequence a1 ; a2 ; : : : ; an of numbers, where n is a nonnegative integer, we
+           can write the ﬁnite sum a1 C a2 C    C an as
+           Xn
+               ak :
+           kD1
+
+           If n D 0, the value of the summation is deﬁned to be 0. The value of a ﬁnite series
+           is always well deﬁned, and we can add its terms in any order.
+              Given an inﬁnite sequence a1 ; a2 ; : : : of numbers, we can write the inﬁnite sum
+           a1 C a2 C    as
+

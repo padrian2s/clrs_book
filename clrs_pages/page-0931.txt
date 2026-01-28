@@ -1,0 +1,31 @@
+910   Chapter 30 Polynomials and the FFT
+
+
+      for dealing with non-power-of-2 sizes are known, they are beyond the scope of this
+      book.
+         The FFT method employs a divide-and-conquer strategy, using the even-indexed
+      and odd-indexed coefﬁcients of A.x/ separately to deﬁne the two new polynomials
+      AŒ0 .x/ and AŒ1 .x/ of degree-bound n=2:
+      AŒ0 .x/ D a0 C a2 x C a4 x 2 C    C an2 x n=21 ;
+      AŒ1 .x/ D a1 C a3 x C a5 x 2 C    C an1 x n=21 :
+      Note that AŒ0 contains all the even-indexed coefﬁcients of A (the binary represen-
+      tation of the index ends in 0) and AŒ1 contains all the odd-indexed coefﬁcients (the
+      binary representation of the index ends in 1). It follows that
+      A.x/ D AŒ0 .x 2 / C xAŒ1 .x 2 / ;                                               (30.9)
+      so that the problem of evaluating A.x/ at !n0 ; !n1 ; : : : ; !nn1 reduces to
+      1. evaluating the degree-bound n=2 polynomials AŒ0 .x/ and AŒ1 .x/ at the points
+
+         .!n0 /2 ; .!n1 /2 ; : : : ; .!nn1 /2 ;                                       (30.10)
+
+         and then
+      2. combining the results according to equation (30.9).
+         By the halving lemma, the list of values (30.10) consists not of n distinct val-
+      ues but only of the n=2 complex .n=2/th roots of unity, with each root occurring
+      exactly twice. Therefore, we recursively evaluate the polynomials AŒ0 and AŒ1
+      of degree-bound n=2 at the n=2 complex .n=2/th roots of unity. These subprob-
+      lems have exactly the same form as the original problem, but are half the size.
+      We have now successfully divided an n-element DFTn computation into two n=2-
+      element DFTn=2 computations. This decomposition is the basis for the follow-
+      ing recursive FFT algorithm, which computes the DFT of an n-element vector
+      a D .a0 ; a1 ; : : : ; an1 /, where n is a power of 2.
+

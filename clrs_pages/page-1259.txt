@@ -1,0 +1,45 @@
+1238   Bibliography
+
+
+        [126] Zvi Galil and Joel Seiferas. Time-space-optimal string matching. Journal of Computer and
+              System Sciences, 26(3):280–294, 1983.
+        [127] Igal Galperin and Ronald L. Rivest. Scapegoat trees. In Proceedings of the 4th ACM-SIAM
+              Symposium on Discrete Algorithms, pages 165–174, 1993.
+        [128] Michael R. Garey, R. L. Graham, and J. D. Ullman. Worst-case analyis of memory al-
+              location algorithms. In Proceedings of the Fourth Annual ACM Symposium on Theory of
+              Computing, pages 143–150, 1972.
+        [129] Michael R. Garey and David S. Johnson. Computers and Intractability: A Guide to the
+              Theory of NP-Completeness. W. H. Freeman, 1979.
+        [130] Saul Gass. Linear Programming: Methods and Applications. International Thomson Pub-
+              lishing, fourth edition, 1975.
+        [131] Fănică Gavril. Algorithms for minimum coloring, maximum clique, minimum covering by
+              cliques, and maximum independent set of a chordal graph. SIAM Journal on Computing,
+              1(2):180–187, 1972.
+        [132] Alan George and Joseph W-H Liu. Computer Solution of Large Sparse Positive Deﬁnite
+              Systems. Prentice Hall, 1981.
+        [133] E. N. Gilbert and E. F. Moore. Variable-length binary encodings. Bell System Technical
+              Journal, 38(4):933–967, 1959.
+        [134] Michel X. Goemans and David P. Williamson. Improved approximation algorithms for
+              maximum cut and satisﬁability problems using semideﬁnite programming. Journal of the
+              ACM, 42(6):1115–1145, 1995.
+        [135] Michel X. Goemans and David P. Williamson. The primal-dual method for approximation
+              algorithms and its application to network design problems. In Dorit S. Hochbaum, editor,
+              Approximation Algorithms for NP-Hard Problems, pages 144–191. PWS Publishing Com-
+              pany, 1997.
+        [136] Andrew V. Goldberg. Efﬁcient Graph Algorithms for Sequential and Parallel Computers.
+              PhD thesis, Department of Electrical Engineering and Computer Science, MIT, 1987.
+        [137] Andrew V. Goldberg. Scaling algorithms for the shortest paths problem. SIAM Journal on
+              Computing, 24(3):494–504, 1995.
+        [138] Andrew V. Goldberg and Satish Rao. Beyond the ﬂow decomposition barrier. Journal of
+              the ACM, 45(5):783–797, 1998.
+        [139] Andrew V. Goldberg, Éva Tardos, and Robert E. Tarjan. Network ﬂow algorithms. In Bern-
+              hard Korte, László Lovász, Hans Jürgen Prömel, and Alexander Schrijver, editors, Paths,
+              Flows, and VLSI-Layout, pages 101–164. Springer, 1990.
+        [140] Andrew V. Goldberg and Robert E. Tarjan. A new approach to the maximum ﬂow problem.
+              Journal of the ACM, 35(4):921–940, 1988.
+        [141] D. Goldfarb and M. J. Todd. Linear programming. In G. L. Nemhauser, A. H. G. Rinnooy-
+              Kan, and M. J. Todd, editors, Handbook in Operations Research and Management Science,
+              Vol. 1, Optimization, pages 73–170. Elsevier Science Publishers, 1989.
+        [142] Shaﬁ Goldwasser and Silvio Micali. Probabilistic encryption. Journal of Computer and
+              System Sciences, 28(2):270–299, 1984.
+

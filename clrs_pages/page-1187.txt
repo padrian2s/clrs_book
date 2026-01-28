@@ -1,0 +1,43 @@
+1166         Appendix B   Sets, Etc.
+
+
+             B.2-4
+             Let S be a ﬁnite set, and let R be an equivalence relation on S S. Show that if
+             in addition R is antisymmetric, then the equivalence classes of S with respect to R
+             are singletons.
+
+             B.2-5
+             Professor Narcissus claims that if a relation R is symmetric and transitive, then it is
+             also reﬂexive. He offers the following proof. By symmetry, a R b implies b R a.
+             Transitivity, therefore, implies a R a. Is the professor correct?
+
+
+
+B.3    Functions
+
+             Given two sets A and B, a function f is a binary relation on A and B such that
+             for all a 2 A, there exists precisely one b 2 B such that .a; b/ 2 f . The set A is
+             called the domain of f , and the set B is called the codomain of f . We sometimes
+             write f W A ! B; and if .a; b/ 2 f , we write b D f .a/, since b is uniquely
+             determined by the choice of a.
+                Intuitively, the function f assigns an element of B to each element of A. No
+             element of A is assigned two different elements of B, but the same element of B
+             can be assigned to two different elements of A. For example, the binary relation
+             f D f.a; b/ W a; b 2 N and b D a mod 2g
+             is a function f W N ! f0; 1g, since for each natural number a, there is exactly one
+             value b in f0; 1g such that b D a mod 2. For this example, 0 D f .0/, 1 D f .1/,
+             0 D f .2/, etc. In contrast, the binary relation
+             g D f.a; b/ W a; b 2 N and a C b is eveng
+             is not a function, since .1; 3/ and .1; 5/ are both in g, and thus for the choice a D 1,
+             there is not precisely one b such that .a; b/ 2 g.
+                Given a function f W A ! B, if b D f .a/, we say that a is the argument of f
+             and that b is the value of f at a. We can deﬁne a function by stating its value for
+             every element of its domain. For example, we might deﬁne f .n/ D 2n for n 2 N,
+             which means f D f.n; 2n/ W n 2 Ng. Two functions f and g are equal if they
+             have the same domain and codomain and if, for all a in the domain, f .a/ D g.a/.
+                A ﬁnite sequence of length n is a function f whose domain is the set of n
+             integers f0; 1; : : : ; n  1g. We often denote a ﬁnite sequence by listing its values:
+             hf .0/; f .1/; : : : ; f .n  1/i. An inﬁnite sequence is a function whose domain is
+             the set N of natural numbers. For example, the Fibonacci sequence, deﬁned by
+             recurrence (3.22), is the inﬁnite sequence h0; 1; 1; 2; 3; 5; 8; 13; 21; : : :i.
+

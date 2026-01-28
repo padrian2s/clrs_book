@@ -1,0 +1,48 @@
+Problems for Chapter 30                                                              923
+
+
+30-5 Polynomial evaluation at multiple points
+We have seen how to evaluate a polynomial of degree-bound n at a single point in
+O.n/ time using Horner’s rule. We have also discovered how to evaluate such a
+polynomial at all n complex roots of unity in O.n lg n/ time using the FFT. We
+shall now show how to evaluate a polynomial of degree-bound n at n arbitrary
+points in O.n lg2 n/ time.
+   To do so, we shall assume that we can compute the polynomial remainder when
+one such polynomial is divided by another in O.n lg n/ time, a result that we state
+without proof. For example, the remainder of 3x 3 C x 2  3x C 1 when divided by
+x 2 C x C 2 is
+.3x 3 C x 2  3x C 1/ mod .x 2 C x C 2/ D 7x C 5 :
+                                                                   Pn1
+  Given the coefﬁcient representation of a polynomial A.x/ D kD0 ak x k and
+n points x0 ; x1 ; : : : ; xn1 , we wish to compute the n values A.xQ
+                                                                     0 /; A.x1 /; : : : ;
+                                                                        j
+A.xn1 /. For 0  i  j  n  1, deﬁne the polynomials Pij .x/ D kDi .x  xk /
+and Qij .x/ D A.x/ mod Pij .x/. Note that Qij .x/ has degree at most j  i.
+
+a. Prove that A.x/ mod .x  ´/ D A.´/ for any point ´.
+
+b. Prove that Qkk .x/ D A.xk / and that Q0;n1 .x/ D A.x/.
+
+c. Prove that for i  k  j , we have Qi k .x/ D Qij .x/ mod Pi k .x/ and
+   Qkj .x/ D Qij .x/ mod Pkj .x/.
+
+d. Give an O.n lg2 n/-time algorithm to evaluate A.x0 /; A.x1 /; : : : ; A.xn1 /.
+
+30-6 FFT using modular arithmetic
+As deﬁned, the discrete Fourier transform requires us to compute with complex
+numbers, which can result in a loss of precision due to round-off errors. For some
+problems, the answer is known to contain only integers, and by using a variant of
+the FFT based on modular arithmetic, we can guarantee that the answer is calcu-
+lated exactly. An example of such a problem is that of multiplying two polynomials
+with integer coefﬁcients. Exercise 30.2-6 gives one approach, using a modulus of
+length .n/ bits to handle a DFT on n points. This problem gives another ap-
+proach, which uses a modulus of the more reasonable length O.lg n/; it requires
+that you understand the material of Chapter 31. Let n be a power of 2.
+
+a. Suppose that we search for the smallest k such that p D k n C 1 is prime. Give
+   a simple heuristic argument why we might expect k to be approximately ln n.
+   (The value of k might be much larger or smaller, but we can reasonably expect
+   to examine O.lg n/ candidate values of k on average.) How does the expected
+   length of p compare to the length of n?
+

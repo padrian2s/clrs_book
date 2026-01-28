@@ -1,0 +1,44 @@
+1164   Appendix B   Sets, Etc.
+
+
+       for all a; b; c 2 A. For example, the relations “<,” “,” and “D” are transitive, but
+       the relation R D f.a; b/ W a; b 2 N and a D b  1g is not, since 3 R 4 and 4 R 5
+       do not imply 3 R 5.
+          A relation that is reﬂexive, symmetric, and transitive is an equivalence relation.
+       For example, “D” is an equivalence relation on the natural numbers, but “<” is not.
+       If R is an equivalence relation on a set A, then for a 2 A, the equivalence class
+       of a is the set Œa D fb 2 A W a R bg, that is, the set of all elements equivalent to a.
+       For example, if we deﬁne R D f.a; b/ W a; b 2 N and a C b is an even numberg,
+       then R is an equivalence relation, since a C a is even (reﬂexive), a C b is even
+       implies b C a is even (symmetric), and a C b is even and b C c is even imply
+       a C c is even (transitive). The equivalence class of 4 is Œ4 D f0; 2; 4; 6; : : :g, and
+       the equivalence class of 3 is Œ3 D f1; 3; 5; 7; : : :g. A basic theorem of equivalence
+       classes is the following.
+
+       Theorem B.1 (An equivalence relation is the same as a partition)
+       The equivalence classes of any equivalence relation R on a set A form a partition
+       of A, and any partition of A determines an equivalence relation on A for which the
+       sets in the partition are the equivalence classes.
+
+       Proof For the ﬁrst part of the proof, we must show that the equivalence classes
+       of R are nonempty, pairwise-disjoint sets whose union is A. Because R is reﬂex-
+       ive, a 2 Œa, and so the equivalence classes are nonempty; moreover, since every
+       element a 2 A belongs to the equivalence class Œa, the union of the equivalence
+       classes is A. It remains to show that the equivalence classes are pairwise disjoint,
+       that is, if two equivalence classes Œa and Œb have an element c in common, then
+       they are in fact the same set. Suppose that a R c and b R c. By symmetry, c R b,
+       and by transitivity, a R b. Thus, for any arbitrary element x 2 Œa, we have x R a
+       and, by transitivity, x R b, and thus Œa  Œb. Similarly, Œb  Œa, and thus
+       Œa D Œb.
+          For the second part of the proof, let A D fAi g be a partition of A, and deﬁne
+       R D f.a; b/ W there exists i such that a 2 Ai and b 2 Ai g. We claim that R is an
+       equivalence relation on A. Reﬂexivity holds, since a 2 Ai implies a R a. Symme-
+       try holds, because if a R b, then a and b are in the same set Ai , and hence b R a.
+       If a R b and b R c, then all three elements are in the same set Ai , and thus a R c
+       and transitivity holds. To see that the sets in the partition are the equivalence
+       classes of R, observe that if a 2 Ai , then x 2 Œa implies x 2 Ai , and x 2 Ai
+       implies x 2 Œa.
+
+         A binary relation R on a set A is antisymmetric if
+       a R b and b R a imply a D b :
+

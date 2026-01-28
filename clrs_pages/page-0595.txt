@@ -1,0 +1,44 @@
+574   Chapter 21 Data Structures for Disjoint Sets
+
+
+      We also have
+      A3 .1/ D         A.2/
+                         2 .1/
+             D         A2 .A2 .1//
+             D         A2 .7/
+             D         28  8  1
+             D         211  1
+             D         2047
+      and
+      A4 .1/   D       A.2/
+                        3 .1/
+               D       A3 .A3 .1//
+               D       A3 .2047/
+               D       A.2048/
+                         2     .2047/
+                       A2 .2047/
+               D       22048  2048  1
+               >       22048
+               D       .24 /512
+               D       16512
+                       1080 ;
+      which is the estimated number of atoms in the observable universe. (The symbol
+      “ ” denotes the “much-greater-than” relation.)
+        We deﬁne the inverse of the function Ak .n/, for integer n  0, by
+      ˛.n/ D min fk W Ak .1/  ng :
+
+
+
+               ˚
+      In words, ˛.n/ is the lowest level k for which Ak .1/ is at least n. From the above
+      values of Ak .1/, we see that
+
+                   0     for 0  n  2 ;
+                   1     for n D 3 ;
+      ˛.n/ D       2     for 4  n  7 ;
+                   3     for 8  n  2047 ;
+                   4     for 2048  n  A4 .1/ :
+      It is only for values of n so large that the term “astronomical” understates them
+      (greater than A4 .1/, a huge number) that ˛.n/ > 4, and so ˛.n/  4 for all
+      practical purposes.
+

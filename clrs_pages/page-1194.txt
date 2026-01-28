@@ -1,0 +1,47 @@
+              B.5 Trees                                                                        1173
+
+
+              Show that the result is even by proving the handshaking lemma: if G D .V; E/ is
+              an undirected graph, then
+              X
+                  degree./ D 2 jEj :
+              2V
+
+
+              B.4-2
+              Show that if a directed or undirected graph contains a path between two vertices u
+              and , then it contains a simple path between u and . Show that if a directed graph
+              contains a cycle, then it contains a simple cycle.
+
+              B.4-3
+              Show that any connected, undirected graph G D .V; E/ satisﬁes jEj  jV j  1.
+
+              B.4-4
+              Verify that in an undirected graph, the “is reachable from” relation is an equiv-
+              alence relation on the vertices of the graph. Which of the three properties of an
+              equivalence relation hold in general for the “is reachable from” relation on the
+              vertices of a directed graph?
+
+              B.4-5
+              What is the undirected version of the directed graph in Figure B.2(a)? What is the
+              directed version of the undirected graph in Figure B.2(b)?
+
+              B.4-6 ?
+              Show that we can represent a hypergraph by a bipartite graph if we let incidence in
+              the hypergraph correspond to adjacency in the bipartite graph. (Hint: Let one set
+              of vertices in the bipartite graph correspond to vertices of the hypergraph, and let
+              the other set of vertices of the bipartite graph correspond to hyperedges.)
+
+
+
+B.5   Trees
+
+              As with graphs, there are many related, but slightly different, notions of trees. This
+              section presents deﬁnitions and mathematical properties of several kinds of trees.
+              Sections 10.4 and 22.1 describe how we can represent trees in computer memory.
+
+              B.5.1 Free trees
+              As deﬁned in Section B.4, a free tree is a connected, acyclic, undirected graph. We
+              often omit the adjective “free” when we say that a graph is a tree. If an undirected
+              graph is acyclic but possibly disconnected, it is a forest. Many algorithms that work
+

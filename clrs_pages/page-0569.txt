@@ -1,0 +1,46 @@
+548              Chapter 20 van Emde Boas Trees
+
+
+
+
+                                              vEB(16)       u 16     min 2         max 15
+                                                                           0   1    2    3
+                                              summary           cluster
+
+
+
+
+ vEB(4) u 4     min 0 max 3             vEB(4)   u 4     min 3 max 3                    vEB(4)   u 4     min 0 max 3
+                            0    1                                   0     1                                         0    1
+ summary          cluster               summary            cluster                      summary            cluster
+
+
+
+
+ vEB(2)       vEB(2)        vEB(2)      vEB(2)         vEB(2)        vEB(2)             vEB(2)         vEB(2)        vEB(2)
+      u 2      u 2              u 2       u 2           u 2              u 2              u 2           u 2              u 2
+ min 0      min 1           min 1       min          min             min                min 0       min 1            min 1
+ max 1      max 1           max 1      max           max             max                max 1      max 1             max 1
+
+
+
+
+                                        vEB(4)    u 4     min        max                vEB(4)    u 4     min 2 max 3
+                                                                     0     1                                         0    1
+                                        summary            cluster                      summary            cluster
+
+
+
+
+                                        vEB(2)         vEB(2)        vEB(2)             vEB(2)         vEB(2)        vEB(2)
+                                          u 2           u 2              u 2              u 2           u 2              u 2
+                                        min          min             min                min 1       min              min 1
+                                       max           max             max                max 1      max               max 1
+
+
+
+
+                 Figure 20.6 A EB.16/ tree corresponding to the proto-vEB tree in Figure 20.4. It stores the set
+                 f2; 3; 4; 5; 7; 14; 15g. Slashes indicate NIL values. The value stored in the min attribute of a vEB tree
+                 does not appear in any of its clusters. Heavy shading serves the same purpose here as in Figure 20.4.
+

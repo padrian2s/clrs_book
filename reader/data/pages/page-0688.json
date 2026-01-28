@@ -1,0 +1,5 @@
+{
+  "page": 688,
+  "title": "25.1 Shortest Paths and Matrix Multiplication",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Section 25.1</div>\n    <h1>Shortest Paths and Matrix Multiplication</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n        <h4>Summary</h4>\n        <p><strong>All-pairs shortest paths using matrix multiplication approach.</strong></p>\n    </div>\n\n    <div class=\"highlight-box\">\n        <h4>Key Points</h4>\n        <ul><li>L⁽ᵐ⁾[i,j] = shortest path from i to j using at most m edges</li>\n<li>L⁽ᵐ⁾ computed from L⁽ᵐ⁻¹⁾ like matrix multiplication</li>\n<li>Substitute min for +, + for ×</li>\n<li>L⁽ⁿ⁻¹⁾ contains all shortest paths (no neg cycles)</li>\n<li>Time: O(n⁴) naive, O(n³ log n) with repeated squaring</li></ul>\n    </div>\n\n    \n    <div class=\"figure-box\">\n    <h4>Example</h4>\n    <p>Compute L¹, L², L⁴, L⁸, ... until L⁽ⁿ⁻¹⁾. Each squaring doubles the path length considered.</p>\n</div>\n    <div class=\"highlight-box\">\n    <h4>Why It Matters</h4>\n    <p>Shows connection between shortest paths and matrix algebra.</p>\n</div>\n</div>"
+}

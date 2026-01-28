@@ -1,0 +1,42 @@
+Problems for Chapter 28                                                             841
+
+
+the range xi  x  xi C1 , then the value of the curve is given by f .x/ D fi .x xi /.
+The points xi at which the cubic polynomials are “pasted” together are called knots.
+For simplicity, we shall assume that xi D i for i D 0; 1; : : : ; n.
+   To ensure continuity of f .x/, we require that
+f .xi /     D fi .0/ D yi ;
+f .xi C1/ D fi .1/ D yi C1
+for i D 0; 1; : : : ; n  1. To ensure that f .x/ is sufﬁciently smooth, we also insist
+that the ﬁrst derivative be continuous at each knot:
+f 0 .xi C1 / D fi0 .1/ D fi0C1 .0/
+for i D 0; 1; : : : ; n  2.
+a. Suppose that for i D 0; 1; : : : ; n, we are given not only the point-value pairs
+   f.xi ; yi /g but also the ﬁrst derivatives Di D f 0 .xi / at each knot. Express each
+   coefﬁcient ai , bi , ci , and di in terms of the values yi , yi C1 , Di , and Di C1 .
+   (Remember that xi D i.) How quickly can we compute the 4n coefﬁcients
+   from the point-value pairs and ﬁrst derivatives?
+The question remains of how to choose the ﬁrst derivatives of f .x/ at the knots.
+One method is to require the second derivatives to be continuous at the knots:
+f 00 .xi C1 / D fi00 .1/ D fi00C1 .0/
+for i D 0; 1; : : : ; n  2. At the ﬁrst and last knots, we assume that f 00 .x0 / D
+f000 .0/ D 0 and f 00 .xn / D fn1
+                                00
+                                   .1/ D 0; these assumptions make f .x/ a natural
+cubic spline.
+b. Use the continuity constraints on the second derivative to show that for i D
+   1; 2; : : : ; n  1,
+
+    Di 1 C 4Di C Di C1 D 3.yi C1  yi 1 / :                                   (28.21)
+
+c. Show that
+     2D0 C D1 D 3.y1  y0 / ;                                                   (28.22)
+    Dn1 C 2Dn D 3.yn  yn1 / :                                                (28.23)
+
+d. Rewrite equations (28.21)–(28.23) as a matrix equation involving the vector
+   D D hD0 ; D1 ; : : : ; Dn i of unknowns. What attributes does the matrix in your
+   equation have?
+
+e. Argue that a natural cubic spline can interpolate a set of n C 1 point-value pairs
+   in O.n/ time (see Problem 28-1).
+

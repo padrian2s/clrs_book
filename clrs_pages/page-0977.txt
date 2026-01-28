@@ -1,0 +1,44 @@
+956   Chapter 31 Number-Theoretic Algorithms
+
+
+      Theorem 31.34
+      If p is an odd prime and e  1, then the equation
+      x 2  1 .mod p e /                                                                  (31.34)
+      has only two solutions, namely x D 1 and x D 1.
+
+      Proof    Equation (31.34) is equivalent to
+       e
+      p j .x  1/.x C 1/ :
+      Since p > 2, we can have p j .x  1/ or p j .x C 1/, but not both. (Otherwise,
+      by property (31.3), p would also divide their difference .x C 1/  .x  1/ D 2.)
+      If p − .x  1/, then gcd.p e ; x  1/ D 1, and by Corollary 31.5, we would have
+      p e j .x C 1/. That is, x  1 .mod p e /. Symmetrically, if p − .x C 1/,
+      then gcd.p e ; x C 1/ D 1, and Corollary 31.5 implies that p e j .x  1/, so that
+      x  1 .mod p e /. Therefore, either x  1 .mod p e / or x  1 .mod p e /.
+
+         A number x is a nontrivial square root of 1, modulo n, if it satisﬁes the equation
+      x 2  1 .mod n/ but x is equivalent to neither of the two “trivial” square roots:
+      1 or 1, modulo n. For example, 6 is a nontrivial square root of 1, modulo 35.
+      We shall use the following corollary to Theorem 31.34 in the correctness proof in
+      Section 31.8 for the Miller-Rabin primality-testing procedure.
+
+      Corollary 31.35
+      If there exists a nontrivial square root of 1, modulo n, then n is composite.
+
+      Proof By the contrapositive of Theorem 31.34, if there exists a nontrivial square
+      root of 1, modulo n, then n cannot be an odd prime or a power of an odd prime.
+      If x 2  1 .mod 2/, then x  1 .mod 2/, and so all square roots of 1, modulo 2,
+      are trivial. Thus, n cannot be prime. Finally, we must have n > 1 for a nontrivial
+      square root of 1 to exist. Therefore, n must be composite.
+
+      Raising to powers with repeated squaring
+      A frequently occurring operation in number-theoretic computations is raising one
+      number to a power modulo another number, also known as modular exponentia-
+      tion. More precisely, we would like an efﬁcient way to compute ab mod n, where
+      a and b are nonnegative integers and n is a positive integer. Modular exponenti-
+      ation is an essential operation in many primality-testing routines and in the RSA
+      public-key cryptosystem. The method of repeated squaring solves this problem
+      efﬁciently using the binary representation of b.
+         Let hbk ; bk1 ; : : : ; b1 ; b0 i be the binary representation of b. (That is, the binary
+      representation is k C 1 bits long, bk is the most signiﬁcant bit, and b0 is the least
+

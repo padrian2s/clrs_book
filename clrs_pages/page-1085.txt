@@ -1,0 +1,44 @@
+1064   Chapter 34 NP-Completeness
+
+
+       The complexity class NP
+       The complexity class NP is the class of languages that can be veriﬁed by a poly-
+       nomial-time algorithm.8 More precisely, a language L belongs to NP if and only if
+       there exist a two-input polynomial-time algorithm A and a constant c such that
+       L D fx 2 f0; 1g W there exists a certiﬁcate y with jyj D O.jxjc /
+                          such that A.x; y/ D 1g :
+       We say that algorithm A veriﬁes language L in polynomial time.
+          From our earlier discussion on the hamiltonian-cycle problem, we now see that
+       HAM-CYCLE 2 NP. (It is always nice to know that an important set is nonempty.)
+       Moreover, if L 2 P, then L 2 NP, since if there is a polynomial-time algorithm
+       to decide L, the algorithm can be easily converted to a two-argument veriﬁcation
+       algorithm that simply ignores any certiﬁcate and accepts exactly those input strings
+       it determines to be in L. Thus, P  NP.
+          It is unknown whether P D NP, but most researchers believe that P and NP are
+       not the same class. Intuitively, the class P consists of problems that can be solved
+       quickly. The class NP consists of problems for which a solution can be veriﬁed
+       quickly. You may have learned from experience that it is often more difﬁcult to
+       solve a problem from scratch than to verify a clearly presented solution, especially
+       when working under time constraints. Theoretical computer scientists generally
+       believe that this analogy extends to the classes P and NP, and thus that NP includes
+       languages that are not in P.
+          There is more compelling, though not conclusive, evidence that P ¤ NP—the
+       existence of languages that are “NP-complete.” We shall study this class in Sec-
+       tion 34.3.
+          Many other fundamental questions beyond the P ¤ NP question remain unre-
+       solved. Figure 34.3 shows some possible scenarios. Despite much work by many
+       researchers, no one even knows whether the class NP is closed under comple-
+       ment. That is, does L 2 NP imply L 2 NP? We can deﬁne the complexity class
+       co-NP as the set of languages L such that L 2 NP. We can restate the question
+       of whether NP is closed under complement as whether NP D co-NP. Since P is
+       closed under complement (Exercise 34.1-6), it follows from Exercise 34.2-9 that
+       P  NP \ co-NP. Once again, however, no one knows whether P D NP \ co-NP
+       or whether there is some language in NP \ co-NP  P.
+
+
+       8 The name “NP” stands for “nondeterministic polynomial time.” The class NP was originally studied
+
+       in the context of nondeterminism, but this book uses the somewhat simpler yet equivalent notion of
+       veriﬁcation. Hopcroft and Ullman [180] give a good presentation of NP-completeness in terms of
+       nondeterministic models of computation.
+

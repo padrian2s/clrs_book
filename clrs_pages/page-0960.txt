@@ -1,0 +1,43 @@
+           31.3 Modular arithmetic                                                                     939
+
+
+           31.2-7
+           Deﬁne the gcd function for more than two arguments by the recursive equation
+           gcd.a0 ; a1 ; : : : ; an / D gcd.a0 ; gcd.a1 ; a2 ; : : : ; an //. Show that the gcd function
+           returns the same answer independent of the order in which its arguments are speci-
+           ﬁed. Also show how to ﬁnd integers x0 ; x1 ; : : : ; xn such that gcd.a0 ; a1 ; : : : ; an / D
+           a0 x0 C a1 x1 C    C an xn . Show that the number of divisions performed by your
+           algorithm is O.n C lg.max fa0 ; a1 ; : : : ; an g//.
+
+           31.2-8
+           Deﬁne lcm.a1 ; a2 ; : : : ; an / to be the least common multiple of the n integers
+           a1 ; a2 ; : : : ; an , that is, the smallest nonnegative integer that is a multiple of each ai .
+           Show how to compute lcm.a1 ; a2 ; : : : ; an / efﬁciently using the (two-argument) gcd
+           operation as a subroutine.
+
+           31.2-9
+           Prove that n1 , n2 , n3 , and n4 are pairwise relatively prime if and only if
+           gcd.n1 n2 ; n3 n4 / D gcd.n1 n3 ; n2 n4 / D 1 :
+           More generally, show that n1 ; n2 ; : : : ; nk are pairwise relatively prime if and only
+           if a set of dlg ke pairs of numbers derived from the ni are relatively prime.
+
+
+
+31.3 Modular arithmetic
+
+           Informally, we can think of modular arithmetic as arithmetic as usual over the
+           integers, except that if we are working modulo n, then every result x is replaced
+           by the element of f0; 1; : : : ; n  1g that is equivalent to x, modulo n (that is, x is
+           replaced by x mod n). This informal model sufﬁces if we stick to the operations
+           of addition, subtraction, and multiplication. A more formal model for modular
+           arithmetic, which we now give, is best described within the framework of group
+           theory.
+
+           Finite groups
+           A group .S; ˚/ is a set S together with a binary operation ˚ deﬁned on S for
+           which the following properties hold:
+           1. Closure: For all a, b 2 S, we have a ˚ b 2 S.
+           2. Identity: There exists an element e 2 S, called the identity of the group, such
+              that e ˚ a D a ˚ e D a for all a 2 S.
+           3. Associativity: For all a, b, c 2 S, we have .a ˚ b/ ˚ c D a ˚ .b ˚ c/.
+

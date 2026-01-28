@@ -1,0 +1,50 @@
+692   Chapter 25 All-Pairs Shortest Paths
+
+
+
+
+                                           
+      25.1-3
+      What does the matrix
+
+                   0 1 1  1
+                   1 0 1  1
+      L.0/ D       1 1 0  1
+                   :: :: :: : :    :
+                    :  :  :     : ::
+                   1 1 1  0
+
+      used in the shortest-paths algorithms correspond to in regular matrix multiplica-
+      tion?
+
+      25.1-4
+      Show that matrix multiplication deﬁned by E XTEND -S HORTEST-PATHS is asso-
+      ciative.
+
+      25.1-5
+      Show how to express the single-source shortest-paths problem as a product of ma-
+      trices and a vector. Describe how evaluating this product corresponds to a Bellman-
+      Ford-like algorithm (see Section 24.1).
+
+      25.1-6
+      Suppose we also wish to compute the vertices on shortest paths in the algorithms of
+      this section. Show how to compute the predecessor matrix … from the completed
+      matrix L of shortest-path weights in O.n3 / time.
+
+      25.1-7
+      We can also compute the vertices on shortest paths as we compute the shortest-
+      path weights. Deﬁne ij.m/ as the predecessor of vertex j on any minimum-weight
+      path from i to j that contains at most m edges. Modify the E XTEND -S HORTEST-
+      PATHS and S LOW-A LL -PAIRS -S HORTEST-PATHS procedures to compute the ma-
+      trices ….1/ ; ….2/ ; : : : ; ….n1/ as the matrices L.1/ ; L.2/ ; : : : ; L.n1/ are computed.
+
+      25.1-8
+      The FASTER -A LL -PAIRS -S HORTEST-PATHS procedure, as written, requires us to
+      store dlg.n  1/e matrices, each with n2 elements, for a total space requirement of
+      ‚.n2 lg n/. Modify the procedure to require only ‚.n2 / space by using only two
+      n n matrices.
+
+      25.1-9
+      Modify FASTER -A LL -PAIRS -S HORTEST-PATHS so that it can determine whether
+      the graph contains a negative-weight cycle.
+

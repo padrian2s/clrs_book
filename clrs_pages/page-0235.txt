@@ -1,0 +1,45 @@
+214        Chapter 9 Medians and Order Statistics
+
+
+
+
+9.1   Minimum and maximum
+
+           How many comparisons are necessary to determine the minimum of a set of n
+           elements? We can easily obtain an upper bound of n  1 comparisons: examine
+           each element of the set in turn and keep track of the smallest element seen so
+           far. In the following procedure, we assume that the set resides in array A, where
+           A:length D n.
+
+           M INIMUM .A/
+           1 min D AŒ1
+           2 for i D 2 to A:length
+           3      if min > AŒi
+           4           min D AŒi
+           5 return min
+
+           We can, of course, ﬁnd the maximum with n  1 comparisons as well.
+              Is this the best we can do? Yes, since we can obtain a lower bound of n  1
+           comparisons for the problem of determining the minimum. Think of any algorithm
+           that determines the minimum as a tournament among the elements. Each compar-
+           ison is a match in the tournament in which the smaller of the two elements wins.
+           Observing that every element except the winner must lose at least one match, we
+           conclude that n  1 comparisons are necessary to determine the minimum. Hence,
+           the algorithm M INIMUM is optimal with respect to the number of comparisons
+           performed.
+
+           Simultaneous minimum and maximum
+           In some applications, we must ﬁnd both the minimum and the maximum of a set
+           of n elements. For example, a graphics program may need to scale a set of .x; y/
+           data to ﬁt onto a rectangular display screen or other graphical output device. To
+           do so, the program must ﬁrst determine the minimum and maximum value of each
+           coordinate.
+              At this point, it should be obvious how to determine both the minimum and the
+           maximum of n elements using ‚.n/ comparisons, which is asymptotically optimal:
+           simply ﬁnd the minimum and maximum independently, using n  1 comparisons
+           for each, for a total of 2n  2 comparisons.
+              In fact, we can ﬁnd both the minimum and the maximum using at most 3 bn=2c
+           comparisons. We do so by maintaining both the minimum and maximum elements
+           seen thus far. Rather than processing each element of the input by comparing it
+           against the current minimum and maximum, at a cost of 2 comparisons per element,
+

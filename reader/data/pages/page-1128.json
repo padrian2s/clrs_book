@@ -1,0 +1,5 @@
+{
+  "page": 1128,
+  "title": "Approximation Algorithms",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 35</div>\n    <h1>Approximation Algorithms</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>VII: Selected Topics</h4>\n    <h3>Chapter 35: Approximation Algorithms</h3>\n    <p><em>Good-enough solutions for hard problems</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>When optimal is too hard, settle for &#x27;close enough&#x27;</li>\n<li>Approximation ratio: how close to optimal?</li>\n<li>Vertex cover: 2-approximation</li>\n<li>TSP: 2-approximation for metric</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>Delivery routing, scheduling, resource allocation</p>\n</div>\n</div>"
+}

@@ -1,0 +1,45 @@
+Problems for Chapter 17                                                                477
+
+
+elements in the list in any way it wants, and it might even know the entire access
+sequence in advance.
+   Let Li be the list after access i using move-to-front, and let Li be the list after
+access i using heuristic H. We denote the cost of access i by ci for move-to-
+front and by ci for heuristic H. Suppose that heuristic H performs ti transpositions
+during access i .
+c. In part (b), you showed that ci D 2  rankLi 1 .x/  1. Now show that ci D
+   rankLi 1 .x/ C ti .
+   We deﬁne an inversion in list Li as a pair of elements y and ´ such that y
+precedes ´ in Li and ´ precedes y in list Li . Suppose that list Li has qi inversions
+after processing the access sequence h 1 ; 2 ; : : : ; i i. Then, we deﬁne a potential
+function ˆ that maps Li to a real number by ˆ.Li / D 2qi . For example, if Li has
+the elements he; c; a; d; bi and Li has the elements hc; a; b; d; ei, then Li has 5
+inversions (.e; c/; .e; a/; .e; d /; .e; b/; .d; b/), and so ˆ.Li / D 10. Observe that
+ˆ.Li /  0 for all i and that, if move-to-front and heuristic H start with the same
+list L0 , then ˆ.L0 / D 0.
+d. Argue that a transposition either increases the potential by 2 or decreases the
+   potential by 2.
+  Suppose that access i ﬁnds the element x. To understand how the potential
+changes due to i , let us partition the elements other than x into four sets, depend-
+ing on where they are in the lists just before the ith access:
+   Set A consists of elements that precede x in both Li 1 and Li 1 .
+   Set B consists of elements that precede x in Li 1 and follow x in Li 1 .
+   Set C consists of elements that follow x in Li 1 and precede x in Li 1 .
+   Set D consists of elements that follow x in both Li 1 and Li 1 .
+e. Argue that rankLi 1 .x/ D jAj C jBj C 1 and rankLi 1 .x/ D jAj C jC j C 1.
+
+f. Show that access       i causes a change in potential of
+
+    ˆ.Li /  ˆ.Li 1 /  2.jAj  jBj C ti / ;
+    where, as before, heuristic H performs ti transpositions during access       i.
+
+    Deﬁne the amortized cost cyi of access    i by c
+                                                   yi D ci C ˆ.Li /  ˆ.Li 1 /.
+                                                                               
+g. Show that the amortized cost cyi of access     i is bounded from above by 4ci .
+
+
+h. Conclude that the cost CMTF . / of access sequence with move-to-front is at
+   most 4 times the cost CH . / of with any other heuristic H, assuming that
+   both heuristics start with the same list.
+

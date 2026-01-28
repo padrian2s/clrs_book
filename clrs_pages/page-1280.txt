@@ -1,0 +1,52 @@
+Index                                                                                 1259
+
+
+cryptosystem, 958–965, 983                       hash tables, 256–261
+cubic spline, 840 pr.                            heaps, 151–169
+currency exchange, 390 ex., 679 pr.              interval trees, 348–354
+curve ﬁtting, 835–839                            k-neighbor trees, 338
+cut                                              linked lists, 236–241
+  capacity of, 721                               mergeable heap, 505
+  cascading, 520                                 order-statistic trees, 339–345
+  of a ﬂow network, 720–724                      persistent, 331 pr., 482
+  minimum, 721, 731 ex.                          potential of, 459
+  net ﬂow across, 720                            priority queues, 162–166
+  of an undirected graph, 626                    proto van Emde Boas structures, 538–545
+  weight of, 1127 ex.                            queues, 232, 234–235
+C UT , 519                                       radix trees, 304 pr.
+C UT-ROD, 363                                    red-black trees, 308–338
+cutting, in a Fibonacci heap, 519                relaxed heaps, 530
+cycle of a graph, 1170                           rooted trees, 246–249
+  hamiltonian, 1049, 1061                        scapegoat trees, 338
+  minimum mean-weight, 680 pr.                   on secondary storage, 484–487
+  negative-weight, see negative-weight cycle     skip lists, 338
+  and shortest paths, 646–647                    splay trees, 338, 482
+cyclic group, 955                                stacks, 232–233
+cyclic rotation, 1012 ex.                        treaps, 333 pr., 338
+cycling, of simplex algorithm, 875               2-3-4 heaps, 529 pr.
+                                                 2-3-4 trees, 489, 503 pr.
+dag, see directed acyclic graph                  2-3 trees, 337, 504
+DAG -S HORTEST-PATHS, 655                        van Emde Boas trees, 531–560
+d -ary heap, 167 pr.                             weight-balanced trees, 338
+   in shortest-paths algorithms, 706 pr.       data type, 23
+data-movement instructions, 23                 deadline, 444
+data-parallel model, 811                       deallocation of objects, 243–244
+data structure, 9, 229–355, 481–585            decision by an algorithm, 1058–1059
+   AA-trees, 338                               decision problem, 1051, 1054
+   augmentation of, 339–355                      and optimization problems, 1051
+   AVL trees, 333 pr., 337                     decision tree, 192–193
+   binary search trees, 286–307                D ECREASE -K EY, 162, 505
+   binomial heaps, 527 pr.                     decreasing a key
+   bit vectors, 255 ex., 532–536                 in Fibonacci heaps, 519–522
+   B-trees, 484–504                              in 2-3-4 heaps, 529 pr.
+   deques, 236 ex.                             D ECREMENT , 456 ex.
+   dictionaries, 229                           degeneracy, 874
+   direct-address tables, 254–255              degree
+   for disjoint sets, 561–585                    of a binomial-tree root, 527 pr.
+   for dynamic graphs, 483                       maximum, of a Fibonacci heap, 509,
+   dynamic sets, 229–231                            523–526
+   dynamic trees, 482                            minimum, of a B-tree, 489
+   exponential search trees, 212, 483            of a node, 1177
+   Fibonacci heaps, 505–530                      of a polynomial, 55, 898
+   fusion trees, 212, 483                        of a vertex, 1169
+

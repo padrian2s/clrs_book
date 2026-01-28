@@ -1,0 +1,44 @@
+            B.2 Relations                                                                 1163
+
+
+            B.1-3 ?
+            Prove the generalization of equation (B.3), which is called the principle of inclu-
+            sion and exclusion:
+            jA1 [ A2 [    [ An j D
+                jA1 j C jA2 j C    C jAn j
+                  jA1 \ A2 j  jA1 \ A3 j          (all pairs)
+                 C jA1 \ A2 \ A3 j C                 (all triples)
+                                     ::
+                                      :
+                         n1
+                 C .1/       jA1 \ A2 \    \ An j :
+
+            B.1-4
+            Show that the set of odd natural numbers is countable.
+
+            B.1-5
+            Show that for any ﬁnite set S, the power set 2S has 2jSj elements (that is, there
+            are 2jSj distinct subsets of S).
+
+            B.1-6
+            Give an inductive deﬁnition for an n-tuple by extending the set-theoretic deﬁnition
+            for an ordered pair.
+
+
+
+B.2   Relations
+
+            A binary relation R on two sets A and B is a subset of the Cartesian product A B.
+            If .a; b/ 2 R, we sometimes write a R b. When we say that R is a binary relation
+            on a set A, we mean that R is a subset of A A. For example, the “less than”
+            relation on the natural numbers is the set f.a; b/ W a; b 2 N and a < bg. An n-ary
+            relation on sets A1 ; A2 ; : : : ; An is a subset of A1 A2    An .
+               A binary relation R  A A is reﬂexive if
+            aRa
+            for all a 2 A. For example, “D” and “” are reﬂexive relations on N, but “<” is
+            not. The relation R is symmetric if
+            a R b implies b R a
+            for all a; b 2 A. For example, “D” is symmetric, but “<” and “” are not. The
+            relation R is transitive if
+            a R b and b R c imply a R c
+

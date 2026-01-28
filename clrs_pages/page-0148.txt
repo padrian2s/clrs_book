@@ -1,0 +1,43 @@
+5.3 Randomized algorithms                                                                127
+
+
+Lemma 5.5
+Procedure R ANDOMIZE -I N -P LACE computes a uniform random permutation.
+
+Proof   We use the following loop invariant:
+
+   Just prior to the ith iteration of the for loop of lines 2–3, for each possible
+   .i  1/-permutation of the n elements, the subarray AŒ1 : : i  1 contains
+   this .i  1/-permutation with probability .n  i C 1/Š=nŠ.
+
+We need to show that this invariant is true prior to the ﬁrst loop iteration, that each
+iteration of the loop maintains the invariant, and that the invariant provides a useful
+property to show correctness when the loop terminates.
+
+Initialization: Consider the situation just before the ﬁrst loop iteration, so that
+   i D 1. The loop invariant says that for each possible 0-permutation, the sub-
+   array AŒ1 : : 0 contains this 0-permutation with probability .n  i C 1/Š=nŠ D
+   nŠ=nŠ D 1. The subarray AŒ1 : : 0 is an empty subarray, and a 0-permutation
+   has no elements. Thus, AŒ1 : : 0 contains any 0-permutation with probability 1,
+   and the loop invariant holds prior to the ﬁrst iteration.
+Maintenance: We assume that just before the ith iteration, each possible
+  .i  1/-permutation appears in the subarray AŒ1 : : i  1 with probability
+  .n  i C 1/Š=nŠ, and we shall show that after the ith iteration, each possible
+  i-permutation appears in the subarray AŒ1 : : i with probability .n  i/Š=nŠ.
+  Incrementing i for the next iteration then maintains the loop invariant.
+   Let us examine the ith iteration. Consider a particular i-permutation, and de-
+   note the elements in it by hx1 ; x2 ; : : : ; xi i. This permutation consists of an
+   .i  1/-permutation hx1 ; : : : ; xi 1 i followed by the value xi that the algorithm
+   places in AŒi. Let E1 denote the event in which the ﬁrst i  1 iterations have
+   created the particular .i  1/-permutation hx1 ; : : : ; xi 1 i in AŒ1 : : i  1. By the
+   loop invariant, Pr fE1 g D .n  i C 1/Š=nŠ. Let E2 be the event that ith iteration
+   puts xi in position AŒi. The i-permutation hx1 ; : : : ; xi i appears in AŒ1 : : i pre-
+   cisely when both E1 and E2 occur, and so we wish to compute Pr fE2 \ E1 g.
+   Using equation (C.14), we have
+
+   Pr fE2 \ E1 g D Pr fE2 j E1 g Pr fE1 g :
+
+   The probability Pr fE2 j E1 g equals 1=.ni C1/ because in line 3 the algorithm
+   chooses xi randomly from the n  i C 1 values in positions AŒi : : n. Thus, we
+   have
+

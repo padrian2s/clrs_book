@@ -1,0 +1,53 @@
+722   Chapter 26 Maximum Flow
+
+
+      Proof We can rewrite the ﬂow-conservation condition for any node u 2 V fs; tg
+      as
+      X             X
+         f .u; /    f .; u/ D 0 :                                         (26.11)
+      2V                2V
+
+      Taking the deﬁnition of jf j from equation (26.1) and adding the left-hand side of
+      equation (26.11), which equals 0, summed over all vertices in S  fsg, gives
+                                                                            !
+             X              X             X       X              X
+      jf j D     f .s; /     f .; s/ C             f .u; /     f .; u/ :
+             2V                   2V               u2Sfsg        2V                  2V
+
+      Expanding the right-hand summation and regrouping terms yields
+              X               X             X X                 X X
+      jf j D       f .s; /     f .; s/ C         f .u; /        f .; u/
+                   2V                   2V               u2Sfsg 2V                       u2Sfsg 2V
+                                                              !                                                    !
+                   X                           X                      X                         X
+            D             f .s; / C                f .u; /               f .; s/ C                  f .; u/
+                   2V                    u2Sfsg                     2V                     u2Sfsg
+                   XX                          XX
+            D                  f .u; /                 f .; u/ :
+                   2V u2S                     2V u2S
+
+      Because V D S [ T and S \ T D ;, we can split each summation over V into
+      summations over S and T to obtain
+               XX                XX                XX            XX
+      jf j D          f .u; / C        f .u; /     f .; u/       f .; u/
+                   2S u2S                     2T u2S                 2S u2S                    2T u2S
+                   XX                          XX
+            D                  f .u; /                 f .; u/
+                   2T u2S                     2T u2S
+                                                                                     !
+                                    XX                        XX
+                               C                f .u; /                 f .; u/       :
+                                    2S u2S                   2S u2S
+
+      The two summations within the parentheses are actually the same, since for all
+      vertices x; y 2 V , the term f .x; y/ appears once in each summation. Hence, these
+      summations cancel, and we have
+                XX                  XX
+      jf j D             f .u; /           f .; u/
+                   u2S 2T                     u2S 2T
+            D f .S; T / :
+
+
+        A corollary to Lemma 26.4 shows how we can use cut capacities to bound the
+      value of a ﬂow.
+

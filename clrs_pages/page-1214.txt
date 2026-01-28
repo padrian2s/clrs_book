@@ -1,0 +1,37 @@
+C.2 Probability                                                                     1193
+
+
+Pr fA j Bg D Pr fAg :
+For example, suppose that we ﬂip two fair coins and that the outcomes are inde-
+pendent. Then the probability of two heads is .1=2/.1=2/ D 1=4. Now suppose
+that one event is that the ﬁrst coin comes up heads and the other event is that the
+coins come up differently. Each of these events occurs with probability 1=2, and
+the probability that both events occur is 1=4; thus, according to the deﬁnition of
+independence, the events are independent—even though you might think that both
+events depend on the ﬁrst coin. Finally, suppose that the coins are welded to-
+gether so that they both fall heads or both fall tails and that the two possibilities are
+equally likely. Then the probability that each coin comes up heads is 1=2, but the
+probability that they both come up heads is 1=2 ¤ .1=2/.1=2/. Consequently, the
+event that one comes up heads and the event that the other comes up heads are not
+independent.
+   A collection A1 ; A2 ; : : : ; An of events is said to be pairwise independent if
+Pr fAi \ Aj g D Pr fAi g Pr fAj g
+for all 1  i < j  n. We say that the events of the collection are (mutually)
+independent if every k-subset Ai1 ; Ai2 ; : : : ; Aik of the collection, where 2  k  n
+and 1  i1 < i2 <    < ik  n, satisﬁes
+Pr fAi1 \ Ai2 \    \ Aik g D Pr fAi1 g Pr fAi2 g    Pr fAik g :
+For example, suppose we ﬂip two fair coins. Let A1 be the event that the ﬁrst coin
+is heads, let A2 be the event that the second coin is heads, and let A3 be the event
+that the two coins are different. We have
+          Pr fA1 g      D    1=2 ;
+          Pr fA2 g      D    1=2 ;
+          Pr fA3 g      D    1=2 ;
+     Pr fA1 \ A2 g      D    1=4 ;
+     Pr fA1 \ A3 g      D    1=4 ;
+     Pr fA2 \ A3 g      D    1=4 ;
+Pr fA1 \ A2 \ A3 g      D    0:
+Since for 1  i < j  3, we have Pr fAi \ Aj g D Pr fAi g Pr fAj g D 1=4, the
+events A1 , A2 , and A3 are pairwise independent. The events are not mutually inde-
+pendent, however, because Pr fA1 \ A2 \ A3 g D 0 and Pr fA1 g Pr fA2 g Pr fA3 g D
+1=8 ¤ 0.
+

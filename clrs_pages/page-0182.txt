@@ -1,0 +1,50 @@
+                     6.4 The heapsort algorithm                                                                                                    161
+
+
+
+
+                             16                                                    14                                              10
+
+                14                     10                             8                      10                       8                        9
+
+       8                 7         9        3                4                 7         9          3        4                 7         1           3
+                                                                                                                   i
+  2        4         1                                  2        1        16 i                          2        14 16
+                             (a)                                                   (b)                                             (c)
+
+
+                             9                                                     8                                               7
+
+                8                      3                              7                      3                        4                        3
+
+       4                 7         1        2                4                 2         1        i 9        1                 2         8 i         9
+
+i 10       14       16                                  10       14       16                            10       14       16
+                             (d)                                                   (e)                                             (f)
+
+
+                             4                                                     3                                               2
+
+                2                      3                              2                      1                        1                        3 i
+
+       1             i 7           8        9           i 4                    7         8          9        4                 7         8           9
+
+ 10        14       16                                  10       14       16                            10       14       16
+                             (g)                                                   (h)                                             (i)
+
+
+                             1
+
+           i 2                         3
+                                                A   1       2 3           4 7          8 9 10 14 16
+       4                 7         8        9
+
+ 10        14       16
+                             (j)                                                   (k)
+
+
+                     Figure 6.4 The operation of H EAPSORT . (a) The max-heap data structure just after B UILD -M AX -
+                     H EAP has built it in line 1. (b)–(j) The max-heap just after each call of M AX -H EAPIFY in line 5,
+                     showing the value of i at that time. Only lightly shaded nodes remain in the heap. (k) The resulting
+                     sorted array A.
+

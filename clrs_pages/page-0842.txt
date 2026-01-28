@@ -1,0 +1,45 @@
+28.1 Solving systems of linear equations                                           821
+
+
+   Of course, if a11 D 0, this method doesn’t work, because it divides by 0. It also
+doesn’t work if the upper leftmost entry of the Schur complement A0  w T =a11
+is 0, since we divide by it in the next step of the recursion. The elements by
+which we divide during LU decomposition are called pivots, and they occupy the
+diagonal elements of the matrix U . The reason we include a permutation matrix P
+during LUP decomposition is that it allows us to avoid dividing by 0. When we use
+permutations to avoid division by 0 (or by small numbers, which would contribute
+to numerical instability), we are pivoting.
+   An important class of matrices for which LU decomposition always works cor-
+rectly is the class of symmetric positive-deﬁnite matrices. Such matrices require
+no pivoting, and thus we can employ the recursive strategy outlined above with-
+out fear of dividing by 0. We shall prove this result, as well as several others, in
+Section 28.3.
+   Our code for LU decomposition of a matrix A follows the recursive strategy, ex-
+cept that an iteration loop replaces the recursion. (This transformation is a standard
+optimization for a “tail-recursive” procedure—one whose last operation is a recur-
+sive call to itself. See Problem 7-4.) It assumes that the attribute A:rows gives
+the dimension of A. We initialize the matrix U with 0s below the diagonal and
+matrix L with 1s on its diagonal and 0s above the diagonal.
+
+LU-D ECOMPOSITION .A/
+ 1 n D A:rows
+ 2 let L and U be new n n matrices
+ 3 initialize U with 0s below the diagonal
+ 4 initialize L with 1s on the diagonal and 0s above the diagonal
+ 5 for k D 1 to n
+ 6      ukk D akk
+ 7      for i D k C 1 to n
+ 8            li k D ai k =ukk         // li k holds i
+ 9            uki D aki                // uki holds wiT
+10      for i D k C 1 to n
+11            for j D k C 1 to n
+12                 aij D aij  li k ukj
+13 return L and U
+
+The outer for loop beginning in line 5 iterates once for each recursive step. Within
+this loop, line 6 determines the pivot to be ukk D akk . The for loop in lines 7–9
+(which does not execute when k D n), uses the  and w T vectors to update L
+and U . Line 8 determines the elements of the  vector, storing i in li k , and line 9
+computes the elements of the w T vector, storing wiT in uki . Finally, lines 10–12
+compute the elements of the Schur complement and store them back into the ma-
+

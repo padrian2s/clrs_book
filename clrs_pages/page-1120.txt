@@ -1,0 +1,48 @@
+34.5 NP-complete problems                                                                                 1099
+
+
+             x1    x2     x3    C1    C2    C3     C4
+
+ 1    =      1     0     0      1     0     0      1
+ 10   =      1     0     0      0     1     1      0
+ 2    =      0     1     0      0     0     0      1
+ 20   =      0     1     0      1     1     1      0
+ 3    =      0     0     1      0     0     1      1
+ 30   =      0     0     1      1     1     0      0
+ s1    =      0     0     0      1     0     0      0
+ s10   =      0     0     0      2     0     0      0
+ s2    =      0     0     0      0     1     0      0
+ s20   =      0     0     0      0     2     0      0
+ s3    =      0     0     0      0     0     1      0
+ s30   =      0     0     0      0     0     2      0
+ s4    =      0     0     0      0     0     0      1
+ s40   =      0     0     0      0     0     0      2
+  t    =      1     1     1      4     4     4      4
+
+
+Figure 34.19 The reduction of 3-CNF-SAT to SUBSET-SUM. The formula in 3-CNF is  D
+C1 ^C2 ^C3 ^C4 , where C1 D .x1 _:x2 _:x3 /, C2 D .:x1 _:x2 _:x3 /, C3 D .:x1 _:x2 _x3 /,
+and C4 D .x1 _ x2 _ x3 /. A satisfying assignment of  is hx1 D 0; x2 D 0; x3 D 1i. The set S
+produced by the reduction consists of the base-10 numbers shown; reading from top to bottom, S D
+f1001001; 1000110; 100001; 101110; 10011; 11100; 1000; 2000; 100; 200; 10; 20; 1; 2g. The target t
+is 1114444. The subset S 0  S is lightly shaded, and it contains 10 , 20 , and 3 , corresponding to the
+satisfying assignment. It also contains slack variables s1 , s10 , s20 , s3 , s4 , and s40 to achieve the target
+value of 4 in the digits labeled by C1 through C4 .
+
+
+the sj and sj0 values). Interpreting these numbers in base 10, therefore, no carries
+can occur from lower digits to higher digits.11
+   We can perform the reduction in polynomial time. The set S contains 2n C 2k
+values, each of which has n C k digits, and the time to produce each digit is poly-
+nomial in n C k. The target t has n C k digits, and the reduction produces each in
+constant time.
+   We now show that the 3-CNF formula  is satisﬁable if and only if there exists
+a subset S 0  S whose sum is t. First, suppose that  has a satisfying assignment.
+For i D 1; 2; : : : ; n, if xi D 1 in this assignment, then include i in S 0 . Otherwise,
+include i0 . In other words, we include in S 0 exactly the i and i0 values that cor-
+
+
+11 In fact, any base b, where b  7, would work. The instance at the beginning of this subsection is
+
+the set S and target t in Figure 34.19 interpreted in base 7, with S listed in sorted order.
+

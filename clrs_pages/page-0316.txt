@@ -1,0 +1,46 @@
+12.3 Insertion and deletion                                                                   295
+
+
+                        12
+
+
+            5                               18
+
+
+    2             9               15             19
+
+                             13        17
+
+
+
+Figure 12.3 Inserting an item with key 13 into a binary search tree. Lightly shaded nodes indicate
+the simple path from the root down to the position where the item is inserted. The dashed line
+indicates the link in the tree that is added to insert the item.
+
+
+   Figure 12.3 shows how T REE -I NSERT works. Just like the procedures T REE -
+S EARCH and I TERATIVE -T REE -S EARCH, T REE -I NSERT begins at the root of the
+tree and the pointer x traces a simple path downward looking for a NIL to replace
+with the input item ´. The procedure maintains the trailing pointer y as the parent
+of x. After initialization, the while loop in lines 3–7 causes these two pointers
+to move down the tree, going left or right depending on the comparison of ´:key
+with x:key, until x becomes NIL. This NIL occupies the position where we wish to
+place the input item ´. We need the trailing pointer y, because by the time we ﬁnd
+the NIL where ´ belongs, the search has proceeded one step beyond the node that
+needs to be changed. Lines 8–13 set the pointers that cause ´ to be inserted.
+   Like the other primitive operations on search trees, the procedure T REE -I NSERT
+runs in O.h/ time on a tree of height h.
+
+Deletion
+The overall strategy for deleting a node ´ from a binary search tree T has three
+basic cases but, as we shall see, one of the cases is a bit tricky.
+       If ´ has no children, then we simply remove it by modifying its parent to re-
+        place ´ with NIL as its child.
+       If ´ has just one child, then we elevate that child to take ´’s position in the tree
+        by modifying ´’s parent to replace ´ by ´’s child.
+       If ´ has two children, then we ﬁnd ´’s successor y—which must be in ´’s right
+        subtree—and have y take ´’s position in the tree. The rest of ´’s original right
+        subtree becomes y’s new right subtree, and ´’s left subtree becomes y’s new
+        left subtree. This case is the tricky one because, as we shall see, it matters
+        whether y is ´’s right child.
+

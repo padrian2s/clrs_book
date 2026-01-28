@@ -1,0 +1,39 @@
+96   Chapter 4 Divide-and-Conquer
+
+
+     f .n/ D n lg n is asymptotically larger than nlogb a D n. The problem is that it
+     is not polynomially larger. The ratio f .n/=nlogb a D .n lg n/=n D lg n is asymp-
+     totically less than n for any positive constant . Consequently, the recurrence falls
+     into the gap between case 2 and case 3. (See Exercise 4.6-2 for a solution.)
+        Let’s use the master method to solve the recurrences we saw in Sections 4.1
+     and 4.2. Recurrence (4.7),
+     T .n/ D 2T .n=2/ C ‚.n/ ;
+     characterizes the running times of the divide-and-conquer algorithm for both the
+     maximum-subarray problem and merge sort. (As is our practice, we omit stating
+     the base case in the recurrence.) Here, we have a D 2, b D 2, f .n/ D ‚.n/, and
+     thus we have that nlogb a D nlog2 2 D n. Case 2 applies, since f .n/ D ‚.n/, and so
+     we have the solution T .n/ D ‚.n lg n/.
+        Recurrence (4.17),
+     T .n/ D 8T .n=2/ C ‚.n2 / ;
+     describes the running time of the ﬁrst divide-and-conquer algorithm that we saw
+     for matrix multiplication. Now we have a D 8, b D 2, and f .n/ D ‚.n2 /,
+     and so nlogb a D nlog2 8 D n3 . Since n3 is polynomially larger than f .n/ (that is,
+     f .n/ D O.n3 / for  D 1), case 1 applies, and T .n/ D ‚.n3 /.
+        Finally, consider recurrence (4.18),
+     T .n/ D 7T .n=2/ C ‚.n2 / ;
+     which describes the running time of Strassen’s algorithm. Here, we have a D 7,
+     b D 2, f .n/ D ‚.n2 /, and thus nlogb a D nlog2 7 . Rewriting log2 7 as lg 7 and
+     recalling that 2:80 < lg 7 < 2:81, we see that f .n/ D O.nlg 7 / for  D 0:8.
+     Again, case 1 applies, and we have the solution T .n/ D ‚.nlg 7 /.
+
+     Exercises
+
+     4.5-1
+     Use the master method to give tight asymptotic bounds for the following recur-
+     rences.
+     a. T .n/ D 2T .n=4/ C 1.
+                           p
+     b. T .n/ D 2T .n=4/ C n.
+     c. T .n/ D 2T .n=4/ C n.
+     d. T .n/ D 2T .n=4/ C n2 .
+

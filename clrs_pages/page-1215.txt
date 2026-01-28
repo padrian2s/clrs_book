@@ -1,0 +1,48 @@
+1194   Appendix C   Counting and Probability
+
+
+       Bayes’s theorem
+       From the deﬁnition of conditional probability (C.14) and the commutative law
+       A \ B D B \ A, it follows that for two events A and B, each with nonzero
+       probability,
+       Pr fA \ Bg D Pr fBg Pr fA j Bg                                             (C.16)
+                  D Pr fAg Pr fB j Ag :
+       Solving for Pr fA j Bg, we obtain
+                     Pr fAg Pr fB j Ag
+       Pr fA j Bg D                    ;                                    (C.17)
+                           Pr fBg
+       which is known as Bayes’s theorem. The denominator Pr fBg is a normalizing
+       constant, which we can reformulate as follows. Since B D .B \ A/ [ .B \ A/,
+       and since B \ A and B \ A are mutually exclusive events,
+                                     ˚
+       Pr fBg D Pr fB \ Ag C Pr B \ A
+                                          ˚       ˚
+                D Pr fAg Pr fB j Ag C Pr A Pr B j A :
+       Substituting into equation (C.17), we obtain an equivalent form of Bayes’s theo-
+       rem:
+                                   Pr fAg Pr fB j Ag
+       Pr fA j Bg D                             ˚     ˚        :                   (C.18)
+                      Pr fAg Pr fB j Ag C Pr A Pr B j A
+          Bayes’s theorem can simplify the computing of conditional probabilities. For
+       example, suppose that we have a fair coin and a biased coin that always comes up
+       heads. We run an experiment consisting of three independent events: we choose
+       one of the two coins at random, we ﬂip that coin once, and then we ﬂip it again.
+       Suppose that the coin we have chosen comes up heads both times. What is the
+       probability that it is biased?
+          We solve this problem using Bayes’s theorem. Let A be the event that we choose
+       the biased coin, and let B be the event that the chosen coin comes up heads both
+       times.
+          ˚ We wish to determine˚       Pr fA j Bg. We have Pr fAg D 1=2, Pr fB j Ag D 1,
+       Pr A D 1=2, and Pr B j A D 1=4; hence,
+                                .1=2/  1
+       Pr fA j Bg D
+                       .1=2/  1 C .1=2/  .1=4/
+                     D 4=5 :
+
+       Exercises
+
+       C.2-1
+       Professor Rosencrantz ﬂips a fair coin once. Professor Guildenstern ﬂips a fair
+       coin twice. What is the probability that Professor Rosencrantz obtains more heads
+       than Professor Guildenstern?
+

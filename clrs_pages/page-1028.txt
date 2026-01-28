@@ -1,0 +1,44 @@
+32.4 The Knuth-Morris-Pratt algorithm                                            1007
+
+
+Correctness of the preﬁx-function computation
+We shall see a little later that the preﬁx function  helps us simulate the transition
+function ı in a string-matching automaton. But ﬁrst, we need to prove that the
+procedure C OMPUTE -P REFIX -F UNCTION does indeed compute the preﬁx func-
+tion correctly. In order to do so, we will need to ﬁnd all preﬁxes Pk that are proper
+sufﬁxes of a given preﬁx Pq . The value of Œq gives us the longest such preﬁx, but
+the following lemma, illustrated in Figure 32.11, shows that by iterating the preﬁx
+function , we can indeed enumerate all the preﬁxes Pk that are proper sufﬁxes
+of Pq . Let
+  Œq D fŒq;  .2/ Œq;  .3/ Œq; : : : ;  .t / Œqg ;
+where  .i / Œq is deﬁned in terms of functional iteration, so that  .0/ Œq D q and
+ .i / Œq D Œ .i 1/ Œq for i  1, and where the sequence in   Œq stops upon
+reaching  .t / Œq D 0.
+
+Lemma 32.5 (Preﬁx-function iteration lemma)
+Let P be a pattern of length m with preﬁx function . Then, for q D 1; 2; : : : ; m,
+we have   Œq D fk W k < q and Pk = Pq g.
+
+Proof      We ﬁrst prove that   Œq  fk W k < q and Pk = Pq g or, equivalently,
+i 2   Œq implies Pi = Pq :                                                  (32.7)
+                                   .u/
+If i 2  Œq, then i D  Œq for some u > 0. We prove equation (32.7) by
+induction on u. For u D 1, we have i D Œq, and the claim follows since i < q
+and PŒq = Pq by the deﬁnition of . Using the relations Œi < i and PŒi  = Pi
+and the transitivity of < and = establishes the claim for all i in   Œq. Therefore,
+  Œq  fk W k < q and Pk = Pq g.
+    We now prove that fk W k < q and Pk = Pq g    Œq by contradiction. Sup-
+pose to the contrary that the set fk W k < q and Pk = Pq g    Œq is nonempty,
+and let j be the largest number in the set. Because Œq is the largest value in
+fk W k < q and Pk = Pq g and Œq 2   Œq, we must have j < Œq, and so we
+let j 0 denote the smallest integer in   Œq that is greater than j . (We can choose
+j 0 D Œq if no other number in   Œq is greater than j .) We have Pj = Pq because
+j 2 fk W k < q and Pk = Pq g, and from j 0 2   Œq and equation (32.7), we have
+Pj 0 = Pq . Thus, Pj = Pj 0 by Lemma 32.1, and j is the largest value less than j 0
+with this property. Therefore, we must have Œj 0  D j and, since j 0 2   Œq, we
+must have j 2   Œq as well. This contradiction proves the lemma.
+
+   The algorithm C OMPUTE -P REFIX -F UNCTION computes Œq, in order, for q D
+1; 2; : : : ; m. Setting Œ1 to 0 in line 3 of C OMPUTE -P REFIX -F UNCTION is cer-
+tainly correct, since Œq < q for all q. We shall use the following lemma and
+

@@ -1,0 +1,23 @@
+10.4 Representing rooted trees                                                                      247
+
+
+
+           T:root
+
+
+
+
+Figure 10.9 The representation of a binary tree T . Each node x has the attributes x: p (top), x: left
+(lower left), and x: right (lower right). The key attributes are not shown.
+
+
+
+
+                    T:root
+
+
+
+
+Figure 10.10 The left-child, right-sibling representation of a tree T . Each node x has attributes x: p
+(top), x: left-child (lower left), and x: right-sibling (lower right). The key attributes are not shown.
+

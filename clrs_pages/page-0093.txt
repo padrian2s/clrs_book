@@ -1,0 +1,44 @@
+72   Chapter 4 Divide-and-Conquer
+
+
+        This procedure works as follows. Lines 1–7 ﬁnd a maximum subarray of the
+     left half, AŒlow : : mid. Since this subarray must contain AŒmid, the for loop of
+     lines 3–7 starts the index i at mid and works down to low, so that every subarray
+     it considers is of the form AŒi : : mid. Lines 1–2 initialize the variables left-sum,
+     which holds the greatest sum found so far, and sum, holding the sum of the entries
+     in AŒi : : mid. Whenever we ﬁnd, in line 5, a subarray AŒi : : mid with a sum of
+     values greater than left-sum, we update left-sum to this subarray’s sum in line 6, and
+     in line 7 we update the variable max-left to record this index i. Lines 8–14 work
+     analogously for the right half, AŒmid C 1 : : high. Here, the for loop of lines 10–14
+     starts the index j at midC1 and works up to high, so that every subarray it considers
+     is of the form AŒmid C 1 : : j . Finally, line 15 returns the indices max-left and
+     max-right that demarcate a maximum subarray crossing the midpoint, along with
+     the sum left-sum Cright-sum of the values in the subarray AŒmax-left : : max-right.
+        If the subarray AŒlow : : high contains n entries (so that n D high  low C 1),
+     we claim that the call F IND -M AX -C ROSSING -S UBARRAY .A; low; mid; high/
+     takes ‚.n/ time. Since each iteration of each of the two for loops takes ‚.1/
+     time, we just need to count up how many iterations there are altogether. The for
+     loop of lines 3–7 makes mid  low C 1 iterations, and the for loop of lines 10–14
+     makes high  mid iterations, and so the total number of iterations is
+     .mid  low C 1/ C .high  mid/ D high  low C 1
+                                    D n:
+       With a linear-time F IND -M AX -C ROSSING -S UBARRAY procedure in hand, we
+     can write pseudocode for a divide-and-conquer algorithm to solve the maximum-
+     subarray problem:
+
+     F IND -M AXIMUM -S UBARRAY .A; low; high/
+      1 if high == low
+      2       return .low; high; AŒlow/                // base case: only one element
+      3 else mid D b.low C high/=2c
+      4       .left-low; left-high; left-sum/ D
+                    F IND -M AXIMUM -S UBARRAY .A; low; mid/
+      5       .right-low; right-high; right-sum/ D
+                    F IND -M AXIMUM -S UBARRAY .A; mid C 1; high/
+      6       .cross-low; cross-high; cross-sum/ D
+                    F IND -M AX -C ROSSING -S UBARRAY .A; low; mid; high/
+      7       if left-sum  right-sum and left-sum  cross-sum
+      8             return .left-low; left-high; left-sum/
+      9       elseif right-sum  left-sum and right-sum  cross-sum
+     10             return .right-low; right-high; right-sum/
+     11       else return .cross-low; cross-high; cross-sum/
+

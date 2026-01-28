@@ -1,0 +1,48 @@
+98   Chapter 4 Divide-and-Conquer
+
+
+     bounds be proved for all sufﬁciently large numbers, not just those that are pow-
+     ers of b. Since we could make new asymptotic notations that apply only to the set
+     fb i W i D 0; 1; 2; : : :g, instead of to the nonnegative numbers, this abuse is minor.
+        Nevertheless, we must always be on guard when we use asymptotic notation over
+     a limited domain lest we draw improper conclusions. For example, proving that
+     T .n/ D O.n/ when n is an exact power of 2 does not guarantee that T .n/ D O.n/.
+     The function T .n/ could be deﬁned as
+               (
+                 n if n D 1; 2; 4; 8; : : : ;
+     T .n/ D
+                 n2 otherwise ;
+     in which case the best upper bound that applies to all values of n is T .n/ D O.n2 /.
+     Because of this sort of drastic consequence, we shall never use asymptotic notation
+     over a limited domain without making it absolutely clear from the context that we
+     are doing so.
+
+     4.6.1   The proof for exact powers
+     The ﬁrst part of the proof of the master theorem analyzes the recurrence (4.20)
+     T .n/ D aT .n=b/ C f .n/ ;
+     for the master method, under the assumption that n is an exact power of b > 1,
+     where b need not be an integer. We break the analysis into three lemmas. The ﬁrst
+     reduces the problem of solving the master recurrence to the problem of evaluating
+     an expression that contains a summation. The second determines bounds on this
+     summation. The third lemma puts the ﬁrst two together to prove a version of the
+     master theorem for the case in which n is an exact power of b.
+
+     Lemma 4.2
+     Let a  1 and b > 1 be constants, and let f .n/ be a nonnegative function deﬁned
+     on exact powers of b. Deﬁne T .n/ on exact powers of b by the recurrence
+             (
+               ‚.1/               if n D 1 ;
+     T .n/ D
+               aT .n=b/ C f .n/ if n D b i ;
+     where i is a positive integer. Then
+                                  X
+                                 logb n1
+                   logb a
+     T .n/ D ‚.n            /C              aj f .n=b j / :                          (4.21)
+                                  j D0
+
+
+
+     Proof We use the recursion tree in Figure 4.7. The root of the tree has cost f .n/,
+     and it has a children, each with cost f .n=b/. (It is convenient to think of a as being
+

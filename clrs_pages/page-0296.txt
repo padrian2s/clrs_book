@@ -1,0 +1,46 @@
+11.4 Open addressing                                                               275
+
+
+because we would be ﬁnding one of the remaining .n  .j  1// elements in one
+of the .m  .j  1// unexamined slots, and by the assumption of uniform hashing,
+the probability is the ratio of these quantities. Observing that n < m implies that
+.n  j /=.m  j /  n=m for all j such that 0  j < m, we have for all i such that
+1  i  m,
+                n n1 n2       ni C2
+Pr fX  ig D              
+                m m1 m2       mi C2
+                 n i 1
+              
+                  m
+              D ˛ i 1 :
+Now, we use equation (C.25) to bound the expected number of probes:
+            X
+            1
+E ŒX  D            Pr fX  ig
+            i D1
+            X 1
+                   ˛ i 1
+            i D1
+            X 1
+        D           ˛i
+             i D0
+              1
+        D        :
+             1˛
+
+   This bound of 1=.1  ˛/ D 1 C ˛ C ˛ 2 C ˛ 3 C    has an intuitive interpretation.
+We always make the ﬁrst probe. With probability approximately ˛, the ﬁrst probe
+ﬁnds an occupied slot, so that we need to probe a second time. With probability
+approximately ˛ 2 , the ﬁrst two slots are occupied so that we make a third probe,
+and so on.
+   If ˛ is a constant, Theorem 11.6 predicts that an unsuccessful search runs in O.1/
+time. For example, if the hash table is half full, the average number of probes in an
+unsuccessful search is at most 1=.1  :5/ D 2. If it is 90 percent full, the average
+number of probes is at most 1=.1  :9/ D 10.
+   Theorem 11.6 gives us the performance of the H ASH -I NSERT procedure almost
+immediately.
+
+Corollary 11.7
+Inserting an element into an open-address hash table with load factor ˛ requires at
+most 1=.1  ˛/ probes on average, assuming uniform hashing.
+

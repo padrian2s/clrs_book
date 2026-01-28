@@ -1,0 +1,59 @@
+260   Chapter 11 Hash Tables
+
+
+      appear before x in x’s list. Because new elements are placed at the front of the
+      list, elements before x in the list were all inserted after x was inserted. To ﬁnd
+      the expected number of elements examined, we take the average, over the n ele-
+      ments x in the table, of 1 plus the expected number of elements added to x’s list
+      after x was added to the list. Let xi denote the ith element inserted into the ta-
+      ble, for i D 1; 2; : : : ; n, and let ki D xi :key. For keys ki and kj , we deﬁne the
+      indicator random variable Xij D I fh.ki / D h.kj /g. Under the assumption of sim-
+      ple uniform hashing, we have Pr fh.ki / D h.kj /g D 1=m, and so by Lemma 5.1,
+      E ŒXij  D 1=m. Thus, the expected number of elements examined in a successful
+      search is
+         " n                        !#
+           1X           X n
+      E            1C          Xij
+           n i D1     j Di C1
+                                                      !
+                     1X                X
+                         n              n
+                  D             1C           E ŒXij    (by linearity of expectation)
+                     n i D1          j Di C1
+                                                !
+                     1X                X
+                         n              n
+                                             1
+                  D             1C
+                     n i D1          j Di C1
+                                             m
+
+                      1 X
+                               n
+                D 1C         .n  i/
+                     nm i D1
+                                               !
+                          1 X           X
+                                 n        n
+                D 1C                 n      i
+                         nm i D1        i D1
+                                                
+                          1      2    n.n C 1/
+                D 1C           n                  (by equation (A.1))
+                         nm               2
+                         n1
+                D 1C
+                          2m
+                         ˛     ˛
+                D 1C              :
+                         2 2n
+      Thus, the total time required for a successful search (including the time for com-
+      puting the hash function) is ‚.2 C ˛=2  ˛=2n/ D ‚.1 C ˛/.
+
+        What does this analysis mean? If the number of hash-table slots is at least pro-
+      portional to the number of elements in the table, we have n D O.m/ and, con-
+      sequently, ˛ D n=m D O.m/=m D O.1/. Thus, searching takes constant time
+      on average. Since insertion takes O.1/ worst-case time and deletion takes O.1/
+      worst-case time when the lists are doubly linked, we can support all dictionary
+      operations in O.1/ time on average.
+

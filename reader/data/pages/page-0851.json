@@ -1,0 +1,5 @@
+{
+  "page": 851,
+  "title": "Matrix Operations",
+  "content": "<div class=\"article-header\">\n    <div class=\"section-label\">Chapter 28</div>\n    <h1>Matrix Operations</h1>\n</div>\n<div class=\"original-content\">\n    <div class=\"definition-box\">\n    <h4>VII: Selected Topics</h4>\n    <h3>Chapter 28: Matrix Operations</h3>\n    <p><em>Solving linear equations, inverting matrices</em></p>\n</div>\n<div class=\"highlight-box\">\n    <h4>Key Points</h4>\n    <ul><li>LU decomposition: factor A = LU</li>\n<li>Forward/back substitution</li>\n<li>Matrix inversion: O(n³)</li>\n<li>Least squares: best fit solution</li></ul>\n</div>\n<div class=\"figure-box\">\n    <h4>Real-World Applications</h4>\n    <p>Scientific computing, graphics, machine learning</p>\n</div>\n</div>"
+}

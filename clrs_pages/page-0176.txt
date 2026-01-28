@@ -1,0 +1,46 @@
+6.2 Maintaining the heap property                                                               155
+
+
+                                1                                               1
+                                16                                              16
+                   2                      3                       2                       3
+           i       4                      10                      14                      10
+      4                     5         6        7          4                 5         6         7
+      14                    7         9        3      i   4                 7         9         3
+  8        9           10                             8       9        10
+  2        8           1                              2       8        1
+                                (a)                                             (b)
+
+                                1
+                                16
+                   2                      3
+               14                         10
+      4                     5         6        7
+      8                     7         9        3
+  8        9           10
+               i
+  2        4           1
+                                (c)
+
+
+Figure 6.2 The action of M AX -H EAPIFY.A; 2/, where A: heap-size D 10. (a) The initial con-
+ﬁguration, with AŒ2 at node i D 2 violating the max-heap property since it is not larger than
+both children. The max-heap property is restored for node 2 in (b) by exchanging AŒ2 with AŒ4,
+which destroys the max-heap property for node 4. The recursive call M AX -H EAPIFY.A; 4/ now
+has i D 4. After swapping AŒ4 with AŒ9, as shown in (c), node 4 is ﬁxed up, and the recursive call
+M AX -H EAPIFY.A; 9/ yields no further change to the data structure.
+
+
+children to satisfy the max-heap property. The node indexed by largest, however,
+now has the original value AŒi, and thus the subtree rooted at largest might violate
+the max-heap property. Consequently, we call M AX -H EAPIFY recursively on that
+subtree.
+   The running time of M AX -H EAPIFY on a subtree of size n rooted at a given
+node i is the ‚.1/ time to ﬁx up the relationships among the elements AŒi,
+AŒL EFT .i/, and AŒR IGHT .i/, plus the time to run M AX -H EAPIFY on a subtree
+rooted at one of the children of node i (assuming that the recursive call occurs).
+The children’s subtrees each have size at most 2n=3—the worst case occurs when
+the bottom level of the tree is exactly half full—and therefore we can describe the
+running time of M AX -H EAPIFY by the recurrence
+T .n/  T .2n=3/ C ‚.1/ :
+

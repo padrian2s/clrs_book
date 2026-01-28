@@ -1,0 +1,48 @@
+32.3 String matching with ﬁnite automata                                                999
+
+
+                             x
+
+                                             Pr–1          a
+
+                                              Pr
+
+
+
+Figure 32.8 An illustration for the proof of Lemma 32.2. The ﬁgure shows that r    .x/ C 1,
+where r D .xa/.
+
+
+   To clarify the operation of a string-matching automaton, we now give a simple,
+efﬁcient program for simulating the behavior of such an automaton (represented
+by its transition function ı) in ﬁnding occurrences of a pattern P of length m in an
+input text T Œ1 : : n. As for any string-matching automaton for a pattern of length m,
+the state set Q is f0; 1; : : : ; mg, the start state is 0, and the only accepting state is
+state m.
+
+F INITE -AUTOMATON -M ATCHER .T; ı; m/
+1 n D T:length
+2 q D0
+3 for i D 1 to n
+4        q D ı.q; T Œi/
+5        if q == m
+6             print “Pattern occurs with shift” i  m
+
+From the simple loop structure of F INITE -AUTOMATON -M ATCHER, we can easily
+see that its matching time on a text string of length n is ‚.n/. This matching
+time, however, does not include the preprocessing time required to compute the
+transition function ı. We address this problem later, after ﬁrst proving that the
+procedure F INITE -AUTOMATON -M ATCHER operates correctly.
+   Consider how the automaton operates on an input text T Œ1 : : n. We shall prove
+that the automaton is in state .Ti / after scanning character T Œi. Since .Ti / D m
+if and only if P = Ti , the machine is in the accepting state m if and only if it has
+just scanned the pattern P . To prove this result, we make use of the following two
+lemmas about the sufﬁx function .
+
+Lemma 32.2 (Sufﬁx-function inequality)
+For any string x and character a, we have .xa/  .x/ C 1.
+
+Proof Referring to Figure 32.8, let r D .xa/. If r D 0, then the conclusion
+  .xa/ D r  .x/ C 1 is trivially satisﬁed, by the nonnegativity of .x/. Now
+assume that r > 0. Then, Pr = xa, by the deﬁnition of . Thus, Pr1 = x, by
+

@@ -1,0 +1,92 @@
+884   Chapter 29 Linear Programming
+
+
+      X
+      n
+             cj xNj
+      j D1
+
+                           X
+                           nCm
+                  0
+        D  C                       cj0 xNj
+                           j D1
+
+                           X
+                           n                       X
+                                                   nCm
+                  0
+        D  C                       cj0 xNj C                cj0 xNj
+                           j D1                   j DnC1
+
+                           X
+                           n                      X
+                                                  m
+        D 0 C                      cj0 xNj C             0
+                                                         cnCi xN nCi
+                           j D1                   i D1
+
+                           X
+                           n                      X
+                                                  m
+        D 0 C                      cj0 xNj C            .yNi / xN nCi                   (by equations (29.91) and (29.95))
+                           j D1                   i D1
+                                                                                               !
+                           X
+                           n                      X
+                                                  m                           X
+                                                                              n
+        D 0 C                      cj0 xNj C            .yNi / bi                 aij xNj           (by equation (29.32))
+                           j D1                   i D1                        j D1
+
+                           X
+                           n                    X
+                                                m                      X
+                                                                       m X
+                                                                         n
+                  0
+        D  C                       cj0 xNj             bi yNi C                  .aij xNj / yNi
+                           j D1                   i D1                 i D1 j D1
+
+                           X
+                           n                    X
+                                                m                      X
+                                                                       n X
+                                                                         m
+        D 0 C                      cj0 xNj             bi yNi C                  .aij yNi / xNj
+                           j D1                   i D1                 j D1 i D1
+                                              !                                           !
+                            X
+                            m                         X
+                                                      n                   X
+                                                                          m
+                       0
+        D                          bi yNi       C              cj0 C           aij yNi xNj ;
+                            i D1                      j D1                i D1
+
+      so that
+                                                         !                                         !
+      X
+      n                                 X
+                                        m                        X
+                                                                 n                 X
+                                                                                   m
+                                0
+             cj xNj D                        bi yNi        C            cj0 C           aij yNi xNj :                    (29.99)
+      j D1                              i D1                     j D1              i D1
+
+      Applying Lemma 29.3 to equation (29.99), we obtain
+                X
+                m
+       0             bi yNi        D 0;                                                                                (29.100)
+                i D1
+              X
+              m
+      cj0 C           aij yNi        D cj for j D 1; 2; : : : ; n :                                                      (29.101)
+               i D1
+                                          Pm
+      By equation(29.100), we  have that i D1 bi yNi D  0 , and hence the objective value
+                   Pm
+      of the dual            Ni is equal to that of the primal ( 0 ). It remains to show
+                     i D1 bi y
+

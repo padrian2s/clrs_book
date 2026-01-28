@@ -1,0 +1,43 @@
+Bibliography                                                                                1247
+
+
+ [301] S. Sahni and T. Gonzalez. P-complete approximation problems. Journal of the ACM,
+       23(3):555–565, 1976.
+ [302] A. Schönhage, M. Paterson, and N. Pippenger. Finding the median. Journal of Computer
+       and System Sciences, 13(2):184–199, 1976.
+ [303] Alexander Schrijver. Theory of Linear and Integer Programming. John Wiley & Sons,
+       1986.
+ [304] Alexander Schrijver. Paths and ﬂows—A historical survey. CWI Quarterly, 6(3):169–183,
+       1993.
+ [305] Robert Sedgewick. Implementing quicksort programs.         Communications of the ACM,
+       21(10):847–857, 1978.
+ [306] Robert Sedgewick. Algorithms. Addison-Wesley, second edition, 1988.
+ [307] Robert Sedgewick and Philippe Flajolet. An Introduction to the Analysis of Algorithms.
+       Addison-Wesley, 1996.
+ [308] Raimund Seidel. On the all-pairs-shortest-path problem in unweighted undirected graphs.
+       Journal of Computer and System Sciences, 51(3):400–403, 1995.
+ [309] Raimund Seidel and C. R. Aragon. Randomized search trees. Algorithmica, 16(4–5):464–
+       497, 1996.
+ [310] João Setubal and João Meidanis. Introduction to Computational Molecular Biology. PWS
+       Publishing Company, 1997.
+ [311] Clifford A. Shaffer. A Practical Introduction to Data Structures and Algorithm Analysis.
+       Prentice Hall, second edition, 2001.
+ [312] Jeffrey Shallit. Origins of the analysis of the Euclidean algorithm. Historia Mathematica,
+       21(4):401–419, 1994.
+ [313] Michael I. Shamos and Dan Hoey. Geometric intersection problems. In Proceedings of the
+       17th Annual Symposium on Foundations of Computer Science, pages 208–215, 1976.
+ [314] M. Sharir. A strong-connectivity algorithm and its applications in data ﬂow analysis. Com-
+       puters and Mathematics with Applications, 7(1):67–72, 1981.
+ [315] David B. Shmoys. Computing near-optimal solutions to combinatorial optimization prob-
+       lems. In William Cook, László Lovász, and Paul Seymour, editors, Combinatorial Opti-
+       mization, volume 20 of DIMACS Series in Discrete Mathematics and Theoretical Computer
+       Science. American Mathematical Society, 1995.
+ [316] Avi Shoshan and Uri Zwick. All pairs shortest paths in undirected graphs with integer
+       weights. In Proceedings of the 40th Annual Symposium on Foundations of Computer Sci-
+       ence, pages 605–614, 1999.
+ [317] Michael Sipser. Introduction to the Theory of Computation. Thomson Course Technology,
+       second edition, 2006.
+ [318] Steven S. Skiena. The Algorithm Design Manual. Springer, second edition, 1998.
+ [319] Daniel D. Sleator and Robert E. Tarjan. A data structure for dynamic trees. Journal of
+       Computer and System Sciences, 26(3):362–391, 1983.
+

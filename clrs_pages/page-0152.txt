@@ -1,0 +1,41 @@
+5.4 Probabilistic analysis and further uses of indicator random variables           131
+
+
+and j ’s birthday both fall on day r is
+Pr fbi D r and bj D rg D Pr fbi D rg Pr fbj D rg
+                       D 1=n2 :
+Thus, the probability that they both fall on the same day is
+                         X
+                         n
+Pr fbi D bj g D                Pr fbi D r and bj D rg
+                         rD1
+                         Xn
+                     D         .1=n2 /
+                         rD1
+                     D 1=n :                                                      (5.6)
+More intuitively, once bi is chosen, the probability that bj is chosen to be the same
+day is 1=n. Thus, the probability that i and j have the same birthday is the same
+as the probability that the birthday of one of them falls on a given day. Notice,
+however, that this coincidence depends on the assumption that the birthdays are
+independent.
+   We can analyze the probability of at least 2 out of k people having matching
+birthdays by looking at the complementary event. The probability that at least two
+of the birthdays match is 1 minus the probability that all the birthdays are different.
+The event that k people have distinct birthdays is
+       \
+       k
+Bk D          Ai ;
+       i D1
+
+where Ai is the event that person i’s birthday is different from person j ’s for
+all j < i. Since we can write Bk D Ak \ Bk1 , we obtain from equation (C.16)
+the recurrence
+Pr fBk g D Pr fBk1 g Pr fAk j Bk1 g ;                                           (5.7)
+where we take Pr fB1 g D Pr fA1 g D 1 as an initial condition. In other words,
+the probability that b1 ; b2 ; : : : ; bk are distinct birthdays is the probability that
+b1 ; b2 ; : : : ; bk1 are distinct birthdays times the probability that bk ¤ bi for
+i D 1; 2; : : : ; k  1, given that b1 ; b2 ; : : : ; bk1 are distinct.
+   If b1 ; b2 ; : : : ; bk1 are distinct, the conditional probability that bk ¤ bi for
+i D 1; 2; : : : ; k  1 is Pr fAk j Bk1 g D .n  k C 1/=n, since out of the n days,
+n  .k  1/ days are not taken. We iteratively apply the recurrence (5.7) to obtain
+

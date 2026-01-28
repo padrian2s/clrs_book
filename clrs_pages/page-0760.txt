@@ -1,0 +1,42 @@
+26.4 Push-relabel algorithms                                                    739
+
+
+P USH .u; /
+1 // Applies when: u is overﬂowing, cf .u; / > 0, and u:h D :h C 1.
+2 // Action: Push f .u; / D min.u:e; cf .u; // units of ﬂow from u to .
+3    f .u; / D min.u:e; cf .u; //
+4 if .u; / 2 E
+5       .u; /:f D .u; /:f C f .u; /
+6 else .; u/:f D .; u/:f  f .u; /
+7 u:e D u:e  f .u; /
+8 :e D :e C f .u; /
+
+The code for P USH operates as follows. Because vertex u has a positive excess u:e
+and the residual capacity of .u; / is positive, we can increase the ﬂow from u to 
+by f .u; / D min.u:e; cf .u; // without causing u:e to become negative or the
+capacity c.u; / to be exceeded. Line 3 computes the value f .u; /, and lines 4–6
+update f . Line 5 increases the ﬂow on edge .u; /, because we are pushing ﬂow
+over a residual edge that is also an original edge. Line 6 decreases the ﬂow on
+edge .; u/, because the residual edge is actually the reverse of an edge in the
+original network. Finally, lines 7–8 update the excess ﬂows into vertices u and .
+Thus, if f is a preﬂow before P USH is called, it remains a preﬂow afterward.
+   Observe that nothing in the code for P USH depends on the heights of u and ,
+yet we prohibit it from being invoked unless u:h D :h C 1. Thus, we push excess
+ﬂow downhill only by a height differential of 1. By Lemma 26.12, no residual
+edges exist between two vertices whose heights differ by more than 1, and thus,
+as long as the attribute h is indeed a height function, we would gain nothing by
+allowing ﬂow to be pushed downhill by a height differential of more than 1.
+   We call the operation P USH .u; / a push from u to . If a push operation ap-
+plies to some edge .u; / leaving a vertex u, we also say that the push operation
+applies to u. It is a saturating push if edge .u; / in the residual network becomes
+saturated (cf .u; / D 0 afterward); otherwise, it is a nonsaturating push. If an
+edge becomes saturated, it disappears from the residual network. A simple lemma
+characterizes one result of a nonsaturating push.
+
+Lemma 26.13
+After a nonsaturating push from u to , the vertex u is no longer overﬂowing.
+
+Proof Since the push was nonsaturating, the amount of ﬂow f .u; / actually
+pushed must equal u:e prior to the push. Since u:e is reduced by this amount, it
+becomes 0 after the push.
+

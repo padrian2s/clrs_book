@@ -1,0 +1,50 @@
+266   Chapter 11 Hash Tables
+
+
+      Xkl D I fh.k/ D h.l/g. Since by the deﬁnition of a universal collection of hash
+      functions, a single pair of keys collides with probability at most 1=m, we have
+      Pr fh.k/ D h.l/g  1=m. By Lemma 5.1, therefore, we have E ŒXkl   1=m.
+         Next we deﬁne, for each key k, the random variable Yk that equals the number
+      of keys other than k that hash to the same slot as k, so that
+            X
+      Yk D      Xkl :
+            l2T
+            l¤k
+
+      Thus we have
+                     2X            3
+      E ŒYk  D E4             Xkl 5
+                         l2T
+                         l¤k
+                   X
+              D          E ŒXkl       (by linearity of expectation)
+                   l2T
+                   l¤k
+                   X 1
+                              :
+                         m
+                   l2T
+                   l¤k
+
+      The remainder of the proof depends on whether key k is in table T .
+         If k 62 T , then nh.k/ D Yk and jfl W l 2 T and l ¤ kgj D n. Thus E Œnh.k/  D
+          E ŒYk   n=m D ˛.
+         If k 2 T , then because key k appears in list T Œh.k/ and the count Yk does not
+          include key k, we have nh.k/ D Yk C 1 and jfl W l 2 T and l ¤ kgj D n  1.
+          Thus E Œnh.k/  D E ŒYk  C 1  .n  1/=m C 1 D 1 C ˛  1=m < 1 C ˛.
+
+         The following corollary says universal hashing provides the desired payoff: it
+      has now become impossible for an adversary to pick a sequence of operations that
+      forces the worst-case running time. By cleverly randomizing the choice of hash
+      function at run time, we guarantee that we can process every sequence of operations
+      with a good average-case running time.
+
+      Corollary 11.4
+      Using universal hashing and collision resolution by chaining in an initially empty
+      table with m slots, it takes expected time ‚.n/ to handle any sequence of n I NSERT,
+      S EARCH, and D ELETE operations containing O.m/ I NSERT operations.
+
+      Proof Since the number of insertions is O.m/, we have n D O.m/ and so
+      ˛ D O.1/. The I NSERT and D ELETE operations take constant time and, by The-
+      orem 11.3, the expected time for each S EARCH operation is O.1/. By linearity of
+

@@ -1,0 +1,38 @@
+912   Chapter 30 Polynomials and the FFT
+
+
+      Lines 11–12 combine the results of the recursive DFTn=2 calculations. For y0 ; y1 ;
+      : : : ; yn=21 , line 11 yields
+
+      yk D ykŒ0 C !nk ykŒ1
+           D AŒ0 .!n2k / C !nk AŒ1 .!n2k /
+           D A.!nk /                         (by equation (30.9)) .
+      For yn=2 ; yn=2C1 ; : : : ; yn1 , letting k D 0; 1; : : : ; n=2  1, line 12 yields
+
+      ykC.n=2/ D ykŒ0  !nk ykŒ1
+                  D ykŒ0 C !nkC.n=2/ ykŒ1                         (since !nkC.n=2/ D !nk )
+                  D AŒ0 .!n2k / C !nkC.n=2/ AŒ1 .!n2k /
+                  D AŒ0 .!n2kCn / C !nkC.n=2/ AŒ1 .!n2kCn / (since !n2kCn D !n2k )
+                  D A.!nkC.n=2/ /                             (by equation (30.9)) .
+      Thus, the vector y returned by R ECURSIVE -FFT is indeed the DFT of the input
+      vector a.
+         Lines 11 and 12 multiply each value ykŒ1 by !nk , for k D 0; 1; : : : ; n=2  1.
+      Line 11 adds this product to ykŒ0 , and line 12 subtracts it. Because we use each
+      factor !nk in both its positive and negative forms, we call the factors !nk twiddle
+      factors.
+         To determine the running time of procedure R ECURSIVE -FFT, we note that
+      exclusive of the recursive calls, each invocation takes time ‚.n/, where n is the
+      length of the input vector. The recurrence for the running time is therefore
+      T .n/ D 2T .n=2/ C ‚.n/
+            D ‚.n lg n/ :
+      Thus, we can evaluate a polynomial of degree-bound n at the complex nth roots of
+      unity in time ‚.n lg n/ using the fast Fourier transform.
+
+      Interpolation at the complex roots of unity
+      We now complete the polynomial multiplication scheme by showing how to in-
+      terpolate the complex roots of unity by a polynomial, which enables us to convert
+      from point-value form back to coefﬁcient form. We interpolate by writing the DFT
+      as a matrix equation and then looking at the form of the matrix inverse.
+         From equation (30.4), we can write the DFT as the matrix product y D Vn a,
+      where Vn is a Vandermonde matrix containing the appropriate powers of !n :
+

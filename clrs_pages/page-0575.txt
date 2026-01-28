@@ -1,0 +1,44 @@
+554   Chapter 20 van Emde Boas Trees
+
+
+         Once again, we can easily see how recurrence (20.4) characterizes the running
+      time. Depending on the result of the testpin line 6, either the recursive call in line 7
+      (run on a vEB tree with universe
+                                p       size " u) or the recursive call in line 9 (run on
+      a vEB with universe size # u) executes. In   peither case, the one recursive call is
+      on a vEB tree with universe size at most " u. Because the remainder of V EB-
+      T REE -I NSERT takes O.1/ time, recurrence (20.4) applies, and so the running time
+      is O.lg lg u/.
+
+      Deleting an element
+      Finally, we look at how to delete an element from a vEB tree. The procedure
+      V EB-T REE -D ELETE .V; x/ assumes that x is currently an element in the set repre-
+      sented by the vEB tree V .
+
+      V EB-T REE -D ELETE .V; x/
+       1 if V:min == V:max
+       2      V:min D NIL
+       3      V:max D NIL
+       4 elseif V:u == 2
+       5      if x == 0
+       6           V:min D 1
+       7      else V:min D 0
+       8      V:max D V:min
+       9 else if x == V:min
+      10           ﬁrst-cluster D V EB-T REE -M INIMUM .V:summary/
+      11           x D index.ﬁrst-cluster;
+                        V EB-T REE -M INIMUM .V:clusterŒﬁrst-cluster//
+      12           V:min D x
+      13      V EB-T REE -D ELETE .V:clusterŒhigh.x/; low.x//
+      14      if V EB-T REE -M INIMUM .V:clusterŒhigh.x// == NIL
+      15           V EB-T REE -D ELETE .V:summary; high.x//
+      16           if x == V:max
+      17                summary-max D V EB-T REE -M AXIMUM .V:summary/
+      18                if summary-max == NIL
+      19                     V:max D V:min
+      20                else V:max D index.summary-max;
+                                 V EB-T REE -M AXIMUM .V:clusterŒsummary-max//
+      21      elseif x == V:max
+      22           V:max D index.high.x/;
+                        V EB-T REE -M AXIMUM .V:clusterŒhigh.x///
+

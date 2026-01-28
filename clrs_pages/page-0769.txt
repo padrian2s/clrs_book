@@ -1,0 +1,46 @@
+748        Chapter 26 Maximum Flow
+
+
+           26.4-7
+           Show that we could change line 6 of I NITIALIZE -P REFLOW to
+
+           6   s:h D jG:Vj  2
+
+           without affecting the correctness or asymptotic performance of the generic push-
+           relabel algorithm.
+
+           26.4-8
+           Let ıf .u; / be the distance (number of edges) from u to  in the residual net-
+           work Gf . Show that the G ENERIC -P USH -R ELABEL procedure maintains the
+           properties that u:h < jV j implies u:h  ıf .u; t/ and that u:h  jV j implies
+           u:h  jV j  ıf .u; s/.
+
+           26.4-9 ?
+           As in the previous exercise, let ıf .u; / be the distance from u to  in the residual
+           network Gf . Show how to modify the generic push-relabel algorithm to maintain
+           the property that u:h < jV j implies u:h D ıf .u; t/ and that u:h  jV j implies
+           u:h  jV j D ıf .u; s/. The total time that your implementation dedicates to main-
+           taining this property should be O.VE/.
+
+           26.4-10
+           Show that the number of nonsaturating pushes executed by the G ENERIC -P USH -
+           R ELABEL procedure on a ﬂow network G D .V; E/ is at most 4 jV j2 jEj for
+           jV j  4.
+
+
+
+? 26.5 The relabel-to-front algorithm
+
+           The push-relabel method allows us to apply the basic operations in any order at
+           all. By choosing the order carefully and managing the network data structure efﬁ-
+           ciently, however, we can solve the maximum-ﬂow problem faster than the O.V 2 E/
+           bound given by Corollary 26.25. We shall now examine the relabel-to-front algo-
+           rithm, a push-relabel algorithm whose running time is O.V 3 /, which is asymptot-
+           ically at least as good as O.V 2 E/, and even better for dense networks.
+              The relabel-to-front algorithm maintains a list of the vertices in the network.
+           Beginning at the front, the algorithm scans the list, repeatedly selecting an over-
+           ﬂowing vertex u and then “discharging” it, that is, performing push and relabel
+           operations until u no longer has a positive excess. Whenever we relabel a ver-
+           tex, we move it to the front of the list (hence the name “relabel-to-front”) and the
+           algorithm begins its scan anew.
+

@@ -1,0 +1,49 @@
+34.2 Polynomial-time veriﬁcation                                                              1065
+
+
+
+                                                          NP = co-NP
+          P = NP = co-NP
+                                                               P
+
+
+                 (a)                                          (b)
+
+
+
+
+  co-NP                       NP               co-NP     NP ∩ co-NP        NP
+          P = NP ∩ co-NP
+                                                               P
+
+
+                 (c)                                          (d)
+
+
+Figure 34.3 Four possibilities for relationships among complexity classes. In each diagram, one
+region enclosing another indicates a proper-subset relation. (a) P D NP D co-NP. Most researchers
+regard this possibility as the most unlikely. (b) If NP is closed under complement, then NP D co-NP,
+but it need not be the case that P D NP. (c) P D NP\co-NP, but NP is not closed under complement.
+(d) NP ¤ co-NP and P ¤ NP \ co-NP. Most researchers regard this possibility as the most likely.
+
+
+   Thus, our understanding of the precise relationship between P and NP is woe-
+fully incomplete. Nevertheless, even though we might not be able to prove that a
+particular problem is intractable, if we can prove that it is NP-complete, then we
+have gained valuable information about it.
+
+Exercises
+
+34.2-1
+Consider the language GRAPH-ISOMORPHISM D fhG1 ; G2 i W G1 and G2 are
+isomorphic graphsg. Prove that GRAPH-ISOMORPHISM 2 NP by describing a
+polynomial-time algorithm to verify the language.
+
+34.2-2
+Prove that if G is an undirected bipartite graph with an odd number of vertices,
+then G is nonhamiltonian.
+
+34.2-3
+Show that if HAM-CYCLE 2 P, then the problem of listing the vertices of a
+hamiltonian cycle, in order, is polynomial-time solvable.
+

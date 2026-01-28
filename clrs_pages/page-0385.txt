@@ -1,0 +1,49 @@
+364   Chapter 15 Dynamic Programming
+
+
+                                              4
+
+
+                    3                         2       1      0
+
+           2            1         0       1       0   0
+
+       1       0        0                 0
+
+
+       0
+
+
+
+      Figure 15.3 The recursion tree showing recursive calls resulting from a call C UT-ROD.p; n/ for
+      n D 4. Each node label gives the size n of the corresponding subproblem, so that an edge from
+      a parent with label s to a child with label t corresponds to cutting off an initial piece of size s  t
+      and leaving a remaining subproblem of size t. A path from the root to a leaf corresponds to one of
+      the 2n1 ways of cutting up a rod of length n. In general, this recursion tree has 2n nodes and 2n1
+      leaves.
+
+                        X
+                        n1
+      T .n/ D 1 C              T .j / :                                                              (15.3)
+                        j D0
+
+      The initial 1 is for the call at the root, and the term T .j / counts the number of calls
+      (including recursive calls) due to the call C UT-ROD .p; n  i/, where j D n  i.
+      As Exercise 15.1-1 asks you to show,
+      T .n/ D 2n ;                                                                                   (15.4)
+      and so the running time of C UT-ROD is exponential in n.
+         In retrospect, this exponential running time is not so surprising. C UT-ROD ex-
+      plicitly considers all the 2n1 possible ways of cutting up a rod of length n. The
+      tree of recursive calls has 2n1 leaves, one for each possible way of cutting up the
+      rod. The labels on the simple path from the root to a leaf give the sizes of each
+      remaining right-hand piece before making each cut. That is, the labels give the
+      corresponding cut points, measured from the right-hand end of the rod.
+
+      Using dynamic programming for optimal rod cutting
+      We now show how to convert C UT-ROD into an efﬁcient algorithm, using dynamic
+      programming.
+         The dynamic-programming method works as follows. Having observed that a
+      naive recursive solution is inefﬁcient because it solves the same subproblems re-
+      peatedly, we arrange for each subproblem to be solved only once, saving its solu-
+      tion. If we need to refer to this subproblem’s solution again later, we can just look it
+

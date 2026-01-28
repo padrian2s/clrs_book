@@ -1,0 +1,56 @@
+752   Chapter 26 Maximum Flow
+
+
+                6
+                      s
+                5    –26                                              1       2       3       4
+                4                                                     s       s       s       s
+                               14
+      (a)       3                /14                                  x       x       x       x
+                2                                                     z       z       z       z
+                                     x
+                1                    0
+                                           5/5    y     8    z
+                0                                 19         0
+
+                6
+                      s
+                5                                                     5       6       7
+                     –26
+                4               14                                    s       s       s
+                                    /14                               x       x       x
+      (b)       3
+                2                                                     z       z       z
+                                     x      5/5   y
+                1                    0            19   8
+                                                             z
+                0                                            0
+
+                6
+                      s
+                5                                                     8       9
+                     –26
+                4               14                                    s       s
+                                     /14                              x       x
+      (c)       3
+                2                                                     z       z
+                                     x      5/5   y
+                1                    0            11   8/8
+                                                             z
+                0                                            8
+
+
+      Figure 26.9 Discharging a vertex y. It takes 15 iterations of the while loop of D ISCHARGE to push
+      all the excess ﬂow from y. Only the neighbors of y and edges of the ﬂow network that enter or leave y
+      are shown. In each part of the ﬁgure, the number inside each vertex is its excess at the beginning of
+      the ﬁrst iteration shown in the part, and each vertex is shown at its height throughout the part. The
+      neighbor list y: N at the beginning of each iteration appears on the right, with the iteration number
+      on top. The shaded neighbor is y: current. (a) Initially, there are 19 units of excess to push from y,
+      and y: current D s. Iterations 1, 2, and 3 just advance y: current, since there are no admissible edges
+      leaving y. In iteration 4, y: current D NIL (shown by the shading being below the neighbor list),
+      and so y is relabeled and y: current is reset to the head of the neighbor list. (b) After relabeling,
+      vertex y has height 1. In iterations 5 and 6, edges .y; s/ and .y; x/ are found to be inadmissible, but
+      iteration 7 pushes 8 units of excess ﬂow from y to ´. Because of the push, y: current does not advance
+      in this iteration. (c) Because the push in iteration 7 saturated edge .y; ´/, it is found inadmissible in
+      iteration 8. In iteration 9, y: current D NIL, and so vertex y is again relabeled and y: current is reset.
+

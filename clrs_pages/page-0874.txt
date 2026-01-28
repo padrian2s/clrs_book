@@ -1,0 +1,42 @@
+29.1 Standard and slack forms                                                              853
+
+
+maximize      2x1      3x2
+subject to
+                x1 C x2             D 7
+                x1  2x2             4
+                x1                   0 :
+    Next, we show how to convert a linear program in which some of the variables
+do not have nonnegativity constraints into one in which each variable has a non-
+negativity constraint. Suppose that some variable xj does not have a nonnegativity
+constraint. Then, we replace each occurrence of xj by xj0  xj00 , and add the non-
+negativity constraints xj0  0 and xj00  0. Thus, if the objective function has a
+term cj xj , we replace it by cj xj0  cj xj00 , and if constraint i has a term aij xj , we
+replace it by aij xj0  aij xj00 . Any feasible solution xy to the new linear program cor-
+responds to a feasible solution xN to the original linear program with xNj D xyj0  xyj00
+and with the same objective value. Also, any feasible solution xN to the original
+linear program corresponds to a feasible solution xy to the new linear program with
+xyj0 D xNj and xyj00 D 0 if xNj  0, or with xyj00 D xNj and xyj0 D 0 if xNj < 0. The two
+linear programs have the same objective value regardless of the sign of xNj . Thus,
+the two linear programs are equivalent. We apply this conversion scheme to each
+variable that does not have a nonnegativity constraint to yield an equivalent linear
+program in which all variables have nonnegativity constraints.
+    Continuing the example, we want to ensure that each variable has a correspond-
+ing nonnegativity constraint. Variable x1 has such a constraint, but variable x2 does
+not. Therefore, we replace x2 by two variables x20 and x200 , and we modify the linear
+program to obtain
+maximize      2x1      3x20        C 3x200
+subject to
+                x1 C x20             x200     D 7                                    (29.22)
+                x1  2x20           C 2x200     4
+                  x1 ; x20 ; x200               0 :
+   Next, we convert equality constraints into inequality constraints. Suppose that a
+linear program has an equality constraint f .x1 ; x2 ; : : : ; xn / D b. Since x D y if
+and only if both x  y and x  y, we can replace this equality constraint by the
+pair of inequality constraints f .x1 ; x2 ; : : : ; xn /  b and f .x1 ; x2 ; : : : ; xn /  b.
+Repeating this conversion for each equality constraint yields a linear program in
+which all constraints are inequalities.
+   Finally, we can convert the greater-than-or-equal-to constraints to less-than-or-
+equal-to constraints by multiplying these constraints through by 1. That is, any
+inequality of the form
+

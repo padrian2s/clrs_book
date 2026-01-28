@@ -1,0 +1,36 @@
+9.2 Selection in expected linear time                                                 217
+
+
+the algorithm has a linear expected running time, though, and because it is random-
+ized, no particular input elicits the worst-case behavior.
+   To analyze the expected running time of R ANDOMIZED -S ELECT, we let the run-
+ning time on an input array AŒp : : r of n elements be a random variable that we
+denote by T .n/, and we obtain an upper bound on E ŒT .n/ as follows. The pro-
+cedure R ANDOMIZED -PARTITION is equally likely to return any element as the
+pivot. Therefore, for each k such that 1  k  n, the subarray AŒp : : q has k ele-
+ments (all less than or equal to the pivot) with probability 1=n. For k D 1; 2; : : : ; n,
+we deﬁne indicator random variables Xk where
+Xk D I fthe subarray AŒp : : q has exactly k elementsg ;
+and so, assuming that the elements are distinct, we have
+E ŒXk  D 1=n :                                                                     (9.1)
+   When we call R ANDOMIZED -S ELECT and choose AŒq as the pivot element, we
+do not know, a priori, if we will terminate immediately with the correct answer,
+recurse on the subarray AŒp : : q  1, or recurse on the subarray AŒq C 1 : : r.
+This decision depends on where the ith smallest element falls relative to AŒq.
+Assuming that T .n/ is monotonically increasing, we can upper-bound the time
+needed for the recursive call by the time needed for the recursive call on the largest
+possible input. In other words, to obtain an upper bound, we assume that the ith
+element is always on the side of the partition with the greater number of elements.
+For a given call of R ANDOMIZED -S ELECT, the indicator random variable Xk has
+the value 1 for exactly one value of k, and it is 0 for all other k. When Xk D 1, the
+two subarrays on which we might recurse have sizes k  1 and n  k. Hence, we
+have the recurrence
+             X
+             n
+T .n/             Xk  .T .max.k  1; n  k// C O.n//
+             kD1
+             X
+             n
+        D          Xk  T .max.k  1; n  k// C O.n/ :
+             kD1
+

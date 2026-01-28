@@ -1,0 +1,59 @@
+1148   Appendix A     Summations
+
+
+       X
+       1
+                         x
+             kx k D                                                                        (A.8)
+                      .1  x/2
+       kD0
+
+       for jxj < 1.
+
+       Telescoping series
+       For any sequence a0 ; a1 ; : : : ; an ,
+       Xn
+          .ak  ak1 / D an  a0 ;                                                         (A.9)
+       kD1
+       since each of the terms a1 ; a2 ; : : : ; an1 is added in exactly once and subtracted out
+       exactly once. We say that the sum telescopes. Similarly,
+       X
+       n1
+             .ak  akC1 / D a0  an :
+       kD0
+       As an example of a telescoping sum, consider the series
+       X
+       n1
+                1
+                      :
+             k.k C 1/
+       kD1
+       Since we can rewrite each term as
+           1        1      1
+                 D             ;
+       k.k C 1/     k kC1
+       we get
+       X
+       n1                 n1 
+                           X              
+              1                   1     1
+                      D             
+           k.k C 1/               k kC1
+       kD1                       kD1
+                                       1
+                          D 1           :
+                                       n
+
+       Products
+       We can write the ﬁnite product a1 a2    an as
+       Yn
+          ak :
+       kD1
+       If n D 0, the value of the product is deﬁned to be 1. We can convert a formula with
+       a product to a formula with a summation by using the identity
+                  !
+            Y
+            n          X n
+       lg      ak D        lg ak :
+             kD1          kD1
+

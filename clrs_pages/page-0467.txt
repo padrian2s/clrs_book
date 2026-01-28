@@ -1,0 +1,47 @@
+446        Chapter 16 Greedy Algorithms
+
+
+
+                                               Task
+           ai       1         2        3        4       5    6      7
+           di       4         2        4            3   1     4     6
+           wi      70        60        50          40   30   20     10
+
+
+
+           Figure 16.7 An instance of the problem of scheduling unit-time tasks with deadlines and penalties
+           for a single processor.
+
+
+           unit-time tasks with deadlines and penalties for a single processor. The running
+           time is O.n2 / using G REEDY, since each of the O.n/ independence checks made
+           by that algorithm takes time O.n/ (see Exercise 16.5-2). Problem 16-4 gives a
+           faster implementation.
+              Figure 16.7 demonstrates an example of the problem of scheduling unit-time
+           tasks with deadlines and penalties for a single processor. In this example, the
+           greedy algorithm selects, in order, tasks a1 , a2 , a3 , and a4 , then rejects a5 (because
+           N4 .fa1 ; a2 ; a3 ; a4 ; a5 g/ D 5) and a6 (because N4 .fa1 ; a2 ; a3 ; a4 ; a6 g/ D 5), and
+           ﬁnally accepts a7 . The ﬁnal optimal schedule is
+           ha2 ; a4 ; a1 ; a3 ; a7 ; a5 ; a6 i ;
+           which has a total penalty incurred of w5 C w6 D 50.
+
+           Exercises
+
+           16.5-1
+           Solve the instance of the scheduling problem given in Figure 16.7, but with each
+           penalty wi replaced by 80  wi .
+
+           16.5-2
+           Show how to use property 2 of Lemma 16.12 to determine in time O.jAj/ whether
+           or not a given set A of tasks is independent.
+
+
+
+Problems
+
+           16-1 Coin changing
+           Consider the problem of making change for n cents using the fewest number of
+           coins. Assume that each coin’s value is an integer.
+           a. Describe a greedy algorithm to make change consisting of quarters, dimes,
+              nickels, and pennies. Prove that your algorithm yields an optimal solution.
+
